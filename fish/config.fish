@@ -3,7 +3,7 @@ set -x -g LS_COLORS "no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd
 set -x -g TERM "xterm-256color"
 
 # Setting up the Path
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths #homebrew
 
 # Source Aliases
 source ~/.config/fish/_aliases.fish

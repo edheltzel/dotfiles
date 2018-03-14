@@ -41,6 +41,7 @@ brew 'sqlite'
 brew 'ssh-copy-id'
 brew 'tig'
 brew 'tree'
+brew 'tmxu'
 brew 'wget', args: ['enable-iri']
 brew 'webp'
 brew 'unzip'

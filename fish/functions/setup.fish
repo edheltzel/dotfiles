@@ -21,7 +21,7 @@ function setup
   abbr lda exa -lagh
   abbr ll exa -lg
   abbr nig npm install -g
-  abbr npms npm list-g --depth=0
+  abbr npms npm list -g --depth=0
   abbr sdel rm -rf
   abbr sp serverpilot
   abbr speedtest speed-test
