@@ -3,19 +3,15 @@
 	alias cll='clear; exa -lg'
 	alias ...='cd ../../'
 	alias ....='cd ../../..'
-	alias binfo='brew info'
+
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(Portside\)' #PATH DROPBOX FOR BUSINESS
 	alias sites='~/Sites; and exa -lg'
 	alias projects='~/Projects; and exa -lg'
-	alias cuts='~/Projects/; and code'
+	alias cuts='~/Projects/dot_files; and code .'
 
-# Shell Stuff
+# Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'
-
-# SSH
-	alias cpssh='pbcopy < ~/.ssh/id_rsa.pub; and echo "SSH Key copied to clipboard"' # COPY SSH PUBLIC KEY
-	#alias editssh='$EDITOR ~/.ssh/known_hosts' --> see functions
 
 # List packages and gems and fast updates
 	alias zup='upgrade_oh_my_zsh' # manually update Oh-My-ZSH
