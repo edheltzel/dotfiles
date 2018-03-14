@@ -2,14 +2,8 @@ set -x -g LS_COLORS "no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd
 
 set -x -g TERM "xterm-256color"
 
-# Coreutils bin and man folders
-set -x -g PATH (brew --prefix coreutils)/libexec/gnubin $PATH
-# set -x -g MANPATH (brew --prefix coreutils)/libexec/gnuman $MANPATH
-
-# Findutils bin and man folders
-set -x -g PATH (brew --prefix findutils)/libexec/gnubin $PATH
-# set -x -g MANPATH (brew --prefix findutils)/libexec/gnuman $MANPATH
-
+# Setting up the Path
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # Source Aliases
 source ~/.config/fish/_aliases.fish

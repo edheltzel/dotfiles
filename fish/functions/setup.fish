@@ -7,7 +7,9 @@ function setup
   abbr gp git push
   abbr gd git diff
   abbr gco git co
-  abbr bi brew info
+  abbr gb git b -a
+  abbr binfo brew info
+  abbr bi brew install
   abbr brews brew list -1
   abbr cl clear
   abbr del trash
