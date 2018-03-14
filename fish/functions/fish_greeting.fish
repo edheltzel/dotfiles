@@ -1,3 +1,2 @@
-function fish_greeting
-  fortune
+function fish_greeting;
 end

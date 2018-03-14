@@ -1,0 +1,13 @@
+# Use less as pager
+--pager=less
+# Always color, even if piping to a another program
+--color
+
+# Sort files
+--sort-files
+
+# Ignore jetbrains IDEs folders
+--ignore-dir=.idea/
+
+# search inside Unity3D files
+--type-set=unity3d=.prefab,.scene

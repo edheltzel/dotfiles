@@ -1,0 +1,13 @@
+set blame-view  = date:relative author:full file-name:auto id:yes,color line-number:no,interval=5 text
+
+color cursor      white red   bold
+color title-focus   white blue  bold
+
+set editor-line-number = yes
+set split-view-width   = 65%
+
+bind generic g move-first-line #vim style
+bind generic g move-last-line #vim style
+bind generic n next #vim style
+bind generic N previous
+bind diff o !@hub brwose -- commit/%(commit)

@@ -9,7 +9,6 @@ tap 'homebrew/versions'
 tap 'buo/cask-upgrade'
 
 brew 'ack'
-brew 'ag'
 brew 'brew-cask-completion'
 brew 'coreutils'
 brew 'curl'
