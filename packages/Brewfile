@@ -22,6 +22,7 @@ brew 'git'
 brew 'git-flow-avh;
 brew 'git-lfs'
 brew 'grep'
+brew 'grc'
 brew 'imagemagick', args: ['with-webp']
 brew 'libsass'
 brew 'libyaml'
@@ -43,6 +44,7 @@ brew 'webp'
 brew 'unzip'
 brew 'vim, args: ['with-override-system-vi']
 brew 'yarn'
+brew 'z'
 brew 'zsh'
 
 cask 'adobe-creative-cloud'

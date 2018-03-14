@@ -1,15 +1,27 @@
 ## Defines abbreviations
 function setup
-    abbr mci mvn clean install
-    abbr g git
-    abbr gf git fetch
-    abbr gs git status
-    abbr gc git commit -m
-    abbr gm git merge FETCH_HEAD --ff-only
-    abbr gr git rb FETCH_HEAD
-    abbr ga git add
-    abbr gp git push
-    abbr gd git diff
-    abbr gco git checkout
-    abbr ll ls -lhA
+  abbr g git
+  abbr gs git status
+  abbr gc git cm
+  abbr ga git aa
+  abbr gp git push
+  abbr gd git diff
+  abbr gco git co
+  abbr bi brew info
+  abbr brews brew list -1
+  abbr cl clear
+  abbr del trash
+  abbr gems gem query --local
+  abbr gemup gem update --system
+  abbr l exa -la
+  abbr la exa -la
+  abbr ld exa -lgh
+  abbr lda exa -lagh
+  abbr ll exa -lg
+  abbr nig npm install -g
+  abbr npms npm list-g --depth=0
+  abbr sdel rm -rf
+  abbr sp serverpilot
+  abbr speedtest speed-test
+  abbr tkill tmux kill-session -t
 end
