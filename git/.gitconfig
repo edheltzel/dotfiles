@@ -1,0 +1,151 @@
+[user]
+  name  = Ed Heltzel
+  email = ed@portside.io
+
+[github]
+  user = ginfuru
+
+[credential]
+  helper = GIT_CREDENTIAL_HELPER
+[color]
+  ui     = auto
+  branch = auto
+  diff   = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local   = yellow
+  remote  = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old  = red bold
+  new  = green bold
+[color "status"]
+  added     = yellow
+  changed   = green
+  untracked = cyan
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = code-insiders -w
+  mergeoptions = --no-ff --no-commit
+  autocrlf = input
+  quotepath = false
+  safecrlf = warn
+
+[diff]
+	tool = opendiff
+
+[difftool]
+	prompt = false
+
+[merge]
+	tool = opendiff
+  log = true
+
+[mergetool]
+	prompt     = false
+	keepBackup = false
+
+[apply]
+  # Detect whitespace errors when applying a patch
+  whitespace = fix
+
+[alias]
+  # most commonly used
+  aa      = add --all
+  cm      = commit -m
+  cam = commit -a -m
+  co      = checkout
+  rv = remote -v
+  # checkouts
+  cb      = checkout -b
+  cob     = checkout -b
+  ct      = checkout -t
+  cr      = checkout --
+  unstage = reset HEAD
+  # submodules
+  sm = "!f() { git submodule update --init --recursive $1; }; f"
+  #branch management
+  b  = branch
+  ba = branch -a
+  bd = branch -d
+  bD = branch -D
+  bm = branch -m
+  d  = diff
+  dt = difftool
+  m  = merge
+  mt = mergetool
+  r  = rebase
+  rr = remote rm
+  
+  #rebases & squash
+  rb  = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rba = rebase --abort
+  rbs = rebase --skip
+  rf  = reflog
+  
+  #squashes
+  sq = "!f() { git rebase -i HEAD~$1; }; f"
+  
+  # tags
+  t      = tag -l
+  squash = "!f() { git rebase -i HEAD~$1; }; f"
+  
+  # stashes
+  st   = stash
+  stl  = stash list
+  stp  = stash pop
+  sts  = "!f() { git stash show stash@{$1}; }; f"
+  std  = "!f() { git stash show stash@{$1} -U5; }; f"
+  strm = "!f() { git stash drop stash@{$1} -U5; }; f"
+
+  #commits
+  c  = commit
+  # pushes & pulls
+  f   = fetch --prune
+  p   = push
+  ps  = push
+  pl  = pull
+  pur = pull --rebase
+  pr  = pull-request
+  psf = push --force
+  upm = !git fetch upstream && git merge upstream/master
+
+  # status & log
+  s  = status -sb
+  ss = status
+  v  = log --oneline --decorate --all --graph --simplify-by-decoration
+  va = log --oneline --decorate --all --graph
+  ll = log --pretty = full
+  l  = "!f() { git log $1 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit;};f"
+  
+  # show tracked branches
+  tracked = "!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d"
+ 
+  # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+ 
+  #show changes
+  wc  = whatchanged -p --abbrev-commit --pretty = medium
+  r   = reset
+  rhh = reset HEAD --hard
+
+	logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
+
+[push]
+  default    = matching
+  followTags = true
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[help]

@@ -1,0 +1,29 @@
+# Theme
+PKief.material-icon-theme
+azemoh.one-monokai
+lei.theme-chromodynamics
+#
+# Languages
+Angular.ng-template
+TeddyDD.fish
+dbaeumer.vscode-eslint
+eg2.tslint
+idleberg.applescript
+joaompinto.asciidoctor-vscode
+johnpapa.Angular2
+ms-python.python
+ms-vscode.cpptools
+octref.vetur
+pixelbyte-studios.pixelbyte-love2d
+trixnz.vscode-lua
+#
+# Extensions
+CoenraadS.bracket-pair-colorizer
+Zignd.html-css-class-completion
+christian-kohler.path-intellisense
+donjayamanne.githistory
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+msjsdiag.debugger-for-chrome
+naumovs.color-highlight
+steoates.autoimport
