@@ -60,7 +60,6 @@ cask 'colorpicker-hex'
 cask 'colorpicker-skalacolor'
 cask 'cyberduck'
 cask 'dash'
-cask 'divvy'
 cask 'docker'
 cask 'dropbox'
 cask 'droplr'
@@ -103,9 +102,16 @@ cask 'visual-studio-code-insiders'
 cask 'vlc'
 cask 'zeplin '
 
-mas 'Todoist', id: 585829637
-mas 'Newton', id: 1059655371
+mas 'Divvy', id: 413857545
 mas 'Icon Slate', id: 439697913
-mas 'Speedtest', id: 1153157709
+mas 'In Time', id: 1301983912
+mas 'Irvue', id: 1039633667
+mas 'Keynote', id: 409183694
 mas 'MindNode Pro', id: 402398561
+mas 'Newton', id: 1059655371
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Speedtest', id: 1153157709
+mas 'Todoist', id: 585829637
 mas 'Xcode', id: 497799835
+
