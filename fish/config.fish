@@ -9,3 +9,6 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths #homebrew
 source ~/.config/fish/_aliases.fish
 # Source Exports
 source ~/.config/fish/_exports.fish
+
+# SpaceFish 
+set SPACEFISH_CHAR_SYMBOL "⋊>"

@@ -1,6 +1,9 @@
+.babelrc
 .c
 .cpp
 .css
+.erb
+.d.ts
 .fish
 .h
 .hpp
@@ -10,6 +13,7 @@
 .less
 .liquid
 .list
+.log
 .markdown
 .md
 .php
@@ -17,6 +21,9 @@
 .sass
 .scss
 .sh
+.tmLanguage
+.ts
 .txt
+.xml
 .yaml
 .yml
