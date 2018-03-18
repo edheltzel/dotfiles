@@ -1,8 +1,12 @@
+# Navigation
+function ..    ; cd .. ; end
+function ...   ; cd ../.. ; end
+function ....  ; cd ../../.. ; end
+function ..... ; cd ../../../.. ; end
+
 # Workflow
 	alias code='code-insiders'
 	alias cll='clear; exa -lg'
-	alias ...='cd ../../'
-	alias ....='cd ../../..'
 
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(Portside\)' #PATH DROPBOX FOR BUSINESS

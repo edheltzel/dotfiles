@@ -51,21 +51,21 @@
 # -------------------------------------------------------------------
 # update global node packages
 # -------------------------------------------------------------------
-# function nodeup --description 'Updates Global NPM Packages'
-# set message_color (set_color magenta)
-# set message_info (set_color white)
-# set message_color_clear (set_color normal)
+function nodeup --description 'Updates Global NPM Packages'
+set message_color (set_color magenta)
+set message_info (set_color white)
+set message_color_clear (set_color normal)
 
-#   echo -e $message_color "Checking for outdated Node Packages..." $message_color_clear
-#   npm outdated -g --depth=0;
-#   read -p  'echo "Wanna update the outdated packages? (y/n):"' -l confirm
-#   switch $confirm
-#     case '' Y y
-#       npm i npm@latest -g;
-#       npm update -g --verbose;
-#       npm outdated -g --depth=0; 
-#       echo -e $message_info "Some Packages need to be updated manually... try running >> $message_color_clear $message_color npm i -g <package_name>" $message_color_clear
-#     case N n
-#       echo -e $message_color "OK...cya!"$message_color_clear
-#   end
-# end
+  echo -e $message_color "Checking for outdated Node Packages..." $message_color_clear
+  npm outdated -g --depth=0;
+  read -p  'echo "Wanna update the outdated packages? (y/n):"' -l confirm
+  switch $confirm
+    case '' Y y
+      npm i npm@latest -g;
+      npm update -g --verbose;
+      npm outdated -g --depth=0; 
+      echo -e $message_info "Some Packages need to be updated manually... try running >> $message_color_clear $message_color npm i -g <package_name>" $message_color_clear
+    case N n
+      echo -e $message_color "OK...cya!"$message_color_clear
+  end
+end
