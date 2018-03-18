@@ -526,7 +526,7 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 ###############################################################################
 
 # Install pretty iTerm colors
-open "${HOME}/.local/share/confiles/BlackRain.itermcolors"
+#open "${HOME}/.local/share/confiles/BlackRain.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
