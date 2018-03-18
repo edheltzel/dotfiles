@@ -17,14 +17,11 @@ function ..... ; cd ../../../.. ; end
 # Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'
 
-# List packages and gems and fast updates
-	alias zup='upgrade_oh_my_zsh' # manually update Oh-My-ZSH
-
-	alias nodeup='npm outdated -g --depth=0; and npm install npm@latest -g; and npm update -g --verbose ' # update global node packages
-
 # Git
-	#alias git='hub'
-	alias cma='git add -A; and git commit -m'
+	#alias git='hub' 
+  alias push='git push'
+  alias master='git co master'
+  alias clone='git clone'
 	git config --global alias.logs 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # Network
