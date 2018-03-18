@@ -37,7 +37,7 @@ sudo nvram SystemAudioVolume=" "
 sudo pmset -a standbydelay 86400
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
-#defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Set highlight color to green
 # defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
@@ -101,8 +101,8 @@ sudo systemsetup -setrestartfreeze on
 # Never go into computer sleep mode
 #sudo systemsetup -setcomputersleep Off > /dev/null
 
-# Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+# Disable Notification Center and remove the menu bar icon - Does not work in High Sierra
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
