@@ -57,7 +57,11 @@ files
 
 ### Fish (fish/)
 * setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
-* config.fish - Global fish configuration (.fishrc)
+* config.fish - Global fish configuration _(.fishrc)_
+* _aliases.fish - Contains all aliases for completions
+* _colors.fish - Sets the colors for `xterm-256color` and `LS_COLORS`
+* _exports.fish - sets custom Exports ie: `$EDITOR`
+
 * completions/
   * repo.fish - Contains all repos as completions for the `repo` command
   * repodir.fish - Contains all repos as completions for the `repodir` command
@@ -68,11 +72,11 @@ files
   * fish_greeting.fish - My personal fish greeting using the
   full-colour fish logo
   * fish_prompt.fish - The Classic + Git prompt from the fish web config
-  * forrepos.fish - Executes a passed command for all repos in `~/repos`
+  * forrepos.fish - Executes a passed command for all repos in `~/Projects`
   * ls.fish - Calling ls with parameter --color=auto
   * pubkey.fish - Copies the public key to the clipboard
-  * repo.fish - Finds a repository in `~/repos` and jumps to it
-  * repodir.fish - Finds a repository in `~/repos` and prints its path
+  * repo.fish - Finds a repository in `~/Projects` and jumps to it
+  * repodir.fish - Finds a repository in `~/Projects` and prints its path
   * setup.fish - Initial setup for a new fish installation,
   contains abbreviations
   * update.fish - Installs OS X Software Updates, updates Ruby gems, Homebrew,
