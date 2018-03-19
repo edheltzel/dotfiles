@@ -46,10 +46,7 @@ set_fish_shell() {
 }
 
 if set_fish_shell; then
-    success "Successfully set up fish shell."
+    success "Successfully set up fish shell. Make sure you run Fisher manually"
 else
     error "Failed setting up fish shell."
 fi
-
-info "Installing plugins..."
-fisher
