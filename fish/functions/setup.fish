@@ -25,5 +25,6 @@ function setup
   abbr sdel rm -rf
   abbr sp serverpilot
   abbr speedtest speed-test
+  abbr symlink ln -s
   abbr tkill tmux kill-session -t
 end
