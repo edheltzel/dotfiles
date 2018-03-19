@@ -4,7 +4,7 @@ What you'll find in this repository is a very similar configuration, but configu
 
 ## Usage
 1. Restore your safely backed up ssh keys to `~/.ssh/`
-    1. Alternatively, generate new ssh keys, and add these to your GitHub account
+    1. Alternatively, [generate new ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/), and add these to your GitHub account.
 2. Install Homebrew and git
 
   ```bash
@@ -14,19 +14,20 @@ What you'll find in this repository is a very similar configuration, but configu
 3. Clone this repository
 
   ```
-  git clone git@github.com:rkalis/dotfiles.git
+  git clone git@github.com:ginfuru/dotfiles.git
   ```
 4. Run the `bootstrap.sh` script
     1. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything
-6. (Optional) Point the Alfred preference sync to the right folder
-7. (Optional) Point the Microsoft Remote Desktop folder to the right folder
 
 ## Customisation
 I strongly encourage you to play around with the configurations, and add or remove features.
 If you would like to use these dotfiles for yourself, I'd recommend changing at least the following:
 
 #### Git
-* The .gitconfig file includes my [user] config, replace these with your own user name and email
+* The `.gitconfig` file includes my [user] config, replace these with your own user name and email
+  * Almost all of git aliases are located in `.gitconfig` versus `_aliases.fish` or `fish/functions/setup.fish` - I've found this to work best for me. 
+* Also check the `.gitignore_global` for anything you might want to add or remove.
+
 
 #### OSX
 * At the top of the setup.sh file, my computer name is set, replace this with your own computer name
@@ -58,7 +59,6 @@ files
 * setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
 * config.fish - Global fish configuration (.fishrc)
 * completions/
-  * conda.fish - Contains completions to all `conda` commands
   * repo.fish - Contains all repos as completions for the `repo` command
   * repodir.fish - Contains all repos as completions for the `repodir` command
 * functions/
