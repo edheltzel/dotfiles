@@ -51,3 +51,5 @@ else
     error "Failed setting up fish shell."
 fi
 
+info "Installing plugins..."
+fisher
