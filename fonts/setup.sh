@@ -8,8 +8,8 @@ cd "$DIR"
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~/Library/Fonts)"
 
-info "Setting up fonts ..."
+info "Setting up fonts..."
 
-find * -name "*.*tf" | while read fn; do
+find * -name "*.otf" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
