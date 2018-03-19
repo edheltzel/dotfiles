@@ -23,6 +23,7 @@ brew 'git-lfs'
 brew 'grep'
 brew 'grc'
 brew 'imagemagick', args: ['with-webp']
+brew 'jpegoptim'
 brew 'libsass'
 brew 'mas'
 brew 'mongodb'
