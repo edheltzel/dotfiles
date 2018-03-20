@@ -12,9 +12,7 @@ function ..... ; cd ../../../.. ; end
 	alias cuts='~/Projects/dot_files; and code .'
 	alias dropbox='cd ~/Dropbox\ \(Portside\)' #PATH DROPBOX FOR BUSINESS
 	alias projects='~/Projects; and exa -lg' #list all project groups
-	alias personal='~/Projects/personal; and exa -lg'
 	alias work='~/Projects/work; and exa -lg'
-	alias pg='~/Projects/playground; and exa -lg'
 	alias wp='~/Projects/wordpress; and exa -lg'
 
 # Set the shell to zsh quickly
