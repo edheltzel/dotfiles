@@ -43,14 +43,6 @@ This folder is a collection of my own repos, some of which are even private. The
 ### Root (/)
 * bootstrap.sh - Calls all setup.sh scripts
 
-### User Bin (bin/)
-* setup.sh - Symlinks the other contents of the folder to `~/bin/`
-* imgcat - A utility to display images inline in iTerm 2
-* sethidden - A shell script which takes command line arguments to show or hide
-hidden files
-* togglehidden - A shell script that toggles between showing and hiding hidden
-files
-
 ### Duti (duti/)
 * setup.sh - Sets the defaults set up in the different files
 * app.package.id - Contains all extensions for the specified program
