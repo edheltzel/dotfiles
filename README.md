@@ -28,12 +28,16 @@ If you would like to use these dotfiles for yourself, I'd recommend changing at 
   * Almost all of git aliases are located in `.gitconfig` versus `_aliases.fish` or `fish/functions/setup.fish` - I've found this to work best for me. 
 * Also check the `.gitignore_global` for anything you might want to add or remove.
 
-
 #### OSX
-* At the top of the setup.sh file, my computer name is set, replace this with your own computer name
+* At the top of the setup.sh file, my computer name is set as `MacDaddy` - might want to change it.
 
 ####  Packages
-This folder is a collection of the programs and utilities I use frequently. These lists can easily be amended to your liking.
+This folder is a collection of the programs and utilities I use. The lists can easily be amended for your workflow.
+
+* brewfile
+* gem.list
+* npm -g.list
+* pip3.ist
 
 #### Repos
 This folder is a collection of my own repos, some of which are even private. The existing lists can easily be edited or replaced by custom lists.
@@ -41,7 +45,7 @@ This folder is a collection of my own repos, some of which are even private. The
 ## Contents
 
 ### Root (/)
-* bootstrap.sh - Calls all setup.sh scripts
+* bootstrap.sh - Calls all setup.sh scripts and executes.
 
 ### Duti (duti/)
 * setup.sh - Sets the defaults set up in the different files
@@ -55,25 +59,22 @@ This folder is a collection of my own repos, some of which are even private. The
 * _exports.fish - sets custom Exports ie: `$EDITOR`
 
 * completions/
+  * **NOTE:** considering removing this and sticking with `Z`
   * repo.fish - Contains all repos as completions for the `repo` command
   * repodir.fish - Contains all repos as completions for the `repodir` command
 * functions/
   * abbrex.fish - Utility for expanding abbreviations in fish-scripts
-  * clear.fish - Clears the screen and shows fish_greeting
   * emptytrash.fish - Empties trash and clears system logs
-  * fish_greeting.fish - My personal fish greeting using the
-  full-colour fish logo
-  * fish_prompt.fish - The Classic + Git prompt from the fish web config
+  * fish_greeting.fish - My personal fish greeting using the full-color fish logo
+  * fish_right_prompt.fish - Left Blank on purpse
+  * ~~fish_prompt.fish~~ - Using [Spacefish - A Fish Shell prompot of Astronauts](https://github.com/matchai/spacefish) 
   * forrepos.fish - Executes a passed command for all repos in `~/Projects`
-  * ls.fish - Calling ls with parameter --color=auto
   * pubkey.fish - Copies the public key to the clipboard
-  * repo.fish - Finds a repository in `~/Projects` and jumps to it
+  * repo.fish - Finds a repository in `~/Projects` and jumps to it **NOTE:currently using `Z`**
   * repodir.fish - Finds a repository in `~/Projects` and prints its path
   * setup.fish - Initial setup for a new fish installation,
   contains abbreviations
-  * update.fish - Installs OS X Software Updates, updates Ruby gems, Homebrew,
-  npm, and their installed packages
-  * week.fish - Returns the current week number
+  * ~~update.fish~~ - using a Fisherman plugin, [Update](https://github.com/publicarray/update) _(see `fishfile`)_
 
 ### Git (git/)
 * setup.sh - Symlinks all git files to `~/`
@@ -83,6 +84,7 @@ several compiled files
 
 ### macOS Preferences (macos/)
 * setup.sh - Executes a long list of commands pertaining to macOS Preferences
+  * **I can not stress enough to read this and change this for what works for you.**
 
 ### Packages (packages/)
 * setup.sh - Installs the contents of the .list files and the Brewfile
@@ -97,4 +99,4 @@ locations
 
 ### Vim (vim/)
 * setup.sh - Symlinks all vim files to `~/`
-* .vimrc - Basic Vim configuration
+* .vimrc - Basic Vim configuration -- though slighly modified for my needs.
