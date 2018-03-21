@@ -1,8 +1,7 @@
 # Dotfiles
-I originally forked [Raklis dotfile](https://github.com/rkalis/dotfiles) because of his Fish Shell setup.
-What you'll find in this repository is a very similar configuration, but configured for my personal needs which is heavily modified from Raklis.
+Gotta thank [Raklis dotfile](https://github.com/rkalis/dotfiles) for the simple setup, but what you'll find is a configuration for my personal needs, surrounding front-end web development -- NodeJS + React, CSS Wizadary with SCSS and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
 
-## Usage
+## Usage and the Install
 1. Restore your safely backed up ssh keys to `~/.ssh/`
     1. Alternatively, [generate new ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/), and add these to your GitHub account.
 2. Install Homebrew and git
