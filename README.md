@@ -17,6 +17,12 @@ Gotta thank [Raklis dotfile](https://github.com/rkalis/dotfiles) for the simple 
   ```
 4. Run the `bootstrap.sh` script
     1. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything
+5. Install Fisherman and Plugins -- _Optional_
+```bash
+curl -Lo curl -L ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+fisher
+```
+
 
 ## Customization
 I strongly encourage you to play around with the configurations, and add or remove features.
