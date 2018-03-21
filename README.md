@@ -17,7 +17,7 @@ Gotta thank [Raklis dotfile](https://github.com/rkalis/dotfiles) for the simple 
   ```
 4. Run the `bootstrap.sh` script
     1. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything
-5. Install Fisherman and Plugins -- _Optional_
+5. Install [Fisherman](https://github.com/fisherman/fisherman) and Plugins -- _Optional_
 ```bash
 curl -Lo curl -L ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher
@@ -62,12 +62,12 @@ This folder is a collection of my own repos, some of which are even private. The
 * _aliases.fish - Contains all aliases for completions
 * _colors.fish - Sets the colors for `xterm-256color` and `LS_COLORS`
 * _exports.fish - sets custom Exports ie: `$EDITOR`
-
-* completions/
+* `fishfile` - list of [Fisherman](https://github.com/fisherman/fisherman) plugins to install
+* `completions/`
   * **NOTE:** considering removing this and sticking with `Z`
   * repo.fish - Contains all repos as completions for the `repo` command
   * repodir.fish - Contains all repos as completions for the `repodir` command
-* functions/
+* `functions/`
   * abbrex.fish - Utility for expanding abbreviations in fish-scripts
   * emptytrash.fish - Empties trash and clears system logs
   * fish_greeting.fish - My personal fish greeting using the full-color fish logo
