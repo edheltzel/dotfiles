@@ -18,7 +18,7 @@ Gotta thank [Raklis dotfile](https://github.com/rkalis/dotfiles) for the simple 
 4. Run the `bootstrap.sh` script
     1. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything
 
-## Customisation
+## Customization
 I strongly encourage you to play around with the configurations, and add or remove features.
 If you would like to use these dotfiles for yourself, I'd recommend changing at least the following:
 
