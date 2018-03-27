@@ -22,7 +22,7 @@ function setup
   abbr ll exa -lg
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
-  abbr yarns yarn list --depth=0
+  abbr yarns yarn global list 
   abbr sdel rm -rf
   abbr sp serverpilot
   abbr speedtest speed-test
