@@ -48,7 +48,7 @@ brew 'wget', args: ['enable-iri']
 brew 'webp'
 brew 'unzip'
 brew 'vim'
-brew 'yarn'
+brew 'yarn', args: ['without-node']
 brew 'z'
 brew 'zip'
 brew 'zsh'
