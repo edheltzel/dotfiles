@@ -10,7 +10,7 @@ function setup
   abbr gb git b -a
   abbr binfo brew info
   abbr bi brew install
-  abbr brews brew list -1
+  abbr brews brew leaves
   abbr cl clear
   abbr del trash
   abbr gems gem query --local
