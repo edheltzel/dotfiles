@@ -7,6 +7,7 @@ function ..... ; cd ../../../.. ; end
 # Workflow
 	alias code='code-insiders'
 	alias cll='clear; exa -lg'
+  alias siz='du -khsc' #show the size of a directory
 
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(Portside\)' #PATH DROPBOX FOR BUSINESS
