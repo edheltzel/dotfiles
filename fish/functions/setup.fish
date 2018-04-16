@@ -11,7 +11,6 @@ function setup
   abbr binfo brew info
   abbr bi brew install
   abbr brews brew leaves
-  abbr casks brew cask list
   abbr cl clear
   abbr del trash
   abbr gems gem query --local

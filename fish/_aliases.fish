@@ -22,6 +22,9 @@ function ..... ; cd ../../../.. ; end
 # Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'
 
+# Homebrew Cask
+  alias casks='brew cask list'
+  
 # Git
 	#alias git='hub' 
   alias clone='git clone'
