@@ -65,6 +65,7 @@ cask 'dash'
 cask 'docker'
 cask 'dropbox'
 cask 'droplr'
+cask 'figma'
 cask 'firefox-nightly'
 cask 'go2shell'
 cask 'google-chrome-canary'
@@ -102,12 +103,15 @@ cask 'visual-studio-code-insiders'
 cask 'vlc'
 cask 'zeplin'
 
+mas 'Affinity Photo', id: 824183456
+mas 'Affinity Designer', id: 824171161
 mas 'Divvy', id: 413857545
 mas 'Icon Slate', id: 439697913
 mas 'In Time', id: 1301983912
 mas 'Irvue', id: 1039633667
 mas 'Keynote', id: 409183694
 mas 'Lastpass', id: 926036361
+mas 'Magnet', id: 441258766
 mas 'MindNode Pro', id: 402398561
 mas 'Newton', id: 1059655371
 mas 'Numbers', id: 409203825
