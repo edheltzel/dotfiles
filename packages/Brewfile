@@ -101,7 +101,6 @@ cask 'vanilla'
 cask 'virtualbox'
 cask 'visual-studio-code-insiders'
 cask 'vlc'
-cask 'zeplin'
 
 mas 'Affinity Photo', id: 824183456
 mas 'Affinity Designer', id: 824171161
