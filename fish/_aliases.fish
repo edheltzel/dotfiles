@@ -43,7 +43,7 @@ function ..... ; cd ../../../.. ; end
 	alias localip="ipconfig getifaddr en0" #internal network IP
 	alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 	alias ping='ping -c 5' # PING WITH PACKET COUNT
-	alias speedtest='speed-test'
+	alias speedtest='speedtest-cli'
 
 # View HTTP traffic
 	alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
