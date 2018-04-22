@@ -15,11 +15,6 @@ function setup
   abbr del trash
   abbr gems gem query --local
   abbr gemup gem update --system
-  abbr l exa -la
-  abbr la exa -la
-  abbr ld exa -lgh
-  abbr lda exa -lagh
-  abbr ll exa -lg
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
   abbr op open .

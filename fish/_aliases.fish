@@ -3,6 +3,11 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
+  alias l='exa -la'
+  alias la='exa -la'
+  alias ld='exa -lgh'
+  alias lda='exa -lagh'
+  alias ll='exa -lg'
 
 # Workflow
 	alias code='code-insiders'
