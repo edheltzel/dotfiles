@@ -22,20 +22,20 @@ function ..... ; cd ../../../.. ; end
 	alias wp='~/Projects/wordpress; and exa -lg'
 	alias pg='~/Projects/playground; and exa -lg'
 
-	alias cuts='~/Projects/personal/dot_files; and code .'
+	alias cuts='~/Projects/personal/dot_files; and subl .'
 
 # Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'
 
 # Homebrew Cask
   alias casks='brew cask list'
-  
+
 # Git
-	#alias git='hub' 
+	#alias git='hub'
   alias clone='git clone'
   alias master='git co master'
   alias push='git push'
-  
+
 	git config --global alias.logs 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # Network
