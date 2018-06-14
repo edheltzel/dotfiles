@@ -30,6 +30,8 @@ function ..... ; cd ../../../.. ; end
 # Homebrew Cask
   alias casks='brew cask list'
 
+# Tmux
+  alias mux='tmuxinator'
 # Git
 	#alias git='hub'
   alias clone='git clone'
