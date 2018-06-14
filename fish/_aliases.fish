@@ -22,7 +22,7 @@ function ..... ; cd ../../../.. ; end
 	alias wp='~/Projects/wordpress; and exa -lg'
 	alias pg='~/Projects/playground; and exa -lg'
 
-	alias cuts='~/Projects/personal/dot_files; and subl .'
+	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
 
 # Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'

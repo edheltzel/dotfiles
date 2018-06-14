@@ -1,58 +1,59 @@
-[user]
+  [user]
   name  = Ed Heltzel
   email = ed@portside.io
-
-[github]
+  
+  [github]
   user = ginfuru
-
-[credential]
+  
+  [credential]
   helper = GIT_CREDENTIAL_HELPER
-[color]
+  [color]
   ui     = auto
   branch = auto
   diff   = auto
   status = auto
-[color "branch"]
+  [color "branch"]
   current = yellow reverse
   local   = yellow
   remote  = green
-[color "diff"]
+  [color "diff"]
   meta = yellow bold
   frag = magenta bold
   old  = red bold
   new  = green bold
-[color "status"]
+  [color "status"]
   added     = yellow
   changed   = green
   untracked = cyan
-
-[core]
+  
+  [core]
   excludesfile = ~/.gitignore_global
-  editor = code-insiders -w
+  #editor      = code-insiders -w
+  editor       = subl -ws
   mergeoptions = --no-ff --no-commit
-  autocrlf = input
-  quotepath = false
-  safecrlf = warn
-
-[diff]
-	tool = opendiff
-
-[difftool]
-	prompt = false
-
-[merge]
-	tool = opendiff
+  autocrlf     = input
+  quotepath    = false
+  safecrlf     = warn
+  
+  [diff]
+  tool = opendiff
+  
+  [difftool]
+  prompt = false
+  
+  [merge]
+  tool = opendiff
   log = true
-
-[mergetool]
-	prompt     = false
-	keepBackup = false
-
-[apply]
+  
+  [mergetool]
+  prompt     = false
+  keepBackup = false
+  
+  [apply]
   # Detect whitespace errors when applying a patch
   whitespace = fix
-
-[alias]
+  
+  [alias]
   # most commonly used
   aa      = add --all
   cm      = commit -m
@@ -102,7 +103,7 @@
   sts  = "!f() { git stash show stash@{$1}; }; f"
   std  = "!f() { git stash show stash@{$1} -U5; }; f"
   strm = "!f() { git stash drop stash@{$1} -U5; }; f"
-
+  
   #commits
   c  = commit
   # pushes & pulls
@@ -114,7 +115,7 @@
   pr  = pull-request
   psf = push --force
   upm = !git fetch upstream && git merge upstream/master
-
+  
   # status & log
   s  = status -sb
   ss = status
@@ -125,27 +126,27 @@
   
   # show tracked branches
   tracked = "!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d"
- 
+  
   # `git di $number` shows the diff between the state `$number` revisions ago and the current state
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
- 
+  
   #show changes
   wc  = whatchanged -p --abbrev-commit --pretty = medium
   r   = reset
   rhh = reset HEAD --hard
-
-	logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
-
-[push]
+  
+  logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
+  
+  [push]
   default    = matching
   followTags = true
-[filter "media"]
+  [filter "media"]
   required = true
   clean = git media clean %f
   smudge = git media smudge %f
-
-[filter "lfs"]
+  
+  [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
-[help]
+  [help]
