@@ -23,4 +23,5 @@ function setup
   abbr sp serverpilot
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
+  abbr suckit wget -mkEpnp
 end
