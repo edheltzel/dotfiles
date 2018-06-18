@@ -18,4 +18,5 @@ prettier
 purgecss
 trash-cli
 vscode
+vsce
 yo
