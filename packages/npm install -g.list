@@ -16,7 +16,6 @@ lite-server
 node-sass
 prettier
 purgecss
-trash-cli
 vscode
 vsce
 yo

@@ -3,11 +3,12 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
-  alias l='exa -la'
-  alias la='exa -la'
-  alias ld='exa -lgh'
-  alias lda='exa -lagh'
-  alias ll='exa -lg'
+  alias l='exa -laF'
+  alias la='exa -laF'
+  alias ld='exa -lghF'
+  alias lda='exa -laghF'
+  alias ll='exa -lgF'
+  alias ls='exa -F'
 
 # Workflow
 	alias code='code-insiders'
@@ -17,10 +18,10 @@ function ..... ; cd ../../../.. ; end
 
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(Portside\)' #PATH DROPBOX FOR BUSINESS
-	alias projects='~/Projects; and exa -lg' #list all project groups
-	alias work='~/Projects/work; and exa -lg'
-	alias wp='~/Projects/wordpress; and exa -lg'
-	alias pg='~/Projects/playground; and exa -lg'
+	alias projects='~/Projects; and exa -lgF' #list all project groups
+	alias work='~/Projects/work; and exa -lgF'
+	alias wp='~/Projects/wordpress; and exa -lgF'
+	alias pg='~/Projects/playground; and exa -lgF'
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
 
@@ -32,11 +33,13 @@ function ..... ; cd ../../../.. ; end
 
 # Tmux
   alias mux='tmuxinator'
+
 # Git
 	#alias git='hub'
   alias clone='git clone'
   alias master='git co master'
   alias push='git push'
+  alias git='lab'
 
 	git config --global alias.logs 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
