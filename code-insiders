@@ -1,0 +1,4 @@
+# Defined in - @ line 0
+function reload --description 'alias code=code-insiders'
+	exec code $argv;
+end
