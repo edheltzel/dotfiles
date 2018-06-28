@@ -1,9 +1,11 @@
-oh-my-fish/plugin-bang-bang
 edc/bass
 fisherman/free
-oh-my-fish/plugin-grc
-matchai/spacefish
-tuvistavie/fish-ssh-agent
-oh-my-fish/plugin-tab
-publicarray/update
 fisherman/z
+matchai/spacefish
+oh-my-fish/plugin-bang-bang
+oh-my-fish/plugin-grc
+oh-my-fish/plugin-tab
+oh-my-fish/plugin-osx
+oh-my-fish/plugin-brew
+publicarray/update
+tuvistavie/fish-ssh-agent
