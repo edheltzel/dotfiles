@@ -1,4 +1,4 @@
 function hostfile --description 'Opens local host file in the default editor'
-  eval $EDITOR /Volumes/$VOL/private/etc/hosts
+  eval sudo $EDITOR /etc/hosts
 end
 
