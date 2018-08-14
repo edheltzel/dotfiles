@@ -421,7 +421,7 @@ defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock wvous-tl-modifier -int 0
 
 # Top right screen corner → Application Windows
-defaults write com.apple.dock wvous-tr-corner -int 3
+defaults write com.apple.dock wvous-tr-corner -int 12
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # Bottom right screen corner → Desktop
