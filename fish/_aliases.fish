@@ -24,6 +24,7 @@ function ..... ; cd ../../../.. ; end
 	alias pg='~/Projects/playground; and exa -lgF'
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
+  alias dots='~/Projects/personal/dot_files; and exa -lgF'
 
 # Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'
