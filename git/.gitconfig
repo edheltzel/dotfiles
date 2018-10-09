@@ -1,6 +1,6 @@
   [user]
-  name  = Ed Heltzel
-  email = ed@portside.io
+	name = Ed Heltzel
+	email = ed@rainyday.media
   
   [github]
   user = ginfuru
@@ -28,7 +28,7 @@
   
   [core]
   excludesfile = ~/.gitignore_global
-  editor      = code-insiders -w
+  editor      = code -w
   #editor       = subl -ws
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
@@ -146,7 +146,8 @@
   smudge = git media smudge %f
   
   [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
   [help]

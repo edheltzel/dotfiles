@@ -1,4 +1,4 @@
-set --export --global EDITOR code-insiders $EDITOR #set Visual Studio Code Insiders to default editor
+set --export --global EDITOR code $EDITOR #set Visual Studio Code Insiders to default editor
 set --export --global VOL rdm $VOL
 
 #set --export --global LANG en_US $LANG
