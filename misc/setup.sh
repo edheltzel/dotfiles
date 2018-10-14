@@ -8,11 +8,11 @@ cd "$DIR"
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
 
-info "Setting up Misc Dotfiles..."
+info "Configuraing misc dots..."
 
 find . -name ".*" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
-success "Finished setting up Misc Dotfiles."
+success "Finished configuring misc dotfiles."
