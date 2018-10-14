@@ -52,7 +52,6 @@ brew 'webp'
 brew 'unzip'
 brew 'vim'
 brew 'neovim'
-brew 'yarn', args: ['without-node']
 brew 'z'
 brew 'zip'
 brew 'zsh'

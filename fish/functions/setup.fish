@@ -18,7 +18,6 @@ function setup
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
   abbr op open .
-  abbr yarns yarn global list 
   abbr sdel rm -rf
   abbr sp serverpilot
   abbr symlink ln -s
