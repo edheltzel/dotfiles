@@ -8,5 +8,5 @@ source ~/.config/fish/_aliases.fish
 # Source Exports
 source ~/.config/fish/_exports.fish
 
-# SpaceFish 
+# SpaceFish
 set SPACEFISH_CHAR_SYMBOL "⋊>"

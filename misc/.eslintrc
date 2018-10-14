@@ -31,7 +31,7 @@
     "prefer-const": [
       "error",
       {
-        "destructuring": "all",
+        "destructuring": "all"
       }
     ],
     "arrow-body-style": [
@@ -105,7 +105,7 @@
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 80,
+        "printWidth": 80
       }
     ],
     "jsx-a11y/href-no-hash": "off",
@@ -119,7 +119,7 @@
     ]
   },
   "plugins": [
-    // "html",
+    "eslint-plugin-standard",
     "prettier"
   ]
 }
