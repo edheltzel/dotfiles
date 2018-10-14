@@ -25,7 +25,7 @@ function ..... ; cd ../../../.. ; end
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
   alias dots='~/Projects/personal/dot_files; and exa -lgF'
-  alias upp='update fish gem mas brew yarn'
+  alias upp='update fish gem mas brew npm'
 
 # Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'
