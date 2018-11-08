@@ -9,4 +9,7 @@ source ~/.config/fish/_aliases.fish
 source ~/.config/fish/_exports.fish
 
 # SpaceFish
-set SPACEFISH_CHAR_SYMBOL "⋊>"
+set SPACEFISH_CHAR_SYMBOL "❯"
+# set SPACEFISH_TIME_SHOW trues
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
