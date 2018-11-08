@@ -16,6 +16,7 @@ function ..... ; cd ../../../.. ; end
   alias siz='du -khsc' #show the size of a directory
   alias wget='wget -c' #resume wget by default
   alias cask='brew cask'
+  alias cdl='cd; and clear'
 
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(Portside\)' #PATH DROPBOX FOR BUSINESS
