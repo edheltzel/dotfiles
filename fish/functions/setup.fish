@@ -14,6 +14,7 @@ function setup
   abbr cl clear
   abbr del trash
   abbr gems gem query --local
+  abbr rubys rbenv install -l
   abbr gemup gem update --system
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
