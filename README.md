@@ -4,11 +4,14 @@ Gotta thank [Raklis dotfile](https://github.com/rkalis/dotfiles) for the simple 
 ## Usage and the Install
 1. Restore your safely backed up ssh keys to `~/.ssh/`
     1. Alternatively, [generate new ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/), and add these to your GitHub account.
-2. Install Homebrew and git
+2. Install Homebrew and Git
 
   ```bash
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew install git
+  ```
+  
+  ```bash
+    brew install git
   ```
 3. Clone this repository
 
