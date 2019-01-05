@@ -60,8 +60,8 @@ cask 'alfred'
 cask 'appcleaner'
 cask 'bartender'
 cask 'boom-3d'
+cask 'cheatsheet'
 cask 'colorpicker-skalacolor'
-cask 'crunch'
 cask 'cyberduck'
 cask 'dash'
 cask 'dropbox'
@@ -93,25 +93,24 @@ cask 'shrinkit'
 cask 'sip'
 cask 'sketch'
 cask 'slack'
-cask 'spotify'
 cask 'sublime-text'
+cask 'sublime-merge'
 cask 'typinator'
 cask 'virtualbox'
 cask 'local-by-flywheel'
-cask 'visual-studio-code-insiders'
+cask 'visual-studio-code'
 cask 'vlc'
 
+mas '1Password 7 - Password Manager', id: 1333542190
 mas 'Affinity Photo', id: 824183456
 mas 'Affinity Designer', id: 824171161
 mas 'Divvy', id: 413857545
 mas 'Icon Slate', id: 439697913
-mas 'In Time', id: 1301983912
-mas 'Irvue', id: 1039633667
+mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
 mas 'Lastpass', id: 926036361
 mas 'Magnet', id: 441258766
 mas 'MindNode Pro', id: 402398561
-mas 'Newton', id: 1059655371
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Speedtest', id: 1153157709

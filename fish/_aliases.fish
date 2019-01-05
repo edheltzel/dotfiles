@@ -19,7 +19,7 @@ function ..... ; cd ../../../.. ; end
   alias cdl='cd; and clear'
 
 # Paths
-	alias dropbox='cd ~/Dropbox\ \(Portside\)' #PATH DROPBOX FOR BUSINESS
+	alias dropbox='cd ~/Dropbox\ \(-\)' #PATH DROPBOX FOR BUSINESS
 	alias projects='~/Projects; and exa -lgF' #list all project groups
 	alias work='~/Projects/work; and exa -lgF'
 	alias wp='~/Projects/wordpress; and exa -lgF'

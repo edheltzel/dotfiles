@@ -9,7 +9,6 @@ generator-generator
 generator-jekyll-starter-kit
 gh
 gulp
-gulp-babel
 gulp-cli
 jshint
 lite-server
