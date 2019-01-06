@@ -1,5 +1,5 @@
 # Dotfiles
-Gotta thank [Raklis dotfile](https://github.com/rkalis/dotfiles) for the simple setup, but what you'll find is a configuration for my personal needs, surrounding front-end web development -- NodeJS + React, CSS Wizadary with SCSS and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
+Gotta thank [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup, but what you'll find is a configuration for my personal needs, surrounding front-end web development -- NodeJS + React, CSS Wizadary with SCSS and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
 
 ## Usage and the Install
 1. Restore your safely backed up ssh keys to `~/.ssh/`
