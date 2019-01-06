@@ -3,7 +3,6 @@ oh-my-fish/plugin-bang-bang
 edc/bass
 oh-my-fish/plugin-brew
 jorgebucaran/fnm
-fisherman/free
 oh-my-fish/plugin-grc
 fisherman/last_job_id
 fisherman/menu
@@ -13,3 +12,4 @@ oh-my-fish/plugin-tab
 publicarray/update
 fisherman/z
 matchai/spacefish
+orefalo/free
