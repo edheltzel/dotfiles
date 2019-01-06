@@ -1,3 +1,4 @@
 git@bitbucket.org:portsideio/eplunocrm.git eim
-git@github.com:ginfuru/bgjekyll.git
-git@github.com:ginfuru/eplunoJekyll.git
+git@github.com:ginfuru/eplunoJekyll.git epluno-ste
+git@github.com:ginfuru/eschoolLP.git elp
+git@github.com:ginfuru/epluno-stemprep.git elp-stemprep
