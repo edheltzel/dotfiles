@@ -60,6 +60,11 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 * setup.sh - Sets the defaults set up in the different files
 * `app.package.id` - Contains all extensions for the specified program _(run `man duti` to learn more)_
 
+### Fonts (fonts/)
+* setup.sh - Installs Fonts
+* ~~FiraCode.otf - for my text editor~~
+**Note:** I have moved to used Cask to install fonts.
+
 ### Fish (fish/)
 * setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
 * config.fish - Global fish configuration _(.fishrc)_
@@ -83,7 +88,7 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
   * repodir.fish - Finds a repository in `~/Projects` and prints its path
   * setup.fish - Initial setup for a new fish installation,
   contains abbreviations
-  * ~~update.fish~~ - using a Fisher plugin, [Update](https://github.com/publicarray/update) _(see `fishfile`)_
+  * ~~update.fish~~ - Using a Fisher plugin, [Update](https://github.com/publicarray/update) _(see `fishfile`)_
 
 ### Git (git/)
 * setup.sh - Symlinks all git files to `~/`
