@@ -8,7 +8,7 @@ cd "$DIR"
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
 
-info "Configuraing misc dots..."
+info "Configuring misc dotfiles..."
 
 find . -name ".*" | while read fn; do
     fn=$(basename $fn)
