@@ -1,0 +1,33 @@
+.type.storage,
+.type.storage.declaration,
+.storage.class.modifier {
+  font-family: 'Dank Mono';
+  font-size: 1.7em;
+}
+
+.type.storage.arrow.function {
+  font-family: 'Fira Code';
+}
+
+.decorator.name,
+.decorator.punctuation:not(.block),
+.import.keyword {
+  font-family: 'Dank Mono';
+  font-size: 1.7em;
+  color: #68f39b !important;
+}
+.attribute-name {
+  font-family: 'Dank Mono';
+  font-size: 1.5em;
+}
+
+.html.quoted.double {
+  color: #a6f3a6 !important;
+}
+.comment {
+  color: #c5c5fd !important;
+}
+.comment:not(.punctuation) {
+  font-family: Dank Mono;
+  font-size: 1.5em;
+}
