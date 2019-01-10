@@ -114,3 +114,7 @@ locations
 * functions.sh - Contains helper functions for symlinking files and printing
   progress messages
 
+### VSCODE (vscode/)
+* setup.sh - Creates `~/.vscode/custom` and symlinks the `style.css` to the said path which allows for VSCode to use two fonts
+I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
+
