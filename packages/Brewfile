@@ -22,6 +22,7 @@ brew 'git-flow-avh'
 brew 'git-lfs'
 brew 'grep'
 brew 'grc'
+brew 'htop'
 brew 'imagemagick', args: ['with-webp']
 brew 'imgcat'
 brew 'jpegoptim'
