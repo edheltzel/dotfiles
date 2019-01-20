@@ -17,6 +17,7 @@ brew 'exa'
 brew 'findutils', args: ['with-default-names']
 brew 'fish'
 brew 'fortune'
+brew 'go'
 brew 'git'
 brew 'git-flow-avh'
 brew 'git-lfs'
