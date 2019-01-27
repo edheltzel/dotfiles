@@ -11,7 +11,7 @@ function ..... ; cd ../../../.. ; end
   alias ls='exa -F'
 
 # Workflow
-  alias codi='code-insiders'
+  alias code='code-insiders'
 	alias cll='clear; exa -lg'
   alias siz='du -khsc' #show the size of a directory
   alias wget='wget -c' #resume wget by default
