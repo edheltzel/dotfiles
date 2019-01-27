@@ -24,6 +24,7 @@ brew 'git-lfs'
 brew 'grep'
 brew 'grc'
 brew 'htop'
+brew 'hugo'
 brew 'imagemagick', args: ['with-webp']
 brew 'imgcat'
 brew 'jpegoptim'
