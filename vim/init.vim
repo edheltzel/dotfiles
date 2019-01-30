@@ -1,6 +1,6 @@
-" DESCRIPTION: THIS IS MY PERSONAL VIM CONFIGURATION. I HAVE TRIED TO DOCUMENT
-" EACH COMMAND AS BEST AS I CAN. IT IS BEST TO TRY TO UNDERSTAND WHAT EACH
-" COMMAND DOES INSTEAD OF BINDLY USING IT.
+" DESCRIPTION: THIS IS A PERSONAL VIM CONFIGURATION. ATTEMPTS HAVE BE MADE TO DOCUMENT
+" EACH COMMAND. IT IS BEST TO TRY TO UNDERSTAND WHAT EACH COMMAND DOES INSTEAD OF BINDLY
+" USING IT.
 "
 " REMEMBER, THIS VIM CONFIG IS TO SUIT MY NEEDS WHICH MAY NOT BE COMPATIBLE
 " WITH YOURS.SO FEEL FREE TO PICK OUT THE BITS YOU LIKE AND TOSS THE REST ASIDE
@@ -311,8 +311,11 @@ au BufRead,BufNewFile,BufReadPost *.json set syntax=json
 nnoremap <leader>t :TabooRename
 nnoremap <leader>o :TabooOpen
 " %}
+" # Ruby Stuff {%
+let g:ruby_host_prog = '~/.rbenv/shims/ruby'
+" %}
 
 " # Rust Stuff {%
-let g:racer_cmd = "/home/rdm/.cargo/bin/racer"
+let g:racer_cmd = "/home/ed/.cargo/bin/racer"
 " %}
 

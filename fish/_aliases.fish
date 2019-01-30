@@ -9,6 +9,7 @@ function ..... ; cd ../../../.. ; end
   alias lda='exa -laghF'
   alias ll='exa -lgF'
   alias ls='exa -F'
+  alias vim='nvim'
 
 # Workflow
   alias code='code-insiders'
