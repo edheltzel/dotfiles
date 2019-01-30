@@ -14,6 +14,7 @@ jshint
 lite-server
 n
 node-sass
+neovim
 postcss-cli
 prettier
 purgecss
