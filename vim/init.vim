@@ -28,6 +28,7 @@ Plug 'godlygeek/tabular'
 Plug 'airblade/vim-gitgutter'
 Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-fugitive' " Awesome git wrapper
@@ -37,6 +38,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips'
 Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-pug' "Syntax highlighting for Pug
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -69,8 +71,9 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme onedark
 set background=dark
+let g:one_allow_italics = 1
+colorscheme one
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
 
