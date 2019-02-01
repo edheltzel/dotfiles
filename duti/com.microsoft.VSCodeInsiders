@@ -1,5 +1,8 @@
 .babelrc
+.bashrc
+.zshrc
 .c
+.coffee
 .cpp
 .css
 .erb
@@ -9,6 +12,7 @@
 .hpp
 .jekyll
 .js
+.jsx
 .json
 .less
 .liquid
@@ -17,13 +21,18 @@
 .markdown
 .md
 .php
+.pug
 .py
+.rb
 .sass
 .scss
 .sh
+.toml
 .tmLanguage
 .ts
 .txt
+.twig
+.xhtml
 .xml
 .yaml
 .yml
