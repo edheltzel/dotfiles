@@ -29,6 +29,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-liquid'
+Plug 'parkr/vim-jekyll'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-fugitive' " Awesome git wrapper
