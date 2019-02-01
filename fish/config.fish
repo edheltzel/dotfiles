@@ -9,10 +9,13 @@ source ~/.config/fish/_aliases.fish
 # Source Exports
 source ~/.config/fish/_exports.fish
 
+# Set the emoji width for iTerm
+set -g fish_emoji_width 2
 
 # SpaceFish
-set SPACEFISH_CHAR_SYMBOL "❯"
-set SPACEFISH_DOCKER_SHOW false
+set -g SPACEFISH_CHAR_SYMBOL ❯
+set -g SPACEFISH_EXEC_TIME_ELAPSED 2
+
 # set SPACEFISH_TIME_SHOW trues
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
