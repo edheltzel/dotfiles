@@ -9,7 +9,7 @@
 filetype off
 
 " #PLUGINS {%
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'cespare/vim-toml'
 Plug 'moll/vim-bbye'
 Plug 'mattn/emmet-vim'

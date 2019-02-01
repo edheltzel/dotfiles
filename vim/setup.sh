@@ -6,13 +6,12 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-LOCAL="$(realpath ~/.local/share/nvim/site)"
 DESTINATION="$(realpath ~/.config/nvim)"
 
 info "Setting up neovim..."
 
 substep_info "Creating nvim plug folder..."
-mkdir -p "$LOCAL/autoload"
+mkdir -p "$DESTINATION/autoload"
 
 find * -name "*vim*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
