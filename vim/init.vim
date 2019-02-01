@@ -180,7 +180,7 @@ nnoremap <F6> :ALEFix<CR>
 
 " #AIRLINE SETTINGS {%
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='one'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 let g:airline#extensions#ale#enabled = 1 " Integrate Airline with ALE
@@ -285,9 +285,15 @@ let g:UltiSnipsSnippetDirectories=["UtilSnips", "snips"]
 
 " #NETRW settings {%
 " Set preferred view
-let g:netrw_liststyle = 3
-" Remove banner
 let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 " %}
 
 " Prevent the use of arrow keys for navigation
