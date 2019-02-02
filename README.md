@@ -1,5 +1,6 @@
 # Dotfiles
-Gotta thank [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup, but what you'll find is a configuration for my personal needs, surrounding front-end web development -- NodeJS + React, CSS Wizadary with SCSS and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
+An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, NeoVim and front-end web development.
+My playground revoles around the use of, NodeJS + ReactJS, CSS Wizadary with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
 
 ## Usage and the Install
 1. Restore your safely backed up ssh keys to `~/.ssh/`
@@ -110,11 +111,26 @@ several compiled files
 * setup.sh - Clones the repositories in the `.list` files at the corresponding
 locations
 
+### Vim (vim/)
+I'd suggest you take a look at this file
+* setup.sh - Symlinks all neovim files to their corresponding location in `~/.config/nvim/`
+* int.vim - this is the NeoVim configuration readlly targeted toward my workflow. The setup is mainly for front-end development.
+* `autoload`
+  * plug.vim - this is the script for [vim-plug](https://github.com/junegunn/vim-plug)
+    * you'll need to run `:PlugInstall` on first launch of vim
+    * An alias of `vim` exists to so both `vim` and `nvim` work the identical
+
+
 ### Helper Scripts (scripts/)
 * functions.sh - Contains helper functions for symlinking files and printing
   progress messages
 
-### VSCODE (vscode/)
-* setup.sh - Creates `~/.vscode/custom` and symlinks the `style.css` to the said path which allows for VSCode to use two fonts
-I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
+### VSCODE ~~(vscode/)~~
+Even though I have an awesome setup for Vim - VSCode Insiders is my default editor. I do play on switching to NeoVim full time, but I'm still more productive in VSCode.
+* I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
+* Make sure you add `code` and/or `code-insiders` to your Path - run `⌘+⇧+P` type `Shell Command: Install 'code-insiders' command in PATH`
+* **Self Plug**
+  * Try out my VSCode theme - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
 
+#### Special Thanks
+Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup,
