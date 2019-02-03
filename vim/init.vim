@@ -222,6 +222,7 @@ set number " Show line numbers
 set noswapfile " No swap file
 set nobackup
 set nowritebackup
+set mouse=a
 
 set textwidth=80
 set formatoptions+=t
