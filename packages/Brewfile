@@ -24,6 +24,8 @@ brew 'git-lfs'
 brew 'grep'
 brew 'grc'
 brew 'htop'
+brew 'hub'
+brew 'zaquestion/tap/lab'
 brew 'hugo'
 brew 'imagemagick', args: ['with-webp']
 brew 'imgcat'

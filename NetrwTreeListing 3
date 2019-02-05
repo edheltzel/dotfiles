@@ -1,0 +1,18 @@
+../
+dot_files/
+| .git/
+| duti/
+| fish/
+| fonts/
+| git/
+| macos/
+| misc/
+| packages/
+| repos/
+| scripts/
+| vim/
+| && e.
+| .DS_Store
+| .editorconfig
+| README.md*
+| bootstrap.sh*
