@@ -44,7 +44,7 @@ function ..... ; cd ../../../.. ; end
   alias clone='git clone'
   alias master='git co master'
   alias push='git push'
-  alias git='lab'
+  alias git='lab' # lab is a wrapper for hub as well
 
 	git config --global alias.logs 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
