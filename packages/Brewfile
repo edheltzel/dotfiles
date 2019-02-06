@@ -113,7 +113,6 @@ cask 'typinator'
 cask 'virtualbox'
 cask 'local-by-flywheel'
 cask 'visual-studio-code-insiders'
-cask 'visual-studio-code'
 cask 'vlc'
 
 mas '1Password 7 - Password Manager', id: 1333542190
