@@ -3,32 +3,33 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
-  alias l='exa -laF'
-  alias la='exa -laF'
-  alias ld='exa -lghF'
-  alias lda='exa -laghF'
-  alias ll='exa -lgF'
-  alias ls='exa -F'
-  alias vim='nvim'
+  alias l='exa -Falh --git'
+  alias la='exa -Fal'
+  alias ld='exa -lghF --git --group-directories-first'
+  alias lda='exa -laghF --git --group-directories-first'
+  alias ll='exa -algF --git'
+  alias ls='exa -Fal'
+  alias tree='exa --tree'
 
 # Workflow
-  alias code='code-insiders'
 	alias cll='clear; exa -lg'
+  alias vim='nvim'
+  alias code='code-insiders'
   alias siz='du -khsc' #show the size of a directory
   alias wget='wget -c' #resume wget by default
   alias cask='brew cask'
   alias cdl='cd; and clear'
 
 # Paths
-	alias dropbox='cd ~/Dropbox\ \(-\)' #PATH DROPBOX FOR BUSINESS
-	alias projects='~/Projects; and exa -lgF' #list all project groups
-	alias work='~/Projects/work; and exa -lgF'
-	alias wp='~/Projects/wordpress; and exa -lgF'
-	alias pg='~/Projects/playground; and exa -lgF'
+	alias dropbox='cd ~/Dropbox\ \(RDM\)' #PATH DROPBOX FOR BUSINESS
+	alias projects='~/Projects; and exa -Falg' #list all project groups
+	alias work='~/Projects/work; and exa -Falg'
+	alias wp='~/Projects/wordpress; and exa -Falg'
+	alias pg='~/Projects/playground; and exa -Falg'
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
-  alias dots='~/Projects/personal/dot_files; and exa -lgF'
-  alias upp='update fish gem mas brew npm'
+  alias dots='~/Projects/personal/dot_files; and exa -Falgh --git'
+  alias upp='update packages'
 
 # Set the shell to zsh quickly
 	alias zshell='chsh -s /usr/local/bin/zsh'
@@ -40,7 +41,7 @@ function ..... ; cd ../../../.. ; end
   alias mux='tmuxinator'
 
 # Git
-	#alias git='hub'
+	alias git='hub'
   alias clone='git clone'
   alias master='git co master'
   alias push='git push'
