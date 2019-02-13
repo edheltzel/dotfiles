@@ -15,7 +15,3 @@ set -g fish_emoji_width 2
 # SpaceFish
 set -g SPACEFISH_CHAR_SYMBOL ❯
 set -g SPACEFISH_EXEC_TIME_ELAPSED 2
-
-# set SPACEFISH_TIME_SHOW trues
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
-

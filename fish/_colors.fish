@@ -1,5 +1,5 @@
 # exa colorizes file extensions - https://the.exa.website/features/colours
-set -x -g EXA_COLORS "gm=1;36"
+set -x -g EXA_COLORS "gm=33;1"
 
 ## custom file extension
 # set -x -g LS_COLORS "*.XYZ=00;40"

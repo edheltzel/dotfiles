@@ -4,10 +4,15 @@
 "
 " REMEMBER, THIS VIM CONFIG IS TO SUIT MY NEEDS WHICH MAY NOT BE COMPATIBLE
 " WITH YOURS.SO FEEL FREE TO PICK OUT THE BITS YOU LIKE AND TOSS THE REST ASIDE
-
-" Disallow detection of filetypes
-filetype off
-
+" TODO:
+" -[ ] split file into multiple files
+" https://github.com/afnanenayet/nvim-dotfiles/blob/master/config/01.plugins.vim
+" https://afnan.io/2018-04-12/my-neovim-development-setup/
+"
+" for f in split(glob('~/.config/nvim/config/*.vim'), '\n')
+"     exe 'source' f
+" endfor
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " #PLUGINS {%
 call plug#begin('~/.config/nvim/plugged')
 Plug 'cespare/vim-toml'
@@ -51,6 +56,11 @@ Plug 'gcmt/taboo.vim'
 Plug 'ervandew/supertab'
 call plug#end()
 "%}
+
+
+" Disallow detection of filetypes
+filetype off
+
 
 let g:vim_markdown_folding_disabled = 1
 let mapleader = ","
@@ -289,7 +299,7 @@ let g:UltiSnipsSnippetDirectories=["UtilSnips", "snips"]
 " #NETRW settings {%
 " Set preferred view
 let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 3 " open in treeview
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
