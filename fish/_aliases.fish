@@ -53,7 +53,6 @@ function ..... ; cd ../../../.. ; end
 	alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
 	alias localip="ipconfig getifaddr en0" #internal network IP
 	alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-	alias ping='ping -c 5' # PING WITH PACKET COUNT
 	alias speedtest='speedtest-cli'
 
 # View HTTP traffic
