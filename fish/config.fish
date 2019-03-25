@@ -1,5 +1,5 @@
 # Setting up the Path
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths #homebrew
+set -U fish_user_paths "/usr/local/sbin" $fish_user_paths #homebrew
 status --is-interactive; and source (rbenv init -|psub) #rbenv init fish
 
 # Source Colors
