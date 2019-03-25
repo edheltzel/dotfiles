@@ -9,6 +9,14 @@ source ~/.config/fish/_aliases.fish
 # Source Exports
 source ~/.config/fish/_exports.fish
 
+
+function nvm
+   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
+
 # Set the emoji width for iTerm
 set -g fish_emoji_width 2
 
