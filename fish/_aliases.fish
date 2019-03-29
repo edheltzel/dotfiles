@@ -11,6 +11,10 @@ function ..... ; cd ../../../.. ; end
   alias ls='exa -Fal'
   alias tree='exa --tree'
 
+# Docker
+  alias dc='docker-compose'
+  alias dcrun='docker-compose run --rm'
+
 # Workflow
 	alias cll='clear; exa -lg'
   alias vim='nvim'
