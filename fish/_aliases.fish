@@ -3,12 +3,12 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
-  alias l='exa -Falh --git'
+  alias l='exa -Falh'
+  alias ll='exa -Flagh --git'
   alias la='exa -Fal'
-  alias ld='exa -lghF --git --group-directories-first'
-  alias lda='exa -laghF --git --group-directories-first'
-  alias ll='exa -algF --git'
   alias ls='exa -Fal'
+  alias lld='exa -Flagh --git --group-directories-first'
+  alias ld='exa -lghF --git --group-directories-first'
   alias tree='exa --tree'
 
 # Docker
