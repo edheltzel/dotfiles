@@ -1,5 +1,5 @@
 ## Defines abbreviations
-function setup
+function setup --description 'defines abbreviations'
   abbr g git
   abbr gs git status
   abbr gc git cm

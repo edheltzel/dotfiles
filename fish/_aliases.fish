@@ -4,9 +4,9 @@ function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
   alias l='exa -Falh'
+  alias ls='exa -Falh'
   alias ll='exa -Flagh --git'
   alias la='exa -Fal'
-  alias ls='exa -Fal'
   alias lld='exa -Flagh --git --group-directories-first'
   alias ld='exa -lghF --git --group-directories-first'
   alias tree='exa --tree'
@@ -16,23 +16,22 @@ function ..... ; cd ../../../.. ; end
   alias dcrun='docker-compose run --rm'
 
 # Workflow
-	alias cll='clear; exa -lg'
+	alias cll='clear; ls'
   alias vim='nvim'
   alias code='code-insiders'
   alias siz='du -khsc' #show the size of a directory
   alias wget='wget -c' #resume wget by default
   alias cask='brew cask'
-  alias cdl='cd; and clear'
 
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(RDM\)' #PATH DROPBOX FOR BUSINESS
-	alias projects='~/Projects; and exa -Falg' #list all project groups
-	alias work='~/Projects/work; and exa -Falg'
-	alias wp='~/Projects/wordpress; and exa -Falg'
-	alias pg='~/Projects/playground; and exa -Falg'
+	alias projects='~/Projects; and ls' #list all project groups
+	alias work='~/Projects/work/epluno; and ls'
+	alias wp='~/Projects/wordpress; and ls'
+	alias pg='~/Projects/playground; and ls'
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
-  alias dots='~/Projects/personal/dot_files; and exa -Falgh --git'
+  alias dots='~/Projects/personal/dot_files; and ll'
   alias upp='update packages'
 
 # Set the shell to zsh quickly
