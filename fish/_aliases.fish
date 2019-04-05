@@ -4,8 +4,8 @@ function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
   alias l='exa -Falh'
-  alias ls='exa -Falh'
   alias ll='exa -Flagh --git'
+  alias ls='grc ls'
   alias la='exa -Fal'
   alias lld='exa -Flagh --git --group-directories-first'
   alias ld='exa -lghF --git --group-directories-first'
