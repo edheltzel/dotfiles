@@ -13,6 +13,7 @@ brew 'brew-cask-completion'
 brew 'coreutils'
 brew 'cowsay'
 brew 'curl'
+brew 'doctl'
 brew 'duti'
 brew 'exa'
 brew 'findutils', args: ['with-default-names']
