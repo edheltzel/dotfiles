@@ -17,3 +17,6 @@ set -g SPACEFISH_CHAR_SYMBOL ❯
 set -g SPACEFISH_EXEC_TIME_ELAPSED 2
 
 set -U grcplugin_ls --color -l
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ed/google-cloud-sdk/path.fish.inc' ]; . '/Users/ed/google-cloud-sdk/path.fish.inc'; end
