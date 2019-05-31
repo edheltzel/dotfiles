@@ -31,7 +31,7 @@ function ..... ; cd ../../../.. ; end
 	alias pg='~/Projects/playground; and ls'
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
-  alias dots='~/Projects/personal/dot_files; and ll'
+  alias dots='cd ~/Projects/personal/dot_files'
   alias upp='update packages'
 
 # Set the shell to zsh quickly
