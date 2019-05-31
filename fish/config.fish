@@ -16,6 +16,12 @@ set -g fish_emoji_width 2
 set -g SPACEFISH_CHAR_SYMBOL ❯
 set -g SPACEFISH_EXEC_TIME_ELAPSED 2
 
+set -g SPACEFISH_KUBECONTEXT_SHOW false
+
+
+# Spaceship
+
+
 set -U grcplugin_ls --color -l
 
 # The next line updates PATH for the Google Cloud SDK.
