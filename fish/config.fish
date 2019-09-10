@@ -12,15 +12,16 @@ source ~/.config/fish/_exports.fish
 # Set the emoji width for iTerm
 set -g fish_emoji_width 2
 
-# SpaceFish
-set -g SPACEFISH_CHAR_SYMBOL ❯
-set -g SPACEFISH_EXEC_TIME_ELAPSED 2
+# Start SpaceFish
+# set -g SPACEFISH_CHAR_SYMBOL ❯
+# set -g SPACEFISH_EXEC_TIME_ELAPSED 2
+# set -g SPACEFISH_KUBECONTEXT_SHOW false
+# End SpaceFish
 
-set -g SPACEFISH_KUBECONTEXT_SHOW false
 
-
-# Spaceship
-
+# Start Starship
+eval (starship init fish)
+# End Starship
 
 set -U grcplugin_ls --color -l
 
