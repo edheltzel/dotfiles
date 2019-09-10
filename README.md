@@ -82,7 +82,8 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
   * emptytrash.fish - Empties trash and clears system logs
   * fish_greeting.fish - My personal fish greeting using the full-color fish logo
   * fish_right_prompt.fish - Left Blank on purpse
-  * ~~fish_prompt.fish~~ - Using [Spacefish - A Fish Shell prompot of Astronauts](https://github.com/matchai/spacefish)
+  * ~~fish_prompt.fish~~ - Is Installed [Spacefish - A Fish Shell prompot of Astronauts](https://github.com/matchai/spacefish)
+  * ~~fish_prompt.fish~~ - Using [Starship - The cross-shell prompt for astronauts](https://starship.rs/)
   * forrepos.fish - Executes a passed command for all repos in `~/Projects`
   * pubkey.fish - Copies the public key to the clipboard
   * repo.fish - Finds a repository in `~/Projects` and jumps to it **NOTE:currently using `Z`**
