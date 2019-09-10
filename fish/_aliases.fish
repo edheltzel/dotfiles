@@ -17,7 +17,6 @@ function ..... ; cd ../../../.. ; end
 
 # Workflow
 	alias cll='clear; ls'
-  alias vim='nvim'
   alias code='code-insiders'
   alias siz='du -khsc' #show the size of a directory
   alias wget='wget -c' #resume wget by default

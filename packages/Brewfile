@@ -67,7 +67,6 @@ brew 'wget', args: ['enable-iri']
 brew 'webp'
 brew 'unzip'
 brew 'vim'
-brew 'neovim'
 brew 'z'
 brew 'zip'
 brew 'zsh'
