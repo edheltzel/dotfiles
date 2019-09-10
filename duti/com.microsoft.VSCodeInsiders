@@ -2,12 +2,15 @@
 .bashrc
 .zshrc
 .c
+.cfg
 .coffee
 .cpp
 .css
 .erb
+.editorconfig
 .d.ts
 .fish
+.go
 .h
 .hpp
 .jekyll
@@ -20,6 +23,7 @@
 .log
 .markdown
 .md
+.mod
 .php
 .pug
 .py
@@ -27,6 +31,7 @@
 .sass
 .scss
 .sh
+.sum
 .toml
 .tmLanguage
 .ts

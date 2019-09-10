@@ -1,5 +1,5 @@
 # Dotfiles
-An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, NeoVim and front-end web development.
+An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
 My playground revolves around the use of, NodeJS + ReactJS, CSS Wizadary with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
 
 ## Usage and the Install
@@ -83,7 +83,7 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
   * fish_greeting.fish - My personal fish greeting using the full-color fish logo
   * fish_right_prompt.fish - Left Blank on purpse
   * ~~fish_prompt.fish~~ - Is Installed [Spacefish - A Fish Shell prompot of Astronauts](https://github.com/matchai/spacefish)
-  * ~~fish_prompt.fish~~ - Using [Starship - The cross-shell prompt for astronauts](https://starship.rs/)
+  * ~~Spacefish~~ - Using [Starship - The cross-shell prompt for astronauts](https://starship.rs/)
   * forrepos.fish - Executes a passed command for all repos in `~/Projects`
   * pubkey.fish - Copies the public key to the clipboard
   * repo.fish - Finds a repository in `~/Projects` and jumps to it **NOTE:currently using `Z`**
@@ -114,20 +114,15 @@ locations
 
 ### Vim (vim/)
 I'd suggest you take a look at this file
-* setup.sh - Symlinks all neovim files to their corresponding location in `~/.config/nvim/`
-* int.vim - this is the NeoVim configuration readlly targeted toward my workflow. The setup is mainly for front-end development.
-* `autoload`
-  * plug.vim - this is the script for [vim-plug](https://github.com/junegunn/vim-plug)
-    * you'll need to run `:PlugInstall` on first launch of vim
-    * An alias of `vim` exists to so both `vim` and `nvim` work the identical
-
+* setup.sh - Symlinks all vim files to `~/`
+* .vimrc - Basic Vim configuration
 
 ### Helper Scripts (scripts/)
 * functions.sh - Contains helper functions for symlinking files and printing
   progress messages
 
 ### VSCODE ~~(vscode/)~~
-Even though I have an awesome setup for Vim - VSCode Insiders is my default editor. I do play on switching to NeoVim full time, but I'm still more productive in VSCode.
+VSCode Insiders is my default editor.
 * I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
 * Make sure you add `code` and/or `code-insiders` to your Path - run `⌘+⇧+P` type `Shell Command: Install 'code-insiders' command in PATH`
 * **Self Plug**
