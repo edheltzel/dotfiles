@@ -14,5 +14,4 @@ set -g fish_emoji_width 2
 
 # Start Starship
 eval (starship init fish)
-# End Starship
 
