@@ -2,9 +2,5 @@
 min_time = 4
 [git_status]
 conflicted = "⇲"
-[battery]
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
 [character]
 use_symbol_for_status = true
