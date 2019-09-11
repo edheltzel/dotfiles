@@ -16,7 +16,7 @@ function ..... ; cd ../../../.. ; end
   alias dcrun='docker-compose run --rm'
 
 # Workflow
-	alias cll='clear; ls'
+	alias cll='clear; exa -Flah'
   alias code='code-insiders'
   alias siz='du -khsc' #show the size of a directory
   alias wget='wget -c' #resume wget by default
@@ -24,10 +24,10 @@ function ..... ; cd ../../../.. ; end
 
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(RDM\)' #PATH DROPBOX FOR BUSINESS
-	alias projects='~/Projects; and ls' #list all project groups
-	alias work='~/Projects/work/epluno; and ls'
-	alias wp='~/Projects/wordpress; and ls'
-	alias pg='~/Projects/playground; and ls'
+	alias projects='~/Projects; and exa -Flah' #list all project groups
+	alias work='~/Projects/work/epluno; and exa -Flah'
+	alias wp='~/Projects/wordpress; and exa -Flah'
+	alias pg='~/Projects/playground; and exa -Flah'
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
   alias dots='cd ~/Projects/personal/dot_files'
