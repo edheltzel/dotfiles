@@ -4,3 +4,14 @@ min_time = 4
 conflicted = "⇲"
 [character]
 use_symbol_for_status = true
+[golang]
+symbol = " "  #nerdfont icon
+[ruby]
+symbol = " "
+[nodejs]
+symbol = " "
+[package]
+symbol = " "
+style = "bold blue"
+[python]
+symbol = " "
