@@ -99,7 +99,7 @@ several compiled files
 * .gitconfig - Sets several global Git variables - also includes GPG signing
   * _(optional)_ : Download the [GPG Suite for macOS](https://gpgtools.org/) this will keep your GPG keys in your keychain. _These keys work on all the cloud repo providers_
   * Follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s).
-  * ![look ma' verified](https://rdmcrew.d.pr/f11jZt+)
+  * ![look ma' verified](https://raw.githubusercontent.com/ginfuru/dot_files/feature/workflowUpdate/_images/verified.png)
 
 ### macOS Preferences (macos/)
 * setup.sh - Executes a long list of commands pertaining to macOS Preferences
