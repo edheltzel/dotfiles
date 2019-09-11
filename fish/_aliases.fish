@@ -24,10 +24,10 @@ function ..... ; cd ../../../.. ; end
 
 # Paths
 	alias dropbox='cd ~/Dropbox\ \(RDM\)' #PATH DROPBOX FOR BUSINESS
-	alias projects='~/Projects; and exa -Flah' #list all project groups
-	alias work='~/Projects/work/epluno; and exa -Flah'
-	alias wp='~/Projects/wordpress; and exa -Flah'
-	alias pg='~/Projects/playground; and exa -Flah'
+	alias projects='~/Projects' #list all project groups
+	alias work='~/Projects/work/epluno'
+	alias wp='~/Projects/wordpress'
+	alias pg='~/Projects/playground'
 
 	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
   alias dots='cd ~/Projects/personal/dot_files'
