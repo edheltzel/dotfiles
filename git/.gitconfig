@@ -152,5 +152,3 @@
   required = true
 	process = git-lfs filter-process
   [help]
-[commit]
-	gpgsign = true
