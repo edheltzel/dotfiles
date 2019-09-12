@@ -3,53 +3,39 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
-  alias l='exa -Falh'
-  alias ll='exa -Flagh --git'
-  alias ls='grc ls'
-  alias la='exa -Fal'
-  alias lld='exa -Flagh --git --group-directories-first'
-  alias ld='exa -lghF --git --group-directories-first'
-  alias tree='exa --tree'
+function l; exa -Falh; end
+function ll; exa -Flagh --git; end
+function ls; grc ls; end
+function la; exa -Fal; end
+function lld; exa -Flagh --git --group-directories-first; end
+function ld; exa -lghF --git --group-directories-first; end
+function tree; exa --tree; end
 
 # Docker
-  alias dc='docker-compose'
-  alias dcrun='docker-compose run --rm'
+function dc; docker-compose; end
+function dcrun; docker-compose run --rm; end
 
 # Workflow
-	alias cll='clear; exa -Flah'
-  alias code='code-insiders'
-  alias siz='du -khsc' #show the size of a directory
-  alias wget='wget -c' #resume wget by default
-  alias cask='brew cask'
+function cll; clear; and exa -Flah; end
+function code; code-insiders; end
+function siz; du -khsc; end
+function wget; wget -c; end
+function cask; brew cask; end
 
 # Paths
-	alias dropbox='cd ~/Dropbox\ \(RDM\)' #PATH DROPBOX FOR BUSINESS
-	alias projects='cd ~/Projects' #list all project groups
-	alias work='cd ~/Projects/work/epluno'
-	alias wp='cd ~/Projects/wordpress'
-	alias pg='cd ~/Projects/playground'
+function projects; cd ~/Projects; end
+function work; cd ~/Projects/work/epluno; end
 
-	alias cuts='~/Projects/personal/dot_files; and eval $EDITOR .'
-  alias dots='cd ~/Projects/personal/dot_files'
-  alias upp='update packages'
-
-# Set the shell to zsh quickly
-	alias zshell='chsh -s /usr/local/bin/zsh'
+function cuts; ~/Projects/personal/dot_files; and eval $EDITOR .; end
+function dots; cd ~/Projects/personal/dot_files; end
+function upp; update packages; end
 
 # Homebrew Cask
-  alias casks='brew cask list'
-
-# Tmux
-  alias mux='tmuxinator'
+function casks; brew cask list; end
 
 # Git
 	alias git='hub'
-  alias clone='git clone'
-  alias master='git co master'
-  alias push='git push'
-  alias git='lab' # lab is a wrapper for hub as well
-
-	git config --global alias.logs 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+  alias git='lab'
 
 # Network
 	alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
