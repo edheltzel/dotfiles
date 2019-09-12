@@ -17,7 +17,7 @@ function dcrun; docker-compose run --rm; end
 
 # Workflow
 function cll; clear; and exa -Flah; end
-function code; code-insiders; end
+alias code='code-insiders'
 function siz; du -khsc; end
 function wget; wget -c; end
 function cask; brew cask; end
