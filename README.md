@@ -69,9 +69,10 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 ### Fish (fish/)
 * setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
 * config.fish - Global fish configuration _(.fishrc)_
-* _aliases.fish - Contains all aliases for completions
-* _colors.fish - Sets the colors for `xterm-256color` and `LS_COLORS`
-* _exports.fish - sets custom Exports ie: `$EDITOR`
+* _importSources.fish - used to source the `customs` directory: this allows the useage of a single file to have multiple functions.
+  * _aliases.fish - Contains all aliases for completions
+  * _colors.fish - Sets the colors for `xterm-256color` and `LS_COLORS`
+  * _exports.fish - sets custom Exports ie: `$EDITOR`
 * `fishfile` - list of [Fisher](https://github.com/jorgebucaran/fisher) plugins to install
 * `completions/`
   * **NOTE:** considering removing this and sticking with `Z`

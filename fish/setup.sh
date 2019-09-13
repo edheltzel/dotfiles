@@ -12,6 +12,7 @@ info "Setting up fish shell..."
 
 substep_info "Creating fish config folders..."
 mkdir -p "$DESTINATION/functions"
+mkdir -p "$DESTINATION/customs"
 mkdir -p "$DESTINATION/completions"
 
 find * -name "*fish*" | while read fn; do
