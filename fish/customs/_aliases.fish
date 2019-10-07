@@ -20,3 +20,4 @@ alias casks='brew cask list'
 alias upp='update packages'
 alias speedtest='speedtest-cli'
 
+alias go='richgo' # so go test prints rich output
