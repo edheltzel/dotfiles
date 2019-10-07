@@ -83,11 +83,11 @@ cask 'alfred'
 cask 'appcleaner'
 cask 'bartender'
 cask 'boom-3d'
-cask 'cheatsheet'
 cask 'choosy'
 cask 'colorpicker-skalacolor'
 cask 'cyberduck'
 cask 'dash'
+cask 'droplr'
 cask 'dropbox'
 cask 'figma'
 cask 'firefox-nightly'
@@ -102,12 +102,9 @@ cask 'iterm2-nightly'
 cask 'itsycal'
 cask 'kap'
 cask 'keka'
-cask 'macdown'
 cask 'namechanger'
-cask 'oni'
 cask 'opera-developer'
 cask 'postman'
-cask 'pester'
 cask 'principle'
 cask 'qlcolorcode'
 cask 'qlimagesize'
@@ -116,16 +113,13 @@ cask 'qlstephen'
 cask 'querious'
 cask 'quicklook-csv'
 cask 'quicklook-json'
-cask 'react-studio'
-cask 'safari-technology-preview'
 cask 'sequel-pro'
 cask 'shrinkit'
 cask 'sip'
 cask 'sketch'
 cask 'slack'
-cask 'sublime-text'
-cask 'sublime-merge'
 cask 'swiftdefaultappsprefpane'
+cask 'typora'
 cask 'typinator'
 cask 'usb-overdrive'
 cask 'virtualbox'
@@ -133,7 +127,6 @@ cask 'local-by-flywheel'
 cask 'visual-studio-code-insiders'
 cask 'vlc'
 
-mas '1Password 7 - Password Manager', id: 1333542190
 mas 'Affinity Photo', id: 824183456
 mas 'Affinity Designer', id: 824171161
 mas 'Divvy', id: 413857545
@@ -144,7 +137,6 @@ mas 'Lastpass', id: 926036361
 mas 'MindNode Pro', id: 402398561
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Speedtest', id: 1153157709
 mas 'Todoist', id: 585829637
 mas 'Xcode', id: 497799835
 
