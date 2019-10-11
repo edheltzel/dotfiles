@@ -64,7 +64,8 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 ### Fonts (fonts/)
 * setup.sh - Installs Fonts
 * ~~FiraCode.otf - for my text editor~~
-**Note:** I have moved to used Cask to install fonts.
+
+>**Note:** I have moved to using Cask to install fonts via [Nerd Fonts](https://www.nerdfonts.com/)
 
 ### Fish (fish/)
 * setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
