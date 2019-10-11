@@ -17,7 +17,7 @@ alias siz='du -khsc'
 alias wget='wget -c'
 alias cask='brew cask'
 alias casks='brew cask list'
-alias upp='update packages'
+alias upp='update brew cask npm ruby gem fish'
 alias speedtest='speedtest-cli'
 
 alias go='richgo' # so go test prints rich output
