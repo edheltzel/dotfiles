@@ -19,7 +19,6 @@ gulp-cli
 jshint
 lite-server
 n
-node-sass
 postcss-cli
 prettier
 purgecss

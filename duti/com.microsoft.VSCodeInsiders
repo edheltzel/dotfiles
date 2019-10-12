@@ -1,6 +1,6 @@
 .babelrc
 .bashrc
-.zshrc
+.bash_profile
 .c
 .cfg
 .coffee
@@ -12,6 +12,7 @@
 .fish
 .go
 .h
+.hbs
 .hpp
 .jekyll
 .js
@@ -28,8 +29,10 @@
 .pug
 .py
 .rb
+.rs
 .sass
 .scss
+.styl
 .sh
 .sum
 .toml
@@ -41,3 +44,4 @@
 .xml
 .yaml
 .yml
+.zshrc
