@@ -152,3 +152,5 @@
   required = true
 	process = git-lfs filter-process
   [help]
+[gui]
+	recentrepo = /Users/ed/Projects/work/biesergreer
