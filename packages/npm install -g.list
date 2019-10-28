@@ -17,6 +17,7 @@ generator-jekyll-starter-kit
 gulp
 gulp-cli
 jshint
+imagemin
 lite-server
 n
 postcss-cli
