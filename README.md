@@ -3,7 +3,8 @@
 ---
 
 An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
-My playground revolves around the use of, NodeJS + ReactJS, CSS Wizadary with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
+
+My playground revolves around the use of, Go, JavaScript + NodeJS, CSS Wizadary with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
 
 ## Usage and the Install
 1. Restore your safely backed up ssh keys to `~/.ssh/`
