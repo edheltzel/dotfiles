@@ -1,4 +1,4 @@
-<img src="dotfiles-logo.png" alt="dotfiles logo" width="350">
+<img src="_images/dotfiles-logo.png" alt="dotfiles logo" width="350">
 
 # Dotfiles
 An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
