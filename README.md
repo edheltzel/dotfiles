@@ -1,3 +1,4 @@
+![dotfile logo](https://raw.githubusercontent.com/ginfuru/dotfiles/master/_images/dotfiles-logo.png)
 # Dotfiles
 An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
 My playground revolves around the use of, NodeJS + ReactJS, CSS Wizadary with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
