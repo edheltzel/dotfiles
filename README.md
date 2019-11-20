@@ -18,14 +18,17 @@ My playground revolves around the use of, Go, JavaScript + NodeJS, CSS Wizadary 
   ```bash
     brew install git
   ```
+
 3. Clone this repository
 
   ```
   git clone git@github.com:ginfuru/dotfiles.git
   ```
+
 4. Run the `bootstrap.sh` script
     1. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything
 5. Install [Fisher](https://github.com/jorgebucaran/fisher) and Plugins -- _Optional_
+
 ```bash
 curl -Lo curl -L ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher
