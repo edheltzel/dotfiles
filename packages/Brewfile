@@ -128,14 +128,15 @@ cask 'visual-studio-code-insiders'
 cask 'vlc'
 cask 'webponize'
 
+mas 'Amphetamine', id: 937984704
+mas 'Divvy', id: 413857545
+mas 'Just Focus', id: 1142151959
+mas 'Lastpass', id: 926036361
 mas 'Affinity Photo', id: 824183456
 mas 'Affinity Designer', id: 824171161
-mas 'Divvy', id: 413857545
 mas 'Icon Slate', id: 439697913
-mas 'Just Focus', id: 1142151959
-mas 'Keynote', id: 409183694
-mas 'Lastpass', id: 926036361
 mas 'MindNode Pro', id: 402398561
+mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Todoist', id: 585829637
