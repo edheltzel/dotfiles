@@ -105,7 +105,7 @@ endif
 " Allow modification of dir, and may other things
 " Must have
 NeoBundle 'scrooloose/nerdtree'
-
+NeoBundle 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Add smart commands for comments like:
 " gcc - Toggle comment for the current line
 " gc  - Toggle comments for selected region or number of strings
@@ -150,6 +150,9 @@ NeoBundle 'maxmellon/vim-jsx-pretty'
 " Syntax highlighting for typescript
 NeoBundle 'leafgarland/typescript-vim'
 
+" Liquid syntax highlighting
+NeoNeoBundle 'tpope/vim-liquid'
+
 " Add Support css3 property
 NeoBundle 'hail2u/vim-css3-syntax'
 
@@ -161,6 +164,9 @@ NeoBundle 'wavded/vim-stylus'
 
 " Add support for taltoad/vim-jadeumarkdown
 NeoBundle 'tpope/vim-markdown'
+
+" Add CtrlP
+NeoBundle 'kien/ctrlp.vim'
 
 " Highlights the matching HTML tag when the cursor
 " is positioned on a tag.
@@ -324,6 +330,62 @@ let NERDTreeMinimalUI=1
 " Display current file in the NERDTree ont the left
 nmap <silent> <leader>f :NERDTreeFind<CR>
 
+" NERDTree window width
+let g:NERDTreeWinSize = 20
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree tabs {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:nerdtree_tabs_open_on_new_tab = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree tweaks {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" sets the working directory to the current file's directory:
+"autocmd BufEnter * lcd %:p:h
+" source: http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
+
+map <F1> :NERDTreeToggle %:p:h<CR>
+" open Nerd Tree in folder of file in active buffer
+map <Leader>nt :NERDTreeToggle %:p:h<CR>
+" source: http://stackoverflow.com/questions/5800840/nerdtree-load-particular-directory-automatically
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+"call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+"call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+"call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+"call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+"call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+"call NERDTreeHighlightFile('jsx', 'Red', 'none', '#ffa500', '#151515')
+"call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+"call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+"call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+"call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+"call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+"call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
+" source: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
+
+"-------------------------
+" ctrlP
+
+" Tell ctrlP to find/show hidden files
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_dont_split = 'NERD'
 "-------------------------
 " Ale
 "
