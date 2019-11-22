@@ -151,7 +151,7 @@ NeoBundle 'maxmellon/vim-jsx-pretty'
 NeoBundle 'leafgarland/typescript-vim'
 
 " Liquid syntax highlighting
-NeoNeoBundle 'tpope/vim-liquid'
+NeoBundle 'tpope/vim-liquid'
 
 " Add Support css3 property
 NeoBundle 'hail2u/vim-css3-syntax'
