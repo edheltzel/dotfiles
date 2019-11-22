@@ -386,6 +386,7 @@ endfunction
 " Tell ctrlP to find/show hidden files
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_dont_split = 'NERD'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bundle\|jekyll-cache\|_site'
 "-------------------------
 " Ale
 "
