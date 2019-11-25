@@ -1,3 +1,4 @@
 pep8
 pylint
 pygments
+--upgrade neovim

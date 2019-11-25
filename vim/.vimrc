@@ -332,7 +332,7 @@ nmap <silent> <leader>f :NERDTreeFind<CR>
 
 " NERDTree window width
 let g:NERDTreeWinSize = 20
-
+nmap <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree tabs {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

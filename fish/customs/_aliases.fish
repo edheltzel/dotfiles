@@ -12,6 +12,7 @@ alias tree='exa --tree'
 alias ls='grc ls'
 # Workflow
 alias code='code-insiders'
+alias vim='nvim' 
 alias cll='clear; and exa -Flah'
 alias siz='du -khsc'
 alias wget='wget -c'
