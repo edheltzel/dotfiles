@@ -246,6 +246,8 @@ let g:lightline = {
       \   'cocstatus': 'coc#status',
       \   'gitbranch': 'fugitive#head'
       \ },
+      \ 'separator': {'left': '', 'right': ''},
+      \ 'subseparator': {'left':'', 'right': ''},
       \ }
 
 
