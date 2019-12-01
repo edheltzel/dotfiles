@@ -10,7 +10,8 @@ Plug 'scrooloose/nerdtree'		" NERD Tree
 Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
 Plug 'itchyny/lightline.vim'		" UI
 Plug 'ap/vim-buftabline'		" buffers to tabline
-Plug 'dunstontc/vim-vscode-theme' 	" vscode theme Dark+
+Plug 'dunstontc/vim-vscode-theme' 	" vscode Dark+ theme
+Plug 'ginfuru/vim-1drc-theme' 	" vscode 1Dark Raincoat theme
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " use if fzf is NOT installed via Homebrew
 Plug '/usr/local/opt/fzf' " use if fzf IS installed with Homebrew
@@ -56,10 +57,12 @@ call plug#end()
 " ======================================================================================
 " Config
 " ======================================================================================
+set clipboard=unnamedplus
 set termguicolors
 set foldmethod=marker
 set mouse=a
 set nowrap
+set textwidth=80
 set number
 set enc=utf-8	" utf-8 by default in files
 set ls=2	" show status bar always
@@ -72,7 +75,7 @@ set t_Co=256
 highlight Normal guibg=black guifg=white
 set background=dark
 
-colo cyberpunkneon
+color 1dark_poncho_hc
 
 " FZF {{{
 nnoremap <A-f> :Ag<CR>
@@ -126,6 +129,8 @@ set noshowmode
 
 " NERT Tree {{{
 map <C-o> :NERDTreeToggle<CR>
+let g:NERDTreeIgnore = ['^node_modules$']
+let NERDTreeShowHidden=1 " show hidden files by default
 " }}}
 
 " Prettier {{{
