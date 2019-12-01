@@ -26,6 +26,8 @@ brew 'exa'
 brew 'findutils', args: ['with-default-names']
 brew 'fish'
 brew 'fortune'
+brew 'fzf'
+brew 'fd'
 brew 'gdk-pixbuf'
 brew 'go'
 brew 'git'

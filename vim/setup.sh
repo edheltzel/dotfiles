@@ -6,17 +6,16 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-LOCAL="$(realpath ~/.local/sharenvim/site)"
 DESTINATION="$(realpath ~/.config/nvim)"
 
-info "Setting up Neovim..."
+info "Setting up neovim..."
 
-subsetp_info "Creating nvim plug flolder..."
-mkdir -p "$LCOAL/autolad"
+substep_info "Creating nvim plug folder..."
+mkdir -p "$DESTINATION/autoload"
 
-find . -name "*vim*" | while read fn; do
-    fn=$(basename $fn)
+find * -name "*vim*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
+clear_broken_symlinks "$DESTINATION"
 
-success "Finished setting up Neovim. Make sure you run :PlugInstall inside of nvim"
+success "Finished configuring neovim. Make sure you run :PlugInstall inside of nvim"
