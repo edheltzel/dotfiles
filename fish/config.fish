@@ -7,3 +7,6 @@ source ~/.config/fish/_importSources.fish
 
 # Start Starship
 eval (starship init fish)
+
+# Vim mode
+fish_vi_key_bindings
