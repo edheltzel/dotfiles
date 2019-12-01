@@ -1,4 +1,5 @@
 " Specify a directory for plugins
+" most of this is from https://www.bha.ee/neovim-config-for-frontend-development/
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
@@ -9,7 +10,6 @@ Plug 'scrooloose/nerdtree'		" NERD Tree
 Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
 Plug 'itchyny/lightline.vim'		" UI
 Plug 'ap/vim-buftabline'		" buffers to tabline
-Plug 'tomasr/molokai'			" sublime theme
 Plug 'dunstontc/vim-vscode-theme' 	" vscode theme Dark+
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " use if fzf is NOT installed via Homebrew
@@ -72,7 +72,7 @@ set t_Co=256
 highlight Normal guibg=black guifg=white
 set background=dark
 
-colo molokai
+colo cyberpunkneon
 
 " FZF {{{
 nnoremap <A-f> :Ag<CR>
@@ -121,7 +121,7 @@ nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 " It's useful to show the buffer number in the status line.
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P<Paste>
-
+set noshowmode
 " }}}
 
 " NERT Tree {{{
@@ -232,13 +232,14 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'deus',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'cocstatus', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'cocstatus': 'coc#status'
+      \   'cocstatus': 'coc#status',
+      \   'gitbranch': 'fugitive#head'
       \ },
       \ }
 
