@@ -27,5 +27,5 @@ function setup --description 'defines abbreviations'
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
   abbr suckit wget -mkEpnp url_here
-  abbr flight git clone git@github.com:ginfuru/Flightdeck.git
+  abbr fd git@github.com:ginfuru/Flightdeck.git
 end
