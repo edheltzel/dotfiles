@@ -3,9 +3,7 @@ vscode
 vsce
 babel
 babel-cli
-gulp
-gulp-cli
-jshint
+babel-eslint
 eslint
 eslint-config-airbnb
 eslint-config-prettier
@@ -13,10 +11,15 @@ eslint-plugin-import
 eslint-plugin-jsx-a11y
 eslint-plugin-prettier
 eslint-plugin-react
-babel-eslint
+flightplan
+gulp
+gulp-cli
 imagemin
+is-website-vulnerable
+jshint
 lite-server
 n
+npm-check
 yo
 generator-code
 generator-generator
