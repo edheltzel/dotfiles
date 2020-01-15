@@ -21,5 +21,5 @@ alias cask='brew cask'
 alias casks='brew cask list'
 alias upp='update brew cask npm ruby gem fish'
 alias speedtest='speedtest-cli'
-
+alias vb='VBoxManage'
 alias go='richgo' # so go test prints rich output
