@@ -11,6 +11,8 @@ alias ld='exa -lghF --git --group-directories-first'
 alias tree='exa --tree'
 alias ls='grc ls'
 alias atm='neofetch'
+alias mymac='neofetch'
+alias about='neofetch'
 # Workflow
 alias code='code-insiders'
 alias vim='nvim'
