@@ -11,6 +11,7 @@ eslint-plugin-import
 eslint-plugin-jsx-a11y
 eslint-plugin-prettier
 eslint-plugin-react
+@vue/cli
 flightplan
 gulp
 gulp-cli
