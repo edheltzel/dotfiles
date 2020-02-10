@@ -10,4 +10,3 @@ end
 
 # Git
 	alias git='hub'
-  alias git='lab'
