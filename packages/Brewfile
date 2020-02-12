@@ -8,6 +8,7 @@ tap 'caskroom/fonts'
 tap 'raszi/tap'
 tap 'kyoh86/tap'
 tap 'dart-lang/dart'
+tap 'buo/cask-upgrade'
 
 brew 'ack'
 brew 'bat'
