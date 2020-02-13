@@ -75,6 +75,7 @@ brew 'startship'
 brew 'sqlite'
 brew 'ssh-copy-id'
 brew 'tig'
+brew 'topgrade'
 brew 'tree'
 brew 'tmux'
 brew 'wget', args: ['enable-iri']
