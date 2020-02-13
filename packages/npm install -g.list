@@ -10,6 +10,7 @@ eslint-config-prettier
 eslint-plugin-import
 eslint-plugin-jsx-a11y
 eslint-plugin-prettier
+eslint-plugin-vue
 eslint-plugin-react
 @vue/cli
 flightplan
