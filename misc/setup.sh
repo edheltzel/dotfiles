@@ -9,6 +9,7 @@ SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
 
 info "Configuring misc dotfiles..."
+mkdir -p "$DESTINATION/.go"
 
 find . -name ".*" | while read fn; do
     fn=$(basename $fn)
