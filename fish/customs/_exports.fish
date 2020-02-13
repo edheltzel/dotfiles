@@ -2,7 +2,7 @@ set -x --global EDITOR code-insiders $EDITOR #set Visual Studio Code Insiders as
 set -x --global VOL rdm $VOL
 
 # GoLang
-set -x -U GOPATH $HOME/.go
+set -x -U GOPATH $HOME/Projects/go
 
 # fzf and fd helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"
