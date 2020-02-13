@@ -3,7 +3,7 @@ set -x --global VOL rdm $VOL
 
 # GoLang
 set -x GOPATH ~/Projects/Go
-set -x GOROOT /usr/local/opt/go/libexec
+set -x GOROOT /usr/local/go
 
 set -x PATH $PATH $GOROOT/bin $GOPATH/bin
 
