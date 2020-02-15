@@ -7,6 +7,3 @@ function changelog --description 'a git log pretty formant'
       perl -pe 'BEGIN{print "["}; END{print "]\n"}' | \
       perl -pe 's/},]/}]/' > $output
 end
-
-# Git
-	alias git='hub'
