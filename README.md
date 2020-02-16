@@ -108,7 +108,12 @@ several compiled files
 * .gitconfig - Sets several global Git variables - also include GPG signing
   * _(options)_: GPG signing is set to `TRUE` by default
       * <img alt="look ma' verified" src="https://rdmcrew.d.pr/f11jZt+" width="500"/>
-      * If you need help setting this up follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s). **Please Note** if you used the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
+      * If you need help setting this up GPG:
+        - follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s).
+        - I found this [GIST helpful](https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2)
+        - To get VSCode setup follow this [article](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
+      * **Please Note** if you used the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
+
       * If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile).
 
 ### macOS Preferences (macos/)
