@@ -23,6 +23,7 @@ brew 'dive'
 brew 'doctl'
 brew 'duti'
 brew 'exa'
+brew 'easyengine'
 brew 'findutils', args: ['with-default-names']
 brew 'fish'
 brew 'fortune'
