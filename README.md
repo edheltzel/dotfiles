@@ -105,7 +105,11 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 * setup.sh - Symlinks all git files to `~/`
 * .gitignore_global - Contains global gitignores, such as OS-specific files and
 several compiled files
-* .gitconfig - Sets several global Git variables
+* .gitconfig - Sets several global Git variables - also include GPG signing
+  * _(options)_: GPG signing is set to `TRUE` by default
+      * <img alt="look ma' verified" src="https://rdmcrew.d.pr/f11jZt+" width="500"/>
+      * If you need help setting this up follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s). **Please Note** if you used the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
+      * If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile).
 
 ### macOS Preferences (macos/)
 * setup.sh - Executes a long list of commands pertaining to macOS Preferences

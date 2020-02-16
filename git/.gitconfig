@@ -56,7 +56,7 @@
   [alias]
   # most commonly used
   aa      = add --all
-  cm      = commit -m
+  cm      = commit -S -m
   cam = commit -a -m
   co      = checkout
   rv = remote -v
@@ -159,3 +159,9 @@
 	commitmsgwidth = 80
 	pruneduringfetch = true
 	tabsize = 2
+[commit]
+	gpgsign = true
+[suer]
+	signingkey = 6C9732CDD2C37024
+[gpg]
+	program = gpg2
