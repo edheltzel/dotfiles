@@ -23,6 +23,5 @@ alias cask='brew cask'
 alias casks='brew cask list'
 alias upp='topgrade --cleanup -y --no-retry'
 alias update='topgrade'
-alias speedtest='speedtest-cli'
 alias vb='VBoxManage'
 # alias go='richgo' # so go test prints rich output
