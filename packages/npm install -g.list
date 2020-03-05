@@ -12,6 +12,7 @@ jshint
 lite-server
 n
 npm-check
+tinypng-cli
 yo
 generator-code
 generator-generator
