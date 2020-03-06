@@ -10,3 +10,6 @@ eval (starship init fish)
 
 # Vim mode
 #fish_vi_key_bindings
+
+# Auto Node Version Switching
+source ~/.config/fish/functions/fish_avn.fish

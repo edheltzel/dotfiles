@@ -146,5 +146,12 @@ VSCode Insiders is my default editor.
 * **Self Plug**
   * Try out my VSCode theme - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
 
+### Node development
+Auto Node Version switching for Node development, takes advantage of [NVM](https://github.com/nvm-sh/nvm) for managing Node versions and using two Fish plugins, [edc/bass](https://github.com/edc/bass) and [fish-avn](https://github.com/martinkacmar/fish-avn). This workflow supports both `.nvmrc` and `.node-version` files.
+
+* Install NVM by using the [install script](https://github.com/nvm-sh/nvm#installing-and-updating)
+* BASS allows the use of utilities written for bash
+* Fish-AVN handles auto switching and reading either `.nvmrc` or `.node-version`
+
 #### Special Thanks
 Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup,

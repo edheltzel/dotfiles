@@ -10,7 +10,6 @@ gulp-cli
 imagemin
 jshint
 lite-server
-n
 npm-check
 tinypng-cli
 yo
