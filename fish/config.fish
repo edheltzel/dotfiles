@@ -8,7 +8,7 @@ source ~/.config/fish/_importSources.fish
 # Start Starship
 eval (starship init fish)
 
-# Vim mode
+# Vim Mode
 #fish_vi_key_bindings
 
 # Auto Node Version Switching
