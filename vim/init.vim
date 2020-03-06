@@ -6,8 +6,8 @@ call plug#begin('~/.config/nvim/plugged')
 " Make sure you use single quotes
 
 " ---
-Plug 'scrooloose/nerdtree'		" NERD Tree
-Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
+"Plug 'scrooloose/nerdtree'		" NERD Tree
+"Plug 'Xuyuanp/nerdtree-git-plugin' 	" show git status in Nerd tree
 Plug 'itchyny/lightline.vim'		" UI
 Plug 'ap/vim-buftabline'		" buffers to tabline
 Plug 'dunstontc/vim-vscode-theme' 	" vscode Dark+ theme
@@ -16,7 +16,7 @@ Plug 'ginfuru/vim-1drc-theme' 	" vscode 1Dark Raincoat theme
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " use if fzf is NOT installed via Homebrew
 Plug '/usr/local/opt/fzf' " use if fzf IS installed with Homebrew
 Plug 'junegunn/fzf.vim'
-
+Plug 'terryma/vim-multiple-cursors'
 
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Completion as in vscode
 
@@ -35,6 +35,7 @@ Plug 'othree/xml.vim'
 Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-surround'
+Plug 'jbgutierrez/vim-babel'
 
 Plug 'fatih/vim-go'
 Plug 'robertbasic/vim-hugo-helper'
@@ -128,9 +129,9 @@ set noshowmode
 " }}}
 
 " NERT Tree {{{
-map <C-o> :NERDTreeToggle<CR>
-let g:NERDTreeIgnore = ['^node_modules$']
-let NERDTreeShowHidden=1 " show hidden files by default
+"map <C-o> :NERDTreeToggle<CR>
+"let g:NERDTreeIgnore = ['^node_modules$']
+"let NERDTreeShowHidden=1 " show hidden files by default
 " }}}
 
 " Prettier {{{
