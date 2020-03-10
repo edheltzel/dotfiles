@@ -10,7 +10,6 @@ tap 'kyoh86/tap'
 tap 'dart-lang/dart'
 tap 'buo/cask-upgrade'
 tap 'teamookla/speedtest'
-tap 'macvim-dev/macvim'
 
 brew 'ack'
 brew 'bat'
