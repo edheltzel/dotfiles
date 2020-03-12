@@ -3,10 +3,10 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
-alias l='exa -Flah --sort modified'
-alias ll='exa -Flagh --git --sort modified'
+alias l='exa -Flahr --sort modified'
+alias ll='exa -Flaghr --git --sort modified'
 alias la='exa -Fla'
-alias lld='exa -Flagh --git --group-directories-first'
+alias lld='exa -Flaghr --git --group-directories-first --sort modified'
 alias ld='exa -Flgh --git --group-directories-first'
 alias tree='exa --tree'
 alias ls='grc ls'
