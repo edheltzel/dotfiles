@@ -3,11 +3,11 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
-alias l='exa -Falh'
-alias ll='exa -Flagh --git'
-alias la='exa -Fal'
+alias l='exa -Flah --sort modified'
+alias ll='exa -Flagh --git --sort modified'
+alias la='exa -Fla'
 alias lld='exa -Flagh --git --group-directories-first'
-alias ld='exa -lghF --git --group-directories-first'
+alias ld='exa -Flgh --git --group-directories-first'
 alias tree='exa --tree'
 alias ls='grc ls'
 alias atm='neofetch'
@@ -16,7 +16,7 @@ alias about='neofetch'
 # Workflow
 alias code='code-insiders'
 alias vim='nvim'
-alias cll='clear; and exa -Flah'
+alias cll='clear; and exa -Flah --sort modified'
 alias siz='du -khsc'
 alias wget='wget -c'
 alias cask='brew cask'
