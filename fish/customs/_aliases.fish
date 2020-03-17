@@ -3,10 +3,10 @@ function ..    ; cd .. ; end
 function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
-alias l='exa -Flahr --sort modified'
-alias ll='exa -Flaghr --git --sort modified'
+alias l='exa -Flahr --group-directories-first'
+alias ll='exa -Flaghr --git --group-directories-first'
 alias la='exa -Fla'
-alias lld='exa -Flaghr --git --group-directories-first --sort modified'
+alias lm='exa -Flaghr --git --group-directories-first --sort modified --reverse'
 alias ld='exa -Flgh --git --group-directories-first'
 alias tree='exa --tree'
 alias ls='grc ls'
@@ -27,4 +27,5 @@ alias upp='topgrade --cleanup -y --no-retry'
 alias update='topgrade'
 alias vb='VBoxManage'
 alias shrink='tinypng'
+alias mux='tmuxinator'
 # alias go='richgo' # so go test prints rich output

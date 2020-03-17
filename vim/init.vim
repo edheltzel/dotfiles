@@ -22,7 +22,7 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Completion as in vs
 
 Plug 'joonty/vdebug' " Debugger
 Plug 'janko-m/vim-test' 	" Tests
-
+Plug 'mileszs/ack.vim' " ack for vim
 " Code {{{
 Plug 'scrooloose/nerdcommenter'		" NERD commenter. Quickly comment lines
 Plug 'editorconfig/editorconfig-vim'
