@@ -1,6 +1,4 @@
 --ignore-ack-defaults
-# Use less as pager
---pager=less
 # Always color, even if piping to a another program
 --color
 
@@ -24,6 +22,7 @@
 ### Directories to ignore
 --ignore-directory=is:.git
 --ignore-dir=.vscode/
+
 # Jekyll and Hugo
 --ignore-dir=node_modules/
 --ignore-dir=bower_components/
@@ -33,11 +32,7 @@
 --ignore-dir=.sass-cache
 --ignore-dir=.jekyll-cache
 
-# JS
-
-# Go 
-
-# setting types 
+# setting types
 --type-set=css:ext:scss,sass,css,less,postcss
 --type-set=markdown:ext:md,markdown
 
@@ -48,6 +43,7 @@
 --type-add=json:ext:json
 --type-add=go:ext:go
 --type-add=dart:ext:dart
+
 # Shell
 --type-add=shell:ext:sh,bash,csh,tcsh,ksh,zsh,fish
 --type-add=shell:firstlinematch:/^#!.*\b(?:ba|t?c|k|z|fi)?sh\b/
