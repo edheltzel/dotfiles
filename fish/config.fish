@@ -12,4 +12,4 @@ eval (starship init fish)
 #fish_vi_key_bindings
 
 # Auto Node Version Switching
-source ~/.config/fish/functions/fish_avn.fish
+#source ~/.config/fisher/github.com/martinkacmar/fish-avn/fish_avn.fish
