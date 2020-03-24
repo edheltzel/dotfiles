@@ -4,6 +4,8 @@ source ~/.config/fish/customs/_colors.fish
 source ~/.config/fish/customs/_aliases.fish
 # Source Exports
 source ~/.config/fish/customs/_exports.fish
+# Auto Node Version Switching
+source ~/.config/fish/functions/fish_avn.fish
 
 # Source Exports
 source /usr/local/etc/grc.fish # https://github.com/oh-my-fish/plugin-grc/issues/20#issue-296031557
