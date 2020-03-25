@@ -1,0 +1,51 @@
+# Additional git repositories to pull
+#git_repos = [
+#    "~/src/*/",
+#    "~/.config/something"
+#]
+
+# Don't pull the predefined git repos
+# predefined_git_repos = false
+
+# Disable specific steps - same options as the command line flag
+#disable = ["system", "emacs"]
+
+# Run specific steps - same options as the command line flag
+#only = ["system", "emacs"]
+
+# Do not ask to retry failed steps (default: false)
+#no_retry = true
+
+# Run inside tmux
+#run_in_tmux = true
+
+# List of remote machines with Topgrade installed on them
+#remote_topgrades = ["toothless", "pi", "parnas"]
+
+# Arguments to pass SSH when upgrading remote systems
+#ssh_arguments = "-o ConnectTimeout=2"
+
+# Arguments to pass Git when pulling Repositories
+#git_arguments = "--rebase --autostash"
+
+# Arguments to pass tmux when pulling Repositories
+#tmux_arguments = "-S /var/tmux.sock"
+
+# Arguments to pass yay when updating packages
+#yay_arguments = "--nodevel"
+
+# Manually select Windows updates
+# accept_all_windows_updates = false
+
+# Do not set the terminal title
+#set_title = false
+# Commands to run before anything
+#[pre_commands]
+#"Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
+
+# Custom commands
+#[commands]
+#"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
+
+# Cleanup temporary or old files
+#cleanup = true
