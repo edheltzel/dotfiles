@@ -2,3 +2,4 @@ bundle
 jekyll
 capistrano
 neovim
+git-deploy
