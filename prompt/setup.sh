@@ -8,11 +8,11 @@ cd "$DIR"
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~/.config)"
 
-info "Setting up Starship prompot..."
+info "Setting up Starship prompot & Topgrade..."
 
-find * -name "starship.toml*" | while read fn; do
+find * -name "*.toml*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 clear_broken_symlinks "$DESTINATION"
 
-success "Finished configuring Starship propmpt."
+success "Finished configuring Starship propmpt & Topgrade."
