@@ -144,6 +144,7 @@ cask 'typinator'
 cask 'usb-overdrive'
 cask 'virtualbox'
 cask 'visual-studio-code-insiders'
+cask 'visual-studio-code'
 cask 'vlc'
 cask 'webponize'
 

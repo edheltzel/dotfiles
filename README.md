@@ -161,7 +161,7 @@ I'd suggest you take a look at this file
 
 ### VSCODE ~~(vscode/)~~
 
-VSCode Insiders is my default editor.
+VSCode ~~Insiders~~ is my default editor.
 
 - I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
 - Make sure you add `code` and/or `code-insiders` to your Path - run `⌘+⇧+P` type `Shell Command: Install 'code-insiders' command in PATH`
