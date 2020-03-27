@@ -16,7 +16,7 @@ alias mymac='neofetch'
 alias about='neofetch'
 
 # Workflow
-#alias code='code-insiders'
+alias code='code-insiders'
 alias vim='nvim'
 alias cll='clear; and exa -Flah --sort modified'
 alias siz='du -khsc'
