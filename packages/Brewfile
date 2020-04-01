@@ -121,6 +121,7 @@ cask 'itsycal'
 cask 'kap'
 cask 'keka'
 cask 'kitematic'
+cask 'mailplane'
 cask 'namechanger'
 cask 'postman'
 cask 'principle'
@@ -147,6 +148,7 @@ cask 'visual-studio-code-insiders'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'webponize'
+cask 'WebPQuickLook'
 
 mas 'Amphetamine', id: 937984704
 mas 'Divvy', id: 413857545
