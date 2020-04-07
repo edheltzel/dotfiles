@@ -22,7 +22,7 @@ color author      3       default
 color commit      11      default
 color cursor      2       0
 color default     default default
-color id          magenta       default
+color id          magenta default
 color parent      default default
 color status      default default
 color title-blur  default default
@@ -49,7 +49,7 @@ color "AuthorDate: " 11      default
 color "author "      3       default
 color "CommitDate: " 11      default
 color "commit "      3       default
-color date           blue      default
+color date           blue    default
 color "Merge: "      default default
 color "Refs: "       default default
 
@@ -62,9 +62,9 @@ color main-tag       default default
 color main-tracked   default default
 
 # tree view
-color tree.header default default
+color tree.header       default default
 color tree.directory    default default
-color tree.file default default
+color tree.file         default default
 
 #==================================
 # KEYBINDINGS SETTINGS
