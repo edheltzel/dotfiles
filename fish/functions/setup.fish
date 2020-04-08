@@ -16,7 +16,6 @@ function setup --description 'defines abbreviations'
   abbr cl clear
   abbr del trash
   abbr sdel rm -rf
-  abbr rubys rbenv install -l
   abbr gems gem query --local
   abbr gemup gem update --system
   abbr nig npm install -g
