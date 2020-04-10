@@ -26,6 +26,6 @@ alias casks='brew cask list'
 alias upp='topgrade --cleanup -y --no-retry'
 alias update='topgrade'
 alias vb='VBoxManage'
-alias shrink='tinypng'
+alias shrink='tinypng ./ -k fPyDxHTUpheLvHOVwfu6MSxrRvIJlDBp'
 alias mux='tmuxinator'
 # alias go='richgo' # so go test prints rich output
