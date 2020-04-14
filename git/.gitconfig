@@ -28,7 +28,7 @@
 
   [core]
   excludesfile = ~/.gitignore_global
-  editor       = code -ws
+  editor       = code-insiders
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
