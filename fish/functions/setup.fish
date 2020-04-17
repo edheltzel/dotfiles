@@ -1,29 +1,34 @@
 ## Defines abbreviations
 function setup --description 'defines abbreviations'
-  abbr gg go get GITHUB_URL
-  abbr gs git status
-  abbr gd git diff
-  abbr gc git cm
-  abbr ga git aa
-  abbr gp git push
-  abbr gco git co
-  abbr gpl git pull
-  abbr gma git aa; and git cm
-  abbr gb git b -a
   abbr binfo brew info
   abbr bi brew install
   abbr brews brew leaves
   abbr cl clear
+  abbr clone git clone
   abbr del trash
-  abbr sdel rm -rf
+  abbr dls ~/Downloads/
+  abbr ga git aa
+  abbr gb git b -a
+  abbr gcm git cm
+  abbr gco git co
+  abbr gd git diff
+  abbr gma git aa; and git cm
+  abbr gp git push
+  abbr gpl git pull
+  abbr gs git status
+  abbr gg go get GITHUB_URL
   abbr gems gem query --local
   abbr gemup gem update --system
+  abbr fd git@github.com:ginfuru/flightdeck.git
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
   abbr op open .
   abbr opa open -a APP_NAME
   abbr rc runcloud
+  abbr sdel rm -rf
+  abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
-  abbr suckit wget -mkEpnp url_here
+  abbr vc code
+  addr yarns yarn global list
 end

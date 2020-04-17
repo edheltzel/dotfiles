@@ -101,11 +101,12 @@ cask 'choosy'
 cask 'clickup'
 cask 'colorpicker-skalacolor'
 cask 'cyberduck'
+cask 'dash4'
 cask 'droplr'
 cask 'dropbox'
 cask 'figma'
 cask 'brave-browser-nightly'
-cask 'firefox-nightly' 
+cask 'firefox-nightly'
 cask 'google-chrome-canary'
 cask 'microsoft-edge-dev'
 cask 'opera-developer'
@@ -131,6 +132,7 @@ cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'quicklook-csv'
 cask 'quicklook-json'
+cask 'lastpass'
 cask 'sequel-pro'
 cask 'sqlpro-for-postgres'
 cask 'shrinkit'
@@ -153,7 +155,6 @@ cask 'WebPQuickLook'
 mas 'Amphetamine', id: 937984704
 mas 'Divvy', id: 413857545
 mas 'Just Focus', id: 1142151959
-mas 'Lastpass', id: 926036361
 mas 'Affinity Photo', id: 824183456
 mas 'Affinity Designer', id: 824171161
 mas 'Icon Slate', id: 439697913
@@ -161,6 +162,5 @@ mas 'MindNode Pro', id: 402398561
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Todoist', id: 585829637
 mas 'Xcode', id: 497799835
 
