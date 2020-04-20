@@ -19,10 +19,10 @@ function setup --description 'defines abbreviations'
   abbr gg go get GITHUB_URL
   abbr gems gem query --local
   abbr gemup gem update --system
-  abbr fd git@github.com:ginfuru/flightdeck.git
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
   abbr op open .
+  abbr co code .
   abbr opa open -a APP_NAME
   abbr rc runcloud
   abbr sdel rm -rf
