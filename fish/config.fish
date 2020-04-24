@@ -12,5 +12,5 @@ eval (starship init fish)
 
 # Using Homebrew Ruby
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
-set -U fish_user_paths (ruby -e 'print Gem.user_dir')/bin $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
+#set -U fish_user_paths (ruby -e 'print Gem.user_dir')/bin $fish_user_paths
+#set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
