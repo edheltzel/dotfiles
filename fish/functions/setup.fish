@@ -30,5 +30,4 @@ function setup --description 'defines abbreviations'
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
   abbr vc code
-  addr yarns yarn global list
 end
