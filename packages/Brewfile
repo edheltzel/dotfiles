@@ -83,11 +83,9 @@ brew 'tig'
 brew 'topgrade'
 brew 'tree'
 brew 'tmux'
-brew 'tmuxinator'
 brew 'wget', args: ['enable-iri']
 brew 'webp'
 brew 'unzip'
-brew 'vim'
 brew 'z'
 brew 'zip'
 
