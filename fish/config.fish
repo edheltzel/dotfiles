@@ -11,4 +11,4 @@ eval (starship init fish)
 #fish_vi_key_bindings
 
 # Using Homebrew Ruby
-set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
+#set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
