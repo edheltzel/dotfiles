@@ -92,7 +92,7 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
   - \_exports.fish - sets custom Exports ie: `$EDITOR`
 - `fishfile` - list of [Fisher](https://github.com/jorgebucaran/fisher) plugins to install
 - `completions/`
-  - **NOTE:** considering removing this and sticking with `Z`
+  - **NOTE:** considering removing this and sticking with `Z` + aliases/abbreviations
   - repo.fish - Contains all repos as completions for the `repo` command
   - repodir.fish - Contains all repos as completions for the `repodir` command
 - `functions/`
@@ -100,15 +100,15 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
   - emptytrash.fish - Empties trash and clears system logs
   - fish_greeting.fish - My personal fish greeting using the full-color fish logo
   - fish_right_prompt.fish - Left Blank on purpse
-  - ~~fish_prompt.fish~~ - Is Installed [Spacefish - A Fish Shell prompot of Astronauts](https://github.com/matchai/spacefish)
-  - ~~Spacefish~~ - Using [Starship - The cross-shell prompt for astronauts](https://starship.rs/)
+  - fish_prompt.fish Using [Starship - The cross-shell prompt for astronauts](https://starship.rs/)
+    - check out `prompt> startship.toml` to modifiy the starship prompt
   - forrepos.fish - Executes a passed command for all repos in `~/Projects`
   - pubkey.fish - Copies the public key to the clipboard
   - repo.fish - Finds a repository in `~/Projects` and jumps to it **NOTE:currently using `Z`**
   - repodir.fish - Finds a repository in `~/Projects` and prints its path
   - setup.fish - Initial setup for a new fish installation,
     contains abbreviations
-  - ~~update.fish~~ - Using a Fisher plugin, [Update](https://github.com/publicarray/update) _(see `fishfile`)_
+  - For updating - using [Topgrade by r-darwish](https://github.com/r-darwish/topgrade) -- see `prompt > topgrade.tmol` for config options.
 
 ### Git (git/)
 
@@ -132,10 +132,14 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 
 - setup.sh - Executes a long list of commands pertaining to macOS Preferences
   - **I can not stress enough to read this and change this for what works for you.**
+  - **DO NOT** blindly run this script - it is a WIP with each macOS update things change.
 
 ### Misc Dotfiles (misc/)
 
 - setup.sh - Symlinks all the associated rc and other dot files to your `~/` _(home directory)_
+- Special Mentions:
+  - `.tigrc` - configured with pretty colors and layout for git diff and logs
+  - `.eslintrc` - has specific configuration for my JS workflow
 
 ### Packages (packages/)
 
@@ -148,11 +152,9 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 
 ### Vim (vim/)
 
-I'd suggest you take a look at this file
+I'd suggest you take a look at this configuration - I use NeoVim
 
 - setup.sh - Symlinks all vim files to `~/`
-- .vimrc - Basic Vim configuration
-- If you feel bold, you could just open vim and run `:PlugInstall`
 
 ### Helper Scripts (scripts/)
 
@@ -164,9 +166,12 @@ I'd suggest you take a look at this file
 VSCode Insiders is my default editor.
 
 - I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
+  - VSCODE has it's own sync options now - so you might want to check that out.
 - Make sure you add `code` and/or `code-insiders` to your Path - run `⌘+⇧+P` type `Shell Command: Install 'code-insiders' command in PATH`
 - **Self Plug**
-  - Try out my VSCode theme - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
+  - Try out my VSCode themes
+    - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
+    - [Better solarized](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme)
 
 ### Node development
 
