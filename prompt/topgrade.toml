@@ -14,7 +14,7 @@
 #only = ["system", "emacs"]
 
 # Do not ask to retry failed steps (default: false)
-#no_retry = true
+no_retry = true
 
 # Run inside tmux
 #run_in_tmux = true
@@ -32,7 +32,7 @@
 #tmux_arguments = "-S /var/tmux.sock"
 
 # Arguments to pass yay when updating packages
-#yay_arguments = "--nodevel"
+yay_arguments = "--yes"
 
 # Manually select Windows updates
 # accept_all_windows_updates = false
@@ -48,4 +48,4 @@
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 
 # Cleanup temporary or old files
-#cleanup = true
+cleanup = true
