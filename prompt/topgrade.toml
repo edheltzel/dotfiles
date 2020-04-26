@@ -8,7 +8,7 @@
 # predefined_git_repos = false
 
 # Disable specific steps - same options as the command line flag
-#disable = ["system", "emacs"]
+disable = ["gem"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]
