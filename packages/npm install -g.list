@@ -4,6 +4,7 @@ lite-server
 git-amend
 gulp-cli
 @vue/cli
+@11ty/eleventy
 postcss-cli
 prettier
 yo
