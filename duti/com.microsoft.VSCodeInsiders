@@ -6,6 +6,7 @@
 .coffee
 .cpp
 .css
+.conf
 .erb
 .editorconfig
 .d.ts
@@ -30,6 +31,7 @@
 .rs
 .sass
 .scss
+.swift
 .styl
 .sh
 .sum
@@ -38,8 +40,12 @@
 .ts
 .txt
 .twig
+.vue
 .xhtml
 .xml
 .yaml
 .yml
 .zshrc
+Gemfile
+Makefile
+Rakefile

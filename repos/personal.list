@@ -1,9 +1,9 @@
 git@github.com:ginfuru/dot_files.git
-git@github.com:ginfuru/generator-jekyll-drydock.git
 git@github.com:ginfuru/vscode-better-solarized-dark.git
 git@github.com:ginfuru/vscode-jekyll-snippets.git
 git@github.com:ginfuru/vscode-jekyll-syntax.git
 git@github.com:ginfuru/vscode-onedark-raincoat.git
 git@github.com:ginfuru/Flightdeck.git
 git@github.com:ginfuru/Flightdeck-go.git
-git@github.com:ginfuru/flightdeck-orbiter.git
+git@github.com:ginfuru/Flightdeck-airframe.git
+git@github.com:ginfuru/Flightdeck-11ty.git

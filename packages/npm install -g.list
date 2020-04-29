@@ -14,3 +14,4 @@ vsce
 imagemin-cli
 tinypng-cli
 svgo
+yarn
