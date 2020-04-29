@@ -84,7 +84,7 @@ brew 'tmux'
 brew 'wget', args: ['enable-iri']
 brew 'webp'
 brew 'unzip'
-brew 'yarn'
+brew 'yarn --ignore-dependencies'
 brew 'z'
 brew 'zip'
 
