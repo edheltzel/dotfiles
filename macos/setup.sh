@@ -36,6 +36,9 @@ sudo nvram SystemAudioVolume=" "
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
+# Disable gatekeeper
+sudo spctl --master-disable
+
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
 
