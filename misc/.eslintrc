@@ -120,5 +120,10 @@
   },
   "plugins": [
     "prettier"
-  ]
+  ],
+  "settings":{
+    "react":{
+      "version": "999.999.999" // resolved warning about React version missing
+    }
+  }
 }
