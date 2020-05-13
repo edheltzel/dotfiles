@@ -25,6 +25,6 @@ end
 
 # Often used shortcuts/aliases
 function projects; cd ~/Projects; end
-function work; cd ~/Projects/work/eplunoProjects; end
-function dots; cd ~/Projects/personal/dot_files; end
-function cuts; ~/Projects/personal/dot_files; and eval $EDITOR .; end
+function work; cd ~/Projects/; end
+function dots; cd ~/Projects/__personal/dot_files; end
+function cuts; ~/Projects/__personal/dot_files; and eval $EDITOR .; end
