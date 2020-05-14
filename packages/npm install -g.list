@@ -12,6 +12,5 @@ generator-code
 generator-generator
 vsce
 imagemin-cli
-tinypng-cli
 svgo
 yarn
