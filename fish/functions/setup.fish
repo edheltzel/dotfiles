@@ -23,12 +23,12 @@ function setup --description 'defines abbreviations'
   abbr npms npm list -g --depth=0
   abbr op open .
   abbr co code .
+  abbr vo vim .
   abbr opa open -a APP_NAME
   abbr rc runcloud
   abbr sdel rm -rf
   abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
-  abbr vc code
   abbr upp topgrade --disable gem
 end
