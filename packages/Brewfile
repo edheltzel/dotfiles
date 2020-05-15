@@ -47,6 +47,7 @@ brew 'hugo'
 brew 'imagemagick', args: ['with-webp']
 brew 'imgcat'
 brew 'mozjpeg'
+brew 'jesseduffield/lazygit/lazygit'
 brew 'jpegoptim'
 brew 'jq'
 brew 'libffi'
