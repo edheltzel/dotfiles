@@ -19,6 +19,7 @@ function setup --description 'defines abbreviations'
   abbr gg go get GITHUB_URL
   abbr gems gem query --local
   abbr gemup gem update --system
+  abbr lg lazygit
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
   abbr op open .
