@@ -31,5 +31,6 @@ function setup --description 'defines abbreviations'
   abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
-  abbr upp topgrade --disable gem
+  abbr upp topgrade
+  abbr gmac git aa; git cm
 end

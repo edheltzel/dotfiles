@@ -1,0 +1,157 @@
+# Window Customization
+window:
+  dimensions:
+    columns: 135
+    lines: 40
+  padding:
+    x: 10
+    y: 10
+background_opacity: .95
+dynamic_title: true
+
+# Font Customization
+font:
+  normal:
+    family: FuraCode Nerd Font
+    style: Regular
+  bold:
+    family: FuraCode Nerd Font
+    style: Bold
+  italic:
+    family: FuraCode Nerd Font
+    style: Italic
+  size: 18
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  use_thin_strokes: false
+  debug:
+    persistent_logging: false
+  draw_bold_text_with_bright_colors: true
+# Thin stroke font rendering (macOS only)
+  use_thin_strokes: true
+  draw_bold_text_with_bright_colors: true
+
+# Colors (CyberPunk2077 Dark RDMFlavor)
+colors:
+  # Default colors
+  primary:
+    background: '#030d22'
+    foreground: '#959da5'
+
+    dim_foreground: '#959da5'
+    bright_foreground: '#959da5'
+
+  # Cursor colors
+  cursor:
+    text: '#e3eefe'
+    cursor: '#fd2e96'
+  # Selection colors
+  selection:
+    text: '#0c0935'
+    background: '#20f6bb'
+  # Normal colors
+  normal:
+    black: '#303742'
+    red: '#ff2e97'
+    green: '#00fbac'
+    yellow: '#ffd400'
+    blue: '#00beff'
+    magenta: '#ea00d9'
+    cyan: '#af79fe'
+    white: '#f0f5ff'
+  # Bright colors
+  bright:
+    black: '#3a1b75'
+    red: '#ee1682'
+    green: '#21ff78'
+    yellow: '#fed400'
+    blue: '#31beff'
+    magenta: '#d328ff'
+    cyan: '#3789fe'
+    white: '#e3eefe'
+
+
+# Cursor style
+cursor:
+  style: Block
+  thickness: 0.15
+
+  # Live config reload (changes require restart)
+live_config_reload: true
+
+# URL launcher
+url:
+  modifiers: alt
+# Key bindings
+# Values for `key`:
+#   - `A` -> `Z`
+#   - `F1` -> `F12`
+#   - `Key1` -> `Key0`
+#   A full list with available key codes can be found here:
+#   https://docs.rs/glutin/0.24.0/glutin/event/enum.VirtualKeyCode.html
+# Values for `mods`:
+#   - Command
+#   - Control
+#   - Option
+#   - Super
+#   - Shift
+#   - Alt
+# Values for `action`:
+#   - Paste
+#   - PasteSelection
+#   - Copy
+#   - IncreaseFontSize
+#   - DecreaseFontSize
+#   - ResetFontSize
+#   - ScrollPageUp
+#   - ScrollPageDown
+#   - ScrollLineUp
+#   - ScrollLineDown
+#   - ScrollToTop
+#   - ScrollToBottom
+#   - ClearHistory
+#   - Hide
+#   - Quit
+#   - ClearLogNotice
+#   - SpawnNewInstance
+#   - ToggleFullscreen
+#   - None
+key_bindings:
+  - { key: Paste, action: Paste }
+  - { key: Copy, action: Copy }
+  - { key: PageUp, mods: Shift, mode: ~Alt, action: ScrollPageUp }
+  - { key: PageDown, mods: Shift, mode: ~Alt, action: ScrollPageDown }
+  - { key: Home, mods: Shift, mode: ~Alt, action: ScrollToTop }
+  - { key: End, mods: Shift, mode: ~Alt, action: ScrollToBottom }
+  # (Windows, Linux, and BSD only)
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Add, mods: Control, action: IncreaseFontSize }
+  - { key: Subtract, mods: Control, action: DecreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  # (macOS only)
+  - { key: Comma,     mods: Command,      command: {program: "open", args: ["~/.alacritty.yml"]} }
+  - { key: Space, mods: Alt, chars: ' ' }
+  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Add, mods: Command, action: IncreaseFontSize }
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: K, mods: Command, action: ClearHistory }
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy }
+  - { key: H, mods: Command, action: Hide }
+  - { key: Escape, mods: Command, action: Hide }
+  - { key: M, mods: Command, action: Minimize }
+  - { key: Q, mods: Command, action: Quit }
+  - { key: W, mods: Command, action: Quit }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
+  - { key: F, mods: Command|Control, action: ToggleFullscreen }

@@ -1,11 +1,14 @@
 @vue/cli
 @11ty/eleventy
+avn
+avn-n
+avn-nvm
 generator-code
-git-amend
 gulp-cli
 imagemin-cli
 lite-server
 neovim
+np
 npm
 npm-check
 postcss-cli
