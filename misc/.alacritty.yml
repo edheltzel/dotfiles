@@ -5,8 +5,9 @@ window:
     lines: 40
   padding:
     x: 10
-    y: 10
-background_opacity: .95
+    y: 25
+  decorations: transparent
+background_opacity: 0.96
 dynamic_title: true
 
 # Font Customization
@@ -21,20 +22,7 @@ font:
     family: FuraCode Nerd Font
     style: Italic
   size: 18
-  offset:
-    x: 0
-    y: 0
-  glyph_offset:
-    x: 0
-    y: 0
-  use_thin_strokes: false
-  debug:
-    persistent_logging: false
-  draw_bold_text_with_bright_colors: true
-# Thin stroke font rendering (macOS only)
-  use_thin_strokes: true
-  draw_bold_text_with_bright_colors: true
-
+draw_bold_text_with_bright_colors: true
 # Colors (CyberPunk2077 Dark RDMFlavor)
 colors:
   # Default colors
@@ -42,8 +30,7 @@ colors:
     background: '#030d22'
     foreground: '#959da5'
 
-    dim_foreground: '#959da5'
-    bright_foreground: '#959da5'
+    bright_foreground: '#feffff'
 
   # Cursor colors
   cursor:
@@ -83,10 +70,47 @@ cursor:
   # Live config reload (changes require restart)
 live_config_reload: true
 
+mouse:
 # URL launcher
-url:
-  modifiers: alt
+  url:
+    modifiers: Alt
 # Key bindings
+key_bindings:
+  - { key: Paste, action: Paste }
+  - { key: Copy, action: Copy }
+  - { key: PageUp, mods: Shift, mode: ~Alt, action: ScrollPageUp }
+  - { key: PageDown, mods: Shift, mode: ~Alt, action: ScrollPageDown }
+  - { key: Home, mods: Shift, mode: ~Alt, action: ScrollToTop }
+  - { key: End, mods: Shift, mode: ~Alt, action: ScrollToBottom }
+  # (Windows, Linux, and BSD only)
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Add, mods: Control, action: IncreaseFontSize }
+  - { key: Subtract, mods: Control, action: DecreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: N, mods: Control, action: SpawnNewInstance }
+  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  # (macOS only)
+  - { key: Comma,     mods: Command,      command: {program: "open", args: ["~/.alacritty.yml"]} }
+  - { key: Space, mods: Alt, chars: ' ' }
+  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Add, mods: Command, action: IncreaseFontSize }
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: K, mods: Command, action: ClearHistory }
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy }
+  - { key: H, mods: Command, action: Hide }
+  - { key: Escape, mods: Command, action: Hide }
+  - { key: M, mods: Command, action: Minimize }
+  - { key: Q, mods: Command, action: Quit }
+  - { key: W, mods: Command, action: Quit }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
+  - { key: F, mods: Command|Control, action: ToggleFullscreen }
 # Values for `key`:
 #   - `A` -> `Z`
 #   - `F1` -> `F12`
@@ -120,38 +144,3 @@ url:
 #   - SpawnNewInstance
 #   - ToggleFullscreen
 #   - None
-key_bindings:
-  - { key: Paste, action: Paste }
-  - { key: Copy, action: Copy }
-  - { key: PageUp, mods: Shift, mode: ~Alt, action: ScrollPageUp }
-  - { key: PageDown, mods: Shift, mode: ~Alt, action: ScrollPageDown }
-  - { key: Home, mods: Shift, mode: ~Alt, action: ScrollToTop }
-  - { key: End, mods: Shift, mode: ~Alt, action: ScrollToBottom }
-  # (Windows, Linux, and BSD only)
-  - { key: V, mods: Control|Shift, action: Paste }
-  - { key: C, mods: Control|Shift, action: Copy }
-  - { key: Insert, mods: Shift, action: PasteSelection }
-  - { key: Key0, mods: Control, action: ResetFontSize }
-  - { key: Equals, mods: Control, action: IncreaseFontSize }
-  - { key: Add, mods: Control, action: IncreaseFontSize }
-  - { key: Subtract, mods: Control, action: DecreaseFontSize }
-  - { key: Minus, mods: Control, action: DecreaseFontSize }
-  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
-  # (macOS only)
-  - { key: Comma,     mods: Command,      command: {program: "open", args: ["~/.alacritty.yml"]} }
-  - { key: Space, mods: Alt, chars: ' ' }
-  - { key: Key0, mods: Command, action: ResetFontSize }
-  - { key: Equals, mods: Command, action: IncreaseFontSize }
-  - { key: Add, mods: Command, action: IncreaseFontSize }
-  - { key: Minus, mods: Command, action: DecreaseFontSize }
-  - { key: K, mods: Command, action: ClearHistory }
-  - { key: V, mods: Command, action: Paste }
-  - { key: C, mods: Command, action: Copy }
-  - { key: H, mods: Command, action: Hide }
-  - { key: Escape, mods: Command, action: Hide }
-  - { key: M, mods: Command, action: Minimize }
-  - { key: Q, mods: Command, action: Quit }
-  - { key: W, mods: Command, action: Quit }
-  - { key: N, mods: Command, action: SpawnNewInstance }
-  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
-  - { key: F, mods: Command|Control, action: ToggleFullscreen }
