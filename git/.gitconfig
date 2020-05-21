@@ -53,12 +53,13 @@
   whitespace = fix
 
   [alias]
-  # most commonly used
-  aa      = add --all
-  cm      = commit -S -m
-  cam = commit -a -m
-  co      = checkout
-  rv = remote -v
+  # used the most by me
+  aa  = add --all
+  cm  = commit -S -m
+  cma = !git add -A && git commit -m
+  co  = checkout
+  rv  = remote -v
+
   # checkouts
   cb      = checkout -b
   cob     = checkout -b

@@ -10,19 +10,31 @@ alias lm='exa -Flagh --git --group-directories-first --sort modified'
 alias ld='exa -Flgh --git --group-directories-first'
 alias tree='exa --tree'
 alias ls='grc ls'
+alias cll='clear; and exa -Flah --sort modified'
 
+# Info
 alias about='neofetch'
 alias atm='neofetch'
 alias mymac='neofetch'
 
 # Workflow
-alias 11ty='eleventy'
+alias siz='du -khsc'
+alias wget='wget -c'
+
+# Homebrew
 alias cask='brew cask'
 alias casks='brew cask list'
-alias cll='clear; and exa -Flah --sort modified'
-alias code='code-insiders'
-alias siz='du -khsc'
+
+# Apps/VMs/Docker
 alias vb='VBoxManage'
+
+# Editors
+alias code='code-insiders'
 alias vim='nvim'
-alias wget='wget -c'
+
+# Javascript
+alias 11ty='eleventy'
+
+# Golang/Rust/Python
 # alias go='richgo' # so go test prints rich output
+alias pip='pip3'
