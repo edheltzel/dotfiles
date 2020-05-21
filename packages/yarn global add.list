@@ -1,5 +1,4 @@
 npm-check
-flightplan
 lite-server
 git-amend
 gulp-cli
@@ -8,9 +7,7 @@ gulp-cli
 postcss-cli
 prettier
 imagemin-cli
-svgo
 yo
 generator-code
-generator-generator
 vsce
 neovim
