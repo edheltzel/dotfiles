@@ -13,5 +13,6 @@ npm
 npm-check
 postcss-cli
 prettier
+purgcss
 vsce
 yo

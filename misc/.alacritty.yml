@@ -107,7 +107,7 @@ key_bindings:
   - { key: Escape, mods: Command, action: Hide }
   - { key: M, mods: Command, action: Minimize }
   - { key: Q, mods: Command, action: Quit }
-  - { key: W, mods: Command, action: Quit }
+  - { key: W, mods: Command|Shift, action: Quit }
   - { key: N, mods: Command, action: SpawnNewInstance }
   - { key: N, mods: Command|Shift, action: SpawnNewInstance }
   - { key: F, mods: Command|Control, action: ToggleFullscreen }
@@ -115,7 +115,7 @@ key_bindings:
   - { key: D,        mods: Command,       chars: "\x06\x76" }
   - { key: D,        mods: Command|Shift, chars: "\x06\x73" }
   - { key: W,        mods: Command,       chars: "\x06\x78" }
-  - { key: H,        mods: Command,       chars: "\x06\x68" }
+  - { key: LBracket, mods: Command,       chars: "\x06\x68" }
   - { key: J,        mods: Command,       chars: "\x06\x6a" }
   - { key: K,        mods: Command,       chars: "\x06\x6b" }
   - { key: L,        mods: Command,       chars: "\x06\x6c" }
