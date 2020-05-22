@@ -15,6 +15,8 @@ mkdir -p "$DESTINATION/autoload"
 mkdir -p "$DESTINATION/general"
 mkdir -p "$DESTINATION/keys"
 mkdir -p "$DESTINATION/plugs"
+mkdir -p "$DESTINATION/plugConfig"
+mkdir -p "$DESTINATION/themes"
 
 find * -name "*vim*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
