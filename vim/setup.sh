@@ -12,6 +12,9 @@ info "Setting up neovim..."
 
 substep_info "Creating nvim autoload folder..."
 mkdir -p "$DESTINATION/autoload"
+mkdir -p "$DESTINATION/general"
+mkdir -p "$DESTINATION/keys"
+mkdir -p "$DESTINATION/plugs"
 
 find * -name "*vim*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
