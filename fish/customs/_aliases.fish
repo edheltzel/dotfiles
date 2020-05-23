@@ -12,11 +12,6 @@ alias tree='exa --tree'
 alias ls='grc ls'
 alias cll='clear; and exa -Flah --sort modified'
 
-# Info
-alias about='neofetch'
-alias atm='neofetch'
-alias mymac='neofetch'
-
 # Workflow
 alias siz='du -khsc'
 alias wget='wget -c'

@@ -1,10 +1,12 @@
 ## Defines abbreviations
 function setup --description 'defines abbreviations'
+  abbr atm neofech
   abbr binfo brew info
   abbr bi brew install
   abbr brews brew leaves
   abbr cl clear
   abbr clone git clone
+  abbr co code .
   abbr del trash
   abbr dls ~/Downloads/
   abbr ga git aa
@@ -13,6 +15,7 @@ function setup --description 'defines abbreviations'
   abbr gco git co
   abbr gd git diff
   abbr gma git aa; and git cm
+  abbr gmac git aa; git cm
   abbr gp git push
   abbr gpl git pull
   abbr gs git status
@@ -23,8 +26,6 @@ function setup --description 'defines abbreviations'
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
   abbr op open .
-  abbr co code .
-  abbr vo vim .
   abbr opa open -a APP_NAME
   abbr rc runcloud
   abbr sdel rm -rf
@@ -32,5 +33,5 @@ function setup --description 'defines abbreviations'
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
   abbr upp topgrade
-  abbr gmac git aa; git cm
+  abbr vo vim .
 end

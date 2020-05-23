@@ -93,29 +93,6 @@ key_bindings:
   - { key: Minus, mods: Control, action: DecreaseFontSize }
   - { key: N, mods: Control, action: SpawnNewInstance }
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
-
-  - { key: D,        mods: Contrl,       chars: "\x06\x76" }
-  - { key: D,        mods: Contrl|Shift, chars: "\x06\x73" }
-  - { key: W,        mods: Contrl,       chars: "\x06\x78" }
-  - { key: H,        mods: Contrl|Shift, chars: "\x06\x68" }
-  - { key: J,        mods: Contrl,       chars: "\x06\x6a" }
-  - { key: K,        mods: Contrl,       chars: "\x06\x6b" }
-  - { key: L,        mods: Contrl,       chars: "\x06\x6c" }
-  - { key: T,        mods: Contrl,       chars: "\x06\x63" }
-  - { key: Key1,     mods: Contrl,       chars: "\x06\x31" }
-  - { key: Key2,     mods: Contrl,       chars: "\x06\x32" }
-  - { key: Key3,     mods: Contrl,       chars: "\x06\x33" }
-  - { key: Key4,     mods: Contrl,       chars: "\x06\x34" }
-  - { key: Key5,     mods: Contrl,       chars: "\x06\x35" }
-  - { key: Key6,     mods: Contrl,       chars: "\x06\x36" }
-  - { key: Key7,     mods: Contrl,       chars: "\x06\x37" }
-  - { key: Key8,     mods: Contrl,       chars: "\x06\x38" }
-  - { key: Key9,     mods: Contrl,       chars: "\x06\x39" }
-  - { key: Left,     mods: Contrl,       chars: "\x06\x48" }
-  - { key: Down,     mods: Contrl,       chars: "\x06\x4a" }
-  - { key: Up,       mods: Contrl,       chars: "\x06\x4b" }
-  - { key: Right,    mods: Contrl,       chars: "\x06\x4c" }
-
   # (macOS only)
   - { key: Comma,     mods: Command,      command: {program: "open", args: ["~/.alacritty.yml"]} }
   - { key: Space, mods: Alt, chars: ' ' }
@@ -123,7 +100,7 @@ key_bindings:
   - { key: Equals, mods: Command, action: IncreaseFontSize }
   - { key: Add, mods: Command, action: IncreaseFontSize }
   - { key: Minus, mods: Command, action: DecreaseFontSize }
-  - { key: K, mods: Command, action: ClearHistory }
+  # - { key: K, mods: Command, action: ClearHistory }
   - { key: V, mods: Command, action: Paste }
   - { key: C, mods: Command, action: Copy }
   - { key: H, mods: Command, action: Hide }
@@ -139,9 +116,9 @@ key_bindings:
   - { key: D,        mods: Command|Shift, chars: "\x06\x73" }
   - { key: W,        mods: Command,       chars: "\x06\x78" }
   - { key: LBracket, mods: Command,       chars: "\x06\x68" }
-  - { key: J,        mods: Command,       chars: "\x06\x6a" }
-  - { key: K,        mods: Command,       chars: "\x06\x6b" }
-  - { key: L,        mods: Command,       chars: "\x06\x6c" }
+  - { key: RBracket,        mods: Command|Shift,       chars: "\x06\x6a" }
+  - { key: LBracket,        mods: Command|Shift,       chars: "\x06\x6b" }
+  - { key: RBracket,        mods: Command,       chars: "\x06\x6c" }
   - { key: T,        mods: Command,       chars: "\x06\x63" }
   - { key: Key1,     mods: Command,       chars: "\x06\x31" }
   - { key: Key2,     mods: Command,       chars: "\x06\x32" }
