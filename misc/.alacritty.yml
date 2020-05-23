@@ -76,49 +76,49 @@ mouse:
     modifiers: Alt
 # Key bindings
 key_bindings:
-  - { key: Paste, action: Paste }
-  - { key: Copy, action: Copy }
-  - { key: PageUp, mods: Shift, mode: ~Alt, action: ScrollPageUp }
-  - { key: PageDown, mods: Shift, mode: ~Alt, action: ScrollPageDown }
-  - { key: Home, mods: Shift, mode: ~Alt, action: ScrollToTop }
-  - { key: End, mods: Shift, mode: ~Alt, action: ScrollToBottom }
+  - { key: Paste,    action: Paste  }
+  - { key: Copy,     action: Copy   }
+  - { key: PageUp,   mods:   Shift, mode: ~Alt, action: ScrollPageUp   }
+  - { key: PageDown, mods:   Shift, mode: ~Alt, action: ScrollPageDown }
+  - { key: Home,     mods:   Shift, mode: ~Alt, action: ScrollToTop    }
+  - { key: End,      mods:   Shift, mode: ~Alt, action: ScrollToBottom }
   # (Windows, Linux, and BSD only)
-  - { key: V, mods: Control|Shift, action: Paste }
-  - { key: C, mods: Control|Shift, action: Copy }
-  - { key: Insert, mods: Shift, action: PasteSelection }
-  - { key: Key0, mods: Control, action: ResetFontSize }
-  - { key: Equals, mods: Control, action: IncreaseFontSize }
-  - { key: Add, mods: Control, action: IncreaseFontSize }
-  - { key: Subtract, mods: Control, action: DecreaseFontSize }
-  - { key: Minus, mods: Control, action: DecreaseFontSize }
-  - { key: N, mods: Control, action: SpawnNewInstance }
-  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  - { key: N,        mods: Control,       action: SpawnNewInstance }
+  - { key: N,        mods: Control|Shift, action: SpawnNewInstance }
   # (macOS only)
-  - { key: Comma,     mods: Command,      command: {program: "open", args: ["~/.alacritty.yml"]} }
-  - { key: Space, mods: Alt, chars: ' ' }
-  - { key: Key0, mods: Command, action: ResetFontSize }
-  - { key: Equals, mods: Command, action: IncreaseFontSize }
-  - { key: Add, mods: Command, action: IncreaseFontSize }
-  - { key: Minus, mods: Command, action: DecreaseFontSize }
-  # - { key: K, mods: Command, action: ClearHistory }
-  - { key: V, mods: Command, action: Paste }
-  - { key: C, mods: Command, action: Copy }
-  - { key: H, mods: Command, action: Hide }
-  - { key: Escape, mods: Command, action: Hide }
-  - { key: M, mods: Command, action: Minimize }
-  - { key: Q, mods: Command, action: Quit }
-  - { key: W, mods: Command|Shift, action: Quit }
-  - { key: N, mods: Command, action: SpawnNewInstance }
-  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
-  - { key: F, mods: Command|Control, action: ToggleFullscreen }
+  - { key: Comma,  mods: Command, command: {program: "open", args: ["~/.alacritty.yml"]} }
+  - { key: Space,  mods: Alt,             chars:   '                '            }
+  - { key: Key0,   mods: Command,         action:  ResetFontSize    }
+  - { key: Equals, mods: Command,         action:  IncreaseFontSize }
+  - { key: Add,    mods: Command,         action:  IncreaseFontSize }
+  - { key: Minus,  mods: Command,         action:  DecreaseFontSize }
+  # - {    key:    K,    mods:            Command, action:          ClearHistory }
+  - { key: V,      mods: Command,         action:  Paste            }
+  - { key: C,      mods: Command,         action:  Copy             }
+  - { key: H,      mods: Command,         action:  Hide             }
+  - { key: Escape, mods: Command,         action:  Hide             }
+  - { key: M,      mods: Command,         action:  Minimize         }
+  - { key: Q,      mods: Command,         action:  Quit             }
+  - { key: W,      mods: Command|Shift,   action:  Quit             }
+  - { key: N,      mods: Command,         action:  SpawnNewInstance }
+  - { key: N,      mods: Command|Shift,   action:  SpawnNewInstance }
+  - { key: F,      mods: Command|Control, action:  ToggleFullscreen }
 
   - { key: D,        mods: Command,       chars: "\x06\x76" }
   - { key: D,        mods: Command|Shift, chars: "\x06\x73" }
   - { key: W,        mods: Command,       chars: "\x06\x78" }
   - { key: LBracket, mods: Command,       chars: "\x06\x68" }
-  - { key: RBracket,        mods: Command|Shift,       chars: "\x06\x6a" }
-  - { key: LBracket,        mods: Command|Shift,       chars: "\x06\x6b" }
-  - { key: RBracket,        mods: Command,       chars: "\x06\x6c" }
+  - { key: RBracket, mods: Command|Shift, chars: "\x06\x6a" }
+  - { key: LBracket, mods: Command|Shift, chars: "\x06\x6b" }
+  - { key: RBracket, mods: Command,       chars: "\x06\x6c" }
   - { key: T,        mods: Command,       chars: "\x06\x63" }
   - { key: Key1,     mods: Command,       chars: "\x06\x31" }
   - { key: Key2,     mods: Command,       chars: "\x06\x32" }
