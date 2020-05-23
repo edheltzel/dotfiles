@@ -7,7 +7,7 @@ imap <C-l> <C-w>l
 let mapleader=" "
 " let localleader=" "
 nnoremap <Space> <Nop>
-s
+
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv

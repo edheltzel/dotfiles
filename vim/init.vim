@@ -18,29 +18,29 @@ source $HOME/.config/nvim/general/paths.vim
 if exists('g:vscode')
     " VSCode extension
   source $HOME/.config/nvim/vscode/windows.vim
-  source $HOME/.config/nvim/plugConfig/easymotion.vim
+  source $HOME/.config/nvim/configs/easymotion.vim
 else
   " ordinary neovim
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/onedark.vim
   source $HOME/.config/nvim/themes/airline.vim
-  source $HOME/.config/nvim/plugConfig/rnvimr.vim
-  source $HOME/.config/nvim/plugConfig/fzf.vim
-  source $HOME/.config/nvim/plugConfig/nerd-commenter.vim
-  source $HOME/.config/nvim/plugConfig/rainbow.vim
-  source $HOME/.config/nvim/plugConfig/quickscope.vim
-  source $HOME/.config/nvim/plugConfig/vim-wiki.vim
-  source $HOME/.config/nvim/plugConfig/sneak.vim
-  source $HOME/.config/nvim/plugConfig/coc.vim
-  source $HOME/.config/nvim/plugConfig/goyo.vim
-  source $HOME/.config/nvim/plugConfig/vim-rooter.vim
-  source $HOME/.config/nvim/plugConfig/start-screen.vim
-  source $HOME/.config/nvim/plugConfig/gitgutter.vim
-  source $HOME/.config/nvim/plugConfig/closetags.vim
-  source $HOME/.config/nvim/plugConfig/floaterm.vim
-  source $HOME/.config/nvim/plugConfig/vista.vim
-  luafile $HOME/.config/nvim/lua/plug-colorizer.lua
-  " source $HOME/.config/nvim/plugConfig/easymotion.vim
+  source $HOME/.config/nvim/configs/rnvimr.vim
+  source $HOME/.config/nvim/configs/fzf.vim
+  source $HOME/.config/nvim/configs/nerd-commenter.vim
+  source $HOME/.config/nvim/configs/rainbow.vim
+  source $HOME/.config/nvim/configs/quickscope.vim
+  source $HOME/.config/nvim/configs/vim-wiki.vim
+  source $HOME/.config/nvim/configs/sneak.vim
+  source $HOME/.config/nvim/configs/coc.vim
+  source $HOME/.config/nvim/configs/goyo.vim
+  source $HOME/.config/nvim/configs/vim-rooter.vim
+  source $HOME/.config/nvim/configs/start-screen.vim
+  source $HOME/.config/nvim/configs/gitgutter.vim
+  source $HOME/.config/nvim/configs/closetags.vim
+  source $HOME/.config/nvim/configs/floaterm.vim
+  source $HOME/.config/nvim/configs/vista.vim
+  luafile $HOME/.config/nvim/configs/colorizer.lua
+  " source $HOME/.config/nvim/configs/easymotion.vim
 endif
 
 " Experimental

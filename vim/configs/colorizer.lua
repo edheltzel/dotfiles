@@ -1,3 +1,4 @@
+
 require'colorizer'.setup(
   {'*';},
   {
