@@ -9,7 +9,7 @@ SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~/.config/ranger)"
 
 info "Setting up Ranger File Manager..."
-find . -name "rc.conf" | while read fn; do
+find . -name "*.conf" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
