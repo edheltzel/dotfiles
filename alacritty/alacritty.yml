@@ -85,7 +85,7 @@ key_bindings:
   - { key: End,      mods:   Shift, mode: ~Alt, action: ScrollToBottom }
   # (Windows, Linux, and BSD only add macOS use Command)
   - { key: Comma,  mods: Command, command: {program: "open", args: ["~/.config/alacritty/alacritty.yml"]} }
-  - { key: Comma,  mods: Control, command: {program: "open", args: ["~/.config/alacritty/alacritty.yml"]} }
+  # - { key: Comma,  mods: Control, command: {program: "open", args: ["~/.config/alacritty/alacritty.yml"]} }
   - { key: V,        mods: Control|Shift,   action: Paste            }
   - { key: C,        mods: Control|Shift,   action: Copy             }
   - { key: Insert,   mods: Shift,           action: PasteSelection   }

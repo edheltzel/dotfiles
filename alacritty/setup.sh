@@ -6,18 +6,16 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~/.config)"
+DESTINATION="$(realpath ~/.config/alacritty)"
 
 info "Setting up Alacritty..."
 
-substep_info "Creating alacritty folders..."
-mkdir -p "$DESTINATION/alacritty"
+substep_info "Creating Alacritty folder..."
+mkdir -p $DESTINATION
 
-find . -name "*yml" | while read fn; do
-    fn=$(basename $fn)
+find * -name "*.yml" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
-
 clear_broken_symlinks "$DESTINATION"
 
-success "Alacrity is now configured."
+success "Finished setting up Alacritty."
