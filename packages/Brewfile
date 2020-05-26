@@ -65,7 +65,6 @@ brew 'p7zip'
 brew 'postgresql'
 brew 'python'
 brew 'python3'
-brew 'ranger'
 brew 'raszi/tap/colorize'
 brew 'rbenv'
 brew 'richgo'
@@ -136,6 +135,7 @@ cask 'quicklook-json'
 cask 'local'
 cask 'sequel-pro'
 cask 'sqlpro-for-postgres'
+cask 'shpotify'
 cask 'shrinkit'
 cask 'sip'
 cask 'sketch'
@@ -156,6 +156,7 @@ mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'Amphetamine', id: 937984704
 mas 'Divvy', id: 413857545
+mas 'Magnet', id: 441258766
 mas 'Icon Slate', id: 439697913
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
