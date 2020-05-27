@@ -95,6 +95,7 @@ cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'appcleaner'
 cask 'alacritty'
+cask 'amethyst'
 cask 'bartender'
 cask 'boom-3d'
 cask 'brave-browser-nightly'
@@ -155,8 +156,6 @@ cask 'WebPQuickLook'
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'Amphetamine', id: 937984704
-mas 'Divvy', id: 413857545
-mas 'Magnet', id: 441258766
 mas 'Icon Slate', id: 439697913
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
