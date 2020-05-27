@@ -13,13 +13,13 @@ dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: FuraCode Nerd Font
+    family: FiraCode Nerd Font
     style: Regular
   bold:
-    family: FuraCode Nerd Font
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: FuraCode Nerd Font
+    family: FiraCode Nerd Font
     style: Italic
   size: 18
 draw_bold_text_with_bright_colors: true
@@ -67,7 +67,7 @@ cursor:
   style: Block
   thickness: 0.15
 
-  # Live config reload (changes require restart)
+# Live config reload (changes require restart)
 live_config_reload: true
 
 mouse:
@@ -77,52 +77,47 @@ mouse:
 
 # Key bindings
 key_bindings:
-  - { key: Paste,    action: Paste  }
-  - { key: Copy,     action: Copy   }
+  # (Windows, Linux, and BSD)
+  # - { key: Key0,     mods: Control,         action: ResetFontSize    }
+  # - { key: Equals,   mods: Control,         action: IncreaseFontSize }
+  # - { key: Add,      mods: Control,         action: IncreaseFontSize }
+  # - { key: Subtract, mods: Control,         action: DecreaseFontSize }
+  # - { key: Minus,    mods: Control,         action: DecreaseFontSize }
+  # - { key: N,        mods: Control,         action: SpawnNewInstance }
+  # - { key: N,        mods: Control|Shift,   action: SpawnNewInstance }
+  # - { key: H,        mods: Control,         action: Hide             }
+  # - { key: Escape,   mods: Control,         action: Hide             }
+  # - { key: M,        mods: Control,         action: Minimize         }
+  # - { key: Q,        mods: Control,         action: Quit             }
+  # - { key: W,        mods: Control|Shift,   action: Quit             }
+  # - { key: C,        mods: Control|Shift,   action: Copy             }
+  # - { key: V,        mods: Control|Shift,   action: Paste            }
   - { key: PageUp,   mods:   Shift, mode: ~Alt, action: ScrollPageUp   }
   - { key: PageDown, mods:   Shift, mode: ~Alt, action: ScrollPageDown }
   - { key: Home,     mods:   Shift, mode: ~Alt, action: ScrollToTop    }
   - { key: End,      mods:   Shift, mode: ~Alt, action: ScrollToBottom }
-  # (Windows, Linux, and BSD only add macOS use Command)
-  - { key: Comma,  mods: Command, command: {program: "open", args: ["~/.config/alacritty/alacritty.yml"]} }
-  # - { key: Comma,  mods: Control, command: {program: "open", args: ["~/.config/alacritty/alacritty.yml"]} }
-  - { key: V,        mods: Control|Shift,   action: Paste            }
-  - { key: C,        mods: Control|Shift,   action: Copy             }
+  - { key: Paste,    action: Paste  }
+  - { key: Copy,     action: Copy   }
   - { key: Insert,   mods: Shift,           action: PasteSelection   }
-  - { key: Key0,     mods: Control,         action: ResetFontSize    }
+  # (macOS)
   - { key: Key0,     mods: Command,         action: ResetFontSize    }
-  - { key: Equals,   mods: Control,         action: IncreaseFontSize }
-  - { key: Equals,   mods: Command,         action: IncreaseFontSize }
-  - { key: Add,      mods: Control,         action: IncreaseFontSize }
-  - { key: Add,      mods: Command,         action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,         action: DecreaseFontSize }
-  - { key: Minus,    mods: Control,         action: DecreaseFontSize }
-  - { key: Minus,    mods: Command,         action: DecreaseFontSize }
-  - { key: N,        mods: Control,         action: SpawnNewInstance }
-  - { key: N,        mods: Command,         action: SpawnNewInstance }
-  - { key: N,        mods: Control|Shift,   action: SpawnNewInstance }
-  - { key: N,        mods: Command|Shift,   action: SpawnNewInstance }
-  # - { key: K,        mods: Command,         action: ClearHistory     } #fish shell does this
-  # - { key: K,        mods: Control,         action: ClearHistory     } #fish shell does this
-  - { key: V,        mods: Control,         action: Paste            }
-  - { key: V,        mods: Command,         action: Paste            }
-  - { key: C,        mods: Control,         action: Copy             }
-  - { key: C,        mods: Command,         action: Copy             }
-  - { key: H,        mods: Control,         action: Hide             }
   - { key: H,        mods: Command,         action: Hide             }
-  - { key: Escape,   mods: Control,         action: Hide             }
+  - { key: Equals,   mods: Command,         action: IncreaseFontSize }
+  - { key: Add,      mods: Command,         action: IncreaseFontSize }
+  - { key: Subtract, mods: Command,         action: DecreaseFontSize }
+  - { key: Minus,    mods: Command,         action: DecreaseFontSize }
+  - { key: N,        mods: Command,         action: SpawnNewInstance }
+  - { key: N,        mods: Command|Shift,   action: SpawnNewInstance }
+  - { key: V,        mods: Command,         action: Paste            }
+  - { key: C,        mods: Command,         action: Copy             }
   - { key: Escape,   mods: Command,         action: Hide             }
-  - { key: M,        mods: Control,         action: Minimize         }
   - { key: M,        mods: Command,         action: Minimize         }
-  - { key: Q,        mods: Control,         action: Quit             }
   - { key: Q,        mods: Command,         action: Quit             }
-  - { key: W,        mods: Control|Shift,   action: Quit             }
   - { key: W,        mods: Command|Shift,   action: Quit             }
   - { key: F,        mods: Command|Control, action: ToggleFullscreen }
 
-
-# used with tmux - hex code makes alacritty use iterm2 like key bindings for tabs and split screen
-# please note the tmux.conf supports this by unbinding the default
+# used with tmux - hex code makes alacritty use iterm2 like key bindings for tabs and split screens
+# please note the .tmux.conf supports these hex code by unbinding the default
   - { key: D,        mods: Command,       chars: "\x06\x76" }
   - { key: D,        mods: Command|Shift, chars: "\x06\x73" }
   - { key: W,        mods: Command,       chars: "\x06\x78" }

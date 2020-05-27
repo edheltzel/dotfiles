@@ -14,6 +14,7 @@ substep_info "Creating fish config folders..."
 mkdir -p "$DESTINATION/functions"
 mkdir -p "$DESTINATION/customs"
 mkdir -p "$DESTINATION/completions"
+mkdir -p "$DESTINATION/conf.d"
 
 find * -name "*fish*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
