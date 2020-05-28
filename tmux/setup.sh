@@ -11,7 +11,7 @@ CONFIGDEST="$(realpath ~/.config/tmux)"
 
 info "Setting up Tmux..."
 
-git clone https://github.com/tmux-plugins/tpm "$CONFIGDEST/plugins/tpm"
+git clone --progress --verbose https://github.com/tmux-plugins/tpm "$CONFIGDEST/plugins/tpm"
 
 
 find . -name ".tmux.conf" | while read fn; do
@@ -19,7 +19,12 @@ find . -name ".tmux.conf" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
-find * -type f \( -iname \*sh* -o -iname \*remote* \)  | while read fn; do
+find . -name "*.local.conf" | while read fn; do
+    fn=$(basename $fn)
+    symlink "$SOURCE/$fn" "$CONFIGDEST/$fn"
+done
+
+find * -type f \( -iname \*renew* -o -iname \*conf* \)  | while read fn; do
     symlink "$SOURCE/$fn" "$CONFIGDEST/$fn"
 done
 
