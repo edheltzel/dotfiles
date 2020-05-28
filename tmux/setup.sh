@@ -11,7 +11,7 @@ CONFIGDEST="$(realpath ~/.config/tmux)"
 
 info "Setting up Tmux..."
 
-git clone --progress --verbose https://github.com/tmux-plugins/tpm "$CONFIGDEST/plugins/tpm"
+#git clone --progress --verbose https://github.com/tmux-plugins/tpm "$CONFIGDEST/plugins/tpm"
 
 
 find . -name ".tmux.conf" | while read fn; do
