@@ -96,7 +96,6 @@ cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'appcleaner'
 cask 'alacritty'
-cask 'amethyst'
 cask 'bartender'
 cask 'boom-3d'
 cask 'brave-browser-nightly'
@@ -161,6 +160,7 @@ mas 'Icon Slate', id: 439697913
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
 mas 'MindNode Pro', id: 402398561
+mas 'Magnet', id: 441258766
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Todoist', id: 585829637
