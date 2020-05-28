@@ -288,3 +288,4 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
       # when I press CMD + d in iterm, I send the sequence 0x06 0x76,
       # which tmux inteprets it as opening a new pane.
       # ===========================================================================
+https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/
