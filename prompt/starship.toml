@@ -1,5 +1,7 @@
 [cmd_duration]
 min_time = 4
+[git_branch]
+symbol = " "
 [git_status]
 conflicted = "⇲"
 [character]
@@ -15,3 +17,5 @@ symbol = " "
 style = "bold blue"
 [python]
 symbol = " "
+[rust]
+symbol = " "
