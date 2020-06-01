@@ -5,7 +5,8 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 "
 "
-" most of this is from https://www.chrisatmachine.com/neovim
+" Great stuff from https://www.chrisatmachine.com/neovim
+" Repo is here https://github.com/ChristianChiarulli/nvim
 " Always source these
 source $HOME/.config/nvim/plugs/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
@@ -24,7 +25,7 @@ else
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/onedark.vim
   source $HOME/.config/nvim/themes/airline.vim
-  source $HOME/.config/nvim/configs/rnvimr.vim
+  source $HOME/.config/nvim/configs/lf.vim
   source $HOME/.config/nvim/configs/fzf.vim
   source $HOME/.config/nvim/configs/nerd-commenter.vim
   source $HOME/.config/nvim/configs/rainbow.vim
@@ -47,4 +48,4 @@ endif
 
 " Codi
 let g:codi#rightalign=0
-
+set shell=bash
