@@ -1,0 +1,56 @@
+{
+  "title": "Mouse button4 & button5 to go forward/back in the browser",
+  "rules": [
+    {
+      "description": "Mouse button4 to back in web. NOTE: Default key setting",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button4"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["left_command"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Mouse button5 to forward in web. NOTE: Default key setting",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button5"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["right_command"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Mouse button6 to forward in web. NOTE: Default key setting",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button5"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["right_command"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
