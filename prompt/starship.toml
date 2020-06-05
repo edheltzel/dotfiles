@@ -7,7 +7,7 @@ conflicted = "⇲"
 [character]
 use_symbol_for_status = true
 [golang]
-symbol = " "  #nerdfont icon
+symbol = " "  #nerdfont icon
 [ruby]
 symbol = " "
 [nodejs]
