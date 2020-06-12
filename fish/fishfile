@@ -1,9 +1,7 @@
 oh-my-fish/plugin-bang-bang
 edc/bass
 oh-my-fish/plugin-brew
-oh-my-fish/plugin-osx
 tuvistavie/fish-ssh-agent
-oh-my-fish/plugin-tab
 orefalo/free
 laughedelic/pisces
 fishpkg/fish-await
@@ -11,8 +9,8 @@ fishpkg/fish-menu
 martinkacmar/fish-avn
 jethrokuan/z
 fishpkg/fish-last-job-id
-joseluisq/gitnow
 rbenv/fish-rbenv
 oh-my-fish/plugin-rustup
 laughedelic/fish_logo
 jorgebucaran/fish-bax
+oh-my-fish/plugin-osx

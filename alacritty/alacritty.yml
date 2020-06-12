@@ -23,15 +23,15 @@ font:
     style: Italic
   size: 18
 draw_bold_text_with_bright_colors: true
-
 # Colors (CyberPunk2077 Dark RDMFlavor)
-# Default colors
 colors:
+  # Default colors
   primary:
     background: '#030d22'
     foreground: '#959da5'
-    dim_foreground: '#959da5'
+
     bright_foreground: '#feffff'
+
   # Cursor colors
   cursor:
     text: '#e3eefe'
@@ -115,8 +115,6 @@ key_bindings:
   - { key: Q,        mods: Command,         action: Quit             }
   - { key: W,        mods: Command|Shift,   action: Quit             }
   - { key: F,        mods: Command|Control, action: ToggleFullscreen }
-  - { key: Comma,     mods: Command,      command:
-    {program: "open", args: ["~/.config/alacritty/alacritty.yml"]}     }
 
 # used with tmux - hex code makes alacritty use iterm2 like key bindings for tabs and split screens
 # please note the .tmux.conf supports these hex code by unbinding the default
