@@ -6,6 +6,7 @@ set -U fish_user_paths "/usr/local/sbin" $fish_user_paths #homebrew
 set -x PATH $HOME/.rbenv/bin $PATH
 rbenv init - | source
 
+
 source ~/.config/fish/_importSources.fish
 
 # Start Starship

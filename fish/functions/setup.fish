@@ -25,6 +25,7 @@ function setup --description 'defines abbreviations'
   abbr lg lazygit
   abbr nig npm install -g
   abbr npms npm list -g --depth=0
+  abbr yarns yarn global list
   abbr op open .
   abbr opa open -a APP_NAME
   abbr rc runcloud
