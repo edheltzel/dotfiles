@@ -22,10 +22,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name
-sudo scutil --set ComputerName "MacDaddy"
-sudo scutil --set LocalHostName "MacDaddy"
-sudo scutil --set HostName "MacDaddy"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacDaddy"
+sudo scutil --set ComputerName "ApplePie"
+sudo scutil --set LocalHostName "ApplePie"
+sudo scutil --set HostName "ApplePie"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ApplePie"
 
 # Store Identities in the KeyChain
 sudo ssh-add -K
@@ -36,7 +36,7 @@ sudo nvram SystemAudioVolume=" "
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
-# Disable gatekeeper
+# Disable gatekeeper - Security for Installing apps
 sudo spctl --master-disable
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
@@ -136,11 +136,11 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
+#sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
+#sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+#sudo chflags uchg /private/var/vm/sleepimage
 
 
 ###############################################################################
@@ -227,11 +227,11 @@ sudo systemsetup -setcomputersleep Off > /dev/null
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
+#sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
+#sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+#sudo chflags uchg /private/var/vm/sleepimage
 
 ###############################################################################
 # Screen                                                                      #
@@ -463,11 +463,11 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 # 11: Launchpad
 # 12: Notification Center
 
-# Top left screen corner → Mission Control
+# Top left screen corner → Application Windows
 defaults write com.apple.dock wvous-tl-corner -int 3
 defaults write com.apple.dock wvous-tl-modifier -int 0
 
-# Top right screen corner → Nofication Center
+# Top right screen corner → Desktop
 defaults write com.apple.dock wvous-tr-corner -int 4
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
@@ -475,7 +475,7 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
 
-# Bottom left screen corner → Desktop
+# Bottom left screen corner → Misson Control
 defaults write com.apple.dock wvous-bl-corner -int 2
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
@@ -577,7 +577,7 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 #open "${HOME}/.local/share/confiles/BlackRain.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+#defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Time Machine                                                                #

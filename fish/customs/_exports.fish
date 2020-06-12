@@ -3,7 +3,7 @@ set -x --global EDITOR code-insiders $EDITOR #set Visual Studio Code Insiders as
 set -x --global VOL rdm $VOL
 
 # GOLANG configurations
-set -x GOPATH ~/Projects/Go
+set -x GOPATH ~/Projects/go
 set -x GOROOT /usr/local/opt/go/libexec
 set -x PATH $PATH $GOROOT/bin $GOPATH/bin
 
