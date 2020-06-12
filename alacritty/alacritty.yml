@@ -24,14 +24,13 @@ font:
   size: 18
 draw_bold_text_with_bright_colors: true
 # Colors (CyberPunk2077 Dark RDMFlavor)
+# Default colors
 colors:
-  # Default colors
   primary:
     background: '#030d22'
     foreground: '#959da5'
-
+    dim_foreground: '#959da5'
     bright_foreground: '#feffff'
-
   # Cursor colors
   cursor:
     text: '#e3eefe'
