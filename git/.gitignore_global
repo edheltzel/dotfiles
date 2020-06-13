@@ -112,7 +112,8 @@ vendor/
 
 ### Jekyll ###
 _site/
-
+.jekyll-cache/
+.jekyll-metadata/
 ### Bower ###
 bower_components
 
