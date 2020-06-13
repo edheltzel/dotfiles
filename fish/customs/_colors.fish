@@ -9,3 +9,7 @@ set -x -g EXA_COLORS "gm=33;1"
 
 set -x -g TERM "xterm-256color"
 
+# Prompt mods
+set fish_color_error red
+set fish_color_command white --bold
+set fish_color_param cyan
