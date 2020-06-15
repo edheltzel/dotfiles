@@ -1,8 +1,9 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
-# Barrowed...Taken from:
-# ~/.osx — https://mths.be/osx
-# modified for my workflow and needs
+# ~/.macos — https://mths.be/macos
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
 
 DIR=$(dirname "$0")
 cd "$DIR"
@@ -30,14 +31,11 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Store Identities in the KeyChain
 sudo ssh-add -K
 
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
-
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
-
 # Disable gatekeeper - Security for Installing apps
 sudo spctl --master-disable
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
@@ -54,6 +52,10 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
 # Disable the over-the-top focus ring animation
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
+
+# Disable smooth scrolling
+# (Uncomment if you’re on an older Mac that messes up the animation)
+#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -83,7 +85,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
 # Disable Resume system-wide
-# defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
@@ -195,7 +197,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
-
 # Enable lid wakeup
 sudo pmset -a lidwake 1
 
@@ -215,7 +216,7 @@ sudo systemsetup -setrestartfreeze on
 #sudo pmset -b sleep 5
 
 # Set standby delay to 24 hours (default is 1 hour)
-#sudo pmset -a standbydelay 86400
+sudo pmset -a standbydelay 86400
 
 # Never go into computer sleep mode
 sudo systemsetup -setcomputersleep Off > /dev/null
@@ -232,6 +233,7 @@ sudo pmset -a hibernatemode 0
 #sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
 #sudo chflags uchg /private/var/vm/sleepimage
+
 
 ###############################################################################
 # Screen                                                                      #
