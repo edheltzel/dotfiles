@@ -6,6 +6,12 @@ An experimental, ongoing configuration for my personal needs using macOS, Fish s
 
 My playground revolves around the use of, Go, JavaScript + NodeJS, CSS Wizadary with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
 
+
+# TODO
+
+- [ ] need to reorder install of packages
+- [ ] `gem install.list` should come after Homebrew and before for Fish
+
 ## Usage and the Install
 
 1. Restore your safely backed up ssh keys to `~/.ssh/`
