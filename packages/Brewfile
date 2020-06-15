@@ -141,7 +141,7 @@ cask 'typora'
 cask 'typinator'
 cask 'virtualbox'
 cask 'visual-studio-code-insiders'
-cask 'vlc'
+cask 'iina'
 cask 'webponize'
 cask 'WebPQuickLook'
 
@@ -159,3 +159,4 @@ mas 'Pages', id: 409201541
 mas 'Todoist', id: 585829637
 mas 'Color Ninja 2', id: 1494948845
 mas 'Xcode', id: 497799835
+mas 'Smart Convertor', id: 447513724
