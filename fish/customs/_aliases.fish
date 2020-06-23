@@ -15,6 +15,7 @@ alias cll='clear; and exa -Flah --sort modified'
 # Workflow
 alias siz='du -khsc'
 alias wget='wget -c'
+alias mux='tmux'
 
 # Homebrew
 alias cask='brew cask'

@@ -35,6 +35,6 @@ function setup --description 'defines abbreviations'
   abbr tkill tmux kill-session -t
   abbr upp topgrade
   abbr vo vim .
-  abbr mux tmux at -t base
+  abbr cmux tmux at -t base
   abbr nmux tmux new -s "base"
 end
