@@ -35,7 +35,8 @@ sudo ssh-add -K
 sudo spctl --master-disable
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+# %00 = yes %01 = no
+sudo nvram StartupMute=%00
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
