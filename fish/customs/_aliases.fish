@@ -16,6 +16,8 @@ alias cll='clear; and exa -Flah --sort modified'
 alias siz='du -khsc'
 alias wget='wget -c'
 alias mux='tmux'
+alias ytop='ytop -f'
+
 
 # Homebrew
 alias cask='brew cask'
