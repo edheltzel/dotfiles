@@ -1,2 +1,2 @@
 " using neovim see ini.vim
-.config/nvim/init.vim
+/Users/ed/.config/nvim/init.vim
