@@ -139,13 +139,14 @@ cask 'spotify'
 cask 'shrinkit'
 cask 'sip'
 cask 'swiftdefaultappsprefpane'
+cask 'turbo-boost-switcher'
 cask 'typora'
 cask 'typinator'
 cask 'virtualbox'
 cask 'visual-studio-code-insiders'
 cask 'iina'
 cask 'webponize'
-cask 'WebPQuickLook'
+cask 'webpquicklook'
 
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
