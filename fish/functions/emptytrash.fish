@@ -3,6 +3,6 @@
 # Finally, clear download history from quarantine. https://mths.be/bum
 function emptytrash
   for files in ~/.Trash/*.*
-      sudo rm -rfv $files
+      sudo rm -rdfv $files
   end
 end
