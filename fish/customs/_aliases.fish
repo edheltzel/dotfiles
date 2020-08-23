@@ -27,8 +27,6 @@ alias casks='brew cask list'
 alias vb='VBoxManage'
 
 # Editors
-# alias code='code-insiders'
-
 alias vim='nvim'
 
 # Javascript
