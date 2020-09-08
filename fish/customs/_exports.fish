@@ -2,7 +2,7 @@ set -x --global EDITOR code $EDITOR #set Visual Studio Code as default editor us
 set -x --global VOL rdm $VOL
 
 # GOLANG configurations
-set -x GOPATH ~/Projects/go
+set --universal -x GOPATH ~/Projects/go
 set -x GOROOT /usr/local/opt/go/libexec
 set -x PATH $PATH $GOROOT/bin $GOPATH/bin
 
