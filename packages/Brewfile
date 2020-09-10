@@ -148,7 +148,6 @@ cask 'webpquicklook'
 
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
-mas 'Amphetamine', id: 937984704
 mas 'Icon Slate', id: 439697913
 mas 'Divvy', id: 413857545
 mas 'Flowchart Designer', id: 1107185578
