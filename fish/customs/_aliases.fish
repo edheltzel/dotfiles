@@ -21,7 +21,7 @@ alias ytop='ytop -f'
 
 # Homebrew
 alias cask='brew cask'
-alias casks='brew cask list'
+alias casks='brew list --cask'
 
 # Apps/VMs/Docker
 alias vb='VBoxManage'
