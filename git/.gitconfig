@@ -1,5 +1,5 @@
   [user]
-	name = Ed Heltzel
+	name  = Ed Heltzel
 	email = ed@rainyday.media
 
   [github]
@@ -28,11 +28,30 @@
 
   [core]
   excludesfile = ~/.gitignore_global
-  editor       = code-insiders
+  editor       = code
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
   safecrlf     = warn
+  pager        = delta
+
+  [delta]
+      features = side-by-side line-numbers decorations
+      syntax-theme = Dracula
+      plus-style = syntax "#003800"
+      minus-style = syntax "#3f0001"
+
+  [delta "decorations"]
+      commit-decoration-style = bold yellow box ul
+      file-style = bold yellow ul
+      file-decoration-style = none
+      hunk-header-decoration-style = cyan box ul
+
+  [delta "line-numbers"]
+      line-numbers-left-style = cyan
+      line-numbers-right-style = cyan
+      line-numbers-minus-style = 124
+      line-numbers-plus-style = 28
 
   [diff]
   tool = opendiff
@@ -42,7 +61,7 @@
 
   [merge]
   tool = opendiff
-  log = true
+  log  = true
 
   [mergetool]
   prompt     = false
@@ -89,8 +108,8 @@
   rbs = rebase --skip
   rf  = reflog
 
-  unstage = reset HEAD --
-	uncommit = reset --soft HEAD~
+  unstage  = reset HEAD --
+  uncommit = reset --soft HEAD~
 
   #squashes
   sq = "!f() { git rebase -i HEAD~$1; }; f"
@@ -108,7 +127,7 @@
   strm = "!f() { git stash drop stash@{$1} -U5; }; f"
 
   #commits
-  c  = commit
+  c = commit
   # pushes & pulls
   f   = fetch --prune
   p   = push
@@ -143,22 +162,22 @@
   followTags = true
   [filter "media"]
   required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
+  clean    = git media clean %f
+  smudge   = git media smudge %f
 
   [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-  required = true
-	process = git-lfs filter-process
+	clean    = git-lfs clean -- %f
+	smudge   = git-lfs smudge -- %f
+	required = true
+	process  = git-lfs filter-process
   [help]
 [gui]
 	recentrepo = /Users/ed/Projects/work/biesergreer
-	fontui = -family \"Fira Code\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+	fontui     = -family \"Fira Code\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"Fira Mono for Powerline\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
-	commitmsgwidth = 80
+	commitmsgwidth   = 80
 	pruneduringfetch = true
-	tabsize = 2
+	tabsize          = 2
 [commit]
 	gpgsign = true
 [suer]

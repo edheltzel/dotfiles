@@ -170,7 +170,7 @@ I'd suggest you take a look at this configuration - I use NeoVim
 
 ### VSCODE ~~(vscode/)~~
 
-VSCode Insiders is my default editor.
+VSCode is my default editor.
 
 - I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
   - VSCODE has it's own sync options now - so you might want to check that out.

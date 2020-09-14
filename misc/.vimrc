@@ -1,2 +1,1 @@
-" using neovim see ini.vim
-.config/nvim/init.vim
+:set ~/.config/nvim/init.vim

@@ -29,6 +29,7 @@ brew 'exa'
 brew 'easyengine'
 brew 'findutils'
 brew 'fish'
+brew 'fork'
 brew 'fortune'
 brew 'fzf'
 brew 'fpp'
@@ -36,6 +37,7 @@ brew 'fd'
 brew 'gdk-pixbuf'
 brew 'go'
 brew 'git'
+brew 'git-delta'
 brew 'github/gh/gh'
 brew 'git-flow-avh'
 brew 'git-lfs'
@@ -98,22 +100,18 @@ cask 'alfred'
 cask 'appcleaner'
 cask 'alacritty'
 cask 'authy'
-cask 'bartender'
 cask 'bitwarden'
 cask 'boom-3d'
-cask 'brave-browser-nightly'
 cask 'choosy'
 cask 'cyberduck'
-cask 'dash4'
 cask 'discord'
 cask 'docker'
 cask 'droplr'
 cask 'dropbox'
 cask 'figma'
 cask 'figma-beta'
-cask 'firefox-nightly'
+cask 'firefox-developer-edition'
 cask 'font-fira-code-nerd-font'
-cask 'fork'
 cask 'google-chrome'
 cask 'gpg-suite-no-mail'
 cask 'imageoptim'
@@ -122,6 +120,7 @@ cask 'keka'
 cask 'kitematic'
 cask 'mailplane'
 cask 'namechanger'
+cask 'openinterminal'
 cask 'postman'
 cask 'principle'
 cask 'protopie'
@@ -139,17 +138,17 @@ cask 'spotify'
 cask 'shrinkit'
 cask 'sip'
 cask 'swiftdefaultappsprefpane'
+cask 'turbo-boost-switcher'
 cask 'typora'
 cask 'typinator'
 cask 'virtualbox'
-cask 'visual-studio-code-insiders'
+cask 'visual-studio-code'
 cask 'iina'
 cask 'webponize'
-cask 'WebPQuickLook'
+cask 'webpquicklook'
 
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
-mas 'Amphetamine', id: 937984704
 mas 'Icon Slate', id: 439697913
 mas 'Divvy', id: 413857545
 mas 'Flowchart Designer', id: 1107185578
@@ -159,6 +158,6 @@ mas 'MindNode Pro', id: 402398561
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Todoist', id: 585829637
-mas 'Color Ninja 2', id: 1494948845
+mas 'Paletter 3', id: 1494948845
 mas 'Xcode', id: 497799835
 mas 'Smart Convertor', id: 447513724

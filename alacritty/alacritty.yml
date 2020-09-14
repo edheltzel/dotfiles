@@ -8,7 +8,7 @@ window:
     y: 25
   decorations: transparent
 background_opacity: 0.96
-dynamic_title: true
+window.dynamic_title: true
 
 # Font Customization
 font:

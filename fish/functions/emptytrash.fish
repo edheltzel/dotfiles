@@ -2,7 +2,7 @@
 # Also, clear Apple’s System Logs to improve shell startup speed.
 # Finally, clear download history from quarantine. https://mths.be/bum
 function emptytrash
-  for files in ~/.Trash/*.*
-      sudo rm -rfv $files
+  for files in ~/.Trash/
+      sudo rm -rdfv $files
   end
 end

@@ -1,14 +1,11 @@
-# Additional git repositories to pull
-#git_repos = [
-#    "~/src/*/",
-#    "~/.config/something"
-#]
-
-# Don't pull the predefined git repos
-# predefined_git_repos = false
+# Don't ask for confirmations
+assume_yes = true
 
 # Disable specific steps - same options as the command line flag
 disable = ["gem"]
+
+# Ignore failures for these steps
+#ignore_failures = ["powershell"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]
@@ -25,20 +22,35 @@ no_retry = true
 # Arguments to pass SSH when upgrading remote systems
 #ssh_arguments = "-o ConnectTimeout=2"
 
-# Arguments to pass Git when pulling Repositories
-#git_arguments = "--rebase --autostash"
+# Path to Topgrade executable on remote machines
+#remote_topgrade_path = ".cargo/bin/topgrade"
 
 # Arguments to pass tmux when pulling Repositories
 #tmux_arguments = "-S /var/tmux.sock"
 
-# Arguments to pass yay when updating packages
-yay_arguments = "--yes"
-
-# Manually select Windows updates
-# accept_all_windows_updates = false
-
 # Do not set the terminal title
 #set_title = false
+
+# Cleanup temporary or old files
+cleanup = true
+
+#[git]
+#max_concurrency = 5
+# Additional git repositories to pull
+#repos = [
+#    "~/src/*/",
+#    "~/.config/something"
+#]
+
+# Don't pull the predefined git repos
+#predefined_repos = false
+
+# Arguments to pass Git when pulling Repositories
+#arguments = "--rebase --autostash"
+
+#[composer]
+#self_update = true
+
 # Commands to run before anything
 #[pre_commands]
 #"Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
@@ -47,5 +59,22 @@ yay_arguments = "--yes"
 #[commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 
-# Cleanup temporary or old files
-cleanup = true
+[brew]
+greedy_cask = true
+
+[linux]
+# Arguments to pass yay when updating packages
+yay_arguments = "--yes"
+#trizen_arguments = "--devel"
+#enable_tlmgr = true
+#emerge_sync_flags = "-q"
+#emerge_update_flags = "-uDNa --with-bdeps=y world"
+
+#[windows]
+# Manually select Windows updates
+#accept_all_updates = false
+
+# Causes Topgrade to rename itself during the run to allow package managers
+# to upgrade it. Use this only if you installed Topgrade by using a package
+# manager such as Scoop to Cargo
+#self_rename = true

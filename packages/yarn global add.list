@@ -11,6 +11,7 @@ neovim
 np
 npm
 npm-check
+parcel-bundler
 postcss-cli
 prettier
 purgecss
