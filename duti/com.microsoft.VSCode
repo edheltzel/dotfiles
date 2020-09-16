@@ -24,6 +24,7 @@
 .list
 .log
 .mod
+.njk
 .php
 .pug
 .py
