@@ -1,8 +1,8 @@
 {
-  "title": "Mouse button4 & button5 to go forward/back in the browser",
+  "title": "Elecom Trackball Mouse Mods",
   "rules": [
     {
-      "description": "Mouse button4 to back in web. NOTE: Default key setting",
+      "description": "Back Button",
       "manipulators": [
         {
           "type": "basic",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "description": "Mouse button5 to forward in web. NOTE: Default key setting",
+      "description": "Forward Button",
       "manipulators": [
         {
           "type": "basic",
@@ -36,17 +36,20 @@
       ]
     },
     {
-      "description": "Mouse button6 to forward in web. NOTE: Default key setting",
+      "description": "Wheel Center Click",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "pointing_button": "button5"
+            "pointing_button": "button3",
+            "modifiers": {
+              "optional": ["any"]
+            }
           },
           "to": [
             {
-              "key_code": "right_arrow",
-              "modifiers": ["right_command"]
+              "key_code": "button1",
+              "modifiers": ["left_command"]
             }
           ]
         }
