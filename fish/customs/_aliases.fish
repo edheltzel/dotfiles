@@ -20,7 +20,7 @@ alias ytop='ytop -f'
 
 
 # Homebrew
-alias cask='brew'
+alias cask='brew cask'
 alias casks='brew list --cask'
 
 # Apps/VMs/Docker
