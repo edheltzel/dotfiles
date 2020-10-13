@@ -17,7 +17,7 @@ alias siz='du -khsc'
 alias wget='wget -c'
 alias mux='tmux'
 alias ytop='ytop -f'
-
+alias zpurge='z --clean'
 
 # Homebrew
 alias cask='brew cask'

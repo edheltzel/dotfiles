@@ -6,7 +6,7 @@
   user = ginfuru
 
   [credential]
-  helper = GIT_CREDENTIAL_HELPER
+	helper = osxkeychain
   [color]
   ui     = auto
   branch = auto
