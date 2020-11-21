@@ -6,25 +6,26 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~/.config/nvim)"
+DESTINATION="$(realpath ~)"
+CONFIGDEST="$(realpath ~/.SpaceVim)"
+CONFIGDEST2="$(realpath ~/.SpaceVim.d)"
 
-info "Setting up neovim..."
+info "Setting up SpaceVim..."
 
-substep_info "Creating nvim folders..."
-mkdir -p "$DESTINATION/autoload"
-mkdir -p "$DESTINATION/configs"
-mkdir -p "$DESTINATION/general"
-mkdir -p "$DESTINATION/keys"
-mkdir -p "$DESTINATION/lua"
-mkdir -p "$DESTINATION/plugs"
-mkdir -p "$DESTINATION/themes"
-mkdir -p "$DESTINATION/utils"
-mkdir -p "$DESTINATION/vscode"
+substep_info "Creating SpaceVim folders..."
+mkdir -p "$DESTINATION/.SpaceVim"
+mkdir -p "$DESTINATION/.SpaceVim.d"
 
-find * -type f \( -iname \*vim* -o -iname \*lua* \)  | while read fn; do
+
+find . -name ".SpaceVim" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
-clear_broken_symlinks "$DESTINATION"
+find . -name ".SpaceVim.d" | while read fn; do
+    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
+done
 
-success "Finished configuring Neovim. Make sure you run :PlugInstall inside of nvim"
+clear_broken_symlinks "$CONFIGDEST"
+clear_broken_symlinks "$CONFIGDEST2"
+
+success "Finished configuring SpaceVim. Make sure you run :SPUpdate to update plugins and SpaceVim"
