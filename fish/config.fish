@@ -8,8 +8,6 @@ rbenv init - | source
 
 source ~/.config/fish/_importSources.fish
 
-# DOOM Emacs
-set -x PATH $HOME/.emacs.d/bin $PATH
 # Start Starship
 eval (starship init fish)
 

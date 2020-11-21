@@ -19,6 +19,11 @@ find . -name ".emacs.d" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
+find . -name ".spacemacs" | while read fn; do
+    fn=$(basename $fn)
+    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
+done
+
 clear_broken_symlinks "$CONFIGDEST"
 
 success "Finished configuring Emacs."
