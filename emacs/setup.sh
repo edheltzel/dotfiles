@@ -7,18 +7,11 @@ cd "$DIR"
 
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
-CONFIGDEST="$(realpath ~/.emacs.d)"
 
 info "Setting up Emacs..."
 
-substep_info "Creating Emacs folders..."
-mkdir -p "$DESTINATION/.emacs.d"
-
-
-find . -name ".emacs.d" | while read fn; do
-    fn=$(basename $fn)
-    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
-done
+substep_info "Cloning and Installing Spacemacs..."
+git clone https://github.com/syl20bnr/spacemacs "$DESTINATION/.emacs.d"
 
 find . -name ".spacemacs" | while read fn; do
     fn=$(basename $fn)
