@@ -27,4 +27,3 @@ NetrwTreeListing*
 ### Go Patch ###
 /vendor/
 /Godeps/
-vim/.SpaceVim
