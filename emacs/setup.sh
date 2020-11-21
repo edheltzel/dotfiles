@@ -16,6 +16,7 @@ mkdir -p "$DESTINATION/.emacs.d"
 
 
 find . -name ".emacs.d" | while read fn; do
+    fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
