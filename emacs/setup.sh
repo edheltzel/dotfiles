@@ -15,7 +15,7 @@ substep_info "Creating Emacs folders..."
 mkdir -p "$DESTINATION/.emacs.d"
 
 
-find . -name "emacs.d" | while read fn; do
+find . -name ".emacs.d" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
