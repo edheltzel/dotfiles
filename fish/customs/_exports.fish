@@ -2,9 +2,9 @@ set -x --global EDITOR code #set Visual Studio Code as default editor use code, 
 set -x --global VOL rdm #set primary volume for workstation
 
 # GOLANG configurations
-set --universal -x GOPATH /Users/ed/Projects/go
-set -x GOROOT /usr/local/opt/go/libexec
-set -x PATH $PATH $GOROOT/bin $GOPATH/bin
+set -x GOPATH ~/Projects/go
+#set -x GOROOT /usr/local/opt/go/libexec
+set -x PATH $PATH $GOPATH/bin
 
 # fzf and fd helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"

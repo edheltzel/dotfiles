@@ -7,20 +7,13 @@ cd "$DIR"
 
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
-CONFIGDEST="$(realpath ~/.SpaceVim.d)"
+CONFIGDEST="$(realpath ~/.config/nvim)"
 
-info "Setting up SpaceVim..."
+info "Setting up NVCode..."
 
-substep_info "Installing SpaceVime..."
-curl -sLf https://spacevim.org/install.sh | bash
-
-substep_info "Creating SpaceVim folders..."
-mkdir -p "$DESTINATION/.SpaceVim.d"
-
-find . -name ".SpaceVim.d" | while read fn; do
-    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
-done
+substep_info "Installing NVCode..."
+curl -sLf https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/utils/install.sh | bash
 
 clear_broken_symlinks "$CONFIGDEST"
 
-success "Finished configuring SpaceVim. Make sure you run :SPUpdate to update plugins and SpaceVim"
+success "Finished configuring NVCode. Make sure you run :UpdateRemotePlugins to update plugins"
