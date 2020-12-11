@@ -28,7 +28,7 @@
 
   [core]
   excludesfile = ~/.gitignore_global
-  editor       = code
+  editor       = code --wait
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
@@ -54,18 +54,17 @@
       line-numbers-plus-style = 28
 
   [diff]
-  tool = opendiff
+  tool = vscode
 
-  [difftool]
-  prompt = false
+  [difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 
   [merge]
-  tool = opendiff
+  tool = vscode
   log  = true
 
-  [mergetool]
-  prompt     = false
-  keepBackup = false
+  [mergetool "vscode"]
+  cmd = code --wait $MERGED
 
   [apply]
   # Detect whitespace errors when applying a patch
