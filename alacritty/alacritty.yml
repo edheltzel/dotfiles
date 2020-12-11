@@ -103,8 +103,8 @@ key_bindings:
   - { key: Key0,     mods: Command,         action: ResetFontSize    }
   - { key: H,        mods: Command,         action: Hide             }
   - { key: Equals,   mods: Command,         action: IncreaseFontSize }
-  - { key: Add,      mods: Command,         action: IncreaseFontSize }
-  - { key: Subtract, mods: Command,         action: DecreaseFontSize }
+  #- { key: Add,      mods: Command,         action: IncreaseFontSize }
+  #- { key: Subtract, mods: Command,         action: DecreaseFontSize }
   - { key: Minus,    mods: Command,         action: DecreaseFontSize }
   - { key: N,        mods: Command,         action: SpawnNewInstance }
   - { key: N,        mods: Command|Shift,   action: SpawnNewInstance }
