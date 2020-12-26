@@ -36,5 +36,6 @@ function setup --description 'defines abbreviations'
   abbr upp topgrade
   abbr vo vim .
   abbr cmux tmux at -t base
+  abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
 end
