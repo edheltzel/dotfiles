@@ -27,3 +27,13 @@ end
 function dcons; docker container ls --all; end
 function dc; docker-compose; end
 function dcrun; docker-compose run --rm; end
+
+# Apps/VMs/Docker
+function vb --description 'vb=VBoxManage'
+  VBoxManage
+end
+
+# eleventy
+function 11ty --description 'alias 11ty=elevety'
+  eleventy
+end

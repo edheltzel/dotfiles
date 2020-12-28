@@ -18,14 +18,8 @@ alias wget='wget -c'
 alias mux='tmux'
 alias ytop='ytop -f'
 
-# Apps/VMs/Docker
-alias vb='VBoxManage'
-
 # Editors
 alias vim='nvim'
-
-# Javascript
-alias 11ty='eleventy'
 
 # Golang/Rust/Python
 alias pip='pip3'
