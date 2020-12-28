@@ -17,11 +17,6 @@ alias siz='du -khsc'
 alias wget='wget -c'
 alias mux='tmux'
 alias ytop='ytop -f'
-alias zpurge='z --clean'
-
-# Homebrew
-alias cask='brew cask'
-alias casks='brew list --cask'
 
 # Apps/VMs/Docker
 alias vb='VBoxManage'
@@ -33,6 +28,5 @@ alias vim='nvim'
 alias 11ty='eleventy'
 
 # Golang/Rust/Python
-# alias go='richgo' # so go test prints rich output
 alias pip='pip3'
 alias python='python3'

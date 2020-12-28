@@ -4,6 +4,7 @@ function setup --description 'defines abbreviations'
   abbr binfo brew info
   abbr bi brew install
   abbr brews brew leaves
+  abbr casks brew list --cask
   abbr cl clear
   abbr clone git clone
   abbr co code .
@@ -38,4 +39,5 @@ function setup --description 'defines abbreviations'
   abbr cmux tmux at -t base
   abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
+  abbr zpurge z --clean
 end
