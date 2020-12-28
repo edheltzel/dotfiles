@@ -29,6 +29,7 @@ function setup --description 'defines abbreviations'
   abbr sdel rm -rf
   abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
+  abbr siz du -khsc
   abbr tkill tmux kill-session -t
   abbr upp topgrade
   abbr amux tmux at -t base

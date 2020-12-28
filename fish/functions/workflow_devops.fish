@@ -30,10 +30,18 @@ function dcrun; docker-compose run --rm; end
 
 # Apps/VMs/Docker
 function vb --description 'vb=VBoxManage'
-  VBoxManage
+  command VBoxManage
 end
 
 # eleventy
 function 11ty --description 'alias 11ty=elevety'
-  eleventy
+  command eleventy
 end
+
+# Editors
+function vim; command nvim; end
+function mux; command tmux; end
+
+# Python
+function pip; command pip3; end
+function python; command python3; end
