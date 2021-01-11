@@ -12,4 +12,4 @@ source ~/.config/fish/_importSources.fish
 eval (starship init fish)
 
 # Vim Mode
-#fish_vi_key_bindings
+fish_vi_key_bindings
