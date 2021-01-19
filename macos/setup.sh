@@ -20,10 +20,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
 # Set computer name
-sudo scutil --set ComputerName "MacDaddy"
-sudo scutil --set LocalHostName "MacDaddy"
-sudo scutil --set HostName "MacDaddy"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacDaddy"
+sudo scutil --set ComputerName "MacDaddyO"
+sudo scutil --set LocalHostName "MacDaddyO"
+sudo scutil --set HostName "MacDaddyO"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacDaddyO"
 
 
 # System Preferences
