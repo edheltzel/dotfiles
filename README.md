@@ -29,7 +29,7 @@ My playground revolves around the use of, Go, JavaScript + NodeJS, CSS Wizadary 
 3. Clone this repository
 
 ```
-git clone git@github.com:ginfuru/dotfiles.git
+git clone git@github.com:edheltzel/dotfiles.git
 ```
 
 4. Run the `bootstrap.sh` script
@@ -131,9 +131,9 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
       - follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s).
       - I found this [GIST helpful](https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2)
       - To get VSCode setup follow this [article](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
-    - **Please Note** if you used the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
+    - **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
 
-    - If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/ginfuru/dotfiles/blob/master/packages/Brewfile).
+    - If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile).
 
 ### macOS Preferences (macos/)
 
@@ -177,8 +177,8 @@ VSCode is my default editor.
 - Make sure you add `code` and/or `code-insiders` to your Path - run `⌘+⇧+P` type `Shell Command: Install 'code-insiders' command in PATH`
 - **Self Plug**
   - Try out my VSCode themes
-    - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
-    - [Better solarized](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme)
+    - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=edheltzel.edheltzel-onedark-raincoat-theme)
+    - [Better solarized](https://marketplace.visualstudio.com/items?itemName=edheltzel.edheltzel-better-solarized-dark-theme)
 
 ### Node development
 
