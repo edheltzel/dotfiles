@@ -1,6 +1,7 @@
 # Setting up the Path
 set -e fish_user_paths
 set -U fish_user_paths "/usr/local/sbin" $fish_user_paths #homebrew
+#set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths # homebrew ARM
 
 # rbenv
 set -x PATH $HOME/.rbenv/bin $PATH
