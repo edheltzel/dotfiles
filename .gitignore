@@ -27,3 +27,6 @@ NetrwTreeListing*
 ### Go Patch ###
 /vendor/
 /Godeps/
+### Go Patch ###
+repos/work.list
+repos/playground.list
