@@ -1,8 +1,8 @@
 set -x --global EDITOR code-insiders #set Visual Studio Code as default editor use code, code-insiders, subl or vim
-set -x --global VOL rdm #set primary volume for workstation
+set -x --global VOL xxx #set primary volume for workstation
 
 # GOLANG configurations
-set -x GOPATH ~/Projects/go
+set -x GOPATH ~/.go
 #set -x GOROOT /usr/local/opt/go/libexec
 set -x PATH $PATH $GOPATH/bin
 

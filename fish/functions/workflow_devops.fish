@@ -39,10 +39,10 @@ function 11ty --description 'alias 11ty=elevety'
 end
 
 # Editors
-function vim; command nvim; end
+#function vim; command nvim; end
 function mux; command tmux; end
 function code; command code-insiders; end
 
 # Python
-function pip; command pip3; end
+#function pip; command pip3; end
 function python; command python3; end
