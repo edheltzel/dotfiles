@@ -39,9 +39,9 @@ function 11ty --description 'alias 11ty=elevety'
 end
 
 # Editors
-#function vim; command nvim; end
+#function vim; command nvim; end # nvim is not supported on apple ARM
 function mux; command tmux; end
-function code; command code-insiders; end
+#function code; command code-insiders; end
 
 # Python
 #function pip; command pip3; end
