@@ -59,7 +59,7 @@ brew 'mas'
 brew 'mongodb-community'
 brew 'mysql'
 brew 'neofetch'
-brew 'neovim'
+# neovim is not suppored on apple ARM #brew 'neovim'
 brew 'newman'
 brew 'nginx'
 brew 'node'
@@ -147,13 +147,13 @@ cask 'alacritty'
 cask 'fork'
 cask 'typora'
 cask 'visual-studio-code-insiders'
-cask 'sublime-text'
 cask 'insomnia'
 cask 'insomnia-designer'
 cask 'iina'
 cask 'clipgrab'
 cask 'spotify'
 cask 'sip'
+
 # mas 'Affinity Designer', id: 824171161
 # mas 'Affinity Photo', id: 824183456
 # mas 'Icon Slate', id: 439697913
