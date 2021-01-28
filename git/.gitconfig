@@ -185,3 +185,5 @@
 	program = gpg2
 [pull]
 	rebase = false
+[init]
+	defaultBranch = master

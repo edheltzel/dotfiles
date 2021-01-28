@@ -1,5 +1,5 @@
 ## Defines abbreviations
-function asetup --description 'defines abbreviations'
+function setup --description 'defines abbreviations'
   abbr atm neofetch
   abbr bi brew install
   abbr binfo brew info
@@ -32,6 +32,7 @@ function asetup --description 'defines abbreviations'
   abbr symlink ln -s
   abbr siz du -khsc
   abbr tkill tmux kill-session -t
+  abbr sp speedtest
   abbr upp topgrade
   abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
