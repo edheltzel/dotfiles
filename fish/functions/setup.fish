@@ -1,13 +1,13 @@
 ## Defines abbreviations
 function setup --description 'defines abbreviations'
-  abbr atm neofech
+  abbr atm neofetch
   abbr bi brew install
   abbr binfo brew info
   abbr brews brew leaves
   abbr casks brew list --cask
   abbr cl clear
   abbr clone git clone
-  abbr co code-insiders .
+  abbr co code .
   abbr del trash
   abbr dls ~/Downloads/
   abbr ga git aa
@@ -16,6 +16,7 @@ function setup --description 'defines abbreviations'
   abbr gco git co
   abbr gd git diff
   abbr gg go get GITHUB_URL
+  abbr goo cd ~/.go/
   abbr gma git aa; and git cm
   abbr gmac git aa; git cm
   abbr gp git push
@@ -31,9 +32,11 @@ function setup --description 'defines abbreviations'
   abbr symlink ln -s
   abbr siz du -khsc
   abbr tkill tmux kill-session -t
+  abbr sp speedtest
   abbr upp topgrade
   abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
   abbr yarns yarn global list
   abbr zpurge z --clean
+  abbr ys yarn start
 end

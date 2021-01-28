@@ -9,17 +9,17 @@
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
 
-# Set Screen Savers
-defaults -currentHost write com.apple.screensaver moduleDict "
-  <dict>
-    <key>moduleName</key><string>Shell</string>
-    <key>path</key><string>/System/Library/Screen Savers/Drift.saver</string>
-    <key>type</key><integer>1</integer>
-  </dict>
-"
+# # Set Screen Savers
+# defaults -currentHost write com.apple.screensaver moduleDict "
+#   <dict>
+#     <key>moduleName</key><string>Shell</string>
+#     <key>path</key><string>/System/Library/Screen Savers/Drift.saver</string>
+#     <key>type</key><integer>1</integer>
+#   </dict>
+# "
 
-# Start after 30 Minutes
-defaults -currentHost write com.apple.screensaver idleTime -int 1800
+# # Start after 30 Minutes
+# defaults -currentHost write com.apple.screensaver idleTime -int 1800
 
-# Show with clock (default)
-defaults -currentHost write com.apple.screensaver showClock -bool false
+# # Show with clock (default)
+# defaults -currentHost write com.apple.screensaver showClock -bool false

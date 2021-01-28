@@ -15,8 +15,8 @@ tap 'sass/sass'
 
 brew 'ack'
 brew 'bat'
-brew 'brew-cask-completion'
 brew 'bitwarden-cli'
+brew 'brew-cask-completion'
 brew 'cairo'
 brew 'cmake'
 brew 'coreutils'
@@ -30,7 +30,6 @@ brew 'easyengine'
 brew 'exa'
 brew 'findutils'
 brew 'fish'
-brew 'fork'
 brew 'fortune'
 brew 'fzf'
 brew 'fpp'
@@ -60,6 +59,7 @@ brew 'mas'
 brew 'mongodb-community'
 brew 'mysql'
 brew 'neofetch'
+# neovim is not suppored on apple ARM #brew 'neovim'
 brew 'newman'
 brew 'nginx'
 brew 'node'
@@ -93,20 +93,20 @@ brew 'wget'
 brew 'webp'
 brew 'unzip'
 brew 'yarn'
+brew 'yadm'
 brew 'ytop'
 brew 'z'
 brew 'zip'
 
 cask 'adobe-creative-cloud'
-cask 'figma'
 cask 'figma-beta'
+cask 'figma'
 cask 'sketch'
+cask 'principle'
+cask 'clickup'
 cask 'alfred'
 cask 'authy'
 cask 'bitwarden'
-cask 'boom-3d'
-cask 'choosy'
-cask 'clickup'
 cask 'cyberduck'
 cask 'docker'
 cask 'discord'
@@ -114,58 +114,58 @@ cask 'slack'
 cask 'signal'
 cask 'droplr'
 cask 'dropbox'
-cask 'firefox-developer-edition'
 cask 'font-fira-code-nerd-font'
+cask 'choosy'
+cask 'brave-browser-nightly'
+cask 'firefox-developer-edition'
 cask 'google-chrome'
 cask 'gpg-suite-no-mail'
+cask 'boom-3d'
 cask 'hazel'
 cask 'imageoptim'
-cask 'insomnia'
-cask 'insomnia-designer'
 cask 'keka'
 cask 'itsycal'
 cask 'mailplane'
 cask 'namechanger'
 cask 'openinterminal'
-cask 'iterm2'
-cask 'alacritty'
-cask 'paletro'
-cask 'principle'
+cask 'karabiner-elements'
+cask 'swiftdefaultappsprefpane'
 cask 'qlcolorcode'
 cask 'qlimagesize'
 cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'quicklook-csv'
 cask 'quicklook-json'
+cask 'webpquicklook'
 cask 'local'
-cask 'karabiner-elements'
 cask 'sequel-pro'
 cask 'sqlpro-for-postgres'
 cask 'dbeaver-community'
 cask 'tableplus'
-cask 'spotify'
-cask 'shrinkit'
-cask 'sip'
-cask 'swiftdefaultappsprefpane'
+cask 'iterm2'
+cask 'alacritty'
+cask 'fork'
 cask 'typora'
 cask 'visual-studio-code-insiders'
-cask 'sublime-text'
+cask 'insomnia'
+cask 'insomnia-designer'
 cask 'iina'
 cask 'clipgrab'
-cask 'webponize'
-cask 'webpquicklook'
+cask 'spotify'
+cask 'sip'
 
-mas 'Affinity Designer', id: 824171161
-mas 'Affinity Photo', id: 824183456
-mas 'Icon Slate', id: 439697913
-mas 'Divvy', id: 413857545
-mas 'Flowchart Designer', id: 1107185578
-mas 'Just Focus', id: 1142151959
-mas 'Gifski', id: 1351639930
-mas 'Keynote', id: 409183694
-mas 'MindNode Pro', id: 402398561
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
-mas 'Paletter 3', id: 1494948845
-mas 'Xcode', id: 497799835
-mas 'Smart Convertor', id: 447513724
+# mas 'Affinity Designer', id: 824171161
+# mas 'Affinity Photo', id: 824183456
+# mas 'Icon Slate', id: 439697913
+# mas 'Divvy', id: 413857545
+# mas 'Flowchart Designer', id: 1107185578
+# mas 'Just Focus', id: 1142151959
+# mas 'Gifski', id: 1351639930
+# mas 'Keynote', id: 409183694
+# mas 'MindNode Pro', id: 402398561
+# mas 'Numbers', id: 409203825
+# mas 'Pages', id: 409201541
+# mas 'Paletter 3', id: 1494948845
+# mas 'Xcode', id: 497799835
+# mas 'Smart Convertor', id: 447513724
+# mas 'WebPonize', id: 1526039365
