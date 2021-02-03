@@ -64,6 +64,8 @@ brew 'mongodb-community'
 brew 'mysql'
 brew 'neofetch'
 brew 'svn'
+brew 'achannarasappa/tap/ticker'
+
 # neovim is not suppored on apple ARM #brew 'neovim'
 brew 'newman'
 brew 'nginx'
