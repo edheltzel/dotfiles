@@ -9,3 +9,6 @@ set -x PATH $PATH $GOPATH/bin
 # fzf and fd helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"
 set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+
+# using homebrew curl
+set -g fish_user_paths "/opt/homebrew/opt/curl/bin"
