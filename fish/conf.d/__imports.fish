@@ -4,7 +4,8 @@ source ~/.config/fish/conf.d/_colors.fish
 source ~/.config/fish/conf.d/_exports.fish
 
 # Source GRC
-source /opt/homebrew/etc/grc.fish # https://github.com/oh-my-fish/plugin-grc/issues/20#issue-296031557
+# https://github.com/oh-my-fish/plugin-grc/issues/20#issue-296031557
+source /opt/homebrew/etc/grc.fish
 
 # Source Multi-function files
 source ~/.config/fish/functions/workflow_git.fish
