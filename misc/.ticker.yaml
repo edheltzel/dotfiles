@@ -1,0 +1,39 @@
+# ~/.ticker.yaml
+show-tags: true
+show-fundamentals: true
+show-separator: true
+interval: 10
+watchlist:
+  - BUSXF
+  - GME
+lots:
+  - symbol: "BTC-USD"
+    quantity: 0.00362752
+    unit_cost: 133.59
+  - symbol: "ETH-USD"
+    quantity: 0.06039958
+    unit_cost: 95.92
+  - symbol: "XLM-USD"
+    quantity: 55.9680568
+    unit_cost: 18.95
+  - symbol: "AMC"
+    quantity: 37
+    unit_cost: 17.25
+  - symbol: "DBO"
+    quantity: 25
+    unit_cost: 5.14
+  - symbol: "OXY"
+    quantity: 7
+    unit_cost: 12.865
+  - symbol: "VET"
+    quantity: 6
+    unit_cost: 3.61
+  - symbol: "SLV"
+    quantity: 1
+    unit_cost: 41.50
+  - symbol: "EXPR"
+    quantity: 2
+    unit_cost: 5.75
+  - symbol: "LPCN"
+    quantity: 100
+    unit_cost: 1.85
