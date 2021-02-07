@@ -5,17 +5,10 @@ show-separator: true
 interval: 10
 watchlist:
   - BUSXF
-  - GME
+  - BTC-USD
+  - ETH-USD
+  - XLM-USD
 lots:
-  - symbol: "BTC-USD"
-    quantity: 0.00362752
-    unit_cost: 133.59
-  - symbol: "ETH-USD"
-    quantity: 0.06039958
-    unit_cost: 95.92
-  - symbol: "XLM-USD"
-    quantity: 55.9680568
-    unit_cost: 18.95
   - symbol: "AMC"
     quantity: 37
     unit_cost: 17.25
