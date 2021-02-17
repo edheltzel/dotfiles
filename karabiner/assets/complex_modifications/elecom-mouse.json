@@ -29,7 +29,7 @@
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["right_command"]
+              "modifiers": ["left_command"]
             }
           ]
         }
