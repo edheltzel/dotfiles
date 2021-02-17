@@ -33,7 +33,6 @@ function setup --description 'defines abbreviations'
   abbr siz du -khsc
   abbr tkill tmux kill-session -t
   abbr sp speedtest
-  abbr upp topgrade
   abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
   abbr yarns yarn global list
