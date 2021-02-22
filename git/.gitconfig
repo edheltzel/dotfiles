@@ -74,7 +74,7 @@
   # used the most by me
   aa  = add --all
   cm  = commit -S -m
-  cma = !git add -A && git commit -m
+  cma = !git add --all && git commit -S -m
   co  = checkout
   rv  = remote -v
 
@@ -84,8 +84,10 @@
   ct      = checkout -t
   cr      = checkout --
   unstage = reset HEAD
+
   # submodules
   sm = "!f() { git submodule update --init --recursive $1; }; f"
+
   #branch management
   b  = branch
   ba = branch -a
@@ -127,6 +129,7 @@
 
   #commits
   c = commit
+
   # pushes & pulls
   f   = fetch --prune
   p   = push
@@ -143,6 +146,7 @@
   v  = log --oneline --decorate --all --graph --simplify-by-decoration
   va = log --oneline --decorate --all --graph
   l  = "!f() { git log $1 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit;};f"
+
   # show tracked branches
   tracked = "!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d"
 
@@ -159,6 +163,7 @@
   [push]
   default    = matching
   followTags = true
+
   [filter "media"]
   required = true
   clean    = git media clean %f
