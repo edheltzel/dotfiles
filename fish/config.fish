@@ -18,8 +18,6 @@ eval (rbenv init - | source )
 
 # openssl to path
 set -g fish_user_paths "/opt/homebrew/opt/openssl@1.1/bin" $fish_user_paths
-# homebrew curl to path - default curl uses an outdated version
-set -g fish_user_paths "/opt/homebrew/opt/curl/bin" $fish_user_paths
 
 # Custom sourcing of colors, exports, grc, multi-function fish files
 source ~/.config/fish/conf.d/__imports.fish
