@@ -12,6 +12,9 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info"
 #set -U fish_user_paths "/usr/local/sbin" $fish_user_paths #homebrew
 set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths # homebrew ARM
 
+#rust
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+
 # rbenv
 set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
 eval (rbenv init - | source )
