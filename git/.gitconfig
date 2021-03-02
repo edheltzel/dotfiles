@@ -1,32 +1,36 @@
-  [user]
-	name  = Ed Heltzel
-	email = ed@rainyday.media
+[user]
+  name  = Ed Heltzel
+  email = ed@rainyday.media
 
-  [github]
+[github]
   user = edheltzel
 
-  [credential]
-	helper = osxkeychain
-  [color]
+[credential]
+  helper = osxkeychain
+
+[color]
   ui     = auto
   branch = auto
   diff   = auto
   status = auto
-  [color "branch"]
+
+[color "branch"]
   current = yellow reverse
   local   = yellow
   remote  = green
-  [color "diff"]
+
+[color "diff"]
   meta = yellow bold
   frag = magenta bold
   old  = red bold
   new  = green bold
-  [color "status"]
+
+[color "status"]
   added     = yellow
   changed   = green
   untracked = cyan
 
-  [core]
+[core]
   excludesfile = ~/.gitignore_global
   editor       = code --wait
   mergeoptions = --no-ff --no-commit
@@ -35,57 +39,57 @@
   safecrlf     = warn
   pager        = delta
 
-  [delta]
-      features = side-by-side line-numbers decorations
-      syntax-theme = Dracula
-      plus-style = syntax "#003800"
-      minus-style = syntax "#3f0001"
+[delta]
+  features = side-by-side line-numbers decorations
+  syntax-theme = Dracula
+  plus-style = syntax "#003800"
+  minus-style = syntax "#3f0001"
 
-  [delta "decorations"]
-      commit-decoration-style = bold yellow box ul
-      file-style = bold yellow ul
-      file-decoration-style = none
-      hunk-header-decoration-style = cyan box ul
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
 
-  [delta "line-numbers"]
-      line-numbers-left-style = cyan
-      line-numbers-right-style = cyan
-      line-numbers-minus-style = 124
-      line-numbers-plus-style = 28
+[delta "line-numbers"]
+  line-numbers-left-style = cyan
+  line-numbers-right-style = cyan
+  line-numbers-minus-style = 124
+  line-numbers-plus-style = 28
 
-  [diff]
+[diff]
   tool = vscode
 
-  [difftool "vscode"]
+[difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
 
-  [merge]
+[merge]
   tool = vscode
   log  = true
 
-  [mergetool "vscode"]
+[mergetool "vscode"]
   cmd = code --wait $MERGED
 
-  [apply]
-  # Detect whitespace errors when applying a patch
+[apply]
+  #Detect whitespace errors when applying a patch
   whitespace = fix
 
-  [alias]
-  # used the most by me
+[alias]
+  #used the most by me
   aa  = add --all
   cm  = commit -S -m
   cma = !git add --all && git commit -S -m
   co  = checkout
   rv  = remote -v
 
-  # checkouts
+  #checkouts
   cb      = checkout -b
   cob     = checkout -b
   ct      = checkout -t
   cr      = checkout --
   unstage = reset HEAD
 
-  # submodules
+  #submodules
   sm = "!f() { git submodule update --init --recursive $1; }; f"
 
   #branch management
@@ -115,11 +119,11 @@
   #squashes
   sq = "!f() { git rebase -i HEAD~$1; }; f"
 
-  # tags
+  #tags
   t      = tag -l
   squash = "!f() { git rebase -i HEAD~$1; }; f"
 
-  # stashes
+  #stashes
   st   = stash
   stl  = stash list
   stp  = stash pop
@@ -130,7 +134,7 @@
   #commits
   c = commit
 
-  # pushes & pulls
+  #pushes & pulls
   f   = fetch --prune
   p   = push
   ps  = push
@@ -140,17 +144,17 @@
   psf = push --force
   upm = !git fetch upstream && git merge upstream/master
 
-  # status & log
+  #status & log
   s  = status -sb
   ss = status
   v  = log --oneline --decorate --all --graph --simplify-by-decoration
   va = log --oneline --decorate --all --graph
   l  = "!f() { git log $1 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit;};f"
 
-  # show tracked branches
+  #show tracked branches
   tracked = "!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d"
 
-  # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+  #`git di $number` shows the diff between the state `$number` revisions ago and the current state
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
   #show changes
@@ -158,37 +162,43 @@
   r   = reset
   rhh = reset HEAD --hard
 
-	logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
+  logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
 
-  [push]
+[push]
   default    = matching
   followTags = true
 
-  [filter "media"]
+[filter "media"]
   required = true
   clean    = git media clean %f
   smudge   = git media smudge %f
 
-  [filter "lfs"]
-	clean    = git-lfs clean -- %f
-	smudge   = git-lfs smudge -- %f
-	required = true
-	process  = git-lfs filter-process
-  [help]
+[filter "lfs"]
+  clean    = git-lfs clean -- %f
+  smudge   = git-lfs smudge -- %f
+  required = true
+  process  = git-lfs filter-process
+[help]
+
 [gui]
-	recentrepo = /Users/ed/Projects/work/biesergreer
-	fontui     = -family \"Fira Code\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family \"Fira Mono for Powerline\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
-	commitmsgwidth   = 80
-	pruneduringfetch = true
-	tabsize          = 2
+  recentrepo = /Users/ed/Projects/work/biesergreer
+  fontui     = -family \"Fira Code\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family \"Fira Mono for Powerline\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+  commitmsgwidth   = 80
+  pruneduringfetch = true
+  tabsize          = 2
+
 [commit]
-	gpgsign = true
+  gpgsign = true
+
 [suer]
-	signingkey = 6C9732CDD2C37024
+  signingkey = 6C9732CDD2C37024
+
 [gpg]
-	program = gpg2
+  program = gpg2
+
 [pull]
-	rebase = false
+  rebase = false
+
 [init]
-	defaultBranch = master
+  defaultBranch = master
