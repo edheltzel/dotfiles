@@ -15,6 +15,7 @@ tap 'sass/sass'
 
 brew 'ack'
 brew 'bat'
+brew 'bash-completion'
 brew 'bottom'
 brew 'bitwarden-cli'
 brew 'brew-cask-completion'
