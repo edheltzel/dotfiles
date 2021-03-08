@@ -16,8 +16,8 @@ set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths # homebrew ARM
 set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 
 # rbenv
-set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
-eval (rbenv init - | source )
+# set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
+# eval (rbenv init - | source )
 
 # openssl to path
 set -g fish_user_paths "/opt/homebrew/opt/openssl@1.1/bin" $fish_user_paths
