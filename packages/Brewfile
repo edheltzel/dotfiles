@@ -17,7 +17,6 @@ brew 'ack'
 brew 'bat'
 brew 'bash-completion'
 brew 'bottom'
-brew 'bitwarden-cli'
 brew 'brew-cask-completion'
 brew 'cairo'
 brew 'cmake'
@@ -39,23 +38,18 @@ brew 'fd'
 brew 'gdk-pixbuf'
 brew 'go'
 brew 'git'
-brew 'git-delta'
 brew 'github/gh/gh'
 brew 'git-flow-avh'
-brew 'git-lfs'
 brew 'grep'
 brew 'ripgrep'
 brew 'grc'
-brew 'howdoi'
 brew 'pango'
 brew 'pinentry'
 brew 'pv'
 brew 'zaquestion/tap/lab'
 brew 'hugo'
 brew 'imagemagick'
-brew 'imgcat'
 brew 'mozjpeg'
-brew 'lazygit'
 brew 'ledger-live'
 brew 'jpegoptim'
 brew 'jq'
@@ -66,9 +60,7 @@ brew 'mysql'
 brew 'neofetch'
 brew 'svn'
 brew 'achannarasappa/tap/ticker'
-
-# neovim is not suppored on apple ARM #brew 'neovim'
-brew 'newman'
+brew 'neovim'
 brew 'nginx'
 brew 'node'
 brew 'nmap'
@@ -167,7 +159,7 @@ cask 'sqlpro-for-postgres'
 cask 'dbeaver-community'
 cask 'tableplus'
 cask 'iterm2'
-cask 'alacritty'
+#cask 'alacritty'
 cask 'fork'
 cask 'typora'
 cask 'visual-studio-code-insiders'
@@ -178,18 +170,18 @@ cask 'clipgrab'
 cask 'spotify'
 cask 'sip'
 
-# mas 'Affinity Designer', id: 824171161
-# mas 'Affinity Photo', id: 824183456
-# mas 'Icon Slate', id: 439697913
-# mas 'Divvy', id: 413857545
-# mas 'Flowchart Designer', id: 1107185578
-# mas 'Just Focus', id: 1142151959
-# mas 'Gifski', id: 1351639930
-# mas 'Keynote', id: 409183694
+mas 'Affinity Designer', id: 824171161
+mas 'Affinity Photo', id: 824183456
+mas 'Icon Slate', id: 439697913
+mas 'Divvy', id: 413857545
+mas 'Flowchart Designer', id: 1107185578
+mas 'Just Focus', id: 1142151959
+mas 'Gifski', id: 1351639930
+mas 'Keynote', id: 409183694
 # mas 'MindNode Pro', id: 402398561
-# mas 'Numbers', id: 409203825
-# mas 'Pages', id: 409201541
-# mas 'Paletter 3', id: 1494948845
-# mas 'Xcode', id: 497799835
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Paletter 3', id: 1494948845
+#mas 'Xcode', id: 497799835
 # mas 'Smart Convertor', id: 447513724
-# mas 'WebPonize', id: 1526039365
+mas 'WebPonize', id: 1526039365
