@@ -8,6 +8,7 @@ function setup --description 'defines abbreviations'
   abbr cl clear
   abbr clone git clone
   abbr co code-insiders
+  abbr coo code-insiders .
   abbr del trash
   abbr dls ~/Downloads/
   abbr ga git aa
