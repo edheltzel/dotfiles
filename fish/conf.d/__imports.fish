@@ -12,4 +12,4 @@ source ~/.config/fish/functions/workflow_git.fish
 source ~/.config/fish/functions/workflow_devops.fish
 source ~/.config/fish/functions/workflow_open.fish
 source ~/.config/fish/functions/workflow_repos.fish
-source ~/.config/fish/functions/workflow_navigation.fish
+source ~/.config/fish/functions/navigation.fish
