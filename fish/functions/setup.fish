@@ -12,20 +12,25 @@ function setup --description 'defines abbreviations'
   abbr coo code .
   abbr del trash
   abbr dls ~/Downloads/
-  abbr ga git aa
+  # abbr ga git aa
+  abbr ga stage
   abbr gb git b -a
-  abbr gcm git cm
+  # abbr gcm git cm
+  abbr gcm commit
   abbr gco git co
   abbr gd git diff
   abbr gg go get GITHUB_URL
   abbr goo cd ~/.go/
   abbr gma git aa; and git cm
   abbr gmac git aa; git cm
-  abbr gp git push
-  abbr gpl git pull
+  # abbr gp git push
+  abbr gp push
+  # abbr gpl git pull
+  abbr gs state
+  # abbr gs git status
+  abbr gcs show
+  abbr gpl pull
   abbr gems gem query --local
-  abbr lg lazygit
-  abbr gs git status
   abbr npms npm list -g --depth=0
   abbr op open .
   abbr opa open -a APP_NAME
