@@ -6,6 +6,7 @@ function setup --description 'defines abbreviations'
   abbr brews brew leaves
   abbr casks brew list --cask
   abbr cl clear
+  abbr cma commit-all
   abbr clone git clone
   abbr co code
   abbr coo code .
