@@ -10,7 +10,7 @@ set -x -g EXA_COLORS "gm=33;1"
 set -x -g TERM "xterm-256color"
 
 # Prompt mods
-set fish_color_autosuggestion 555 brblack
+set fish_color_autosuggestion black
 set fish_color_cancel -r
 set fish_color_command --bold
 set fish_color_comment red
