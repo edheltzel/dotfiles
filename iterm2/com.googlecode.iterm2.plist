@@ -1815,6 +1815,8 @@
 	<true/>
 	<key>DoubleClickPerformsSmartSelection</key>
 	<true/>
+	<key>EnableAPIServer</key>
+	<string>1</string>
 	<key>EnableDivisionView</key>
 	<true/>
 	<key>GlobalKeyMap</key>
