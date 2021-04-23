@@ -1,15 +1,15 @@
 [cmd_duration]
 min_time = 4
 [git_branch]
-symbol = " "
+symbol = "שׂ "
 [git_status]
 conflicted = "[ﲅ ](fg:red bg:bright-black)"
-ahead = "[ﲗ×${count} ](bright-white)"
-behind = "[ﲔ ×${count} ](bright-white)"
-diverged = "[  ×${ahead_count}  ×${behind_count} ](bg:bright-black)"
+ahead = "[×${count} ](bright-white)"
+behind = "[×${count} ](bright-white)"
+diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
 untracked = "️[ ×${count} ](fg:215)"
 stashed = " "
-modified = "[ ×${count} ](bright-yellow)"
+modified = "[ ×${count} ](bright-yellow)"
 staged = "[螺×${count} ](bright-green)"
 deleted = "[裸×${count} ](bright-red )"
 renamed = "[ ×${count} ](fg:214)"
