@@ -162,7 +162,6 @@ cask 'typora'
 cask 'visual-studio-code-insiders'
 cask 'iina'
 cask 'clipgrab'
-cask 'spotify'
 cask 'sip'
 
 mas 'Affinity Designer', id: 824171161
