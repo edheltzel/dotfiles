@@ -9,7 +9,7 @@ function setup --description 'defines abbreviations'
   abbr cma commit-all
   abbr clone git clone
   abbr co code
-  abbr coo code .
+  abbr coo code -r .
   abbr del trash
   abbr dls ~/Downloads/
   # abbr ga git aa
