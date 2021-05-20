@@ -4,9 +4,9 @@ set -x --global EDITOR code
 set -x --global VOL xxx
 
 # GOLANG configurations
-set -x GOPATH ~/.go
+set -x GOPATH $HOME/.go
 # add the go bin path to be able to execute our programs
-set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
+set -x PATH $PATH $GOPATH/bin
 
 # fzf and fd helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"
