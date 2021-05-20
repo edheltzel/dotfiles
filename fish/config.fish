@@ -33,4 +33,3 @@ fish_vi_key_bindings
 # Homebrew Ruby
 set -g fish_user_paths "/opt/homebrew/opt/ruby/bin" $fish_user_paths
 set -g fish_user_paths $HOME/.gem/ruby/3.0.0/bin $fish_user_paths
-set -g fish_user_paths  $HOME/.fig/bin $fish_user_paths

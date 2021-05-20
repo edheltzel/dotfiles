@@ -5,7 +5,6 @@ set -x --global VOL xxx
 
 # GOLANG configurations
 set -x GOPATH ~/.go
-
 # add the go bin path to be able to execute our programs
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 
