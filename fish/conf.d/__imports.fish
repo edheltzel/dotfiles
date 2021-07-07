@@ -1,7 +1,5 @@
 # Source Colors
 source ~/.config/fish/conf.d/_colors.fish
-# Source Exports
-source ~/.config/fish/conf.d/_exports.fish
 
 # Source GRC
 # https://github.com/oh-my-fish/plugin-grc/issues/20#issue-296031557

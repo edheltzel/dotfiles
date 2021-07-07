@@ -22,6 +22,22 @@ set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 # openssl to path
 set -g fish_user_paths "/opt/homebrew/opt/openssl@1.1/bin" $fish_user_paths
 
+# Homebrew Ruby
+set -g fish_user_paths "/opt/homebrew/opt/ruby/bin" $fish_user_paths
+set -g fish_user_paths $HOME/.gem/ruby/3.0.0/bin $fish_user_paths
+
+# GOLANG configurations
+set -x GOPATH $HOME/.go
+# add the go bin path to be able to execute our programs
+set -x PATH $PATH $GOPATH/bin
+
+# Rust
+set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
+
+# fzf and fd helpers for NeoVim
+set -x FZF_DEFAULT_COMMAND "fd --type f"
+set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+
 # Custom sourcing of colors, exports, grc, multi-function fish files
 source ~/.config/fish/conf.d/__imports.fish
 
@@ -31,6 +47,7 @@ starship init fish | source
 # Vim Mode
 fish_vi_key_bindings
 
-# Homebrew Ruby
-set -g fish_user_paths "/opt/homebrew/opt/ruby/bin" $fish_user_paths
-set -g fish_user_paths $HOME/.gem/ruby/3.0.0/bin $fish_user_paths
+#set Visual Studio Code as default editor use code, code-insiders, subl or vim
+set -x --global EDITOR code
+#set primary volume for workstation
+set -x --global VOL xxx
