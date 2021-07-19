@@ -1,1 +1,13 @@
-yarn global add.list
+@vue/cli
+@11ty/eleventy
+generator-code
+gulp-cli
+imagemin-cli
+lite-server
+neovim
+npm-check
+parcel-bundler
+parcel
+prettier
+vsce
+yo

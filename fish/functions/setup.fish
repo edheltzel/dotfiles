@@ -32,17 +32,16 @@ function setup --description 'defines abbreviations'
   abbr gpl pull
   abbr gems gem query --local
   abbr npms npm list -g --depth=0
+  abbr ns npm start
   abbr op open .
   abbr opa open -a APP_NAME
   abbr sdel rm -rf
+  abbr siz du -khsc
+  abbr sp speedtest
   abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
-  abbr siz du -khsc
   abbr tkill tmux kill-session -t
-  abbr sp speedtest
   abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
-  abbr yarns yarn global list
   abbr zpurge z --clean
-  abbr ys yarn start
 end

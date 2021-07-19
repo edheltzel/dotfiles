@@ -87,7 +87,6 @@ This folder is a collection of the programs and utilities I use. The lists can e
 - `npm isntall -g.list`
 - `pip install.list`
 - `pip3 install.list`
-- `yarn global add.list`
 
 #### Repos
 
