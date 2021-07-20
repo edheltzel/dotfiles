@@ -44,8 +44,6 @@ source ~/.config/fish/conf.d/__imports.fish
 # Start Starship Prompt
 starship init fish | source
 
-# Vim Mode
-fish_vi_key_bindings
 
 #set Visual Studio Code as default editor use code, code-insiders, subl or vim
 set -x --global EDITOR code
