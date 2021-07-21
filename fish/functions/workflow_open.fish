@@ -7,3 +7,8 @@ end
 function oo --description 'alias oo=open .'
 	open . $argv;
 end
+
+# Defined in - @ line 0
+function oa --description 'Open App'
+	open -a $argv;
+end
