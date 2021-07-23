@@ -203,11 +203,12 @@ VSCode is my default editor.
 
 ### Node development
 
-Auto Node Version switching for Node development, takes advantage of [NVM](https://github.com/nvm-sh/nvm) for managing Node versions and using two Fish plugins, [edc/bass](https://github.com/edc/bass) and [fish-nvm](https://github.com/FabioAntunes/fish-nvm). This workflow supports both `.nvmrc` and `.node-version` files.
+Node Version switching for Node development, takes advantage of [fnm](https://github.com/Schniz/fnm) for managing Node versions, which supports both `.nvmrc` and `.node-version` files.
 
-- Install NVM by using the [install script](https://github.com/nvm-sh/nvm#installing-and-updating)
-- BASS allows the use of utilities written for bash
-- Fish-AVN handles auto switching and reading either `.nvmrc` or `.node-version`
+- Install happens in the `Brewfile` by running `brew install fnm`
+- **For Completions**
+  - run `fnm completions --shell fish`
+- make sure you run the `./fish/./setup.sh` to symlink the `fnm.fish` file in `~/.config/fish/conf.d`
 
 #### Special Thanks
 
