@@ -15,34 +15,27 @@ function pubkey
 end
 
 # Often used shortcuts/aliases for Network
-	alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
-	alias localip="ipconfig getifaddr en0" #internal network IP
-	alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
+alias localip="ipconfig getifaddr en0" #internal network IP
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
 # Often used shortcuts/aliases for View HTTP traffic
-	alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-	alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# Often used shortcuts/aliases for Docker
-function dcons; docker container ls --all; end
-function dc; docker-compose; end
-function dcrun; docker-compose run --rm; end
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Apps/VMs/Docker
-function vb --description 'vb=VBoxManage'
-  command VBoxManage
-end
-
-# eleventy
-function 11ty --description 'alias 11ty=elevety'
-  command eleventy
-end
+alias dcons="docker container ls --all"
+alias dc="docker-compose"
+alias dcrun="docker-compose run --rm"
+alias vb="VBoxManage"
 
 # Editors
-function vim; command nvim; end
-function mux; command tmux; end
-#function code; command code-insiders; end
+#alias code="code-insiders"
+alias vim="nvim"
+alias mux="tmux"
 
-# Python
-#function pip; command pip3; end
-function python; command python3; end
+# Language Support
+# eleventy
+alias 11ty="eleventy"
+alias python="python3"
+#alias pip="pip3"
