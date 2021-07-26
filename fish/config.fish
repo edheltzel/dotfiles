@@ -39,13 +39,13 @@ set -x FZF_DEFAULT_COMMAND "fd --type f"
 set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
 # Custom sourcing of colors, exports, grc, multi-function fish files
-source ~/.config/fish/conf.d/__imports.fish
+source ~/.config/fish/conf.d/__exports.fish
 
 # Start Starship Prompt
 starship init fish | source
 
 
 #set Visual Studio Code as default editor use code, code-insiders, subl or vim
-set -x --global EDITOR code
+set -x --global EDITOR nvim
 #set primary volume for workstation
 set -x --global VOL xxx
