@@ -29,6 +29,7 @@ function setup --description 'defines abbreviations'
   abbr gs state
   # abbr gs git status
   abbr gcs show
+  abbr --add 'ghw' 'gh repo view --web'
   abbr gpl pull
   abbr gems gem query --local
   abbr npms npm list -g --depth=0
