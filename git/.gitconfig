@@ -114,8 +114,10 @@
   rf  = reflog
 
   unstage  = reset HEAD --
-  uncommit = reset --soft HEAD~
-
+  uncommit = reset --soft HEAD~1
+  undo = reset --soft HEAD~1
+  delete = reset --hard HEAD~1
+  trash = reset --hard HEAD~1
   #squashes
   sq = "!f() { git rebase -i HEAD~$1; }; f"
 
@@ -149,8 +151,8 @@
   ss = status
   v  = log --oneline --decorate --all --graph --simplify-by-decoration
   va = log --oneline --decorate --all --graph
-  l  = "!f() { git log $1 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit;};f"
-
+  logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   #show tracked branches
   tracked = "!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d"
 
@@ -162,7 +164,13 @@
   r   = reset
   rhh = reset HEAD --hard
 
-  logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
+last = log -1 HEAD
+latest = show --name-only --oneline HEAD
+down = pull --rebase origin master
+up = push -u origin master
+save = "!git add -A; git commit ."
+uptags = push --follow-tags
+downtags = fetch --tags
 
 [push]
   default    = matching
