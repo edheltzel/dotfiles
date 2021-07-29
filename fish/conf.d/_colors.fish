@@ -10,7 +10,7 @@ set -x -g EXA_COLORS "gm=33;1"
 set -x -g TERM "xterm-256color"
 
 # Prompt mods
-set fish_color_autosuggestion black
+set fish_color_autosuggestion 3f4964
 set fish_color_cancel -r
 set fish_color_command --bold
 set fish_color_comment red
@@ -36,4 +36,4 @@ set fish_color_valid_path --underline
 set fish_pager_color_completion
 set fish_pager_color_description B3A06D yellow
 set fish_pager_color_prefix white --bold --underline
-set fish_pager_color_progress brwhite --background=cyan
+set fish_pager_color_progress brwhite --background=blue
