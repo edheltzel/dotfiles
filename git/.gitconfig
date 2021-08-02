@@ -210,3 +210,7 @@ downtags = fetch --tags
 
 [init]
   defaultBranch = master
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /Users/ed/Library/Preferences/netlify/helper/git-config

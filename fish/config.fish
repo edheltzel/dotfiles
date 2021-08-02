@@ -51,3 +51,6 @@ starship init fish | source
 set -x --global EDITOR nvim
 #set primary volume for workstation
 set -x --global VOL xxx
+
+# The next line updates PATH for Netlify's Git Credential Helper.
+test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc'
