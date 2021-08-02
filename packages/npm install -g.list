@@ -5,6 +5,7 @@ gulp-cli
 imagemin-cli
 lite-server
 neovim
+netlify-cli
 npm-check
 parcel-bundler
 parcel
