@@ -10,4 +10,4 @@ oh-my-fish/plugin-rustup
 laughedelic/fish_logo
 oh-my-fish/plugin-osx
 edc/bass
-FabioAntunes/fish-nvm
+jorgebucaran/nvm.fish
