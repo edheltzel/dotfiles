@@ -22,6 +22,7 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 # Often used shortcuts/aliases for View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias htop="btm"
 
 # Apps/VMs/Docker
 alias dcons="docker container ls --all"
@@ -31,7 +32,7 @@ alias vb="VBoxManage"
 
 # Editors
 #alias code="code-insiders"
-alias vim="nvim"
+alias vim="lvim"
 alias mux="tmux"
 
 # Language Support
