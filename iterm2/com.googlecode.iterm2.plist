@@ -1834,6 +1834,28 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x5c-0x100000-0x2a</key>
+		<dict>
+			<key>Action</key>
+			<integer>28</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>2B92FC0A-91A8-4A90-A094-F393B13BF08B</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0x7c-0x120000-0x2a</key>
+		<dict>
+			<key>Action</key>
+			<integer>29</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>2B92FC0A-91A8-4A90-A094-F393B13BF08B</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0x7f-0x100000</key>
 		<dict>
 			<key>Action</key>
