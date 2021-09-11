@@ -1,4 +1,3 @@
-re3turn/fish-last-job-id
 fishpkg/fish-menu
 jorgebucaran/fish-bax
 oh-my-fish/plugin-brew
@@ -11,3 +10,4 @@ joseluisq/gitnow
 edc/bass
 jorgebucaran/nvm.fish
 jorgebucaran/fisher
+re3turn/fish-last-job-id
