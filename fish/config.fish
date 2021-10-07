@@ -20,7 +20,7 @@ set -g fish_user_paths "/opt/homebrew/opt/openssl@1.1/bin" $fish_user_paths
 
 # Homebrew Ruby - rbenv
 status --is-interactive; and source (rbenv init -|psub)
-set -g fish_user_paths $HOME/.local/share/gem/ruby/3.0.0/bin $fish_user_paths
+# set -g fish_user_paths $HOME/.local/share/gem/ruby/3.0.0/bin $fish_user_paths
 set -g fish_user_paths $HOME/.gem/ruby/3.0.2/bin $fish_user_paths
 #set -g fish_user_paths "/opt/homebrew/opt/ruby/bin" $fish_user_paths
 
