@@ -99,7 +99,6 @@ brew 'watchexec'
 brew 'wget'
 brew 'webp'
 brew 'unzip'
-brew 'yadm'
 brew 'z'
 brew 'zip'
 
