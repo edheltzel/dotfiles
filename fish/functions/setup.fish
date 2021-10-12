@@ -6,7 +6,7 @@ function setup --description 'defines abbreviations'
   abbr brews brew leaves
   abbr casks brew list --cask
   abbr cl clear
-  abbr cma commit-all
+  abbr gcma commit-all
   abbr clone git clone
   abbr co code
   abbr coo code -r .
@@ -32,5 +32,4 @@ function setup --description 'defines abbreviations'
   abbr nmux tmux new -s "base"
   abbr zpurge z --clean
   abbr mm merge master
-  abbr cma commit-all
 end
