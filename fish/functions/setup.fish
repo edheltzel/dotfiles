@@ -31,5 +31,6 @@ function setup --description 'defines abbreviations'
   abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
   abbr zpurge z --clean
+  abbr cma commit-all
   abbr mm merge master
 end
