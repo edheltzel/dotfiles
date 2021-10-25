@@ -2,5 +2,16 @@
   "workbench.colorCustomizations":{
     "titleBar.activeForeground": "#ffd900",
     "titleBar.inactiveForeground": "#ffd9005d"
-  }
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.vscode": true,
+    ".vscode": true
+  },
+  "explorerExclude.backup": null
 }

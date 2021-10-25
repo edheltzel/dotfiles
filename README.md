@@ -193,22 +193,40 @@ I'd suggest you take a look at this configuration - I use NeoVim
 
 VSCode is my default editor.
 
-- I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.
-  - VSCODE has it's own sync options now - so you might want to check that out.
-- Make sure you add `code` and/or `code-insiders` to your Path - run `⌘+⇧+P` type `Shell Command: Install 'code-insiders' command in PATH`
-- **Self Plug**
-  - Try out my VSCode themes
-    - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=edheltzel.edheltzel-onedark-raincoat-theme)
-    - [Better solarized](https://marketplace.visualstudio.com/items?itemName=edheltzel.edheltzel-better-solarized-dark-theme)
+- VSCode has it's own sync options now - it works great for my needs.
+- ~~I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.~~
+
+- Make sure you add `code` and/or `code-insiders` to your PATH 
+- run `⌘+⇧+p` then type `Shell Command: Install 'code-insiders' command in PATH`
+
+    - ![install vscode inside of PATH](_images/install-vscode-in-path.png)
+- Notable Extensions I Use:
+    - keybindings: [VSpaceCode](https://vspacecode.github.io/)
+    - project management: [Git Project Manager](https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager)
+    - remote developement: [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+    - api client: [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+    - **self plug** [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
+    - **self plug** [Better Solarized](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme)
+    - 
 
 ### Node development
 
 Node Version switching for Node development, takes advantage of [fnm](https://github.com/Schniz/fnm) for managing Node versions, which supports both `.nvmrc` and `.node-version` files.
 
-- Install happens in the `Brewfile` by running `brew install fnm`
-- **For Completions**
-  - run `fnm completions --shell fish`
-- make sure you run the `./fish/./setup.sh` to symlink the `fnm.fish` file in `~/.config/fish/conf.d`
+- Install happens in the `Brewfile` by running 
+```shell 
+brew install fnm
+```
+
+For Completions run:
+```shell 
+fnm completions --shell fish
+```
+Make sure you run:
+```shell 
+./fish/./setup.sh
+``` 
+This will symlink the `fnm.fish` file in `~/.config/fish/conf.d` _(It might be helpful to `source ~/.config/fish/config.fish`)_
 
 #### Special Thanks
 
