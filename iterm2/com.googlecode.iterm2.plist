@@ -1968,6 +1968,8 @@
 	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<false/>
 	<key>HideTab</key>
 	<true/>
 	<key>Hotkey</key>
@@ -5087,13 +5089,15 @@
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.01</real>
 	<key>StatusBarPosition</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>StretchTabsToFillBar</key>
 	<true/>
 	<key>SwitchPaneModifier</key>
 	<integer>5</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
+	<key>TabViewType</key>
+	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
 	<true/>
 	<key>ThreeFingerEmulates</key>
