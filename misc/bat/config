@@ -8,10 +8,10 @@
 
 # Enable this to use italic text on the terminal. This is not supported on all
 # terminal emulators (like tmux, by default):
-#--italic-text=always
+--italic-text=always
 
 # Uncomment the following line to disable automatic paging:
-#--paging=never
+--paging=never
 
 # Uncomment the following line if you are using less version >= 551 and want to
 # enable mouse scrolling support in `bat` when running inside tmux. This might
