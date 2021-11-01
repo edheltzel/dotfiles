@@ -171,12 +171,12 @@ mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'Icon Slate', id: 439697913
 mas 'Divvy', id: 413857545
-mas 'Flowchart Designer', id: 1107185578
 mas 'Just Focus', id: 1142151959
 mas 'Gifski', id: 1351639930
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
+mas 'Todoist', id: 585829637
 mas 'Pages', id: 409201541
-mas 'Paletter 3', id: 1494948845
-#mas 'Xcode', id: 497799835
 mas 'WebPonize', id: 1526039365
+mas 'Amphetamine', id: 937984704
+#mas 'Xcode', id: 497799835
