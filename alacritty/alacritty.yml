@@ -72,7 +72,7 @@ live_config_reload: true
 
 mouse:
 # URL launcher
-  url:
+  hints:
     modifiers: Alt
 
 # Key bindings
