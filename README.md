@@ -4,7 +4,7 @@
 
 An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
 
-My playground revolves around the use of, Go, JavaScript + NodeJS, CSS Wizadary with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
+My playground revolves around the use of, Go, JavaScript + NodeJS, CSS Wizardry with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
 
 
 # TODO
@@ -55,7 +55,7 @@ git clone git@github.com:edheltzel/dotfiles.git
 ```
 
 4. Run the `bootstrap.sh` script
-   1. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything
+   1. Alternatively, only run the `setup.sh` scripts in specific subfolder if you don't need everything
 5. Install [Fisher](https://github.com/jorgebucaran/fisher) and Plugins -- _Optional_
 
 ```bash
@@ -114,7 +114,7 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 
 - setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
 - config.fish - Global fish configuration _(.fishrc)_
-- \_importSources.fish - used to source the `customs` directory: this allows the useage of a single file to have multiple functions.
+- \_importSources.fish - used to source the `customs` directory: this allows the usage of a single file to have multiple functions.
   - \_aliases.fish - Contains all aliases for completions
   - \_colors.fish - Sets the colors for `xterm-256color` and `LS_COLORS`
   - \_exports.fish - sets custom Exports ie: `$EDITOR`
@@ -236,7 +236,7 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 #### Mental Notes
 
       # ====================================================
-      # ===   Mental Notes for my persaonal workflow     ===
+      # ===   Mental Notes for my personal workflow     ===
       # ====================================================
       # Everything below is not for related to any kind of TMUX config - but are crucial
       # for my productivity. Setting them up is REALLY painful, and they are being added
@@ -271,7 +271,7 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
       # such as cmd-j, cmd-left, etc.. , select the option "send hex code" and the
       # enter the hex code which I want to be executed, hence the tmux sequence. So
       # when I press CMD + d in iterm, I send the sequence 0x06 0x76,
-      # which tmux inteprets it as opening a new pane.
+      # which tmux interprets it as opening a new pane.
       # ============================================================================
 
       # ==============================================

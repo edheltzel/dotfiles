@@ -62,14 +62,14 @@
   tool = vscode
 
 [difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+  cmd = code-insiders --wait --diff $LOCAL $REMOTE
 
 [merge]
   tool = vscode
   log  = true
 
 [mergetool "vscode"]
-  cmd = code --wait $MERGED
+  cmd = code-insiders --wait $MERGED
 
 [apply]
   #Detect whitespace errors when applying a patch
