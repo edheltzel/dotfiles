@@ -13,5 +13,9 @@
     "**/.vscode": true,
     ".vscode": true
   },
-  "explorerExclude.backup": null
+  "explorerExclude.backup": null,
+  "cSpell.words": [
+    "fishrc",
+    "repodir"
+  ]
 }

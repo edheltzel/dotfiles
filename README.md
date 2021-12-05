@@ -4,7 +4,7 @@
 
 An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
 
-My playground revolves around the use of, Go, JavaScript + NodeJS, CSS Wizardry with Scss and the soft spot in my ❤️ for [Jekyll](https://jekyllrb.com).
+My playground revolves around my use of – Go, All things JavaScript, CSS Wizardry with Scss, SSG/JAMStack – mainly [11ty](https://www.11ty.dev/), [Hugo](https://gohugo.io/), and I have this soft spot in my ❤️ for the OG [Jekyll](https://jekyllrb.com).
 
 
 # TODO
@@ -25,7 +25,7 @@ output should read:
 ```shell
 System Integrity Protection status: enabled.
 ```
-If you SIP is enabled, then follow the next steps to disable it – Assuming that you know what you're doing, here is how to turn off System Integrity Protection on your Mac.
+If your SIP is enabled, then follow the next steps to disable it – Assuming that you know what you're doing, here is how to turn off System Integrity Protection on your Mac.
 
 1 Turn off your Mac (Apple > Shut Down).
 2 Hold down Command-R and press the Power button. Keep holding Command-R until the Apple logo appears.
@@ -59,7 +59,7 @@ git clone git@github.com:edheltzel/dotfiles.git
 5. Install [Fisher](https://github.com/jorgebucaran/fisher) and Plugins -- _Optional_
 
 ```bash
-curl -Lo curl -L ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher
 ```
 
@@ -84,13 +84,13 @@ This folder is a collection of the programs and utilities I use. The lists can e
 
 - `Brewfile`
 - `gem install.list`
-- `npm isntall -g.list`
+- `npm install -g.list`
 - `pip install.list`
 - `pip3 install.list`
 
 #### Repos
 
-This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. The existing lists can easily be edited or replaced by custom lists. **note:** for each file you have a new folder will be created based on the file'sname.
+This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. The existing lists can easily be edited or replaced by custom lists. **note:** for each file you have a new folder will be created based on the file's name.
 
 ## Contents
 
@@ -105,10 +105,11 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 
 ### Fonts (fonts/)
 
-- setup.sh - Installs Fonts
+- ~~setup.sh - Installs Fonts~~
 - ~~FiraCode.otf - for my text editor~~
 
-> **Note:** I have moved to using Cask to install fonts via [Nerd Fonts](https://www.nerdfonts.com/)
+> **Note:** I have moved to using Brew Cask to install fonts via [Nerd Fonts](https://www.nerdfonts.com/)
+> **FireCode** for my text editor
 
 ### Fish (fish/)
 
@@ -127,16 +128,35 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
   - abbrex.fish - Utility for expanding abbreviations in fish-scripts
   - emptytrash.fish - Empties trash and clears system logs
   - fish_greeting.fish - My personal fish greeting using the full-color fish logo
-  - fish_right_prompt.fish - Left Blank on purpse
+  - fish_right_prompt.fish - Left Blank on purpose
   - fish_prompt.fish Using [Starship - The cross-shell prompt for astronauts](https://starship.rs/)
-    - check out `prompt> startship.toml` to modifiy the starship prompt
+    - check out `prompt> startship.toml` to modify the starship prompt
   - forrepos.fish - Executes a passed command for all repos in `~/Projects`
   - pubkey.fish - Copies the public key to the clipboard
   - repo.fish - Finds a repository in `~/Projects` and jumps to it **NOTE:currently using `Z`**
   - repodir.fish - Finds a repository in `~/Projects` and prints its path
   - setup.fish - Initial setup for a new fish installation,
     contains abbreviations
-  - For updating - using [Topgrade by r-darwish](https://github.com/r-darwish/topgrade) -- see `prompt > topgrade.tmol` for config options.
+  - speedtest.fish - **macOS ONLY** leverages the built-in `networkQuality` cli tool - just a glorified alias but works with all the flag options
+    - run `speedtest`
+
+```shell
+==== SUMMARY ====                                                                                         
+Upload capacity: 125.773 Mbps
+Download capacity: 540.165 Mbps
+Upload flows: 20
+Download flows: 20
+Responsiveness: Medium (218 RPM)
+Base RTT: 121
+Start: 12/5/21, 7:42:03 AM
+End: 12/5/21, 7:42:20 AM
+OS Version: Version 12.0.1 (Build 21A559)
+```
+
+#### Update All The Things
+
+- using [Topgrade by r-darwish](https://github.com/r-darwish/topgrade) -- see `prompt > topgrade.tmol` for config options.
+- a fish function exist `upp` to check current global node version and to run the `topgrade` command
 
 ### Git (git/)
 
@@ -166,9 +186,10 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 
 - setup.sh - Symlinks all the associated rc and other dot files to your `~/` _(home directory)_
 - Special Mentions:
-  - `.tigrc` - configured with pretty colors and layout for git diff and logs
+  - `.tigrc` - [tig](https://jonas.github.io/tig/) – configured with pretty colors and layout for git diff and logs
   - `.eslintrc` - has specific configuration for my JS workflow
-
+  - `bat/config` - [bat](https://github.com/sharkdp/bat) – a clone of cat with syntax highlighting
+  - 
 ### Packages (packages/)
 
 - setup.sh - Installs the contents of the `.list` files and the Brewfile
@@ -180,34 +201,34 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 
 ### Vim (vim/)
 
-I'd suggest you take a look at this configuration - I use NeoVim
+I'd suggest you take a look at this configuration - I use NeoVim when I need Vim
 
 - setup.sh - Symlinks all vim files to `~/.config/nvim`
 
 ### Helper Scripts (scripts/)
 
-- functions.sh - Contains helper functions for symlinking files and printing
+- functions.sh - Contains helper functions for symlinked files and printing
   progress messages
 
-### VSCODE ~~(vscode/)~~
+### VSCODE (vscode/)
 
-VSCode is my default editor.
+VSCode is my default editor but I also use NeoVim.
 
-- VSCode has it's own sync options now - it works great for my needs.
-- ~~I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extention to keep my configuration in a gist.~~
+- `markdown-pdf-vue.css` - custom styles for markdown to PDF/HTML exporting
+- ~~I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension to keep my configuration in a gist.~~
+- VSCode has a native syncing option using your Github account - I'd suggest that for either the stable or insiders
 
 - Make sure you add `code` and/or `code-insiders` to your PATH 
 - run `⌘+⇧+p` then type `Shell Command: Install 'code-insiders' command in PATH`
 
     - ![install vscode inside of PATH](_images/install-vscode-in-path.png)
 - Notable Extensions I Use:
-    - keybindings: [VSpaceCode](https://vspacecode.github.io/)
-    - project management: [Git Project Manager](https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager)
-    - remote developement: [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-    - api client: [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-    - **self plug** [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
-    - **self plug** [Better Solarized](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme)
-    - 
+    - Keybindings: [VSpaceCode](https://vspacecode.github.io/)
+    - Project management: [Git Project Manager](https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager)
+    - Remote development: [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+    - API client: [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+    - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme) 👈 self plug
+    - [Better Solarized](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme) 👈 self plug
 
 ### Node development
 
