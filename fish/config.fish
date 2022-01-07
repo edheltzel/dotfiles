@@ -50,3 +50,5 @@ set -x --global VOL xxx
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc'
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
