@@ -24,7 +24,7 @@ function setup --description 'defines abbreviations'
   abbr opa open -a APP_NAME
   abbr sdel rm -rf
   abbr siz du -khsc
-  abbr sp speedtest
+  abbr sp speedtest -s
   abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
   abbr tkill tmux kill-session -t
