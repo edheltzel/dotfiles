@@ -172,7 +172,6 @@ cask 'vanilla'
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'Icon Slate', id: 439697913
-mas 'Divvy', id: 413857545
 mas 'Magnet', id: 441258766
 mas 'Just Focus', id: 1142151959
 mas 'Gifski', id: 1351639930
