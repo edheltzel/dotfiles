@@ -32,7 +32,8 @@ alias vb="VBoxManage"
 
 # Editors
 alias code="code-insiders"
-alias vim="nvim"
+# alias vim="nvim"
+alias vim="/Users/ed/.local/bin/lvim"
 alias mux="tmux"
 
 # Language Support

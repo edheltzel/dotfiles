@@ -9,11 +9,11 @@ SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
 CONFIGDEST="$(realpath ~/.config/nvim)"
 
-info "Setting up LunarCode..."
+info "Setting up LunarVim..."
 
-substep_info "Installing LunarCode..."
-curl -sLf https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/utils/install.sh | bash
+substep_info "Installing LunarVim..."
+bash (curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh | psub)
 
 clear_broken_symlinks "$CONFIGDEST"
 
-success "Finished configuring LunarCode. Make sure you run :UpdateRemotePlugins to update plugins"
+success "Finished configuring LunarVim. `vim` is an alias if `lvim`"
