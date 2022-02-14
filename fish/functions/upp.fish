@@ -5,6 +5,6 @@ function upp --description 'work around for nvm to work with topgrade'
   and topgrade;
   echo; and echo -n '―― ';
   echo -n (date "+%H:%M:%S");
-  echo -n ' - Brew - Cleanup ――――――――――――――――――――――――――――――――――――――――――――――――――――――';
+  echo ' - Brew - Cleanup ――――――――――――――――――――――――――――――――――――――――――――――――――――――';
   and brew cleanup --prune=all
 end
