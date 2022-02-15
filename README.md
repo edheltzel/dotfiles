@@ -15,12 +15,12 @@ My playground revolves around my use of – Go, All things JavaScript, CSS Wizar
 ## Usage and the Install
 
 **Caveats**
-If you are on any version of macOS that uses AFPS, you'll need to disable the SIP. 
-First check to see if SIP is enabled or not. 
-```shell 
+If you are on any version of macOS that uses AFPS, you'll need to disable the SIP.
+First check to see if SIP is enabled or not.
+```shell
 csrutil status
 ```
-output should read: 
+output should read:
 
 ```shell
 System Integrity Protection status: enabled.
@@ -33,7 +33,7 @@ If your SIP is enabled, then follow the next steps to disable it – Assuming th
 4 Choose Utilities > Terminal.
 5 Enter csrutil disable.
 6 Enter reboot.
-7 `csrutil status` -> should read `System Integrity Protection status: disabled.` 
+7 `csrutil status` -> should read `System Integrity Protection status: disabled.`
 
 
 1. Restore your safely backed up ssh keys to `~/.ssh/`
@@ -141,7 +141,7 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
     - run `speedtest`
 
 ```shell
-==== SUMMARY ====                                                                                         
+==== SUMMARY ====
 Upload capacity: 125.773 Mbps
 Download capacity: 540.165 Mbps
 Upload flows: 20
@@ -163,9 +163,10 @@ OS Version: Version 12.0.1 (Build 21A559)
 - setup.sh - Symlinks all git files to `~/`
 - .gitignore_global - Contains global gitignores, such as OS-specific files and
   several compiled files
-- .gitconfig - Sets several global Git variables - also include GPG signing
+- .gitconfig - Sets several global Git variables - also include signing
 
   - _(options)_: GPG signing is set to `TRUE` by default
+  [renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
 
     - <img alt="look ma' verified" src="https://rdmcrew.d.pr/f11jZt+" width="500"/>
     - If you need help setting this up GPG:
@@ -189,7 +190,7 @@ OS Version: Version 12.0.1 (Build 21A559)
   - `.tigrc` - [tig](https://jonas.github.io/tig/) – configured with pretty colors and layout for git diff and logs
   - `.eslintrc` - has specific configuration for my JS workflow
   - `bat/config` - [bat](https://github.com/sharkdp/bat) – a clone of cat with syntax highlighting
-  - 
+  -
 ### Packages (packages/)
 
 - setup.sh - Installs the contents of the `.list` files and the Brewfile
@@ -218,7 +219,7 @@ VSCode is my default editor but I also use NeoVim.
 - ~~I use the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension to keep my configuration in a gist.~~
 - VSCode has a native syncing option using your Github account - I'd suggest that for either the stable or insiders
 
-- Make sure you add `code` and/or `code-insiders` to your PATH 
+- Make sure you add `code` and/or `code-insiders` to your PATH
 - run `⌘+⇧+p` then type `Shell Command: Install 'code-insiders' command in PATH`
 
     - ![install vscode inside of PATH](_images/install-vscode-in-path.png)
@@ -234,19 +235,19 @@ VSCode is my default editor but I also use NeoVim.
 
 Node Version switching for Node development, takes advantage of [fnm](https://github.com/Schniz/fnm) for managing Node versions, which supports both `.nvmrc` and `.node-version` files.
 
-- Install happens in the `Brewfile` by running 
-```shell 
+- Install happens in the `Brewfile` by running
+```shell
 brew install fnm
 ```
 
 For Completions run:
-```shell 
+```shell
 fnm completions --shell fish
 ```
 Make sure you run:
-```shell 
+```shell
 ./fish/./setup.sh
-``` 
+```
 This will symlink the `fnm.fish` file in `~/.config/fish/conf.d` _(It might be helpful to `source ~/.config/fish/config.fish`)_
 
 #### Special Thanks
