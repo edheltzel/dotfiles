@@ -37,6 +37,5 @@ alias vim="nvim"
 
 # Language Support
 # eleventy
-alias 11ty="eleventy"
 alias python="python3"
 #alias pip="pip3"
