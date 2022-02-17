@@ -4,6 +4,7 @@ generator-code
 gulp-cli
 imagemin-cli
 lite-server
+serve
 neovim
 netlify-cli
 npm-check
