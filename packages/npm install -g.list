@@ -11,3 +11,9 @@ npm-check
 prettier
 vsce
 yo
+bash-language-server
+dockerfile-language-server-nodejs
+yaml-language-server
+typescript
+typescript-language-server
+vscode-langservers-extracted
