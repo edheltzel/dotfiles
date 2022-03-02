@@ -8,6 +8,7 @@ function setup --description 'defines abbreviations'
   abbr cl clear
   abbr cma commit-all
   abbr clone git clone
+  abbr config ~/.config/
   abbr co code
   abbr coo code -r .
   abbr del trash

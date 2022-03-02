@@ -13,13 +13,13 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: FiraCode Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Regular
   bold:
-    family: FiraCode Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Bold
   italic:
-    family: FiraCode Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Italic
   size: 18
 draw_bold_text_with_bright_colors: true
@@ -36,10 +36,12 @@ colors:
   cursor:
     text: '#e3eefe'
     cursor: '#fd2e96'
+
   # Selection colors
   selection:
     text: '#0c0935'
     background: '#20f6bb'
+
   # Normal colors
   normal:
     black: '#303742'
@@ -50,6 +52,7 @@ colors:
     magenta: '#ea00d9'
     cyan: '#af79fe'
     white: '#f0f5ff'
+
   # Bright colors
   bright:
     black: '#3a1b75'
@@ -61,7 +64,6 @@ colors:
     cyan: '#3789fe'
     white: '#e3eefe'
 
-
 # Cursor style
 cursor:
   style: Block
@@ -71,7 +73,7 @@ cursor:
 live_config_reload: true
 
 mouse:
-# URL launcher
+  # URL launcher
   hints:
     modifiers: Alt
 
@@ -92,54 +94,53 @@ key_bindings:
   # - { key: W,        mods: Control|Shift,   action: Quit             }
   # - { key: C,        mods: Control|Shift,   action: Copy             }
   # - { key: V,        mods: Control|Shift,   action: Paste            }
-  - { key: PageUp,   mods:   Shift, mode: ~Alt, action: ScrollPageUp   }
-  - { key: PageDown, mods:   Shift, mode: ~Alt, action: ScrollPageDown }
-  - { key: Home,     mods:   Shift, mode: ~Alt, action: ScrollToTop    }
-  - { key: End,      mods:   Shift, mode: ~Alt, action: ScrollToBottom }
-  - { key: Paste,    action: Paste  }
-  - { key: Copy,     action: Copy   }
-  - { key: Insert,   mods: Shift,           action: PasteSelection   }
+  - { key: PageUp, mods: Shift, mode: ~Alt, action: ScrollPageUp }
+  - { key: PageDown, mods: Shift, mode: ~Alt, action: ScrollPageDown }
+  - { key: Home, mods: Shift, mode: ~Alt, action: ScrollToTop }
+  - { key: End, mods: Shift, mode: ~Alt, action: ScrollToBottom }
+  - { key: Paste, action: Paste }
+  - { key: Copy, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
   # (macOS)
-  - { key: Key0,     mods: Command,         action: ResetFontSize    }
-  - { key: H,        mods: Command,         action: Hide             }
-  - { key: Equals,   mods: Command,         action: IncreaseFontSize }
+  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: H, mods: Command, action: Hide }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
   #- { key: Add,      mods: Command,         action: IncreaseFontSize }
   #- { key: Subtract, mods: Command,         action: DecreaseFontSize }
-  - { key: Minus,    mods: Command,         action: DecreaseFontSize }
-  - { key: N,        mods: Command,         action: SpawnNewInstance }
-  - { key: N,        mods: Command|Shift,   action: SpawnNewInstance }
-  - { key: V,        mods: Command,         action: Paste            }
-  - { key: C,        mods: Command,         action: Copy             }
-  - { key: Escape,   mods: Command,         action: Hide             }
-  - { key: M,        mods: Command,         action: Minimize         }
-  - { key: Q,        mods: Command,         action: Quit             }
-  - { key: W,        mods: Command|Shift,   action: Quit             }
-  - { key: F,        mods: Command|Control, action: ToggleFullscreen }
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy }
+  - { key: Escape, mods: Command, action: Hide }
+  - { key: M, mods: Command, action: Minimize }
+  - { key: Q, mods: Command, action: Quit }
+  - { key: W, mods: Command|Shift, action: Quit }
+  - { key: F, mods: Command|Control, action: ToggleFullscreen }
 
-# used with tmux - hex code makes alacritty use iterm2 like key bindings for tabs and split screens
-# please note the .tmux.conf supports these hex code by unbinding the default
-  - { key: D,        mods: Command,       chars: "\x06\x76" }
-  - { key: D,        mods: Command|Shift, chars: "\x06\x73" }
-  - { key: W,        mods: Command,       chars: "\x06\x78" }
-  - { key: LBracket, mods: Command,       chars: "\x06\x68" }
+  # used with tmux - hex code makes alacritty use iterm2 like key bindings for tabs and split screens
+  # please note the .tmux.conf supports these hex code by unbinding the default
+  - { key: D, mods: Command, chars: "\x06\x76" }
+  - { key: D, mods: Command|Shift, chars: "\x06\x73" }
+  - { key: W, mods: Command, chars: "\x06\x78" }
+  - { key: LBracket, mods: Command, chars: "\x06\x68" }
   - { key: RBracket, mods: Command|Shift, chars: "\x06\x6a" }
   - { key: LBracket, mods: Command|Shift, chars: "\x06\x6b" }
-  - { key: RBracket, mods: Command,       chars: "\x06\x6c" }
-  - { key: T,        mods: Command,       chars: "\x06\x63" }
-  - { key: Key1,     mods: Command,       chars: "\x06\x31" }
-  - { key: Key2,     mods: Command,       chars: "\x06\x32" }
-  - { key: Key3,     mods: Command,       chars: "\x06\x33" }
-  - { key: Key4,     mods: Command,       chars: "\x06\x34" }
-  - { key: Key5,     mods: Command,       chars: "\x06\x35" }
-  - { key: Key6,     mods: Command,       chars: "\x06\x36" }
-  - { key: Key7,     mods: Command,       chars: "\x06\x37" }
-  - { key: Key8,     mods: Command,       chars: "\x06\x38" }
-  - { key: Key9,     mods: Command,       chars: "\x06\x39" }
-  - { key: Left,     mods: Command,       chars: "\x06\x48" }
-  - { key: Down,     mods: Command,       chars: "\x06\x4a" }
-  - { key: Up,       mods: Command,       chars: "\x06\x4b" }
-  - { key: Right,    mods: Command,       chars: "\x06\x4c" }
-
+  - { key: RBracket, mods: Command, chars: "\x06\x6c" }
+  - { key: T, mods: Command, chars: "\x06\x63" }
+  - { key: Key1, mods: Command, chars: "\x06\x31" }
+  - { key: Key2, mods: Command, chars: "\x06\x32" }
+  - { key: Key3, mods: Command, chars: "\x06\x33" }
+  - { key: Key4, mods: Command, chars: "\x06\x34" }
+  - { key: Key5, mods: Command, chars: "\x06\x35" }
+  - { key: Key6, mods: Command, chars: "\x06\x36" }
+  - { key: Key7, mods: Command, chars: "\x06\x37" }
+  - { key: Key8, mods: Command, chars: "\x06\x38" }
+  - { key: Key9, mods: Command, chars: "\x06\x39" }
+  - { key: Left, mods: Command, chars: "\x06\x48" }
+  - { key: Down, mods: Command, chars: "\x06\x4a" }
+  - { key: Up, mods: Command, chars: "\x06\x4b" }
+  - { key: Right, mods: Command, chars: "\x06\x4c" }
 # Values for `key`:
 #   - `A` -> `Z`
 #   - `F1` -> `F12`

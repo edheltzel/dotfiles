@@ -1,11 +1,8 @@
 {
-  "workbench.colorCustomizations":{
+  "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#ffd900",
     "titleBar.inactiveForeground": "#ffd9005d"
   },
   "explorerExclude.backup": null,
-  "cSpell.words": [
-    "fishrc",
-    "repodir"
-  ]
+  "cSpell.words": ["fishrc", "quickfix", "repodir", "quickfix"]
 }
