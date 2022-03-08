@@ -14,6 +14,7 @@ substep_info "Creating Neovim folders..."
 mkdir -p $DESTINATION
 mkdir -p "$DESTINATION/after/ftplugin"
 mkdir -p "$DESTINATION/lua/"
+mkdir -p "$DESTINATION/lua/config"
 mkdir -p "$DESTINATION/snippets"
 
 find * -name "*.*" | while read fn; do
