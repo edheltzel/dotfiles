@@ -1,0 +1,41 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+EscapePair	nvim/lua/mappings.lua	/^function EscapePair()$/;"	f
+["<S-Tab>"] 	nvim/lua/config/cmp.lua	/^        ["<S-Tab>"] = cmp.mapping(function()$/;"	f
+["<Tab>"] 	nvim/lua/config/cmp.lua	/^        ["<Tab>"] = cmp.mapping(function(fallback)$/;"	f
+["af"] 	nvim/lua/config/treesitter.lua	/^                ["af"] = "@function.outer",$/;"	f
+["if"] 	nvim/lua/config/treesitter.lua	/^                ["if"] = "@function.inner",$/;"	f
+_lazygit_toggle	nvim/lua/config/toggleterm.lua	/^function _lazygit_toggle()$/;"	f
+clear_broken_symlinks	scripts/functions.sh	/^clear_broken_symlinks() {$/;"	f
+close_command 	nvim/lua/config/bufferline.lua	/^        close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"$/;"	f
+coloredEcho	scripts/functions.sh	/^coloredEcho() {$/;"	f
+css_fn 	nvim/lua/config/colorizer.lua	/^  css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn$/;"	f
+custom_filter 	nvim/lua/config/bufferline.lua	/^        custom_filter = function(buf_number)$/;"	f
+diagnostics_indicator 	nvim/lua/config/bufferline.lua	/^        diagnostics_indicator = function(count, level)$/;"	f
+easing_function 	nvim/lua/config/neoscroll.lua	/^    easing_function = nil, -- Default easing function$/;"	f
+error	scripts/functions.sh	/^error() {$/;"	f
+expand 	nvim/lua/config/cmp.lua	/^        expand = function(args)$/;"	f
+get_config	nvim/lua/plugins.lua	/^function get_config(name)$/;"	f
+hsl_fn 	nvim/lua/config/colorizer.lua	/^  hsl_fn = true, -- CSS hsl() and hsla() functions$/;"	f
+info	scripts/functions.sh	/^info() {$/;"	f
+left_mouse_command 	nvim/lua/config/bufferline.lua	/^        left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"$/;"	f
+local feedkey 	nvim/lua/config/cmp.lua	/^local feedkey = function(key, mode)$/;"	f
+local has_words_before 	nvim/lua/config/cmp.lua	/^local has_words_before = function()$/;"	f
+lsp_on_attach 	nvim/lua/config/go.lua	/^    lsp_on_attach = true, -- nil: use on_attach function defined in go\/lsp.lua,$/;"	f
+middle_mouse_command 	nvim/lua/config/bufferline.lua	/^        middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"$/;"	f
+numbers 	nvim/lua/config/bufferline.lua	/^        numbers = function(opts)$/;"	f
+on_close 	nvim/lua/config/zen-mode.lua	/^    on_close = function()$/;"	f
+on_open 	nvim/lua/config/zen-mode.lua	/^    on_open = function(win)$/;"	f
+rgb_fn 	nvim/lua/config/colorizer.lua	/^  rgb_fn = true, -- CSS rgb() and rgba() functions$/;"	f
+right_mouse_command 	nvim/lua/config/bufferline.lua	/^        right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"$/;"	f
+set_fish_shell	fish/setup.sh	/^set_fish_shell() {$/;"	f
+size 	nvim/lua/config/toggleterm.lua	/^  size = function(term)$/;"	f
+substep_error	scripts/functions.sh	/^substep_error() {$/;"	f
+substep_info	scripts/functions.sh	/^substep_info() {$/;"	f
+substep_success	scripts/functions.sh	/^substep_success() {$/;"	f
+success	scripts/functions.sh	/^success() {$/;"	f
+symlink	scripts/functions.sh	/^symlink() {$/;"	f

@@ -16,6 +16,7 @@ o.history = 500 -- Use the 'history' option to set the number of lines from comm
 o.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 o.fileencoding = "utf-8" -- the encoding written to a file
 o.conceallevel = 0 -- so that `` is visible in markdown files
+o.mouse = "a"
 o.number = true -- set numbered lines
 o.relativenumber = true -- set relative numbered lines
 o.cmdheight = 1 -- space for displaying messages/commands
