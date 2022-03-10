@@ -167,7 +167,17 @@ OS Version: Version 12.0.1 (Build 21A559)
 
   - _(options)_: GPG signing is set to `TRUE` by default
   [renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
+  
+  [Generate new key and assign to global git config](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374#:~:text=It%20means%20that%20is%20not,secret%20keys%20available%20in%20GPG.)
 
+  main take away:
+    - `gpg --list-secret-keys --keyid-format=long`
+    - Copy key
+    - set key for your git user
+      - `git config --global user.signingkey <your key>`
+
+
+    git config --global user.signingkey <your key>
     - <img alt="look ma' verified" src="https://rdmcrew.d.pr/f11jZt+" width="500"/>
     - If you need help setting this up GPG:
       - follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s).
