@@ -32,8 +32,8 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-  #editor       = code -w
-  editor       = nvim
+  editor       = code-insiders -w
+  #editor       = nvim
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
