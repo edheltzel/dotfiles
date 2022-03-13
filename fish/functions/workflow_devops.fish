@@ -33,7 +33,7 @@ alias vb="VBoxManage"
 # Editors
 alias code="code-insiders"
 alias mux="tmux"
-# alias vim="nvim"
+alias vim="nvim"
 
 # Language Support
 # eleventy
