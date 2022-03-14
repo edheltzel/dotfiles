@@ -9,5 +9,7 @@ rbenv/fish-rbenv
 oh-my-fish/plugin-rustup
 laughedelic/fish_logo
 oh-my-fish/plugin-osx
+andreiborisov/sponge
 edc/bass
 jorgebucaran/nvm.fish
+jorgebucaran/fish-bax

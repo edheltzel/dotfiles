@@ -1,3 +1,5 @@
+import:
+  - "/Users/ed/.config/alacritty/flightdeck-lunar.yml"
 # Window Customization
 window:
   dimensions:
@@ -23,46 +25,6 @@ font:
     style: Italic
   size: 18
 draw_bold_text_with_bright_colors: true
-# Colors (CyberPunk2077 Dark RDMFlavor)
-colors:
-  # Default colors
-  primary:
-    background: '#030d22'
-    foreground: '#63828a'
-
-    bright_foreground: '#feffff'
-
-  # Cursor colors
-  cursor:
-    text: '#e3eefe'
-    cursor: '#fd2e96'
-
-  # Selection colors
-  selection:
-    text: '#0c0935'
-    background: '#20f6bb'
-
-  # Normal colors
-  normal:
-    black: '#303742'
-    red: '#ff2e97'
-    green: '#00fbac'
-    yellow: '#ffd400'
-    blue: '#00beff'
-    magenta: '#ea00d9'
-    cyan: '#af79fe'
-    white: '#f0f5ff'
-
-  # Bright colors
-  bright:
-    black: '#3a1b75'
-    red: '#ee1682'
-    green: '#21ff78'
-    yellow: '#fed400'
-    blue: '#31beff'
-    magenta: '#d328ff'
-    cyan: '#3789fe'
-    white: '#e3eefe'
 
 # Cursor style
 cursor:

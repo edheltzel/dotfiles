@@ -1,5 +1,4 @@
 fishpkg/fish-menu
-jorgebucaran/fish-bax
 oh-my-fish/plugin-brew
 tuvistavie/fish-ssh-agent
 orefalo/free
@@ -12,3 +11,6 @@ jorgebucaran/nvm.fish
 jorgebucaran/fisher
 re3turn/fish-last-job-id
 rbenv/fish-rbenv
+oh-my-fish/plugin-bang-bang
+andreiborisov/sponge
+jorgebucaran/fish-bax

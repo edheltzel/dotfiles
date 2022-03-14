@@ -1,4 +1,7 @@
-#### Mental Notes
+## Making Alacritty use macOS keybinding like Iterm2 
+
+`last update: 03-14-2022`
+The Alacritty configuration is pulled from, [Fatih Arslan's Alacritty integration with Tmux](https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/), the article is from 2018 but is still very relevant for 2022 and works well with Intel and ARM based Macs.
 
       # ====================================================
       # ===   Mental Notes for my personal workflow     ===
