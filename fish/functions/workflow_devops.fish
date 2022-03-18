@@ -31,7 +31,7 @@ alias dcrun="docker-compose run --rm"
 alias vb="VBoxManage"
 
 # Editors
-alias code="code-insiders"
+#alias code="code-insiders"
 alias mux="tmux"
 alias vim="nvim"
 

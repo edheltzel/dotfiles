@@ -13,7 +13,6 @@ info "Setting up Karabiner..."
 substep_info "Creating Karabiner folders..."
 mkdir -p "$DESTINATION/assets"
 mkdir -p "$DESTINATION/assets/complex_modifications"
-mkdir -p "$DESTINATION/automatic_backups"
 
 find * -name "*json*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"

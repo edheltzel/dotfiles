@@ -1,32 +1,9 @@
 .DS_Store
 NetrwTreeListing*
 
-### Jekyll ###
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata/
-.jekyll-metadata
+### Karabiner ###
+karabiner/automatic_backups/
 
-### Sass ###
-.sass-cache/
-
-### Go ###
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
-### Go Patch ###
-/vendor/
-/Godeps/
-### Go Patch ###
+### REPOS ###
 repos/work.list
 repos/playground.list
