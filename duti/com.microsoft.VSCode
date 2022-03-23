@@ -19,6 +19,7 @@
 .js
 .jsx
 .json
+.jsonc
 .less
 .liquid
 .list
