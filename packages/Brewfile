@@ -175,13 +175,12 @@ cask 'hiddenbar'
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'Icon Slate', id: 439697913
-mas 'Magnet', id: 441258766
 mas 'Just Focus', id: 1142151959
 mas 'Gifski', id: 1351639930
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
-mas 'Todoist', id: 585829637
 mas 'Pages', id: 409201541
+mas 'Todoist', id: 585829637
 mas 'WebPonize', id: 1526039365
 mas 'Amphetamine', id: 937984704
 mas 'Invoice Ninja V5', id: 1503970375
