@@ -23,6 +23,11 @@ function forrepos --description 'Evaluates $argv for all repo folders'
     end
 end
 
+function coo --description 'Opens Current directory in VSCode'
+  eval $EDITOR $argv
+end
+
+
 # Often used shortcuts/aliases
 function projects; cd ~/Projects; end
 function work; cd ~/Projects/work; end
