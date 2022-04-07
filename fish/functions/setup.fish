@@ -20,7 +20,9 @@ function setup --description 'defines abbreviations'
   abbr --add 'ghw' 'gh repo view --web'
   abbr gems gem list
   abbr npms npm list -g --depth=0
+  abbr pnpms pnpm list -g
   abbr ns npm start
+  abbr ps pnpm start
   abbr op open .
   abbr opa open -a APP_NAME
   abbr sdel rm -rf

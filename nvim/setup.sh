@@ -10,20 +10,12 @@ DESTINATION="$(realpath ~/.config/nvim)"
 
 info "Setting up Neovim..."
 
-# substep_info "Fetching init.lua..."
-# wget https://raw.githubusercontent.com/nvim-lua/kickstart.nvim/master/init.lua .
+substep_info "Creating Neovim folders..."
+mkdir -p $DESTINATION
+substep_success "Successfully created ~/.config/nvim/"
 
 substep_info "Git is cloning AstroVim..."
-git clone git@github.com:kabinspace/AstroVim ~/.config/nvim
+git clone --progress --verbose https://github.com/kabinspace/AstroVim "$DESTINATION/."
+substep_success "Successfully cloned AstroVim"
 
-# substep_info "Creating Neovim folders..."
-# mkdir -p $DESTINATION
-
-# find * -name "*.lua*" | while read fn; do
-#     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
-# done
-
-
-clear_broken_symlinks "$DESTINATION"
-
-success "Nvim is ready. Make sure to run `nvim +PackerSync`"
+success "Nvim is ready. Make sure to run – nvim +PackerSync"
