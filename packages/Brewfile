@@ -111,6 +111,7 @@ brew 'z'
 brew 'zip'
 
 cask 'adobe-creative-cloud'
+cask 'clipgrab'
 cask 'figma-beta'
 cask 'sketch'
 cask 'principle'
@@ -173,9 +174,9 @@ cask 'fork'
 cask 'github'
 cask 'visual-studio-code'
 cask 'iina'
-cask 'clipgrab'
 cask 'sip'
 cask 'hiddenbar'
+cask 'raycast'
 
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
