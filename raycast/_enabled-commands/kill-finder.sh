@@ -6,7 +6,7 @@
 # @raycast.mode silent
 
 # Optional parameters:
-# @raycast.icon 🤖
+# @raycast.icon images/kill-finder.png
 # @raycast.argument1 { "type": "text", "placeholder": "Enter sudo password", "secure": true }
 # @raycast.packageName Kill Finder
 
