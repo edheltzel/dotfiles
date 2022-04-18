@@ -4,5 +4,12 @@
     "titleBar.inactiveForeground": "#ffd9005d"
   },
   "explorerExclude.backup": null,
-  "cSpell.words": ["fishrc", "quickfix", "repodir", "quickfix"]
+  "cSpell.words": [
+    "chsh",
+    "fishrc",
+    "quickfix",
+    "realpath",
+    "repodir",
+    "substep"
+  ]
 }

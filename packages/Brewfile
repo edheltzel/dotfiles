@@ -110,6 +110,7 @@ brew 'webp'
 brew 'unzip'
 brew 'z'
 brew 'zip'
+brew 'maxtex'
 
 cask 'adobe-creative-cloud'
 cask 'clipgrab'
@@ -177,6 +178,7 @@ cask 'iina'
 cask 'sip'
 cask 'hiddenbar'
 cask 'raycast'
+cask 'zettlr'
 
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
