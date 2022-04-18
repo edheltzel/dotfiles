@@ -13,6 +13,8 @@ disable = ["yadm"]
 # Do not ask to retry failed steps (default: false)
 no_retry = true
 
+notify_each_step = false
+
 # Run inside tmux
 #run_in_tmux = true
 
