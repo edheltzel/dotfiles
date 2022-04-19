@@ -8,8 +8,10 @@
     "chsh",
     "fishrc",
     "quickfix",
+    "Raycast",
     "realpath",
     "repodir",
-    "substep"
+    "substep",
+    "Topgrade"
   ]
 }
