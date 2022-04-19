@@ -6,20 +6,20 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~/.config/fish)"
+FISH_PATH="$(realpath ~/.config/fish)"
 
 info "Setting up fish shell..."
 
 substep_info "Creating fish config folders..."
-mkdir -p "$DESTINATION/functions"
-mkdir -p "$DESTINATION/customs"
-mkdir -p "$DESTINATION/completions"
-mkdir -p "$DESTINATION/conf.d"
+mkdir -p "$FISH_PATH/functions"
+mkdir -p "$FISH_PATH/customs"
+mkdir -p "$FISH_PATH/completions"
+mkdir -p "$FISH_PATH/conf.d"
 
 find * -name "*fish*" | while read fn; do
-    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
+    symlink "$SOURCE/$fn" "$FISH_PATH/$fn"
 done
-clear_broken_symlinks "$DESTINATION"
+clear_broken_symlinks "$FISH_PATH"
 
 
 set_fish_shell() {

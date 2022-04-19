@@ -7,7 +7,7 @@ cd "$DIR"
 
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
-DESTINATION2="$(realpath ~/.config)"
+CONFIG_PATH="$(realpath ~/.config)"
 
 info "Configuring misc dotfiles..."
 
@@ -18,7 +18,7 @@ done
 
 find . -name "bat" | while read fn; do
     fn=$(basename $fn)
-    symlink "$SOURCE/$fn" "$DESTINATION2/$fn"
+    symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
 
 success "Finished configuring misc dotfiles."

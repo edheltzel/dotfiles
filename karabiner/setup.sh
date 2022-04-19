@@ -6,19 +6,19 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~/.config/karabiner)"
+KARABINER_PATH="$(realpath ~/.config/karabiner)"
 
 info "Setting up Karabiner..."
 
 substep_info "Creating Karabiner folders..."
-mkdir -p "$DESTINATION/assets"
-mkdir -p "$DESTINATION/assets/complex_modifications"
+mkdir -p "$KARABINER_PATH/assets"
+mkdir -p "$KARABINER_PATH/assets/complex_modifications"
 
 find * -name "*json*" | while read fn; do
-    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
+    symlink "$SOURCE/$fn" "$KARABINER_PATH/$fn"
 done
-clear_broken_symlinks "$DESTINATION"
+clear_broken_symlinks "$KARABINER_PATH"
 
-clear_broken_symlinks "$DESTINATION"
+clear_broken_symlinks "$KARABINER_PATH"
 
 success "Finished configuring Karabiner."
