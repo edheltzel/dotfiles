@@ -6,24 +6,21 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~)"
+GIT_PATH="$(realpath ~)"
+GH_PATH="$(realpath ~/.config/gh)"
 
 info "Configuring git..."
 
 find . -name ".git*" | while read fn; do
     fn=$(basename $fn)
-    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
+    symlink "$SOURCE/$fn" "$GIT_PATH/$fn"
 done
 
-substep_info "Setting up and creating gh directory at '$DESTINATION'/gh"
-
-mkdir -p "$DESTINATION/gh"
-
+substep_info "Setting up gh..."
 find * -name "*.yml*" | while read fn; do
     fn=$(basename $fn)
-    symlink "$SOURCE/$fn" "$DESTINATION/$fn"
+    symlink "$SOURCE/$fn" "$GH_PATH/$fn"
 done
+clear_broken_symlinks "$GH_PATH"
 
-clear_broken_symlinks "$DESTINATION"
-
-success "Finished configuring git and gh. Make sure to copy hosts.yml from secrets"
+success "git and gh are complete. Make sure to copy hosts.yml from secrets"
