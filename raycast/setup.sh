@@ -6,14 +6,13 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-LOCAL_SHARE="$(realpath ~/.local/share)"
+RAYCAST_PATH="$(realpath ~/.config/raycast)"
 
 info "Setting up Raycast..."
 
 substep_info "Creating Raycast folders..."
-mkdir -p "$LOCAL_SHARE/raycast"
-mkdir -p "$LOCAL_SHARE/raycats/_enable-commands"
-mkdir -p "$LOCAL_SHARE/raycats/_enable-commands/images"
+mkdir -p "$RAYCAST_PATH/raycats/_enable-commands"
+mkdir -p "$RAYCAST_PATH/raycats/_enable-commands/images"
 
 find * -name "*.sh" | while read fn; do
     symlink "$SOURCE/$fn" "$LOCAL_SHARE/$fn"
