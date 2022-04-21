@@ -8,7 +8,7 @@
 
 # Optional parameters:
 # @raycast.icon images/justfocus.png
-# @raycast.argument1 { "type": "text", "placeholder": "po,sb,lb,stop" }
+# @raycast.argument1 { "type": "text", "placeholder": "go,sb,lb,stop" }
 
 # Documentation:
 # @raycast.author Jax0rz
