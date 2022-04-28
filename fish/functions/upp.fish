@@ -1,5 +1,6 @@
 # Defined in - @ line 0
 function upp --description 'Updates everything with Topgrade but also prints the default Node version, Update Resets Homebrew, Cleans Homebrew and Z'
+  sudo -v
   set nodeIcon ' '; set nodeVerb 'Node Version in use: '; set_color green --bold;
   printf "$nodeIcon"; set_color normal;
   printf "$nodeVerb"; set_color green --bold; and node --version; set_color white;
