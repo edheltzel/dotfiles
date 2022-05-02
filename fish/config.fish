@@ -48,7 +48,6 @@ test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '
 # set Visual Studio Code as default editor use code, code-insiders, subl or vim
 set -x --global EDITOR code
 
-# NodeJS - Volta and PNPM
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
-
+# NodeJS - PNPM
+set -gx PNPM_HOME "/Users/ed/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
