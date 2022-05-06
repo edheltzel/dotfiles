@@ -23,6 +23,12 @@ function setup --description 'defines abbreviations'
   abbr pnpms pnpm list -g
   abbr ns npm start
   abbr ps pnpm start
+  abbr pi pnpm install
+  abbr pg pnpm add -g
+  abbr pd pnpm add -D
+  abbr pup pnpm up
+  abbr prg pnpm rm --global
+  abbr prd pnpm rm -D
   abbr op open .
   abbr opa open -a APP_NAME
   abbr sdel rm -rf
