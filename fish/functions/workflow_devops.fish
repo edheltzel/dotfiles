@@ -36,6 +36,6 @@ alias mux="tmux"
 alias vim="nvim"
 
 # Language Support
-# eleventy
 alias python="python3"
 #alias pip="pip3"
+alias p="pnpm"
