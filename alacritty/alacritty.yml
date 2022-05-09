@@ -29,8 +29,11 @@ draw_bold_text_with_bright_colors: true
 
 # Cursor style
 cursor:
-  style: Block
-  thickness: 0.15
+  style:
+    thickness: 0.15
+    shape: Block
+    blinking: Always
+  blink_interval: 500
 
 # Live config reload (changes require restart)
 live_config_reload: true
