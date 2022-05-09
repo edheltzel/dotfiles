@@ -6,7 +6,6 @@ An experimental, ongoing configuration for my personal needs using macOS, Fish s
 
 My playground revolves around my use of – Go, All things JavaScript, CSS Wizardry with Scss, SSG/JAMStack – mainly [11ty](https://www.11ty.dev/), [Hugo](https://gohugo.io/), and I have this soft spot in my ❤️ for the OG [Jekyll](https://jekyllrb.com).
 
-
 # TODO
 
 - [ ] need to reorder install of packages
@@ -17,14 +16,17 @@ My playground revolves around my use of – Go, All things JavaScript, CSS Wizar
 **Caveats**
 If you are on any version of macOS that uses AFPS, you'll need to disable the SIP.
 First check to see if SIP is enabled or not.
+
 ```shell
 csrutil status
 ```
+
 output should read:
 
 ```shell
 System Integrity Protection status: enabled.
 ```
+
 If your SIP is enabled, then follow the next steps to disable it – Assuming that you know what you're doing, here is how to turn off System Integrity Protection on your Mac.
 
 1 Turn off your Mac (Apple > Shut Down).
@@ -34,7 +36,6 @@ If your SIP is enabled, then follow the next steps to disable it – Assuming th
 5 Enter csrutil disable.
 6 Enter reboot.
 7 `csrutil status` -> should read `System Integrity Protection status: disabled.`
-
 
 1. Restore your safely backed up ssh keys to `~/.ssh/`
    1. Alternatively, [generate new ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/), and add these to your GitHub account.
@@ -108,8 +109,7 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
 - ~~setup.sh - Installs Fonts~~
 - ~~FiraCode.otf - for my text editor~~
 
-> **Note:** I have moved to using Brew Cask to install fonts via [Nerd Fonts](https://www.nerdfonts.com/)
-> **FireCode** for my text editor
+> **Note:** I have moved to using Brew Cask to install fonts via [Nerd Fonts](https://www.nerdfonts.com/) > **FireCode** for my text editor
 
 ### Fish (fish/)
 
@@ -166,26 +166,27 @@ OS Version: Version 12.0.1 (Build 21A559)
 - .gitconfig - Sets several global Git variables - also include signing
 
   - _(options)_: GPG signing is set to `TRUE` by default
-  [renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
-  
+    [renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
+
   [Generate new key and assign to global git config](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374#:~:text=It%20means%20that%20is%20not,secret%20keys%20available%20in%20GPG.)
 
   main take away:
-    - `gpg --list-secret-keys --keyid-format=long`
-    - Copy key
-    - set key for your git user
-      - `git config --global user.signingkey <your key>`
 
+  - `gpg --list-secret-keys --keyid-format=long`
+  - Copy key
+  - set key for your git user
+    - `git config --global user.signingkey <your key>`
 
-    git config --global user.signingkey <your key>
-    - <img alt="look ma' verified" src="https://rdmcrew.d.pr/f11jZt+" width="500"/>
-    - If you need help setting this up GPG:
-      - follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s).
-      - I found this [GIST helpful](https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2)
-      - To get VSCode setup follow this [article](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
-    - **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
+  git config --global user.signingkey <your key>
 
-    - If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile).
+  - <img alt="look ma' verified" src="https://rdmcrew.d.pr/f11jZt+" width="500"/>
+  - If you need help setting this up GPG:
+    - follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s).
+    - I found this [GIST helpful](https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2)
+    - To get VSCode setup follow this [article](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
+  - **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
+
+  - If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile).
 
 ### macOS Preferences (macos/)
 
@@ -201,6 +202,7 @@ OS Version: Version 12.0.1 (Build 21A559)
   - `.eslintrc` - has specific configuration for my JS workflow
   - `bat/config` - [bat](https://github.com/sharkdp/bat) – a clone of cat with syntax highlighting
   -
+
 ### Packages (packages/)
 
 - setup.sh - Installs the contents of the `.list` files and the Brewfile
@@ -214,6 +216,7 @@ OS Version: Version 12.0.1 (Build 21A559)
 
 I'd suggest you take a look at this configuration - I use NeoVim when I need Vim
 
+- [AstroNvim](https://astronvim.github.io/configuration/basic_configuration) is the distribution I use.
 - setup.sh - Symlinks all vim files to `~/.config/nvim`
 
 ### Helper Scripts (scripts/)
@@ -232,35 +235,40 @@ VSCode is my default editor but I also use NeoVim.
 - Make sure you add `code` and/or `code-insiders` to your PATH
 - run `⌘+⇧+p` then type `Shell Command: Install 'code-insiders' command in PATH`
 
-    - ![install vscode inside of PATH](_images/install-vscode-in-path.png)
+  - ![install vscode inside of PATH](_images/install-vscode-in-path.png)
+
 - Notable Extensions I Use:
-    - Keybindings: [VSpaceCode](https://vspacecode.github.io/)
-    - Project management: [Git Project Manager](https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager)
-    - Remote development: [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-    - API client: [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-    - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme) 👈 self plug
-    - [Better Solarized](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme) 👈 self plug
+  - Keybindings: [VSpaceCode](https://vspacecode.github.io/)
+  - Project management: [Git Project Manager](https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager)
+  - Remote development: [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+  - API client: [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+  - [1Dark Raincoat](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme) 👈 self plug
+  - [Better Solarized](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme) 👈 self plug
 
 ### Node development
 
 Node Version switching for Node development, takes advantage of [fnm](https://github.com/Schniz/fnm) for managing Node versions, which supports both `.nvmrc` and `.node-version` files.
 
 - Install happens in the `Brewfile` by running
+
 ```shell
 brew install fnm
 ```
 
 For Completions run:
+
 ```shell
 fnm completions --shell fish
 ```
+
 Make sure you run:
+
 ```shell
 ./fish/./setup.sh
 ```
+
 This will symlink the `fnm.fish` file in `~/.config/fish/conf.d` _(It might be helpful to `source ~/.config/fish/config.fish`)_
 
 #### Special Thanks
 
 Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup,
-
