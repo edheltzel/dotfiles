@@ -8,23 +8,18 @@ ahead = "[×${count} ](bright-white)"
 behind = "[×${count} ](bright-white)"
 diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
 untracked = "️[ ×${count} ](fg:215)"
-stashed = "  "
+stashed = " "
 modified = "[ ×${count} ](bright-yellow)"
 staged = "[螺×${count} ](bright-green)"
 deleted = "[裸×${count} ](bright-red )"
 renamed = "[ ×${count} ](fg:214)"
 style = "bright-white"
+
 format = "$all_status$ahead_behind"
-[golang]
-symbol = "  "  #nerdfont icon
+
 [ruby]
-symbol = "  "
-[nodejs]
-symbol = "  "
-[package]
-symbol = "  "
-style = "bold blue"
+symbol = " "
 [python]
-symbol = "  "
-[rust]
-symbol = "  "
+symbol = " "
+
+
