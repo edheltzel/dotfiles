@@ -21,5 +21,45 @@ format = "$all_status$ahead_behind"
 symbol = " "
 [python]
 symbol = " "
-
-
+[aws]
+symbol = "  "
+[buf]
+symbol = " "
+[c]
+symbol = " "
+[conda]
+symbol = " "
+[dart]
+symbol = " "
+[directory]
+read_only = " "
+[docker_context]
+symbol = " "
+[elixir]
+symbol = " "
+[elm]
+symbol = " "
+[golang]
+symbol = " "
+[haskell]
+symbol = " "
+[hg_branch]
+symbol = " "
+[java]
+symbol = " "
+[julia]
+symbol = " "
+[memory_usage]
+symbol = " "
+[nim]
+symbol = " "
+[nix_shell]
+symbol = " "
+[nodejs]
+symbol = " "
+[package]
+symbol = " "
+[spack]
+symbol = "🅢 "
+[rust]
+symbol = " "
