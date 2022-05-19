@@ -1,4 +1,3 @@
-## Defines abbreviations
 function setup --description 'defines abbreviations'
   abbr atm neofetch
   abbr bi brew install
@@ -17,16 +16,17 @@ function setup --description 'defines abbreviations'
   abbr goo cd ~/.go/
   abbr gma git aa; and git cm
   abbr gmac git aa; git cm
-  abbr --add 'ghw' 'gh repo view --web'
+  abbr ghw gh repo view --web
   abbr gems gem list
   abbr npms npm list -g --depth=0
   abbr pnpms pnpm list -g
   abbr ns npm start
   abbr ps pnpm start
   abbr pi pnpm install
-  abbr pg pnpm add -g
-  abbr pd pnpm add -D
+  abbr pag pnpm add -g
+  abbr pad pnpm add -D
   abbr pup pnpm up
+  abbr pug pnpm add -g pnpm
   abbr prg pnpm rm --global
   abbr prd pnpm rm -D
   abbr op open .
