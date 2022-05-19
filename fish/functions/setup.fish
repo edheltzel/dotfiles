@@ -8,14 +8,14 @@ function setup --description 'defines abbreviations'
   abbr cma commit-all
   abbr clone git clone
   abbr config ~/.config/
-  abbr co code
+  abbr co code .
   abbr coo code -r .
+  abbr cor code -r .
+  abbr con code -n .
   abbr del trash
   abbr dls ~/Downloads/
   abbr gg go get GITHUB_URL
   abbr goo cd ~/.go/
-  abbr gma git aa; and git cm
-  abbr gmac git aa; git cm
   abbr ghw gh repo view --web
   abbr gems gem list
   abbr npms npm list -g --depth=0
@@ -36,6 +36,7 @@ function setup --description 'defines abbreviations'
   abbr sp speedtest -s
   abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
+  abbr mksym ln -s
   abbr tkill tmux kill-session -t
   abbr amux tmux at -t base
   abbr nmux tmux new -s "base"
