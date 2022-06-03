@@ -1,0 +1,40 @@
+# Flightdeck Lunar
+colors:
+  # Default colors
+  primary:
+    background: "#101119"
+    foreground: "#767fa7"
+
+    bright_foreground: "#8a8fb1"
+
+  # Cursor colors
+  cursor:
+    text: "#e3eefe"
+    cursor: "#FF1277"
+
+  # Selection colors
+  selection:
+    text: "#0c0935"
+    background: "#20f6bb"
+
+  # Normal colors
+  normal:
+    black: "#63828a"
+    red: "#FF0046"
+    green: "#2DAE58"
+    yellow: "#CF9C00"
+    blue: "#09A1ED"
+    magenta: "#C010EF"
+    cyan: "#13BBB7"
+    white: "#22222A"
+
+  # Bright colors
+  bright:
+    black: "#666666"
+    red: "#FF2E87"
+    green: "#25DA6A"
+    yellow: "#FFC104"
+    blue: "#41B9FF"
+    magenta: "#C75AF3"
+    cyan: "#16DAD6"
+    white: "#FFFFFF"
