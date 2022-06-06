@@ -2,39 +2,39 @@
 colors:
   # Default colors
   primary:
-    background: "#101119"
-    foreground: "#767fa7"
+    background: "0x101119"
+    foreground: "0x767fa7"
 
-    bright_foreground: "#8a8fb1"
+    bright_foreground: "0xe3eefe"
 
   # Cursor colors
   cursor:
-    text: "#e3eefe"
-    cursor: "#FF1277"
+    text: "0xe3eefe"
+    cursor: "0xFF1277"
 
   # Selection colors
   selection:
-    text: "#0c0935"
-    background: "#20f6bb"
+    text: "0x0c0935"
+    background: "0x20f6bb"
 
   # Normal colors
   normal:
-    black: "#63828a"
-    red: "#FF0046"
-    green: "#2DAE58"
-    yellow: "#CF9C00"
-    blue: "#09A1ED"
-    magenta: "#C010EF"
-    cyan: "#13BBB7"
-    white: "#22222A"
+    black: "0x63828a"
+    red: "0xFF0046"
+    green: "0x2DAE58"
+    yellow: "0xCF9C00"
+    blue: "0x09A1ED"
+    magenta: "0xC010EF"
+    cyan: "0x13BBB7"
+    white: "0xf0f5ff"
 
   # Bright colors
   bright:
-    black: "#666666"
-    red: "#FF2E87"
-    green: "#25DA6A"
-    yellow: "#FFC104"
-    blue: "#41B9FF"
-    magenta: "#C75AF3"
-    cyan: "#16DAD6"
-    white: "#FFFFFF"
+    black: "0x303742"
+    red: "0xFF2E87"
+    green: "0x25DA6A"
+    yellow: "0xFFC104"
+    blue: "0x41B9FF"
+    magenta: "0xC75AF3"
+    cyan: "0x16DAD6"
+    white: "0xe3eefe"
