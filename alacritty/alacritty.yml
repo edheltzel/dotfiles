@@ -1,7 +1,7 @@
 import:
-  - "/Users/ed/.config/alacritty/flightdeck.yml"
   # - "/Users/ed/.config/alacritty/flightdeck-lunar.yml"
-#- "/Users/ed/.config/alacritty/solarized_dark.yml"
+  - "/Users/ed/.config/alacritty/flightdeck.yml"
+  # - "/Users/ed/.config/alacritty/solarized_dark.yml"
 # Window Customization
 window:
   dimensions:
@@ -25,7 +25,7 @@ font:
   italic:
     family: JetBrainsMono Nerd Font
     style: Italic
-  size: 16
+  size: 18
 
 draw_bold_text_with_bright_colors: true
 
