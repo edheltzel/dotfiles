@@ -50,4 +50,7 @@ set -x --global EDITOR code
 
 # NodeJS - PNPM
 set -gx PNPM_HOME "/Users/ed/Library/pnpm"
+
+# zoxide 
+zoxide init fish | source
 set -gx PATH "$PNPM_HOME" $PATH
