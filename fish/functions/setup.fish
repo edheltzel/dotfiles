@@ -20,8 +20,6 @@ function setup --description 'defines abbreviations'
   abbr gems gem list
   abbr npms npm list -g --depth=0
   abbr pnpms pnpm list -g
-  abbr ns npm start
-  abbr ps pnpm start
   abbr pi pnpm install
   abbr pag pnpm add -g
   abbr pad pnpm add -D
