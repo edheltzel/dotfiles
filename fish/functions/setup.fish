@@ -41,5 +41,4 @@ function setup --description 'defines abbreviations'
   abbr zpurge z --clean
   abbr cma commit-all
   abbr mm merge master
-  abbr zo zoxide
 end
