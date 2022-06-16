@@ -24,11 +24,23 @@ alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 alias htop="btm"
 
-# Apps/VMs/Docker/Vagrant - see vaga.fish
-alias dcons="docker container ls --all"
-alias dc="docker-compose"
-alias dcrun="docker-compose run --rm"
-alias vssh="vagrant ssh"
+# Docker/Kubernetes/Vagrant
+
+# docker-compose alias
+function dk --description 'an alias for docker'
+  command docker $argv
+end
+
+# docker-compose alias
+function dc --description 'an alias for docker-compose'
+  command docker-compose $argv
+end
+
+# vagrant alias
+function vg --description 'an alias for vagrant'
+  command vagrant $argv
+end
+
 
 # Editors
 #alias code="code-insiders"
