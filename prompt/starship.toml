@@ -1,3 +1,4 @@
+command_timeout = 1000
 [cmd_duration]
 min_time = 4
 [git_branch]
