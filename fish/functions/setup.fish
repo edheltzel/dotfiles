@@ -5,19 +5,28 @@ function setup --description 'defines abbreviations'
   abbr brews brew leaves
   abbr casks brew list --cask
   abbr cl clear
-  abbr cma commit-all
   abbr clone git clone
-  abbr config ~/.config/
+  abbr cma commit-all
   abbr co code .
+  abbr con code -n .
+  abbr config ~/.config/
   abbr coo code -r .
   abbr cor code -r .
-  abbr con code -n .
   abbr del trash
   abbr dls ~/Downloads/
-  abbr gg go get GITHUB_URL
-  abbr goo cd ~/.go/
-  abbr ghw gh repo view --web
+  abbr ga stage
+  abbr gb git b -a
+  abbr gcm commit
+  abbr gco git co
+  abbr gcs show
+  abbr gd git diff
   abbr gems gem list
+  abbr gg go get GITHUB_URL
+  abbr ghw gh repo view --web
+  abbr gma git aa
+  abbr gmac commit-all
+  abbr gmca commit-all
+  abbr goo cd ~/.go/
   abbr npms npm list -g --depth=0
   abbr pnpms pnpm list -g
   abbr pi pnpm install
@@ -35,10 +44,12 @@ function setup --description 'defines abbreviations'
   abbr suckit wget -mkEpnp url_here
   abbr symlink ln -s
   abbr mksym ln -s
-  abbr tkill tmux kill-session -t
   abbr amux tmux at -t base
+  abbr tkill tmux kill-session -t
   abbr nmux tmux new -s "base"
   abbr zpurge z --clean
   abbr cma commit-all
   abbr mm merge master
+  abbr lg lazygit
+  abbr lzd lazydocker
 end
