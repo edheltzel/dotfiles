@@ -41,7 +41,6 @@ function vg --description 'an alias for vagrant'
   command vagrant $argv
 end
 
-
 # Editors
 #alias code="code-insiders"
 alias mux="tmux"
