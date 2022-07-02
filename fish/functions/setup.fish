@@ -28,14 +28,23 @@ function setup --description 'defines abbreviations'
   abbr gmca commit-all
   abbr goo cd ~/.go/
   abbr npms npm list -g --depth=0
-  abbr pnpms pnpm list -g
-  abbr pi pnpm install
-  abbr pag pnpm add -g
+  abbr ns npm run start
+  abbr nr npm run
+  abbr nad npm add -D
+  abbr nag npm add -g
+  abbr nrd npm rm -D
+  abbr nrg npm rm -g
+  abbr ni npm install
   abbr pad pnpm add -D
-  abbr pup pnpm up
-  abbr pug pnpm add -g pnpm
-  abbr prg pnpm rm --global
+  abbr pag pnpm add -g
+  abbr pi pnpm install
+  abbr pr pnpm run
+  abbr pss pnpm start
+  abbr pnpms pnpm list -g
   abbr prd pnpm rm -D
+  abbr prg pnpm rm --global
+  abbr pug pnpm add -g pnpm
+  abbr pup pnpm up
   abbr op open .
   abbr opa open -a APP_NAME
   abbr sdel rm -rf
