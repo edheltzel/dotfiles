@@ -40,6 +40,7 @@ function setup --description 'defines abbreviations'
   abbr pi pnpm install
   abbr pr pnpm run
   abbr pss pnpm start
+  abbr pns pnpm start
   abbr pnpms pnpm list -g
   abbr prd pnpm rm -D
   abbr prg pnpm rm --global
