@@ -12,6 +12,7 @@ tap 'buo/cask-upgrade'
 tap 'mongodb/brew'
 tap 'clementtsang/bottom'
 tap 'sass/sass'
+tap 'teamookla/speedtest'
 
 brew 'achannarasappa/tap/ticker'
 brew 'ack'
