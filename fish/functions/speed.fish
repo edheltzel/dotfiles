@@ -2,7 +2,7 @@
 # checks for option/flags and passes it to the alias
 # if no options run with verbose option.
 
-function speedtest --description 'alias speedtest=networkQuality'
+function speed --description 'alias speed=networkQuality'
   if count $argv > /dev/null #Checks for option
   command networkQuality $argv
   else
