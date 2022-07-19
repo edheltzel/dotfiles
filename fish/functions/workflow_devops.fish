@@ -43,7 +43,7 @@ function vg --description 'an alias for vagrant'
 end
 
 # Editors
-#alias code="code-insiders"
+alias code="code-insiders"
 alias mux="tmux"
 alias vim="nvim"
 
