@@ -5,8 +5,11 @@ git@github.com:planetjekyll/awesome-jekyll-editors.git
 git@github.com:planetjekyll/awesome-jekyll.git
 git@github.com:planetjekyll/awesome-jekyll-themes.git
 git@github.com:edheltzel/vscode-better-solarized-dark.git
+git@github.com:edheltzel/vscode-better-nunjucks.git
 git@github.com:edheltzel/vscode-jekyll-snippets.git
 git@github.com:edheltzel/vscode-jekyll-syntax.git
 git@github.com:edheltzel/vscode-onedark-raincoat.git
 git@github.com:flight-deck/flightdeck-liftoff.git
-git@github.com:flight-deck/flightdeck.git
+git@github.com:flight-deck/flightdeck-for-jekyll.git
+git@github.com:flight-deck/flightdeck-for-eleventy.git
+git@github.com:flight-deck/flightdeck-for-hugo.git

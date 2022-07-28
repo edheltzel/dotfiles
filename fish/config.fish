@@ -39,7 +39,6 @@ set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
 # NodeJS - PNPM
 set -gx PNPM_HOME "/Users/ed/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
-
 # FZF and FD helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"
 set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
@@ -51,7 +50,7 @@ test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '
 starship init fish | source
 
 # set Visual Studio Code as default editor use code, code-insiders, subl or vim
-set -x --global EDITOR code-insiders
+set -x --global EDITOR code
 
 #set primary volume for workstation
 set -x --global VOL xxx
