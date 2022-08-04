@@ -15,7 +15,7 @@
 # @raycast.author Ed Heltzel
 # @raycast.authorURL https://github.com/edheltzel
 
-cp -r ~/Dropbox\ \(RDM\)/Ed\ \Heltzel/Apps/Automator/NewContractor ~/Dropbox\ \(RDM\)/Company\ Info/Contractors/$1
+cp -r ~/Dropbox\ \(RDM\)/Ed\ \Heltzel/Apps/Automator/NewContractor ~/Dropbox\ \(RDM\)/Company\ Info/Contractors/"$1"
 
-open ~/Dropbox\ \(RDM\)/Company\ Info/Contractors/$1
+open ~/Dropbox\ \(RDM\)/Company\ Info/Contractors/"$1"
 echo "🚸 New Contractor folder created"

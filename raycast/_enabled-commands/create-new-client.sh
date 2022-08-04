@@ -15,6 +15,6 @@
 # @raycast.author Ed Heltzel
 # @raycast.authorURL https://github.com/edheltzel
 
-cp -r ~/RDM\ \Dropbox/Ed\ \Heltzel/Apps/Automator/NewClient ~/RDM\ \Dropbox/Clients/"$1"
-open ~/RDM\ \Dropbox/Clients/"$1"
+cp -r ~/Google\ Drive/My\ Drive/Apps/Automator/NewClient ~/Google\ Drive/Shared\ drives/Clients/"$1"
+open ~/Google\ Drive/Shared\ drives/Clients/"$1"
 echo "👥 $1 client folder created"

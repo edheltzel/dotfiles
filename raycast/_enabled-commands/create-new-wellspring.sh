@@ -16,6 +16,6 @@
 # @raycast.authorURL https://github.com/edheltzel
 
 NOW=$(date +"%y%m%d")
-cp -r ~/RDM\ \Dropbox/Ed\ \Heltzel/Apps/Automator/NewClient/Projects/NewProjectName ~/RDM\ \Dropbox/Clients/$1/Projects/"P$NOW(NEWPROJECT)"
-open ~/RDM\ \Dropbox/Clients/$1/Projects/
+cp -r ~/Google\ Drive/My\ Drive/Apps/Automator/NewClient/Projects/NewProjectName/ ~/Google\ Drive/Shared\ drives/Clients/"$1"/Projects/"P$NOW(NEWPROJECT)"
+open ~/Google\ Drive/Shared\ drives/Clients/"$1"/Projects/
 echo "🗣️ New Wellspring folder created"
