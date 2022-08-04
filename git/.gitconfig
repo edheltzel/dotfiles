@@ -66,10 +66,10 @@
   cmd = code --wait --diff $LOCAL $REMOTE
 
 [merge]
-  tool = vscode
+  tool = code
   log  = true
 
-[mergetool "vscode"]
+[mergetool "code"]
   cmd = code --wait $MERGED
 
 [apply]
