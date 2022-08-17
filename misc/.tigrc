@@ -3,6 +3,7 @@
 #==================================
 set main-view = line-number:no,interval=5 id:yes date:relative author:full commit-title:yes,graph,refs,overflow=no
 set diff-context = 5
+set diff-highlight = true
 set horizontal-scroll = 20%
 set line-graphics = utf-8
 set show-changes = true
