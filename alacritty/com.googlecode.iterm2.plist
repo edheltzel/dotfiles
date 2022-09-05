@@ -4637,13 +4637,13 @@
 			<key>Name</key>
 			<string>Default Light</string>
 			<key>Non Ascii Font</key>
-			<string>JetBrainsMonoNerdFontCompleteM-Regular 16</string>
+			<string>FiraCodeNerdFontComplete-Regular 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMonoNerdFontCompleteM-Regular 18</string>
+			<string>FiraCodeNerdFontComplete-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -6156,13 +6156,13 @@
 			<key>Name</key>
 			<string>Default Dark</string>
 			<key>Non Ascii Font</key>
-			<string>JetBrainsMonoNerdFontCompleteM-Regular 16</string>
+			<string>FiraCodeNerdFontComplete-Regular 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMonoNerdFontCompleteM-Regular 18</string>
+			<string>FiraCodeNerdFontComplete-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
