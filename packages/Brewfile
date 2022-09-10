@@ -118,6 +118,7 @@ brew 'maxtex'
 
 cask 'adobe-creative-cloud'
 cask 'alt-tab'
+cask 'appcleaner'
 cask 'clipgrab'
 cask 'figma-beta'
 cask 'sketch'
@@ -128,8 +129,6 @@ cask 'bitwarden'
 cask 'cyberduck'
 cask 'devtoys'
 cask 'docker'
-cask 'vagrant-vmware-utility'
-cask 'vagrant-manager'
 cask 'discord'
 cask 'signal'
 cask 'dropbox'
@@ -200,4 +199,5 @@ mas 'WebPonize', id: 1526039365
 mas 'Amphetamine', id: 937984704
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Contrast', id: 1254981365
+mas 'Magnet', id: 441258766
 #mas 'Xcode', id: 497799835
