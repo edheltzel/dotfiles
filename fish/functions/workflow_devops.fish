@@ -50,5 +50,5 @@ alias vim="nvim"
 # Language Support
 # alias python="python3"
 #alias pip="pip3"
-#alias pn="pnpm"
-#alias pnx="pnpx"
+alias pn="pnpm"
+alias px="pnpx"
