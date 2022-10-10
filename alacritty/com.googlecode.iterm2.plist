@@ -3660,6 +3660,18 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x3d-0x140000-0x18</key>
+		<dict>
+			<key>Action</key>
+			<integer>25</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>Close
+Close</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0x5c-0x100000-0x2a</key>
 		<dict>
 			<key>Action</key>
@@ -6865,7 +6877,7 @@
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -6899,7 +6911,7 @@
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
-	<false/>
+	<true/>
 	<key>UseTmuxStatusBar</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>

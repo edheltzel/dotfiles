@@ -37,11 +37,12 @@ function setup --description 'defines abbreviations'
   abbr pi pnpm install
   abbr pr pnpm run
   abbr pss pnpm start
-  abbr pns pnpm start
+  abbr pns pnpm list -g
   abbr pnpms pnpm list -g
   abbr prd pnpm rm -D
   abbr prg pnpm rm --global
   abbr pug pnpm add -g pnpm
+  abbr pugg pn upgrade -g  
   abbr pup pnpm up
   abbr op open .
   abbr opa open -a APP_NAME
