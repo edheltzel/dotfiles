@@ -3809,7 +3809,7 @@ Close</string>
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>Hotkey</key>
 	<false/>
 	<key>HotkeyChar</key>
@@ -4701,7 +4701,7 @@ Close</string>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Status Bar</key>
-			<true/>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
@@ -5306,6 +5306,8 @@ Close</string>
 			<true/>
 			<key>Use Tab Color</key>
 			<true/>
+			<key>Use Underline Color</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -6188,9 +6190,9 @@ Close</string>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Shortcut</key>
-			<string></string>
+			<string>9</string>
 			<key>Show Status Bar</key>
-			<true/>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
@@ -6891,7 +6893,7 @@ Close</string>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
 	<key>StretchTabsToFillBar</key>
-	<true/>
+	<false/>
 	<key>SwitchPaneModifier</key>
 	<integer>5</integer>
 	<key>TabStyleWithAutomaticOption</key>

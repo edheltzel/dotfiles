@@ -42,7 +42,7 @@ function setup --description 'defines abbreviations'
   abbr prd pnpm rm -D
   abbr prg pnpm rm --global
   abbr pug pnpm add -g pnpm
-  abbr pugg pn upgrade -g  
+  abbr pugg pn upgrade -g
   abbr pup pnpm up
   abbr op open .
   abbr opa open -a APP_NAME

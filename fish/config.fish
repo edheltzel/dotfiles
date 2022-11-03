@@ -50,10 +50,10 @@ test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '
 starship init fish | source
 
 # set Visual Studio Code as default editor use code, code-insiders, subl or vim
-set -x --global EDITOR code
+set -x --global EDITOR code-insiders
 
 string match -q "$TERM_PROGRAM" "vscode"
-and . (code --locate-shell-integration-path fish)
+and . (code-insiders --locate-shell-integration-path fish)
 
 #set primary volume for workstation
 set -x --global VOL xxx
