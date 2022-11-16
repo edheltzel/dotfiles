@@ -23,7 +23,9 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
-alias htop="btm" # TODO: remove
+alias top="btm" # muscle memory
+alias bottom="btm" # htop replacement
+alias serve='minserve' # rust HTTP server
 
 # Docker/Kubernetes/Vagrant
 
@@ -38,9 +40,9 @@ function dc --description 'an alias for docker-compose'
 end
 
 # vagrant alias
-function vg --description 'an alias for vagrant'
-  command vagrant $argv
-end
+# function vg --description 'an alias for vagrant'
+#   command vagrant $argv
+# end
 
 # Editors
 alias code="code-insiders"
