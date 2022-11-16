@@ -25,7 +25,7 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 alias top="btm" # muscle memory
 alias bottom="btm" # htop replacement
-alias serve='minserve' # rust HTTP server
+alias serve='miniserve' # rust HTTP server
 
 # Docker/Kubernetes/Vagrant
 
