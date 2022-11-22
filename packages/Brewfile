@@ -190,7 +190,6 @@ cask 'tableplus'
 cask 'todoist'
 cask 'typora'
 cask 'visual-studio-code-insiders'
-cask 'warp'
 cask 'webpquicklook'
 
 mas 'Affinity Designer', id: 824171161
