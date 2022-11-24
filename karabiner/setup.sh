@@ -17,7 +17,10 @@ mkdir -p "$KARABINER_PATH/assets/complex_modifications"
 find * -name "*json*" | while read fn; do
     symlink "$SOURCE/$fn" "$KARABINER_PATH/$fn"
 done
-clear_broken_symlinks "$KARABINER_PATH"
+
+find * -name "karabiner.json" | while read fn; do
+    symlink "$SOURCE/$fn" "$KARABINER_PATH/$fn"
+done
 
 clear_broken_symlinks "$KARABINER_PATH"
 
