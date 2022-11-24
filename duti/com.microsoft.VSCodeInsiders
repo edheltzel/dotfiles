@@ -12,6 +12,8 @@
 .d.ts
 .fish
 .go
+.gql
+.graphql
 .h
 .hbs
 .hpp
