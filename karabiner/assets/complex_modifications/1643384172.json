@@ -2,7 +2,7 @@
   "title": "Left cmd + hjkl to Arrow Keys Vim",
   "rules": [
     {
-      "description": "Left ctrl + hjkl to arrow keys Vim",
+      "description": "Left cmd + hjkl to arrow keys Vim",
       "manipulators": [
         {
           "from": {
