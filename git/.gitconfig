@@ -33,7 +33,8 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = code -w
+  editor       = code-insiders --wait
+  # editor       = code -w
   #editor       = nvim
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
@@ -43,7 +44,7 @@
 
 [delta]
   features = side-by-side line-numbers decorations
-  syntax-theme = Dracula
+  syntax-theme = TwoDark
   plus-style = syntax "#003800"
   minus-style = syntax "#3f0001"
 
@@ -63,14 +64,14 @@
   tool = vscode
 
 [difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+  cmd = code-insiders --wait --diff $LOCAL $REMOTE
 
 [merge]
-  tool = code
+  tool = vscode
   log  = true
 
-[mergetool "code"]
-  cmd = code --wait $MERGED
+[mergetool "vscode"]
+  cmd = code-insiders --wait $MERGED
 
 [apply]
   #Detect whitespace errors when applying a patch
