@@ -5,7 +5,7 @@ assume_yes = true
 disable = []
 
 # Ignore failures for these steps
-#ignore_failures = ["powershell"]
+ignore_failures = ["git_repos"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]
