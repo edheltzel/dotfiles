@@ -3,19 +3,4 @@
     "titleBar.activeForeground": "#ffd900",
     "titleBar.inactiveForeground": "#ffd9005d"
   },
-  "explorerExclude.backup": null,
-  "cSpell.words": [
-    "alacritty",
-    "chsh",
-    "fishrc",
-    "Fullscreen",
-    "iterm",
-    "quickfix",
-    "Raycast",
-    "realpath",
-    "repodir",
-    "scrollback",
-    "substep",
-    "Topgrade"
-  ]
 }
