@@ -13,7 +13,7 @@ info "Setting up Visual Studio Code..."
 substep_info "Creating Visual Studio Code folders..."
 mkdir -p "$DESTINATION"
 
-find * -not -name "$(basename ${0})" -type f | while read fn; do
+find * -name "*txt*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
