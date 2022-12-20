@@ -1,0 +1,66 @@
+command_timeout = 1000
+[cmd_duration]
+min_time = 4
+[git_branch]
+symbol = "שׂ "
+[git_status]
+conflicted = "[ﲅ ](fg:red bg:bright-black)"
+ahead = "[×${count} ](bright-white)"
+behind = "[×${count} ](bright-white)"
+diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
+untracked = "️[ ×${count} ](fg:215)"
+stashed = " "
+modified = "[ ×${count} ](bright-yellow)"
+staged = "[螺×${count} ](bright-green)"
+deleted = "[裸×${count} ](bright-red )"
+renamed = "[ ×${count} ](fg:214)"
+style = "bright-white"
+
+format = "$all_status$ahead_behind"
+
+[ruby]
+symbol = " "
+[python]
+symbol = " "
+[aws]
+symbol = "  "
+[buf]
+symbol = " "
+[c]
+symbol = " "
+[conda]
+symbol = " "
+[dart]
+symbol = " "
+[directory]
+read_only = " "
+[docker_context]
+symbol = " "
+[elixir]
+symbol = " "
+[elm]
+symbol = " "
+[golang]
+symbol = " "
+[haskell]
+symbol = " "
+[hg_branch]
+symbol = " "
+[java]
+symbol = " "
+[julia]
+symbol = " "
+[memory_usage]
+symbol = " "
+[nim]
+symbol = " "
+[nix_shell]
+symbol = " "
+[nodejs]
+symbol = " "
+[package]
+symbol = " "
+[spack]
+symbol = "🅢 "
+[rust]
+symbol = " "
