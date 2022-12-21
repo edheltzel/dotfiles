@@ -125,32 +125,16 @@ cask 'authy'
 cask 'bitwarden'
 cask 'brave-browser-dev'
 cask 'choosy'
-cask 'clipgrab'
 cask 'cyberduck'
 cask 'discord'
 cask 'docker'
 cask 'dropbox'
 cask 'figma-beta'
 cask 'firefox-developer-edition'
-cask 'font-barlow'
-cask 'font-bebas-neue'
-cask 'font-big-shoulders-display'
 cask 'font-fira-code-nerd-font'
-cask 'font-heebo'
-cask 'font-ibm-plex'
-cask 'font-inter'
 cask 'font-inter'
 cask 'font-jetbrains-mono-nerd-font'
-cask 'font-lato'
-cask 'font-lora'
 cask 'font-montserrat'
-cask 'font-open-sans'
-cask 'font-playfair-display'
-cask 'font-prata'
-cask 'font-pt-serif'
-cask 'font-roboto-slab'
-cask 'font-roboto'
-cask 'font-teko'
 cask 'gpg-suite-no-mail'
 cask 'hiddenbar'
 cask 'iina'
@@ -173,8 +157,6 @@ cask 'raycast'
 cask 'sequel-pro'
 cask 'dbeaver-community'
 cask 'sketch'
-cask 'sqlpro-for-postgres'
-cask 'todoist'
 cask 'typora'
 cask 'visual-studio-code-insiders'
 cask 'webpquicklook'
@@ -183,15 +165,11 @@ mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'Amphetamine', id: 937984704
 mas 'ColorSlurp' id: 1287239339
-mas 'Contrast', id: 1254981365
-mas 'Divvy', id: 413857545
-mas 'Gifski', id: 1351639930
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Todoist', id: 585829637
 mas 'WebPonize', id: 1526039365
 #mas 'Xcode', id: 497799835
