@@ -30,8 +30,14 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
+# To simiulate the set rates visit - https://mac-key-repeat.zaymon.dev/
+# KeyRepeat: 1 = 15ms 2 = 30ms
+# InitialKeyRepeat: 9 = 135ms 10 = 150ms 11 = 165ms 12 = 180ms
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 2
+
+
+
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
