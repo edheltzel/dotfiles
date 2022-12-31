@@ -34,7 +34,6 @@ brew 'displaylink'
 brew 'dive'
 brew 'doctl'
 brew 'duti'
-brew 'easyengine'
 brew 'exa'
 brew 'fd'
 brew 'findutils'
@@ -70,11 +69,9 @@ brew 'miniserve'
 brew 'mkcert'
 brew 'mongodb-community'
 brew 'mozjpeg'
-brew 'mysql'
 brew 'neofetch'
 brew 'neofetch'
 brew 'neovim'
-brew 'nginx'
 brew 'ngrep'
 brew 'nmap'
 brew 'nss'
@@ -138,7 +135,7 @@ cask 'iina'
 cask 'insomnia'
 cask 'imageoptim'
 cask 'iterm2'
-cask 'itsycal'
+#cask 'itsycal'
 cask 'karabiner-elements'
 cask 'namechanger'
 cask 'nucleo'
@@ -166,6 +163,7 @@ mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
+mas 'Bitwarden', id: 1352778147
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'WebPonize', id: 1526039365

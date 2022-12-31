@@ -21,6 +21,7 @@ Fira
 fishrc
 Flightdeck
 Fullscreen
+ginfuru
 heltzel
 iterm
 Jamstack
@@ -30,7 +31,6 @@ quickfix
 Raycast
 realpath
 repodir
-scrollback
 scrollback
 sharebar
 Shortcode
