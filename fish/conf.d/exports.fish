@@ -11,4 +11,4 @@ set -x --global VOL xxx
 
 # Source Multi-function files
 source ~/.config/fish/functions/_devops.fish
-source ~/.config/fish/functions/navigation.fish
+source ~/.config/fish/functions/_navigation.fish
