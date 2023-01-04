@@ -1,6 +1,6 @@
 import:
   # - "/Users/ed/.config/alacritty/flightdeck-lunar.yml"
-  - "/Users/ed/.config/alacritty/flightdeck-nebula.yml"
+  - "/Users/ed/.config/alacritty/lunar-eclipse-dark.yml"
   # - "/Users/ed/.config/alacritty/solarized_dark.yml"
 # Window Customization
 window:
