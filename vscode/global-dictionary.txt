@@ -1,6 +1,7 @@
 alacritty
 Autocare
 autohide
+autotalk
 Beavercreek
 browserlist
 btns
@@ -41,6 +42,7 @@ svg
 svgs
 templating
 Topgrade
+uncategorized
 vspacecode
 webp
 whichkey
