@@ -54,3 +54,44 @@ alias vim="nvim"
 #alias pip="pip3"
 alias pn="pnpm"
 alias px="pnpx"
+
+# Defined in - @ line 0
+function o --description 'alias o=open'
+  open $argv;
+end
+
+# Defined in - @ line 0
+function oo --description 'alias oo=open .'
+	open . $argv;
+end
+
+# Defined in - @ line 0
+function oa --description 'Open App'
+	open -a $argv;
+end
+function repo
+    set -l repo_path (repodir $argv)
+    echo "$repo_path"
+    cd "$repo_path"
+end
+
+function repodir
+    set repo_base ~/Projects
+    set repo_path (find "$repo_base" -mindepth 2 -maxdepth 2 -type d -name "*$argv*" | head -n 1)
+    if not test "$argv"; or not test "$repo_path"
+        set repo_path "$repo_base"
+    end
+    echo "$repo_path"
+end
+
+function forrepos --description 'Evaluates $argv for all repo folders'
+    for d in (find ~/Projects -mindepth 2 -maxdepth 2 ! -path . -type d)
+        pushd $d
+        set repo (basename $d)
+        echo $repo
+        eval (abbrex $argv)
+        popd > /dev/null
+    end
+end
+
+
