@@ -157,14 +157,16 @@ cask 'webpquicklook'
 
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
-mas 'Amphetamine', id: 937984704
 mas 'ColorSlurp' id: 1287239339
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
 mas 'Bitwarden', id: 1352778147
+mas 'Wappalyzer', id: 1520333300
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'WebPonize', id: 1526039365
+mas 'Todoist', id: 585829637
+mas 'Mia for Gmail', id: 851622884
 #mas 'Xcode', id: 497799835
