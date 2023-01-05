@@ -9,6 +9,7 @@ Centerville
 chsh
 codepen
 codyhouse
+DATETIME
 Dayton
 Descr
 easymotion
@@ -24,8 +25,10 @@ Flightdeck
 Fullscreen
 ginfuru
 heltzel
+htmlmin
 iterm
 Jamstack
+luxon
 moxer
 overscroll
 quickfix
