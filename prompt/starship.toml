@@ -18,6 +18,10 @@ style = "bright-white"
 
 format = "$all_status$ahead_behind"
 
+[character]
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
+
 [ruby]
 symbol = " "
 [python]

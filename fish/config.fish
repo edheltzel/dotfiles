@@ -3,8 +3,8 @@ source ~/.config/fish/conf.d/colors.fish
 source ~/.config/fish/conf.d/exports.fish
 source ~/.config/fish/conf.d/paths.fish
 
-# Start Starship Prompt
+# Prompt - Starship
 starship init fish | source
 
 # enable Vi mode
-fish_vi_key_bindings
+#fish_vi_key_bindings
