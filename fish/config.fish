@@ -5,6 +5,3 @@ source ~/.config/fish/conf.d/paths.fish
 
 # Prompt - Starship
 starship init fish | source
-
-# enable Vi mode
-#fish_vi_key_bindings
