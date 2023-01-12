@@ -1,5 +1,6 @@
 @antfu/ni
 corepack
+cspell
 easy-sharing
 generator-code
 netlify-cli
