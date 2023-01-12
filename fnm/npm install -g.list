@@ -1,2 +1,9 @@
-corepack
 @antfu/ni
+corepack
+easy-sharing
+generator-code
+netlify-cli
+npm
+vsce
+wrangler
+yo
