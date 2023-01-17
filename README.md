@@ -38,7 +38,11 @@ If your SIP is enabled, then follow the next steps to disable it – Assuming th
 7 `csrutil status` -> should read `System Integrity Protection status: disabled.`
 
 1. Restore your safely backed up ssh keys to `~/.ssh/`
-   1. Alternatively, [generate new ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/), and add these to your GitHub account.
+
+  - I personally use Dropbox to keep these keys and configuration in sync with my devices, it's not ideal but works for me:
+      - `touch ~/Dropbox/.ssh-config && ln -s ~/Dropbox/.ssh-config ~/.ssh/config`
+    -  Alternatively, [generate new ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/), and add these to your GitHub account.
+
 2. Install Homebrew and Git
 
 ```bash
