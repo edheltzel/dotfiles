@@ -45,6 +45,7 @@ iterm
 Jamstack
 luxon
 moxer
+npmrc
 overscroll
 quickfix
 Raycast
