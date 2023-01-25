@@ -192,7 +192,6 @@ downtags = fetch --tags
 [help]
 
 [gui]
-  recentrepo = /Users/ed/Projects/work/biesergreer
   fontui     = -family \"Fira Code\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
   fontdiff = -family \"Fira Mono for Powerline\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
   commitmsgwidth   = 80

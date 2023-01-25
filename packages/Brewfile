@@ -118,6 +118,7 @@ brew 'zaquestion/tap/lab'
 brew 'zip'
 
 cask 'adobe-creative-cloud'
+cask 'alt-tab'
 cask 'alfred'
 cask 'authy'
 cask 'brave-browser'
