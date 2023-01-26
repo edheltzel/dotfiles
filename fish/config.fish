@@ -5,3 +5,5 @@ source ~/.config/fish/conf.d/paths.fish
 
 # Prompt - Starship
 starship init fish | source
+# just like z but faster
+zoxide init fish | source

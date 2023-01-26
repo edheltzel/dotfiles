@@ -19,7 +19,7 @@ tap 'teamookla/speedtest'   # Command line speed test utility
 # Command Line                                              #
 #############################################################
 brew 'fish'        # Shell
-brew 'starship'    # Cross-shell prompt
+brew 'starship'    # Cross-shell prompt - Rust
 
 # CLI Essentials
 brew 'duti'         # Set default apps for file types
@@ -27,19 +27,19 @@ brew 'git'          # Version controll
 brew 'neovim'       # Text editor
 brew 'tmux'         # Term multiplexer
 brew 'mas'          # Mac App Store CLI
-brew 'topgrade'     # Upgrade all the things
+brew 'topgrade'     # Upgrade all the things - Rust
 
 # CLI Basics
 brew 'ack'          # Search tool like grep, but faster
 brew 'aria2'        # Resuming download util (better wget)
-brew 'bat'          # Output highlighting (better cat)
+brew 'bat'          # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
 brew 'cmake'        # Build system
 brew 'coreutils' # GNU core utilities (those that come with macOS are outdated)
 brew 'diff-so-fancy'# Readable file compares (better diff)
-brew 'duf'          # Get info on mounted disks (better df)
+brew 'duf'          # Get info on mounted disks (better df) - Go
 brew 'entr'         # Run command whenever file changes
-brew 'exa'          # Listing files with info (better ls)
+brew 'exa'          # Listing files with info (better ls) - Rust
 brew 'exiftool'     # Read, write and modify exif data
 brew 'fzf'          # Fuzzy file finder and filtering
 brew 'hyperfine'    # Benchmarking for arbitrary commands
@@ -47,24 +47,19 @@ brew 'jdupes'       # Duplicate file finder
 brew 'jq'           # JSON parser, output and query files
 brew 'just'         # Powerful command runner (better make)
 brew 'most'         # Multi-window scroll pager (better less)
-brew 'p7zip'        # 7z compression
-brew 'procs'        # Advanced process viewer (better ps)
-brew 'ripgrep'      # Searching within files (better grep)
+brew 'procs'        # Advanced process viewer (better ps) - Rust
+brew 'ripgrep'      # Searching within files (better grep) - Rust
 brew 'rsync'        # Fast incremental file transfer
-brew 'sd'           # RegEx find and replace (better sed)
-brew 'tldr'         # Community-maintained docs (better man)
+brew 'sd'           # RegEx find and replace (better sed) - Rust
+brew 'tldr'         # Community-maintained docs (better man) - Rust
 brew 'tokei'        # Count lines of code (better cloc)
 brew 'trash-cli'    # Record and restore removed files
-brew 'unzip'        # Unzip decompression utility
-brew 'watch'        # Run commands periorically
-brew 'z'            # Auto-learning navigation (better cd)
-brew 'zip'          # Zip compression utility
-# brew 'zoxide'       # Auto-learning navigation (better cd)
+brew 'watchexec'    # Run command whenever file changes - Rust
+brew 'zoxide'       # Auto-learning navigation (better cd) - Rust
 
 brew 'ctags' # Tag generator for programming languages
-brew 'fd' # Find files
+brew 'fd' # Find files - Rust
 brew 'fzf' # Fuzzy finder
-brew 'grep' # GNU grep, egrep and fgrep
 brew 'grc' # Colorize terminal output
 
 # CLI Image Processing and Compression
@@ -78,9 +73,8 @@ brew 'pango' # Text layout and rendering
 
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
-brew 'bottom'       # Resource monitor (better top)
-brew 'bpytop'       # Resource monitoring (like htop)
-brew 'ctop'         # Container metrics and monitoring
+brew 'bottom'       # Resource monitor (better top) - Rust
+brew 'ctop'         # Container metrics and monitoring - Go
 brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
 brew 'glances'      # Resource monitor + web and API
 brew 'goaccess'     # Web log analyzer and viewer
@@ -157,7 +151,7 @@ brew 'git-lfs'            # Git Large File Storage
 brew 'lighttpd'           # Lightweight web server
 brew 'miniserve'          # Static file server
 brew 'mkcert'             # Local HTTPS development
-brew 'scc'                # Source code counter
+brew 'scc'                # Source code counter - Go
 brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
