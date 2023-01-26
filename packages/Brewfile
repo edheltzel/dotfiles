@@ -1,6 +1,7 @@
-cask_args appdir: '/Applications'
+# Options
+cask_args appdir: '/Applications', require_sha: true
 
-tap 'homebrew/bundle'
+# Taps
 tap 'homebrew/cask-versions'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-drivers'
@@ -12,153 +13,261 @@ tap 'buo/cask-upgrade'
 tap 'mongodb/brew'
 tap 'clementtsang/bottom'
 tap 'sass/sass'
-tap 'teamookla/speedtest'
+tap 'teamookla/speedtest'   # Command line speed test utility
 
-brew 'achannarasappa/tap/ticker'
-brew 'ack'
-brew 'bash-completion'
-brew 'bat'
-brew 'bitwarden-cli'
-brew 'bottom'
-brew 'brew-cask-completion'
-brew 'cairo'
-brew 'chafa'
-brew 'cmake'
-brew 'coreutils'
-brew 'cowsay'
-brew 'ctags'
-brew 'curl'
-brew 'dart'
-brew 'deno'
-brew 'displaylink'
-brew 'dive'
-brew 'doctl'
-brew 'duti'
-brew 'exa'
-brew 'fd'
-brew 'findutils'
-brew 'fish'
-brew 'fnm'
-brew 'fortune'
-brew 'fpp'
-brew 'fzf'
-brew 'gdk-pixbuf'
-brew 'git-crypt'
-brew 'git-delta'
-brew 'git-flow-avh'
-brew 'git-lfs'
-brew 'git'
-brew 'github/gh/gh'
-brew 'go'
-brew 'gping'
-brew 'graphicsmagick'
-brew 'grc'
-brew 'grep'
-brew 'hugo'
-brew 'imagemagick'
-brew 'jpegoptim'
-brew 'jq'
-brew 'lazydocker'
-brew 'lazygit'
-brew 'ledger-live'
-brew 'libffi'
-brew 'lighttpd'
-brew 'llvm'
-brew 'mas'
-brew 'maxtex'
-brew 'miniserve'
-brew 'mkcert'
-brew 'mongodb-community'
-brew 'mozjpeg'
-brew 'neofetch'
-brew 'neofetch'
-brew 'neovim'
-brew 'ngrep'
-brew 'nmap'
-brew 'nss'
-brew 'openssl'
-brew 'optipng'
-brew 'p7zip'
-brew 'pango'
-brew 'pinentry'
-brew 'postgresql'
-brew 'procs'
-brew 'pv'
-brew 'python'
-brew 'python3'
-brew 'raszi/tap/colorize'
-brew 'rbenv'
-brew 'rclone'
-brew 'richgo'
-brew 'ripgrep'
-brew 'rsync'
-brew 'rustup-init'
-brew 's3cmd'
-brew 'sass/sass/migrator'
-brew 'sass/sass/sass'
-brew 'scc'
-brew 'sd'
-brew 'sqlite'
-brew 'ssh-copy-id'
-brew 'starship'
-brew 'svn'
-brew 'the_silver_searcher'
-brew 'tig'
-brew 'tldr'
-brew 'tmux'
-brew 'topgrade'
-brew 'tree'
-brew 'unzip'
-brew 'vagrant'
-brew 'watchexec'
-brew 'webp'
-brew 'wget'
-brew 'z'
-brew 'zaquestion/tap/lab'
-brew 'zip'
+#############################################################
+# Command Line                                              #
+#############################################################
+brew 'fish'        # Shell
+brew 'starship'    # Cross-shell prompt
 
-cask 'adobe-creative-cloud'
-cask 'alt-tab'
-cask 'alfred'
-cask 'authy'
+# CLI Essentials
+brew 'duti'         # Set default apps for file types
+brew 'git'          # Version controll
+brew 'neovim'       # Text editor
+brew 'tmux'         # Term multiplexer
+brew 'mas'          # Mac App Store CLI
+brew 'topgrade'     # Upgrade all the things
+
+# CLI Basics
+brew 'ack'          # Search tool like grep, but faster
+brew 'aria2'        # Resuming download util (better wget)
+brew 'bat'          # Output highlighting (better cat)
+brew 'brew-cask-completion' # Fish shell completion for brew cask
+brew 'cmake'        # Build system
+brew 'coreutils' # GNU core utilities (those that come with macOS are outdated)
+brew 'diff-so-fancy'# Readable file compares (better diff)
+brew 'duf'          # Get info on mounted disks (better df)
+brew 'entr'         # Run command whenever file changes
+brew 'exa'          # Listing files with info (better ls)
+brew 'exiftool'     # Read, write and modify exif data
+brew 'fzf'          # Fuzzy file finder and filtering
+brew 'hyperfine'    # Benchmarking for arbitrary commands
+brew 'jdupes'       # Duplicate file finder
+brew 'jq'           # JSON parser, output and query files
+brew 'just'         # Powerful command runner (better make)
+brew 'most'         # Multi-window scroll pager (better less)
+brew 'p7zip'        # 7z compression
+brew 'procs'        # Advanced process viewer (better ps)
+brew 'ripgrep'      # Searching within files (better grep)
+brew 'rsync'        # Fast incremental file transfer
+brew 'sd'           # RegEx find and replace (better sed)
+brew 'tldr'         # Community-maintained docs (better man)
+brew 'tokei'        # Count lines of code (better cloc)
+brew 'trash-cli'    # Record and restore removed files
+brew 'unzip'        # Unzip decompression utility
+brew 'watch'        # Run commands periorically
+brew 'z'            # Auto-learning navigation (better cd)
+brew 'zip'          # Zip compression utility
+# brew 'zoxide'       # Auto-learning navigation (better cd)
+
+brew 'ctags' # Tag generator for programming languages
+brew 'fd' # Find files
+brew 'fzf' # Fuzzy finder
+brew 'grep' # GNU grep, egrep and fgrep
+brew 'grc' # Colorize terminal output
+
+# CLI Image Processing and Compression
+brew 'gdk-pixbuf' # Image loading library
+brew 'graphicsmagick' # Image manipulation
+brew 'imagemagick' # Image manipulation
+brew 'jpegoptim' # JPEG image compressionjk
+brew 'mozjpeg' # JPEG image compression
+brew 'optipng' # PNG image compression
+brew 'pango' # Text layout and rendering
+
+# CLI Monitoring and Performance Apps
+brew 'bmon'         # Bandwidth utilization monitor
+brew 'bottom'       # Resource monitor (better top)
+brew 'bpytop'       # Resource monitoring (like htop)
+brew 'ctop'         # Container metrics and monitoring
+brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
+brew 'glances'      # Resource monitor + web and API
+brew 'goaccess'     # Web log analyzer and viewer
+brew 'gping'        # Interactive ping tool, with graph
+
+# CLI Productivity Apps
+brew 'rclone'       # Manage cloud storage
+
+# CLI Development Suits
+brew 'httpie'       # HTTP / API testing testing client
+brew 'lazydocker'   # Full Docker management app
+brew 'lazygit'      # Full Git managemtne app
+
+# CLI Docs and Cheatsheets
+brew 'navi'         # Browse, search, read cheat sheets
+brew 'tldr'         # Community-maintained docs (better man)
+
+# CLI Misc
+brew 'chafa'        # Image to ASCII art
+brew 'cowsay'       # Have an ASCII cow say your message
+brew 'figlet'       # Output text as big ASCII art text
+brew 'neofetch'     # Show system data and ditstro info
+brew 'pv'           # Pipe viewer, with animation options
+
+#############################################################
+# Software Development                                      #
+#############################################################
+
+# Development Apps
+cask 'boop'                         # Text transformation tool ie: Base64
+cask 'dbeaver-community'            # Database management
+cask 'fork'                         # Git visual client
+cask 'insomnia'                     # HTTP API testing app
+cask 'iterm2'                       # Better terminal emulator
+cask 'sequel-pro'                   # MySQL database management
+cask 'typora'                       # Just a simple markdown editor
+cask 'visual-studio-code-insiders'  # Code editor
+
+# Development Langs, Compilers, Package Managers and SDKs
+brew 'dart'               # Dart SDK
+brew 'deno'               # Deno JavaScript/TypeScript runtime
+brew 'fnm'                # Switching node versions
+brew 'go'                 # Compiler for Go Lang
+brew 'hugo'               # Static site generator
+brew 'lua'                # Lua interpreter
+brew 'luarocks'           # Package manager for Lua
+brew 'mongodb-community'  # MongoDB database engine
+# brew 'node'           # Node.js -->  Use fnm to install node versions
+brew 'postgresql'         # PostgreSQL database engine
+brew 'python'             # Python 2
+brew 'python3'            # Python 3
+brew 'rbenv'              # Ruby version manager
+brew 'richgo'             # Go test output formatter
+brew 'rust'               # Rust language
+brew 'rustup-init'        # Rust language
+brew 'sass/sass/migrator' # Sass CSS preprocessor
+brew 'sass/sass/sass'     # Sass CSS preprocessor
+brew 'sqlite'             # SQLite database engine
+
+# DevOps SCMs and CI/CD Tools
+# brew 'ansible'            # Automation
+brew 'curl'               # Command line HTTP client
+brew 'dive'               # Docker image viewer
+brew 'docker'             # Containers
+brew 'doctl'              # DigitalOcean CLI
+brew 's3cmd'              # S3 command line tool
+
+# Development Utils
+brew 'gh'                 # Interact with GitHub PRs, issues, repos
+brew 'git-delta'          # Git diff viewer
+brew 'git-extras'         # Extra git commands for common tasks
+brew 'git-flow-avh'       # Git extensions to provide high-level repository operations
+brew 'git-lfs'            # Git Large File Storage
+brew 'lighttpd'           # Lightweight web server
+brew 'miniserve'          # Static file server
+brew 'mkcert'             # Local HTTPS development
+brew 'scc'                # Source code counter
+brew 'tig'                # Text-mode interface for git
+brew 'watchexec'          # Watch a directory and execute a command when files change
+brew 'wget'               # wget with IRI support
+brew 'zaquestion/tap/lab' # GitLab CLI
+
+# Network and Security Testing
+brew 'bettercap'      # Network, scanning and moniroting
+brew 'ngrep'          # grep for network traffic
+brew 'nmap'           # Port scanning
+brew 'wrk'            # HTTP benchmarking
+cask 'burp-suite'     # Web security testing
+cask 'owasp-zap'      # Web app security scanner
+cask 'wireshark'      # Network analyzer + packet capture
+
+# Security Utilities
+brew 'bcrypt'            # Encryption utility, using blowfish
+brew 'clamav'            # Open source virus scanning suite
+brew 'dnscrypt-proxy'    # Proxy for using encrypted DNS
+brew 'git-crypt'         # Transparent encryption for git repos
+brew 'lynis'             # Scan system for common security issues
+brew 'nss'               # Network Security Services
+brew 'openssl'           # Cryptography and SSL/TLS Toolkit
+brew 'pinentry'          # GPG password entry
+brew 'rkhunter'          # Search / detect potential root kits
+brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
+cask 'gpg-suite-no-mail' # PGP encryption files without email
+cask 'veracrypt'         # File and volume encryption
+
+#############################################################
+# Desktop Applications                                      #
+#############################################################
+
+# Creativity
+# brew 'handbrake'           # Video transcoder
+cask 'adobe-creative-cloud' # Adobe Creative Cloud
+cask 'imageoptim'           # Image compression
+cask 'nucleo'               # Icon manager
+cask 'principle'            # Prototyping tool
+cask 'figma'                # Design tool
+
+# Media
+cask 'calibre'                               # E-Book reader
+cask 'iina'                                  # Media player
+cask 'spotify', args: { require_sha: false } # Propietary music streaming
+cask 'transmission'                          # Torrent client
+brew 'pandoc'                                # Universal file converter
+brew 'webp'                                  # WebP image format
+brew 'youtube-dl'                            # YouTube video downloader
+
+# Personal Applications
+cask '1password'      # Password manager (proprietary)
+cask 'authy'          # 2FA app
+cask 'cyberduck'      # Mount remote storage locations
+cask 'discord'        # Chat app
+cask 'dropbox'        # Cloud storage
+cask 'ledger-live'    # Crypto hardware wallet manager
+cask 'signal'         # Link to encrypted mobile messenger
+
+# Utility Applications
+cask 'namechanger' # Rename files in bulk
+cask 'onyx'        # System maintenance
+brew 'displaylink' # DisplayLink USB graphics drivers
+
+# Browsers
 cask 'brave-browser'
-cask 'choosy'
-cask 'cyberduck'
-cask 'dbeaver-community'
-cask 'discord'
-cask 'docker'
-cask 'dropbox'
-cask 'figma'
+cask 'choosy'      # Choose which browser to open links in
 cask 'firefox-developer-edition'
+cask 'google-chrome'
+cask 'orion' # Browser for web development webkit based
+
+# Fonts
+tap 'homebrew/cask-fonts'
 cask 'font-fira-code-nerd-font'
 cask 'font-inter'
 cask 'font-jetbrains-mono-nerd-font'
-cask 'gpg-suite-no-mail'
-cask 'hiddenbar'
-cask 'iina'
-cask 'imageoptim'
-cask 'insomnia'
-cask 'iterm2'
-cask 'namechanger'
-cask 'nucleo'
-cask 'onyx'
-cask 'openinterminal'
-cask 'orion'
-cask 'principle'
-cask 'qlcolorcode'
-cask 'qlimagesize'
-cask 'qlmarkdown'
-cask 'qlstephen'
-cask 'quicklook-csv'
-cask 'quicklook-json'
-cask 'raycast'
-cask 'sequel-pro'
-cask 'shottr'
-cask 'sketch'
-cask 'typora'
-cask 'visual-studio-code-insiders'
-cask 'webpquicklook'
 
+#############################################################
+# MacOS-Specific Stuff                                      #
+#############################################################
+
+# Mac OS Quick-Look Plugins
+cask 'qlcolorcode'    # QL for code with highlighting
+cask 'qlimagesize'    # QL for size info for images
+cask 'qlmarkdown'     # QL for markdown files
+cask 'qlprettypatch'  # QL for patch / diff files
+cask 'qlstephen'      # QL for dev text files
+cask 'qlvideo'        # QL for video formats
+cask 'quicklook-csv'  # QL for tables in CSV format
+cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
+cask 'quicklookapk',   args: { require_sha: false } # QL for Android APKs
+cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
+
+# Mac OS Mods and Imrovments
+brew 'm-cli'          # All in one MacOS management CLI app
+cask 'alt-tab'        # Much better alt-tab window switcher
+# cask 'espanso'        # Live text expander (cross-platform)
+cask 'hiddenbar'      # Hide / show annoying menubar icons
+cask 'mjolnir'        # Util for loading Lua automations
+cask 'openinterminal' # Finder button, opens directory in terminal
+cask 'popclip'        # Popup options for text on highlight
+cask 'raycast', args: { require_sha: false }  # Spotlight alternative
+cask 'shottr'         # Better screenshot utility
+cask 'stats'          # System resource usage in menubar
+cask 'typinator'      # Text expander
+
+# Mac OS Utility Apps
+cask 'little-snitch'  # Firewall app viewing / blocking traffic
+cask 'keka'           # File archiver and extractor
+
+# Install apps from the Mac App Store
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'ColorSlurp' id: 1287239339
@@ -173,3 +282,4 @@ mas 'Pages', id: 409201541
 mas 'WebPonize', id: 1526039365
 mas 'Mia for Gmail', id: 851622884
 #mas 'Xcode', id: 497799835
+
