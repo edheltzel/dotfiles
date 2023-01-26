@@ -197,6 +197,7 @@ cask 'imageoptim'           # Image compression
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
 cask 'figma'                # Design tool
+cask 'shotcut'              # Video editor
 
 # Media
 cask 'calibre'                               # E-Book reader
