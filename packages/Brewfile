@@ -221,7 +221,7 @@ cask 'brave-browser'
 cask 'choosy'      # Choose which browser to open links in
 cask 'firefox-developer-edition'
 cask 'google-chrome'
-cask 'orion' # Browser for web development webkit based
+cask 'orion' # Browser for privacy webkit
 
 # Fonts
 tap 'homebrew/cask-fonts'
