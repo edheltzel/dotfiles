@@ -2,16 +2,16 @@
 cask_args appdir: '/Applications', require_sha: true
 
 # Taps
-tap 'homebrew/cask-versions'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-drivers'
-tap 'eddieantonio/eddieantonio'
-tap 'raszi/tap'
-tap 'kyoh86/tap'
-tap 'dart-lang/dart'
 tap 'buo/cask-upgrade'
-tap 'mongodb/brew'
 tap 'clementtsang/bottom'
+tap 'dart-lang/dart'
+tap 'eddieantonio/eddieantonio'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
+tap 'kyoh86/tap'
+tap 'mongodb/brew'
+tap 'raszi/tap'
 tap 'sass/sass'
 tap 'teamookla/speedtest'   # Command line speed test utility
 
@@ -218,9 +218,9 @@ cask 'ledger-live'    # Crypto hardware wallet manager
 cask 'signal'         # Link to encrypted mobile messenger
 
 # Utility Applications
+brew 'displaylink' # DisplayLink USB graphics drivers
 cask 'namechanger' # Rename files in bulk
 cask 'onyx'        # System maintenance
-brew 'displaylink' # DisplayLink USB graphics drivers
 
 # Browsers
 cask 'brave-browser'
