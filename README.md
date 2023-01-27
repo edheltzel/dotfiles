@@ -4,12 +4,23 @@
 
 An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
 
-My playground revolves around my use of – Go, All things JavaScript, CSS Wizardry with Scss, SSG/JAMStack – mainly [11ty](https://www.11ty.dev/), [Hugo](https://gohugo.io/), and I have this soft spot in my ❤️ for the OG [Jekyll](https://jekyllrb.com).
+My playground revolves around devops and frontend development which includes all things JavaScript, CSS Wizardry with Scss, SSG/JAMStack – mainly [11ty](https://www.11ty.dev/), [Hugo](https://gohugo.io/), and I have this soft spot in my ❤️ for the OG [Jekyll](https://jekyllrb.com).
 
-# TODO
+## Terminal toolkit with replacements for [Unix commands](https://en.wikipedia.org/wiki/List_of_Unix_commands)
+I find tools that are built with Rust or Go to be performant and cover 90% of my use cases.
 
-- [ ] need to reorder install of packages
-- [ ] `gem install.list` should come after Homebrew and before for Fish
+- [bat](https://github.com/sharkdp/bat) Rust replacement for `cat`
+- [exa](https://the.exa.website/) Rust replacement for `ls`
+- [fd](https://github.com/sharkdp/fd) Rust replacement for `find`
+- [fzf](https://github.com/junegunn/fzf) a mostly Go fuzzy finder
+- [zoxide](https://github.com/ajeetdsouza/zoxide) Rust companion for `cd` and replacement for z and autojump
+- [bottom](https://clementtsang.github.io/bottom/0.8.0/) Rust replacement for `top`
+- [ripgrep](https://github.com/BurntSushi/ripgrep) Rust replace for `grep`
+- [tldr](https://tldr.sh/) Rust replace for `man`
+- [procs](https://github.com/dalance/procs) Rust replace for `ps`
+
+
+
 
 ## Usage and the Install
 
@@ -272,6 +283,10 @@ Make sure you run:
 ```
 
 This will symlink the `fnm.fish` file in `~/.config/fish/conf.d` _(It might be helpful to `source ~/.config/fish/config.fish`)_
+# TODO
+
+- [ ] need to reorder install of packages
+- [ ] `gem install.list` should come after Homebrew and before for Fish
 
 #### Special Thanks
 
