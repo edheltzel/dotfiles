@@ -14,6 +14,7 @@ I find tools that are built with Rust or Go to be performant and cover 90% of my
 - [fd](https://github.com/sharkdp/fd) Rust replacement for `find`
 - [fzf](https://github.com/junegunn/fzf) a mostly Go fuzzy finder
 - [zoxide](https://github.com/ajeetdsouza/zoxide) Rust companion for `cd` and replacement for z and autojump
+  - [zoxide fish](https://github.com/kidonng/zoxide.fish) - Fish plugin for zoxide
 - [bottom](https://clementtsang.github.io/bottom/0.8.0/) Rust replacement for `top`
 - [ripgrep](https://github.com/BurntSushi/ripgrep) Rust replace for `grep`
 - [tldr](https://tldr.sh/) Rust replace for `man`
