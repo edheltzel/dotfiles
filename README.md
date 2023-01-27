@@ -19,9 +19,6 @@ I find tools that are built with Rust or Go to be performant and cover 90% of my
 - [tldr](https://tldr.sh/) Rust replace for `man`
 - [procs](https://github.com/dalance/procs) Rust replace for `ps`
 
-
-
-
 ## Usage and the Install
 
 **Caveats**
