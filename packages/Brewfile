@@ -55,7 +55,7 @@ brew 'tldr'         # Community-maintained docs (better man) - Rust
 brew 'tokei'        # Count lines of code (better cloc)
 brew 'trash-cli'    # Record and restore removed files
 brew 'watchexec'    # Run command whenever file changes - Rust
-# brew 'zoxide'       # Auto-learning navigation (better cd) - Rust --> use the fish plugin instead
+brew 'zoxide'       # Auto-learning navigation (better cd) - Rust --> fish plugin adds to PATH
 
 brew 'ctags' # Tag generator for programming languages
 brew 'fd' # Find files - Rust
