@@ -6,12 +6,12 @@ tap 'buo/cask-upgrade'
 tap 'clementtsang/bottom'
 tap 'dart-lang/dart'
 tap 'eddieantonio/eddieantonio'
+tap 'github/gh'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'kyoh86/tap'
 tap 'mongodb/brew'
-tap 'raszi/tap'
 tap 'sass/sass'
 tap 'teamookla/speedtest'   # Command line speed test utility
 
