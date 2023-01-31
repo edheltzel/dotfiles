@@ -52,6 +52,7 @@ Raycast
 realpath
 renderfile
 repodir
+Roadmap
 scrollback
 setend
 sharebar
@@ -61,6 +62,7 @@ Springboro
 substep
 svg
 svgs
+syntaxhighlight
 Templatender
 templating
 Topgrade
