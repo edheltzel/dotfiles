@@ -14,6 +14,7 @@ ignore_failures = ["git_repos"]
 no_retry = true
 
 notify_each_step = false
+skip_notify = true
 
 # Run inside tmux
 #run_in_tmux = true
