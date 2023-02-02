@@ -45,8 +45,10 @@ iterm
 Jamstack
 luxon
 moxer
+Nanotubes
 npmrc
 overscroll
+pnpm
 quickfix
 Raycast
 realpath
