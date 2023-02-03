@@ -112,6 +112,7 @@ cask 'iterm2'                       # Better terminal emulator
 cask 'sequel-pro'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code-insiders'  # Code editor
+cask 'fig'                          # IDE sytle autocomplete 
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'dart'               # Dart SDK
