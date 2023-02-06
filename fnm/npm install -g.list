@@ -1,4 +1,5 @@
 @antfu/ni
+@bitwarden/cli
 corepack
 cspell
 easy-sharing
