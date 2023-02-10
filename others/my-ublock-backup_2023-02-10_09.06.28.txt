@@ -1,0 +1,48 @@
+{
+  "timeStamp": 1676037988168,
+  "version": "1.46.0",
+  "userSettings": {
+    "importedLists": []
+  },
+  "selectedFilterLists": [
+    "ublock-quick-fixes",
+    "user-filters",
+    "assets.json",
+    "public_suffix_list.dat",
+    "ublock-badlists",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-abuse",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "account.scholastic.com",
+    "analytics.google.com",
+    "bookfairs.scholastic.com",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "dns.godaddy.com",
+    "edge-scheme",
+    "gnbx2023elitegift.incentashop.com",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "patient.klara.com",
+    "ppp.fountainheadcc.com",
+    "us02web.zoom.us",
+    "vivaldi-scheme",
+    "www.grammarly.com",
+    "www.spectrum.net",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false",
+  "userFilters": "||facebook.com/plugins/*\n||connect.facebook.com\n||connect.facebook.net\n||platform.twitter.com\n"
+}
