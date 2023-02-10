@@ -106,7 +106,7 @@ brew 'pv'           # Pipe viewer, with animation options
 # Development Apps
 cask 'boop'                         # Text transformation tool ie: Base64
 cask 'dbeaver-community'            # Database management
-#cask 'fig'                          # IDE sytle autocomplete 
+#cask 'fig'                          # IDE sytle autocomplete
 cask 'fork'                         # Git visual client
 cask 'insomnia'                     # HTTP API testing app
 cask 'iterm2'                       # Better terminal emulator
@@ -247,17 +247,18 @@ cask 'quicklookapk',   args: { require_sha: false } # QL for Android APKs
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac OS Mods and Imrovments
-brew 'm-cli'          # All in one MacOS management CLI app
-cask 'alt-tab'        # Much better alt-tab window switcher
-# cask 'espanso'        # Live text expander (cross-platform) - use typinator for macOS
-cask 'hiddenbar'      # Hide / show annoying menubar icons
-cask 'mjolnir'        # Util for loading Lua automations
-cask 'openinterminal' # Finder button, opens directory in terminal
-cask 'popclip'        # Popup options for text on highlight
+brew 'm-cli'              # All in one MacOS management CLI app
+cask 'alt-tab'            # Much better alt-tab window switcher
+# cask 'espanso'          # Live text expander (cross-platform) - use typinator for macOS
+cask 'hiddenbar'          # Hide / show annoying menubar icons
+cask 'karabiner-elements' # Better keyboard remapping
+cask 'mjolnir'            # Util for loading Lua automations
+cask 'openinterminal'     # Finder button, opens directory in terminal
+cask 'popclip'            # Popup options for text on highlight
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
-cask 'shottr'         # Better screenshot utility
-cask 'stats'          # System resource usage in menubar
-cask 'typinator'      # Text expander - macOS only
+cask 'shottr'             # Better screenshot utility
+cask 'stats'              # System resource usage in menubar
+cask 'typinator'          # Text expander - macOS only
 
 # Mac OS Utility Apps
 cask 'little-snitch'  # Firewall app viewing / blocking traffic
