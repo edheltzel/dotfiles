@@ -108,10 +108,10 @@ brew 'pv'           # Pipe viewer, with animation options
 # Development Apps
 cask 'boop'                         # Text transformation tool ie: Base64
 cask 'dbeaver-community'            # Database management
-#cask 'fig'                          # IDE sytle autocomplete
 cask 'fork'                         # Git visual client
 cask 'insomnia'                     # HTTP API testing app
 cask 'iterm2'                       # Better terminal emulator
+cask 'obsidian'                     # Markdown note taking app
 cask 'sequel-pro'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code-insiders'  # Code editor
