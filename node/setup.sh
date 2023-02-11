@@ -9,10 +9,10 @@ COMMENT=\#*
 
 sudo -v
 
-info "Installing Node Version(s)..."
+info "Installing FNM - Fast and simple NodeJS version manager..."
 curl -fsSL https://fnm.vercel.app/install | bash
 
-substep_info "Install Node LTS with Corepack enabled"
+substep_info "Installing Node LTS with Corepack enabled"
 fnm install --lts && npm i -g corepack && corepack enable
 
 success "Finished installing Node with FNM."
