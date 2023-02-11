@@ -197,16 +197,6 @@ downtags = fetch --tags
   commitmsgwidth   = 80
   pruneduringfetch = true
   tabsize          = 2
-
-[commit]
-  gpgsign = true
-
-[suer]
-  signingkey = 6C9732CDD2C37024
-
-[gpg]
-	program = gpg2
-
 [pull]
   rebase = false
 
