@@ -80,8 +80,8 @@
 [alias]
   #used the most by me
   aa  = add --all
-  cm  = commit -m
-  cma = !git add --all && git commit -m
+  cm  = commit -S -m
+  cma = !git add --all && git commit -S -m
   co  = checkout
   rv  = remote -v
 
