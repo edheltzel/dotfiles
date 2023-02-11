@@ -189,10 +189,10 @@ brew 'git-crypt'         # Transparent encryption for git repos
 brew 'lynis'             # Scan system for common security issues
 brew 'nss'               # Network Security Services
 brew 'openssl'           # Cryptography and SSL/TLS Toolkit
-brew 'pinentry'          # GPG password entry
+# brew 'pinentry'          # GPG password entry
 brew 'rkhunter'          # Search / detect potential root kits
 brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
-cask 'gpg-suite-no-mail' # PGP encryption files without email
+# cask 'gpg-suite-no-mail' # PGP encryption files without email
 cask 'veracrypt'         # File and volume encryption
 
 #############################################################
