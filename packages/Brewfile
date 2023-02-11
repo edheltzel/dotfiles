@@ -1,3 +1,15 @@
+###############################################################
+# ~/.Brewfile - Software Installs for MacOS                   #
+#                                                             #
+# List of packages to be installed / updated via Homebrew     #
+# Apps are sorted by category, and arranged alphabetically    #
+# Be sure to delete / comment out anything you do not need    #
+# Usage, run: $ brew bundle --global --file $HOME/.Brewfile   #
+# Source GH repository: https://github.com/edheltzel/Brewfile #
+# See brew docs for more info: https://docs.brew.sh/Manpage   #
+#                                                             #
+###############################################################
+
 # Options
 cask_args appdir: '/Applications', require_sha: true
 
@@ -26,9 +38,9 @@ brew 'starship'    # Cross-shell prompt - Rust
 # CLI Essentials
 brew 'duti'         # Set default apps for file types
 brew 'git'          # Version controll
+brew 'mas'          # Mac App Store CLI
 brew 'neovim'       # Text editor
 brew 'tmux'         # Term multiplexer
-brew 'mas'          # Mac App Store CLI
 brew 'topgrade'     # Upgrade all the things - Rust
 
 # CLI Basics
@@ -37,13 +49,17 @@ brew 'aria2'        # Resuming download util (better wget)
 brew 'bat'          # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
 brew 'cmake'        # Build system
-brew 'coreutils' # GNU core utilities (those that come with macOS are outdated)
+brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
+brew 'ctags'        # Tag generator for programming languages
 brew 'diff-so-fancy'# Readable file compares (better diff)
 brew 'duf'          # Get info on mounted disks (better df) - Go
 brew 'entr'         # Run command whenever file changes
 brew 'exa'          # Listing files with info (better ls) - Rust
 brew 'exiftool'     # Read, write and modify exif data
+brew 'fd'           # Find files - Rust
 brew 'fzf'          # Fuzzy file finder and filtering
+brew 'fzf'          # Fuzzy finder
+brew 'grc'          # Colorize terminal output
 brew 'hyperfine'    # Benchmarking for arbitrary commands
 brew 'jdupes'       # Duplicate file finder
 brew 'jq'           # JSON parser, output and query files
@@ -58,11 +74,6 @@ brew 'tokei'        # Count lines of code (better cloc)
 brew 'trash-cli'    # Record and restore removed files
 brew 'watchexec'    # Run command whenever file changes - Rust
 brew 'zoxide'       # Auto-learning navigation (better cd) - Rust --> fish plugin adds to PATH
-
-brew 'ctags' # Tag generator for programming languages
-brew 'fd' # Find files - Rust
-brew 'fzf' # Fuzzy finder
-brew 'grc' # Colorize terminal output
 
 # CLI Image Processing and Compression
 brew 'gdk-pixbuf' # Image loading library
@@ -190,24 +201,24 @@ cask 'veracrypt'         # File and volume encryption
 # Creativity
 # brew 'handbrake'           # Video transcoder
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
+cask 'figma'                # Design tool
 cask 'imageoptim'           # Image compression
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
-cask 'figma'                # Design tool
 cask 'shotcut'              # Video editor
 
 # Media
+brew 'pandoc'                                # Universal file converter
+brew 'webp'                                  # WebP image format
+brew 'youtube-dl'                            # YouTube video downloader
 cask 'calibre'                               # E-Book reader
 cask 'iina'                                  # Media player
 cask 'spotify', args: { require_sha: false } # Propietary music streaming
 cask 'transmission'                          # Torrent client
-brew 'pandoc'                                # Universal file converter
-brew 'webp'                                  # WebP image format
-brew 'youtube-dl'                            # YouTube video downloader
 
 # Personal Applications
-cask '1password'      # Password manager (proprietary)
 cask 'authy'          # 2FA app
+cask 'bitwarden'      # Password manager
 cask 'cyberduck'      # Mount remote storage locations
 cask 'discord'        # Chat app
 cask 'dropbox'        # Cloud storage
@@ -220,11 +231,12 @@ cask 'namechanger' # Rename files in bulk
 cask 'onyx'        # System maintenance
 
 # Browsers
-cask 'brave-browser'
-cask 'choosy'      # Choose which browser to open links in
-cask 'firefox-developer-edition'
-cask 'google-chrome'
-cask 'orion' # Browser for privacy webkit
+cask 'brave-browser-beta'        # Brave browser beta channel
+cask 'brave-browser'             # Brave browser
+cask 'choosy'                    # Choose which browser to open links in
+cask 'firefox-developer-edition' # Firefox dev edition
+cask 'google-chrome'             # Chrome browser
+cask 'orion'                     # Browser for privacy webkit
 
 # Fonts
 tap 'homebrew/cask-fonts'
@@ -273,7 +285,7 @@ mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
-mas 'Bitwarden', id: 1352778147
+# mas 'Bitwarden', id: 1352778147
 mas 'Wappalyzer', id: 1520333300
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
