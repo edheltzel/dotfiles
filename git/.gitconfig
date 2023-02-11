@@ -1,6 +1,7 @@
 [user]
   name  = Ed Heltzel
   email = ed@rainyday.media
+	signingkey = 1A1DCDA4862DF3B8
 
 [github]
   user = edheltzel
@@ -79,8 +80,8 @@
 [alias]
   #used the most by me
   aa  = add --all
-  cm  = commit -S -m
-  cma = !git add --all && git commit -S -m
+  cm  = commit -m
+  cma = !git add --all && git commit -m
   co  = checkout
   rv  = remote -v
 
@@ -166,13 +167,13 @@
   r   = reset
   rhh = reset HEAD --hard
 
-  last = log -1 HEAD
-  latest = show --name-only --oneline HEAD
-  down = pull --rebase origin master
-  up = push -u origin master
-  save = "!git add -A; git commit ."
-  uptags = push --follow-tags
-  downtags = fetch --tags
+last = log -1 HEAD
+latest = show --name-only --oneline HEAD
+down = pull --rebase origin master
+up = push -u origin master
+save = "!git add -A; git commit ."
+uptags = push --follow-tags
+downtags = fetch --tags
 
 [push]
   default    = matching
@@ -196,6 +197,15 @@
   commitmsgwidth   = 80
   pruneduringfetch = true
   tabsize          = 2
+
+[commit]
+  gpgsign = true
+
+[suer]
+  signingkey = 6C9732CDD2C37024
+
+[gpg]
+	program = gpg2
 
 [pull]
   rebase = false
