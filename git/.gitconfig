@@ -167,13 +167,13 @@
   r   = reset
   rhh = reset HEAD --hard
 
-last = log -1 HEAD
-latest = show --name-only --oneline HEAD
-down = pull --rebase origin master
-up = push -u origin master
-save = "!git add -A; git commit ."
-uptags = push --follow-tags
-downtags = fetch --tags
+  last = log -1 HEAD
+  latest = show --name-only --oneline HEAD
+  down = pull --rebase origin master
+  up = push -u origin master
+  save = "!git add -A; git commit ."
+  uptags = push --follow-tags
+  downtags = fetch --tags
 
 [push]
   default    = matching
@@ -198,15 +198,6 @@ downtags = fetch --tags
   pruneduringfetch = true
   tabsize          = 2
 
-[commit]
-  gpgsign = true
-
-[suer]
-  signingkey = 6C9732CDD2C37024
-
-[gpg]
-	program = gpg2
-
 [pull]
   rebase = false
 
@@ -216,3 +207,5 @@ downtags = fetch --tags
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
   path = /Users/ed/Library/Preferences/netlify/helper/git-config
+[commit]
+	gpgsign = false
