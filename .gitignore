@@ -7,3 +7,6 @@ karabiner/automatic_backups/
 ### REPOS ###
 repos/work.list
 repos/playground.list
+
+### PRIVATE ###
+private/ssh/
