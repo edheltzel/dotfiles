@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/unfocus-current-task.tsx"],
+  "sourcesContent": ["import { launchCommand, LaunchType, showHUD, Cache } from \"@raycast/api\";\n\nconst cache = new Cache();\n\nconst command = async () => {\n  cache.set(\"todoist.focusedTask\", JSON.stringify({ id: \"\", content: \"\" }));\n\n  await showHUD(`\uD83D\uDC4B No more focus`);\n\n  try {\n    launchCommand({ name: \"menubar\", type: LaunchType.UserInitiated });\n  } catch (error) {\n    /* empty */\n  }\n};\n\nexport default command;\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAA0D,wBAEpDC,EAAQ,IAAI,QAEZC,EAAU,SAAY,CAC1BD,EAAM,IAAI,sBAAuB,KAAK,UAAU,CAAE,GAAI,GAAI,QAAS,EAAG,CAAC,CAAC,EAExE,QAAM,WAAQ,yBAAkB,EAEhC,GAAI,IACF,iBAAc,CAAE,KAAM,UAAW,KAAM,aAAW,aAAc,CAAC,CACnE,MAAE,CAEF,CACF,EAEOH,EAAQI",
+  "names": ["unfocus_current_task_exports", "__export", "unfocus_current_task_default", "__toCommonJS", "import_api", "cache", "command"]
+}
