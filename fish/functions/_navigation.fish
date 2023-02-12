@@ -14,5 +14,5 @@ function cll; command clear; and exa -Flah --icons --sort modified $argv; end
 # Often used shortcuts/aliases
 function projects; cd ~/Projects; end
 function work; cd ~/Projects/work; end
-function dots; cd ~/Projects/dots; end
-function cuts; ~/Projects/dots; and eval $EDITOR .; end
+function dots; cd ~/Projects/dotfiles; end
+function cuts; ~/Projects/dotfiles; and eval $EDITOR .; end
