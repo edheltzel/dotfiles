@@ -1,0 +1,78 @@
+#==================================
+# GENERAL SETTINGS
+#==================================
+set main-view = line-number:no,interval=5 id:yes date:relative author:full commit-title:yes,graph,refs,overflow=no
+set diff-context = 5
+set diff-highlight = true
+set horizontal-scroll = 20%
+set line-graphics = utf-8
+set show-changes = true
+set status-show-untracked-dirs = false
+set tab-size = 2
+set vertical-split = horizontal
+set wrap-lines = yes
+set blame-view  = date:relative-compact author:full file-name:auto id:yes,color line-number:no,interval=5 text
+set editor-line-number = yes
+set split-view-width   = 65%
+
+#==================================
+# COLOR SETTINGS
+#==================================
+# general
+color author      3       default
+color commit      11      default
+color cursor      2       0
+color default     default default
+color id          magenta default
+color parent      default default
+color status      default default
+color title-blur  default default
+color title-focus 3       default
+
+# # diff highlighting
+color diff-add           default default
+color diff-chunk         3       default
+color "copy from "       9       default
+color "copy to "         2       default
+color diff-del           default default
+color "dissimilarity "   default default
+color diff-header        4       default
+color diff-index         default default
+color diff-newmode       2       default
+color diff-oldmode       9       default
+color "rename from "     9       default
+color "rename to "       2       default
+color diff-similarity    default default
+color "diff-tree "       default default
+
+# # commit headers pretty prints
+color "AuthorDate: " 11      default
+color "author "      3       default
+color "CommitDate: " 11      default
+color "commit "      3       default
+color date           blue    default
+color "Merge: "      default default
+color "Refs: "       default default
+
+# main view colors
+color main-head      default default
+color main-local-tag default default
+color main-ref       default default
+color main-remote    default default
+color main-tag       default default
+color main-tracked   default default
+
+# tree view
+color tree.header       default default
+color tree.directory    default default
+color tree.file         default default
+
+#==================================
+# KEYBINDINGS SETTINGS
+#==================================
+bind generic g move-first-line #vim style
+bind generic g move-last-line #vim style
+bind generic n next #vim style
+bind generic N previous
+bind diff o !@hub brwose -- commit/%(commit)
+

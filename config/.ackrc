@@ -1,0 +1,49 @@
+--ignore-ack-defaults
+# Always color, even if piping to a another program
+--color
+
+# Sort files
+--sort-files
+--smart-case
+
+### Files to ignore
+# minified Javascript
+--ignore-file=match:/[.-]min[.]js$/
+--ignore-file=match:/[.]js[.]min$/
+
+# minified CSS
+--ignore-file=match:/[.]min[.]css$/
+--ignore-file=match:/[.]css[.]min$/
+
+# JS and CSS source maps
+--ignore-file=match:/[.]js[.]map$/
+--ignore-file=match:/[.]css[.]map$/
+
+### Directories to ignore
+--ignore-directory=is:.git
+--ignore-dir=.vscode/
+
+# Jekyll and Hugo
+--ignore-dir=node_modules/
+--ignore-dir=bower_components/
+--ignore-dir=.bundle/
+--ignore-dir=_site/
+--ignore-dir=public/
+--ignore-dir=.sass-cache
+--ignore-dir=.jekyll-cache
+
+# setting types
+--type-set=css:ext:scss,sass,css,less,postcss
+--type-set=markdown:ext:md,markdown
+
+# additional types
+--type-add=html:ext:htm,html,xhtml,html.erb,html.haml,haml
+--type-add=js:ext:ts,jsx,dart,vue
+--type-add=yaml:ext:yaml,yml,toml
+--type-add=json:ext:json
+--type-add=go:ext:go
+--type-add=dart:ext:dart
+
+# Shell
+--type-add=shell:ext:sh,bash,csh,tcsh,ksh,zsh,fish
+--type-add=shell:firstlinematch:/^#!.*\b(?:ba|t?c|k|z|fi)?sh\b/
