@@ -30,15 +30,12 @@ tap 'teamookla/speedtest'   # Command line speed test utility
 #############################################################
 # Command Line                                              #
 #############################################################
-brew 'chezmoi'     # Dotfile manager
 brew 'fish'        # Shell
 brew 'starship'    # Cross-shell prompt - Rust
 
 
 # CLI Essentials
-brew 'duti'         # Set default apps for file types
 brew 'git'          # Version controll
-brew 'mas'          # Mac App Store CLI
 brew 'neovim'       # Text editor
 brew 'tmux'         # Term multiplexer
 brew 'topgrade'     # Upgrade all the things - Rust
@@ -53,6 +50,7 @@ brew 'coreutils'    # GNU core utilities (those that come with macOS are outdate
 brew 'ctags'        # Tag generator for programming languages
 brew 'diff-so-fancy'# Readable file compares (better diff)
 brew 'duf'          # Get info on mounted disks (better df) - Go
+brew 'duti'         # Set default apps for file types
 brew 'entr'         # Run command whenever file changes
 brew 'exa'          # Listing files with info (better ls) - Rust
 brew 'exiftool'     # Read, write and modify exif data
@@ -64,6 +62,7 @@ brew 'hyperfine'    # Benchmarking for arbitrary commands
 brew 'jdupes'       # Duplicate file finder
 brew 'jq'           # JSON parser, output and query files
 brew 'just'         # Powerful command runner (better make)
+brew 'mas'          # Mac App Store CLI
 brew 'most'         # Multi-window scroll pager (better less)
 brew 'procs'        # Advanced process viewer (better ps) - Rust
 brew 'ripgrep'      # Searching within files (better grep) - Rust
@@ -97,7 +96,6 @@ brew 'gping'        # Interactive ping tool, with graph
 brew 'rclone'       # Manage cloud storage
 
 # CLI Development Suits
-brew 'httpie'       # HTTP / API testing testing client
 brew 'lazydocker'   # Full Docker management app
 brew 'lazygit'      # Full Git managemtne app
 
@@ -121,7 +119,7 @@ cask 'boop'                         # Text transformation tool ie: Base64
 cask 'dbeaver-community'            # Database management
 cask 'fork'                         # Git visual client
 cask 'insomnia'                     # HTTP API testing app
-cask 'iterm2'                       # Better terminal emulator
+cask 'iterm2'                       # Better terminalmemulator
 cask 'obsidian'                     # Markdown note taking app
 cask 'sequel-pro'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
