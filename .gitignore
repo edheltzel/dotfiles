@@ -10,3 +10,5 @@ repos/playground.list
 
 ### PRIVATE ###
 private/ssh/
+.gitsecret/keys/random_seed
+!*.secret

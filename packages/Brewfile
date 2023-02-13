@@ -157,6 +157,7 @@ brew 's3cmd'              # S3 command line tool
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
 brew 'git-delta'          # Git diff viewer
+brew 'git-secret'         # Encrypt files in git repos
 brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-flow-avh'       # Git extensions to provide high-level repository operations
 brew 'git-lfs'            # Git Large File Storage
@@ -183,6 +184,7 @@ cask 'wireshark'      # Network analyzer + packet capture
 brew 'bcrypt'            # Encryption utility, using blowfish
 brew 'clamav'            # Open source virus scanning suite
 brew 'dnscrypt-proxy'    # Proxy for using encrypted DNS
+brew 'gnupg'             # GNU Privacy Guard
 brew 'git-crypt'         # Transparent encryption for git repos
 brew 'lynis'             # Scan system for common security issues
 brew 'nss'               # Network Security Services
@@ -190,7 +192,7 @@ brew 'openssl'           # Cryptography and SSL/TLS Toolkit
 # brew 'pinentry'          # GPG password entry
 brew 'rkhunter'          # Search / detect potential root kits
 brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
-cask 'gpg-suite-no-mail' # PGP encryption files without email
+cask 'gpg-suite'         # GPG encryption files
 cask 'veracrypt'         # File and volume encryption
 
 #############################################################
