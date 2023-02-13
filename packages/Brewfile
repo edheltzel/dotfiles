@@ -115,7 +115,6 @@ brew 'pv'           # Pipe viewer, with animation options
 #############################################################
 
 # Development Apps
-cask 'boop'                         # Text transformation tool ie: Base64
 cask 'dbeaver-community'            # Database management
 cask 'fork'                         # Git visual client
 cask 'insomnia'                     # HTTP API testing app
