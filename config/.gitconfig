@@ -1,7 +1,7 @@
 [user]
   name  = Ed Heltzel
   email = ed@rainyday.media
-	signingkey = F8A08CE7812517F0
+	signingkey = 5EEC54136BCA932B
 
 [github]
   user = edheltzel
@@ -80,8 +80,10 @@
 [alias]
   #used the most by me
   aa  = add --all
-  cm  = commit -S -m
-  cma = !git add --all && git commit -S -m
+  # cm  = commit -S -m
+  # cma = !git add --all && git commit -S -m
+  cm  = commit -m
+  cma = !git add --all && git commit -m
   co  = checkout
   rv  = remote -v
 
