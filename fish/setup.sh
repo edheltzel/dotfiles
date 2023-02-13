@@ -15,10 +15,12 @@ mkdir -p "$FISH_PATH/functions"
 mkdir -p "$FISH_PATH/customs"
 mkdir -p "$FISH_PATH/completions"
 mkdir -p "$FISH_PATH/conf.d"
+mkdir -p "$FISH_PATH/utils"
 
 find * -name "*fish*" | while read fn; do
     symlink "$SOURCE/$fn" "$FISH_PATH/$fn"
 done
+
 clear_broken_symlinks "$FISH_PATH"
 
 
