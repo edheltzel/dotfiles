@@ -8,27 +8,11 @@ cd "$DIR"
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"
 CONFIG_PATH="$(realpath ~/.config)"
-NVM_DIR="$(realpath ~/.config/nvim)"
-
-install_nvm () {
-  nvm_repo='https://github.com/AstroNvim/AstroNvim.git'
-  if [ -d "$NVM_DIR" ]; then # Already installed, update
-    cd $NVM_DIR && git pull
-  else # Not yet installed, promt user to confirm before proceeding
-    if read -p "\nInstall AstroNvim now? (y/N)"; then
-      echo -e "\nInstalling..."
-      git clone $nvm_repo $NVM_DIR
-    else
-      echo -e "\nAborting..."
-      return
-    fi
-  fi
-}
 
 info "Setting symlinks dotfiles and config folders."
 
 substep_info "Symlink dotfiles to home directory..."
-find * -name ".*" -not -wholename "*DS_Store*" -not -wholename "*gitkeep*" | while read fn; do
+find . -name ".*" -not -wholename "*DS_Store*" -not -wholename "*gitkeep*" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
@@ -81,11 +65,6 @@ find . -name "utils" | while read fn; do
     symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
 substep_success "Handy Shell utilitis are ready."
-
-#NeoVim AstroVim setup
-substep_info "Installing AstroVim..."
-install_nvm
-substep_success "Nvim is ready. Make sure to run :PackerSync to install plugins."
 
 clear_broken_symlinks "$CONFIG_PATH"
 
