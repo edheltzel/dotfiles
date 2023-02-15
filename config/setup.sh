@@ -15,7 +15,7 @@ install_nvm () {
   if [ -d "$NVM_DIR" ]; then # Already installed, update
     cd $NVM_DIR && git pull
   else # Not yet installed, promt user to confirm before proceeding
-    if read -q "choice?Install AstroNvim now? (y/N)"; then
+    if read -p "\nInstall AstroNvim now? (y/N)"; then
       echo -e "\nInstalling..."
       git clone $nvm_repo $NVM_DIR
     else
@@ -83,8 +83,8 @@ done
 substep_success "Handy Shell utilitis are ready."
 
 #NeoVim AstroVim setup
+substep_info "Installing AstroVim..."
 install_nvm
-
 substep_success "Nvim is ready. Make sure to run :PackerSync to install plugins."
 
 clear_broken_symlinks "$CONFIG_PATH"
