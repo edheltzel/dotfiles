@@ -280,7 +280,7 @@ cask 'keka'           # File archiver and extractor
 # Install apps from the Mac App Store
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
-mas 'ColorSlurp' id: 1287239339
+mas 'ColorSlurp', id: 1287239339
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
