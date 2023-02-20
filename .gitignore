@@ -4,6 +4,9 @@ NetrwTreeListing*
 ### Karabiner ###
 karabiner/automatic_backups/
 
+### Raycast Extensions ###
+raycast/extensions/
+
 ### REPOS ###
 repos/work.list
 repos/playground.list
