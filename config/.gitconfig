@@ -1,8 +1,6 @@
 [user]
   name  = Ed Heltzel
   email = ed@rainyday.media
-	signingkey = 5EEC54136BCA932B
-
 [github]
   user = edheltzel
 
@@ -205,6 +203,10 @@ downtags = fetch --tags
 [init]
   defaultBranch = master
 
-# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
-  path = /Users/ed/Library/Preferences/netlify/helper/git-config
+	path = ~/.gitconfig-bigmac # mac studio
+	# path = ~/.gitconfig-macdaddy # macbook air
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
