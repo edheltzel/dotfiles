@@ -134,7 +134,7 @@ brew 'lua'                # Lua interpreter
 brew 'luarocks'           # Package manager for Lua
 brew 'mongodb-community'  # MongoDB database engine
 # brew 'node'           # Node.js -->  Use fnm See node/
-brew 'postgresql'         # PostgreSQL database engine
+brew 'postgresql@14'      # PostgreSQL database engine
 brew 'python'             # Python 2
 brew 'python3'            # Python 3
 brew 'rbenv'              # Ruby version manager
