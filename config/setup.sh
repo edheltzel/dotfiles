@@ -69,4 +69,3 @@ substep_success "Handy Shell utilitis are ready."
 clear_broken_symlinks "$CONFIG_PATH"
 
 success "Home Directory and Config folders configured."
-
