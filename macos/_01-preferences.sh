@@ -1,6 +1,6 @@
 ###############################################################################
-# Applies MacOS settings and preferences in /Library/Preferences             #
-# Covers Spotlight, layout, colors, fonts, mouse, keyboard and shortcuts                                                             #
+# Applies MacOS settings and preferences in /Library/Preferences              #
+# Covers Spotlight, layout, colors, fonts, mouse, keyboard and shortcuts      #
 ###############################################################################
 
 # Store Identities in the KeyChain

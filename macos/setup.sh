@@ -4,21 +4,24 @@
 # Initiates the applying of MacOS-specific settings and preferences          #
 # IMPORTANT: Be sure to read files through thoughouly before executing       #
 #                                                                            #
-# CAUTION: This script will apply changes to your OS X system configuration  #
+# CAUTION: This script will apply changes to your MacOS system configuration #
 # Be sure to read it through carefully, and remove anything you don't want.  #
+#                                                                            #
 # Close any open System Preferences panes, to prevent them from overriding   #
 # settings we’re about to change                                             #
 #                                                                            #
 # This file is inspired by - https://mths.be/macos                           #
 ##############################################################################
 
-#
-
 DIR=$(dirname "$0")
 cd "$DIR"
 
-# Variables for system preferences
+###########################################################################################
+# Variables for system preferences and settings                                           #
+# NOTE: I use a multi Mac workflow, so I have to set the computer name based on the model #
+###########################################################################################
 IS_MACBOOK=`system_profiler SPSoftwareDataType SPHardwareDataType | grep "Model Name" | grep "Book"`
+
 if [ "$IS_MACBOOK" != "" ]; then
   COMPUTER_NAME="MacDaddy"
   else

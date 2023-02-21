@@ -1,4 +1,8 @@
 ###############################################################################
+# Applies MacOS settings and preferences in /Library/Preferences              #
+# Covers Finder, Safari, Time machine, Activity Monitor, Mac App Store,       #
+# Photos, Messages, Google Chrome, etc.                                       #
+###############################################################################
 # Finder                                                                      #
 ###############################################################################
 

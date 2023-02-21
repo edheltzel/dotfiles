@@ -1,9 +1,6 @@
 ##############################################################################
 # Security improvements for Mac OS systems                                    #
 # Covers Siri, firewall, account security, connections and network protocols #
-#                                                                            #
-# CAUTION: This script will apply changes to your OS X system configuration  #
-# Be sure to read it through carefully, and remove anything you don't want.  #
 ##############################################################################
 # Quit System Preferences before starting
 osascript -e 'tell application "System Preferences" to quit'
