@@ -37,7 +37,7 @@ brew 'starship'    # Cross-shell prompt - Rust
 # CLI Essentials
 brew 'git'          # Version controll
 brew 'neovim'       # Text editor
-brew 'tmux'         # Term multiplexer
+# brew 'tmux'         # Term multiplexer
 brew 'topgrade'     # Upgrade all the things - Rust
 
 # CLI Basics
