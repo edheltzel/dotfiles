@@ -265,7 +265,7 @@ defaults write com.apple.dock mineffect -string "suck"
 defaults write com.apple.dock magnification -bool false
 
 # Position on screen: 'left', 'bottom', 'right'
-defaults write com.apple.dock orientation -string "left"
+defaults write com.apple.dock orientation -string "bottom"
 
 # Dock pinning: 'start', 'middle', 'end'
 # defaults write com.apple.dock pinning -string 'middle'
