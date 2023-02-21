@@ -2,6 +2,7 @@
 # Security improvements for Mac OS systems                                    #
 # Covers Siri, firewall, account security, connections and network protocols #
 ##############################################################################
+
 # Quit System Preferences before starting
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -143,17 +144,3 @@ cupsctl --no-remote-admin
 # Disable Captive portal
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control.plist Active -bool false
 
-#####################################
-# Print finishing message, and exit #
-#####################################
-echo -e "${PRIMARY_COLOR}\nFinishing...${RESET_COLOR}"
-echo -e "${SUCCESS_COLOR}✔ ${current_event}/${total_events} tasks were completed \
-succesfully in $((`date +%s`-start_time)) seconds${RESET_COLOR}"
-echo -e "\n${PRIMARY_COLOR}         .:'\n     __ :'__\n  .'\`__\`-'__\`\`.\n \
-:__________.-'\n :_________:\n  :_________\`-;\n   \`.__.-.__.'\n${RESET_COLOR}"
-
-if [[ ! $params == *"--quick-exit"* ]]; then
-  echo -e "${ACCENT_COLOR}Press any key to continue.${RESET_COLOR}"
-  read -t 5 -n 1 -s
-fi
-exit 0
