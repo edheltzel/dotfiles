@@ -1,5 +1,6 @@
 ###############################################################################
-# General                                                           #
+# Applies MacOS settings and preferences in /Library/Preferences             #
+# Covers Spotlight, layout, colors, fonts, mouse, keyboard and shortcuts                                                             #
 ###############################################################################
 
 # Store Identities in the KeyChain
@@ -42,7 +43,7 @@ defaults write NSGlobalDomain AppleHighlightColor -string '0.847059 0.847059 0.8
 # Small  : 1
 # Medium : 2 (default)
 # Large  : 3
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 
 # Show scroll bars
