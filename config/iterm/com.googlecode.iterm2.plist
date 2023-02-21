@@ -2620,6 +2620,12 @@
 			<string>/Users/ed</string>
 		</dict>
 	</array>
+	<key>OpenBookmark</key>
+	<false/>
+	<key>OpenFileInNewWindows</key>
+	<false/>
+	<key>OpenTmuxWindowsIn</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
