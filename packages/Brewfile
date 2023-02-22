@@ -206,6 +206,7 @@ cask 'principle'            # Prototyping tool
 cask 'shotcut'              # Video editor
 
 # Media
+cask 'boom'                                  # Audio enhancer
 brew 'pandoc'                                # Universal file converter
 brew 'webp'                                  # WebP image format
 brew 'youtube-dl'                            # YouTube video downloader
