@@ -24,7 +24,7 @@ else
 fi
 
 # Package control must be executed first in order for the rest to work
-./packages/setup.sh
+./packages/setup.sh # install homebrew and packages
 
 find * -name "setup.sh" -not -wholename "packages*" | while read setup; do
     ./$setup
