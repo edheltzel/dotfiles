@@ -144,6 +144,7 @@ brew 'rustup-init'        # Rust language
 brew 'sass/sass/migrator' # Sass CSS preprocessor
 brew 'sass/sass/sass'     # Sass CSS preprocessor
 brew 'sqlite'             # SQLite database engine
+brew 'tdewolff/tap/minify'# Minify HTML, CSS, JS, JSON, SVG, XML
 
 # DevOps SCMs and CI/CD Tools
 # brew 'ansible'            # Automation
