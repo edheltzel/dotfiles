@@ -10,7 +10,7 @@ COMMENT=\#*
 sudo -v
 
 substep_info "👀 Checking for FNM - Fast and simple NodeJS version manager..."
- then
+if test ! $(which fnm); then
     info "Installing FNM..."
     if /bin/bash -c "$(curl -fsSL https://fnm.vercel.app/install)"; then
         success "✅ FNM is now installed."
@@ -45,11 +45,9 @@ for package in "${packages[@]}"; do
     substep_info "Installing $package..."
     npm install -g "$package"
     substep_success "✅ $package installed."
-    if [ "$package" = "corepack" ]; then
-        substep_info "Enabling Corepack..."
-        corepack enable
-        substep_success "🔌 Corepack enabled."
-    fi
 done
+substep_info "Enabling Corepack..."
+corepack enable
+substep_success "✅ Corepack enabled."
 
 success "✅ NodeJS setup complete."
