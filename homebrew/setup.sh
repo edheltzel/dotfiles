@@ -5,39 +5,24 @@ cd "$DIR"
 
 . ../scripts/functions.sh
 
-# COMMENT=\#*
-
 sudo -v
 
-info "Checking for Brewfile..."
-if ! $(brew bundle check); then
-    info "Brewfile found..."
-    if /bin/bash -c "$(brew bundle install)"; then
-        success "✅ Brewfile is now installed."
-    else
-        error "❌ Failed to install Brewfile."
-    fi
-else
-    substep_success "👍 Brewfile - already installed."
+# Check if Brewfile exists
+if [ ! -f Brewfile ]; then
+    error "Brewfile does not exist. Creating one with 'brew bundle dump'..."
+    brew bundle dump
 fi
 
-
-# brew bundle
-# success "Finished installing Brewfile packages."
-# find * -name "*.list" | while read fn; do
-#     cmd="${fn%.*}"
-#     set -- $cmd
-#     info "Installing $1 packages..."
-#     while read package; do
-#         if [[ $package == $COMMENT ]];
-#         then continue
-#         fi
-#         substep_info "Installing $package..."
-#         if [[ $cmd == code* ]]; then
-#             $cmd $package
-#         else
-#             $cmd install $package
-#         fi
-#     done < "$fn"
-#     success "Finished installing $1 packages."
-# done
+# Prompt user to install packages from Brewfile
+read -p "Do you want to install packages from Brewfile? (y/n)" choice
+case "$choice" in
+  y|Y )
+    brew bundle install
+    ;;
+  n|N )
+    success "Exiting without installing packages."
+    ;;
+  * )
+    error "Invalid choice. Exiting without installing packages."
+    ;;
+esac
