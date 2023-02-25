@@ -3,7 +3,7 @@
 # Define variables
 DOTFILES_REPO="https://github.com/edheltzel/dotfiles.git"
 PROJECTS_DIR="$HOME/Projects"
-DOTFILES_DIR="$PROJECTS_DIR/dotfiles"
+DOTFILES_DIR="$PROJECTS_DIR/dotfiles-test"
 
 # Define functions for prompts, banners, and errors
 print_prompt() {
@@ -30,9 +30,9 @@ if ! git clone $DOTFILES_REPO $DOTFILES_DIR &> /dev/null; then
 fi
 
 # Run the installation script in the dotfiles directory
-if ! bash $DOTFILES_DIR/install.sh &> /dev/null; then
-    print_error "Failed to install dotfiles. Please check the installation script and try again."
-    exit 1
-fi
+# if ! bash $DOTFILES_DIR/install.sh &> /dev/null; then
+#     print_error "Failed to install dotfiles. Please check the installation script and try again."
+#     exit 1
+# fi
 
 print_banner "You might need to restart your computer for some changes to take effect."
