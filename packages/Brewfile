@@ -139,7 +139,7 @@ brew 'rbenv'              # Ruby version manager
 brew 'ruby-build'         # Ruby build plugin for rbenv
 brew 'richgo'             # Go test output formatter
 brew 'rust'               # Rust language
-brew 'rustup-init'        # Rust language
+brew 'rustup-init'        # Rust version manager
 brew 'sass/sass/migrator' # Sass CSS preprocessor
 brew 'sass/sass/sass'     # Sass CSS preprocessor
 brew 'sqlite'             # SQLite database engine

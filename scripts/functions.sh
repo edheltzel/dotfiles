@@ -1,18 +1,25 @@
 #! /usr/bin/env sh
 REPO_NAME="${REPO_NAME:-}"
-TITLE=""
-
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+BLACK='\033[0;30m'
+NC='\033[0m'
 
 # Define banner function to display changes about to be made
 banner() {
     echo ""
-    echo -e "\033[0;36m*************************************************\033[0m"
-    echo -e "\033[0;36m*                                               *\033[0m"
-    echo -e "\033[0;36m*          🧰 Dotfiles Setup                    *\033[0m"
-    echo -e "\033[0;36m*                                               *\033[0m"
-    echo -e "\033[0;36m*************************************************\033[0m"
+    echo -e "${BLUE}*************************************************${NC}"
+    echo -e "${BLUE}*                                               *${NC}"
+    echo -e "${BLUE}*          🧰 Dotfiles Setup                    *${NC}"
+    echo -e "${BLUE}*                                               *${NC}"
+    echo -e "${BLUE}*************************************************${NC}"
     echo ""
-    echo -e "\033[0;32mThis script will install and setup the following:\033[0m"
+    echo -e "${GREEN}This script will install and setup the following:${NC}"
     echo -e " - Xcode Command Line Tools"
     echo -e " - Homebrew"
     echo -e " - Git (via Homebrew)"
@@ -21,10 +28,10 @@ banner() {
     echo -e " - Set default applications for file types"
     echo -e " - Configure macOS settings"
     echo ""
-    read -p "$(echo -e '\033[0;33mDo you want to continue? (y/n): \033[0m')" -n 1 -r
+    read -p "$(echo -e '${YELLOW}Do you want to continue? (y/n): ${NC}')" -n 1 -r
     echo ""
     if [[ $REPLY =~ ^[Nn]$ ]]; then
-        echo -e "\033[0;31mInstallation cancelled.\033[0m"
+        echo -e "${RED}Installation cancelled.${NC}"
         exit 1
     fi
 }
@@ -55,49 +62,47 @@ clear_broken_symlinks() {
     done
 }
 
-# Took these printing functions from https://github.com/Sajjadhosn/dotfiles
-coloredEcho() {
-    local exp="$1";
-    local color="$2";
-    local arrow="$3";
-    if ! [[ $color =~ '^[0-9]$' ]] ; then
-       case $(echo $color | tr '[:upper:]' '[:lower:]') in
-        black) color=0 ;;
-        red) color=1 ;;
-        green) color=2 ;;
-        yellow) color=3 ;;
-        blue) color=4 ;;
-        magenta) color=5 ;;
-        cyan) color=6 ;;
-        white|*) color=7 ;; # white or invalid color
-       esac
-    fi
-    tput bold;
-    tput setaf "$color";
-    echo "$arrow $exp";
-    tput sgr0;
+
+
+# Define a function for displaying an error message
+error() {
+    local message="$1"
+    echo -e "${RED}====================================================${NC}"
+    echo -e "${RED} ERROR: $message${NC}"
+    echo -e "${RED}====================================================${NC}"
 }
 
 info() {
-    coloredEcho "$1" blue "========>"
+    local message="$1"
+    echo -e "${BLUE}====================================================${NC}"
+    echo -e "${BLUE} INFO: $message${NC}"
+    echo -e "${BLUE}====================================================${NC}"
 }
 
 success() {
-    coloredEcho "$1" green "========>"
-}
-
-error() {
-    coloredEcho "$1" red "========>"
+    local message="$1"
+    echo -e "${GREEN}====================================================${NC}"
+    echo -e "${GREEN} SUCCESS: $message${NC}"
+    echo -e "${GREEN}====================================================${NC}"
 }
 
 substep_info() {
-    coloredEcho "$1" magenta "===="
+    local message="$1"
+    echo -e "${YELLOW}====================================================${NC}"
+    echo -e "${YELLOW} INFO: $message${NC}"
+    echo -e "${YELLOW}====================================================${NC}"
 }
 
 substep_success() {
-    coloredEcho "$1" cyan "===="
+    local message="$1"
+    echo -e "${CYAN}====================================================${NC}"
+    echo -e "${CYAN} SUCCESS: $message${NC}"
+    echo -e "${CYAN}====================================================${NC}"
 }
 
 substep_error() {
-    coloredEcho "$1" red "===="
+    local message="$1"
+    echo -e "${MAGENTA}====================================================${NC}"
+    echo -e "${MAGENTA} ERROR: $message${NC}"
+    echo -e "${MAGENTA}====================================================${NC}"
 }

@@ -12,29 +12,29 @@ rust_packages="rust_packages.txt"
 # Define a function for installing packages with Homebrew
 install_brew_packages() {
     if ! command -v $(which brew) &> /dev/null; then
-        echo "Homebrew not found. Installing..."
+        substep_info "Homebrew not found. Installing..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         if ! command -v $(which brew) &> /dev/null; then
             error "Failed to install Homebrew. Exiting."
             exit 1
         fi
-        echo "Homebrew installed."
+        substep_success "Homebrew installed."
     fi
-    echo "Installing Homebrew packages..."
+    info "Installing Homebrew packages..."
     brew update
     brew upgrade
     brew bundle --file="$brew_packages"
-    echo "Finished installing Homebrew packages."
+    success "Finished installing Homebrew packages."
 }
 
 # Install Node with FNM and set latest LTS as default, then install npm packages
 install_node_packages() {
     # Install FNM
     if ! command -v fnm &> /dev/null; then
-        info "Installing FNM..."
+        substep_info "Installing FNM..."
         curl -fsSL https://fnm.vercel.app/install | bash
         eval "$(fnm env --use-on-cd)" # needed to install npm packages - already set for Fish
-        info "FNM installed."
+        substep_success "FNM installed."
     fi
 
     # Install latest LTS version of Node with FNM and set as default
@@ -43,69 +43,72 @@ install_node_packages() {
         fnm install --lts
         fnm alias lts-latest default
         fnm use default
-        info "Node LTS installed and set as default for FNM."
+        substep_success "Node LTS installed and set as default for FNM."
     fi
 
     # Install npm packages
     info "Installing Node packages..."
     npm install -g $(cat node_packages.txt)
-    info "Node packages installed."
+    success "Node packages installed."
 }
 
 # Define a function for installing packages with Python
 install_python_packages() {
     if ! command -v $(which python) &> /dev/null; then
-        echo "Python not found. Installing..."
+        substep_info "Python not found. Installing..."
         brew install python
         if ! command -v $(which python) &> /dev/null; then
             error "Failed to install Python. Exiting."
             exit 1
         fi
-        echo "Python installed."
+        substep_success "Python installed."
     fi
-    echo "Installing Python packages..."
+    info "Installing Python packages..."
     pip install $(cat "$python_packages")
-    echo "Finished installing Python packages."
+    success "Finished installing Python packages."
 }
 
 # Install Ruby with rbenv, set 3.1.3 as default, then install gems
 install_ruby_packages() {
     # Install rbenv
     if ! command -v rbenv &> /dev/null; then
-        info "Installing rbenv..."
+        substep_info "Installing rbenv..."
         brew install rbenv ruby-build
         eval "$(rbenv init - zsh)"  # needed to install gems - already set for Fish
-        info "rbenv installed."
+        substep_success "rbenv installed."
     fi
 
     # Install Ruby 3.1.3 with rbenv and set as default
     if ! rbenv versions | grep -q 3.1.3; then
-        info "Installing Ruby 3.1.3..."
+        substep_info "Installing Ruby 3.1.3..."
         rbenv install 3.1.3
         rbenv global 3.1.3
-        info "Ruby 3.1.3 installed and set as default for rbenv."
+        rbenv rehash
+        substep_success "Ruby 3.1.3 installed and set as default for rbenv."
     fi
 
     # Install gems
     info "Installing Ruby gems..."
     gem install $(cat ruby_packages.txt)
-    info "Ruby gems installed."
+    success "Ruby gems installed."
 }
 
 # Define a function for installing packages with Rust
 install_rust_packages() {
     if ! command -v $(which rustc) &> /dev/null; then
-        echo "Rust not found. Installing..."
-        brew install rust
+        substep_info "Rust not found. Installing..."
+        brew install rust rustup-init
+        rustup-init
         if ! command -v $(which rustc) &> /dev/null; then
             error "Failed to install Rust. Exiting."
             exit 1
         fi
-        echo "Rust installed."
+        substep_success "Rust installed."
     fi
-    echo "Installing Rust packages..."
+    info "Installing Rust packages..."
+    rustup update
     cargo install $(cat "$rust_packages")
-    echo "Finished installing Rust packages."
+    success "Finished installing Rust packages."
 }
 
 # Call each installation function
@@ -115,6 +118,3 @@ install_python_packages
 install_ruby_packages
 install_rust_packages
 
-# Define a function for displaying an error message
-error() {
-    echo -e "\033[0;31mERROR
