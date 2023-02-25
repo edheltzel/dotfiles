@@ -42,11 +42,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     # Run setup scripts in order
     source ./homebrew/setup.sh
     source ./node/setup.sh
-    source ./ruby/setup.sh
     source ./python/setup.sh
-    source ./rust/setup.sh
-    source ./git/setup.sh
     source ./fish/setup.sh
+    source ./rust/setup.sh
+    source ./ruby/setup.sh
+    source ./git/setup.sh
     source ./nvim/setup.sh
     source ./duti/setup.sh
     source ./macos/setup.sh

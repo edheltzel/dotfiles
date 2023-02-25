@@ -5,8 +5,6 @@ cd "$DIR"
 
 . ../scripts/functions.sh
 
-COMMENT=\#*
-
 sudo -v
 
 info "Installing rbenv - Ruby version manager..."
@@ -21,20 +19,15 @@ rbenv global 3.1.3
 rbenv rehash
 substep_success "Finished Ruby setup"
 
-find * -name "*.list" | while read fn; do
-    cmd="${fn%.*}"
-    set -- $cmd
-    info "Installing $1 packages..."
-    while read package; do
-        if [[ $package == $COMMENT ]];
-        then continue
-        fi
-        substep_info "Installing $package..."
-        if [[ $cmd == code* ]]; then
-            $cmd $package
-        else
-            $cmd install $package
-        fi
-    done < "$fn"
-    success "Finished installing $1 packages."
+packages=(
+    "bundle"
+    "jekyll"
+    "neovim"
+)
+
+for package in "${packages[@]}"; do
+    substep_info "Installing $package..."
+    gem install "$package"
+    substep_success "✅ $package installed."
 done
+success "✅ Rust/Cargo setup complete."
