@@ -13,8 +13,8 @@ install_nvm () {
   if [ -d "$NVM_DIR" ]; then # Already installed, update
     cd $NVM_DIR && git pull ./
   else # Not yet installed, promt user to confirm before proceeding
-    if read -p "Install AstroNvim now? (y/N)"; then
-      echo -e "Installing..."
+    if read -p "$(echo -e '${YELLOW}Do you want to clone AstroNvim? (y/n): ${NC}')"; then
+      -e "Installing..."
       cd $CONFIG_PATH && git clone $nvm_repo nvim
     else
       echo -e "Aborting..."
@@ -28,8 +28,7 @@ info "Setting symlinks for NeoVim."
 substep_success "nvim folder created."
 # substep_info "Installing AstroVim..."
 install_nvm
-substep_success "Nvim is ready. Make sure to run :PackerSync to install plugins."
+success "Nvim is ready. Make sure to run :PackerSync to install plugins."
 
 
-success "Home Directory and Config folders configured."
 
