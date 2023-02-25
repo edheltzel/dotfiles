@@ -136,6 +136,7 @@ brew 'postgresql@14'      # PostgreSQL database engine
 brew 'python'             # Python 2
 brew 'python3'            # Python 3
 brew 'rbenv'              # Ruby version manager
+brew 'ruby-build'         # Ruby build plugin for rbenv
 brew 'richgo'             # Go test output formatter
 brew 'rust'               # Rust language
 brew 'rustup-init'        # Rust language
