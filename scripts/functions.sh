@@ -1,4 +1,34 @@
 #! /usr/bin/env sh
+REPO_NAME="${REPO_NAME:-}"
+TITLE=""
+
+
+# Define banner function to display changes about to be made
+banner() {
+    echo ""
+    echo -e "\033[0;36m*************************************************\033[0m"
+    echo -e "\033[0;36m*                                               *\033[0m"
+    echo -e "\033[0;36m*          🧰 Dotfiles Setup                    *\033[0m"
+    echo -e "\033[0;36m*                                               *\033[0m"
+    echo -e "\033[0;36m*************************************************\033[0m"
+    echo ""
+    echo -e "\033[0;32mThis script will install and setup the following:\033[0m"
+    echo -e " - Xcode Command Line Tools"
+    echo -e " - Homebrew"
+    echo -e " - Git (via Homebrew)"
+    echo -e " - Fish shell (via Homebrew)"
+    echo -e " - Config files for various applications"
+    echo -e " - Set default applications for file types"
+    echo -e " - Configure macOS settings"
+    echo ""
+    read -p "$(echo -e '\033[0;33mDo you want to continue? (y/n): \033[0m')" -n 1 -r
+    echo ""
+    if [[ $REPLY =~ ^[Nn]$ ]]; then
+        echo -e "\033[0;31mInstallation cancelled.\033[0m"
+        exit 1
+    fi
+}
+
 
 symlink() {
     OVERWRITTEN=""
