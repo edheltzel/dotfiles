@@ -1,45 +1,44 @@
-#! /usr/bin/env sh
+#!/bin/bash
 
-DIR=$(dirname "$0")
-cd "$DIR"
+# Define variables
+DOTFILES_REPO="https://github.com/edheltzel/dotfiles.git"
+PROJECTS_DIR="$HOME/Projects"
+DOTFILES_DIR="$PROJECTS_DIR/dotfiles-test"
 
-. scripts/functions.sh
+# Define functions for prompts, banners, and errors
+print_prompt() {
+    echo -e "\033[1m$1\033[0m"
+}
 
-info "Prompting for sudo password..."
-if sudo -v; then
-    # Keep-alive: update existing `sudo` time stamp until `setup.sh` has finished
-    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-    success "Sudo credentials updated."
-else
-    error "Failed to obtain sudo credentials."
+function print_banner() {
+    local message="$1"
+    echo -e "${YELLOW}====================================================${NC}"
+    echo -e "${YELLOW} NOTE: $message${NC}"
+    echo -e "${YELLOW}====================================================${NC}"
+}
+
+print_error() {
+    local message="$1"
+    echo -e "${YELLOW}====================================================${NC}"
+    echo -e "${YELLOW} ERROR: $message${NC}"
+    echo -e "${YELLOW}====================================================${NC}"
+}
+
+# Create the Projects directory if it does not exist
+if [ ! -d "$PROJECTS_DIR" ]; then
+    mkdir "$PROJECTS_DIR"
 fi
 
-info "Installing XCode command line tools..."
-if xcode-select --print-path &>/dev/null; then
-    success "XCode command line tools already installed."
-elif xcode-select --install &>/dev/null; then
-    success "Finished installing XCode command line tools."
-else
-    error "Failed to install XCode command line tools."
+# Clone the dotfiles repository
+if ! git clone $DOTFILES_REPO $DOTFILES_DIR &> /dev/null; then
+    print_error "Failed to clone dotfiles repository. Please check your internet connection and try again."
+    exit 1
 fi
 
-info "Checking for Homebrew..."
-if test ! $(which brew); then
-    info "Installing Homebrew..."
-    if /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"; then
-        success "Finished installing Homebrew."
-    else
-        error "Failed to install Homebrew."
-    fi
-else
-    success "Homebrew already installed."
+# Run the installation script in the dotfiles directory
+if ! bash $DOTFILES_DIR/install.sh &> /dev/null; then
+    print_error "Failed to install dotfiles. Please check the installation script and try again."
+    exit 1
 fi
 
-# Package control must be executed first in order for the rest to work
-./packages/setup.sh # install homebrew and packages
-
-find * -name "setup.sh" -not -wholename "packages*" | while read setup; do
-    ./$setup
-done
-
-success "Finished installing Dotfiles"
+print_banner "You might need to restart your computer for some changes to take effect."

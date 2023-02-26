@@ -23,7 +23,6 @@ tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'kyoh86/tap'
-tap 'mongodb/brew'
 tap 'sass/sass'
 tap 'teamookla/speedtest'   # Command line speed test utility
 
@@ -132,15 +131,15 @@ brew 'go'                 # Compiler for Go Lang
 brew 'hugo'               # Static site generator
 brew 'lua'                # Lua interpreter
 brew 'luarocks'           # Package manager for Lua
-brew 'mongodb-community'  # MongoDB database engine
 # brew 'node'           # Node.js -->  Use fnm See node/
 brew 'postgresql@14'      # PostgreSQL database engine
 brew 'python'             # Python 2
 brew 'python3'            # Python 3
 brew 'rbenv'              # Ruby version manager
+brew 'ruby-build'         # Ruby build plugin for rbenv
 brew 'richgo'             # Go test output formatter
 brew 'rust'               # Rust language
-brew 'rustup-init'        # Rust language
+brew 'rustup-init'        # Rust version manager
 brew 'sass/sass/migrator' # Sass CSS preprocessor
 brew 'sass/sass/sass'     # Sass CSS preprocessor
 brew 'sqlite'             # SQLite database engine
@@ -228,7 +227,7 @@ cask 'notion'         # Workspace app
 cask 'signal'         # Link to encrypted mobile messenger
 
 # Utility Applications
-brew 'displaylink' # DisplayLink USB graphics drivers
+# brew 'displaylink' #  Multi-monitor support
 cask 'namechanger' # Rename files in bulk
 cask 'onyx'        # System maintenance
 
@@ -270,13 +269,12 @@ cask 'hiddenbar'          # Hide / show annoying menubar icons
 cask 'karabiner-elements' # Better keyboard remapping
 cask 'mjolnir'            # Util for loading Lua automations
 cask 'openinterminal'     # Finder button, opens directory in terminal
-cask 'popclip'            # Popup options for text on highlight
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
-cask 'stats'              # System resource usage in menubar
 cask 'typinator'          # Text expander - macOS only
 
 # Mac OS Utility Apps
 cask 'little-snitch'  # Firewall app viewing / blocking traffic
+cask 'stats'              # System resource usage in menubar
 cask 'keka'           # File archiver and extractor
 
 # Install apps from the Mac App Store
@@ -287,11 +285,9 @@ mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
-# mas 'Bitwarden', id: 1352778147
 mas 'Wappalyzer', id: 1520333300
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'WebPonize', id: 1526039365
 mas 'Mia for Gmail', id: 851622884
 #mas 'Xcode', id: 497799835
 

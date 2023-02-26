@@ -27,4 +27,5 @@ if status is-interactive
     abbr --add nmux 'tmux new -s "base"'
     abbr --add lg 'lazygit'
     abbr --add lzd 'lazydocker'
+    abbr --add cls 'clear'
 end

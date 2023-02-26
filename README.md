@@ -2,6 +2,12 @@
 
 ---
 
+# Bootstrap
+
+`curl -sSL https://raw.githubusercontent.com/edheltzel/dotfiles/main/bootstrap.sh | bash`
+
+
+
 An experimental, ongoing configuration for my personal needs using macOS, Fish shell, Git, and front-end web development.
 
 My playground revolves around devops and frontend development which includes all things JavaScript, CSS Wizardry with Scss, SSG/JAMStack – mainly [11ty](https://www.11ty.dev/), [Hugo](https://gohugo.io/), and I have this soft spot in my ❤️ for the OG [Jekyll](https://jekyllrb.com).
