@@ -3,6 +3,7 @@ Autocare
 autohide
 autotalk
 Beavercreek
+Bevs
 browserlist
 btns
 cblock
@@ -19,6 +20,7 @@ Dayton
 Descr
 dictsort
 easymotion
+edheltzel
 elif
 endeach
 endedge
@@ -60,6 +62,7 @@ setend
 sharebar
 Shortcode
 shortcodes
+SNIPCART
 Springboro
 substep
 svg
