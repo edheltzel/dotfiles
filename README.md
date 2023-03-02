@@ -173,6 +173,13 @@ OS Version: Version 12.0.1 (Build 21A559)
 - .gitignore_global - Contains global gitignores, such as OS-specific files and
   several compiled files
 - .gitconfig - Sets several global Git variables - also include signing
+  - This also includes a line that includes an additional gitconfig file `.gitconfig-local` - my personal setup uses two different Macs and this is how I achieve setup each machine to use Git.
+  ```shell
+    [meta]
+      isLocalConfig = true
+    [user]
+      signingkey = PATH_TO_YOUR_KEY
+  ```
 
   - _(options)_: GPG signing is set to `TRUE` by default
     [renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
@@ -277,11 +284,14 @@ Make sure you run:
 ```
 
 This will symlink the `fnm.fish` file in `~/.config/fish/conf.d` _(It might be helpful to `source ~/.config/fish/config.fish`)_
-# TODO
 
-- [ ] need to reorder install of packages
-- [ ] `gem install.list` should come after Homebrew and before for Fish
+**Note:** FNM has the ability to auto switch Node versions if there is a `.node-version` or `.nvmrc` file - this is enabled by default
+
+```shell
+# automatically run fnm use
+fnm env --use-on-cd | source
+```
 
 #### Special Thanks
 
-Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup,
+Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup, and inspiration.
