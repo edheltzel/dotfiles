@@ -1,7 +1,7 @@
 ### OSX ###
 .DS_Store
 ### Git ###
-.gitconfig-local   # local git config - don't commit if you use more than one computer
+git/.gitconfig-local
 
 ###  VIM ###
 NetrwTreeListing*

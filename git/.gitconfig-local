@@ -1,4 +1,0 @@
-[meta]
-	isLocalConfig = true
-[user]
-	signingkey = /Users/ed/.ssh/id_ed25519.pub
