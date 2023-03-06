@@ -1,0 +1,7 @@
+[meta]
+	isLocalConfig = true
+[user]
+# BigMac
+	signingkey = /Users/ed/.ssh/id_ed25519.pub
+# MacDaddy
+	# signingkey = /Users/ed/.ssh/id_rsa.pub
