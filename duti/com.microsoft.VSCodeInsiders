@@ -1,3 +1,4 @@
+.asp
 .babelrc
 .bashrc
 .bash_profile
@@ -5,12 +6,16 @@
 .cfg
 .coffee
 .cpp
-.css
+.cs
+.csss
 .conf
 .erb
 .editorconfig
 .d.ts
 .fish
+.gitconfig
+.gitconfig-local
+.gitignore_global
 .go
 .gql
 .graphql
@@ -51,7 +56,10 @@
 .xml
 .yaml
 .yml
+.zprofile
 .zshrc
 Gemfile
 Makefile
 Rakefile
+README
+LICENSE
