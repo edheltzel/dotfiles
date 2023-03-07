@@ -205,7 +205,7 @@ downtags = fetch --tags
   defaultBranch = master
 
 [include]
-	path = ~/.gitconfig-local
+	path = ~/.gitconfig.local
 [commit]
 	gpgsign = true
 [gpg]

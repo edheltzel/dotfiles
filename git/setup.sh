@@ -18,4 +18,7 @@ substep_success "Successfully created symlinks."
 
 clear_broken_symlinks
 
-success "Git configured."
+substep_success "Setting up Local Git Config for MacDaddy and BigMac"
+localgitconfig
+
+success "Git configured for $(hostname)"

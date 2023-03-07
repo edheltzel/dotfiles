@@ -106,3 +106,35 @@ substep_error() {
     echo -e "${MAGENTA} ERROR: $message${NC}"
     echo -e "${MAGENTA}====================================================${NC}"
 }
+
+
+localgitconfig() {
+    local hostname=$(hostname)
+    local signingkey=""
+
+    if [ "$hostname" = "BigMac" ]; then
+        signingkey="/Users/ed/.ssh/id_ed25519.pub"
+    elif [ "$hostname" = "MacDaddy" ]; then
+        signingkey="/Users/ed/.ssh/id_rsa.pub"
+    else
+        substep_error "Unknown hostname '$hostname'. Skipping configuration of Git signingkey."
+        return 1
+    fi
+
+    if [ ! -f "$HOME/.gitconfig.local" ]; then
+        touch "$HOME/.gitconfig.local"
+    fi
+
+    if grep -q "\[user\]" "$HOME/.gitconfig.local"; then
+        sed "/\[user\]/a\\
+signingkey = $signingkey
+" "$HOME/.gitconfig.local" > "$HOME/.gitconfig.local.tmp"
+        mv "$HOME/.gitconfig.local.tmp" "$HOME/.gitconfig.local"
+    else
+        echo "[user]" >> "$HOME/.gitconfig.local"
+        echo "	signingkey = $signingkey" >> "$HOME/.gitconfig.local"
+    fi
+
+    substep_success "Git signingkey configured for hostname '$hostname'."
+}
+
