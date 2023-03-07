@@ -1,7 +1,7 @@
 ### OSX ###
 .DS_Store
 ### Git ###
-git/.gitconfig-local
+#git/.gitconfig-local
 
 ###  VIM ###
 NetrwTreeListing*
