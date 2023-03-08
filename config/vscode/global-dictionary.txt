@@ -63,6 +63,7 @@ sharebar
 Shortcode
 shortcodes
 SNIPCART
+sourcemaps
 Springboro
 substep
 svg
