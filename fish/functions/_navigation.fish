@@ -12,7 +12,8 @@ function tree; command exa --tree --icons $argv; end
 function cll; command clear; and exa -Flah --icons --sort modified $argv; end
 
 # Often used shortcuts/aliases
-function projects; cd ~/Projects; end
-function work; cd ~/Projects/work; end
-function dots; cd ~/Projects/dotfiles; end
+function projects; cd ~/Developer; end
+function dev; cd ~/Developer; end
+function work; cd ~/Developer/work; end
+function dots; cd ~/Developer/dotfiles; end
 function cuts; ~/Projects/dotfiles; and eval $EDITOR .; end
