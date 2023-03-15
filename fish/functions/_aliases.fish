@@ -67,7 +67,7 @@ end
 
 # Defined in - @ line 0
 function oa --description 'Open App'
-	open -a $argv;
+	open -a /Applications/$argv;
 end
 function repo
     set -l repo_path (repodir $argv)
