@@ -14,5 +14,4 @@ set -x --global VOL xxx
 
 # Source Multi-function files
 source ~/.config/fish/functions/_aliases.fish
-source ~/.config/fish/functions/_navigation.fish
 source ~/.config/fish/functions/_utils.fish
