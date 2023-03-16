@@ -1,3 +1,46 @@
+
+
+# Navigation
+function ..    ; cd .. ; end
+function ...   ; cd ../.. ; end
+function ....  ; cd ../../.. ; end
+function ..... ; cd ../../../.. ; end
+
+function l; command exa -Flagh --sort name --git --icons --group-directories-first $argv; end
+function ll; command exa -Flagh --git --icons --group-directories-first --sort modified $argv; end
+function la; command exa -Fla --icons; end
+function tree; command exa --tree --icons $argv; end
+function cll; command clear; and exa -Flah --icons --sort modified $argv; end
+
+# Project shortcuts/aliases
+function projects; cd ~/Developer; end
+function dev; cd ~/Developer; end
+function work; cd ~/Developer/work; end
+function dots; cd ~/Developer/dotfiles; end
+function cuts; ~/Developer/dotfiles; and eval $EDITOR .; end
+
+# Language Support
+alias pn="pnpm"
+alias px="pnpx"
+
+# Editors and Utilities
+alias code="code-insiders"
+alias mux="tmux"
+alias vim="nvim"
+alias top="btm" # muscle memory
+alias bottom="btm" # htop replacement
+alias serve='miniserve' # rust HTTP server
+
+# Network shortcuts/aliases and utilities
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
+alias localip="ipconfig getifaddr en0" #internal network IP
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+
+
+# SSH and localhost
 function hostfile --description 'Opens local host file in the default editor'
   eval sudo $EDITOR /etc/hosts
 end
@@ -14,19 +57,6 @@ function pubkey
     cat ~/.ssh/id_rsa.pub | pbcopy; and echo '=> Public key copied to clipboard.'
 end
 
-# Often used shortcuts/aliases for Network
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
-alias localip="ipconfig getifaddr en0" #internal network IP
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-
-# Often used shortcuts/aliases for View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-alias top="btm" # muscle memory
-alias bottom="btm" # htop replacement
-alias serve='miniserve' # rust HTTP server
-
 # Docker/Kubernetes/Vagrant
 function dk --description 'docker alias'
   command docker $argv
@@ -35,15 +65,6 @@ end
 function dc --description 'docker-compose alias'
   command docker-compose $argv
 end
-
-# Editors
-alias code="code-insiders"
-alias mux="tmux"
-alias vim="nvim"
-
-# Language Support
-alias pn="pnpm"
-alias px="pnpx"
 
 # Ouch - zip and unzip replacement
 function zip --description 'alias for zip using ouch instead of zip'
@@ -96,22 +117,3 @@ function forrepos --description 'Evaluates $argv for all repo folders'
         popd > /dev/null
     end
 end
-
-# Navigation
-function ..    ; cd .. ; end
-function ...   ; cd ../.. ; end
-function ....  ; cd ../../.. ; end
-function ..... ; cd ../../../.. ; end
-
-function l; command exa -Flagh --sort name --git --icons --group-directories-first $argv; end
-function ll; command exa -Flagh --git --icons --group-directories-first --sort modified $argv; end
-function la; command exa -Fla --icons; end
-function tree; command exa --tree --icons $argv; end
-function cll; command clear; and exa -Flah --icons --sort modified $argv; end
-
-# Project shortcuts/aliases
-function projects; cd ~/Developer; end
-function dev; cd ~/Developer; end
-function work; cd ~/Developer/work; end
-function dots; cd ~/Developer/dotfiles; end
-function cuts; ~/Developer/dotfiles; and eval $EDITOR .; end
