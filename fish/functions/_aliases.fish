@@ -28,21 +28,13 @@ alias bottom="btm" # htop replacement
 alias serve='miniserve' # rust HTTP server
 
 # Docker/Kubernetes/Vagrant
-
-# docker-compose alias
-function dk --description 'an alias for docker'
+function dk --description 'docker alias'
   command docker $argv
 end
 
-# docker-compose alias
-function dc --description 'an alias for docker-compose'
+function dc --description 'docker-compose alias'
   command docker-compose $argv
 end
-
-# vagrant alias
-# function vg --description 'an alias for vagrant'
-#   command vagrant $argv
-# end
 
 # Editors
 alias code="code-insiders"
@@ -50,25 +42,36 @@ alias mux="tmux"
 alias vim="nvim"
 
 # Language Support
-# alias python="python3"
-#alias pip="pip3"
 alias pn="pnpm"
 alias px="pnpx"
 
-# Defined in - @ line 0
+# Ouch - zip and unzip replacement
+function zip --description 'alias for zip using ouch instead of zip'
+  command ouch compress $argv
+end
+
+function unzip --description 'alias for unzip using ouch instead of unzip'
+  command ouch decompress $argv
+end
+
+function listzip --description 'alias to list files files in a zip compression'
+  command ouch list $argv
+end
+
+# Open shortcuts
 function o --description 'alias o=open'
   open $argv;
 end
 
-# Defined in - @ line 0
 function oo --description 'alias oo=open .'
 	open . $argv;
 end
 
-# Defined in - @ line 0
 function oa --description 'Open App'
 	open -a /Applications/$argv;
 end
+
+# Repositiory shortcuts
 function repo
     set -l repo_path (repodir $argv)
     echo "$repo_path"
@@ -76,7 +79,7 @@ function repo
 end
 
 function repodir
-    set repo_base ~/Projects
+    set repo_base ~/Developer
     set repo_path (find "$repo_base" -mindepth 2 -maxdepth 2 -type d -name "*$argv*" | head -n 1)
     if not test "$argv"; or not test "$repo_path"
         set repo_path "$repo_base"
@@ -85,7 +88,7 @@ function repodir
 end
 
 function forrepos --description 'Evaluates $argv for all repo folders'
-    for d in (find ~/Projects -mindepth 2 -maxdepth 2 ! -path . -type d)
+    for d in (find ~/Developers -mindepth 2 -maxdepth 2 ! -path . -type d)
         pushd $d
         set repo (basename $d)
         echo $repo
@@ -104,12 +107,11 @@ function l; command exa -Flagh --sort name --git --icons --group-directories-fir
 function ll; command exa -Flagh --git --icons --group-directories-first --sort modified $argv; end
 function la; command exa -Fla --icons; end
 function tree; command exa --tree --icons $argv; end
-# function ls; command exa $argv; end # using native ls for backwards compatibility in some cases
 function cll; command clear; and exa -Flah --icons --sort modified $argv; end
 
-# Often used shortcuts/aliases
+# Project shortcuts/aliases
 function projects; cd ~/Developer; end
 function dev; cd ~/Developer; end
 function work; cd ~/Developer/work; end
 function dots; cd ~/Developer/dotfiles; end
-function cuts; ~/Projects/dotfiles; and eval $EDITOR .; end
+function cuts; ~/Developer/dotfiles; and eval $EDITOR .; end
