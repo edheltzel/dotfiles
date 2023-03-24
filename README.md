@@ -140,10 +140,10 @@ This folder is a collection of my own repos, most are private `¯\_(ツ)_/¯`. T
   - fish_right_prompt.fish - Left Blank on purpose
   - fish_prompt.fish Using [Starship - The cross-shell prompt for astronauts](https://starship.rs/)
     - check out `prompt> startship.toml` to modify the starship prompt
-  - forrepos.fish - Executes a passed command for all repos in `~/Projects`
+  - forrepos.fish - Executes a passed command for all repos in `~/Developer`
   - pubkey.fish - Copies the public key to the clipboard
-  - repo.fish - Finds a repository in `~/Projects` and jumps to it **NOTE:currently using `Z`**
-  - repodir.fish - Finds a repository in `~/Projects` and prints its path
+  - repo.fish - Finds a repository in `~/Developer` and jumps to it **NOTE:currently using `Z`**
+  - repodir.fish - Finds a repository in `~/Developer` and prints its path
   - setup.fish - Initial setup for a new fish installation,
     contains abbreviations
   - speedtest.fish - **macOS ONLY** leverages the built-in `networkQuality` cli tool - just a glorified alias but works with all the flag options

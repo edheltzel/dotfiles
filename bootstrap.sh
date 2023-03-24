@@ -2,7 +2,7 @@
 
 # Define variables
 DOTFILES_REPO="https://github.com/edheltzel/dotfiles.git"
-PROJECTS_DIR="$HOME/Projects"
+PROJECTS_DIR="$HOME/Developer"
 DOTFILES_DIR="$PROJECTS_DIR/dotfiles-test"
 
 # Define functions for prompts, banners, and errors
@@ -24,7 +24,7 @@ print_error() {
     echo -e "${YELLOW}====================================================${NC}"
 }
 
-# Create the Projects directory if it does not exist
+# Create the Developer directory if it does not exist
 if [ ! -d "$PROJECTS_DIR" ]; then
     mkdir "$PROJECTS_DIR"
 fi

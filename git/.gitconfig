@@ -206,6 +206,7 @@ downtags = fetch --tags
 
 [include]
 	path = ~/.gitconfig.local
+	path = ~/.gitconfig-local
 [commit]
 	gpgsign = true
 [gpg]
