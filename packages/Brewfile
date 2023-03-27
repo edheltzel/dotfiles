@@ -204,7 +204,6 @@ cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
-cask 'shotcut'              # Video editor
 
 # Media
 cask 'boom'                                  # Audio enhancer
