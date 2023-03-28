@@ -6,5 +6,5 @@ function upp --description 'Updates everything with Topgrade but also prints the
   printf "$nodeVerb"; set_color green --bold; and node --version; set_color white;
   topgrade --cleanup; set_color white;
   printf '\n―― '(date "+%H:%M:%S")'- Brew - Cleanup ――――――――――――――――――――――――――――――――――――――――――――――――――――\n'; set_color normal; and brew cleanup --prune=all; set_color white;
-  printf '\n―― '(date "+%H:%M:%S")'- pnpm - Corepack  ――――――――――――――――――――――――――――――――――――――――――――――――――――――\n'; set_color normal; and corepack prepare pnpm@latest --activate;
+  printf '\n―― '(date "+%H:%M:%S")'- pnpm yarn - Corepack  ――――――――――――――――――――――――――――――――――――――――――――――――――――――\n'; set_color normal; and corepack prepare pnpm@latest --activate; and corepack prepare yarn@latest --activate;
 end
