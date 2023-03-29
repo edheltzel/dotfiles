@@ -1302,7 +1302,7 @@ Close</string>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>HotkeyModifiers</key>
-	<integer>1048840</integer>
+	<integer>524288</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>NeverWarnAboutShortLivedSessions_C6FA7A0A-E3E9-4F19-B2C8-8A0DEDBCD5C1</key>
@@ -1643,7 +1643,7 @@ Close</string>
 				<real>0.047058824449777603</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>2</integer>
+			<integer>1</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
