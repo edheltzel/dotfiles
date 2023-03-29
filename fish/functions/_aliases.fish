@@ -79,7 +79,7 @@ function listzip --description 'alias to list files files in a zip compression'
   command ouch list $argv
 end
 
-# Open shortcuts
+# Open and Remove/Del shortcuts
 function o --description 'alias o=open'
   open $argv;
 end
@@ -90,6 +90,15 @@ end
 
 function oa --description 'Open App'
 	open -a /Applications/$argv;
+end
+
+
+function del --description 'alias del=rm -rf'
+	rm -rf $argv;
+end
+
+function sdel --description 'alias sdel=sudo rm -rf'
+	sudo rm -rf $argv;
 end
 
 # Repositiory shortcuts

@@ -8,7 +8,6 @@ if status is-interactive
     abbr --add con 'code -n .'
     abbr --add config '~/.config/'
     abbr --add coo 'code -r .'
-    abbr --add del 'trash'
     abbr --add dls '~/Downloads/'
     abbr --add gems 'gem list'
     abbr --add gg 'go get GITHUB_URL'
