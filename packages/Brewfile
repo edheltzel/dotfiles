@@ -210,8 +210,8 @@ cask 'boom'                                  # Audio enhancer
 brew 'pandoc'                                # Universal file converter
 brew 'webp'                                  # WebP image format
 brew 'youtube-dl'                            # YouTube video downloader
-cask 'calibre'                               # E-Book reader
 cask 'iina'                                  # Media player
+cask 'vlc'                                   # Media player
 cask 'imageoptim'                            # Image compression
 cask 'spotify', args: { require_sha: false } # Propietary music streaming
 cask 'transmission'                          # Torrent client
@@ -266,7 +266,7 @@ brew 'm-cli'              # All in one MacOS management CLI app: m help
 cask 'alt-tab'            # Much better alt-tab window switcher
 # cask 'espanso'          # Live text expander (cross-platform) - use typinator for macOS
 cask 'hiddenbar'          # Hide / show annoying menubar icons
-cask 'karabiner-elements' # Better keyboard remapping
+#cask 'karabiner-elements' # Better keyboard remapping
 cask 'itsycal'            # Calendar in menubar
 cask 'mjolnir'            # Util for loading Lua automations
 cask 'openinterminal'     # Finder button, opens directory in terminal
