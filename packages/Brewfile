@@ -118,7 +118,7 @@ cask 'dbeaver-community'            # Database management
 cask 'fork'                         # Git visual client
 cask 'insomnia'                     # HTTP API testing app
 cask 'iterm2'                       # Better terminalmemulator
-cask 'obsidian'                     # Markdown note taking app
+cask 'warp'                         # Better terminalmemulator - Rust
 cask 'sequel-pro'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code-insiders'  # Code editor
