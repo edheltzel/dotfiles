@@ -17,7 +17,6 @@ if status is-interactive
     abbr --add npms 'npm list -g --depth=0'
     abbr --add pns 'pnpm list -g'
     abbr --add pnpms 'pnpm list -g'
-    abbr --add sdel 'rm -rf'
     abbr --add siz 'du -khsc'
     abbr --add sp 'speedtest'
     abbr --add suckit 'wget -mkEpnp url_here'
