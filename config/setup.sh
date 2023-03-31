@@ -12,7 +12,7 @@ CONFIG_PATH="$(realpath ~/.config)"
 info "Setting symlinks dotfiles and config folders."
 
 substep_info "Symlink dotfiles to home directory..."
-find . -maxdepth 1 -name ".*" -not -wholename "*DS_Store*" | while read fn; do
+find . -maxdepth 1 -name ".*" -not -wholename ".DS_Store" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
