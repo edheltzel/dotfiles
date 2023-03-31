@@ -21,6 +21,7 @@ Descr
 dictsort
 easymotion
 edheltzel
+eleventy
 elif
 endeach
 endedge
@@ -49,6 +50,7 @@ luxon
 moxer
 Nanotubes
 npmrc
+nunjucks
 overscroll
 pnpm
 quickfix
