@@ -9,7 +9,7 @@
 	<key>AllowTabbarInTitlebarAccessoryBigSur</key>
 	<false/>
 	<key>AutoCommandHistory</key>
-	<false/>
+	<true/>
 	<key>AutoHideTmuxClientSession</key>
 	<true/>
 	<key>BadgeFont</key>
@@ -4351,7 +4351,8 @@
 	<true/>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Snippets</string>
+		<string>Actions</string>
+		<string>Command History</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
