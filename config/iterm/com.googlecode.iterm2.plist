@@ -8,6 +8,8 @@
 	<true/>
 	<key>AllowTabbarInTitlebarAccessoryBigSur</key>
 	<false/>
+	<key>AutoCommandHistory</key>
+	<false/>
 	<key>AutoHideTmuxClientSession</key>
 	<true/>
 	<key>BadgeFont</key>
@@ -1143,60 +1145,10 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x3d-0x140000-0x18</key>
-		<dict>
-			<key>Action</key>
-			<integer>25</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string>Close
-Close</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<key>0x5c-0x100000-0x2a</key>
-		<dict>
-			<key>Action</key>
-			<integer>29</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string>C6FA7A0A-E3E9-4F19-B2C8-8A0DEDBCD5C1</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<key>0x7c-0x120000-0x2a</key>
-		<dict>
-			<key>Action</key>
-			<integer>28</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string>C6FA7A0A-E3E9-4F19-B2C8-8A0DEDBCD5C1</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<key>0x7f-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>11</integer>
-			<key>Text</key>
-			<string>0x15</string>
-		</dict>
-		<key>0x7f-0x80000</key>
-		<dict>
-			<key>Action</key>
-			<integer>11</integer>
-			<key>Text</key>
-			<string>0x17</string>
-		</dict>
-		<key>0x9-0x40000-0x30</key>
+		<key>0x9-0x40000</key>
 		<dict>
 			<key>Action</key>
 			<integer>32</integer>
-			<key>Label</key>
-			<string></string>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -1217,9 +1169,9 @@ Close</string>
 		<key>0xf702-0x300000</key>
 		<dict>
 			<key>Action</key>
-			<integer>11</integer>
+			<integer>2</integer>
 			<key>Text</key>
-			<string>0x01</string>
+			<string></string>
 		</dict>
 		<key>0xf702-0x320000</key>
 		<dict>
@@ -1231,9 +1183,9 @@ Close</string>
 		<key>0xf703-0x300000</key>
 		<dict>
 			<key>Action</key>
-			<integer>11</integer>
+			<integer>0</integer>
 			<key>Text</key>
-			<string>0x05</string>
+			<string></string>
 		</dict>
 		<key>0xf703-0x320000</key>
 		<dict>
