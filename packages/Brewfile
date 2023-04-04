@@ -237,7 +237,6 @@ cask 'brave-browser'             # Brave browser
 cask 'choosy'                    # Choose which browser to open links in
 cask 'firefox-developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
-cask 'orion'                     # Browser for privacy webkit
 
 # Fonts
 tap 'homebrew/cask-fonts'
@@ -264,9 +263,7 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 # Mac OS Mods and Imrovments
 brew 'm-cli'              # All in one MacOS management CLI app: m help
 cask 'alt-tab'            # Much better alt-tab window switcher
-# cask 'espanso'          # Live text expander (cross-platform) - use typinator for macOS
 cask 'hiddenbar'          # Hide / show annoying menubar icons
-#cask 'karabiner-elements' # Better keyboard remapping
 cask 'itsycal'            # Calendar in menubar
 cask 'mjolnir'            # Util for loading Lua automations
 cask 'openinterminal'     # Finder button, opens directory in terminal
@@ -279,16 +276,16 @@ cask 'stats'              # System resource usage in menubar
 cask 'keka'           # File archiver and extractor
 
 # Install apps from the Mac App Store
-mas 'Affinity Designer', id: 824171161
-mas 'Affinity Photo', id: 824183456
+#mas 'Affinity Designer', id: 824171161
+#mas 'Affinity Photo', id: 824183456
 mas 'ColorSlurp', id: 1287239339
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
 mas 'Keynote', id: 409183694
-mas 'Wappalyzer', id: 1520333300
+#mas 'Wappalyzer', id: 1520333300
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Mia for Gmail', id: 851622884
+#mas 'Mia for Gmail', id: 851622884
 #mas 'Xcode', id: 497799835
 
