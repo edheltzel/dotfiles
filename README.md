@@ -2,7 +2,9 @@
 
 ---
 
-# Bootstrap
+# Getting Started
+## Bootstrap - One Liner
+The fastest way to get started is to run the following command in your terminal:
 
 `curl -sSL https://raw.githubusercontent.com/edheltzel/dotfiles/main/bootstrap.sh | bash`
 
