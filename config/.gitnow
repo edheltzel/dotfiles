@@ -7,7 +7,7 @@ state = \es
 stage = \ee
 
 # Ctrl + E
-unstage = \ce
+# unstage = \ce
 
 # Alt + M
 show = \em

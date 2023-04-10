@@ -4,8 +4,8 @@ rbenv/fish-rbenv
 oh-my-fish/plugin-osx
 tuvistavie/fish-ssh-agent
 laughedelic/pisces
-joseluisq/gitnow
 jorgebucaran/fisher
 kidonng/zoxide.fish
 edc/bass
 patrickf1/fzf.fish
+joseluisq/gitnow
