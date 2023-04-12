@@ -19,7 +19,7 @@ style = "bright-white"
 format = "$all_status$ahead_behind"
 
 # [line_break]
-# disabled = true
+#disabled = true
 
 [character]
 success_symbol = '[](bold green)'
