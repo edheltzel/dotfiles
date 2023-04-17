@@ -26,25 +26,14 @@ function color_map_256_bit () {
   echo
 }
 
-# Executes Python script by @grawity for interactivley selecting colors
-function color_chooser () {
-  curl -s https://raw.githubusercontent.com/grawity/code/master/term/xterm-color-chooser | python3
-}
-
 # Determine if file is being run directly or sourced
-([[ -n $ZSH_EVAL_CONTEXT && $ZSH_EVAL_CONTEXT =~ :file$ ]] || 
-  [[ -n $KSH_VERSION && $(cd "$(dirname -- "$0")" &&
-    printf '%s' "${PWD%/}/")$(basename -- "$0") != "${.sh.file}" ]] || 
+([[ -n $ZSH_EVAL_CONTEXT && $ZSH_EVAL_CONTEXT =~ :file$ ]] ||
   [[ -n $BASH_VERSION ]] && (return 0 2>/dev/null)) && sourced=1 || sourced=0
 
-# If script being called directly run immediatley, otherwise register aliases
+# If script being called directly run immediately
 if [ $sourced -eq 0 ]; then
   check_color_support
   color_map_16_bit
   color_map_256_bit
-else
-  alias color-map-16="color_map_16_bit"
-  alias color-map-256="color_map_256_bit"
-  alias color-map="color_map_16_bit && color_map_256_bit"
-  alias color-support="check_color_support"
 fi
+
