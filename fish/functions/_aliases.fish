@@ -53,10 +53,6 @@ function editssh --description 'Opens ssh known host file in the default editor'
   eval $EDITOR ~/.ssh
 end
 
-function pubkey
-    cat ~/.ssh/id_rsa.pub | pbcopy; and echo '=> Public key copied to clipboard.'
-end
-
 # Docker/Kubernetes/Vagrant
 function dk --description 'docker alias'
   command docker $argv
