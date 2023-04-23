@@ -235,7 +235,6 @@ cask 'onyx'        # System maintenance
 # Browsers
 cask 'brave-browser-beta'        # Brave browser beta channel
 cask 'brave-browser'             # Brave browser
-cask 'chromium'                  # Chromium browser
 cask 'choosy'                    # Choose which browser to open links in
 cask 'firefox-developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
