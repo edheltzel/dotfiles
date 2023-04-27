@@ -2,10 +2,10 @@
 assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = []
+disable = ["pnpm", "yarn"]
 
 # Ignore failures for these steps
-ignore_failures = ["git_repos"]
+ignore_failures = ["git_repos","pnpm", "yarn"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]
@@ -13,8 +13,12 @@ ignore_failures = ["git_repos"]
 # Do not ask to retry failed steps (default: false)
 no_retry = true
 
-notify_each_step = false
-skip_notify = true
+# Sudo command to be used
+#sudo_command = "sudo"
+
+# Run `sudo -v` to cache credentials at the start of the run; this avoids a
+# blocking password prompt in the middle of a possibly-unattended run.
+pre_sudo = true
 
 # Run inside tmux
 #run_in_tmux = true
@@ -34,8 +38,20 @@ skip_notify = true
 # Do not set the terminal title
 #set_title = false
 
+# Display the time in step titles
+# display_time = true
+
 # Cleanup temporary or old files
 cleanup = true
+
+# Skip sending a notification at the end of a run
+skip_notify = true
+
+# Skip the preamble displayed when topgrade is run
+#display_preamble = false
+
+# Whether to self update (this is ignored if the binary has been built without self update support, available also via setting the environment variable TOPGRADE_NO_SELF_UPGRADE)
+#no_self_update = true
 
 [git]
 #max_concurrency = 5
@@ -46,7 +62,7 @@ cleanup = true
 #]
 
 # Don't pull the predefined git repos
-#predefined_repos = false
+#pull_predefined = false
 
 # Arguments to pass Git when pulling Repositories
 #arguments = "--rebase --autostash"
@@ -61,25 +77,61 @@ cleanup = true
 # Custom commands
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
+#"Custom command using interactive shell (unix)" = "-i vim_upgrade"
 
 [brew]
 greedy_cask = true
+autoremove = true
 
 [linux]
-# Arguments to pass yay when updating packages
+# Arch Package Manager to use. Allowed values: autodetect, aura, garuda_update, pacman, pamac, paru, pikaur, trizen, yay.
+#arch_package_manager = "pacman"
+# Arguments to pass yay (or paru) when updating packages
 #yay_arguments = "--nodevel"
+# Arguments to pass dnf when updating packages
+#dnf_arguments = "--refresh"
+#aura_aur_arguments = "-kx"
+#aura_pacman_arguments = ""
+#garuda_update_arguments = ""
+#show_arch_news = true
 #trizen_arguments = "--devel"
+#pikaur_arguments = ""
+#pamac_arguments = "--no-devel"
 #enable_tlmgr = true
 #emerge_sync_flags = "-q"
 #emerge_update_flags = "-uDNa --with-bdeps=y world"
 #redhat_distro_sync = false
+#rpm_ostree = false
+#nix_arguments = "--flake"
+
+[python]
+#enable_pip_review = true   ###disabled by default
+#enable_pipupgrade = true   ###disabled by default
 
 [windows]
 # Manually select Windows updates
 #accept_all_updates = false
 #open_remotes_in_new_terminal = true
+#wsl_update_pre_release = true
+#wsl_update_use_web_download = true
 
 # Causes Topgrade to rename itself during the run to allow package managers
 # to upgrade it. Use this only if you installed Topgrade by using a package
-# manager such as Scoop to Cargo
+# manager such as Scoop or Cargo
 self_rename = true
+
+[npm]
+# Use sudo if the NPM directory isn't owned by the current user
+#use_sudo = true
+
+[firmware]
+# Offer to update firmware; if false just check for and display available updates
+#upgrade = true
+
+[flatpak]
+# Use sudo for updating the system-wide installation
+#use_sudo = true
+
+[distrobox]
+#use_root = false
+#containers = ["archlinux-latest"]

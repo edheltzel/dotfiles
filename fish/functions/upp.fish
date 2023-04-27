@@ -1,7 +1,7 @@
 # Defined in - @ line 0
 function upp --description 'Updates everything with Topgrade but also prints the default Node version, Update Resets Homebrew, Cleans Homebrew and Z'
   # Request sudo access
-  sudo -v
+  # sudo -v
 
   # Define variables for Node output
   set -l nodeIcon ' '
@@ -16,7 +16,7 @@ function upp --description 'Updates everything with Topgrade but also prints the
   set_color white
 
   # Run topgrade and clean up Homebrew
-  topgrade --cleanup --no-retry
+  topgrade
   printf '\n―― %s - Brew - Cleanup ―――――――――――――――――――――――――――――――――――――――――――――――――――\n' (date "+%H:%M:%S")
   set_color normal
   brew cleanup --prune=all
