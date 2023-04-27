@@ -16,7 +16,7 @@ function upp --description 'Updates everything with Topgrade but also prints the
   set_color white
 
   # Run topgrade and clean up Homebrew
-  topgrade --cleanup
+  topgrade --cleanup --no-retry
   printf '\n―― %s - Brew - Cleanup ―――――――――――――――――――――――――――――――――――――――――――――――――――\n' (date "+%H:%M:%S")
   set_color normal
   brew cleanup --prune=all
