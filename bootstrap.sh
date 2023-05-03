@@ -24,6 +24,8 @@ print_error() {
     echo -e "${YELLOW}====================================================${NC}"
 }
 
+## 
+
 # Create the Developer directory if it does not exist
 if [ ! -d "$PROJECTS_DIR" ]; then
     mkdir "$PROJECTS_DIR"
