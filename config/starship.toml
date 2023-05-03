@@ -35,8 +35,6 @@ symbol = "󰅣  "
 symbol = " "
 [c]
 symbol = " "
-[c_sharp]
-symbol = " "
 [conda]
 symbol = "󰝦 "
 [dart]
