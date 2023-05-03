@@ -4,16 +4,16 @@ min_time = 4
 [git_branch]
 symbol = " "
 [git_status]
-conflicted = "[ﲅ ](fg:red bg:bright-black)"
-ahead = "[×${count} ](bright-white)"
-behind = "[×${count} ](bright-white)"
-diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
+conflicted = "[ ](fg:red bg:bright-black)"
+ahead = "[×${count} ](bright-white)"
+behind = "[×${count} ](bright-white)"
+diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
 untracked = "️[ ×${count} ](fg:215)"
 stashed = " "
 modified = "[×${count} ](bright-yellow)"
 staged = "[×${count} ](bright-green)"
 deleted = "{×${count} ](bright-red )"
-renamed = "[ ×${count} ](fg:214)"
+renamed = "[ ×${count} ](fg:214)"
 style = "bright-white"
 
 format = "$all_status$ahead_behind"
@@ -26,48 +26,50 @@ success_symbol = '[](bold green)'
 error_symbol = '[](bold red)'
 
 [ruby]
-symbol = " "
+symbol = "󰴭 "
 [python]
-symbol = " "
+symbol = " "
 [aws]
-symbol = "  "
+symbol = "󰅣  "
 [buf]
 symbol = " "
 [c]
-symbol = " "
+symbol = " "
+[c_sharp]
+symbol = " "
 [conda]
-symbol = " "
+symbol = "󰝦 "
 [dart]
-symbol = " "
+symbol = " "
 [directory]
-read_only = " "
+read_only = " "
 [docker_context]
-symbol = " "
+symbol = " "
 [elixir]
-symbol = " "
+symbol = " "
 [elm]
 symbol = " "
 [golang]
-symbol = " "
+symbol = " "
 [haskell]
-symbol = " "
+symbol = " "
 [hg_branch]
-symbol = " "
+symbol = " "
 [java]
-symbol = " "
+symbol = " "
 [julia]
 symbol = " "
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 [nim]
-symbol = " "
+symbol = " "
 [nix_shell]
-symbol = " "
+symbol = " "
 [nodejs]
-symbol = " "
+symbol = "󰎙 "
 [package]
-symbol = " "
+symbol = "󰏗 "
 [spack]
-symbol = "🅢 "
+symbol = "󰰣 "
 [rust]
-symbol = " "
+symbol = " "
