@@ -264,7 +264,7 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac OS Mods and Imrovments
 brew 'm-cli'              # All in one MacOS management CLI app: m help
-cask 'alt-tab'            # Much better alt-tab window switcher
+#cask 'alt-tab'            # Much better alt-tab window switcher
 cask 'hiddenbar'          # Hide / show annoying menubar icons
 cask 'itsycal'            # Calendar in menubar
 cask 'mjolnir'            # Util for loading Lua automations
