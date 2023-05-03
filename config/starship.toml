@@ -2,7 +2,7 @@ command_timeout = 1000
 [cmd_duration]
 min_time = 4
 [git_branch]
-symbol = "שׂ "
+symbol = " "
 [git_status]
 conflicted = "[ﲅ ](fg:red bg:bright-black)"
 ahead = "[×${count} ](bright-white)"
@@ -10,9 +10,9 @@ behind = "[×${count} ](bright-white)"
 diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
 untracked = "️[ ×${count} ](fg:215)"
 stashed = " "
-modified = "[ ×${count} ](bright-yellow)"
-staged = "[螺×${count} ](bright-green)"
-deleted = "[裸×${count} ](bright-red )"
+modified = "[×${count} ](bright-yellow)"
+staged = "[×${count} ](bright-green)"
+deleted = "{×${count} ](bright-red )"
 renamed = "[ ×${count} ](fg:214)"
 style = "bright-white"
 
