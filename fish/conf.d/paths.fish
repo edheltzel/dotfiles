@@ -45,5 +45,5 @@ test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true
 
-# Docker
-set -g fish_user_paths $HOME/.docker/bin $fish_user_paths
+# # Docker
+# set -g fish_user_paths $HOME/.docker/bin $fish_user_paths
