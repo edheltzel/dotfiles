@@ -1972,13 +1972,13 @@
 			<key>Name</key>
 			<string>MyDefault</string>
 			<key>Non Ascii Font</key>
-			<string>FiraCodeNerdFontCompleteM-Regular 17</string>
+			<string>JetBrainsMonoNFM-Regular 17</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Non-ASCII Ligatures</key>
-			<false/>
+			<true/>
 			<key>Normal Font</key>
-			<string>FiraCodeNerdFontCompleteM-Regular 16</string>
+			<string>JetBrainsMonoNFM-Regular 16</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
