@@ -15,6 +15,7 @@ Colour
 commentblock
 commenthtml
 cssnano
+darwish
 DATETIME
 Dayton
 Descr
@@ -39,6 +40,7 @@ Flightdeck
 Frontmatter
 Fullscreen
 ginfuru
+gitignores
 hcomm
 heltzel
 htmlmin
@@ -53,6 +55,7 @@ npmrc
 nunjucks
 overscroll
 pnpm
+pubkey
 quickfix
 Raycast
 realpath
@@ -64,9 +67,12 @@ setend
 sharebar
 Shortcode
 shortcodes
+signingkey
 SNIPCART
 sourcemaps
+speedtest
 Springboro
+startship
 substep
 svg
 svgs

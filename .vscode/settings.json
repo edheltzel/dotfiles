@@ -3,4 +3,26 @@
     "titleBar.activeForeground": "#ffd900",
     "titleBar.inactiveForeground": "#ffd9005d"
   },
+  "cSpell.words": [
+    "abbrex",
+    "AFPS",
+    "Astro",
+    "csrutil",
+    "dotfiles",
+    "Duti",
+    "emptytrash",
+    "fishfile",
+    "forrepos",
+    "gpgsign",
+    "jorgebucaran",
+    "keyid",
+    "Mbps",
+    "nvim",
+    "procs",
+    "ripgrep",
+    "tigrc",
+    "tldr",
+    "tmol",
+    "zoxide"
+  ],
 }
