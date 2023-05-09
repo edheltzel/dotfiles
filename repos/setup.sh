@@ -8,7 +8,7 @@ cd "$DIR"
 COMMENT=\#*
 REPO_PATH=$(realpath ~/Developer)
 
-find * -name "*.list" | while read fn; do
+find * -name "*.txt" | while read fn; do
     folder="${fn%.*}"
 
     info "Cloning $folder repositories..."
