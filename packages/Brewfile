@@ -116,7 +116,7 @@ brew 'pv'           # Pipe viewer, with animation options
 # Development Apps
 cask 'dbeaver-community'            # Database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
-cask 'fig'                          # Terminal plugin
+#cask 'fig'                          # Terminal plugin
 cask 'fork'                         # Git visual client
 cask 'insomnia'                     # HTTP API testing app
 cask 'iterm2'                       # Better terminalmemulator
