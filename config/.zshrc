@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # homebrew
 export PATH=/opt/homebrew/bin:$PATH
 
@@ -15,6 +13,3 @@ export PATH=/opt/homebrew/bin:$PATH
 # source ~/.config/zsh/aliases/aliases.zsh
 # startship prompt
 eval "$(starship init zsh)"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
