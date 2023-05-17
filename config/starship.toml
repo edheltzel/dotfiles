@@ -12,7 +12,7 @@ untracked = "️[ ×${count} ](fg:215)"
 stashed = " "
 modified = "[ ×${count} ](bright-yellow)"
 staged = "[ ×${count} ](bright-green)"
-deleted = "{ ×${count} ](bright-red )"
+deleted = "[ ×${count} ](bright-red)"
 renamed = "[ ×${count} ](fg:214)"
 style = "bright-white"
 
