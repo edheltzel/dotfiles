@@ -132,8 +132,8 @@ setup.sh - Symlinks all `.files` to their corresponding location in `~/.config/`
 - .zshrc
 ### Duti (duti/)
 
-- setup.sh - Sets the defaults set up in the different files
-- `app.package.id` - Contains all extensions for the specified program _(run `man duti` to learn more)_
+- setup.sh - Sets the default app for the different file extensions.
+- `app.package.id` - Contains all extensions for the specified program _(run `tldr duti` OR `man duti` to learn more)_
 
 ### Fish (fish/)
 
