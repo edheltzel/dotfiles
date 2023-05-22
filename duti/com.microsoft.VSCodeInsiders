@@ -32,8 +32,6 @@
 .list
 .log
 .mod
-.markdown
-.md
 .njk
 .php
 .pug
