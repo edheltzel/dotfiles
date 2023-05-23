@@ -238,6 +238,7 @@ cask 'brave-browser'             # Brave browser
 cask 'choosy'                    # Choose which browser to open links in
 cask 'firefox-developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
+cask 'responsively'              # Responsive web design testing
 cask 'safari-technology-preview' # Safari tech preview
 
 # Fonts
