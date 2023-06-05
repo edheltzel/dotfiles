@@ -1,10 +1,10 @@
-git@github.com:edheltzel/flightdeck-for-eleventy.git
+git@github.com:edheltzel/flightdeck.git
 git@github.com:edheltzel/flightdeck-for-jekyll.git
 git@github.com:edheltzel/flightdeck-for-hugo.git
 git@github.com:edheltzel/flightdeck-liftoff.git
+git@github.com:edheltzel/lunar-eclipse-for-visual-studio-code.git
 git@github.com:edheltzel/nunjucks-for-visual-studio-code.git
 git@github.com:edheltzel/vscode-1dark-raincoat.git
 git@github.com:edheltzel/vscode-better-solarized.git
 git@github.com:edheltzel/vscode-jekyll-snippets.git
 git@github.com:edheltzel/vscode-jekyll-syntax.git
-git@github.com:edheltzel/lunar-eclipse-for-visual-studio-code.git
