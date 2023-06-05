@@ -1,0 +1,3 @@
+git@github.com:edheltzel/weston-site-2.0.git
+git@github.com:edheltzel/weston-site-3.0.git
+git@github.com:edheltzel/murphys-autocare.git
