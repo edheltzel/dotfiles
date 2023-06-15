@@ -67,7 +67,6 @@ brew 'procs'        # Advanced process viewer (better ps) - Rust
 brew 'ripgrep'      # Searching within files (better grep) - Rust
 brew 'rsync'        # Fast incremental file transfer
 brew 'sd'           # RegEx find and replace (better sed) - Rust
-brew 'tldr'         # Community-maintained docs (better man) - Rust
 brew 'tokei'        # Count lines of code (better cloc)
 brew 'trash-cli'    # Record and restore removed files
 brew 'watchexec'    # Run command whenever file changes - Rust
@@ -100,7 +99,7 @@ brew 'lazygit'      # Full Git managemtne app
 
 # CLI Docs and Cheatsheets
 brew 'navi'         # Browse, search, read cheat sheets
-brew 'tldr'         # Community-maintained docs (better man)
+brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 
 # CLI Misc
 brew 'chafa'        # Image to ASCII art
@@ -290,4 +289,3 @@ mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 #mas 'Mia for Gmail', id: 851622884
 #mas 'Xcode', id: 497799835
-
