@@ -67,7 +67,7 @@ brew 'procs'        # Advanced process viewer (better ps) - Rust
 brew 'ripgrep'      # Searching within files (better grep) - Rust
 brew 'rsync'        # Fast incremental file transfer
 brew 'sd'           # RegEx find and replace (better sed) - Rust
-brew 'tokei'        # Count lines of code (better cloc)
+brew 'tokei'        # Count lines of code (better cloc) - Rust
 brew 'trash-cli'    # Record and restore removed files
 brew 'watchexec'    # Run command whenever file changes - Rust
 brew 'zoxide'       # Auto-learning navigation (better cd) - Rust --> fish plugin adds to PATH
@@ -95,7 +95,7 @@ brew 'rclone'       # Manage cloud storage
 
 # CLI Development Suits
 brew 'lazydocker'   # Full Docker management app
-brew 'lazygit'      # Full Git managemtne app
+brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
 
 # CLI Docs and Cheatsheets
 brew 'navi'         # Browse, search, read cheat sheets
