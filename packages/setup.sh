@@ -5,16 +5,17 @@ sudo -v
 . ./scripts/functions.sh
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
+pnpm_packages="pnpm_packages.txt"
 python_packages="python_packages.txt"
 ruby_packages="ruby_packages.txt"
 rust_packages="rust_packages.txt"
 
 # Define a function for installing packages with Homebrew
 install_brew_packages() {
-    if ! command -v $(which brew) &> /dev/null; then
+    if ! command -v $(which brew) &>/dev/null; then
         substep_info "Homebrew not found. Installing..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        if ! command -v $(which brew) &> /dev/null; then
+        if ! command -v $(which brew) &>/dev/null; then
             error "Failed to install Homebrew. Exiting."
             exit 1
         fi
@@ -30,7 +31,7 @@ install_brew_packages() {
 # Install Node with FNM and set latest LTS as default, then install npm packages
 install_node_packages() {
     # Install FNM
-    if ! command -v fnm &> /dev/null; then
+    if ! command -v fnm &>/dev/null; then
         substep_info "Installing FNM..."
         curl -fsSL https://fnm.vercel.app/install | bash
         eval "$(fnm env --use-on-cd)" # needed to install npm packages - already set for Fish
@@ -38,7 +39,7 @@ install_node_packages() {
     fi
 
     # Install latest LTS version of Node with FNM and set as default
-    if ! fnm use --lts &> /dev/null; then
+    if ! fnm use --lts &>/dev/null; then
         info "Installing latest LTS version of Node..."
         fnm install --lts
         fnm alias lts-latest default
@@ -46,18 +47,24 @@ install_node_packages() {
         substep_success "Node LTS installed and set as default for FNM."
     fi
 
-    # Install npm packages
-    info "Installing Node packages..."
-    npm install -g $(cat node_packages.txt)
-    success "Node packages installed."
+    # Install NPM packages
+    info "Installing NPM packages..."
+    npm install -g $(cat $node_packages)
+    corepack enable
+    success "All NPM global packages installed."
+
+    # Install PNPM packages - using PNPM as global package manager
+    info "Installing PNPM packages..."
+    pnpm add -g $(cat $pnpm_packages)
+    success "All PNPM global packages installed."
 }
 
 # Define a function for installing packages with Python
 install_python_packages() {
-    if ! command -v $(which python) &> /dev/null; then
+    if ! command -v $(which python) &>/dev/null; then
         substep_info "Python not found. Installing..."
         brew install python
-        if ! command -v $(which python) &> /dev/null; then
+        if ! command -v $(which python) &>/dev/null; then
             error "Failed to install Python. Exiting."
             exit 1
         fi
@@ -71,10 +78,10 @@ install_python_packages() {
 # Install Ruby with rbenv, set 3.1.3 as default, then install gems
 install_ruby_packages() {
     # Install rbenv
-    if ! command -v rbenv &> /dev/null; then
+    if ! command -v rbenv &>/dev/null; then
         substep_info "Installing rbenv..."
         brew install rbenv ruby-build
-        eval "$(rbenv init - zsh)"  # needed to install gems - already set for Fish
+        eval "$(rbenv init - zsh)" # needed to install gems - already set for Fish
         substep_success "rbenv installed."
     fi
 
@@ -95,11 +102,11 @@ install_ruby_packages() {
 
 # Define a function for installing packages with Rust
 install_rust_packages() {
-    if ! command -v $(which rustc) &> /dev/null; then
+    if ! command -v $(which rustc) &>/dev/null; then
         substep_info "Rust not found. Installing..."
         brew install rust rustup-init
         rustup-init
-        if ! command -v $(which rustc) &> /dev/null; then
+        if ! command -v $(which rustc) &>/dev/null; then
             error "Failed to install Rust. Exiting."
             exit 1
         fi
@@ -117,4 +124,3 @@ install_node_packages
 install_python_packages
 install_ruby_packages
 install_rust_packages
-

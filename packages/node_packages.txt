@@ -1,17 +1,2 @@
-@antfu/ni
-@bitwarden/cli
-@githubnext/github-copilot-cli
 corepack
-cspell
-easy-sharing
-generator-code
-gulp-cli
-install
-intelephense
-netlify-cli
 npm
-typescript-language-server
-typescript
-vsce
-wrangler
-yo

@@ -17,6 +17,10 @@ function setup --description 'defines abbreviations'
   abbr npms npm list -g --depth=0
   abbr pns pnpm list -g
   abbr pnpms pnpm list -g
+  abbr nun pnpm remove
+  abbr nu pnpm update
+  abbr ni pnpm install
+  abbr nr pnpm run
   abbr sdel rm -rf
   abbr siz du -khsc
   abbr sp speedtest
