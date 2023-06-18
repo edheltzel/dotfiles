@@ -94,7 +94,7 @@ brew 'gping'        # Interactive ping tool, with graph
 brew 'rclone'       # Manage cloud storage
 
 # CLI Development Suits
-brew 'lazydocker'   # Full Docker management app
+brew 'lazydocker'   # Full Docker management app - Go
 brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
 
 # CLI Docs and Cheatsheets
