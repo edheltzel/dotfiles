@@ -88,9 +88,8 @@ function oa --description 'Open App'
 	open -a /Applications/$argv;
 end
 
-
-function del --description 'alias del=rm -rf'
-	rm -rf $argv;
+function del --description 'alias del=trash'
+	trash $argv;
 end
 
 function sdel --description 'alias sdel=sudo rm -rf'
