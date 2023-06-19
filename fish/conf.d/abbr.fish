@@ -23,8 +23,6 @@ if status is-interactive
     abbr --add amux 'tmux at -t base'
     abbr --add tkill 'tmux kill-session -t'
     abbr --add nmux 'tmux new -s "base"'
-    abbr --add lg 'lazygit'
-    abbr --add lzd 'lazydocker'
     abbr --add cls 'clear'
     abbr --add nun 'pnpm remove'
     abbr --add nu 'pnpm update'
