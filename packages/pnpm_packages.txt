@@ -1,4 +1,3 @@
-@antfu/ni
 @bitwarden/cli
 @githubnext/github-copilot-cli
 corepack
