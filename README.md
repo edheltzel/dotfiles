@@ -167,7 +167,7 @@ setup.sh - Symlinks all `.files` to their corresponding location in `~/.config/`
   - pubkey.fish - Copies the public key to the clipboard
   - reload.fish - Reloads fish
   - restore.fish - Restores a file from a backup
-  - setup.fish - reloads and sets fish abbreviations
+  - ~~setup.fish - reloads and sets fish abbreviations~~ - **DEPRECATED** - use `abbr -a` inside of `conf.d/abbr.fish` instead
   - speed.fish - **macOS ONLY** leverages the built-in `networkQuality` cli tool - just a glorified alias but works with all the flag options
   - upp.fish - **macOS ONLY** checks current global node version and runs `topgrade` command
   - weather.fish - using wttr.in to check the local weather

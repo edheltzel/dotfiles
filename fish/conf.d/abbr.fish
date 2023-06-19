@@ -26,4 +26,9 @@ if status is-interactive
     abbr --add lg 'lazygit'
     abbr --add lzd 'lazydocker'
     abbr --add cls 'clear'
+    abbr --add nun 'pnpm remove'
+    abbr --add nu 'pnpm update'
+    abbr --add ni 'pnpm install'
+    abbr --add nr 'pnpm run'
+    abbr --add zpurge 'z --clean'
 end
