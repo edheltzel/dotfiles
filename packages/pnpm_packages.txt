@@ -11,6 +11,6 @@ netlify-cli
 npm
 typescript-language-server
 typescript
-vsce
+@vscode/vsce
 wrangler
 yo

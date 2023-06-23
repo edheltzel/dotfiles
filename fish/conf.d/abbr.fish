@@ -24,6 +24,8 @@ if status is-interactive
     abbr --add tkill 'tmux kill-session -t'
     abbr --add nmux 'tmux new -s "base"'
     abbr --add cls 'clear'
+    abbr --add nad 'pnpm add -D'
+    abbr --add nag 'pnpm add -g'
     abbr --add nun 'pnpm remove'
     abbr --add nu 'pnpm update'
     abbr --add ni 'pnpm install'
