@@ -43,6 +43,7 @@ ginfuru
 gitignores
 hcomm
 heltzel
+highlightedyank
 htmlmin
 ifel
 indexnow
