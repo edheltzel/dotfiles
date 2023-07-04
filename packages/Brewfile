@@ -200,7 +200,6 @@ cask 'veracrypt'         # File and volume encryption
 #############################################################
 
 # Creativity
-# brew 'handbrake'           # Video transcoder
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
@@ -208,14 +207,15 @@ cask 'principle'            # Prototyping tool
 
 # Media
 cask 'boom'                                  # Audio enhancer
-brew 'pandoc'                                # Universal file converter
-brew 'webp'                                  # WebP image format
-brew 'youtube-dl'                            # YouTube video downloader
+# brew 'handbrake'           # Video transcoder
 cask 'iina'                                  # Media player
-cask 'vlc'                                   # Media player
 cask 'imageoptim'                            # Image compression
+brew 'pandoc'                                # Universal file converter
 cask 'spotify', args: { require_sha: false } # Propietary music streaming
 cask 'transmission'                          # Torrent client
+cask 'vlc'                                   # Media player
+brew 'webp'                                  # WebP image format
+brew 'youtube-dl'                            # YouTube video downloader
 
 # Personal Applications
 cask 'authy'          # 2FA app
@@ -232,6 +232,7 @@ cask 'todoist'        # Task manager
 # brew 'displaylink' #  Multi-monitor support
 cask 'namechanger' # Rename files in bulk
 cask 'onyx'        # System maintenance
+cask 'alt-tab'     # Windows-like alt-tab
 
 # Browsers
 cask 'brave-browser-beta'        # Brave browser beta channel

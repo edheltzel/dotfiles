@@ -1,6 +1,7 @@
 alacritty
 Autocare
 autohide
+autoplay
 autotalk
 Beavercreek
 Bevs
@@ -83,5 +84,6 @@ templating
 Topgrade
 uncategorized
 vspacecode
+webm
 webp
 whichkey
