@@ -57,6 +57,7 @@ npmrc
 nunjucks
 overscroll
 pnpm
+preinstall
 pubkey
 quickfix
 Raycast
