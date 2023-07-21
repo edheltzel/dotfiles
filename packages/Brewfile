@@ -232,7 +232,7 @@ cask 'todoist'        # Task manager
 # brew 'displaylink' #  Multi-monitor support
 cask 'namechanger' # Rename files in bulk
 cask 'onyx'        # System maintenance
-cask 'alt-tab'     # Windows-like alt-tab
+# cask 'alt-tab'     # Windows-like alt-tab
 
 # Browsers
 cask 'brave-browser-beta'        # Brave browser beta channel
