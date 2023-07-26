@@ -50,6 +50,7 @@ htmlmin
 ifel
 indexnow
 iterm
+jampack
 Jamstack
 luxon
 moxer
@@ -60,6 +61,7 @@ overscroll
 pnpm
 preinstall
 pubkey
+purgecss
 quickfix
 Raycast
 realpath
