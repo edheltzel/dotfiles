@@ -3,7 +3,7 @@
 assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-#disable = ["pnpm", "yarn"]
+disable = ["system"]
 
 # Ignore failures for these steps
 ignore_failures = ["git_repos","pnpm", "yarn"]
