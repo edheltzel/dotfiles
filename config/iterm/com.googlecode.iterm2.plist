@@ -1611,7 +1611,7 @@ Close</string>
 	<key>HideTabNumber</key>
 	<true/>
 	<key>Hotkey</key>
-	<true/>
+	<false/>
 	<key>HotkeyChar</key>
 	<integer>27</integer>
 	<key>HotkeyCode</key>
