@@ -48,6 +48,7 @@ heltzel
 highlightedyank
 htmlmin
 ifel
+Incenta
 indexnow
 iterm
 jampack
