@@ -115,7 +115,6 @@ brew 'pv'           # Pipe viewer, with animation options
 # Development Apps
 cask 'dbeaver-community'            # Database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
-#cask 'fig'                          # Terminal plugin
 cask 'fork'                         # Git visual client
 cask 'insomnia'                     # HTTP API testing app
 cask 'iterm2'                       # Better terminalmemulator
@@ -177,9 +176,9 @@ brew 'bettercap'      # Network, scanning and moniroting
 brew 'ngrep'          # grep for network traffic
 brew 'nmap'           # Port scanning
 brew 'wrk'            # HTTP benchmarking
-cask 'burp-suite'     # Web security testing
-cask 'owasp-zap'      # Web app security scanner
-cask 'wireshark'      # Network analyzer + packet capture
+#cask 'burp-suite'     # Web security testing
+#cask 'owasp-zap'      # Web app security scanner
+#cask 'wireshark'      # Network analyzer + packet capture
 
 # Security Utilities
 brew 'bcrypt'            # Encryption utility, using blowfish
@@ -193,7 +192,7 @@ brew 'openssl'           # Cryptography and SSL/TLS Toolkit
 brew 'rkhunter'          # Search / detect potential root kits
 brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
 cask 'gpg-suite'         # GPG encryption files
-cask 'veracrypt'         # File and volume encryption
+#cask 'veracrypt'         # File and volume encryption
 
 #############################################################
 # Desktop Applications                                      #
@@ -275,7 +274,7 @@ cask 'raycast', args: { require_sha: false }  # Spotlight alternative
 cask 'typinator'          # Text expander - macOS only
 
 # Mac OS Utility Apps
-cask 'little-snitch'  # Firewall app viewing / blocking traffic
+#cask 'little-snitch'  # Firewall app viewing / blocking traffic
 cask 'stats'              # System resource usage in menubar
 cask 'keka'           # File archiver and extractor
 
