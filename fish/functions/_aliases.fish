@@ -53,6 +53,13 @@ function editssh --description 'Opens ssh known host file in the default editor'
   eval $EDITOR ~/.ssh
 end
 
+# Lighthouse for performance testing
+function lh --description 'alias for lighthouse'
+  set current_date (date "+%Y-%m-%d")
+  set current_time (date "+%H-%M-%S")
+  command lighthouse $argv --output=html --output-path=./lighthouse/$current_date__$current_time.html --view
+end
+
 # Docker/Kubernetes/Vagrant
 function dk --description 'docker alias'
   command docker $argv
