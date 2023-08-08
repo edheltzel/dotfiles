@@ -9,6 +9,7 @@ browserlist
 btns
 cblock
 Centerville
+cesbuild
 chsh
 codepen
 codesnap
@@ -53,11 +54,14 @@ indexnow
 iterm
 jampack
 Jamstack
+lightningcss
+linkify
 luxon
 moxer
 Nanotubes
 npmrc
 nunjucks
+outdir
 overscroll
 pnpm
 preinstall
@@ -75,6 +79,7 @@ sharebar
 Shortcode
 shortcodes
 signingkey
+smacss
 SNIPCART
 sourcemaps
 speedtest
