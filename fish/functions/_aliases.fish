@@ -22,6 +22,7 @@ function cuts; ~/Developer/dotfiles; and eval $EDITOR .; end
 # Language Support
 alias pn="pnpm"
 alias px="pnpx"
+alias undo="git-undo" # see ./git-undo.fish
 
 # Editors and Utilities
 alias code="code-insiders"

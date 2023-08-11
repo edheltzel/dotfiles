@@ -4,7 +4,6 @@ source ~/.config/fish/conf.d/variables.fish
 source ~/.config/fish/conf.d/exports.fish
 source ~/.config/fish/conf.d/paths.fish
 source ~/.config/fish/conf.d/abbr.fish
-
 # Prompt - Starship
 starship init fish | source
 
