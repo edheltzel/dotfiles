@@ -10,15 +10,18 @@ My playground revolves around DevOps and Frontend development which includes Jav
 I find tools that are built with Rust or Go to be performant and cover 90% of my use cases.
 
 - [bat](https://github.com/sharkdp/bat) Rust replacement for `cat`
+- [bottom](https://clementtsang.github.io/bottom/0.8.0/) Rust replacement for `top`
 - [exa](https://the.exa.website/) Rust replacement for `ls`
 - [fd](https://github.com/sharkdp/fd) Rust replacement for `find`
 - [fzf](https://github.com/junegunn/fzf) a mostly Go fuzzy finder
+- [procs](https://github.com/dalance/procs) Rust replacement for `ps`
+- [ripgrep](https://github.com/BurntSushi/ripgrep) Rust replacement for `grep`
+- [sd](https://github.com/chmln/sd) Rust replacement for `sed`
+- [starship](https://starship.rs/) Rust prompt
+- [tealdeer](https://github.com/dbrgn/tealdeer) Rust replacement for `man`
+- [topgrade](https://github.com/topgrade-rs/topgrade) Rust replacement for package manager updates
 - [zoxide](https://github.com/ajeetdsouza/zoxide) Rust companion for `cd` and replacement for z and auto jump
   - [zoxide fish](https://github.com/kidonng/zoxide.fish) - Fish plugin for zoxide
-- [bottom](https://clementtsang.github.io/bottom/0.8.0/) Rust replacement for `top`
-- [ripgrep](https://github.com/BurntSushi/ripgrep) Rust replace for `grep`
-- [tldr](https://tldr.sh/) Rust replace for `man`
-- [procs](https://github.com/dalance/procs) Rust replace for `ps`
 
 ## Usage and the Install
 
