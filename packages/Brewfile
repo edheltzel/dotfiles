@@ -209,9 +209,10 @@ cask 'boom'                                  # Audio enhancer
 # brew 'handbrake'           # Video transcoder
 cask 'iina'                                  # Media player
 cask 'imageoptim'                            # Image compression
+cask 'kap'                                   # Screen recorder
 brew 'pandoc'                                # Universal file converter
 cask 'spotify', args: { require_sha: false } # Propietary music streaming
-cask 'transmission'                          # Torrent client
+# cask 'transmission'                          # Torrent client
 cask 'vlc'                                   # Media player
 brew 'webp'                                  # WebP image format
 brew 'youtube-dl'                            # YouTube video downloader
