@@ -1,4 +1,5 @@
 alacritty
+alpinejs
 Autocare
 autohide
 autoplay
@@ -89,6 +90,7 @@ substep
 svg
 svgs
 syntaxhighlight
+tailwindcss
 Templatender
 templating
 Topgrade
