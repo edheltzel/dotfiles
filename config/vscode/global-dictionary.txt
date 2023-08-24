@@ -52,6 +52,7 @@ htmlmin
 ifel
 Incenta
 indexnow
+ishikawa
 iterm
 jampack
 Jamstack
@@ -90,6 +91,7 @@ substep
 svg
 svgs
 syntaxhighlight
+taiki
 tailwindcss
 Templatender
 templating
