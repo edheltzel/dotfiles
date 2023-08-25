@@ -45,7 +45,7 @@ If your SIP is enabled, then follow the next steps to disable it – Assuming th
 2. Hold down Command-R and press the Power button. Keep holding Command-R until the Apple logo appears.
 3. Wait for OS X to boot into the OS X Utilities window.
 4. Choose Utilities > Terminal.
-5. Enter csrutil disable.
+5. Enter csrutil _disable_.
 6. Enter reboot.
 7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
 
