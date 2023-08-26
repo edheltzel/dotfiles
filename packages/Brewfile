@@ -235,7 +235,7 @@ cask 'onyx'        # System maintenance
 # cask 'alt-tab'     # Windows-like alt-tab
 
 # Browsers
-cask 'brave-browser-beta'        # Brave browser beta channel
+#cask 'brave-browser-beta'        # Brave browser beta channel
 cask 'brave-browser'             # Brave browser
 cask 'choosy'                    # Choose which browser to open links in
 cask 'firefox-developer-edition' # Firefox dev edition
