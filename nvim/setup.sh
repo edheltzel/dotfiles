@@ -7,10 +7,10 @@ cd "$DIR"
 
 CONFIG_PATH="$(realpath ~/.config)"
 NVM_DIR="$(realpath ~/.config/nvim)"
-VIM_DISTRO="SpaceVim"
+VIM_DISTRO="Echovim"
 
-install_nvm () {
-  nvm_repo='git clone https://github.com/SpaceVim/SpaceVim.git'
+install_nvm() {
+  nvm_repo='git clone https://github.com/ecosse3/nvim.git'
   if [ -d "$NVM_DIR" ]; then # Already installed, update
     cd $NVM_DIR && git pull ./
   else # Not yet installed, promt user to confirm before proceeding
@@ -29,6 +29,3 @@ substep_success "nvim folder created."
 # substep_info "Installing SpaceVim..."
 install_nvm
 success "Nvim with ${VIM_DISTRO} is ready."
-
-
-
