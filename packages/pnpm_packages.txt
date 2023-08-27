@@ -4,7 +4,6 @@ corepack
 cspell
 easy-sharing
 generator-code
-gulp-cli
 install
 intelephense
 lighthouse

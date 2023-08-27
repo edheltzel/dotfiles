@@ -107,6 +107,7 @@ brew 'cowsay'       # Have an ASCII cow say your message
 brew 'figlet'       # Output text as big ASCII art text
 brew 'neofetch'     # Show system data and ditstro info
 brew 'pv'           # Pipe viewer, with animation options
+brew 'glow'         # Terminal markdown reader - Go
 
 #############################################################
 # Software Development                                      #
@@ -116,7 +117,6 @@ brew 'pv'           # Pipe viewer, with animation options
 cask 'dbeaver-community'            # Database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
 cask 'fork'                         # Git visual client
-cask 'insomnia'                     # HTTP API testing app
 cask 'iterm2'                       # Better terminalmemulator
 cask 'sequel-pro'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
@@ -140,7 +140,7 @@ brew 'ruby-build'         # Ruby build plugin for rbenv
 brew 'richgo'             # Go test output formatter/opt/homebrew/bin/fish
 brew 'rust'               # Rust language
 brew 'rustup-init'        # Rust version manager
-brew 'sass/sass/migrator' # Sass CSS preprocessor
+brew 'sass/sass/migrator' # Sass mignration tool
 brew 'sass/sass/sass'     # Sass CSS preprocessor
 brew 'sqlite'             # SQLite database engine
 brew 'tdewolff/tap/minify'# Minify HTML, CSS, JS, JSON, SVG, XML
