@@ -20,41 +20,41 @@ substep_success "Successfully created symlinks."
 
 substep_info "Symlinking ~/.config folders..."
 
-#Starship prompt & Topgrade setup
+# Starship prompt & Topgrade setup
 find * -name "*.toml*" | while read fn; do
     symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
 substep_success "Starship prompt & Topgrade are ready."
 
-#bat setup
+# bat setup
 find . -name "bat" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
 substep_success "Bat is ready."
 
-#Raycast setup
+# Raycast setup
 find . -name "raycast" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
 substep_success "Raycast is ready."
 
-#iTerm setup
+# iTerm setup
 find . -name "iterm" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
 substep_success "iTerm is ready."
 
-#Karabiner setup
+# Karabiner setup
 find . -name "karabiner" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
 substep_success "Karabiner is ready."
 
-#VSCode setup
+# VSCode setup
 find . -name "vscode" | while read fn; do
     symlink "$SOURCE/$fn" "$CONFIG_PATH/$fn"
 done
