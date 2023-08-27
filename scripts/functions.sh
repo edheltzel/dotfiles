@@ -36,7 +36,6 @@ banner() {
     fi
 }
 
-
 symlink() {
     OVERWRITTEN=""
     if [ -e "$2" ] || [ -h "$2" ]; then
@@ -62,8 +61,6 @@ clear_broken_symlinks() {
     done
 }
 
-
-
 # Define a function for displaying an error message
 error() {
     local message="$1"
@@ -77,6 +74,15 @@ info() {
     echo -e "${BLUE}====================================================${NC}"
     echo -e "${BLUE} INFO: $message${NC}"
     echo -e "${BLUE}====================================================${NC}"
+}
+
+warning() {
+    local message="$1"
+    local padded_message=" WARNING: $message"
+    local line=$(printf "%${#padded_message}s" | tr " " "=")
+    echo -e "${YELLOW}$line${NC}"
+    echo -e "${YELLOW} WARNING:${NC} $message${NC}"
+    echo -e "${YELLOW}$line${NC}"
 }
 
 success() {
@@ -107,7 +113,6 @@ substep_error() {
     echo -e "${MAGENTA}====================================================${NC}"
 }
 
-
 localgitconfig() {
     local hostname=$(hostname)
     local signingkey=""
@@ -128,13 +133,12 @@ localgitconfig() {
     if grep -q "\[user\]" "$HOME/.gitconfig.local"; then
         sed "/\[user\]/a\\
 signingkey = $signingkey
-" "$HOME/.gitconfig.local" > "$HOME/.gitconfig.local.tmp"
+" "$HOME/.gitconfig.local" >"$HOME/.gitconfig.local.tmp"
         mv "$HOME/.gitconfig.local.tmp" "$HOME/.gitconfig.local"
     else
-        echo "[user]" >> "$HOME/.gitconfig.local"
-        echo "	signingkey = $signingkey" >> "$HOME/.gitconfig.local"
+        echo "[user]" >>"$HOME/.gitconfig.local"
+        echo "	signingkey = $signingkey" >>"$HOME/.gitconfig.local"
     fi
 
     substep_success "Git signingkey configured for hostname '$hostname'."
 }
-
