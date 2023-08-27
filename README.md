@@ -1,12 +1,11 @@
 <img src="_images/dotfiles-logo.png" alt="dotfiles logo" width="350">
 
----
-
 An ongoing configuration for my personal needs using macOS, Fish shell, Git, and Frontend web development.
 
 My playground revolves around DevOps and Frontend development which includes JavaScript, CSS Wizardry with Scss, SSG/JAMStack – mainly [11ty](https://www.11ty.dev/) and I have this soft spot in my ❤️ for the OG [Jekyll](https://jekyllrb.com).
 
 ## Terminal toolkit with replacements for [Unix commands](https://en.wikipedia.org/wiki/List_of_Unix_commands)
+
 I find tools that are built with Rust or Go to be performant and cover 90% of my use cases.
 
 - [bat](https://github.com/sharkdp/bat) Rust replacement for `cat`
@@ -164,6 +163,7 @@ setup.sh - Symlinks all `.files` to their corresponding location in `~/.config/`
   - cp.fish - Copies files and directories
   - cpwd.fish - Copies the current working directory to the clipboard
   - fish_greeting.fish - My personal fish greeting using the full-color fish logo
+  - git-undo.fish - Undo a the last commit message and reset the HEAD
   - imgcon.fish - Converts images to different formats
   - mkbak.fish - Creates a backup of a file
   - mkd.fish - Creates a directory and changes into it
@@ -171,24 +171,30 @@ setup.sh - Symlinks all `.files` to their corresponding location in `~/.config/`
   - reload.fish - Reloads fish
   - restore.fish - Restores a file from a backup
   - ~~setup.fish - reloads and sets fish abbreviations~~ - **DEPRECATED** - use `abbr -a` inside of `conf.d/abbr.fish` instead
-  - speed.fish - **macOS ONLY** leverages the built-in `networkQuality` cli tool - just a glorified alias but works with all the flag options
   - upp.fish - **macOS ONLY** checks current global node version and runs `topgrade` command
   - weather.fish - using wttr.in to check the local weather
   - wget.fish - alias for `wget -c`
+  - speed.fish - **macOS ONLY** leverages the built-in `networkQuality` cli tool - just a glorified alias but works with all the flag options
 
-
-```shell
+<details>
+  <summary><code>speed summary</code></summary>
+<pre>
+> speed
 ==== SUMMARY ====
-Upload capacity: 125.773 Mbps
-Download capacity: 540.165 Mbps
-Upload flows: 20
-Download flows: 20
-Responsiveness: Medium (218 RPM)
-Base RTT: 121
-Start: 12/5/21, 7:42:03 AM
-End: 12/5/21, 7:42:20 AM
-OS Version: Version 12.0.1 (Build 21A559)
-```
+Uplink capacity: 232.603 Mbps (Accuracy: High)
+Downlink capacity: 887.549 Mbps (Accuracy: High)
+Responsiveness: Medium (570 RPM) (Accuracy: High)
+Idle Latency: 32.708 milliseconds (Accuracy: High)
+Interface: en0
+Uplink bytes transferred: 363.870 MB
+Downlink bytes transferred: 1.987 GB
+Uplink Flow count: 20
+Downlink Flow count: 16
+Start: 8/27/23, 5:32:12 PM
+End: 8/27/23, 5:32:32 PM
+OS Version: Version 13.5.1 (Build 22G90)
+</pre>
+</details>
 
 #### Update All The Things
 
