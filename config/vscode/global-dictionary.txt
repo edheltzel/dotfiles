@@ -16,6 +16,7 @@ codepen
 codesnap
 codyhouse
 Colour
+colours
 commentblock
 commenthtml
 cssnano
