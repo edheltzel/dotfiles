@@ -23,8 +23,8 @@ function upp --description 'Updates everything with Topgrade but also prints the
   set_color white
 
   # Prepare pnpm and yarn with Corepack
-  printf '\n―― %s - pnpm yarn - Corepack  ――――――――――――――――――――――――――――――――――――――――――――――――――――\n' (date "+%H:%M:%S")
+  printf '\n―― %s - pnpm - Corepack  ――――――――――――――――――――――――――――――――――――――――――――――――――――\n' (date "+%H:%M:%S")
   set_color normal
   corepack prepare pnpm@latest --activate
-  corepack prepare yarn@stable --activate
+  pnpm update -g --latest
 end
