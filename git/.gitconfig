@@ -193,8 +193,8 @@ downtags = fetch --tags
 [help]
 
 [gui]
-  fontui     = -family \"Fira Code\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
-  fontdiff = -family \"Fira Mono for Powerline\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+  fontui     = -family \"JetBrainsMono Nerd Font\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family \"JetBrainsMono Nerd Font\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
   commitmsgwidth   = 80
   pruneduringfetch = true
   tabsize          = 2
