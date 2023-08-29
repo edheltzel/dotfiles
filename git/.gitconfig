@@ -1,6 +1,6 @@
 [user]
   name  = Ed Heltzel
-  email = ed@rainyday.media
+  email = 402910+edheltzel@users.noreply.github.com
 
 [github]
   user = edheltzel
@@ -203,11 +203,14 @@ downtags = fetch --tags
 
 [init]
   defaultBranch = master
-
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
 [include]
 	path = ~/.gitconfig.local # BigMac
 	path = ~/.gitconfig-local # MacDaddy
-[commit]
-	gpgsign = true
-[gpg]
-	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
