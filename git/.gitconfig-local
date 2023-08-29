@@ -1,4 +1,4 @@
 [meta]
 	isLocalConfig = true
 [user]
-	signingkey = 20A88656AA9210FE
+	signingkey = ~/.ssh/id_rsa.pu
