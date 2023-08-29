@@ -206,17 +206,33 @@ OS Version: Version 13.5.1 (Build 22G90)
 - setup.sh - Symlinks all git files to `~/`
 - .gitignore_global - Contains global gitignores, such as OS-specific files and
   several compiled files
-- .gitconfig - Sets several global Git variables - also include signing
-  - This also includes a line that includes an additional gitconfig file `.gitconfig-local` - my personal setup uses two different Macs and this is how I achieve setup each machine to use Git.
+- .gitconfig - Sets several global Git variables - also include GPG signing
+
+#### Commit and Tag Signing
+
+##### SSH Commit Signing
+
+> I would highly recommend you use your SSH key to "simplify signing Git commits and tags" for both Github and Gitlab. This is a great way to secure your commits and verify that you are the one making the commits, without all the setup and maintaining hassle GPG can come with. IDK why but sometimes it just stops working ¯\_(ツ)_/¯
+
+- [Git Merge Workshop - Simplify Signing with SSH](https://github.com/git-merge-workshops/simplify-signing-with-ssh/tree/main)
+- [Gitlab SSH Commit Signing Doc](https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/)
+
+The `.gitconfig` includes a line that adds support for an additional gitconfig file `.gitconfig.local` - my personal setup uses two different Macs and this is how I achieve commit signing with each machine.
   ```shell
     [meta]
       isLocalConfig = true
     [user]
       signingkey = PATH_TO_YOUR_KEY
+    [gpg "ssh"]
+      allowedSignersFile = PATH_TO_YOUR_ALLOWED_SIGNERS_FILE
   ```
+  - **PLEASE REVIEW** `./git/setup.sh`, this script checks what the computer name is and sets the `.gitconfig.local`, you'll want to update this to your computer name.
 
-  - _(options)_: GPG signing is set to `TRUE` by default
-    [renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
+##### GPG Commit Signing
+
+  _(optional)_: GPG signing is set to `TRUE` by default 👉 If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile).
+
+  [renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
 
   [Generate new key and assign to global git config](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374#:~:text=It%20means%20that%20is%20not,secret%20keys%20available%20in%20GPG.)
 
@@ -235,8 +251,6 @@ OS Version: Version 13.5.1 (Build 22G90)
     - I found this [GIST helpful](https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2)
     - To get VSCode setup follow this [article](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
   - **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
-
-  - If you **DO NOT** want to enable GPG run `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile).
 
 ### macOS Preferences (macos/)
 
