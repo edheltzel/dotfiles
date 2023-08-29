@@ -211,5 +211,4 @@ downtags = fetch --tags
 [tag]
 	gpgsign = true
 [include]
-	path = ~/.gitconfig.local # BigMac
-	path = ~/.gitconfig-local # MacDaddy
+	path = ~/.gitconfig.local
