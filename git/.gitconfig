@@ -212,5 +212,3 @@ downtags = fetch --tags
 [include]
 	path = ~/.gitconfig.local # BigMac
 	path = ~/.gitconfig-local # MacDaddy
-[gpg "ssh"]
-	allowedSignersFile = ~/.ssh/allowed_signers
