@@ -1,10 +1,10 @@
 <img src="_images/dotfiles-logo.png" alt="dotfiles logo" width="350">
 
-An ongoing configuration for my personal needs using macOS, Fish shell, Git, and Frontend web development.
+### [Ed Heltzel's](https://github.com/edheltzel) personal configuration for MacOS and Fish shell.
 
-My playground revolves around DevOps and Frontend development which includes JavaScript, CSS Wizardry with Scss, SSG/JAMStack – mainly [11ty](https://www.11ty.dev/) and I have this soft spot in my ❤️ for the OG [Jekyll](https://jekyllrb.com).
+My playground revolves around DevOps and Full stack web development.
 
-## Terminal toolkit with replacements for [Unix commands](https://en.wikipedia.org/wiki/List_of_Unix_commands)
+## 🧰 Terminal toolkit with replacements for [Unix commands](https://en.wikipedia.org/wiki/List_of_Unix_commands)
 
 I find tools that are built with Rust or Go to be performant and cover 90% of my use cases.
 
@@ -22,7 +22,7 @@ I find tools that are built with Rust or Go to be performant and cover 90% of my
 - [zoxide](https://github.com/ajeetdsouza/zoxide) Rust companion for `cd` and replacement for z and auto jump
   - [zoxide fish](https://github.com/kidonng/zoxide.fish) - Fish plugin for zoxide
 
-## Usage and the Install
+## ⚙️ Usage and the Install
 
 **Caveats**
 If you are on any version of macOS that uses AFPS, you'll need to disable the SIP.
@@ -49,7 +49,7 @@ If your SIP is enabled, then follow the next steps to disable it – Assuming th
 7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
 
 ### SSH Keys
-I use [ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to authenticate with GitHub and other services. You generally want to create new keys for each device you use, but you can also use the same key on multiple devices. **I have started using two different keys for my multi-machine work flow.** One key is for my personal devices and the other is for my work devices. This allows me to easily revoke access to my work devices if I leave the company, and not have to worry about my personal keys being compromised or having to change them.
+I use [ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to authenticate with GitHub and other services. You generally want to create new keys for each device you use, but you can also use the same key on multiple devices. **I have started using two different keys for my multi-machine work flow.** One key is for my personal devices and the other is for my work devices. This allows me to easily revoke access to my work devices if I discontinue a relationship with a company or customer, and not have to worry about my personal keys being compromised or having to change them.
 
 If you look at the `.gitconfig` you'll see the use of two different keys.
 
@@ -74,37 +74,36 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher
 ```
 
-## Customization
+## 🏗️ Customization
 
-I strongly encourage you to play around with the configurations, and add or remove features.
-If you would like to use these dotfiles for yourself, I'd recommend changing at least the following:
+I would encourage you to play around with the configurations so you can add or remove features.
+If you would like to use these dotfiles for yourself, I'd recommend changing following:
+- #### Git
 
-#### Git
+  - The `.gitconfig` file includes my `[user]` config, replace these with your own user name and email as well as the `[include]` path for your local gitconfig.
+    - Almost all of git aliases are located in `.gitconfig` versus `_aliases.fish` or `fish/functions/setup.fish` - I've found this to work best for me.
+  - Also check the `.gitignore_global` for anything you might want to add or remove.
 
-- The `.gitconfig` file includes my `[user]` config, replace these with your own user name and email as well as the `[include]` path for your local gitconfig.
-  - Almost all of git aliases are located in `.gitconfig` versus `_aliases.fish` or `fish/functions/setup.fish` - I've found this to work best for me.
-- Also check the `.gitignore_global` for anything you might want to add or remove.
+- #### OSX
 
-#### OSX
+  - At the top of the setup.sh file, my computer name is set as `MacDaddy` - might want to change it.
 
-- At the top of the setup.sh file, my computer name is set as `MacDaddy` - might want to change it.
+- #### Packages
 
-#### Packages
+  This folder is a collection of the programs and utilities I use. The lists can easily be amended for your workflow.
 
-This folder is a collection of the programs and utilities I use. The lists can easily be amended for your workflow.
+  - `Brewfile`
+  - `python_packages.txt`
+  - `ruby_packages.txt`
+  - `rust_packages.txt`
 
-- `Brewfile`
-- `python_packages.txt`
-- `ruby_packages.txt`
-- `rust_packages.txt`
+- #### Repos
 
-#### Repos
+  This folder is a collection of repos I like to sync between my machines. The lists can easily be amended for your workflow. Just add the repo name to the `txt` file and it will be cloned. To customize, just update the name of the `oss.txt` file to match the name of the directory you want these repos to be cloned to.
 
-This folder is a collection of repos I like to sync between my machines. The lists can easily be amended for your workflow. Just add the repo name to the `txt` file and it will be cloned. To customize, just update the name of the `oss.txt` file to match the name of the directory you want these repos to be cloned to.
+  - `oss.txt` - My personal OSS projects that I like to keep in sync
 
-- `oss.txt` - My personal OSS projects that I like to keep in sync
-
-## Contents
+## 📝 Contents
 
 ### Root (/)
 
@@ -212,7 +211,7 @@ OS Version: Version 13.5.1 (Build 22G90)
 
 ##### SSH Commit Signing
 
-> I would highly recommend you use your SSH key to "simplify signing Git commits and tags" for both Github and Gitlab. This is a great way to secure your commits and verify that you are the one making the commits, without all the setup and maintaining hassle GPG can come with. IDK why but sometimes it just stops working ¯\_(ツ)_/¯
+> This is the my preferred way setup for Git Commit/Tag Signing. Using your SSH key "simplifies signing Git commits and tags" on both Github and Gitlab. This is a great way to secure your commits and verify that you are the one making the commits, without all the setup and maintaining hassle GPG can come with. IDK why but sometimes it just stops working ¯\_(ツ)_/¯
 
 - [Git Merge Workshop - Simplify Signing with SSH](https://github.com/git-merge-workshops/simplify-signing-with-ssh/tree/main)
 - [Gitlab SSH Commit Signing Doc](https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/)
@@ -318,6 +317,6 @@ This will symlink the `fnm.fish` file in `~/.config/fish/conf.d` _(It might be h
 fnm env --use-on-cd | source
 ```
 
-#### Special Thanks
+#### 🙏 Special Thanks
 
 Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup, and inspiration.
