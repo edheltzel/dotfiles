@@ -147,7 +147,8 @@ brew 'tdewolff/tap/minify'# Minify HTML, CSS, JS, JSON, SVG, XML
 
 # DevOps SCMs and CI/CD Tools
 # brew 'ansible'            # Automation
-brew 'curl'               # Command line HTTP client
+# brew 'curl'               # Command line HTTP client
+brew 'curlie'             # Command line HTTP client - Go
 brew 'dive'               # Docker image viewer
 brew 'docker'             # Containers
 brew 'orbstack'           # Docker image viewer
