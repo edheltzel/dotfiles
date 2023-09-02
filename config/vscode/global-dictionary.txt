@@ -76,6 +76,7 @@ realpath
 renderfile
 repodir
 Roadmap
+scminput
 scrollback
 setend
 sharebar
