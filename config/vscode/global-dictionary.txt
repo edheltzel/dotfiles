@@ -7,6 +7,7 @@ autotalk
 Beavercreek
 Bevs
 browserlist
+browsersync
 btns
 cblock
 Centerville
@@ -64,6 +65,7 @@ moxer
 Nanotubes
 npmrc
 nunjucks
+onehalf
 outdir
 overscroll
 pnpm
@@ -86,6 +88,7 @@ signingkey
 smacss
 SNIPCART
 sourcemaps
+Spacemacs
 speedtest
 Springboro
 startship
