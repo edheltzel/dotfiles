@@ -2,7 +2,7 @@
 sudo -v
 
 # Define variables for each package manager and include the corresponding package lists
-. ./scripts/functions.sh
+. ../scripts/functions.sh
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
 pnpm_packages="pnpm_packages.txt"

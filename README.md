@@ -96,6 +96,9 @@ If you would like to use these dotfiles for yourself, I'd recommend changing fol
   - `python_packages.txt`
   - `ruby_packages.txt`
   - `rust_packages.txt`
+  - `pnpm_packages.txt`
+
+  > If you would rather run each text file individually, you can run the following command as an example: `pnpm install -g (cat pnpm_packages.txt)` 👈 Fish OR Bash 👉 `pnpm install -g $(cat pnpm_packages.txt)`
 
 - #### Repos
 
