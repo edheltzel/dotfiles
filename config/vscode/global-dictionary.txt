@@ -6,6 +6,7 @@ autoplay
 autotalk
 Beavercreek
 Bevs
+biomejs
 browserlist
 browsersync
 btns
