@@ -5570,7 +5570,7 @@ Close</string>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
-			<false/>
+			<true/>
 			<key>Use Cursor Guide</key>
 			<true/>
 			<key>Use Italic Font</key>
