@@ -23,6 +23,7 @@ tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'kyoh86/tap'
+tap 'over-sh/bun'
 tap 'sass/sass'
 tap 'teamookla/speedtest'   # Command line speed test utility
 
@@ -124,6 +125,7 @@ cask 'visual-studio-code-insiders'  # Code editor
 cask 'local'                        # Local WordPress development
 
 # Development Langs, Compilers, Package Managers and SDKs
+brew 'bun'                # All-in-one toolkit for JS/TS
 brew 'dart'               # Dart SDK
 brew 'deno'               # Deno JavaScript/TypeScript runtime
 brew 'fnm'                # Switching node versions
