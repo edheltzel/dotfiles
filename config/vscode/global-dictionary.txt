@@ -10,6 +10,7 @@ biomejs
 browserlist
 browsersync
 btns
+bunx
 cblock
 Centerville
 cesbuild
@@ -21,12 +22,14 @@ Colour
 colours
 commentblock
 commenthtml
+corepack
 cssnano
 darwish
 DATETIME
 Dayton
 Descr
 dictsort
+dotfiles
 easymotion
 edheltzel
 eleventy
