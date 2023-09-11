@@ -1,3 +1,4 @@
+@antfu/ni
 @bitwarden/cli
 @githubnext/github-copilot-cli
 corepack
@@ -7,6 +8,7 @@ generator-code
 install
 intelephense
 lighthouse
+neovim
 netlify-cli
 npm
 typescript-language-server

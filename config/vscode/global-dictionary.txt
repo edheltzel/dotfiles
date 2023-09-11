@@ -7,6 +7,7 @@ autotalk
 Beavercreek
 Bevs
 biomejs
+bitwarden
 browserlist
 browsersync
 btns
@@ -50,6 +51,7 @@ Flightdeck
 Frontmatter
 Fullscreen
 ginfuru
+githubnext
 gitignores
 hcomm
 heltzel
@@ -58,6 +60,7 @@ htmlmin
 ifel
 Incenta
 indexnow
+intelephense
 ishikawa
 iterm
 jampack
@@ -67,6 +70,7 @@ linkify
 luxon
 moxer
 Nanotubes
+neovim
 npmrc
 nunjucks
 onehalf

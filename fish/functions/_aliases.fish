@@ -1,23 +1,51 @@
 
 
 # Navigation
-function ..    ; cd .. ; end
-function ...   ; cd ../.. ; end
-function ....  ; cd ../../.. ; end
-function ..... ; cd ../../../.. ; end
+function ..
+    cd ..
+end
+function ...
+    cd ../..
+end
+function ....
+    cd ../../..
+end
+function .....
+    cd ../../../..
+end
 
-function l; command exa -Flagh --sort name --git --icons --group-directories-first $argv; end
-function ll; command exa -Flagh --git --icons --group-directories-first --sort modified $argv; end
-function la; command exa -Fla --icons; end
-function tree; command exa --tree --icons $argv; end
-function cll; command clear; and exa -Flah --icons --sort modified $argv; end
+function l
+    command exa -Flagh --sort name --git --icons --group-directories-first $argv
+end
+function ll
+    command exa -Flagh --git --icons --group-directories-first --sort modified $argv
+end
+function la
+    command exa -Fla --icons
+end
+function tree
+    command exa --tree --icons $argv
+end
+function cll
+    command clear; and exa -Flah --icons --sort modified $argv
+end
 
 # Project shortcuts/aliases
-function projects; cd ~/Developer; end
-function dev; cd ~/Developer; end
-function work; cd ~/Developer/work; end
-function dots; cd ~/Developer/dotfiles; end
-function cuts; ~/Developer/dotfiles; and eval $EDITOR .; end
+function projects
+    cd ~/Developer
+end
+function dev
+    cd ~/Developer
+end
+function work
+    cd ~/Developer/work
+end
+function dots
+    cd ~/Developer/dotfiles
+end
+function cuts
+    ~/Developer/dotfiles; and eval $EDITOR .
+end
 
 # Language Support
 alias pn="pnpm"
@@ -43,65 +71,65 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 # SSH and localhost
 function hostfile --description 'Opens local host file in the default editor'
-  eval sudo $EDITOR /etc/hosts
+    eval sudo $EDITOR /etc/hosts
 end
 
 function lssh --description 'Quickly list all hosts in ssh config'
-  command grep -w -i "Host" ~/.ssh/config | sed 's/Host//'
+    command grep -w -i Host ~/.ssh/config | sed s/Host//
 end
 
 function editssh --description 'Opens ssh known host file in the default editor'
-  eval $EDITOR ~/.ssh
+    eval $EDITOR ~/.ssh
 end
 
 # Lighthouse for performance testing
 function lh --description 'alias for lighthouse'
-  set current_date (date "+%Y-%m-%d")
-  set current_time (date "+%H-%M-%S")
-  command lighthouse $argv --output=html --output-path=./lighthouse/$current_date__$current_time.html --view
+    set current_date (date "+%Y-%m-%d")
+    set current_time (date "+%H-%M-%S")
+    command lighthouse $argv --output=html --output-path=./lighthouse/$current_date__$current_time.html --view
 end
 
 # Docker/Kubernetes/Vagrant
 function dk --description 'docker alias'
-  command docker $argv
+    command docker $argv
 end
 
 function dc --description 'docker-compose alias'
-  command docker-compose $argv
+    command docker-compose $argv
 end
 
 # Ouch - zip and unzip replacement
 function zip --description 'alias for zip using ouch instead of zip'
-  command ouch compress $argv
+    command ouch compress $argv
 end
 
 function unzip --description 'alias for unzip using ouch instead of unzip'
-  command ouch decompress $argv
+    command ouch decompress $argv
 end
 
 function listzip --description 'alias to list files files in a zip compression'
-  command ouch list $argv
+    command ouch list $argv
 end
 
 # Open and Remove/Del shortcuts
 function o --description 'alias o=open'
-  open $argv;
+    open $argv
 end
 
 function oo --description 'alias oo=open .'
-	open . $argv;
+    open . $argv
 end
 
 function oa --description 'Open App'
-	open -a /Applications/$argv;
+    open -a /Applications/$argv
 end
 
 function del --description 'alias del=trash'
-	trash $argv;
+    trash $argv
 end
 
 function sdel --description 'alias sdel=sudo rm -rf'
-	sudo rm -rf $argv;
+    sudo rm -rf $argv
 end
 
 # Repositiory shortcuts
@@ -126,6 +154,6 @@ function forrepos --description 'Evaluates $argv for all repo folders'
         set repo (basename $d)
         echo $repo
         eval (abbrex $argv)
-        popd > /dev/null
+        popd >/dev/null
     end
 end
