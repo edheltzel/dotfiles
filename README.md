@@ -10,6 +10,7 @@ I find tools that are built with Rust or Go to be performant and cover 90% of my
 
 - [bat](https://github.com/sharkdp/bat) Rust replacement for `cat`
 - [bottom](https://clementtsang.github.io/bottom/0.8.0/) Rust replacement for `top`
+- [Bun](https://bun.sh/) - A drop-in-replacement for NPM/PNPM/Yarn - written in Zig
 - [exa](https://the.exa.website/) Rust replacement for `ls`
 - [fd](https://github.com/sharkdp/fd) Rust replacement for `find`
 - [fzf](https://github.com/junegunn/fzf) a mostly Go fuzzy finder
@@ -96,9 +97,12 @@ If you would like to use these dotfiles for yourself, I'd recommend changing fol
   - `python_packages.txt`
   - `ruby_packages.txt`
   - `rust_packages.txt`
-  - `pnpm_packages.txt`
+  - `bun_packages.txt`
 
-  > If you would rather run each text file individually, you can run the following command as an example: `pnpm install -g (cat pnpm_packages.txt)` 👈 Fish OR Bash 👉 `pnpm install -g $(cat pnpm_packages.txt)`
+  > If you would rather run each text file individually, you can run the following command as an example:
+
+  > Fish 👉 `bun add --global (cat bun_packages.txt)`<br>
+  > Bash 👉 `bun add --global $(cat bun_packages.txt)`
 
 - #### Repos
 
@@ -280,10 +284,9 @@ The `.gitconfig` includes a line that adds support for an additional gitconfig f
 
 ### Vim (nvim/)
 
-I'd suggest you take a look at this configuration - I use NeoVim when I need Vim
+I use NeoVim, when I need Vim. The distribution I use is [LazyVim](https://www.lazyvim.org/)
 
-- [AstroNvim](https://astronvim.github.io/configuration/basic_configuration) is the distribution I use.
-- setup.sh - Symlinks all vim files to `~/.config/nvim`
+- setup.sh - Clone LazyVim to `~/.config/nvim`
 
 ### Helper Scripts (scripts/)
 
