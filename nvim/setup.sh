@@ -7,10 +7,10 @@ cd "$DIR"
 
 CONFIG_PATH="$(realpath ~/.config)"
 NVM_DIR="$(realpath ~/.config/nvim)"
-VIM_DISTRO="Echovim"
+VIM_DISTRO="LazyVim"
 
 install_nvm() {
-  nvm_repo='git clone https://github.com/ecosse3/nvim.git'
+  nvm_repo='git clone https://github.com/LazyVim/starter'
   if [ -d "$NVM_DIR" ]; then # Already installed, update
     cd $NVM_DIR && git pull ./
   else # Not yet installed, promt user to confirm before proceeding
@@ -26,6 +26,4 @@ install_nvm() {
 
 info "Setting symlinks for ${VIM_DISTRO}."
 substep_success "nvim folder created."
-# substep_info "Installing SpaceVim..."
-install_nvm
 success "Nvim with ${VIM_DISTRO} is ready."
