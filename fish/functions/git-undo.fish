@@ -11,15 +11,17 @@
 #   git-undo --hard      # Completely discard the changes from the last commit
 #
 function git-undo
-  set_color red
-  if test (command -v git); and git rev-parse --is-inside-work-tree > /dev/null 2>&1
-    if test "$argv" = "--hard"
-      git reset --hard HEAD~1
+    set_color red
+    if test (command -v git); and git rev-parse --is-inside-work-tree >/dev/null 2>&1
+        if test "$argv" = --hard
+            git reset --hard HEAD~1
+        else if test "$argv" = --soft
+            git reset --soft HEAD~1
+        else
+            git reset HEAD~1
+        end
     else
-      git reset HEAD~1
+        echo -e "\e[31mError: Not a Git repository\e[0m"
     end
-  else
-    echo -e "\e[31mError: Not a Git repository\e[0m"
-  end
-  set_color normal
+    set_color normal
 end

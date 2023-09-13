@@ -1,16 +1,12 @@
 @antfu/ni
-@bitwarden/cli
 @githubnext/github-copilot-cli
-corepack
 cspell
 easy-sharing
 generator-code
-install
 intelephense
 lighthouse
 neovim
 netlify-cli
-npm
 typescript-language-server
 typescript
 @vscode/vsce

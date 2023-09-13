@@ -61,14 +61,11 @@
 
 [diff]
   tool = vscode
-
 [difftool "vscode"]
   cmd = code-insiders --wait --diff $LOCAL $REMOTE
-
 [merge]
   tool = vscode
   log  = true
-
 [mergetool "vscode"]
   cmd = code-insiders --wait $MERGED
 
@@ -81,14 +78,17 @@
   aa  = add --all
   cm  = commit -S -m
   cma = !git add --all && git commit -S -m
-  # cm  = commit -m
-  # cma = !git add --all && git commit -m
   co  = checkout
   rv  = remote -v
+
+  #not signed
+  # cm  = commit -m
+  # cma = !git add --all && git commit -m
 
   #checkouts
   cb      = checkout -b
   cob     = checkout -b
+  #checkout and track
   ct      = checkout -t
   cr      = checkout --
   unstage = reset HEAD
@@ -102,37 +102,38 @@
   bd = branch -d
   bD = branch -D
   bm = branch -m
+
+  #diff and merge
   d  = diff
   dt = difftool
   m  = merge
   mt = mergetool
-  r  = rebase
-  rr = remote rm
 
   #rebases & squash
+  r  = rebase
+  rr = remote rm
   rb  = rebase
   rbi = rebase -i
   rbc = rebase --continue
   rba = rebase --abort
   rbs = rebase --skip
   rf  = reflog
-
-  unstage  = reset HEAD --
-  uncommit = reset --soft HEAD~1
-  undo = reset --soft HEAD~1
-  delete = reset --hard HEAD~1
-  trash = reset --hard HEAD~1
-  #squashes
   sq = "!f() { git rebase -i HEAD~$1; }; f"
+  squash = "!f() { git rebase -i HEAD~$1; }; f"
+
+  #undo and reset commits
+  unstage = reset HEAD
+  undo = reset --soft HEAD
+  delete = reset --hard HEAD~1
 
   #tags
   t      = tag -l
-  squash = "!f() { git rebase -i HEAD~$1; }; f"
 
   #stashes
   st   = stash
   stl  = stash list
   stp  = stash pop
+  pop  = stash pop
   sts  = "!f() { git stash show stash@{$1}; }; f"
   std  = "!f() { git stash show stash@{$1} -U5; }; f"
   strm = "!f() { git stash drop stash@{$1} -U5; }; f"
