@@ -67,6 +67,7 @@ jampack
 Jamstack
 lightningcss
 linkify
+lockb
 luxon
 moxer
 Nanotubes
