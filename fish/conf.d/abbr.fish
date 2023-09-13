@@ -4,7 +4,7 @@ if status is-interactive
     abbr --add binfo 'brew info'
     abbr --add brews 'brew leaves'
     abbr --add casks 'brew list --cask'
-    abbr --add cls 'clear'
+    abbr --add cls '~/Library/CloudStorage/Dropbox-RDM/Clients'
     abbr --add co 'code .'
     abbr --add con 'code -n .'
     abbr --add config '~/.config/'
