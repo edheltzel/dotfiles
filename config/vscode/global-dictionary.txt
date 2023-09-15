@@ -77,6 +77,8 @@ nunjucks
 onehalf
 outdir
 overscroll
+pagedown
+pageup
 pnpm
 preinstall
 pubkey
