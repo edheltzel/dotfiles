@@ -1,11 +1,11 @@
 if status is-interactive
     abbr --add atm neofetch
-    abbr --add bi 'brew install'
+    abbr --add bi 'brew install '
     abbr --add binfo 'brew info'
     abbr --add brews 'brew leaves'
     abbr --add casks 'brew list --cask'
     abbr --add cls '~/Library/CloudStorage/Dropbox-RDM/Clients'
-    abbr --add co 'code .'
+    abbr --add co 'code '
     abbr --add con 'code -n .'
     abbr --add config '~/.config/'
     abbr --add coo 'code -r .'
@@ -13,6 +13,8 @@ if status is-interactive
     abbr --add gems 'gem list'
     abbr --add gg 'go get GITHUB_URL'
     abbr --add ghw 'gh repo view --web'
+    abbr --add ghpr 'gh pr create -a "@me" --fill'
+    abbr --add ghm --set-cursor 'gh pr merge % --squash'
     abbr --add goo 'cd ~/.go/'
     abbr --add npms 'npm list -g --depth=0'
     abbr --add pns 'pnpm list -g'
