@@ -1,5 +1,5 @@
 if status is-interactive
-    abbr --add atm 'neofetch'
+    abbr --add atm neofetch
     abbr --add bi 'brew install'
     abbr --add binfo 'brew info'
     abbr --add brews 'brew leaves'
@@ -19,8 +19,9 @@ if status is-interactive
     abbr --add pnpms 'pnpm list -g'
     abbr --add buns 'bun pm ls -g'
     abbr --add siz 'du -khsc'
-    abbr --add sp 'speedtest'
+    abbr --add sp speedtest
     abbr --add suckit 'wget -mkEpnp url_here'
+    abbr --add link 'ln -s'
     abbr --add symlink 'ln -s'
     abbr --add amux 'tmux at -t base'
     abbr --add tkill 'tmux kill-session -t'
