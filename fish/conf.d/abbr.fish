@@ -13,6 +13,8 @@ if status is-interactive
     abbr --add gems 'gem list'
     abbr --add gg 'go get GITHUB_URL'
     abbr --add ghw 'gh repo view --web'
+    abbr --add ghpr 'gh pr create -a "@me" --fill'
+    addr --add ghm 'gh pr merge --squash'
     abbr --add goo 'cd ~/.go/'
     abbr --add npms 'npm list -g --depth=0'
     abbr --add pns 'pnpm list -g'
