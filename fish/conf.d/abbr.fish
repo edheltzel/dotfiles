@@ -2,7 +2,7 @@ if status is-interactive
     abbr --add atm neofetch
     abbr --add bi 'brew install '
     abbr --add binfo 'brew info'
-    abbr --add brews 'brew leaves'
+    abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
     abbr --add cls '~/Library/CloudStorage/Dropbox-RDM/Clients'
     abbr --add co 'code '
