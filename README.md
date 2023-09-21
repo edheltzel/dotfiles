@@ -10,7 +10,7 @@ I find tools that are built with Rust or Go to be performant and cover 90% of my
 
 - [bat](https://github.com/sharkdp/bat) Rust replacement for `cat`
 - [bottom](https://clementtsang.github.io/bottom/0.8.0/) Rust replacement for `top`
-- [Bun](https://bun.sh/) - A drop-in-replacement for NPM/PNPM/Yarn - written in Zig
+- ~~[Bun](https://bun.sh/) - A drop-in-replacement for NPM/PNPM/Yarn - written in Zig~~s
 - [exa](https://the.exa.website/) Rust replacement for `ls`
 - [fd](https://github.com/sharkdp/fd) Rust replacement for `find`
 - [fzf](https://github.com/junegunn/fzf) a mostly Go fuzzy finder
@@ -97,12 +97,12 @@ If you would like to use these dotfiles for yourself, I'd recommend changing fol
   - `python_packages.txt`
   - `ruby_packages.txt`
   - `rust_packages.txt`
-  - `bun_packages.txt`
+  - `pnpm_packages.txt`
 
   > If you would rather run each text file individually, you can run the following command as an example:
 
-  > Fish 👉 `bun add --global (cat bun_packages.txt)`<br>
-  > Bash 👉 `bun add --global $(cat bun_packages.txt)`
+  > Fish 👉 `pnpm add --global (cat pnpm_packages.txt)`<br>
+  > Bash 👉 `pnpm add --global $(cat pnpm_packages.txt)`
 
 - #### Repos
 
