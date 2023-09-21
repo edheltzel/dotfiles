@@ -1,13 +1,7 @@
 {
   "workbench.colorCustomizations": {
-    "[Default Dark Modern]": {
-      "titleBar.activeForeground": "#a47b08",
-      "titleBar.inactiveForeground": "#a47b085d"
-    },
-    "[Default Light Modern]": {
-      "titleBar.activeForeground": "#694d00",
-      "titleBar.inactiveForeground": "#694d005d"
-    },
+    "statusBar.foreground": "#1a1a1a",
+    "statusBar.background": "#FF7C7B"
   },
   "cSpell.words": [
     "abbrex",
