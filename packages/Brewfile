@@ -128,6 +128,7 @@ cask 'local'                        # Local WordPress development
 brew 'bun'                # All-in-one toolkit for JS/TS
 brew 'dart'               # Dart SDK
 brew 'deno'               # Deno JavaScript/TypeScript runtime
+brew 'fig'                # Commandline Utility for any terminal
 brew 'fnm'                # Switching node versions
 brew 'go'                 # Compiler for Go Lang
 brew 'hugo'               # Static site generator - Go
