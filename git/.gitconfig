@@ -32,8 +32,8 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = code-insiders --wait
-  # editor       = code -w
+  #editor       = code-insiders --wait
+  editor       = code --wait  
   #editor       = nvim
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
@@ -62,13 +62,14 @@
 [diff]
   tool = vscode
 [difftool "vscode"]
-  cmd = code-insiders --wait --diff $LOCAL $REMOTE
+  cmd = code --wait --diff $LOCAL $REMOTE
+  #cmd = code-insiders --wait --diff $LOCAL $REMOTE
 [merge]
   tool = vscode
   log  = true
 [mergetool "vscode"]
-  cmd = code-insiders --wait $MERGED
-
+  #cmd = code-insiders --wait $MERGED
+  cmd = code --wait $MERGED
 [apply]
   #Detect whitespace errors when applying a patch
   whitespace = fix

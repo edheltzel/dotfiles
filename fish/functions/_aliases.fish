@@ -53,7 +53,7 @@ alias px="pnpx"
 alias undo="git-undo" # see ./git-undo.fish
 
 # Editors and Utilities
-alias code="code-insiders"
+#alias code="code-insiders"
 alias mux="tmux"
 alias vim="nvim"
 alias top="btm" # muscle memory
