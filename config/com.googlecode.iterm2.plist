@@ -5586,7 +5586,7 @@ Close</string>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Working Directory</key>
 			<string>/Users/ed</string>
 		</dict>
