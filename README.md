@@ -138,6 +138,14 @@ setup.sh - Symlinks all `.files` to their corresponding location in `~/.config/`
 - .wgetrc
 - .zhsenv
 - .zshrc
+<details>
+<summary>
+ <p>iTerm two text settings with DankMono font:</p>
+ <pre>font-size: 19, line-height: 120</pre> 
+</summary>
+</details>
+
+
 ### Duti (duti/)
 
 - setup.sh - Sets the default app for the different file extensions.
