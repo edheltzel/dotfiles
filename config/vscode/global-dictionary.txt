@@ -2,6 +2,7 @@ alacritty
 alpinejs
 Autocare
 autohide
+easymotion
 autoplay
 autotalk
 Beavercreek
