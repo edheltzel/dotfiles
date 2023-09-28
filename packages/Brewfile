@@ -124,6 +124,7 @@ cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code'           # Default text editor
 cask 'visual-studio-code-insiders'  # Nightly text editor
 cask 'local'                        # Local WordPress development
+cask 'jetbrains-toolbox'            # Jetbrains editors
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'bun'                # All-in-one toolkit for JS/TS
