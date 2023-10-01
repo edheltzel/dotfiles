@@ -15,19 +15,19 @@ function .....
 end
 
 function l
-    command exa -Flagh --sort name --git --icons --group-directories-first $argv
+    command eza -Flagh --sort name --git --icons --group-directories-first $argv
 end
 function ll
-    command exa -Flagh --git --icons --group-directories-first --sort modified $argv
+    command eza -Flagh --git --icons --group-directories-first --sort modified $argv
 end
 function la
-    command exa -Fla --icons
+    command eza -Fla --icons
 end
 function tree
-    command exa --tree --icons $argv
+    command eza --tree --icons $argv
 end
 function cll
-    command clear; and exa -Flah --icons --sort modified $argv
+    command clear; and eza -Flah --icons --sort modified $argv
 end
 
 # Project shortcuts/aliases

@@ -10,8 +10,10 @@ I find tools that are built with Rust or Go to be performant and cover 90% of my
 
 - [bat](https://github.com/sharkdp/bat) Rust replacement for `cat`
 - [bottom](https://clementtsang.github.io/bottom/0.8.0/) Rust replacement for `top`
-- ~~[Bun](https://bun.sh/) - A drop-in-replacement for NPM/PNPM/Yarn - written in Zig~~s
-- [exa](https://the.exa.website/) Rust replacement for `ls`
+- [Bun](https://bun.sh/) - A drop-in-replacement for NPM/PNPM/Yarn - written in Zig
+- [eza](https://github.com/eza-community/eza) Rust replacement for `ls`
+  - ~~[exa](https://the.exa.website/) Rust replacement for `ls`~~ - replaced with `eza`
+  - [exa site](https://the.exa.website/) is still valid for **EZA** configurations
 - [fd](https://github.com/sharkdp/fd) Rust replacement for `find`
 - [fzf](https://github.com/junegunn/fzf) a mostly Go fuzzy finder
 - [procs](https://github.com/dalance/procs) Rust replacement for `ps`

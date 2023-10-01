@@ -52,7 +52,8 @@ brew 'diff-so-fancy'# Readable file compares (better diff)
 brew 'duf'          # Get info on mounted disks (better df) - Go
 brew 'duti'         # Set default apps for file types
 brew 'entr'         # Run command whenever file changes
-brew 'exa'          # Listing files with info (better ls) - Rust
+# brew 'exa'        # Listing files with info (better ls) - Rust
+brew 'eza'          # Listing files with info (better ls) - Rust
 brew 'exiftool'     # Read, write and modify exif data
 brew 'fd'           # Find files - Rust
 brew 'fzf'          # Fuzzy file finder and filtering
