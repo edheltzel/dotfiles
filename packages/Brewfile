@@ -138,6 +138,7 @@ brew 'hugo'               # Static site generator - Go
 brew 'lua'                # Lua interpreter
 brew 'luarocks'           # Package manager for Lua
 # brew 'node'           # Node.js -->  Use fnm See packages/
+brew 'php'                # PHP
 brew 'postgresql@14'      # PostgreSQL database engine
 brew 'python'             # Python 2
 brew 'python3'            # Python 3
@@ -281,6 +282,7 @@ cask 'itsycal'            # Calendar in menubar
 cask 'mjolnir'            # Util for loading Lua automations
 cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
+cask 'aflred'             # Spotlight alternative with better search
 cask 'typinator'          # Text expander - macOS only
 
 # Mac OS Utility Apps
