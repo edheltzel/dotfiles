@@ -8,12 +8,14 @@
 
 # Optional parameters:
 # @raycast.icon 💨
+# @raycast.argument1 { "type": "text", "placeholder": "Enter sudo password", "secure": true }
+# @raycast.packageName Flush DNS
 
 # Documentation:
 # @raycast.description Flush DNS cache
-# @raycast.author Felipe Turcheti
-# @raycast.authorURL https://felipeturcheti.com
+# @raycast.author Ed Heltzel
+# @raycast.authorURL https://github.com/edheltzel
 
-sudo dscacheutil -flushcache
-sudo killall -HUP mDNSResponder
+password="$1"
+m dns flush && echo "$password"
 echo "DNS cache flushed"
