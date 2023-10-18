@@ -284,6 +284,7 @@ cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
 cask 'aflred'             # Spotlight alternative with better search
 cask 'typinator'          # Text expander - macOS only
+# cask 'espanso'            # Text expander - cross platforma
 
 # Mac OS Utility Apps
 #cask 'little-snitch'  # Firewall app viewing / blocking traffic
