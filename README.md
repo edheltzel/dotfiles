@@ -331,6 +331,8 @@ This will symlink the `fnm.fish` file in `~/.config/fish/conf.d` _(It might be h
 fnm env --use-on-cd | source
 ```
 
+> Please note that when you change your default Node version, you will need to run `npm install --global (cat node_packages.txt)` to include `corepack` in the global packages. This will ensure that `pnpm` and `yarn` are available.
+
 #### 🙏 Special Thanks
 
 Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup, and inspiration.
