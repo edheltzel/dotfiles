@@ -48,24 +48,22 @@ function cuts
 end
 
 # Language Support
-alias pn="pnpm"
-alias px="pnpx"
-alias undo="git-undo" # see ./git-undo.fish
+alias pn pnpm
+alias px pnpx
+alias undo git-undo
 
 # Editors and Utilities
-#alias code="code-insiders"
-alias mux="tmux"
-alias vim="nvim"
-alias top="btm" # muscle memory
-alias bottom="btm" # htop replacement
-alias serve='miniserve' # rust HTTP server
+alias mux tmux
+alias top btm
+alias bottom btm
+alias serve miniserve
 
 # Network shortcuts/aliases and utilities
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
-alias localip="ipconfig getifaddr en0" #internal network IP
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
+alias ipl "ipconfig getifaddr en0" #internal network IP
+alias ips "ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias sniff "sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump "sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 
 
