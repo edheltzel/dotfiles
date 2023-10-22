@@ -33,7 +33,7 @@
 [core]
   excludesfile = ~/.gitignore_global
   #editor       = code-insiders --wait
-  editor       = code --wait  
+  editor       = code --wait
   #editor       = nvim
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
@@ -128,7 +128,7 @@
   delete = reset --hard HEAD~1
 
   #tags
-  t      = tag -l
+  t = tag -l
 
   #stashes
   st   = stash
@@ -161,7 +161,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
   #show tracked branches
-  tracked = "!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d"
+  tracked = '!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d'
 
   #`git di $number` shows the diff between the state `$number` revisions ago and the current state
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
