@@ -4,6 +4,7 @@ if status is-interactive
     abbr --add binfo 'brew info'
     abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
+    abbr --add cl clear
     abbr --add cls '~/Library/CloudStorage/Dropbox-RDM/Clients'
     abbr --add co 'code '
     abbr --add con 'code -n .'
@@ -18,6 +19,7 @@ if status is-interactive
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
     abbr --add goo 'cd ~/.go/'
     abbr --add npms 'npm list -g --depth=0'
+    abbr --add omp oh-my-posh
     abbr --add pns 'pnpm list -g'
     abbr --add pnpms 'pnpm list -g'
     abbr --add buns 'bun pm ls -g'
