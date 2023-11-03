@@ -215,7 +215,7 @@ cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
 
 # Media
-cask 'boom'                                  # Audio enhancer
+# cask 'boom'                                  # Audio enhancer
 # brew 'handbrake'           # Video transcoder
 cask 'iina'                                  # Media player
 cask 'imageoptim'                            # Image compression
