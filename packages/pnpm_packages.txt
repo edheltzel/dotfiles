@@ -6,7 +6,6 @@ generator-code
 intelephense
 lighthouse
 neovim
-netlify-cli
 typescript-language-server
 typescript
 @vscode/vsce
