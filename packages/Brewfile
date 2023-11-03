@@ -235,7 +235,6 @@ cask 'discord'        # Chat app
 cask 'dropbox'        # Cloud storage
 cask 'ledger-live'    # Crypto hardware wallet manager
 cask 'notion'         # Workspace app
-cask 'signal'         # Link to encrypted mobile messenger
 cask 'todoist'        # Task manager
 
 # Utility Applications
