@@ -33,4 +33,5 @@ if status is-interactive
     abbr --add nmux 'tmux new -s "base"'
     abbr --add vim nvim
     abbr --add zpurge 'z --clean'
+    abbr --add wrg wrangler
 end
