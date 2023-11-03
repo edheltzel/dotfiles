@@ -24,9 +24,7 @@ read_only = " "
 # truncation_length = 2
 # truncate_to_repo = false
 
-# scm symbols
-[hg_branch]
-symbol = " "
+# git symbols & config
 [git_branch]
 symbol = " "
 [git_metrics]
@@ -48,7 +46,7 @@ deleted = "[󱅁 ×${count} ](bright-red)"
 renamed = "[ ×${count} ](fg:214)"
 style = "bright-white"
 
-# devops symbols
+# devops symbols & config
 [aws]
 symbol = "  "
 format = "[$symbol($version )]($style)"
@@ -56,26 +54,24 @@ format = "[$symbol($version )]($style)"
 symbol = "󰏗 "
 format = "[$symbol($version )]($style)"
 
-# js language symbols
+# language symbols & config
 [deno]
 symbol = "󱍢 "
 format = "[$symbol($version )]($style)"
 style = "bright-black"
+[golang]
+format = "[$symbol($version )]($style)"
+symbol = " "
 [nodejs]
 format = "[$symbol($version )]($style)"
 symbol = "󰎙 "
 detect_extensions = []
-
-# other language symbols
 [php]
 format = "[$symbol($version )]($style)"
 symbol = " "
 [python]
 format = "[$symbol($version )]($style)"
 symbol = " "
-[golang]
-format = "[$symbol($version )]($style)"
-symbol = " "
 [ruby]
 format = "[$symbol($version )]($style)"
 symbol = "󰴭 "
