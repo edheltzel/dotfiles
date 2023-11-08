@@ -32,8 +32,6 @@ tap 'teamookla/speedtest'   # Command line speed test utility
 #############################################################
 brew 'fish'        # Shell
 brew 'starship'    # Cross-shell prompt - Rust
-# brew 'oh-my-posh'  # Cross-shell prompt - Go
-
 
 # CLI Essentials
 brew 'git'          # Version controll
