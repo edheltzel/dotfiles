@@ -116,6 +116,7 @@ brew 'glow'         # Terminal markdown reader - Go
 
 # Development Apps
 cask 'dbeaver-community'            # Database management
+cask 'dbngin'                       # Local MySQL database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
 cask 'fork'                         # Git visual client
 cask 'iterm2'                       # Better terminalmemulator
