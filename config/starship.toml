@@ -35,8 +35,8 @@ format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
-ahead = "[ ×${count} ](bright-blue)"
-behind = "[ ×${count} ](yellow)"
+ahead = "[ ×${count} ](white)"
+behind = "[ ×${count} ](white)"
 diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
 untracked = "️[ ×${count} ](fg:215)"
 stashed = " "
@@ -44,7 +44,7 @@ modified = "[󰏫 ×${count} ](bright-yellow)"
 staged = "[󰌴 ×${count} ](bright-green)"
 deleted = "[󱅁 ×${count} ](bright-red)"
 renamed = "[ ×${count} ](fg:214)"
-style = "bright-white"
+style = "white"
 
 # devops symbols & config
 [aws]
