@@ -86,6 +86,8 @@ If you would like to use these dotfiles for yourself, I'd recommend changing fol
   - The `.gitconfig` file includes my `[user]` config, replace these with your own user name and email as well as the `[include]` path for your local gitconfig.
     - Almost all of git aliases are located in `.gitconfig` versus `_aliases.fish` or `fish/functions/setup.fish` - I've found this to work best for me.
   - Also check the `.gitignore_global` for anything you might want to add or remove.
+  - I would also change the name of the local gitconfig file to match your setup.
+    - `gitconfig-bigmac.local` and `gitconfig-macdaddy.local` are my two local gitconfig files.
 
 - #### OSX
 
