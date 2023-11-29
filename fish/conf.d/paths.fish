@@ -26,9 +26,12 @@ set -g fish_user_paths $HOME/.gem/ruby/3.0.2/bin $fish_user_paths
 # Homebrew make - gmake - MacOS ships with v3.81
 set -g fish_user_paths /opt/homebrew/opt/make/libexec/gnubin $fish_user_paths
 
-# Pyenv 
+# Pyenv
 set -Ux PYENV_ROOT $HOME/.pyenv
 set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+
+# PHP Laravel
+set -U fish_user_paths ~/.composer/vendor/bin $fish_user_paths
 
 # GOLANG configurations
 set -x GOPATH $HOME/.go
@@ -41,6 +44,10 @@ set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
 # NodeJS - PNPM
 set -gx PNPM_HOME /Users/ed/Library/pnpm
 set -gx PATH "$PNPM_HOME" $PATH
+
+# Bun
+set -g fish_user_paths $HOME/.bun/bin $fish_user_paths
+
 # FZF and FD helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"
 set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
@@ -51,9 +58,6 @@ test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '
 # tabtab source for packages
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true
-
-# Bun
-set -g fish_user_paths $HOME/.bun/bin $fish_user_paths
 
 # # Docker
 # set -g fish_user_paths $HOME/.docker/bin $fish_user_paths
