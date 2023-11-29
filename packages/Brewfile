@@ -120,7 +120,7 @@ cask 'dbngin'                       # Local MySQL database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
 cask 'fork'                         # Git visual client
 cask 'iterm2'                       # Better terminalmemulator
-cask 'sequel-pro'                   # MySQL database management
+cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code'           # Default text editor
 cask 'visual-studio-code-insiders'  # Nightly text editor
@@ -301,5 +301,6 @@ mas 'Keynote', id: 409183694
 #mas 'Wappalyzer', id: 1520333300
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
+mas 'Qi FM', id: 147969619
 #mas 'Mia for Gmail', id: 851622884
 #mas 'Xcode', id: 497799835
