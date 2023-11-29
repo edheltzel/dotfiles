@@ -138,6 +138,7 @@ brew 'go'                 # Compiler for Go Lang
 brew 'hugo'               # Static site generator - Go
 brew 'lua'                # Lua interpreter
 brew 'luarocks'           # Package manager for Lua
+brew 'mysql'             # MySQL database engine
 # brew 'node'           # Node.js -->  Use fnm See packages/
 brew 'php'                # PHP
 brew 'postgresql@14'      # PostgreSQL database engine
@@ -187,6 +188,9 @@ brew 'bettercap'      # Network, scanning and moniroting
 brew 'ngrep'          # grep for network traffic
 brew 'nmap'           # Port scanning
 brew 'wrk'            # HTTP benchmarking
+brew 'dnsmasq'        # DNS server used with Larvel Valet in ~/Sites
+brew 'nginx'          # Web server used with Larvel Valet in ~/Sites
+
 #cask 'burp-suite'     # Web security testing
 #cask 'owasp-zap'      # Web app security scanner
 #cask 'wireshark'      # Network analyzer + packet capture
