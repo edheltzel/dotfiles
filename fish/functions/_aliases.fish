@@ -51,6 +51,7 @@ end
 alias pn pnpm
 alias px pnpx
 alias undo git-undo
+alias nah 'git reset --hard && git clean -df'
 
 # Editors and Utilities
 alias mux tmux
@@ -155,3 +156,11 @@ function forrepos --description 'Evaluates $argv for all repo folders'
         popd >/dev/null
     end
 end
+
+# Laravel
+alias art 'php artisan'
+alias tinker 'php artisan tinker'
+alias mfs 'php artisan migrate:fresh --seed'
+alias phpunit 'vendor/bin/phpunit'
+alias pest 'vendor/bin/pest'
+alias vapor 'vendor/bin/vapor'
