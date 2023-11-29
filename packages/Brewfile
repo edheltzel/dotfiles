@@ -129,6 +129,7 @@ cask 'jetbrains-toolbox'            # Jetbrains editors
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'bun'                # All-in-one toolkit for JS/TS
+brew 'composer'           # PHP package manager
 brew 'dart'               # Dart SDK
 brew 'deno'               # Deno JavaScript/TypeScript runtime
 brew 'fig'                # Commandline Utility for any terminal
@@ -143,6 +144,7 @@ brew 'postgresql@14'      # PostgreSQL database engine
 brew 'python'             # Python 2
 brew 'python3'            # Python 3
 brew 'rbenv'              # Ruby version manager
+brew 'redis'              # Redis database engine
 brew 'ruby-build'         # Ruby build plugin for rbenv
 brew 'richgo'             # Go test output formatter/opt/homebrew/bin/fish
 brew 'rust'               # Rust language
