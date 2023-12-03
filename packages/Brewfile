@@ -121,8 +121,8 @@ cask 'fork'                         # Git visual client
 cask 'iterm2'                       # Better terminalmemulator
 cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
-cask 'visual-studio-code'           # Default text editor
-cask 'visual-studio-code-insiders'  # Nightly text editor
+cask 'visual-studio-code'           # Default/Stable release
+cask 'visual-studio-code-insiders'  # Nightly release
 cask 'local'                        # Local WordPress development
 cask 'jetbrains-toolbox'            # Jetbrains editors
 

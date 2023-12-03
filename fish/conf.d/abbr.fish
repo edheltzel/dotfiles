@@ -6,10 +6,10 @@ if status is-interactive
     abbr --add casks 'brew list --cask'
     abbr --add cl clear
     abbr --add cls '~/Library/CloudStorage/Dropbox-RDM/Clients'
-    abbr --add co 'code '
-    abbr --add con 'code -n .'
+    abbr --add co 'code-insiders '
+    abbr --add con 'code-insiders -n .'
     abbr --add config '~/.config/'
-    abbr --add coo 'code -r .'
+    abbr --add coo 'code-insiders -r .'
     abbr --add dls '~/Downloads/'
     abbr --add gems 'gem list'
     abbr --add gg 'go get GITHUB_URL'
