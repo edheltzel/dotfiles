@@ -49,7 +49,7 @@ end
 
 # Language Support
 alias pn pnpm
-alias px pnpx
+alias px 'pnpm dlx'
 alias undo git-undo
 alias nah 'git reset --hard && git clean -df'
 
@@ -161,6 +161,6 @@ end
 alias art 'php artisan'
 alias tinker 'php artisan tinker'
 alias mfs 'php artisan migrate:fresh --seed'
-alias phpunit 'vendor/bin/phpunit'
-alias pest 'vendor/bin/pest'
-alias vapor 'vendor/bin/vapor'
+alias phpunit vendor/bin/phpunit
+alias pest vendor/bin/pest
+alias vapor vendor/bin/vapor
