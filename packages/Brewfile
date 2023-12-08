@@ -244,10 +244,8 @@ cask 'responsively'              # Responsive web design testing
 cask 'safari-technology-preview' # Safari tech preview
 
 # Fonts
-tap 'homebrew/cask-fonts'
-cask 'font-fira-code-nerd-font'
-cask 'font-jetbrains-mono-nerd-font'
-cask 'font-monaspace-nerd-font'
+cask 'font-fira-code-nerd-font' # primary font
+cask 'font-sauce-code-pro-nerd-font' # secondary font
 cask 'font-inter'
 
 #############################################################
