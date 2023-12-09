@@ -70,6 +70,7 @@ lightningcss
 linkify
 lockb
 luxon
+MERN
 moxer
 Nanotubes
 neovim
