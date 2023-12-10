@@ -33,4 +33,4 @@ install_nvm
 
 info "Setting symlinks for ${VIM_DISTRO}."
 substep_success "nvim folder created."
-success "Nvim with ${VIM_DISTRO} is ready."
+success "Nvim with ${VIM_DISTRO} is ready. For more info: https://www.lazyvim.org/"
