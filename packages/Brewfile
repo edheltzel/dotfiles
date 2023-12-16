@@ -232,7 +232,7 @@ cask 'notion'         # Workspace app
 cask 'todoist'        # Task manager
 
 # Utility Applications
-# brew 'displaylink' #  Multi-monitor support - for use with MacDaddy
+brew 'displaylink' #  Multi-monitor support - for use with Dock
 cask 'namechanger' # Rename files in bulk
 cask 'onyx'        # System maintenance
 
