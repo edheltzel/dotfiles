@@ -216,6 +216,7 @@ cask 'boom'                                  # Audio enhancer
 cask 'iina'                                  # Media player
 cask 'imageoptim'                            # Image compression
 cask 'kap'                                   # Screen recorder
+cask 'keycastr'                              # Display keystrokes
 brew 'pandoc'                                # Universal file converter
 cask 'vlc'                                   # Media player
 brew 'webp'                                  # WebP image format
