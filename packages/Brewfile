@@ -14,17 +14,17 @@
 cask_args appdir: '/Applications', require_sha: true
 
 # Taps
-tap 'buo/cask-upgrade'
-tap 'clementtsang/bottom'
-tap 'dart-lang/dart'
+tap 'buo/cask-upgrade' # Upgrade casks
+tap 'clementtsang/bottom' # Resource monitor (better top) - Rust
+tap 'dart-lang/dart' # Dart SDK
 tap 'eddieantonio/eddieantonio'
-tap 'github/gh'
-tap 'homebrew/cask-drivers'
-tap 'homebrew/cask-fonts'
+tap 'github/gh' # Interact with GitHub PRs, issues, repos
+tap 'homebrew/cask-drivers' # for drivers
+tap 'homebrew/cask-fonts' # for fonts
 tap 'homebrew/cask-versions'
-tap 'kyoh86/tap'
-tap 'over-sh/bun'
-tap 'sass/sass'
+tap 'kyoh86/tap' # for 'sd' - RegEx find and replace (better sed) - Rust
+tap 'over-sh/bun' # All-in-one toolkit for JS/TS
+tap 'sass/sass' # Sass
 tap 'teamookla/speedtest'   # Command line speed test utility
 
 #############################################################
@@ -233,9 +233,10 @@ cask 'notion'         # Workspace app
 cask 'todoist'        # Task manager
 
 # Utility Applications
-brew 'displaylink' #  Multi-monitor support - for use with Dock
-cask 'namechanger' # Rename files in bulk
-cask 'onyx'        # System maintenance
+brew 'displaylink'    # Multi-monitor support - for use with Dock
+cask 'betterdisplay'  # Multi-monitor support - for use with Dock
+cask 'namechanger'    # Rename files in bulk
+cask 'onyx'           # System maintenance
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in
