@@ -65,6 +65,7 @@ Incenta
 indexnow
 intelephense
 ishikawa
+ITCSS
 iterm
 jampack
 Jamstack
