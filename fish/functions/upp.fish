@@ -1,7 +1,5 @@
 # Defined in - @ line 0
 function upp --description 'Updates everything with Topgrade but also prints the default Node version, Update Resets Homebrew, Cleans Homebrew and Z'
-    # Request sudo access
-    # sudo -v
 
     # Define variables for Node output
     set -l nodeIcon '󰎙 '
