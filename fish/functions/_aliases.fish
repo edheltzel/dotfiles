@@ -41,7 +41,7 @@ function work
     cd ~/Developer/work
 end
 function dots
-    cd ~/Developer/dotfiles
+    cd ~/Developer/dotfiles; and eval $EDITOR .
 end
 function cuts
     ~/Developer/dotfiles; and eval $EDITOR .
@@ -54,6 +54,7 @@ alias undo git-undo
 alias nah 'git reset --hard && git clean -df'
 
 # Editors and Utilities
+alias code code-insiders
 alias mux tmux
 alias top btm
 alias bottom btm
