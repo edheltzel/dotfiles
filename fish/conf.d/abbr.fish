@@ -19,7 +19,6 @@ if status is-interactive
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
     abbr --add goo 'cd ~/.go/'
     abbr --add npms 'npm list -g --depth=0'
-    # abbr --add omp oh-my-posh
     abbr --add pns 'pnpm list -g'
     abbr --add pnpms 'pnpm list -g'
     abbr --add buns 'bun pm ls -g'
