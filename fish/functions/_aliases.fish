@@ -41,7 +41,7 @@ function work
     cd ~/Developer/work
 end
 function dots
-    cd ~/Developer/dotfiles; and eval $EDITOR .
+    cd ~/Developer/dotfiles
 end
 function cuts
     ~/Developer/dotfiles; and eval $EDITOR .
