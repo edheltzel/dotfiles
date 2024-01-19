@@ -16,12 +16,12 @@
     "",
     "",
     "",
-    "{+KC_LGUI}{+KC_F2}{-KC_LGUI}",
-    "{+KC_LSFT}{+KC_LGUI}{+KC_LCTL}{+KC_LALT}4{-KC_LALT}{-KC_LCTL}{-KC_LGUI}{-KC_LSFT}"
+    "",
+    "{+KC_LGUI}{+KC_F2}{-KC_LGUI}"
   ],
   "layers": [
     [
-      "MACRO(14)",
+      "MACRO(15)",
       "KC_ESC",
       "KC_BRID",
       "KC_BRIU",
@@ -66,7 +66,7 @@
       "KC_V",
       "KC_B",
       "KC_NO",
-      "MACRO(5)",
+      "HYPR(KC_NO)",
       "FN_MO13",
       "KC_LCTL",
       "CUSTOM(2)",
@@ -81,7 +81,7 @@
       "KC_MUTE",
       "KC_VOLD",
       "KC_VOLU",
-      "MACRO(15)",
+      "CUSTOM(9)",
       "KC_DEL",
       "KC_MUTE",
       "KC_7",
