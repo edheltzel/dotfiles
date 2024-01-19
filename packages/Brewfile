@@ -8,6 +8,11 @@
 # Source GH repository: https://github.com/edheltzel/Brewfile #
 # See brew docs for more info: https://docs.brew.sh/Manpage   #
 #                                                             #
+# 1. Command Line                                             #
+# 2. Software Dev                                             #
+# 3. Desktop Apps                                             #
+# 4. MacOS Specific Stuff                                     #
+#                                                             #
 ###############################################################
 
 # Options
@@ -28,7 +33,7 @@ tap 'sass/sass' # Sass
 tap 'teamookla/speedtest'   # Command line speed test utility
 
 #############################################################
-# Command Line                                              #
+# 1. Command Line                                           #
 #############################################################
 brew 'fish'        # Shell
 brew 'starship'    # Cross-shell prompt - Rust
@@ -111,7 +116,7 @@ brew 'pv'           # Pipe viewer, with animation options
 brew 'glow'         # Terminal markdown reader - Go
 
 #############################################################
-# Software Development                                      #
+# 2. Software Development                                   #
 #############################################################
 
 # Development Apps
@@ -203,8 +208,8 @@ brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
 cask 'gpg-suite'         # GPG encryption files
 
 #############################################################
-# Desktop Applications                                      #
-#############################################################
+# 3. Desktop Applications                                   #
+#########################################################
 
 # Creativity
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
@@ -238,6 +243,7 @@ brew 'displaylink'    # Multi-monitor support - for use with Dock
 cask 'betterdisplay'  # Multi-monitor support - for use with Dock
 cask 'namechanger'    # Rename files in bulk
 cask 'onyx'           # System maintenance
+cask 'qmk-toolbox'    # Keyboard firmware flashing - paired with https://usevia.app/
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in
@@ -252,7 +258,7 @@ cask 'font-sauce-code-pro-nerd-font' # secondary font
 cask 'font-inter'
 
 #############################################################
-# MacOS-Specific Stuff                                      #
+# 4. MacOS Specific Stuff                                   #
 #############################################################
 
 # Mac OS Quick-Look Plugins
@@ -282,7 +288,7 @@ cask 'stats'              # System resource usage in menubar
 cask 'keka'               # File archiver and extractor
 cask 'alt-tab'            # Windows style alt-tab switcher
 
-# Install apps from the Mac App Store
+# Mac App Store Installs
 mas 'ColorSlurp', id: 1287239339
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
