@@ -104,7 +104,7 @@ brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
 brew 'withgraphite/tap/graphite' # Github PR and Code Review CLI
 
 # CLI Docs and Cheatsheets
-brew 'navi'         # Browse, search, read cheat sheets
+# brew 'navi'         # Browse, search, read cheat sheets (interactive thefuck) - Rust
 brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 
 # CLI Misc
