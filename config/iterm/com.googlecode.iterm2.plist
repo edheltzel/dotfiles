@@ -2551,10 +2551,14 @@ Close</string>
 			<key>Action</key>
 			<string>kContextMenuPointerAction</string>
 		</dict>
-		<key>Button,2,1,,</key>
+		<key>Button,2,2,,</key>
 		<dict>
 			<key>Action</key>
 			<string>kPasteFromClipboardPointerAction</string>
+			<key>Argument</key>
+			<string>{"ConvertUnicodePunctuation":true,"WaitForPrompts":false,"Substitution":"","EscapeForShell":false,"Base64":false,"TabStopSize":4,"Delay":0.01,"RemoveNewlines":false,"Regex":"","ConvertNewlines":true,"TabTransform":0,"BracketAllowed":true,"UseRegexSubstitution":false,"ChunkSize":1024,"RemoveControls":true}</string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
 		<key>Gesture,ThreeFingerSwipeDown,,</key>
 		<dict>
@@ -2603,6 +2607,7 @@ Close</string>
 	<array>
 		<string>Profiles</string>
 		<string>Actions</string>
+		<string>Command History</string>
 	</array>
 	<key>UseBorder</key>
 	<false/>
