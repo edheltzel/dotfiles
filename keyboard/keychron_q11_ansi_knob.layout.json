@@ -2,6 +2,7 @@
   "name": "Keychron Q11 ANSI Knob",
   "vendorProductId": 875823584,
   "macros": [
+    "{+KC_LALT}{+KC_LCTL}{+KC_LGUI}{+KC_F1}{-KC_LCTL}{-KC_LALT}{-KC_LGUI}",
     "",
     "",
     "",
@@ -16,12 +17,11 @@
     "",
     "",
     "",
-    "",
-    "{+KC_LGUI}{+KC_F2}{-KC_LGUI}"
+    ""
   ],
   "layers": [
     [
-      "MACRO(15)",
+      "G(KC_0)",
       "KC_ESC",
       "KC_BRID",
       "KC_BRIU",
@@ -132,7 +132,7 @@
     ],
     [
       "RGB_TOG",
-      "KC_TRNS",
+      "LCAG(KC_F1)",
       "KC_F1",
       "KC_F2",
       "KC_F3",
@@ -176,7 +176,7 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_NO",
-      "KC_TRNS",
+      "LCAG(KC_NO)",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
@@ -202,6 +202,7 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_NO",
+      "LCAG(KC_F2)",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
@@ -210,12 +211,11 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
+      "LCAG(KC_F3)",
+      "KC_LEFT",
+      "KC_DOWN",
+      "KC_UP",
+      "KC_RGHT",
       "KC_TRNS",
       "KC_TRNS",
       "KC_NO",
@@ -463,7 +463,7 @@
   ],
   "encoders": [
     [
-      ["KC_VOLD", "KC_VOLU"],
+      ["G(KC_MINS)", "G(KC_EQL)"],
       ["RGB_VAD", "RGB_VAI"],
       ["KC_VOLD", "KC_VOLU"],
       ["RGB_VAD", "RGB_VAI"]
