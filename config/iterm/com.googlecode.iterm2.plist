@@ -2605,8 +2605,6 @@ Close</string>
 	<true/>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Profiles</string>
-		<string>Actions</string>
 		<string>Command History</string>
 	</array>
 	<key>UseBorder</key>
