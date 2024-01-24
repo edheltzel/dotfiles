@@ -15,7 +15,7 @@ if status is-interactive
     abbr --add gg 'go get GITHUB_URL'
     abbr --add ghw 'gh repo view --web'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
-    abbr --add ghm --set-cursor 'gh pr merge % --squash'
+    abbr --add ghm --set-cursor 'gh pr merge % --merge'
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
     abbr --add goo 'cd ~/.go/'
     abbr --add npms 'npm list -g --depth=0'
