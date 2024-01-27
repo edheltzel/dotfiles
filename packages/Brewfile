@@ -124,6 +124,7 @@ cask 'dbngin'                       # Local MySQL database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
 cask 'fork'                         # Git visual client
 cask 'iterm2'                       # Better terminalmemulator
+cask 'alacritty'                    # terminalmemulator - Rust
 cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code'           # Default/Stable release
