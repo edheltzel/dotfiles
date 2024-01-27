@@ -129,8 +129,9 @@ cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code'           # Default/Stable release
 cask 'visual-studio-code-insiders'  # Nightly release
+cask 'zed'                          # Text editor - Rust
 cask 'local'                        # Local WordPress development
-cask 'jetbrains-toolbox'            # Jetbrains editors
+# cask 'jetbrains-toolbox'            # Jetbrains editors
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'bun'                # All-in-one toolkit for JS/TS
