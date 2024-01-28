@@ -52,7 +52,6 @@ brew 'brew-cask-completion' # Fish shell completion for brew cask
 brew 'cmake'        # Build system
 brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
 brew 'ctags'        # Tag generator for programming languages
-brew 'diff-so-fancy'# Readable file compares (better diff)
 brew 'duf'          # Get info on mounted disks (better df) - Go
 brew 'duti'         # Set default apps for file types
 brew 'entr'         # Run command whenever file changes
@@ -72,7 +71,6 @@ brew 'procs'        # Advanced process viewer (better ps) - Rust
 brew 'ripgrep'      # Searching within files (better grep) - Rust
 brew 'rsync'        # Fast incremental file transfer
 brew 'sd'           # RegEx find and replace (better sed) - Rust
-brew 'tokei'        # Count lines of code (better cloc) - Rust
 brew 'trash-cli'    # Recover and restore removed files
 brew 'watchexec'    # Run command whenever file changes - Rust
 brew 'zoxide'       # Auto-learning navigation (better cd) - Rust --> fish plugin adds to PATH
@@ -103,12 +101,10 @@ brew 'lazydocker'   # Full Docker management app - Go
 brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
 
 # CLI Docs and Cheatsheets
-# brew 'navi'         # Browse, search, read cheat sheets (interactive thefuck) - Rust
 brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 
 # CLI Misc
 brew 'chafa'        # Image to ASCII art
-brew 'cowsay'       # Have an ASCII cow say your message
 brew 'figlet'       # Output text as big ASCII art text
 brew 'neofetch'     # Show system data and ditstro info
 brew 'pv'           # Pipe viewer, with animation options
@@ -122,23 +118,21 @@ brew 'glow'         # Terminal markdown reader - Go
 cask 'dbeaver-community'            # Database management
 cask 'dbngin'                       # Local MySQL database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
-cask 'fork'                         # Git visual client
+cask 'sourcetree'                   # Git visual client
 cask 'iterm2'                       # Better terminalmemulator
 cask 'alacritty'                    # terminalmemulator - Rust
 cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
-cask 'visual-studio-code'           # Default/Stable release
 cask 'visual-studio-code-insiders'  # Nightly release
 cask 'zed'                          # Text editor - Rust
 cask 'local'                        # Local WordPress development
-# cask 'jetbrains-toolbox'            # Jetbrains editors
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'bun'                # All-in-one toolkit for JS/TS
 brew 'composer'           # PHP package manager
 brew 'dart'               # Dart SDK
 brew 'deno'               # Deno JavaScript/TypeScript runtime
-brew 'fnm'                # Switching node versions
+brew 'fnm'                # Switching Node versions
 brew 'go'                 # Compiler for Go Lang
 brew 'hugo'               # Static site generator - Go
 brew 'lua'                # Lua interpreter
@@ -184,22 +178,16 @@ brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
 brew 'zaquestion/tap/lab' # GitLab CLI
-cask 'mactex'             # LaTeX typesetting system
 
 # Network and Security Testing
 brew 'bettercap'      # Network, scanning and moniroting
-brew 'ngrep'          # grep for network traffic
 brew 'nmap'           # Port scanning
-brew 'wrk'            # HTTP benchmarking
 brew 'dnsmasq'        # DNS server used with Larvel Valet in ~/Sites
 brew 'nginx'          # Web server used with Larvel Valet in ~/Sites
 
 # Security Utilities
-brew 'bcrypt'            # Encryption utility, using blowfish
 brew 'clamav'            # Open source virus scanning suite
-brew 'dnscrypt-proxy'    # Proxy for using encrypted DNS
 brew 'gnupg'             # GNU Privacy Guard
-brew 'git-crypt'         # Transparent encryption for git repos
 brew 'lynis'             # Scan system for common security issues
 brew 'nss'               # Network Security Services
 brew 'openssl'           # Cryptography and SSL/TLS Toolkit
@@ -226,7 +214,6 @@ cask 'keycastr'                              # Display keystrokes
 brew 'pandoc'                                # Universal file converter
 cask 'vlc'                                   # Media player
 brew 'webp'                                  # WebP image format
-brew 'youtube-dl'                            # YouTube video downloader
 
 # Personal Applications
 cask 'authy'          # 2FA app
@@ -240,7 +227,6 @@ cask 'todoist'        # Task manager
 
 # Utility Applications
 brew 'displaylink'    # Multi-monitor support - for use with Dock
-cask 'betterdisplay'  # Multi-monitor support - for use with Dock
 cask 'namechanger'    # Rename files in bulk
 cask 'onyx'           # System maintenance
 cask 'qmk-toolbox'    # Keyboard firmware flashing - paired with https://usevia.app/
@@ -249,7 +235,6 @@ cask 'qmk-toolbox'    # Keyboard firmware flashing - paired with https://usevia.
 cask 'choosy'                    # Choose which browser to open links in
 cask 'firefox-developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
-cask 'responsively'              # Responsive web design testing
 cask 'safari-technology-preview' # Safari tech preview
 
 # Fonts
@@ -277,7 +262,6 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 brew 'm-cli'              # All in one MacOS management CLI app: m help
 cask 'hiddenbar'          # Hide / show annoying menubar icons
 cask 'itsycal'            # Calendar in menubar
-cask 'mjolnir'            # Util for loading Lua automations
 cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
 cask 'aflred'             # Spotlight alternative with better search

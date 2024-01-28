@@ -46,7 +46,9 @@ end
 function cuts
     ~/Developer/dotfiles; and eval $EDITOR .
 end
-
+function chz
+    chezmoi cd
+end
 # Language Support
 alias pn pnpm
 alias px 'pnpm dlx'
@@ -55,7 +57,6 @@ alias nah 'git reset --hard && git clean -df'
 
 # Editors and Utilities
 alias code code-insiders
-alias mux tmux
 alias top btm
 alias bottom btm
 alias serve miniserve
