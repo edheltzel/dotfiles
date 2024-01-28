@@ -286,7 +286,6 @@ cask 'typinator'          # Text expander - macOS only
 # Mac OS Utility Apps
 cask 'stats'              # System resource usage in menubar
 cask 'keka'               # File archiver and extractor
-cask 'alt-tab'            # Windows style alt-tab switcher
 
 # Mac App Store Installs
 mas 'ColorSlurp', id: 1287239339
