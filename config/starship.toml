@@ -1,6 +1,6 @@
 format = '$all'
 right_format = """
-$cmd_duration $git_metrics
+$git_metrics
 """
 command_timeout = 1000
 
