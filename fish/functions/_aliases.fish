@@ -46,9 +46,7 @@ end
 function cuts
     ~/Developer/dotfiles; and eval $EDITOR .
 end
-function chz
-    chezmoi cd
-end
+
 # Language Support
 alias pn pnpm
 alias px 'pnpm dlx'
