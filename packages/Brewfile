@@ -42,6 +42,7 @@ brew 'starship'    # Cross-shell prompt - Rust
 brew 'git'          # Version controll
 brew 'neovim'       # Text editor
 # brew 'chezmoi'      # Dotfile manager - Go
+brew 'stow'         # Dotfile manager
 brew 'topgrade'     # Upgrade all the things - Rust
 brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 
@@ -259,7 +260,7 @@ cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
 cask 'quicklookapk',   args: { require_sha: false } # QL for Android APKs
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
-# Mac OS Mods and Imrovments
+# Mac OS Mods, Imrovments, & Utilities
 brew 'm-cli'              # All in one MacOS management CLI app: m help
 cask 'hiddenbar'          # Hide / show annoying menubar icons
 cask 'itsycal'            # Calendar in menubar
@@ -267,9 +268,6 @@ cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
 cask 'aflred'             # Spotlight alternative with better search
 cask 'typinator'          # Text expander - macOS only
-
-# Mac OS Utility Apps
-cask 'stats'              # System resource usage in menubar
 cask 'keka'               # File archiver and extractor
 
 # Mac App Store Installs
