@@ -46,13 +46,11 @@
   syntax-theme = TwoDark
   plus-style = syntax "#003800"
   minus-style = syntax "#3f0001"
-
 [delta "decorations"]
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
   file-decoration-style = none
   hunk-header-decoration-style = cyan box ul
-
 [delta "line-numbers"]
   line-numbers-left-style = cyan
   line-numbers-right-style = cyan
@@ -61,18 +59,21 @@
 
 [diff]
   tool = vscode
+  colorMoved = default
 [difftool "vscode"]
   # cmd = code --wait --diff $LOCAL $REMOTE
   cmd = code-insiders --wait --diff $LOCAL $REMOTE
 [merge]
   tool = vscode
   log  = true
+  conflictstyle = diff3
 [mergetool "vscode"]
   cmd = code-insiders --wait $MERGED
   # cmd = code --wait $MERGED
 [apply]
-  #Detect whitespace errors when applying a patch
   whitespace = fix
+[interactive]
+  diffFilter = delta --color-only
 
 [alias]
   #used the most by me
@@ -203,14 +204,13 @@ downtags = fetch --tags
   tabsize          = 2
 [pull]
   rebase = false
-
 [init]
   defaultBranch = master
-# [gpg]
-# 	format = ssh
-# [commit]
-# 	gpgsign = true
-# [tag]
-# 	gpgsign = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
 [include]
 	path = ~/.gitconfig.local
