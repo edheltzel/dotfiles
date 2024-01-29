@@ -41,7 +41,7 @@ brew 'starship'    # Cross-shell prompt - Rust
 # CLI Essentials
 brew 'git'          # Version controll
 brew 'neovim'       # Text editor
-# brew 'tmux'         # Term multiplexer
+brew 'chezmoi'      # Dotfile manager - Go
 brew 'topgrade'     # Upgrade all the things - Rust
 
 # CLI Basics
@@ -120,6 +120,7 @@ cask 'dbngin'                       # Local MySQL database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
 cask 'sourcetree'                   # Git visual client
 cask 'iterm2'                       # Better terminalmemulator
+cask 'warp'                         # terminal - Rust
 cask 'alacritty'                    # terminalmemulator - Rust
 cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor

@@ -1487,6 +1487,8 @@
 	<true/>
 	<key>EnableDivisionView</key>
 	<true/>
+	<key>FlashTabBarInFullscreen</key>
+	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -1610,8 +1612,10 @@ Close</string>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
-	<key>HideTab</key>
+	<key>HideScrollbar</key>
 	<false/>
+	<key>HideTab</key>
+	<true/>
 	<key>HideTabNumber</key>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -2482,6 +2486,8 @@ Close</string>
 			<false/>
 			<key>Smart Cursor Color</key>
 			<true/>
+			<key>Space</key>
+			<integer>-1</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tab Color</key>
@@ -2528,6 +2534,8 @@ Close</string>
 			<true/>
 			<key>Use Cursor Guide</key>
 			<false/>
+			<key>Use Custom Tab Title</key>
+			<false/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
@@ -2539,7 +2547,7 @@ Close</string>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>5</integer>
 			<key>Working Directory</key>
 			<string>/Users/ed</string>
 		</dict>
@@ -2585,18 +2593,22 @@ Close</string>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
+	<key>SeparateStatusBarsPerPane</key>
+	<false/>
 	<key>SeparateWindowTitlePerTab</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
+	<key>ShowNewOutputIndicator</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.50051805218446599</real>
+	<real>0.40424700394417473</real>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>StretchTabsToFillBar</key>
-	<false/>
+	<true/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>TabViewType</key>
