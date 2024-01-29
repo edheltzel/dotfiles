@@ -1,0 +1,1 @@
+/Users/ed/Developer/dotfiles/fish/conf.d/paths.fish
