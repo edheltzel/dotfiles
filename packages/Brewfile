@@ -60,12 +60,11 @@ brew 'eza'          # Listing files with info (better ls) replaces exa - Rust
 brew 'exiftool'     # Read, write and modify exif data
 brew 'fd'           # Find files - Rust
 brew 'fzf'          # Fuzzy file finder and filtering
-brew 'fzf'          # Fuzzy finder
 brew 'grc'          # Colorize terminal output
 brew 'hyperfine'    # Benchmarking for arbitrary commands
 brew 'jdupes'       # Duplicate file finder
 brew 'jq'           # JSON parser, output and query files
-brew 'just'         # Powerful command runner (better make)
+brew 'just'         # Powerful command runner (better make) - Rust
 brew 'mas'          # Mac App Store CLI
 brew 'most'         # Multi-window scroll pager (better less)
 brew 'procs'        # Advanced process viewer (better ps) - Rust
