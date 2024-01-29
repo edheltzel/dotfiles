@@ -43,6 +43,7 @@ brew 'git'          # Version controll
 brew 'neovim'       # Text editor
 brew 'chezmoi'      # Dotfile manager - Go
 brew 'topgrade'     # Upgrade all the things - Rust
+brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 
 # CLI Basics
 brew 'ack'          # Search tool like grep, but faster
