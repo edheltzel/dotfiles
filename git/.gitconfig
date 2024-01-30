@@ -33,8 +33,6 @@
 [core]
   excludesfile = ~/.gitignore_global
   editor       = code-insiders --wait
-  # editor       = code --wait
-  #editor       = nvim
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
@@ -197,8 +195,8 @@ downtags = fetch --tags
 [help]
 
 [gui]
-  fontui     = -family \"JetBrainsMono Nerd Font\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
-  fontdiff = -family \"JetBrainsMono Nerd Font\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+  fontui     = -family \"FiraCode Nerd Font Mono\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family \"FiraCode Nerd Font Mono\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
   commitmsgwidth   = 80
   pruneduringfetch = true
   tabsize          = 2
