@@ -60,9 +60,11 @@ banner
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Run setup scripts in order
   source ./packages/setup.sh
-  source ./fish/setup.sh
-  source ./git/setup.sh
-  source ./nvim/setup.sh
+  stow git
+  stow fish
+  stow dots
+  stow config
+  stow warp
   source ./duti/setup.sh
   source ./macos/setup.sh
 
