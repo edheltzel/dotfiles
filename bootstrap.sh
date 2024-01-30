@@ -24,7 +24,7 @@ print_error() {
     echo -e "${YELLOW}====================================================${NC}"
 }
 
-## 
+##
 
 # Create the Developer directory if it does not exist
 if [ ! -d "$PROJECTS_DIR" ]; then
@@ -44,3 +44,15 @@ if ! bash $DOTFILES_DIR/install.sh &> /dev/null; then
 fi
 
 print_banner "You might need to restart your computer for some changes to take effect."
+
+
+# Tell stow to copy the files to the home directory that are located in the ./config/
+# stow -t ~ config/.config
+
+# Tells stow to copy the files in to the home directory that are located in dots/ and replace the all dot- with . in the file name
+# stow --dotfiles -t ~ dots
+
+#TODO:
+# - update git files
+# - finish config folder
+# - remove zsh package add files to dots/
