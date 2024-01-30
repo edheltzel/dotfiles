@@ -13,9 +13,6 @@ sudo spctl --master-disable
 # %00 = enable %01 = disable
 sudo nvram StartupMute=%00
 
-# Disable transparency in the menu bar and elsewhere on Yosemite
-#defaults write com.apple.universalaccess reduceTransparency -bool true
-
 # Appearance For Buttons, Menus, and Windows
 # Blue     : 1 (default)
 # Graphite : 6
@@ -36,8 +33,6 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # Graphite : `0.847059 0.847059 0.862745`
 # Silver   : `0.776500 0.776500 0.776500` (custom)
 defaults write NSGlobalDomain AppleHighlightColor -string '0.847059 0.847059 0.862745'
-# Translucent menu bar - disabled in Yosemite
-# defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Sidebar icon size
 # Small  : 1
@@ -54,10 +49,6 @@ defaults write NSGlobalDomain AppleShowScrollBars -string 'WhenScrolling'
 
 # Disable the over-the-top focus ring animation
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
-
-# Disable smooth scrolling
-# (Uncomment if you’re on an older Mac that messes up the animation)
-#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -106,18 +97,8 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
 
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-#sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
-
-# Never go into computer sleep mode
-#sudo systemsetup -setcomputersleep Off > /dev/null
-
-# Disable Notification Center and remove the menu bar icon
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null <- does not work
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -163,18 +144,12 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-# Enable “natural” (Lion-style) scrolling
-#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
-
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-# Follow the keyboard focus while zoomed in
-#defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold accent popup in favor of repeat.
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -185,9 +160,6 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # InitialKeyRepeat: 9 = 135ms 10 = 150ms 11 = 165ms 12 = 180ms
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write NSGlobalDomain KeyRepeat -int 2
-
-
-
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
@@ -207,27 +179,15 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 # Desktop, Screen saver & Screen stuff                                         #
 ################################################################################
 
-# Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
-# all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
-#rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-#sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-#sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
-
-
 # # Set Screen Savers
-# defaults -currentHost write com.apple.screensaver moduleDict "
-#   <dict>
-#     <key>moduleName</key><string>Shell</string>
-#     <key>path</key><string>/System/Library/Screen Savers/Drift.saver</string>
-#     <key>type</key><integer>1</integer>
-#   </dict>
-# "
+defaults -currentHost write com.apple.screensaver moduleDict "
+  <dict>
+    <key>moduleName</key><string>Shell</string>
+    <key>path</key><string>/System/Library/Screen Savers/Drift.saver</string>
+    <key>type</key><integer>1</integer>
+  </dict>
+"
 
-# # Start after 30 Minutes
-# defaults -currentHost write com.apple.screensaver idleTime -int 1800
-
-# # Show with clock (default)
-# defaults -currentHost write com.apple.screensaver showClock -bool false
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -267,12 +227,6 @@ defaults write com.apple.dock magnification -bool false
 # Position on screen: 'left', 'bottom', 'right'
 defaults write com.apple.dock orientation -string "bottom"
 
-# Dock pinning: 'start', 'middle', 'end'
-# defaults write com.apple.dock pinning -string 'middle'
-
-# Disable double-click a window's title bar to minimize
-# defaults write NSGlobalDomain AppleMiniaturizeOnDoubleClick -bool true
-
 # DON'T minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool false
 
@@ -303,15 +257,6 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # (i.e. use the old Exposé behavior instead)
 defaults write com.apple.dock expose-group-by-app -bool false
 
-# Disable Dashboard
-#defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-#defaults write com.apple.dock dashboard-in-overlay -bool true
-
-# Don’t automatically rearrange Spaces based on most recent use
-#defaults write com.apple.dock mru-spaces -bool false
-
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
@@ -325,17 +270,6 @@ defaults write com.apple.dock showhidden -bool true
 
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
-
-# Add a spacer to the left side of the Dock (where the applications are)
-#defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-# Add a spacer to the right side of the Dock (where the Trash is)
-#defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
-
-# Disable the Launchpad gesture (pinch with thumb and three fingers)
-#defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
-
-# Reset Launchpad, but keep the desktop wallpaper intact
-#find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Add iOS & Watch Simulator to Launchpad
 sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
@@ -369,54 +303,6 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom right screen corner → Desktop
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
-
-###############################################################################
-# Spotlight                                                                   #
-###############################################################################
-
-# Hide Spotlight tray-icon (and subsequent helper)
-#sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-# Disable Spotlight indexing for any volume that gets mounted and has not yet
-# been indexed before.
-# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-# Change indexing order and disable some search results
-# Yosemite-specific search results (remove them if you are using macOS 10.9 or older):
-# 	MENU_DEFINITION
-# 	MENU_CONVERSION
-# 	MENU_EXPRESSION
-# 	MENU_SPOTLIGHT_SUGGESTIONS (send search queries to Apple)
-# 	MENU_WEBSEARCH             (send search queries to Apple)
-# 	MENU_OTHER
-# defaults write com.apple.spotlight orderedItems -array \
-# 	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
-# 	'{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-# 	'{"enabled" = 1;"name" = "DIRECTORIES";}' \
-# 	'{"enabled" = 1;"name" = "PDF";}' \
-# 	'{"enabled" = 1;"name" = "FONTS";}' \
-# 	'{"enabled" = 0;"name" = "DOCUMENTS";}' \
-# 	'{"enabled" = 0;"name" = "MESSAGES";}' \
-# 	'{"enabled" = 0;"name" = "CONTACT";}' \
-# 	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
-# 	'{"enabled" = 0;"name" = "IMAGES";}' \
-# 	'{"enabled" = 0;"name" = "BOOKMARKS";}' \
-# 	'{"enabled" = 0;"name" = "MUSIC";}' \
-# 	'{"enabled" = 0;"name" = "MOVIES";}' \
-# 	'{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-# 	'{"enabled" = 0;"name" = "SPREADSHEETS";}' \
-# 	'{"enabled" = 0;"name" = "SOURCE";}' \
-# 	'{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
-# 	'{"enabled" = 0;"name" = "MENU_OTHER";}' \
-# 	'{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
-# 	'{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
-# 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-# 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
-# Load new settings before rebuilding the index
-# killall mds > /dev/null 2>&1
-# Make sure indexing is enabled for the main volume
-# sudo mdutil -i on / > /dev/null
-# Rebuild the index from scratch
-# sudo mdutil -E / > /dev/null
 
 ###############################################################################
 # Energy saving                                                               #

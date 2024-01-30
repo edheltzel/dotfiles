@@ -25,22 +25,28 @@ COMPUTER_NAME="BigMac";
 fi
 # echo "Computer name: $COMPUTER_NAME" # DEBUG
 . ../scripts/functions.sh;
-info "Configuring macOS defaults...";
+  info "Configuring macOS defaults...";
 # Ask for the administrator password upfront
 sudo -v;
 # # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &;
+
 substep_info "Setting computer name to $COMPUTER_NAME";
+
 sudo scutil --set ComputerName "$COMPUTER_NAME";
 sudo scutil --set LocalHostName "$COMPUTER_NAME";
 sudo scutil --set HostName "$COMPUTER_NAME";
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME";
+
 substep_success "Computer name set to $COMPUTER_NAME";
-substep_info "Setting MacOS System settings and preferences...";
+
+substep_info "Configuring MacOS system settings and preferences...";
 source $DIR/01-preferences.sh;
 source $DIR/02-apps.sh;
 source $DIR/03-security.sh;
+
 substep_success "✔ All tasks were completed";
 echo -e "         .:'\n     __ :'__\n  .'\`__\`-'__\`\`.\n \
 :__________.-'\n :_________:\n  :_________\`-;\n   \`.__.-.__.'"
+
 success "Restart $COMPUTER_NAME for changes to take effect.";
