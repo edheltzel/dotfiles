@@ -1,0 +1,12 @@
+.DS_Store
+.git
+.gitignore
+.stow-local-ignore
+.*.example
+^/@.*
+KeybdPrefs_.*.png
+Safari_.*.png
+README.*
+TODO.*
+RCS
+.*.secrets.*
