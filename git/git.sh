@@ -18,13 +18,3 @@ else
   echo "Unknown computer name: $computer_name"
   exit 1
 fi
-
-info "Setting symlinks for Git."
-
-find . -maxdepth 1 -name ".*" -not -wholename "*DS_Store*" | while read fn; do
-  fn=$(basename "$fn")
-  symlink "$SOURCE/$fn" "$DESTINATION/$fn"
-done
-
-substep_success "Successfully created symlinks."
-clear_broken_symlinks
