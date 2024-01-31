@@ -93,6 +93,7 @@ Raycast
 realpath
 renderfile
 repodir
+restow
 Roadmap
 scminput
 scrollback
@@ -119,6 +120,8 @@ templating
 TLDR
 Topgrade
 uncategorized
+unstow
+unstows
 vspacecode
 webm
 webp
