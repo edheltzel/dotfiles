@@ -153,6 +153,11 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Disable press-and-hold accent popup in favor of repeat.
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# For VS Code
+#defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+# For VS Code Insiders
+# defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+
 
 # Set a blazingly fast keyboard repeat rate
 # To simiulate the set rates visit - https://mac-key-repeat.zaymon.dev/
