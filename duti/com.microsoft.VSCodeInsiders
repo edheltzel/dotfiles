@@ -59,7 +59,8 @@
 .zprofile
 .zshrc
 Gemfile
+README
 LICENSE
 Makefile
 Rakefile
-README
+justfile
