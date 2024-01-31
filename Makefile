@@ -12,17 +12,18 @@ stow: ## Symlink all dotfiles managed by Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow $$pkg; \
 	done
+	@echo "Dotfiles stowed successfully"
 
 .PHONY: unstow
 unstow: ## Remove all dotfiles managed by Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --delete $$pkg; \
 	done
-	@echo "Dotfiles are zapped! 💥 🔫  Good luck 🫡"
+	@echo "Dotfiles zapped! ⚡️"
 
 .PHONY: update
 update: ## Update all dotfiles and remove broken symlinks managed by Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --restow $$pkg; \
 	done
-	@echo "Hooray! Dotfiles updated successfully! 🥳"
+	@echo "Dotfiles updated successfully"
