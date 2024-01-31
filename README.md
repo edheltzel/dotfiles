@@ -338,3 +338,21 @@ fnm env --use-on-cd | source
 #### 🙏 Special Thanks
 
 Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-system-configuration/) for the simple setup, and inspiration.
+
+
+
+===
+
+## Makefile
+
+The makefile has the following commands:
+
+- `all` - This is the Default, the same as `make stow`
+- `stow` - Symlink all dotfiles managed by Stow
+- `unstow` - Remove all dotfiles managed by Stow
+- `update` - Update all dotfiles and remove broken symlinks managed by Stow
+
+
+### GNU Stow
+
+Originally I used custom scripts to create symlinks. I have since switched to using [GNU Stow](https://www.gnu.org/software/stow/) to manage the symlinks. This makes it much easier to manage the dotfiles.
