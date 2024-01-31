@@ -65,7 +65,7 @@ brew 'grc'          # Colorize terminal output
 brew 'hyperfine'    # Benchmarking for arbitrary commands
 brew 'jdupes'       # Duplicate file finder
 brew 'jq'           # JSON parser, output and query files
-brew 'just'         # Powerful command runner (better make) - Rust
+brew 'just'         # Powerful command runner (make alterative) - Rust
 brew 'mas'          # Mac App Store CLI
 brew 'most'         # Multi-window scroll pager (better less)
 brew 'procs'        # Advanced process viewer (better ps) - Rust
@@ -74,7 +74,7 @@ brew 'rsync'        # Fast incremental file transfer
 brew 'sd'           # RegEx find and replace (better sed) - Rust
 brew 'trash-cli'    # Recover and restore removed files
 brew 'watchexec'    # Run command whenever file changes - Rust
-brew 'zoxide'       # Auto-learning navigation (better cd) - Rust --> fish plugin adds to PATH
+brew 'zoxide'       # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
 # CLI Image Processing and Compression
 brew 'gdk-pixbuf' # Image loading library
