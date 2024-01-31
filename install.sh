@@ -61,6 +61,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Run setup scripts in order
   source ./packages/setup.sh
   stow git
+  source ./git/setup.sh
   stow fish
   stow dots
   stow config

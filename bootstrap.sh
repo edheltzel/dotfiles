@@ -1,9 +1,21 @@
 #!/bin/bash
+#TODO: create a single line install script to execute bootstrap.sh
+#TODO: check to see if running make is better than bootstrapping
+#TODO: update install.sh to include duti, packages, repos, and set local git config
+#TODO: use makefile to excute bootstrap.sh and install.sh
+#TODO: update README
+###### TODO: include Stow info in README manage using makefile
+###### TODO: include Make info in README
+###### TODO: include New boothstrap process
+###### TODO: include New install process (makefile)
+
+
+
 
 # Define variables
 DOTFILES_REPO="https://github.com/edheltzel/dotfiles.git"
 PROJECTS_DIR="$HOME/Developer"
-DOTFILES_DIR="$PROJECTS_DIR/dotfiles-test"
+DOTFILES_DIR="$HOME/.dotfiles"
 
 # Define functions for prompts, banners, and errors
 print_prompt() {
@@ -43,16 +55,4 @@ if ! bash $DOTFILES_DIR/install.sh &> /dev/null; then
     exit 1
 fi
 
-print_banner "You might need to restart your computer for some changes to take effect."
-
-
-# Tell stow to copy the files to the home directory that are located in the ./config/
-# stow -t ~ config/.config
-
-# Tells stow to copy the files in to the home directory that are located in dots/ and replace the all dot- with . in the file name
-# stow --dotfiles -t ~ dots
-
-#TODO:
-# - update git files
-# - finish config folder
-# - remove zsh package add files to dots/
+print_banner "You should restart your computer at this point for all the changes to take effect."
