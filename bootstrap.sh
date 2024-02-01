@@ -1,8 +1,5 @@
 #!/bin/bash
-#TODO: include makefile to run stow
-###### TODO: add install script to makefile
 #TODO: create a single line install script to execute bootstrap.sh
-#TODO: check to see if running make is better than bootstrapping
 #TODO: update install.sh to include duti, packages, repos, and set local git config
 #TODO: use makefile to excute bootstrap.sh and install.sh
 #TODO: update README

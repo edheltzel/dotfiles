@@ -35,7 +35,6 @@ alias projects 'cd ~/Developer'
 alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias dots 'cd ~/.dotfiles'
-
 function cuts
     ~/.dotfiles; and eval $EDITOR .
 end
@@ -52,6 +51,12 @@ alias code code-insiders
 alias top btm
 alias bottom btm
 alias serve miniserve
+
+function tldrf --description 'tldr with fzf preview and search'
+  tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr
+end
+
+
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
@@ -148,8 +153,6 @@ function git-cbr
   end
   set_color normal
 end
-
-
 
 function repo
     set -l repo_path (repodir $argv)
