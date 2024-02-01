@@ -1,4 +1,6 @@
 #!/bin/bash
+#TODO: include makefile to run stow
+###### TODO: add install script to makefile
 #TODO: create a single line install script to execute bootstrap.sh
 #TODO: check to see if running make is better than bootstrapping
 #TODO: update install.sh to include duti, packages, repos, and set local git config
@@ -8,6 +10,9 @@
 ###### TODO: include Make info in README
 ###### TODO: include New boothstrap process
 ###### TODO: include New install process (makefile)
+#TODO: add customizations to lazyvim
+#TODO: add vscode settings and symlink to dotfiles - stow does support absolute paths :(
+
 
 
 
