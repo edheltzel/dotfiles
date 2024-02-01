@@ -69,6 +69,7 @@ ITCSS
 iterm
 jampack
 Jamstack
+lazyvim
 lightningcss
 linkify
 lockb

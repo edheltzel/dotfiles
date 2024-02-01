@@ -1,18 +1,4 @@
 #!/bin/bash
-#TODO: create a single line install script to execute bootstrap.sh
-#TODO: update install.sh to include duti, packages, repos, and set local git config
-#TODO: use makefile to excute bootstrap.sh and install.sh
-#TODO: update README
-###### TODO: include Stow info in README manage using makefile
-###### TODO: include Make info in README
-###### TODO: include New boothstrap process
-###### TODO: include New install process (makefile)
-#TODO: add customizations to lazyvim
-#TODO: add vscode settings and symlink to dotfiles - stow does support absolute paths :(
-
-
-
-
 
 # Define variables
 DOTFILES_REPO="https://github.com/edheltzel/dotfiles.git"
