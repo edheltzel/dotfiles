@@ -51,6 +51,7 @@ end
 alias pn pnpm
 alias px 'pnpm dlx'
 alias undo git-undo
+alias cbr  'git-cbr'
 alias nah 'git reset --hard && git clean -df'
 
 # Editors and Utilities

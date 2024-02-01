@@ -11,11 +11,6 @@
 #   git-undo --hard      # Completely discard the changes from the last commit
 #
 function git-undo
-    if ! git rev-parse --git-dir >/dev/null 2>&1
-        echo "Error: current directory is not a git repository"
-        return 1
-    end
-
     set_color red
     if test (command -v git); and git rev-parse --is-inside-work-tree >/dev/null 2>&1
         if test "$argv" = --hard
