@@ -31,18 +31,11 @@ function cll
 end
 
 # Project shortcuts/aliases
-function projects
-    cd ~/Developer
-end
-function dev
-    cd ~/Developer
-end
-function work
-    cd ~/Developer/work
-end
-function dots
-    cd ~/.dotfiles
-end
+alias projects 'cd ~/Developer'
+alias dev 'cd ~/Developer'
+alias work 'cd ~/Developer/work'
+alias dots 'cd ~/.dotfiles'
+
 function cuts
     ~/.dotfiles; and eval $EDITOR .
 end
@@ -132,7 +125,32 @@ function sdel --description 'alias sdel=sudo rm -rf'
     sudo rm -rf $argv
 end
 
-# Repositiory shortcuts
+# Git and Repositiory shortcuts
+
+# Github PR checkout with search and preview
+function ghpr
+  set_color red
+  if test (command -v git); and git rev-parse --is-inside-work-tree >/dev/null 2>&1
+    GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh issue view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout
+  else
+      echo -e "\e[31mError: Not a Git repository\e[0m"
+  end
+  set_color normal
+end
+
+# Chekout recent branch updates with search an preview
+function git-cbr
+  set_color red
+  if test (command -v git); and git rev-parse --is-inside-work-tree >/dev/null 2>&1
+    git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff --color=always {1}" --pointer="" | xargs git checkout
+  else
+      echo -e "\e[31mError: Not a Git repository\e[0m"
+  end
+  set_color normal
+end
+
+
+
 function repo
     set -l repo_path (repodir $argv)
     echo "$repo_path"
