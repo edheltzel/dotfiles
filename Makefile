@@ -1,7 +1,10 @@
 STOW_PACKAGES := dots git fish nvim config warp
 
+.PHONY: all
+all: help
+
 .PHONY: help
-help: ## Show this help message
+help: ## Show this help message (default)
 	@awk 'BEGIN {FS = ":.*?## "}; \
 		/^[^\t][a-zA-Z0-9_-]+:.*?##/ \
 		{ printf "\033[36m%-24s\033[0m %s\n", $$1, $$2 } \
@@ -22,7 +25,7 @@ unstow: ## Remove all dotfiles managed by Stow
 	@echo "Dotfiles zapped! ⚡️"
 
 .PHONY: update
-update: ## Update all dotfiles and remove broken symlinks managed by Stow
+update: ## Update dotfiles & remove broken symlinks managed by Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --restow $$pkg; \
 	done
