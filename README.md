@@ -13,29 +13,28 @@ Zach Holman wrote a great article on [dotfiles](https://zachholman.com/2010/08/d
 
 <details>
   <summary><strong>Caveats for non-Apple Silicon (Intel)</strong></summary>
-If you are on any version of macOS that uses AFPS, you'll need to disable the SIP.
-First check to see if SIP is enabled or not.
+  If you are on any version of macOS that uses AFPS, you'll need to disable the SIP.
+  First check to see if SIP is enabled or not.
 
-```shell
-csrutil status
-```
+  ```shell
+  csrutil status
+  ```
 
-output should read:
+  output should read:
 
-```shell
-System Integrity Protection status: enabled.
-```
+  ```shell
+  System Integrity Protection status: enabled.
+  ```
 
-If your SIP is enabled, then follow the next steps to disable it – Assuming that you know what you're doing, here is how to turn off System Integrity Protection on your Mac.
+  If your SIP is enabled, then follow the next steps to disable it – Assuming that you know what you're doing, here is how to turn off System Integrity Protection on your Mac.
 
-1. Turn off your Mac (Apple > Shut Down).
-2. Hold down Command-R and press the Power button. Keep holding Command-R until the Apple logo appears.
-3. Wait for OS X to boot into the OS X Utilities window.
-4. Choose Utilities > Terminal.
-5. Enter csrutil _disable_.
-6. Enter reboot.
-7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
-
+  1. Turn off your Mac (Apple > Shut Down).
+  2. Hold down Command-R and press the Power button. Keep holding Command-R until the Apple logo appears.
+  3. Wait for OS X to boot into the OS X Utilities window.
+  4. Choose Utilities > Terminal.
+  5. Enter csrutil _disable_.
+  6. Enter reboot.
+  7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
 </details>
 
 
@@ -184,12 +183,13 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 -[ ] update install.sh to include duti, packages, repos, and set local git config
 -[ ] use makefile to execute bootstrap.sh and install.sh
 -[ ] update README
-  -[ ] include Stow info in README manage using makefile
-  -[ ] include Make info in README
+  -[ ] include Stow info
+  -[ ] include Make info
   -[ ] include New bootstrap process
   -[ ] include New install process (makefile)
 -[ ] add customizations to lazyvim
 -[ ] add vscode settings and symlink to dotfiles - stow does support absolute paths :(
+-[ ] consider using XDG
 
 
 ## Makefile
