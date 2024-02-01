@@ -1,1 +1,4 @@
-/Users/ed/Developer/dotfiles/fish/functions/wget.fish
+# Defined in - @ line 0
+function wget --description 'alias wget=wget -c'
+  command wget -c $argv;
+end

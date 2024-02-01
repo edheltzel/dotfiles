@@ -1,1 +1,3 @@
-/Users/ed/Developer/dotfiles/fish/functions/weather.fish
+function weather --description 'check the weather'
+  curl wttr.in/~Springboro+Ohio;
+end

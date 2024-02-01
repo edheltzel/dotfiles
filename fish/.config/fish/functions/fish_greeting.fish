@@ -1,1 +1,2 @@
-/Users/ed/Developer/dotfiles/fish/functions/fish_greeting.fish
+function fish_greeting;
+end
