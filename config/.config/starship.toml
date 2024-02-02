@@ -6,6 +6,7 @@ command_timeout = 1000
 
 [line_break]
 disabled = false
+
 [fill]
 symbol = " "
 
@@ -21,8 +22,6 @@ format = "[󰔛 $duration]($style)"
 style = "yellow"
 [directory]
 read_only = " "
-# truncation_length = 2
-# truncate_to_repo = false
 
 # git symbols & config
 [git_branch]
@@ -50,6 +49,7 @@ style = "white"
 [aws]
 symbol = "  "
 format = "[$symbol($version )]($style)"
+
 [package]
 symbol = "󰏗 "
 format = "[$symbol($version )]($style)"
