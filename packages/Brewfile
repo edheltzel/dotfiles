@@ -88,7 +88,7 @@ brew 'pango' # Text layout and rendering
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
 brew 'bottom'       # Resource monitor (better top) - Rust
-brew 'ctop'         # Container metrics and monitoring - Go
+brew 'ctop'         # Docker Container metrics and monitoring - Go
 brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
 brew 'glances'      # Resource monitor + web and API
 brew 'goaccess'     # Web log analyzer and viewer
