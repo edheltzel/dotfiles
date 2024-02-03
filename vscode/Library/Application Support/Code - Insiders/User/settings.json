@@ -193,8 +193,7 @@
     "TO DO",
     "TO-DO",
     "XXX",
-    "[ ]",
-    "[x]",
+    "- [ ]",
     "* @todo"
   ],
   "todo-tree.general.tagGroups": {
