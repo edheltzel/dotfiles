@@ -1,4 +1,4 @@
-STOW_PACKAGES := dots git fish nvim config warp
+STOW_PACKAGES := dots git fish nvim config warp vscode
 
 .PHONY: all
 all: help
