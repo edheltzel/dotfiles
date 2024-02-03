@@ -179,18 +179,18 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 
 ===
 
--[ ] create a single line install script to execute bootstrap.sh
--[ ] update install.sh to include duti, packages, repos, and set local git config
--[ ] use makefile to execute bootstrap.sh and install.sh
--[ ] update README
-  -[ ] include Stow info
-  -[ ] include Make info
-  -[ ] include New bootstrap process
-  -[ ] include New install process (makefile)
--[ ] add customizations to lazyvim
--[ ] add vscode settings and symlink to dotfiles - stow does support absolute paths :(
--[ ] consider using XDG
--[ ] Look into [Tuckr](https://github.comRaphGL/Tuckr)
+- [ ] create a single line install script to execute bootstrap.sh
+- [ ] update install.sh to include duti, packages, repos, and set local git config
+- [ ] use makefile to execute bootstrap.sh and install.sh
+- [ ] update README
+  - [ ] include Stow info
+  - [ ] include Make info
+  - [ ] include New bootstrap process
+  - [ ] include New install process (makefile)
+- [ ] add customizations to lazyvim
+- [x] add vscode settings and symlink to dotfiles - stow does support absolute paths :(
+- [ ] consider using XDG
+- [ ] Look into [Tuckr](https://github.comRaphGL/Tuckr)
 
 ## Makefile
 
