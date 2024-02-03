@@ -177,7 +177,8 @@
   },
   "security.workspace.trust.enabled": false,
   // TODO Tree
-  "todo-tree-filtering.excludeGlobs": [
+  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  "todo-tree.filtering.excludeGlobs": [
     "**/node_modules/*/**",
     "**/*.code-profile"
   ],
@@ -561,11 +562,6 @@
       "editorStickyScroll.border": "#060708"
     },
   },
-  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
-  "todo-tree.filtering.excludeGlobs": [
-    "**/node_modules/*/**",
-    "**/*.code-profile"
-  ],
   // Editor Token Colors Customizations
   // "editor.tokenColorCustomizations": {
   //   "[Lunar Eclipse Dark][Lunar Eclipse Shadow][Lunar Eclipse]": {
