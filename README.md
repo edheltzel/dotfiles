@@ -187,8 +187,8 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
   - [ ] include Make info
   - [ ] include New bootstrap process
   - [ ] include New install process (makefile)
-- [ ] add customizations to lazyvim
-- [x] add vscode settings and symlink to dotfiles - stow does support absolute paths :(
+- [x] add customizations to lazyvim
+- [x] add vscode settings and symlink to dotfiles
 - [ ] consider using XDG
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
 
