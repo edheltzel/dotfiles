@@ -4,10 +4,11 @@
 
 This is my personal configuration (.dotfiles) for macOS that involves web development and devops which are deployed using [GNU Stow](https://www.gnu.org/software/stow/). There are also files for provisioning a new machine and setting up my environment.
 
-
 ## So what's next?
 
-Zach Holman wrote a great article on [dotfiles](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) and how they are meant to be forked. I agree with this to a point... I'm more of a fan of the idea that you should take what you like and leave the rest, since dotfiles are highly personalized, and built over time so what works for me probably wont't work for you, but take inspiration all you want and make it your own. Again, this is **my personal setup** so use at your own risk if you choose to use it.
+Zach Holman wrote a great article about [dotfiles](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) and how they are meant to be forked. I agree with this to a point... I'm more of a fan of the idea that you should take what you like and leave the rest, since dotfiles are highly personalized, and built over time so what works for me probably wont't work for you, but take inspiration all you want and make it your own.
+
+Again, this is My personal setup – _**So proceed with caution, and use at your own risk**_.
 
 ## ⚙️ Usage and the Install
 
@@ -38,7 +39,6 @@ Zach Holman wrote a great article on [dotfiles](https://zachholman.com/2010/08/d
 </details>
 
 
-
 ### SSH Keys
 I use [ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to authenticate with GitHub and other services. You generally want to create new keys for each device you use, but you can also use the same key on multiple devices. **I have started using two different keys for my multi-machine work flow.** One key is for my personal devices and the other is for my work devices. This allows me to easily revoke access to my work devices if I discontinue a relationship with a company or customer, and not have to worry about my personal keys being compromised or having to change them.
 
@@ -64,7 +64,7 @@ fisher
 
 #### Commit and Tag Signing
 
-##### SSH Commit Signing
+##### SSH Signing
 
 I use SSH commit signing over GPG. GPG is there if I need it, but I prefer SSH. For a few resources to help get this setup:
 
@@ -105,6 +105,24 @@ If you choose to use this make sure you look at that `./git/git.sh`, this script
   - **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
 
 </details>
+
+
+### GNU Stow
+
+Originally I used a series of custom scripts to create symlinks, it worked but I've since switched to using [GNU Stow](https://www.gnu.org/software/stow/). I feel like everything is way more manageable and  easier to understand – I previously would have to review each script to make sure I wasn't going to break my system.
+
+### Makefile
+
+So with the addition of Stow, I've added a makefile to help with the process of managing each Stow package.
+
+The following commands are available:
+
+- `all` - This is the Default, the same as `make stow`
+- `stow` - Symlink all dotfiles managed by Stow
+- `unstow` - Remove all dotfiles managed by Stow
+- `update` - Update all dotfiles and remove broken symlinks managed by Stow
+
+
 
 ### macOS Preferences (macos/)
 
@@ -179,6 +197,8 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 
 ===
 
+## 📝 TODOs
+
 - [ ] create a single line install script to execute bootstrap.sh
 - [ ] update install.sh to include duti, packages, repos, and set local git config
 - [ ] use makefile to execute bootstrap.sh and install.sh
@@ -189,20 +209,4 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
   - [ ] include New install process (makefile)
 - [x] add customizations to lazyvim
 - [x] add vscode settings and symlink to dotfiles
-- [ ] consider using XDG
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
-
-### GNU Stow
-
-Originally I used a series of custom scripts to create symlinks, it worked but I've since switched to using [GNU Stow](https://www.gnu.org/software/stow/). I feel like everything is way more manageable and  easier to understand – I previously would have to review each script to make sure I wasn't going to break my system.
-
-## Makefile
-
-So with the addition of Stow, I've added a makefile to help with the process of managing each Stow package.
-
-The following commands are available:
-
-- `all` - This is the Default, the same as `make stow`
-- `stow` - Symlink all dotfiles managed by Stow
-- `unstow` - Remove all dotfiles managed by Stow
-- `update` - Update all dotfiles and remove broken symlinks managed by Stow
