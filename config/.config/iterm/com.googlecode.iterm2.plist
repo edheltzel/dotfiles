@@ -5426,7 +5426,6 @@ Close</string>
 	<true/>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Command History</string>
 		<string>Actions</string>
 	</array>
 	<key>UseBorder</key>
