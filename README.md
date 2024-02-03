@@ -192,16 +192,17 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 - [ ] consider using XDG
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
 
+### GNU Stow
+
+Originally I used a series of custom scripts to create symlinks, it worked but I've since switched to using [GNU Stow](https://www.gnu.org/software/stow/). I feel like everything is way more manageable and  easier to understand – I previously would have to review each script to make sure I wasn't going to break my system.
+
 ## Makefile
 
-The makefile has the following commands:
+So with the addition of Stow, I've added a makefile to help with the process of managing each Stow package.
+
+The following commands are available:
 
 - `all` - This is the Default, the same as `make stow`
 - `stow` - Symlink all dotfiles managed by Stow
 - `unstow` - Remove all dotfiles managed by Stow
 - `update` - Update all dotfiles and remove broken symlinks managed by Stow
-
-
-### GNU Stow
-
-Originally I used custom scripts to create symlinks. I have since switched to using [GNU Stow](https://www.gnu.org/software/stow/) to manage the symlinks. This makes it much easier to manage the dotfiles.
