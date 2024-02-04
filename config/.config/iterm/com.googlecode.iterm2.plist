@@ -5453,7 +5453,7 @@ Close</string>
 	<key>ShowNewOutputIndicator</key>
 	<false/>
 	<key>ShowPaneTitles</key>
-	<true/>
+	<false/>
 	<key>Snippets</key>
 	<array>
 		<dict>
@@ -5480,7 +5480,7 @@ Close</string>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.30141990291262133</real>
+	<real>0.40338554308252422</real>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>StretchTabsToFillBar</key>
@@ -5490,7 +5490,7 @@ Close</string>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
-	<true/>
+	<false/>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Snippets</string>
