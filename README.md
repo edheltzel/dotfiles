@@ -202,6 +202,7 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 - [x] add vscode settings and symlink to dotfiles
 - [x] add XDG Base Directory support
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
+- [ ] update make unstow to include only the available stow package or all
 - [ ] create a single line install script to execute bootstrap.sh
 - [ ] update install.sh to include duti, packages, repos, and set local git config
 - [ ] use makefile to execute bootstrap.sh and install.sh
