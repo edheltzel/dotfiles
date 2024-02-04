@@ -199,6 +199,7 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 
 ## 📝 TODOs
 
+- [ ] consider dropping fisher for [Plug.fish](https://github.com/kidonng/plug.fish)
 - [ ] create a single line install script to execute bootstrap.sh
 - [ ] update install.sh to include duti, packages, repos, and set local git config
 - [ ] use makefile to execute bootstrap.sh and install.sh
