@@ -199,15 +199,17 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 
 ## 📝 TODOs
 
-- [ ] consider dropping fisher for [Plug.fish](https://github.com/kidonng/plug.fish)
+- [x] consider dropping fisher for [Plug.fish](https://github.com/kidonng/plug.fish)
+- [x] add customizations to lazyvim
+- [x] add vscode settings and symlink to dotfiles
+- [x] add XDG Base Directory support
+- [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
 - [ ] create a single line install script to execute bootstrap.sh
 - [ ] update install.sh to include duti, packages, repos, and set local git config
 - [ ] use makefile to execute bootstrap.sh and install.sh
 - [ ] update README
+  - [ ] include XDG info
   - [ ] include Stow info
   - [ ] include Make info
   - [ ] include New bootstrap process
   - [ ] include New install process (makefile)
-- [x] add customizations to lazyvim
-- [x] add vscode settings and symlink to dotfiles
-- [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
