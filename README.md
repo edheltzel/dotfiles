@@ -58,8 +58,7 @@ git clone git@github.com:edheltzel/dotfiles.git
 4. Install [Fisher](https://github.com/jorgebucaran/fisher) and Plugins -- _Optional_
 
 ```bash
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
 #### Commit and Tag Signing
@@ -199,7 +198,6 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 
 ## 📝 TODOs
 
-- [x] consider dropping fisher for [Plug.fish](https://github.com/kidonng/plug.fish)
 - [x] add customizations to lazyvim
 - [x] add vscode settings and symlink to dotfiles
 - [x] add XDG Base Directory support
