@@ -11,21 +11,21 @@ help: ## Show this help message (default)
 		/^##/ { printf "\033[33m%s\033[0m\n", substr($$0, 4) }' $(MAKEFILE_LIST)
 
 .PHONY: stow
-stow: ## Symlink all dotfiles managed by Stow
+stow: ## Symlink all dotfiles w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow $$pkg; \
 	done
 	@echo "Dotfiles stowed successfully"
 
 .PHONY: unstow
-unstow: ## Remove all dotfiles managed by Stow
+unstow: ## Remove all dotfiles w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --delete $$pkg; \
 	done
 	@echo "Dotfiles zapped! ⚡️"
 
 .PHONY: update
-update: ## Update dotfiles & remove broken symlinks managed by Stow
+update: ## Update dotfiles & remove broken symlinks w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --restow $$pkg; \
 	done
