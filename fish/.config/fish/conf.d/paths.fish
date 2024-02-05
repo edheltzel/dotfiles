@@ -6,7 +6,6 @@ set -e fish_user_paths
 set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_DATA_HOME $HOME/.local/share
-g
 set -gx XDG_DESKTOP_DIR $HOME/Desktop
 set -gx XDG_DOWNLOAD_DIR $HOME/Downloads
 set -gx XDG_DOCUMENTS_DIR $HOME/Documents
