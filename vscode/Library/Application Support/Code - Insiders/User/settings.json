@@ -135,7 +135,8 @@
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
   "gitProjectManager.baseProjectsFolders": [
     "~/Developer",
-    "~/Sites"
+    "~/Sites",
+    "~/.dotfiles"
   ],
   "gitProjectManager.ignoredFolders": [
     "node_modules"
