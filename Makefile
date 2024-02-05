@@ -55,7 +55,7 @@ delete: ## Delete all dotfiles w/Stow
 	@echo "$(WHITE)Dotfiles zapped! ⚡️"
 
 .PHONY: update
-update: ## Sync & clean all symlinks w/Stow
+update: ## Sync & clean dead symlinks w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --restow $$pkg; \
 	done
