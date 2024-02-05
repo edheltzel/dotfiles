@@ -112,16 +112,38 @@ Originally I used a series of custom scripts to create symlinks, it worked but I
 
 ### Makefile
 
-So with the addition of Stow, I've added a makefile to help with the process of managing each Stow package.
+So with the addition of Stow, I've added a `makefile` to help with the process of managing my dotfiles, which I find to be a simple and helpful way to execute the Stow commands and other tasks. To use the `make` commands, you need to be in the root of the `~/.dotfiles` directory.
 
 The following commands are available:
 
-- `all` - This is the Default, the same as `make stow`
-- `stow` - Symlink all dotfiles managed by Stow
-- `unstow` - Remove all dotfiles managed by Stow
-- `update` - Update all dotfiles and remove broken symlinks managed by Stow
+```shell
+help          Show this help message (default)
+install       Bootstraps a new machine
+run           Symlink all dotfiles w/Stow
+stow          Add individual packages w/Stow
+unstow        Remove individual packages w/Stow
+delete        Delete all dotfiles w/Stow
+update        Sync & clean all symlinks w/Stow
+```
 
+When executing the `make install` command, it will execute the `bootstrap.sh` script. This script will install the necessary packages with dependencies, applications, clone the necessary repositories, configure Git, and symlink dotfiles using Stow.
 
+When running the `make stow` or `make unstow` commands you need specify the package you want to stow or unstow by setting the `pkg=` variable.
+
+**Stow Example:**
+```shell
+# stows the nvim package
+make stow pkg=nvim
+```
+**Unstow Example:**
+```shell
+# unstows the nvim package
+make unstow pkg=nvim
+```
+
+### XDG Base Directory
+
+Reference: [XDG Base Directory](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file.
 
 ### macOS Preferences (macos/)
 
