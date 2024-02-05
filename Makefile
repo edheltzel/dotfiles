@@ -4,8 +4,8 @@ GREEN := \033[32m
 WHITE := \033[37m
 CLR := \033[0m
 
-.PHONY: all
-all: help
+.PHONY: default
+default: help
 
 .PHONY: help
 help: ## Show this help message (default)
