@@ -1,4 +1,8 @@
 STOW_PACKAGES := dots git fish nvim config warp vscode
+YELLOW := \033[33m
+GREEN := \033[32m
+WHITE := \033[37m
+CLR := \033[0m
 
 .PHONY: all
 all: help
@@ -7,26 +11,52 @@ all: help
 help: ## Show this help message (default)
 	@awk 'BEGIN {FS = ":.*?## "}; \
 		/^[^\t][a-zA-Z0-9_-]+:.*?##/ \
-		{ printf "\033[36m%-24s\033[0m %s\n", $$1, $$2 } \
-		/^##/ { printf "\033[33m%s\033[0m\n", substr($$0, 4) }' $(MAKEFILE_LIST)
+		{ printf "\033[36m%-24s$(CLR) %s\n", $$1, $$2 } \
+		/^##/ { printf "$(YELLOW)%s$(CLR)\n", substr($$0, 4) }' $(MAKEFILE_LIST)
 
-.PHONY: stow
-stow: ## Symlink all dotfiles w/Stow
+.PHONY: run
+run: ## Symlink all dotfiles w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow $$pkg; \
 	done
 	@echo "Dotfiles stowed successfully"
 
+.PHONY: stow
+stow: ## Add individual packages w/Stow
+	@if [ -z "${pkg}" ]; then \
+		echo "Error: Please specify a package to stow. \n$(YELLOW)ie: $(YELLOW)make stow pkg=<pacakgeName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
+		exit 1; \
+	fi
+	@if [[ ! " ${STOW_PACKAGES} " =~ " ${pkg} " ]]; then \
+		echo "Error: Package '${pkg}' not found in STOW_PACKAGES: $(STOW_PACKAGES)"; \
+		exit 1; \
+	fi
+	stow ${pkg}
+	@echo "${pkg} was added"
+
 .PHONY: unstow
-unstow: ## Remove all dotfiles w/Stow
+unstow: ## Remove individual packages w/Stow
+	@if [ -z "${pkg}" ]; then \
+		echo "Error: Please specify a package to unstow. \n$(YELLOW)ie: $(YELLOW)make unstow pkg=<pacakgeName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
+		exit 1; \
+	fi
+	@if [[ ! " ${STOW_PACKAGES} " =~ " ${pkg} " ]]; then \
+		echo "Error: Package '${pkg}' not found in STOW_PACKAGES: $(STOW_PACKAGES)"; \
+		exit 1; \
+	fi
+	stow --delete ${pkg}
+	@echo "${pkg} was removed"
+
+.PHONY: delete
+delete: ## Delete all dotfiles w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --delete $$pkg; \
 	done
-	@echo "Dotfiles zapped! ⚡️"
+	@echo "$(WHITE)Dotfiles zapped! ⚡️"
 
 .PHONY: update
-update: ## Update dotfiles & remove broken symlinks w/Stow
+update: ## Sync & clean all symlinks w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --restow $$pkg; \
 	done
-	@echo "Dotfiles updated successfully"
+	@echo "$(GREEN)Dotfiles updated successfully$(CLR)"
