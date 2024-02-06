@@ -16,9 +16,9 @@ help: ## Show this help message (default)
 
 .PHONY: install
 install: ## Bootsraps a new machine
-    @echo "$(YELLOW)Running bootstrap to provision the system...$(CLR)"
-    @./install.sh
-    @echo "$(GREEN)System provisioning complete!$(CLR)"
+	@echo "$(YELLOW)Running bootstrap to provision the system...$(CLR)"
+	@./install.sh
+	@echo "$(GREEN)System provisioning complete!$(CLR)"
 
 
 .PHONY: run
