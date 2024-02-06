@@ -135,7 +135,8 @@
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
   "gitProjectManager.baseProjectsFolders": [
     "~/Developer",
-    "~/Sites"
+    "~/Sites",
+    "~/.dotfiles"
   ],
   "gitProjectManager.ignoredFolders": [
     "node_modules"
@@ -177,7 +178,8 @@
   },
   "security.workspace.trust.enabled": false,
   // TODO Tree
-  "todo-tree-filtering.excludeGlobs": [
+  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  "todo-tree.filtering.excludeGlobs": [
     "**/node_modules/*/**",
     "**/*.code-profile"
   ],
@@ -497,7 +499,7 @@
     "custom-global-dictionary": {
       "name": "Custom Global Dictionary",
       "description": "Custom Global Dictionary",
-      "path": "/Users/ed/.dotfiles/misc/vscode/global-dictionary.txt"
+      "path": "/Users/ed/.dotfiles/local/.local/share/cspell/global-dictionary.txt"
     }
   },
   "errorLens.fontSize": "18",
@@ -561,11 +563,6 @@
       "editorStickyScroll.border": "#060708"
     },
   },
-  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
-  "todo-tree.filtering.excludeGlobs": [
-    "**/node_modules/*/**",
-    "**/*.code-profile"
-  ],
   // Editor Token Colors Customizations
   // "editor.tokenColorCustomizations": {
   //   "[Lunar Eclipse Dark][Lunar Eclipse Shadow][Lunar Eclipse]": {

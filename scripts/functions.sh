@@ -112,3 +112,47 @@ substep_error() {
     echo -e "${MAGENTA} ERROR: $message${NC}"
     echo -e "${MAGENTA}====================================================${NC}"
 }
+
+# Function to install Xcode Command Line Tools
+install_xcode() {
+  if ! xcode-select --print-path &>/dev/null; then
+    print_banner "Xcode Command Line Tools not found. Installing Xcode Command Line Tools..."
+    xcode-select --install &>/dev/null
+    # Wait for Xcode Command Line Tools installation
+    until xcode-select --print-path &>/dev/null; do sleep 5; done
+    print_banner "Xcode Command Line Tools installation complete."
+  else
+    print_banner "Xcode Command Line Tools already installed. Skipping installation."
+  fi
+}
+
+# Function to check for and install Git if necessary
+install_git() {
+  if ! command -v git &>/dev/null; then
+    print_banner "Git not found. Installing Git..."
+    # Assuming Homebrew is installed, install Git
+    brew install git
+    if ! command -v git &>/dev/null; then
+      print_error "Error installing Git. Exiting script."
+      exit 1
+    fi
+    print_banner "Git installation complete."
+  else
+    print_banner "Git already installed. Skipping installation."
+  fi
+}
+
+# Function to install Homebrew
+install_homebrew() {
+  if ! command -v brew &>/dev/null; then
+    substep_info "Homebrew not found. Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    if ! command -v brew &>/dev/null; then
+      substep_error "Error installing Homebrew. Exiting script."
+      exit 1
+    fi
+    success "Homebrew installation complete."
+  else
+    substep_success "Homebrew already installed. Skipping installation."
+  fi
+}

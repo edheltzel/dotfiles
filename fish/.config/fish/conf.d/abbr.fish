@@ -5,10 +5,11 @@ if status is-interactive
     abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
     abbr --add cl clear
-    abbr --add cls '~/Library/CloudStorage/Dropbox-RDM/Clients'
+    abbr --add cls '$DROPBOX/Clients'
     abbr --add co 'code-insiders '
     abbr --add con 'code-insiders -n .'
     abbr --add config '~/.config/'
+    abbr --add local '~/.local/'
     abbr --add coo 'code-insiders -r .'
     abbr --add dls '~/Downloads/'
     abbr --add gems 'gem list'
