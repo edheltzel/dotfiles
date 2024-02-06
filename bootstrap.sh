@@ -1,46 +1,33 @@
 #!/bin/bash
 
+# Source the functions file to use predefined colors and functions
+. scripts/functions.sh
+
 # Define variables
 DOTFILES_REPO="https://github.com/edheltzel/dotfiles.git"
 PROJECTS_DIR="$HOME/Developer"
 DOTFILES_DIR="$HOME/.dotfiles"
 
-# Define functions for prompts, banners, and errors
-print_prompt() {
-    echo -e "\033[1m$1\033[0m"
-}
+# Start the bootstrap process
+install_xcode
+install_git
 
-function print_banner() {
-    local message="$1"
-    echo -e "${YELLOW}====================================================${NC}"
-    echo -e "${YELLOW} NOTE: $message${NC}"
-    echo -e "${YELLOW}====================================================${NC}"
-}
-
-print_error() {
-    local message="$1"
-    echo -e "${YELLOW}====================================================${NC}"
-    echo -e "${YELLOW} ERROR: $message${NC}"
-    echo -e "${YELLOW}====================================================${NC}"
-}
-
-##
-
-# Create the Developer directory if it does not exist
+# Create the ~/Developer directory if it does not exist
 if [ ! -d "$PROJECTS_DIR" ]; then
-    mkdir "$PROJECTS_DIR"
+    mkdir -p "$PROJECTS_DIR"
 fi
 
-# Clone the dotfiles repository
-if ! git clone $DOTFILES_REPO $DOTFILES_DIR &> /dev/null; then
-    print_error "Failed to clone dotfiles repository. Please check your internet connection and try again."
-    exit 1
+# Clone or update the dotfiles repository
+if [ ! -d "$DOTFILES_DIR" ]; then
+    git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
+else
+    git -C "$DOTFILES_DIR" pull
 fi
 
 # Run the installation script in the dotfiles directory
-if ! bash $DOTFILES_DIR/install.sh &> /dev/null; then
-    print_error "Failed to install dotfiles. Please check the installation script and try again."
+if ! bash "$DOTFILES_DIR/install.sh"; then
+    print_error "Failed to install dotfiles. Please check the installation script for errors."
     exit 1
 fi
 
-print_banner "You should restart your computer at this point for all the changes to take effect."
+print_banner "Installation complete! Please restart your computer for all changes to take effect."

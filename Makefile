@@ -14,6 +14,13 @@ help: ## Show this help message (default)
 		{ printf "\033[36m%-24s$(CLR) %s\n", $$1, $$2 } \
 		/^##/ { printf "$(YELLOW)%s$(CLR)\n", substr($$0, 4) }' $(MAKEFILE_LIST)
 
+.PHONY: install
+install: ## Provision a new system
+    @echo "$(YELLOW)Running bootstrap to provision the system...$(CLR)"
+    @./bootstrap.sh
+    @echo "$(GREEN)System provisioning complete!$(CLR)"
+
+
 .PHONY: run
 run: ## Symlink all dotfiles w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
