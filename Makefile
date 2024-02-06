@@ -1,4 +1,4 @@
-STOW_PACKAGES := dots git fish nvim config warp vscode
+STOW_PACKAGES := dots git fish nvim config local warp vscode
 YELLOW := \033[33m
 GREEN := \033[32m
 WHITE := \033[37m
