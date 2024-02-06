@@ -125,7 +125,7 @@ cask 'iterm2'                       # Better terminalemulator
 cask 'warp'                         # A "modern" terminalemulator - Rust
 cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
-cask 'visual-studio-code-insiders'  # Nightly release
+cask 'visual-studio-code-insiders'  # Code editor - Insiders edition - Default
 cask 'zed'                          # Text editor - Rust
 cask 'local'                        # Local WordPress development
 
