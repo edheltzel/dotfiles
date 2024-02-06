@@ -1,33 +1,47 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Source the functions file to use predefined colors and functions
-. scripts/functions.sh
+# Define the source and target locations
+SOURCE="https://github.com/edheltzel/dotfiles"
+TARBALL="$SOURCE/tarball/main"
+TARGET="$HOME/.dotfiles"
+TAR_CMD="tar -xzv -C \"$TARGET\" --strip-components=1 --exclude='{.gitignore}'"
 
-# Define variables
-DOTFILES_REPO="https://github.com/edheltzel/dotfiles.git"
-PROJECTS_DIR="$HOME/Developer"
-DOTFILES_DIR="$HOME/.dotfiles"
+# Function to check if a command is executable
+is_executable() {
+  type "$1" > /dev/null 2>&1
+}
 
-# Start the bootstrap process
-install_xcode
-install_git
-
-# Create the ~/Developer directory if it does not exist
-if [ ! -d "$PROJECTS_DIR" ]; then
-    mkdir -p "$PROJECTS_DIR"
+# Determine the download command based on available tools
+if is_executable "git"; then
+  CMD="git clone $SOURCE $TARGET"
+elif is_executable "curl"; then
+  CMD="curl -#L $TARBALL | $TAR_CMD"
+elif is_executable "wget"; then
+  CMD="wget --no-check-certificate -O - $TARBALL | $TAR_CMD"
 fi
 
-# Clone or update the dotfiles repository
-if [ ! -d "$DOTFILES_DIR" ]; then
-    git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
+# Execute the download command or abort if no tools are available
+if [ -z "$CMD" ]; then
+  echo "No git, curl, or wget available. Aborting."
 else
-    git -C "$DOTFILES_DIR" pull
-fi
+  echo "Installing dotfiles..."
+  mkdir -p "$TARGET"
+  eval "$CMD"
 
-# Run the installation script in the dotfiles directory
-if ! bash "$DOTFILES_DIR/install.sh"; then
-    print_error "Failed to install dotfiles. Please check the installation script for errors."
+  # Check if install.sh exists
+  if [ -f "$TARGET/install.sh" ]; then
+    # Prompt the user for confirmation before proceeding
+    read -p "Do you want to continue with the installation? [y/N] " -n 1 -r
+    echo    # Move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      echo "Running install script..."
+      bash "$TARGET/install.sh"
+    else
+      echo "Installation aborted by user."
+      exit 1
+    fi
+  else
+    echo "Error: install.sh not found in the dotfiles repository."
     exit 1
+  fi
 fi
-
-print_banner "Installation complete! Please restart your computer for all changes to take effect."
