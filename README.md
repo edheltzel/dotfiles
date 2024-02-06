@@ -43,7 +43,7 @@ Since we have a bad habit of forgetting things:
 2. Clone this repository to `~/.dotfiles`
 3. Run the `bootstrap.sh` script or `make install` command
 
-## Whats Inside
+## What's Inside
 
 ### GNU Stow
 
@@ -89,6 +89,8 @@ There are two options for managing packages with Stow:
   - When I need Vim, I use [LazyVim](https://www.lazyvim.org/) - lightly customized.
 - config (config/)
   - Configuration files for various applications
+- local (local/)
+  - User specific data not configuration related. ie: fonts, wallpapers, etc.
 - warp (warp/)
   - I like Warp but I really like iTerm2
 - vscode (vscode/)
