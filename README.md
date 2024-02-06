@@ -94,7 +94,7 @@ There are two options for managing packages with Stow:
 - warp (warp/)
   - I like Warp but I really like iTerm2
 - vscode (vscode/)
-  - I use the sync feature in vscode to keep my settings and extensions in sync. The `settings.json` and `keybindings.json` are symlinked out of habit.
+  - I use the [ sync settings ][vscodeSyncSettings] feature in vscode to keep my settings and extensions in sync across platforms. The `settings.json` and `keybindings.json` are symlinked out of habit.
 
 ## Scripts
 
@@ -241,3 +241,4 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 [XDGRef]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 [STOW]: https://www.gnu.org/software/stow/
 [GENSSHKEY]: https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+[vscodeSyncSetting]: https://code.visualstudio.com/docs/editor/settings-sync
