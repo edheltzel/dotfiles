@@ -499,7 +499,7 @@
     "custom-global-dictionary": {
       "name": "Custom Global Dictionary",
       "description": "Custom Global Dictionary",
-      "path": "/Users/ed/.dotfiles/misc/vscode/global-dictionary.txt"
+      "path": "/Users/ed/.dotfiles/local/.local/share/cspell/global-dictionary.txt"
     }
   },
   "errorLens.fontSize": "18",

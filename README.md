@@ -90,7 +90,7 @@ There are two options for managing packages with Stow:
 - config (config/)
   - Configuration files for various applications
 - local (local/)
-  - User specific data not configuration related. ie: fonts, wallpapers, etc.
+  - User specific data not configuration related. ie: fonts, wallpapers, misc items that mean nothing,etc.
 - warp (warp/)
   - I like Warp but I really like iTerm2
 - vscode (vscode/)
