@@ -33,8 +33,6 @@
 [core]
   excludesfile = ~/.gitignore_global
   editor       = code-insiders --wait
-  # editor       = code --wait
-  #editor       = nvim
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
@@ -82,7 +80,7 @@
   cma = !git add --all && git commit -S -m
   co  = checkout
   rv  = remote -v
-
+  addi = "!f() { git add $(git ls-files -m | fzf -m); }; f"
   #not signed
   # cm  = commit -m
   # cma = !git add --all && git commit -m
@@ -176,7 +174,6 @@ last = log -1 HEAD
 latest = show --name-only --oneline HEAD
 down = pull --rebase origin master
 up = push -u origin master
-save = "!git add -A; git commit ."
 uptags = push --follow-tags
 downtags = fetch --tags
 
@@ -197,8 +194,8 @@ downtags = fetch --tags
 [help]
 
 [gui]
-  fontui     = -family \"JetBrainsMono Nerd Font\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
-  fontdiff = -family \"JetBrainsMono Nerd Font\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+  fontui     = -family \"FiraCode Nerd Font Mono\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family \"FiraCode Nerd Font Mono\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
   commitmsgwidth   = 80
   pruneduringfetch = true
   tabsize          = 2

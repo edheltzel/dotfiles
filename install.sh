@@ -1,88 +1,99 @@
 #!/bin/bash
 
-# include functions
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Include functions
 . scripts/functions.sh
 
-# Confirmation prompt
-warning "This will install & configure dotfiles on your system. It may overwrite existing files."
-read -p "Are you sure you want to proceed? (y/n) " confirm
-if [[ $confirm != "y" ]]; then
-  echo -e "${RED} Installation aborded."
-  exit 0
+# Function to keep sudo alive
+sudo_keep_alive() {
+  while true; do sudo -n true; sleep 60; done
+}
+
+# Function to check for required commands
+check_required_commands() {
+  local required_commands=("curl" "git" "stow")
+  for cmd in "${required_commands[@]}"; do
+    if ! command -v "$cmd" &>/dev/null; then
+      echo "Error: $cmd is not installed." >&2
+      exit 1
+    fi
+  done
+}
+
+PROJECTS_DIR="$HOME/Developer"
+
+# Start the bootstrap process referencing functions.sh
+install_xcode
+install_git
+
+# Create the ~/Developer directory if it does not exist
+if [ ! -d "$PROJECTS_DIR" ]; then
+    mkdir -p "$PROJECTS_DIR"
 fi
 
-# Check for sudo password and keep alive
-if sudo --validate; then
-  while true; do
-    sudo --non-interactive true
-    sleep 60
-    kill -0 "$$" || exit
-  done 2>/dev/null &
-  substep_info "Sudo password saved. Continuing with script."
-else
-  substep_error "Incorrect sudo password. Exiting script."
-  exit 1
-fi
+# Main installation process
+mainInstall() {
+  check_required_commands
 
-# Check for Xcode installation
-if
-  ! xcode-select --print-path &
-  >/dev/null
-then
-  substep_info "Xcode not found. Installing Xcode..."
-  xcode-select --install &
-  >/dev/null
-  # Wait for Xcode installation
-  until
-    xcode-select --print-path &
-    >/dev/null
-  do sleep 5; done
-  success "Xcode installation complete."
-else
-  substep_success "Xcode already installed. Skipping installation."
-fi
+  # Confirmation prompt
+  warning "This will install & configure dotfiles on your system. It may overwrite existing files."
+  read -p "Are you sure you want to proceed? (y/n) " confirm
+  if [[ "$confirm" != "y" ]]; then
+    echo -e "${RED}Installation aborted."
+    exit 0
+  fi
 
-# Check for Homebrew installation
-if ! $(which brew); then
-  substep_info "Homebrew not found. Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  if ! $(which brew); then
-    substep_error "Error installing Homebrew. Exiting script."
+  # Check for sudo password and keep alive
+  if sudo --validate; then
+    sudo_keep_alive &
+    SUDO_PID=$!
+    trap 'kill "$SUDO_PID"' EXIT
+    substep_info "Sudo password saved. Continuing with script."
+  else
+    substep_error "Incorrect sudo password. Exiting script."
     exit 1
   fi
-  success "Homebrew installation complete."
-else
-  substep_success "Homebrew already installed. Skipping installation."
-fi
 
-# Display banner and prompt user to continue
-banner
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-  # Run setup scripts in order
-  source ./packages/setup.sh
-  source ./fish/setup.sh
-  source ./git/setup.sh
-  source ./nvim/setup.sh
-  source ./duti/setup.sh
-  source ./macos/setup.sh
+  # check/install xcode and homebrew
+  install_xcode
+  install_homebrew
 
-  # Check if Fish is installed and set it as the default shell if desired
-  if
-    command -v fish &
-    >/dev/null
-  then
-    if ! grep -q "$(which fish)" /etc/shells; then
-      substep_info "Adding Fish to available shells..."
-      sudo sh -c "echo $(which fish) >> /etc/shells"
+  # Display banner and prompt user to continue
+  banner
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    # Run setup scripts in order
+    source ./packages/packages.sh
+
+    # Consolidated stow commands
+    declare -a stow_dirs=("dots" "git" "fish" "nvim" "config" "local" "warp" "vscode")
+    for dir in "${stow_dirs[@]}"; do
+      stow "$dir"
+    done
+
+    source ./duti/duti.sh
+    source ./macos/macos.sh
+    source ./git/git.sh
+
+    # Check if Fish is installed and set it as the default shell if desired
+    if command -v fish &>/dev/null; then
+      if ! grep -q "$(command -v fish)" /etc/shells; then
+        substep_info "Adding Fish to available shells..."
+        sudo sh -c "echo $(command -v fish) >> /etc/shells"
+      fi
+      read -p "Do you want to set Fish as your default shell? (y/N): " -n 1 -r
+      echo    # Move to a new line
+      if [[ $REPLY =~ ^[Yy]$ ]]; then
+        chsh -s "$(command -v fish)"
+      fi
     fi
-    read -p "$(echo -e '${YELLOW}Do you want to set Fish as your default shell? (y/n): ${NC}')" -n 1 -r
-    echo -e ""
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-      chsh -s $(which fish)
-    fi
+
+    success "Dotfile setup complete."
+  else
+    error "Aborted."
   fi
+}
 
-  success "Dotfile setup complete."
-else
-  error "Aborted."
-fi
+# Run the main function
+mainInstall
