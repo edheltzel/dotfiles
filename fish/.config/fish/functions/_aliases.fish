@@ -133,7 +133,7 @@ end
 # Git and Repositiory shortcuts
 
 # Github PR checkout with search and preview
-function ghpr
+function ghprcheck
   set_color red
   if test (command -v git); and git rev-parse --is-inside-work-tree >/dev/null 2>&1
     GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh issue view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout
