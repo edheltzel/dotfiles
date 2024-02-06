@@ -1,10 +1,20 @@
-<img src="misc/__images/dotfiles-logo.png" alt="dotfiles logo" width="350">
+<img src="local/.local/__images/dotfiles-logo.png" alt="dotfiles logo" width="350">
 
 ### My personal configuration (.dotfiles) for  macOS using 🐠 Fish shell.
 
-This is my personal configuration (.dotfiles) for macOS that involves web development and devops which are deployed using [GNU Stow][STOW]. There are also files for provisioning a new machine and setting up my environment – they are highly personalized and built over time, so what works for me probably won't work for you. But take inspiration all you want and make it your own. _**So proceed with caution, and use at your own risk**_.
+This is my personal configuration (.dotfiles) for macOS that involves web development and devops which are deployed using [GNU Stow][STOW]. There are also files for provisioning a new machine and setting up my environment. Zach Holman wrote a nice post about how [dotfiles](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) should be forked, I agree with this to a point, but I'm more of a fan of take what you like and leave the rest. Because dotfiles are highly personalized and built over time, so what works for me probably won't work for you. But take inspiration all you want and make it your own. _**So proceed with caution, and use at your own risk**_.
 
 ## Get Started
+
+<details>
+  <summary><strong>Single Line Install</strong></summary>
+  I have not tested this on a fresh install, so this could break your setup. I'd suggest you read through the `bootstrap.sh` and `install.sh` scripts and the `Makefile` before running this command.
+
+  In theory this will clone the repository and install everything outlined below. Again, In theory.
+  ```shell
+  bash -c "`curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/master/remote-install.sh`"
+  ```
+</details>
 
 <details>
   <summary><strong>Caveats for non-Apple Silicon (Intel)</strong></summary>
@@ -36,12 +46,15 @@ This is my personal configuration (.dotfiles) for macOS that involves web develo
 
 Since we have a bad habit of forgetting things:
 
-1. Install Xcode Command Line Tools `sudo softwardupdate -i -a && xcode-select --install`
+1. Installing Xcode Command Line Tools `sudo softwardupdate -i -a && xcode-select --install`
     - This will install `git` and `make` if not already installed.
-2. Setup SSH keys for GitHub
+2. Generate a new SSH key for GitHub
     - [Generate a new ssh keys][GENSSHKEY] or restore existing key if needed.
-2. Clone this repository to `~/.dotfiles`
-3. Run the `bootstrap.sh` script or `make install` command
+2. Clone this repository `git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
+3. Use the [`Makefile`](makefile) to install the dotfiles and packages
+    - `cd ~/.dotfiles`
+    - `make install`
+    - Alternatively, you can run the `bootstrap.sh` script `cd ~/.dotfiles && ./bootstrap.sh`
 
 ## What's Inside
 
@@ -224,9 +237,9 @@ Gotta thanks to [kalis.me blog post](https://kalis.me/dotfiles-automating-macos-
 
 ## 📝 TODOs
 
-- [ ] create a single line install script to execute bootstrap.sh
-- [ ] use makefile to execute bootstrap.sh and install.sh
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
+- [x] create a single line install script to execute bootstrap.sh
+- [x] use makefile to execute bootstrap.sh and install.sh
 - [x] update make unstow to include only the available stow package or all
 - [x] add customizations to lazyvim
 - [x] add vscode settings and symlink to dotfiles

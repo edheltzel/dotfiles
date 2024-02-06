@@ -15,7 +15,7 @@ help: ## Show this help message (default)
 		/^##/ { printf "$(YELLOW)%s$(CLR)\n", substr($$0, 4) }' $(MAKEFILE_LIST)
 
 .PHONY: install
-install: ## Provision a new system
+install: ## Bootsraps a new machine
     @echo "$(YELLOW)Running bootstrap to provision the system...$(CLR)"
     @./bootstrap.sh
     @echo "$(GREEN)System provisioning complete!$(CLR)"

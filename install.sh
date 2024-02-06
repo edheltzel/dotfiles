@@ -22,6 +22,17 @@ check_required_commands() {
   done
 }
 
+PROJECTS_DIR="$HOME/Developer"
+
+# Start the bootstrap process referencing functions.sh
+install_xcode
+install_git
+
+# Create the ~/Developer directory if it does not exist
+if [ ! -d "$PROJECTS_DIR" ]; then
+    mkdir -p "$PROJECTS_DIR"
+fi
+
 # Main installation process
 mainInstall() {
   check_required_commands
