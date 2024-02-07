@@ -1,35 +1,3 @@
-[user]
-  name  = Ed Heltzel
-  email = 402910+edheltzel@users.noreply.github.com
-
-[github]
-  user = edheltzel
-
-[credential]
-  helper = osxkeychain
-
-[color]
-  ui     = auto
-  branch = auto
-  diff   = auto
-  status = auto
-
-[color "branch"]
-  current = yellow reverse
-  local   = yellow
-  remote  = green
-
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old  = red bold
-  new  = green bold
-
-[color "status"]
-  added     = yellow
-  changed   = green
-  untracked = cyan
-
 [core]
   excludesfile = ~/.gitignore_global
   editor       = code-insiders --wait
@@ -38,7 +6,142 @@
   quotepath    = false
   safecrlf     = warn
   pager        = delta
+[include]
+	path = ~/.gitconfig.local
+[credential]
+  helper = osxkeychain
+[user]
+  name  = Ed Heltzel
+  email = 402910+edheltzel@users.noreply.github.com
+[github]
+  user = edheltzel
+[color]
+  ui     = auto
+  branch = auto
+  diff   = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local   = yellow
+  remote  = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old  = red bold
+  new  = green bold
+[color "status"]
+  added     = yellow
+  changed   = green
+  untracked = cyan
+[diff]
+  tool = vscode
+  colorMoved = default
+[difftool "vscode"]
+  cmd = code-insiders --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+  log  = true
+  conflictstyle = diff3
+[mergetool "vscode"]
+  cmd = code-insiders --wait $MERGED
+[apply]
+  whitespace = fix
+[interactive]
+  diffFilter = delta --color-only
+[alias]
+  aa  = add --all
+  cm  = commit -S -m
+  cma = !git add --all && git commit -S -m
+  co  = checkout
+  rv  = remote -v
+  ### interactive add
+  addi = "!f() { git add $(git ls-files -m | fzf -m); }; f"
+  #not signed uncomment if you dont want to sign commits
+  # cm  = commit -m
+  # cma = !git add --all && git commit -m
+  cb      = checkout -b
+  cob     = checkout -b
+  ct      = checkout -t
+  cr      = checkout --
+  unstage = reset HEAD
+  ### git submodule update --init --recursive
+  sm = "!f() { git submodule update --init --recursive $1; }; f"
+  b  = branch
+  ba = branch -a
+  bd = branch -d
+  bD = branch -D
+  bm = branch -m
+  d  = diff
+  dt = difftool
+  m  = merge
+  mt = mergetool
+  rr = remote rm
+  rb  = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rba = rebase --abort
+  rbs = rebase --skip
+  rf  = reflog
+  squash = "!f() { git rebase -i HEAD~$1; }; f"
+  unstage = reset HEAD
+  undo = reset --soft HEAD
+  delete = reset --hard HEAD~1
+  r   = reset
+  rhead = reset HEAD --hard
+  last = log -1 HEAD
+  t = tag -l
+  st   = stash
+  stl  = stash list
+  pop  = stash pop
+  drop = stash drop
+  sts  = "!f() { git stash show stash@{$1}; }; f"
+  c = commit
+  f   = fetch
+  prune = fetch --prune
+  p   = push
+  pl  = pull
+  rebase = pull --rebase
+  pr  = pull-request
+  psf = push --force
+  upm = !git fetch upstream && git merge upstream/master
+  s  = status -sb
+  ss = status
 
+  v  = log --oneline --decorate --all --graph --simplify-by-decoration
+  va = log --oneline --decorate --all --graph
+  logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
+  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+  wc  = whatchanged -p --abbrev-commit --pretty=medium
+  latest = show --name-only --oneline HEAD
+[filter "media"]
+  required = true
+  clean    = git media clean %f
+  smudge   = git media smudge %f
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[push]
+  default    = matching
+  followTags = true
+[pull]
+  rebase = false
+[init]
+  defaultBranch = master
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+# Plugins
+[gui]
+  fontui     = -family \"FiraCode Nerd Font Mono\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family \"FiraCode Nerd Font Mono\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+  commitmsgwidth   = 80
+  pruneduringfetch = true
+  tabsize          = 2
 [delta]
   features = side-by-side line-numbers decorations
   syntax-theme = TwoDark
@@ -54,160 +157,3 @@
   line-numbers-right-style = cyan
   line-numbers-minus-style = 124
   line-numbers-plus-style = 28
-
-[diff]
-  tool = vscode
-  colorMoved = default
-[difftool "vscode"]
-  # cmd = code --wait --diff $LOCAL $REMOTE
-  cmd = code-insiders --wait --diff $LOCAL $REMOTE
-[merge]
-  tool = vscode
-  log  = true
-  conflictstyle = diff3
-[mergetool "vscode"]
-  cmd = code-insiders --wait $MERGED
-  # cmd = code --wait $MERGED
-[apply]
-  whitespace = fix
-[interactive]
-  diffFilter = delta --color-only
-
-[alias]
-  #used the most by me
-  aa  = add --all
-  cm  = commit -S -m
-  cma = !git add --all && git commit -S -m
-  co  = checkout
-  rv  = remote -v
-  addi = "!f() { git add $(git ls-files -m | fzf -m); }; f"
-  #not signed
-  # cm  = commit -m
-  # cma = !git add --all && git commit -m
-
-  #checkouts
-  cb      = checkout -b
-  cob     = checkout -b
-  #checkout and track
-  ct      = checkout -t
-  cr      = checkout --
-  unstage = reset HEAD
-
-  #submodules
-  sm = "!f() { git submodule update --init --recursive $1; }; f"
-
-  #branch management
-  b  = branch
-  ba = branch -a
-  bd = branch -d
-  bD = branch -D
-  bm = branch -m
-
-  #diff and merge
-  d  = diff
-  dt = difftool
-  m  = merge
-  mt = mergetool
-
-  #rebases & squash
-  r  = rebase
-  rr = remote rm
-  rb  = rebase
-  rbi = rebase -i
-  rbc = rebase --continue
-  rba = rebase --abort
-  rbs = rebase --skip
-  rf  = reflog
-  sq = "!f() { git rebase -i HEAD~$1; }; f"
-  squash = "!f() { git rebase -i HEAD~$1; }; f"
-
-  #undo and reset commits
-  unstage = reset HEAD
-  undo = reset --soft HEAD
-  delete = reset --hard HEAD~1
-
-  #tags
-  t = tag -l
-
-  #stashes
-  st   = stash
-  stl  = stash list
-  stp  = stash pop
-  pop  = stash pop
-  sts  = "!f() { git stash show stash@{$1}; }; f"
-  std  = "!f() { git stash show stash@{$1} -U5; }; f"
-  strm = "!f() { git stash drop stash@{$1} -U5; }; f"
-
-  #commits
-  c = commit
-
-  #pushes & pulls
-  f   = fetch --prune
-  p   = push
-  ps  = push
-  pl  = pull
-  pur = pull --rebase
-  pr  = pull-request
-  psf = push --force
-  upm = !git fetch upstream && git merge upstream/master
-
-  #status & log
-  s  = status -sb
-  ss = status
-  v  = log --oneline --decorate --all --graph --simplify-by-decoration
-  va = log --oneline --decorate --all --graph
-  logs = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-
-  #show tracked branches
-  tracked = '!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d'
-
-  #`git di $number` shows the diff between the state `$number` revisions ago and the current state
-  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
-
-  #show changes
-  wc  = whatchanged -p --abbrev-commit --pretty = medium
-  r   = reset
-  rhh = reset HEAD --hard
-
-last = log -1 HEAD
-latest = show --name-only --oneline HEAD
-down = pull --rebase origin master
-up = push -u origin master
-uptags = push --follow-tags
-downtags = fetch --tags
-
-[push]
-  default    = matching
-  followTags = true
-
-[filter "media"]
-  required = true
-  clean    = git media clean %f
-  smudge   = git media smudge %f
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
-[help]
-
-[gui]
-  fontui     = -family \"FiraCode Nerd Font Mono\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
-  fontdiff = -family \"FiraCode Nerd Font Mono\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
-  commitmsgwidth   = 80
-  pruneduringfetch = true
-  tabsize          = 2
-[pull]
-  rebase = false
-[init]
-  defaultBranch = master
-[gpg]
-	format = ssh
-[commit]
-	gpgsign = true
-[tag]
-	gpgsign = true
-[include]
-	path = ~/.gitconfig.local
