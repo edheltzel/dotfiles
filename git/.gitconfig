@@ -98,6 +98,7 @@
   c = commit
   f   = fetch
   prune = fetch --prune
+  fuckit = !git reset --hard && git clean -df
   p   = push
   pl  = pull
   rebase = pull --rebase
