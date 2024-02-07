@@ -1,5 +1,5 @@
 # Defined in - @ line 0
-function upp --description 'Updates everything with Topgrade but also prints the default Node version, Update Resets Homebrew, Cleans Homebrew and Z'
+function upp --description 'upp =Update Packages w/Topgrade and does some cleanup'
 
     # Define variables for Node output
     set -l nodeIcon '󰎙 '
