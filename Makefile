@@ -20,7 +20,6 @@ install: ## Bootsraps a new machine
 	@./install.sh
 	@echo "$(GREEN)System provisioning complete!$(CLR)"
 
-
 .PHONY: run
 run: ## Symlink all dotfiles w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
@@ -54,16 +53,17 @@ unstow: ## Remove individual packages w/Stow
 	stow --delete ${pkg}
 	@echo "${pkg} was removed"
 
+
+.PHONY: update
+update:
+	@for pkg in $(STOW_PACKAGES); do \
+		stow --restow $$pkg; \
+	done
+	@echo "$(GREEN)Dotfiles updated successfully$(CLR)"
+
 .PHONY: delete
 delete: ## Delete all dotfiles w/Stow
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --delete $$pkg; \
 	done
 	@echo "$(WHITE)Dotfiles zapped! ⚡️"
-
-.PHONY: update
-update: ## Sync & clean dead symlinks w/Stow
-	@for pkg in $(STOW_PACKAGES); do \
-		stow --restow $$pkg; \
-	done
-	@echo "$(GREEN)Dotfiles updated successfully$(CLR)"

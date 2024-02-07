@@ -58,7 +58,6 @@ mainInstall() {
     source ./duti/duti.sh
     source ./macos/macos.sh
     source ./git/git.sh
-    source ./repos/repos.sh
 
     # Check if Fish is installed and set it as the default shell if desired
     if command -v fish &>/dev/null; then
