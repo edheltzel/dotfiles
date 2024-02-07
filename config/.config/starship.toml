@@ -2,7 +2,7 @@ format = '$all'
 right_format = """
 $git_metrics
 """
-command_timeout = 1000
+command_timeout = 2000
 
 [line_break]
 disabled = false
