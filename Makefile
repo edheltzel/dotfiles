@@ -59,7 +59,7 @@ update:
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --restow $$pkg; \
 	done
-	@echo "$(GREEN)Dotfiles updated successfully$(CLR)"
+	@echo "$(GREEN)Dotfiles updated successfully$(CLR) - run $(YELLOW)reload$(CLR) to apply changes to Fish"
 
 .PHONY: delete
 delete: ## Delete all dotfiles w/Stow
