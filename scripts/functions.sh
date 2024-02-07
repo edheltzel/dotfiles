@@ -10,7 +10,6 @@ WHITE='\033[0;37m'
 BLACK='\033[0;30m'
 NC='\033[0m'
 
-# Define banner function to display changes about to be made
 banner() {
     echo ""
     echo -e "${BLUE}*************************************************${NC}"
@@ -61,7 +60,6 @@ clear_broken_symlinks() {
     done
 }
 
-# Define a function for displaying an error message
 error() {
     local message="$1"
     echo -e "${RED}====================================================${NC}"
@@ -113,7 +111,10 @@ substep_error() {
     echo -e "${MAGENTA}====================================================${NC}"
 }
 
-# Function to install Xcode Command Line Tools
+sudo_keep_alive() {
+  while true; do sudo -n true; sleep 60; done
+}
+
 install_xcode() {
   if ! xcode-select --print-path &>/dev/null; then
     print_banner "Xcode Command Line Tools not found. Installing Xcode Command Line Tools..."
@@ -126,7 +127,6 @@ install_xcode() {
   fi
 }
 
-# Function to check for and install Git if necessary
 install_git() {
   if ! command -v git &>/dev/null; then
     print_banner "Git not found. Installing Git..."
@@ -142,7 +142,6 @@ install_git() {
   fi
 }
 
-# Function to install Homebrew
 install_homebrew() {
   if ! command -v brew &>/dev/null; then
     substep_info "Homebrew not found. Installing Homebrew..."
@@ -155,4 +154,15 @@ install_homebrew() {
   else
     substep_success "Homebrew already installed. Skipping installation."
   fi
+}
+
+# Function to check for required commands
+check_required_commands() {
+  local required_commands=("curl" "git" "stow")
+  for cmd in "${required_commands[@]}"; do
+    if ! command -v "$cmd" &>/dev/null; then
+      echo "Error: $cmd is not installed." >&2
+      exit 1
+    fi
+  done
 }

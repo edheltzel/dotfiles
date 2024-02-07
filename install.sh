@@ -1,30 +1,13 @@
 #!/bin/bash
 
+PROJECTS_DIR="$HOME/Developer"
+
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
 # Include functions
 . scripts/functions.sh
 
-# Function to keep sudo alive
-sudo_keep_alive() {
-  while true; do sudo -n true; sleep 60; done
-}
-
-# Function to check for required commands
-check_required_commands() {
-  local required_commands=("curl" "git" "stow")
-  for cmd in "${required_commands[@]}"; do
-    if ! command -v "$cmd" &>/dev/null; then
-      echo "Error: $cmd is not installed." >&2
-      exit 1
-    fi
-  done
-}
-
-PROJECTS_DIR="$HOME/Developer"
-
-# Start the bootstrap process referencing functions.sh
 install_xcode
 install_git
 
@@ -35,6 +18,7 @@ fi
 
 # Main installation process
 mainInstall() {
+  # check for required commands
   check_required_commands
 
   # Confirmation prompt
@@ -56,8 +40,7 @@ mainInstall() {
     exit 1
   fi
 
-  # check/install xcode and homebrew
-  install_xcode
+  # Install Homebrew
   install_homebrew
 
   # Display banner and prompt user to continue
@@ -66,7 +49,7 @@ mainInstall() {
     # Run setup scripts in order
     source ./packages/packages.sh
 
-    # Consolidated stow commands
+    # Install Stow packages
     declare -a stow_dirs=("dots" "git" "fish" "nvim" "config" "local" "warp" "vscode")
     for dir in "${stow_dirs[@]}"; do
       stow "$dir"
@@ -75,6 +58,7 @@ mainInstall() {
     source ./duti/duti.sh
     source ./macos/macos.sh
     source ./git/git.sh
+    source ./repos/repos.sh
 
     # Check if Fish is installed and set it as the default shell if desired
     if command -v fish &>/dev/null; then
