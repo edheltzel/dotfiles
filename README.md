@@ -1,8 +1,12 @@
 <img src="local/.local/__images/dotfiles-logo.png" alt="dotfiles logo" width="350">
 
-### My setup for 🐠 Fish shell on  macOS
+### My setup for 🐠 Fish shell on  macOS - V3
 
 Here you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find, files for provisioning a new machine and setting up my environment. Again, this is my personal setup and **changes often**, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first. But get inspired, take what you want and leave the rest to make it your own.
+
+If you're looking for previous versions of my dotfiles, you can find them in the branches of this repository.
+- [v1](https://github.com/edheltzel/dotfiles/tree/v1)
+- [v2](https://github.com/edheltzel/dotfiles/tree/v2)
 
 ## Prerequisites
 
