@@ -2,7 +2,7 @@
 
 # Define the source and target locations
 SOURCE="https://github.com/edheltzel/dotfiles"
-TARBALL="$SOURCE/tarball/main"
+TARBALL="$SOURCE/tarball/master"
 TARGET="$HOME/.dotfiles"
 TAR_CMD="tar -xzv -C \"$TARGET\" --strip-components=1 --exclude='{.gitignore}'"
 
