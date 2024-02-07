@@ -1,6 +1,6 @@
 <img src="local/.local/__images/dotfiles-logo.png" alt="dotfiles logo" width="350">
 
-### My setup for 🐠 Fish shell on  macOS - V3
+### My setup for 🐠 Fish shell on  macOS - v3
 
 Here you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find, files for provisioning a new machine and setting up my environment. Again, this is my personal setup and **changes often**, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first. But get inspired, take what you want and leave the rest to make it your own.
 
