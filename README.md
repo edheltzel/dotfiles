@@ -134,10 +134,6 @@ Any of the scripts can be run individually at any time to update/reset as needed
 - `duti.sh` - Sets the default applications for file types
     - run `./duti/duti.sh` to reset the default applications for file types
 
-### misc (misc/)
-
-There isn't anything of substance in the `misc/` directory, it's just a place to store files that don't fit anywhere else and I like to keep handy.
-
 ### Helper Scripts (scripts/)
 
 - `functions.sh` - Contains helper functions for symlinked files and printing progress messages
