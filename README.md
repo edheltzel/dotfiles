@@ -2,11 +2,15 @@
 
 ### My setup for 🐠 Fish shell on  macOS - `v3`
 
-Here you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find, files for provisioning a new machine and setting up my environment. Again, this is my personal setup and **changes often**, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first. But get inspired, take what you want and leave the rest to make it your own.
+Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment. Again, this is my personal setup and **changes often**, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first. But get inspired, take what you want, and leave the rest to make it your own.
 
-If you're looking for previous versions of my dotfiles, you can find them in the branches of this repository.
-- [v1](https://github.com/edheltzel/dotfiles/tree/v1)
-- [v2](https://github.com/edheltzel/dotfiles/tree/v2)
+<details>
+  <summary>Older Versions</summary>
+  
+  - [v1](https://github.com/edheltzel/dotfiles/tree/v1)
+  - [v2](https://github.com/edheltzel/dotfiles/tree/v2)
+</details>
+
 
 ## Prerequisites
 
@@ -15,7 +19,7 @@ If you're looking for previous versions of my dotfiles, you can find them in the
 
   I have not tested this on a fresh install, so this could break your setup. I'd suggest you read through the `bootstrap.sh` and `install.sh` scripts and the `Makefile` before running this command.
 
-  In theory this will clone the repository and install everything outlined below. Again, In theory.
+  In theory, this will clone the repository and install everything outlined below. Again, In theory.
   ```shell
   bash -c "`curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/master/bootstrap.sh`"
   ```
@@ -76,9 +80,9 @@ Since we have a bad habit of forgetting things:
 
 ## The Nitty Gritty
 
-Originally I used a series of custom scripts to create symlinks, it worked; but I've since switched to using [GNU Stow][STOW]. This is way easier to manage.
+Originally, I used a series of custom scripts to create symlinks, and it worked, but I've since switched to using [GNU Stow][STOW]. This is way easier to manage.
 
-So with the addition of GNU Stow, I added a `makefile` – I treat this like NPM scripts. You need to be in the root of `~/.dotfiles` to execute any of the `make` tasks.
+So, with the addition of GNU Stow, I added a `makefile` – I treat this like NPM scripts. You need to be in the root of `~/.dotfiles` to execute any of the `make` tasks.
 
 The following are available:
 
@@ -117,7 +121,7 @@ There are two options for managing packages with GNU Stow:
 - config (config/)
   - Configuration files for various applications
 - local (local/)
-  - User specific data not configuration related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
+  - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
 - warp (warp/)
   - I like Warp but I really like iTerm2
 - vscode (vscode/)
@@ -144,7 +148,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
 ## Troubleshooting
 <details>
   <summary>Fish: Fisher Plugin Manager</summary>
-  In the past, Fisher (fish plugin manager) will do something weird or will introduce a breaking change - just reinstall Fisher.
+  In the past, Fisher (fish plugin manager) would do something weird or introduce a breaking change - just reinstall Fisher.
 
   ```bash
   curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
@@ -207,7 +211,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
     [gpg "ssh"]
       allowedSignersFile = PATH_TO_YOUR_ALLOWED_SIGNERS_FILE
   ```
-  If you choose to use this make sure you look at that `./git/git.sh`, this script is where the provisioning of `.gitconfig.local` happens.
+  If you choose to use this, make sure you look at that `./git/git.sh`; this script is where the provisioning of `.gitconfig.local` happens.
 <details>
   <summary>GPG Commit Signing - <em>optional</em></summary>
 
@@ -235,12 +239,12 @@ Any of the scripts can be run individually at any time to update/reset as needed
 
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
 - [ ] Consider using [NixOS](https://nixos.org/) for package management over Homebrew
-- [x] create a single line install script to execute bootstrap.sh
+- [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
 - [x] update make unstow to include only the available stow package or all
 - [x] add customizations to lazyvim
-- [x] add vscode settings and symlink to dotfiles
-- [x] add XDG Base Directory support
+- [x] Add vscode settings and symlink to dotfiles
+- [x] Add XDG Base Directory support
 - [x] update README
   - [x] include XDG info
   - [x] include Stow info
