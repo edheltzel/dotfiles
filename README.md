@@ -6,7 +6,7 @@ Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS
 
 <details>
   <summary>Older Versions</summary>
-  
+
   - [v1](https://github.com/edheltzel/dotfiles/tree/v1)
   - [v2](https://github.com/edheltzel/dotfiles/tree/v2)
 </details>
@@ -104,7 +104,7 @@ update        Sync & clean dead symlinks w/Stow
 
 There are two options for managing packages with GNU Stow:
 
-1. Just use Stow: `stow nvim` or `stow -D nvim` _(unstow)_
+1. Just use Stow: `stow nvim` / `stow --restow nvim` or `stow -D nvim` _(unstow)_
 2. Use the Makefile: `make stow pkg=nvim` or `make unstow pkg=nvim`
     - The `pkg=` variable must be specified.
 
@@ -124,8 +124,8 @@ There are two options for managing packages with GNU Stow:
   - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
 - warp (warp/)
   - I like Warp but I really like iTerm2
-- vscode (vscode/)
-  - I use the [ sync settings ][vscodeSyncSettings] feature in vscode to keep my settings and extensions in sync across platforms. The `settings.json` and `keybindings.json` are symlinked out of habit.
+- ~~vscode (vscode/)~~
+  - I use the [sync settings](vscodeSyncSettings) feature in vscode to keep my settings and extensions in sync across platforms. **So this is left here for reference.**
 
 ## Scripts
 
