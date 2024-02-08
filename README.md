@@ -73,6 +73,7 @@ Since we have a bad habit of forgetting things:
     - This will install `git` and `make` if not already installed.
 2. Generate a new SSH key for GitHub
     - [Generate a new ssh keys][GENSSHKEY] or restore existing key if needed.
+    - `eval "$(ssh-agent -s)"` and `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 3. Clone this repository `git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
 4. Use the [`Makefile`](makefile) for the rest of the setup – `cd ~/.dotfiles && make install`
     - Alternatively, you can run the `install.sh` script `cd ~/.dotfiles && ./install.sh`
