@@ -22,7 +22,7 @@ cask_args appdir: '/Applications', require_sha: true
 tap 'buo/cask-upgrade' # Upgrade casks
 tap 'clementtsang/bottom' # Resource monitor (better top) - Rust
 tap 'dart-lang/dart' # Dart SDK
-tap 'eddieantonio/eddieantonio'
+tap 'eddieantonio/eddieantonio' #
 tap 'github/gh' # Interact with GitHub PRs, issues, repos
 tap 'homebrew/cask-drivers' # for drivers
 tap 'homebrew/cask-fonts' # for fonts
@@ -41,32 +41,30 @@ brew 'starship'    # Cross-shell prompt - Rust
 # CLI Essentials
 brew 'git'          # Version controll
 brew 'neovim'       # Text editor
-# brew 'chezmoi'      # Dotfile manager - Go
 brew 'stow'         # Dotfile manager
 brew 'topgrade'     # Upgrade all the things - Rust
 brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 
 # CLI Basics
 brew 'ack'          # Search tool like grep, but faster
-brew 'aria2'        # Resuming download util (better wget)
+# brew 'aria2'        # Resuming download util (better wget)
 brew 'bat'          # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
-brew 'cmake'        # Build system
+# brew 'cmake'        # Build system
 brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
-brew 'ctags'        # Tag generator for programming languages
-brew 'duf'          # Get info on mounted disks (better df) - Go
+# brew 'ctags'        # Tag generator for programming languages
 brew 'duti'         # Set default apps for file types
-brew 'entr'         # Run command whenever file changes
+# brew 'entr'         # Run command whenever file changes
 brew 'eza'          # Listing files with info (better ls) replaces exa - Rust
-brew 'exiftool'     # Read, write and modify exif data
+# brew 'exiftool'     # Read, write and modify exif data
 brew 'fd'           # Find files - Rust
 brew 'fzf'          # Fuzzy file finder and filtering - Go
 brew 'git-gui'      # Git GUI
 brew 'grc'          # Colorize terminal output
-brew 'hyperfine'    # Benchmarking for arbitrary commands
-brew 'jdupes'       # Duplicate file finder
+# brew 'hyperfine'    # Benchmarking for arbitrary commands
+# brew 'jdupes'       # Duplicate file finder
 brew 'jq'           # JSON parser, output and query files
-brew 'just'         # Powerful command runner (make alterative) - Rust
+# brew 'just'         # Powerful command runner (make alterative) - Rust
 brew 'mas'          # Mac App Store CLI
 brew 'most'         # Multi-window scroll pager (better less)
 brew 'procs'        # Advanced process viewer (better ps) - Rust
@@ -74,7 +72,7 @@ brew 'ripgrep'      # Searching within files (better grep) - Rust
 brew 'rsync'        # Fast incremental file transfer
 brew 'sd'           # RegEx find and replace (better sed) - Rust
 brew 'trash-cli'    # Recover and restore removed files
-brew 'watchexec'    # Run command whenever file changes - Rust
+# brew 'watchexec'    # Run command whenever file changes - Rust
 brew 'zoxide'       # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
 # CLI Image Processing and Compression
@@ -90,10 +88,10 @@ brew 'pango' # Text layout and rendering
 brew 'bmon'         # Bandwidth utilization monitor
 brew 'bottom'       # Resource monitor (better top) - Rust
 brew 'ctop'         # Docker Container metrics and monitoring - Go
-brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
+brew 'duf'          # Get info on mounted disks (better df) - Go
 brew 'glances'      # Resource monitor + web and API
-brew 'goaccess'     # Web log analyzer and viewer
-brew 'gping'        # Interactive ping tool, with graph
+# brew 'goaccess'     # Web log analyzer and viewer
+# brew 'gping'        # Interactive ping tool, with graph
 
 # CLI Productivity Apps
 brew 'rclone'       # Manage cloud storage
@@ -107,11 +105,11 @@ brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
 brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 
 # CLI Misc
-brew 'chafa'        # Image to ASCII art
+# brew 'chafa'        # Image to ASCII art
 brew 'figlet'       # Output text as big ASCII art text
 brew 'neofetch'     # Show system data and ditstro info
-brew 'pv'           # Pipe viewer, with animation options
-brew 'glow'         # Terminal markdown reader - Go
+# brew 'pv'           # Pipe viewer, with animation options
+# brew 'glow'         # Terminal markdown reader - Go
 
 #############################################################
 # 2. Software Development                                   #
@@ -121,7 +119,6 @@ brew 'glow'         # Terminal markdown reader - Go
 cask 'dbeaver-community'            # Database management
 cask 'dbngin'                       # Local MySQL database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
-cask 'sourcetree'                   # Git visual client
 cask 'iterm2'                       # Better terminalemulator
 cask 'warp'                         # A "modern" terminalemulator - Rust
 cask 'sequel-ace'                   # MySQL database management
@@ -169,10 +166,10 @@ brew 's3cmd'              # S3 command line tool
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
 brew 'git-delta'          # Git diff viewer - Rust
-brew 'git-secret'         # Encrypt files in git repos
 brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-flow-avh'       # Git extensions to provide high-level repository operations
 brew 'git-lfs'            # Git Large File Storage
+brew 'git-gui'            # Git GUI
 brew 'lighttpd'           # Lightweight web server
 brew 'miniserve'          # Static file server
 brew 'mkcert'             # Local HTTPS development
@@ -229,7 +226,7 @@ cask 'dropbox'        # Cloud storage
 cask 'ledger-live'    # Crypto hardware wallet manager
 cask 'notion'         # Workspace app
 cask 'todoist'        # Task manager
-
+cask 'obsidian'       # Note taking app
 # Utility Applications
 brew 'displaylink'    # Multi-monitor support - for use with Dock
 cask 'namechanger'    # Rename files in bulk
@@ -278,10 +275,10 @@ mas 'ColorSlurp', id: 1287239339
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
-mas 'Keynote', id: 409183694
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
-mas 'Gifski', id: 1351639930
+# mas 'Keynote', id: 409183694
+# mas 'Numbers', id: 409203825
+# mas 'Pages', id: 409201541
+# mas 'Gifski', id: 1351639930
 mas 'Qi FM', id: 147969619
 mas 'ColorNoise', id: 1640045375
 #mas 'Xcode', id: 497799835
