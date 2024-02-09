@@ -65,7 +65,7 @@ Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS
   7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
 </details>
 
-## 👋 For future Ed:
+## **👋 For future Ed**:
 
 Since we have a bad habit of forgetting things:
 
@@ -78,6 +78,9 @@ Since we have a bad habit of forgetting things:
 4. Use the [`Makefile`](makefile) for the rest of the setup – `cd ~/.dotfiles && make install`
     - Alternatively, you can run the `install.sh` script `cd ~/.dotfiles && ./install.sh`
 5. After the setup is complete, run `upp` to execute topgrade and update everything.
+6. Optional steps for DX and nice to haves:
+    - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (in macos/security.sh)
+    - Make sure to run `fnm env --use-on-cd | source` to enable auto-switching of Node versions. (in fish)
 
 ## The Nitty Gritty
 
