@@ -8,6 +8,7 @@ if status is-interactive
     abbr --add cls '$DROPBOX/Clients'
     abbr --add co 'code-insiders '
     abbr --add con 'code-insiders -n .'
+    abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
     abbr --add coo 'code-insiders -r .'
