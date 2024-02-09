@@ -77,7 +77,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
 # Sending hangup command to socketfilterfw is required for changes to take effect
 sudo pkill -HUP socketfilterfw
 
-# Prevents quarantine from storing info about downloaded files as privacy risk
+# Disable gatekeeper - Security for Installing apps
 sudo spctl --master-disable
 
 ####################################
@@ -143,4 +143,3 @@ cupsctl --no-remote-admin
 
 # Disable Captive portal
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control.plist Active -bool false
-

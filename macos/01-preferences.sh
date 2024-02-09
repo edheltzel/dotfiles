@@ -6,9 +6,6 @@
 # Store Identities in the KeyChain
 sudo ssh-add --apple-use-keychain
 
-# Disable gatekeeper - Security for Installing apps
-sudo spctl --master-disable
-
 # Enable or Disable the sound effects on boot
 # %00 = enable %01 = disable
 sudo nvram StartupMute=%00
