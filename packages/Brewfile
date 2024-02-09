@@ -266,9 +266,9 @@ cask 'hiddenbar'          # Hide / show annoying menubar icons
 cask 'itsycal'            # Calendar in menubar
 cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
-cask 'aflred'             # Spotlight alternative with better search
 cask 'typinator'          # Text expander - macOS only
 cask 'keka'               # File archiver and extractor
+cask 'amethyst'           # Tiling window manager - Auto+Keyboard
 
 # Mac App Store Installs
 mas 'ColorSlurp', id: 1287239339
