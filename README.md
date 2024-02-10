@@ -1,4 +1,4 @@
-<img src="local/.local/__images/dotfiles-logo.png" alt="dotfiles logo" width="350">
+<img src="https://dotfiles.github.io/images/dotfiles-logo.png" alt="dotfiles logo" width="350">
 
 ### My setup for 🐠 Fish shell on  macOS - `v3`
 
@@ -7,8 +7,8 @@ Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS
 <details>
   <summary>Older Versions</summary>
 
-  - [v1](https://github.com/edheltzel/dotfiles/tree/v1)
-  - [v2](https://github.com/edheltzel/dotfiles/tree/v2)
+  - [v1](https://github.com/edheltzel/dotfiles/tree/v1) uses oh-my-zsh
+  - [v2](https://github.com/edheltzel/dotfiles/tree/v2) uses fish shell + custom scripts
 </details>
 
 
