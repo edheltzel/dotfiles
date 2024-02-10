@@ -1,4 +1,4 @@
-<img src="https://dotfiles.github.io/images/dotfiles-logo.png" alt="dotfiles logo" width="350">
+# Ed's Dotfiles
 
 ### My setup for 🐠 Fish shell on  macOS - `v3`
 
