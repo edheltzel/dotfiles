@@ -5,5 +5,6 @@ source ~/.config/fish/conf.d/exports.fish
 source ~/.config/fish/conf.d/paths.fish
 source ~/.config/fish/conf.d/abbr.fish
 
-# Prompt - Starship
+# Prompts - Starship & Oh My Posh
 starship init fish | source
+# oh-my-posh init fish --config ~/.config/default.omp.json | source
