@@ -4,16 +4,16 @@ alias ... 'cd ../..'
 alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 alias la 'eza -la --icons'
-function l
+function l --description 'list all files with directories first sorted by name'
     command eza -lagh --sort name --git --icons --group-directories-first $argv
 end
-function ll
+function ll --description 'list all files with directories first sorted by modified date'
     command eza -lagh --git --icons --group-directories-first --sort modified $argv
 end
-function tree
+function tree --description 'list all files in a tree view'
     command eza --tree --icons $argv
 end
-function cll
+function cll --description 'clear and list all files sorted by modified date'
     command clear; and eza -lah --icons --sort modified $argv
 end
 

@@ -1,4 +1,4 @@
-function cd --description 'Utility for expanding abbreviations'
+function cd --description 'list files in the current directory after changing to it'
     if count $argv >/dev/null
         # prevents recurse infinitely by using built-in cd
         builtin cd "$argv"; and eza -lagh --sort=modified--git --icons --group-directories-first
