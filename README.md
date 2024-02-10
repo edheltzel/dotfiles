@@ -69,14 +69,17 @@ Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS
 
 Since we have a bad habit of forgetting things:
 
-1. Installing Xcode Command Line Tools – `sudo softwardupdate -i -a && xcode-select --install`
-    - This will install `git` and `make` if not already installed.
-2. Generate a new SSH key for GitHub
-    - [Generate a new ssh keys][GENSSHKEY] or restore existing key if needed.
-    - `eval "$(ssh-agent -s)"` and `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
-3. Clone this repository `git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
-4. Use the [`Makefile`](makefile) for the rest of the setup – `cd ~/.dotfiles && make install`
-    - Alternatively, you can run the `install.sh` script `cd ~/.dotfiles && ./install.sh`
+1. Installing Xcode Command Line Tools
+    - `sudo softwardupdate -i -a && xcode-select --install` This will install `git` and `make` if not already installed.
+2. Generate a new SSH key and add to GitHub
+    - [Generate a new ssh keys][GENSSHKEY]
+    - `eval "$(ssh-agent -s)" && ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
+
+3. Clone repo
+    - `git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
+4. Use the [`Makefile`](makefile) for the rest of the setup
+    - `cd ~/.dotfiles && make install`
+    - Alternatively, run install script `cd ~/.dotfiles && ./install.sh`
 5. After the setup is complete, run `upp` to execute topgrade and update everything.
 6. Optional steps for DX and nice to haves:
     - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (in macos/security.sh)
@@ -128,8 +131,6 @@ There are two options for managing packages with GNU Stow:
   - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
 - warp (warp/)
   - I like Warp but I really like iTerm2
-- ~~vscode (vscode/)~~
-  - I use the [sync settings](vscodeSyncSettings) feature in vscode to keep my settings and extensions in sync across platforms. **So this is left here for reference.**
 
 ## Scripts
 
@@ -167,6 +168,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
 
   ```shell
   brew install fnm
+  fnm env --use-on-cd | source
   ```
 
   For Fish Completions run:
