@@ -2,7 +2,7 @@
 set -g fish_key_bindings fish_default_key_bindings
 
 # Source FNM
-fnm env --use-on-cd | source
+#fnm env --use-on-cd | source
 # Source GRC
 source /opt/homebrew/etc/grc.fish
 
