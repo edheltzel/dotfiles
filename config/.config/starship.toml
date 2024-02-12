@@ -12,6 +12,7 @@ symbol = " "
 
 # system info
 [shell]
+fish_indicator = ""
 unknown_indicator = "?"
 style = "bold fg:240"
 disabled = false
