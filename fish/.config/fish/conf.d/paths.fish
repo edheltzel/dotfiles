@@ -59,6 +59,9 @@ set -gx PATH "$PNPM_HOME" $PATH
 # Bun
 set -g fish_user_paths $HOME/.bun/bin $fish_user_paths
 
+# NodeJS - Source FNM
+fnm env --use-on-cd | source
+
 # FZF and FD helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"
 set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
