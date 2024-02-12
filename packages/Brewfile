@@ -220,16 +220,21 @@ brew 'pandoc'               # Universal file converter
 cask 'vlc'                  # Media player
 brew 'webp'                 # WebP image format
 
+# Communication and Chat
+cask 'discord'              # Chat app
+cask 'whatsapp'             # Chat app
+# cask 'slack'                # Chat app
+
 # Personal Applications
 cask 'authy'                # 2FA app
 cask 'bitwarden'            # Password manager
 cask 'cyberduck'            # Mount remote storage locations
-cask 'discord'              # Chat app
 cask 'dropbox'              # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'notion'               # Workspace app
 cask 'todoist'              # Task manager
 cask 'obsidian'             # Note taking app
+
 # Utility Applications
 brew 'displaylink'          # Multi-monitor support - for use with Dock
 cask 'namechanger'          # Rename files in bulk
@@ -238,6 +243,7 @@ cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://u
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in
+cask 'brave-browser'             # Brave browser
 cask 'firefox-developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
 cask 'safari-technology-preview' # Safari tech preview
