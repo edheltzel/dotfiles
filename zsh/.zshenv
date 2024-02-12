@@ -29,3 +29,5 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#3f4964"
