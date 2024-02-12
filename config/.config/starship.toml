@@ -11,6 +11,10 @@ disabled = false
 symbol = " "
 
 # system info
+[shell]
+unknown_indicator = "?"
+style = "bold fg:240"
+disabled = false
 [battery]
 disabled = true
 [character]
