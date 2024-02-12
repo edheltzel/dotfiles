@@ -130,27 +130,27 @@ cask 'zed'                          # Text editor - Rust
 cask 'local'                        # Local WordPress development
 
 # Development Langs, Compilers, Package Managers and SDKs
-brew 'bun'                # All-in-one toolkit for JS/TS
-brew 'composer'           # PHP package manager
-brew 'dart'               # Dart SDK
-brew 'deno'               # Deno JavaScript/TypeScript runtime
-brew 'fnm'                # Switching Node versions
-brew 'go'                 # Compiler for Go Lang
-brew 'hugo'               # Static site generator - Go
-brew 'lua'                # Lua interpreter
-brew 'luarocks'           # Package manager for Lua
-brew 'mysql'             # MySQL database engine
-# brew 'node'           # Node.js -->  Use fnm See packages/
-brew 'php'                # PHP
-brew 'postgresql@14'      # PostgreSQL database engine
-brew 'python'             # Python 2
-brew 'python3'            # Python 3
-brew 'rbenv'              # Ruby version manager
-brew 'redis'              # Redis database engine
-brew 'ruby-build'         # Ruby build plugin for rbenv
-brew 'richgo'             # Go test output formatter/opt/homebrew/bin/fish
-brew 'rust'               # Rust language
-brew 'rustup-init'        # Rust version manager
+brew 'bun'                 # All-in-one toolkit for JS/TS
+brew 'composer'            # PHP package manager
+brew 'dart'                # Dart SDK
+brew 'deno'                # Deno JavaScript/TypeScript runtime
+brew 'fnm'                 # Switching Node versions
+brew 'go'                  # Compiler for Go Lang
+brew 'hugo'                # Static site generator - Go
+brew 'lua'                 # Lua interpreter
+brew 'luarocks'            # Package manager for Lua
+brew 'mysql'               # MySQL database engine
+# brew 'node'              # Node.js -->  Use fnm See packages/
+brew 'php'                 # PHP
+brew 'postgresql@14'       # PostgreSQL database engine
+brew 'python'              # Python 2
+brew 'python3'             # Python 3
+brew 'rbenv'               # Ruby version manager
+brew 'redis'               # Redis database engine
+brew 'ruby-build'          # Ruby build plugin for rbenv
+brew 'richgo'              # Go test output formatter/opt/homebrew/bin/fish
+brew 'rust'                # Rust language
+brew 'rustup-init'         # Rust version manager
 brew 'sass/sass/migrator'  # Sass mignration tool
 brew 'sass/sass/sass'      # Sass CSS preprocessor
 brew 'sqlite'              # SQLite database engine
@@ -183,13 +183,14 @@ brew 'wget'               # wget with IRI support
 brew 'zaquestion/tap/lab' # GitLab CLI
 
 # Network and Security Testing
-brew 'bettercap'      # Network, scanning and moniroting
-brew 'nmap'           # Port scanning
-brew 'dnsmasq'        # DNS server used with Larvel Valet in ~/Sites
-brew 'nginx'          # Web server used with Larvel Valet in ~/Sites
-brew 'dog'            # DNS lookup client (better dig) - Rust
+brew 'bettercap'          # Network, scanning and moniroting
+brew 'nmap'               # Port scanning
+brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
+brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
+brew 'dog'                # DNS lookup client (better dig) - Rust
 
 # Security Utilities
+brwe 'bitwarden-cli'     # Bitwarden CLI
 brew 'clamav'            # Open source virus scanning suite
 brew 'gnupg'             # GNU Privacy Guard
 brew 'lynis'             # Scan system for common security issues
@@ -210,30 +211,30 @@ cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
 
 # Media
-cask 'boom'                                  # Audio enhancer
-cask 'iina'                                  # Media player
-cask 'imageoptim'                            # Image compression
-cask 'kap'                                   # Screen recorder
-cask 'keycastr'                              # Display keystrokes
-brew 'pandoc'                                # Universal file converter
-cask 'vlc'                                   # Media player
-brew 'webp'                                  # WebP image format
+cask 'boom'                 # Audio enhancer
+cask 'iina'                 # Media player
+cask 'imageoptim'           # Image compression
+cask 'kap'                  # Screen recorder
+cask 'keycastr'             # Display keystrokes
+brew 'pandoc'               # Universal file converter
+cask 'vlc'                  # Media player
+brew 'webp'                 # WebP image format
 
 # Personal Applications
-cask 'authy'          # 2FA app
-cask 'bitwarden'      # Password manager
-cask 'cyberduck'      # Mount remote storage locations
-cask 'discord'        # Chat app
-cask 'dropbox'        # Cloud storage
-cask 'ledger-live'    # Crypto hardware wallet manager
-cask 'notion'         # Workspace app
-cask 'todoist'        # Task manager
-cask 'obsidian'       # Note taking app
+cask 'authy'                # 2FA app
+cask 'bitwarden'            # Password manager
+cask 'cyberduck'            # Mount remote storage locations
+cask 'discord'              # Chat app
+cask 'dropbox'              # Cloud storage
+cask 'ledger-live'          # Crypto hardware wallet manager
+cask 'notion'               # Workspace app
+cask 'todoist'              # Task manager
+cask 'obsidian'             # Note taking app
 # Utility Applications
-brew 'displaylink'    # Multi-monitor support - for use with Dock
-cask 'namechanger'    # Rename files in bulk
-cask 'onyx'           # System maintenance
-cask 'qmk-toolbox'    # Keyboard firmware flashing - paired with https://usevia.app/
+brew 'displaylink'          # Multi-monitor support - for use with Dock
+cask 'namechanger'          # Rename files in bulk
+cask 'onyx'                 # System maintenance
+cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://usevia.app/
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in
@@ -242,9 +243,9 @@ cask 'google-chrome'             # Chrome browser
 cask 'safari-technology-preview' # Safari tech preview
 
 # Fonts
-cask 'font-fira-code-nerd-font' # primary font
-cask 'font-sauce-code-pro-nerd-font' # secondary font
-cask 'font-inter'
+cask 'font-fira-code-nerd-font'       # Dev Font - Primary
+cask 'font-sauce-code-pro-nerd-font'  # Dev Font - Secondary
+cask 'font-inter' # UI font
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
