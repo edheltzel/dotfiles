@@ -1,4 +1,5 @@
 @antfu/ni
+@bitwarden/cli
 @githubnext/github-copilot-cli
 cspell
 easy-sharing
