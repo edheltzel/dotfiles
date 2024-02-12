@@ -1,6 +1,3 @@
-# homebrew
-export PATH=/opt/homebrew/bin:$PATH
-
 ##### Sourcing plugins extensions #####
 #######################################
 # auto suggest
@@ -10,6 +7,8 @@ export PATH=/opt/homebrew/bin:$PATH
 # source ~/.config/zsh/navigation/navigation.zsh
 # fish style abbreviations and Aliases
 # source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
-# source ~/.config/zsh/aliases/aliases.zsh
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/exports.zsh
+
 # startship prompt
 eval "$(starship init zsh)"
