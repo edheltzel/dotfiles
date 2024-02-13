@@ -1,8 +1,15 @@
 format = '$all'
 right_format = """
 $git_metrics
+$time
 """
 command_timeout = 2000
+
+[time]
+disabled = false
+use_12hr = true
+style = "bright-black"
+format = "\uf43a [$time]($style)"
 
 [line_break]
 disabled = false

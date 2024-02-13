@@ -1,11 +1,19 @@
-##### Sourcing plugins extensions #####
-#######################################
-# fzf and z
-# source ~/.config/zsh/navigation/navigation.zsh
-# fish style abbreviations and Aliases
-# source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
-source ~/.config/zsh/aliases.zsh
-source ~/.config/zsh/exports.zsh
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
-# startship prompt
-eval "$(starship init zsh)"
+##### plugins ######
+plug "zap-zsh/supercharge"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "hlissner/zsh-autopair"
+
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
+
+##### source ######
+source ~/.config/zsh/exports.zsh
+source ~/.config/zsh/aliases.zsh
+
+###### load custom fuctions ######
+for function_file in ~/.config/zsh/functions/*; do
+  source "$function_file"
+done
