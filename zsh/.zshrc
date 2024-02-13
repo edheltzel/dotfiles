@@ -2,8 +2,6 @@
 
 ##### plugins ######
 plug "zap-zsh/supercharge"
-plug "zsh-users/zsh-syntax-highlighting"
-plug "hlissner/zsh-autopair"
 
 # Load and initialise completion system
 autoload -Uz compinit
