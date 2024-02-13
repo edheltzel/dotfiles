@@ -1,12 +1,17 @@
 # ~/.zshenv
-# Environment variables
+# GlobalEnvironment variables
 
-# XDG
+# XDG ZSH
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_BIN_HOME="${HOME}/.local/bin"
 export XDG_LIB_HOME="${HOME}/.local/lib"
+
+# Add variables for key Zsh directories.
+export __zsh_config_dir=${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}
+export __zsh_user_data_dir=${XDG_DATA_HOME:-$HOME/.local/share}/zsh
+export __zsh_cache_dir=${XDG_CACHE_HOME:-$HOME/.cache}/zsh
 
 # Apps
 export BROWSER="brave"
