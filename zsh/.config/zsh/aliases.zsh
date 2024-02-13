@@ -1,8 +1,11 @@
 #!/bin/sh
 # Workflow aliases
 alias reload='exec $SHELL'
+alias sourcezsh='source ~/.zshrc'
 alias local='cd ~/.local && l'
 alias config='cd ~/.config && l'
+alias usebash='chsh -s $(which bash)'
+alias usefish='chsh -s $(which fish)'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -27,10 +30,10 @@ alias tree='eza --tree --icons $*'
 alias cll='clear && eza -lah --icons --sort modified'
 
 # Projects shortcuts/aliases and actions
-alias projects='cd ~/Developer'
-alias dev='cd ~/Developer'
-alias work='cd ~/Developer/work'
-alias dots='cd ~/.dotfiles'
+alias projects='cd ~/Developer && l'
+alias dev='cd ~/Developer && l'
+alias work='cd ~/Developer/work && l'
+alias dots='cd ~/.dotfiles && l'
 alias cust='cd ~/.dotfiles && eval $EDITOR .'
 alias o='open $*'
 alias oa='open -a /Applications/$*'
