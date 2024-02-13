@@ -12,7 +12,7 @@ style = "bright-black"
 format = "\uf43a [$time]($style)"
 
 [line_break]
-disabled = true
+disabled = false
 
 [fill]
 symbol = " "
