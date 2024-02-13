@@ -1,7 +1,8 @@
 #!/bin/sh
+# Workflow aliases
 alias reload='exec $SHELL'
-alias local='cd ~/.local'
-alias config='cd ~/.config'
+alias local='cd ~/.local && l'
+alias config='cd ~/.config && l'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
