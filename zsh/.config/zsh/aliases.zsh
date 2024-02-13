@@ -1,7 +1,6 @@
 #!/bin/sh
 # Workflow aliases
 alias reload='exec $SHELL'
-alias sourcezsh='source ~/.zshrc'
 alias local='cd ~/.local && l'
 alias config='cd ~/.config && l'
 alias usebash='chsh -s $(which bash)'
@@ -12,7 +11,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Confirm before overwriting something
+# Confirm before overwriting
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
@@ -42,6 +41,7 @@ alias sdel='sudo rm -rf $*'
 
 # Editors/Utitlities
 alias code='code-insiders'
+alias vim='nvim'
 alias top='btm'
 alias bottom='btm'
 alias serve='miniserve'
