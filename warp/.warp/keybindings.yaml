@@ -1,3 +1,4 @@
 ---
-"input:open_completion_suggestions": tab
 "workspace:close_active_tab": ctrl-cmd-=
+"editor_view:insert_autosuggestion": tab
+"input:open_completion_suggestions": ctrl-space
