@@ -41,6 +41,7 @@ brew 'starship'                             # Cross-shell prompt - Rust
 
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
+brew 'zsh-autopair'                        # Auto-pairing for zsh
 
 # CLI Essentials
 brew 'git'          # Version controll
