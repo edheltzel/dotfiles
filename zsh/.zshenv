@@ -1,5 +1,9 @@
 # ~/.zshenv
-setopt autocd
+setopt autocd            # Change to directory without cd
+setopt correctall        # Auto correct commands
+setopt extendedglob      # Enable extended globbing
+setopt hist_ignore_dups  # Ignore duplicate commands
+setopt hist_ignore_space # Ignore commands starting with space
 
 # XDG ZSH
 export XDG_CONFIG_HOME="${HOME}/.config"
