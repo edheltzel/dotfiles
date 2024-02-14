@@ -1,15 +1,19 @@
-format = '$all'
+format = "$all"
 right_format = """
 $git_metrics
 $time
 """
+## start overrides ##
 command_timeout = 2000
 
-[time]
-disabled = false
-use_12hr = true
-style = "bright-black"
-format = "\uf43a [$time]($style)"
+[battery]
+disabled = true
+## end overrides ##
+
+## start prompt character ##
+[character]
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 
 [line_break]
 disabled = false
@@ -23,26 +27,15 @@ fish_indicator = ""
 unknown_indicator = "?"
 style = "bold fg:240"
 disabled = false
-[battery]
-disabled = true
-[character]
-success_symbol = '[](bold green)'
-error_symbol = '[](bold red)'
-[cmd_duration]
-min_time = 1
-format = "[󰔛 $duration]($style)"
-style = "yellow"
+## end prompt character ##
+
 [directory]
 read_only = " "
 
 # git symbols & config
 [git_branch]
 symbol = " "
-[git_metrics]
-disabled = false
-added_style = "green"
-deleted_style = "red"
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
@@ -57,36 +50,62 @@ deleted = "[󱅁 ×${count} ](bright-red)"
 renamed = "[ ×${count} ](fg:214)"
 style = "white"
 
-# devops symbols & config
+[cmd_duration]
+min_time = 1
+format = "[󰔛 $duration]($style)"
+style = "yellow"
+
+
+## start right prompt ##
+[git_metrics]
+disabled = false
+added_style = "green"
+deleted_style = "red"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[time]
+disabled = false
+use_12hr = true
+style = "bright-black"
+format = "\uf43a [$time]($style)"
+## end right prompt ##
+
+## start custom symbols ##
+
 [aws]
 symbol = "  "
 format = "[$symbol($version )]($style)"
 
 [package]
 symbol = "󰏗 "
-format = "[$symbol($version )]($style)"
 
-# language symbols & config
 [deno]
 symbol = "󱍢 "
 format = "[$symbol($version )]($style)"
 style = "bright-black"
+
 [golang]
 format = "[$symbol($version )]($style)"
 symbol = " "
+
 [nodejs]
 format = "[$symbol($version )]($style)"
 symbol = "󰎙 "
 detect_extensions = []
+
 [php]
 format = "[$symbol($version )]($style)"
 symbol = " "
+
 [python]
 format = "[$symbol($version )]($style)"
 symbol = " "
+
 [ruby]
 format = "[$symbol($version )]($style)"
 symbol = "󰴭 "
+
 [rust]
 format = "[$symbol($version )]($style)"
 symbol = " "
+## end custom symbols ##
