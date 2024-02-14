@@ -1,31 +1,35 @@
 format = "$all"
 right_format = "$time"
-## start overrides ##
+
 command_timeout = 2000
 
 [battery]
 disabled = true
-## end overrides ##
 
-## start prompt character ##
+## start character ##
 [character]
 success_symbol = '[](bold green)'
 error_symbol = '[](bold red)'
 
-# system info
 [shell]
 fish_indicator = ""
 unknown_indicator = "?"
 style = "bold fg:240"
 disabled = false
-## end prompt character ##
+## end character ##
 
+## start prompt ##
 [directory]
 read_only = " "
 
-# git symbols & config
 [git_branch]
 symbol = " "
+
+[git_metrics]
+disabled = false
+added_style = "green"
+deleted_style = "red"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
@@ -45,20 +49,14 @@ style = "white"
 min_time = 1
 format = "[󰔛 $duration]($style)"
 style = "yellow"
-
+## end prompt ##
 
 ## start right prompt ##
-[git_metrics]
-disabled = false
-added_style = "green"
-deleted_style = "red"
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
-
 [time]
 disabled = false
 time_format = "%I:%M%P"
-style = "bright-black"
-format = "\uf43a [$time]($style)"
+style = "fg:black"
+format = "[\uf43a $time]($style)"
 ## end right prompt ##
 
 ## start custom symbols ##
