@@ -1,8 +1,6 @@
 #!/bin/sh
 # Workflow aliases
 alias reload='exec $SHELL'
-alias local='cd ~/.local && l'
-alias config='cd ~/.config && l'
 alias usebash='chsh -s $(which bash)'
 alias usefish='chsh -s $(which fish)'
 
@@ -29,6 +27,8 @@ alias tree='eza --tree --icons $*'
 alias cll='clear && eza -lah --icons --sort modified'
 
 # Projects shortcuts/aliases and actions
+alias local='cd ~/.local && l'
+alias config='cd ~/.config && l'
 alias projects='cd ~/Developer && l'
 alias dev='cd ~/Developer && l'
 alias work='cd ~/Developer/work && l'

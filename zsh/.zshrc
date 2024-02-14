@@ -1,14 +1,3 @@
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-
-##### plugins ######
-plug "zap-zsh/supercharge"
-plug "zsh-users/zsh-syntax-highlighting"
-plug "hlissner/zsh-autopair"
-
-# Load and initialise completion system
-autoload -Uz compinit
-compinit
-
 ##### source ######
 source ~/.config/zsh/exports.zsh
 source ~/.config/zsh/aliases.zsh

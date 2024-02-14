@@ -6,7 +6,7 @@
 
 function upp {
   # Run topgrade
-  topgrade
+  topgrade --only brew_cask brew_formula
 
   # Run brew cleanup
   printf '\n―― %s - Brew - Cleanup ―――――――――――――――――――――――――――――――――――――――――――――――――――\n' $(date "+%H:%M:%S")
