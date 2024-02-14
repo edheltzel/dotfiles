@@ -1,8 +1,5 @@
 format = "$all"
-right_format = """
-$git_metrics
-$time
-"""
+right_format = "$time"
 ## start overrides ##
 command_timeout = 2000
 
@@ -14,12 +11,6 @@ disabled = true
 [character]
 success_symbol = '[](bold green)'
 error_symbol = '[](bold red)'
-
-[line_break]
-disabled = false
-
-[fill]
-symbol = " "
 
 # system info
 [shell]
@@ -65,7 +56,7 @@ format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [time]
 disabled = false
-use_12hr = true
+time_format = "%I:%M%P"
 style = "bright-black"
 format = "\uf43a [$time]($style)"
 ## end right prompt ##
