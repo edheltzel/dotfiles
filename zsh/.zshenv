@@ -1,5 +1,5 @@
 # ~/.zshenv
-# GlobalEnvironment variables
+setopt autocd
 
 # XDG ZSH
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -20,9 +20,9 @@ export VOL="xxx"
 source "$HOME/.cargo/env"
 . "$HOME/.cargo/env"
 
-HISTSIZE=1000000
-SAVEHIST=1000000
 HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=100000
 
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.docker/bin":$PATH

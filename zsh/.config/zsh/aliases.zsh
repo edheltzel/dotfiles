@@ -14,6 +14,10 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
+alias mkd='mkdir && cd' #create a directory and move into it
+alias md='mkdir -p'     #create parent directories as needed
+alias rd='rmdir'        #remove empty directories
+
 # ls aliases
 alias ..='cd ..'
 alias ...='cd ../..'
