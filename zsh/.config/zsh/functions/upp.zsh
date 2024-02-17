@@ -14,5 +14,5 @@ function upp {
 
   # Prepare pnpm and update
   printf '\n―― %s - pnpm - Corepack  ―――――――――――――――――――――――――――――――――――――――――――――――――\n' $(date "+%H:%M:%S")
-  corepack prepare pnpm@latest --activate && pnpm update -g --latest
+  corepace enable && corepack prepare pnpm@latest --activate && pnpm update -g --latest
 }

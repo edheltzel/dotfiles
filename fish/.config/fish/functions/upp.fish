@@ -11,6 +11,7 @@ function upp --description 'upp =Update Packages w/Topgrade and does some cleanu
     # Prepare pnpm and yarn with Corepack
     printf '\n―― %s - pnpm - Corepack  ――――――――――――――――――――――――――――――――――――――――――――――――――――\n' (date "+%H:%M:%S")
     set_color normal
+    corepack enable
     corepack prepare pnpm@latest --activate
     pnpm update -g --latest
 end
