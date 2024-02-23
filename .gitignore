@@ -3,8 +3,9 @@
 ### Git ###
 #git/.gitconfig-local
 
-###  VIM ###
+### VIM ###
 NetrwTreeListing*
+lazy-lock.json
 
 ### Karabiner ###
 karabiner/automatic_backups/
