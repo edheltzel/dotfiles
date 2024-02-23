@@ -72,6 +72,9 @@ function listzip --description 'alias to list files files in a zip compression'
 end
 
 # Open and Remove/Del shortcuts
+function oo --description 'alias oo=open .'
+    open .
+end
 function o --description 'alias o=open'
     open $argv
 end
