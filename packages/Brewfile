@@ -37,7 +37,7 @@ tap 'teamookla/speedtest'   # Command line speed test utility
 #############################################################
 brew 'fish'                                 # Shell
 brew 'starship'                             # Cross-shell prompt - Rust
-brew 'nushell'                             # Shell - Rust
+# brew 'nushell'                             # Shell - Rust
 
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
@@ -227,13 +227,13 @@ brew 'webp'                 # WebP image format
 # Communication and Chat
 cask 'discord'              # Chat app
 cask 'whatsapp'             # Chat app
-# cask 'slack'                # Chat app
 
 # Personal Applications
 cask 'authy'                # 2FA app
 cask 'bitwarden'            # Password manager
 cask 'cyberduck'            # Mount remote storage locations
-cask 'dropbox'              # Cloud storage
+# cask 'dropbox'            # Cloud storage
+cask 'google-drive'         # Cloud storage 
 cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'todoist'              # Task manager
 cask 'obsidian'             # Note taking app
