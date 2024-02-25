@@ -26,6 +26,10 @@ skip_notify = true
 [pre_commands]
 # Commands to run after anything
 [post_commands]
+"Brew - Cleanup" = "brew cleanup --prune=all"
+"Node - Corepack Enable Pnpm" = "corepack enable && corepack prepare pnpm@latest --activate"
+"Node - Pnpm Self Update" = "pnpm update -g --latest"
+
 # Custom commands
 [commands]
 [python]
