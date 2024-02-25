@@ -24,9 +24,17 @@ alias work 'cd ~/Developer/work'
 alias dots 'cd ~/.dotfiles'
 alias cuts 'cd ~/.dotfiles; and eval $EDITOR .'
 
-# Language Support
+#### Language Support ####
 alias pn pnpm
 alias px 'pnpm dlx'
+
+# Laravel
+alias art 'php artisan'
+alias tinker 'php artisan tinker'
+alias mfs 'php artisan migrate:fresh --seed'
+alias phpunit vendor/bin/phpunit
+alias pest vendor/bin/pest
+alias vapor vendor/bin/vapor
 
 # Editors and Utilities
 alias code code-insiders
@@ -34,9 +42,7 @@ alias top btm
 alias bottom btm
 alias serve miniserve #start a simple http server
 alias du dua
-
-# function tldrf --description 'tldr search and preview with fzf'
-alias tldrf 'tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
+alias upp topgrade
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
@@ -89,10 +95,5 @@ function sdel --description 'alias sdel=sudo rm -rf'
     sudo rm -rf $argv
 end
 
-# Laravel
-alias art 'php artisan'
-alias tinker 'php artisan tinker'
-alias mfs 'php artisan migrate:fresh --seed'
-alias phpunit vendor/bin/phpunit
-alias pest vendor/bin/pest
-alias vapor vendor/bin/vapor
+# function tldrf --description 'tldr search and preview with fzf'
+alias tldrf 'tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'

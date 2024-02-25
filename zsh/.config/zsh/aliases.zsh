@@ -53,6 +53,7 @@ alias du='dua'
 alias zip='ouch compress $*'
 alias unzip='ouch decompress $*'
 alias listzip='ouch list $*'
+alias upp='topgrade'
 
 # Network shortcuts/alises
 alias whois='grc whois'
