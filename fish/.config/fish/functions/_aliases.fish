@@ -1,21 +1,30 @@
+# Workflow aliases
+alias usebash 'chsh -s $(which bash)'
+alias usezsh 'chsh -s $(which zsh)'
+
+# Colorize grep output (good for log files)
+alias grep 'grep --color=auto'
+alias egrep 'egrep --color=auto'
+alias fgrep 'fgrep --color=auto'
+
+# Confirm before overwriting
+alias cp 'cp -Ri'
+alias mv 'mv -i'
+alias rm 'rm -i'
+
+alias md 'mkdir -p'
+alias rd rmdir
+
 # Navigation
 alias .. 'cd ..'
 alias ... 'cd ../..'
 alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 alias la 'eza -la --icons'
-function l --description 'list all files with directories first sorted by name'
-    command eza -lagh --sort name --git --icons --group-directories-first $argv
-end
-function ll --description 'list all files with directories first sorted by modified date'
-    command eza -lagh --git --icons --group-directories-first --sort modified $argv
-end
-function tree --description 'list all files in a tree view'
-    command eza --tree --icons $argv
-end
-function cll --description 'clear and list all files sorted by modified date'
-    command clear; and eza -lah --icons --sort modified $argv
-end
+alias l 'eza -lagh --sort name --git --icons --group-directories-first'
+alias ll 'eza -lagh --git --icons --group-directories-first --sort modified'
+alias tree 'eza --tree --icons'
+alias cll 'clear; and eza -lah --icons --sort modified'
 
 # Project shortcuts/aliases
 alias projects 'cd ~/Developer'
@@ -23,6 +32,11 @@ alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias dots 'cd ~/.dotfiles'
 alias cuts 'cd ~/.dotfiles; and eval $EDITOR .'
+alias oo 'open .'
+alias o open
+alias oa 'open -a'
+alias del trash
+alias sdel 'sudo rm -rf'
 
 #### Language Support ####
 # Node - PNPM
@@ -49,11 +63,6 @@ alias zip 'ouch compress'
 alias unzip 'ouch decompress'
 alias listzip 'ouch list'
 alias lzip 'ouch list'
-alias oo 'open .'
-alias o open
-alias oa 'open -a'
-alias del trash
-alias sdel 'sudo rm -rf'
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
@@ -75,5 +84,3 @@ alias dc docker-compose
 
 # function tldrf --description 'tldr search and preview with fzf'
 alias tldrf 'tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
-
-alias cp 'cp -Ri'
