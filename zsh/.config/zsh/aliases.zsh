@@ -1,6 +1,6 @@
 #!/bin/sh
 # Workflow aliases
-alias reload='exec $SHELL'
+alias reload='exec zsh'
 alias usebash='chsh -s $(which bash)'
 alias usefish='chsh -s $(which fish)'
 
