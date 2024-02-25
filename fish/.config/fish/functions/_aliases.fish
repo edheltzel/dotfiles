@@ -25,10 +25,11 @@ alias dots 'cd ~/.dotfiles'
 alias cuts 'cd ~/.dotfiles; and eval $EDITOR .'
 
 #### Language Support ####
+# Node - PNPM
 alias pn pnpm
 alias px 'pnpm dlx'
 
-# Laravel
+# PHP - Laravel
 alias art 'php artisan'
 alias tinker 'php artisan tinker'
 alias mfs 'php artisan migrate:fresh --seed'
@@ -37,12 +38,21 @@ alias pest vendor/bin/pest
 alias vapor vendor/bin/vapor
 
 # Editors and Utilities
+alias upp topgrade
 alias code code-insiders
 alias top btm
 alias bottom btm
 alias serve miniserve #start a simple http server
 alias du dua
-alias upp topgrade
+alias zip 'ouch compress'
+alias unzip 'ouch decompress'
+alias listzip 'ouch list'
+alias lzip 'ouch list'
+alias oo 'open .'
+alias o open
+alias oa 'open -a'
+alias del trash
+alias sdel 'sudo rm -rf'
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
@@ -57,43 +67,10 @@ alias hostfile 'eval sudo $EDITOR /etc/hosts'
 alias editssh 'eval $EDITOR ~/.ssh'
 alias lssh 'grep -w -i Host ~/.ssh/config | sed s/Host//'
 
-
 # Docker/Kubernetes/Vagrant
-function dk --description 'docker alias'
-    command docker $argv
-end
-function dc --description 'docker-compose alias'
-    command docker-compose $argv
-end
-
-# Ouch - zip and unzip replacement
-function zip --description 'alias for zip using ouch instead of zip'
-    command ouch compress $argv
-end
-function unzip --description 'alias for unzip using ouch instead of unzip'
-    command ouch decompress $argv
-end
-function listzip --description 'alias to list files files in a zip compression'
-    command ouch list $argv
-end
-
-# Open and Remove/Del shortcuts
-function oo --description 'alias oo=open .'
-    open .
-end
-function o --description 'alias o=open'
-    open $argv
-end
-function oa --description 'Open App'
-    open -a /Applications/$argv
-end
-
-function del --description 'alias del=trash'
-    trash $argv
-end
-function sdel --description 'alias sdel=sudo rm -rf'
-    sudo rm -rf $argv
-end
+alias dkc docker-compose
+alias dk docker
+alias dc docker-compose
 
 # function tldrf --description 'tldr search and preview with fzf'
 alias tldrf 'tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
