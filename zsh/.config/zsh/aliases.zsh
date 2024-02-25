@@ -10,7 +10,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # Confirm before overwriting
-alias cp="cp -i"
+alias cp="cp -Ri"
 alias mv='mv -i'
 alias rm='rm -i'
 
