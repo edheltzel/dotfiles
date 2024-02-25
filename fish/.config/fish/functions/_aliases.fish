@@ -40,8 +40,9 @@ alias vapor vendor/bin/vapor
 # Editors and Utilities
 alias upp topgrade
 alias code code-insiders
-alias top btm
-alias bottom btm
+alias btm 'btm --battery --fahrenheit'
+alias top 'btm --battery --fahrenheit'
+alias bottom 'btm --battery --fahrenheit'
 alias serve miniserve #start a simple http server
 alias du dua
 alias zip 'ouch compress'
