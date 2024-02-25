@@ -38,19 +38,6 @@ alias oa 'open -a'
 alias del trash
 alias sdel 'sudo rm -rf'
 
-#### Language Support ####
-# Node - PNPM
-alias pn pnpm
-alias px 'pnpm dlx'
-
-# PHP - Laravel
-alias art 'php artisan'
-alias tinker 'php artisan tinker'
-alias mfs 'php artisan migrate:fresh --seed'
-alias phpunit vendor/bin/phpunit
-alias pest vendor/bin/pest
-alias vapor vendor/bin/vapor
-
 # Editors and Utilities
 alias upp topgrade
 alias code code-insiders
@@ -77,10 +64,22 @@ alias hostfile 'eval sudo $EDITOR /etc/hosts'
 alias editssh 'eval $EDITOR ~/.ssh'
 alias lssh 'grep -w -i Host ~/.ssh/config | sed s/Host//'
 
-# Docker/Kubernetes/Vagrant
-alias dkc docker-compose
+# Docker aliases
 alias dk docker
 alias dc docker-compose
 
 # function tldrf --description 'tldr search and preview with fzf'
 alias tldrf 'tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
+
+#### Language Support ####
+# Node - PNPM
+alias pn pnpm
+alias px 'pnpm dlx'
+
+# PHP - Laravel
+alias art 'php artisan'
+alias tinker 'php artisan tinker'
+alias mfs 'php artisan migrate:fresh --seed'
+alias phpunit vendor/bin/phpunit
+alias pest vendor/bin/pest
+alias vapor vendor/bin/vapor
