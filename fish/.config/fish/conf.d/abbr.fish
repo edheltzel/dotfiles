@@ -5,7 +5,7 @@ if status is-interactive
     abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
     abbr --add cl clear
-    abbr --add cls '$DROPBOX/Clients'
+    # abbr --add cls '$DROPBOX/Clients'
     abbr --add co 'code-insiders '
     abbr --add con 'code-insiders -n .'
     abbr --add cargos 'cargo install --list'
@@ -36,4 +36,5 @@ if status is-interactive
     abbr --add wrg wrangler
     abbr --add usezsh 'chsh -s $(which zsh)'
     abbr --add usebash 'chsh -s $(which bash)'
+    abbr --add upp topgrade
 end
