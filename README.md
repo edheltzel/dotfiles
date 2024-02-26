@@ -245,8 +245,9 @@ Any of the scripts can be run individually at any time to update/reset as needed
 
 ## TODOs
 
-- [ ] zsh completions doesn't seem to be working as expected
+- [ ] zsh completions doesn't seem to be working as expected [issue #40](https://github.com/edheltzel/dotfiles/issues/40)
   - [ ] Look into zsh-completions vs autocomplete
+- [ ] Convert fish functions to zsh functions
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
 - [ ] Consider using [NixOS](https://nixos.org/) for package management over Homebrew. ie: [good example](https://github.com/biosan/dotfiles)
 - [x] include zsh abbreviations
