@@ -17,7 +17,7 @@ export BROWSER="brave"
 export EDITOR="code-insiders"
 export PAGER="most"
 export TERMINAL="iterm"
-export DROPBOX="${HOME}/Library/CloudStorage/Dropbox-RDM"
+# export DROPBOX="${HOME}/Library/CloudStorage/Dropbox-RDM"
 export VOL="xxx"
 
 # Cargo
