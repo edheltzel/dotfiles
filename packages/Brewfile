@@ -42,6 +42,7 @@ brew 'starship'                             # Cross-shell prompt - Rust
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
 brew 'zsh-autopair'                        # Auto-pairing for zsh
+brew 'olets/tap/zsh-abbr'                 # Abbreviations for zsh
 
 # CLI Essentials
 brew 'git'          # Version controll
@@ -233,9 +234,9 @@ cask 'authy'                # 2FA app
 cask 'bitwarden'            # Password manager
 cask 'cyberduck'            # Mount remote storage locations
 # cask 'dropbox'            # Cloud storage
-cask 'google-drive'         # Cloud storage 
+# cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
-cask 'todoist'              # Task manager
+# cask 'todoist'              # Task manager
 cask 'obsidian'             # Note taking app
 
 # Utility Applications
@@ -249,7 +250,7 @@ cask 'choosy'                    # Choose which browser to open links in
 cask 'brave-browser'             # Brave browser
 cask 'firefox-developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
-cask 'safari-technology-preview' # Safari tech preview
+# cask 'safari-technology-preview' # Safari tech preview
 
 # Fonts
 cask 'font-fira-code-nerd-font'       # Dev Font - Primary

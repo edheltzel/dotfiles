@@ -17,4 +17,4 @@ and . (code --locate-shell-integration-path fish)
 
 # Volumes
 set -gx VOL xxx
-set -gx DROPBOX $HOME/Library/CloudStorage/Dropbox-RDM
+# set -gx DROPBOX $HOME/Library/CloudStorage/Dropbox-RDM

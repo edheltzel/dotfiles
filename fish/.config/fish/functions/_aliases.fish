@@ -39,7 +39,6 @@ alias del trash
 alias sdel 'sudo rm -rf'
 
 # Editors and Utilities
-alias upp topgrade
 alias code code-insiders
 alias btm 'btm --battery --fahrenheit'
 alias top 'btm --battery --fahrenheit'
