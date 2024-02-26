@@ -34,7 +34,7 @@ if status is-interactive
     abbr --add nmux 'tmux new -s "base"'
     abbr --add vim nvim
     abbr --add wrg wrangler
-    abbr --add usezsh 'chsh -s $(which zsh)'
     abbr --add usebash 'chsh -s $(which bash)'
+    abbr --add usezsh 'chsh -s $(which zsh)'
     abbr --add upp topgrade
 end

@@ -1,7 +1,3 @@
-# Workflow aliases
-alias usebash 'chsh -s $(which bash)'
-alias usezsh 'chsh -s $(which zsh)'
-
 # Colorize grep output (good for log files)
 alias grep 'grep --color=auto'
 alias egrep 'egrep --color=auto'
