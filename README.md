@@ -247,6 +247,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
 
 - [ ] Look into [Tuckr](https://github.com/RaphGL/Tuckr)
 - [ ] Consider using [NixOS](https://nixos.org/) for package management over Homebrew. ie: [good example](https://github.com/biosan/dotfiles)
+- [ ] include zsh abbreviations
 - [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
 - [x] update make unstow to include only the available stow package or all
