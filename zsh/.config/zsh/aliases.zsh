@@ -1,8 +1,6 @@
 #!/bin/sh
 # Workflow aliases
 alias reload='exec zsh'
-alias usebash='chsh -s $(which bash)'
-alias usefish='chsh -s $(which fish)'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
