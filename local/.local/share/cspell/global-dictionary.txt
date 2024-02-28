@@ -75,6 +75,7 @@ linkify
 lockb
 luxon
 MERN
+metafile
 moxer
 Nanotubes
 neovim
