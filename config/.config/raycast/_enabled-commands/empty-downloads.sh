@@ -10,7 +10,7 @@
 # @raycast.icon 🗑️
 
 # Documentation:
-# @raycast.description Clean out ~/Downloads
+# @raycast.description Delete all files ~/Downloads
 # @raycast.author Ed Heltzel
 # @raycast.authorURL https://github.com/edheltzel
 

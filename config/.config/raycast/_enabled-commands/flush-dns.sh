@@ -12,7 +12,7 @@
 # @raycast.packageName Flush DNS
 
 # Documentation:
-# @raycast.description Flush DNS cache
+# @raycast.description Flush DNS cache using m-cli
 # @raycast.author Ed Heltzel
 # @raycast.authorURL https://github.com/edheltzel
 
