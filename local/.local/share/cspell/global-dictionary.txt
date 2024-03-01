@@ -111,6 +111,7 @@ Spacemacs
 speedtest
 Springboro
 startship
+stylelint
 substep
 svg
 svgs
