@@ -5,7 +5,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Disk Free
+# @raycast.title Free Disk Space
 # @raycast.packageName Utils
 # @raycast.mode fullOutput
 
@@ -25,7 +25,7 @@
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 RED='\033[1;31m'
-NC='\033[0;m' 
+NC='\033[0;m'
 
 while read -r item; do
 	[[ $item == /dev/* ]] || continue
