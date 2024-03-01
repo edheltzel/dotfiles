@@ -10,7 +10,7 @@ set -gx XDG_PICTURES_DIR $HOME/Pictures
 set -gx XDG_VIDEOS_DIR $HOME/Videos
 
 # set Visual Studio Code as default editor use code, code-insiders, subl or vim
-set -gx EDITOR code-insiders -w
+set -gx EDITOR code-insiders
 
 string match -q "$TERM_PROGRAM" vscode
 and . (code --locate-shell-integration-path fish)
