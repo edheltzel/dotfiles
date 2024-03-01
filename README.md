@@ -242,6 +242,19 @@ Any of the scripts can be run individually at any time to update/reset as needed
   - **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
 </details>
 </details>
+<details>
+  <summary>Media Control Keys</summary>
+  From time to time some of the "nice-to-have" features of MacOS break. An example of this is when the media keys stop working for one reason or another; Google Chrome/WhatsApp/ can and generally hijack the media keys.
+
+  To resolve this just run the following command in the terminal:
+
+  ```shell
+  launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
+  ```
+  This `luanchctl` will reenable media key, which in turn will control Spotify 🙂
+</details>
+
+
 
 ## TODOs
 
