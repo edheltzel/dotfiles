@@ -235,6 +235,7 @@ cask 'cyberduck'            # Mount remote storage locations
 cask 'ledger-live'          # Crypto hardware wallet manager
 # cask 'todoist'              # Task manager
 cask 'obsidian'             # Note taking app
+cask 'spotify'
 
 # Utility Applications
 brew 'displaylink'          # Multi-monitor support - for use with Dock
