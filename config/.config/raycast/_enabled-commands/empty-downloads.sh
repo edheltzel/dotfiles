@@ -10,8 +10,8 @@
 # @raycast.icon 🗑️
 
 # Documentation:
-# @raycast.description Delete all files ~/Downloads
+# @raycast.description Move all files in ~/Downloads to the Trash.
 # @raycast.author Ed Heltzel
 # @raycast.authorURL https://github.com/edheltzel
 
- rm -rf ~/Downloads/*
+mv ~/Downloads/* ~/.Trash/
