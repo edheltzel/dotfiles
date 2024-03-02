@@ -81,6 +81,8 @@ Since we have a bad habit of forgetting things:
     - `cd ~/.dotfiles && make install`
     - Alternatively, run install script `cd ~/.dotfiles && ./install.sh`
 5. After the setup is complete, run `upp` to execute topgrade and update everything.
+    - `upp` is an alias for `topgrade` which is Update Packages _(this is what I say to myself)_.
+    - The `topgrade.toml` includes `[post_commands]` for additional Brew and Node updates.
 6. Optional steps for DX and nice to haves:
     - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (in macos/security.sh)
     - Make sure to run `fnm env --use-on-cd | source` to enable auto-switching of Node versions. (in fish)
