@@ -23,12 +23,12 @@ cleanup = true
 skip_notify = true
 
 # Commands to run before anything
-[pre_commands]
+# [pre_commands]
 # Commands to run after anything
 [post_commands]
 "Brew - Cleanup" = "brew cleanup --prune=all"
-"Node - Corepack Prepare Pnpm" = "corepack prepare pnpm@latest --activate"
-"Node - Corepack Enable Pnpm" = "corepack enable"
+"Node - Corepack Enable Pnpm" = "corepack enable && echo corepack pnpm: $(tput bold)$(tput setaf 2)enabled$(tput sgr0)"
+"Node - Corepack Prepare pnpm" = "corepack prepare pnpm@latest --activate"
 "Node - Pnpm Self Update" = "pnpm update -g --latest"
 
 # Custom commands
