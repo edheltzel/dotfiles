@@ -230,7 +230,7 @@ cask 'authy'                # 2FA app
 cask 'bitwarden'            # Password manager
 cask 'cyberduck'            # Mount remote storage locations
 # cask 'dropbox'            # Cloud storage
-# cask 'google-drive'         # Cloud storage
+cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 # cask 'todoist'              # Task manager
 cask 'obsidian'             # Note taking app
