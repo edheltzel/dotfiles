@@ -238,7 +238,7 @@ cask 'obsidian'             # Note taking app
 cask 'spotify'
 
 # Utility Applications
-brew 'displaylink'          # Multi-monitor support - for use with Dock
+# brew 'displaylink'          # Multi-monitor support - for use with Thunderbolt Dock
 cask 'namechanger'          # Rename files in bulk
 cask 'onyx'                 # System maintenance
 cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://usevia.app/
