@@ -22,4 +22,8 @@
 		"Unstowing",
 		"zoxide"
 	],
+	"workbench.colorCustomizations": {
+		"titleBar.activeForeground": "#f6c206",
+		"statusBar.background": "#1b1501"
+	}
 }
