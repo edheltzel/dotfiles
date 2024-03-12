@@ -113,7 +113,7 @@ brew 'figlet'       # Output text as big ASCII art text
 brew 'neofetch'     # Show system data and ditstro info
 # brew 'pv'           # Pipe viewer, with animation options
 # brew 'glow'         # Terminal markdown reader - Go
-
+brew 'Code-Hex/tap/neo-cowsay' # Cowsay with more cows
 #############################################################
 # 2. Software Development                                   #
 #############################################################
