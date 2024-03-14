@@ -130,6 +130,7 @@ cask 'visual-studio-code-insiders'  # Code editor - Insiders edition - Default
 cask 'cursor'                       # Cursor.sh editor - vscode fork
 cask 'zed'                          # Text editor - Rust
 cask 'local'                        # Local WordPress development
+cask 'diffmerge'                    # File comparison tool
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'bun'                 # All-in-one toolkit for JS/TS
