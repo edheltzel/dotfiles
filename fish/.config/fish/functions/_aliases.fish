@@ -70,7 +70,7 @@ alias tldrf 'tldr --list | fzf --preview "tldr {1} --color=always" --preview-win
 #### Language Support ####
 # Node - PNPM
 alias pn pnpm
-alias px 'pnpm dlx'
+alias px 'pnpm exec'
 
 # PHP - Laravel
 alias art 'php artisan'
