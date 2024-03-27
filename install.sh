@@ -13,7 +13,7 @@ install_git
 
 # Create the ~/Developer directory if it does not exist
 if [ ! -d "$PROJECTS_DIR" ]; then
-    mkdir -p "$PROJECTS_DIR"
+  mkdir -p "$PROJECTS_DIR"
 fi
 
 # Main installation process
@@ -50,7 +50,7 @@ mainInstall() {
     source ./packages/packages.sh
 
     # Install Stow packages
-    declare -a stow_dirs=("dots" "git" "fish" "nvim" "config" "local" "warp" "vscode")
+    declare -a stow_dirs=("dots" "git" "fish" "nvim" "config" "local" "warp")
     for dir in "${stow_dirs[@]}"; do
       stow "$dir"
     done
@@ -66,7 +66,7 @@ mainInstall() {
         sudo sh -c "echo $(command -v fish) >> /etc/shells"
       fi
       read -p "Do you want to set Fish as your default shell? (y/N): " -n 1 -r
-      echo    # Move to a new line
+      echo # Move to a new line
       if [[ $REPLY =~ ^[Yy]$ ]]; then
         chsh -s "$(command -v fish)"
       fi
