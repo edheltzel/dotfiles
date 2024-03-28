@@ -167,6 +167,7 @@ brew 'docker'             # Containers
 brew 'orbstack'           # Docker image viewer
 brew 'doctl'              # DigitalOcean CLI
 brew 's3cmd'              # S3 command line tool
+brew 'monolith'           # Save web pages as single files - Rust
 
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
