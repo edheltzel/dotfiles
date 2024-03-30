@@ -176,6 +176,8 @@ brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-flow-avh'       # Git extensions to provide high-level repository operations
 brew 'git-lfs'            # Git Large File Storage
 brew 'git-gui'            # Git GUI
+brew 'gitkraken'          # Git client GUI
+brew 'gitkraken-cli'      # GitKraken CLI
 brew 'lighttpd'           # Lightweight web server
 brew 'miniserve'          # Static file server
 brew 'mkcert'             # Local HTTPS development
