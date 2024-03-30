@@ -50,7 +50,8 @@
   diffFilter = delta --color-only
 [alias]
   aa  = add --all
-  cm  = commit -S -m
+  #cm = commit -S -m
+	cm = "!f() { git commit -S -m \"$1\" -m \"$2\"; }; f"
   cma = !git add --all && git commit -S -m
   co  = checkout
   rv  = remote -v
