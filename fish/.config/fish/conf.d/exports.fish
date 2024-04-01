@@ -10,4 +10,4 @@ source ~/.config/fish/functions/_utils.fish
 source ~/.config/fish/functions/_backup_restore.fish
 
 # Terminal integration
-source ~/.config/fish/conf.d/iterm2_shell_integration.fish
+source ~/.config/fish/utils/iterm2_shell_integration.fish
