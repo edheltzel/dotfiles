@@ -1,14 +1,15 @@
 @antfu/ni
 @bitwarden/cli
 @githubnext/github-copilot-cli
+@pnpm/tabtab
+@vscode/vsce
 cspell
 easy-sharing
 generator-code
 intelephense
 lighthouse
 neovim
-typescript-language-server
 typescript
-@vscode/vsce
+typescript-language-server
 wrangler
 yo
