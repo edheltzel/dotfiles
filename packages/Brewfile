@@ -21,7 +21,6 @@ cask_args appdir: '/Applications', require_sha: true
 # Taps
 tap 'buo/cask-upgrade' # Upgrade casks
 tap 'clementtsang/bottom' # Resource monitor (better top) - Rust
-tap 'dart-lang/dart' # Dart SDK
 tap 'eddieantonio/eddieantonio' #
 tap 'github/gh' # Interact with GitHub PRs, issues, repos
 tap 'homebrew/cask-drivers' # for drivers
