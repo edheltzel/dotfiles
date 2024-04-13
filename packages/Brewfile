@@ -52,21 +52,15 @@ brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 
 # CLI Basics
 brew 'ack'          # Search tool like grep, but faster
-# brew 'aria2'        # Resuming download util (better wget)
 brew 'bat'          # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
 # brew 'cmake'        # Build system
 brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
-brew 'ctags'        # Tag generator for programming languages
 brew 'duti'         # Set default apps for file types
 brew 'eza'          # Listing files with info (better ls) replaces exa - Rust
-# brew 'exiftool'     # Read, write and modify exif data
 brew 'fd'           # Find files - Rust
 brew 'fzf'          # Fuzzy file finder and filtering - Go
-brew 'git-gui'      # Git GUI
 brew 'grc'          # Colorize terminal output
-# brew 'hyperfine'    # Benchmarking for arbitrary commands
-# brew 'jdupes'       # Duplicate file finder
 brew 'jq'           # JSON parser, output and query files
 brew 'mas'          # Mac App Store CLI
 brew 'most'         # Multi-window scroll pager (better less)
@@ -91,29 +85,22 @@ brew 'bottom'       # Resource monitor (better top) - Rust
 brew 'ctop'         # Docker Container metrics and monitoring - Go
 brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
 brew 'duf'          # Get info on mounted disks (better df) - Go
-brew 'glances'      # Resource monitor + web and API
-# brew 'goaccess'     # Web log analyzer and viewer
-# brew 'gping'        # Interactive ping tool, with graph
 brew 'procs'        # Advanced process viewer (better ps) - Rust
 
 # CLI Productivity Apps
 brew 'rclone'       # Manage cloud storage
-brew 'kondo'        # Clean up old files and directories - Rust
+# brew 'kondo'        # Clean up old files and directories - Rust
 
 # CLI Development Suits
-brew 'lazydocker'   # Full Docker management app - Go
-brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
+# brew 'lazydocker'   # Full Docker management app - Go
+# brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
 
 # CLI Docs and Cheatsheets
 brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 
 # CLI Misc
-# brew 'chafa'        # Image to ASCII art
 brew 'figlet'       # Output text as big ASCII art text
 brew 'neofetch'     # Show system data and ditstro info
-# brew 'pv'           # Pipe viewer, with animation options
-# brew 'glow'         # Terminal markdown reader - Go
-brew 'Code-Hex/tap/neo-cowsay' # Cowsay with more cows
 #############################################################
 # 2. Software Development                                   #
 #############################################################
@@ -123,19 +110,15 @@ cask 'dbeaver-community'            # Database management
 cask 'dbngin'                       # Local MySQL database management
 cask 'devtoys'                      # Dev tools/utilities for Mac
 cask 'iterm2'                       # Better terminalemulator
-cask 'warp'                         # A "modern" terminalemulator - Rust
 cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code-insiders'  # Code editor - Insiders edition - Default
-cask 'cursor'                       # Cursor.sh editor - vscode fork
-cask 'zed'                          # Text editor - Rust
 cask 'local'                        # Local WordPress development
 cask 'diffmerge'                    # File comparison tool
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'bun'                 # All-in-one toolkit for JS/TS
 brew 'composer'            # PHP package manager
-brew 'dart'                # Dart SDK
 brew 'deno'                # Deno JavaScript/TypeScript runtime
 brew 'fnm'                 # Switching Node versions
 brew 'go'                  # Compiler for Go Lang
@@ -158,11 +141,9 @@ brew 'sass/sass/migrator'  # Sass mignration tool
 brew 'sass/sass/sass'      # Sass CSS preprocessor
 brew 'sqlite'              # SQLite database engine
 brew 'tdewolff/tap/minify' # Minify HTML, CSS, JS, JSON, SVG, XML
-brew 'zola'                # Static site generator - Rust
 
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
-brew 'dive'               # Docker image viewer
 brew 'docker'             # Containers
 brew 'orbstack'           # Docker image viewer
 brew 'doctl'              # DigitalOcean CLI
@@ -175,14 +156,11 @@ brew 'git-delta'          # Git diff viewer - Rust
 brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-flow-avh'       # Git extensions to provide high-level repository operations
 brew 'git-lfs'            # Git Large File Storage
-brew 'git-gui'            # Git GUI
 brew 'gitkraken'          # Git client GUI
 brew 'gitkraken-cli'      # GitKraken CLI
-brew 'lighttpd'           # Lightweight web server
 brew 'miniserve'          # Static file server
 brew 'mkcert'             # Local HTTPS development
 brew 'scc'                # Source code counter - Go
-brew 'tokei'              # Source code counter - Rust
 brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
@@ -202,7 +180,6 @@ brew 'gnupg'             # GNU Privacy Guard
 brew 'lynis'             # Scan system for common security issues
 brew 'nss'               # Network Security Services
 brew 'openssl'           # Cryptography and SSL/TLS Toolkit
-brew 'rkhunter'          # Search / detect potential root kits
 brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
 cask 'gpg-suite'         # GPG encryption files
 
@@ -234,15 +211,12 @@ cask 'whatsapp'             # Chat app
 cask 'authy'                # 2FA app
 cask 'bitwarden'            # Password manager
 cask 'cyberduck'            # Mount remote storage locations
-# cask 'dropbox'            # Cloud storage
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
-# cask 'todoist'              # Task manager
 cask 'obsidian'             # Note taking app
 cask 'spotify'
 
 # Utility Applications
-# brew 'displaylink'          # Multi-monitor support - for use with Thunderbolt Dock
 cask 'namechanger'          # Rename files in bulk
 cask 'onyx'                 # System maintenance
 cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://usevia.app/
@@ -252,7 +226,6 @@ cask 'choosy'                    # Choose which browser to open links in
 cask 'brave-browser'             # Brave browser
 cask 'firefox-developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
-# cask 'safari-technology-preview' # Safari tech preview
 
 # Fonts
 cask 'font-fira-code-nerd-font'       # Dev Font - Primary
@@ -280,20 +253,16 @@ brew 'm-cli'              # All in one MacOS management CLI app: m help
 cask 'hiddenbar'          # Hide / show annoying menubar icons
 cask 'itsycal'            # Calendar in menubar
 cask 'openinterminal'     # Finder button, opens directory in terminal
-cask 'raycast', args: { require_sha: false }  # Spotlight alternative
+cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
 cask 'typinator'          # Text expander - macOS only
 cask 'keka'               # File archiver and extractor
-# cask 'amethyst'           # Tiling window manager - Auto+Keyboard
 
 # Mac App Store Installs
 mas 'ColorSlurp', id: 1287239339
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
-# mas 'Keynote', id: 409183694
-# mas 'Numbers', id: 409203825
-# mas 'Pages', id: 409201541
-# mas 'Gifski', id: 1351639930
+mas 'Gifski', id: 1351639930
 mas 'Qi FM', id: 147969619
 mas 'ColorNoise', id: 1640045375
 #mas 'Xcode', id: 497799835
