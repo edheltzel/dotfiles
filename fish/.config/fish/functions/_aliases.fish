@@ -17,11 +17,15 @@ alias ... 'cd ../..'
 alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 alias ...... 'cd ../../../../..'
-alias la 'eza -la --icons'
-alias l 'eza -lagh --sort name --git --icons --group-directories-first'
-alias ll 'eza -lagh --git --icons --group-directories-first --sort modified'
-alias tree 'eza --tree --icons'
+alias la 'eza -lagh --git --icons --group-directories-first --sort modified'
+alias l 'eza -lagh --git --icons'
+alias ll 'eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize'
 alias cll 'clear; and eza -lah --icons --sort modified'
+
+## Tree view
+alias tree 'eza -Ta --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
+alias ltd 'eza -TaD --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
+
 
 # Project shortcuts/aliases
 alias projects 'cd ~/Developer'
