@@ -19,3 +19,5 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+source /Users/ed/.config/broot/launcher/bash/br

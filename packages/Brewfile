@@ -53,6 +53,8 @@ brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 brew 'ack'          # Search tool like grep, but faster
 brew 'bat'          # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
+brew 'broot'       # File tree explorer (better tree) - Rust
+brew 'chafa'       # Image to ASCII art converter
 # brew 'cmake'        # Build system
 brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
 brew 'duti'         # Set default apps for file types
@@ -60,6 +62,7 @@ brew 'eza'          # Listing files with info (better ls) replaces exa - Rust
 brew 'fd'           # Find files - Rust
 brew 'fzf'          # Fuzzy file finder and filtering - Go
 brew 'grc'          # Colorize terminal output
+brew 'hexyl'        # Hex viewer - Rust
 brew 'jq'           # JSON parser, output and query files
 brew 'mas'          # Mac App Store CLI
 brew 'most'         # Multi-window scroll pager (better less)
@@ -68,6 +71,8 @@ brew 'rsync'        # Fast incremental file transfer
 brew 'sd'           # RegEx find and replace (better sed) - Rust
 # brew 'watchexec'    # Run command whenever file changes - Rust
 brew 'zoxide'       # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
+
+
 
 # CLI Image Processing and Compression
 brew 'gdk-pixbuf' # Image loading library

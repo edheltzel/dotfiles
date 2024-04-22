@@ -10,8 +10,3 @@ fnm env --use-on-cd | source
 # Prompts - Starship & Oh My Posh
 starship init fish | source
 # oh-my-posh init fish --config ~/.config/default.omp.json | source
-
-# Automatically "Warpify" subshells for Warp.app
-if status is-interactive
-    printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
-end

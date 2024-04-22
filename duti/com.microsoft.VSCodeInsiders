@@ -22,6 +22,7 @@
 .graphql
 .h
 .hbs
+.hjson
 .hpp
 .jekyll
 .js
