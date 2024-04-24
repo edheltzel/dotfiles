@@ -1,6 +1,5 @@
 jorgebucaran/fisher
 oh-my-fish/plugin-brew
-tuvistavie/fish-ssh-agent
 kidonng/zoxide.fish
 meaningful-ooo/sponge
 z11i/github-copilot-cli.fish
@@ -10,3 +9,4 @@ edheltzel/fisher-plugin-macos
 oh-my-fish/plugin-bang-bang
 laughedelic/pisces
 patrickf1/fzf.fish
+danhper/fish-ssh-agent
