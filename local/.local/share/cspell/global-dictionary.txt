@@ -2,6 +2,7 @@ alacritty
 alpinejs
 Autocare
 Autoconvert
+autofit
 autohide
 autoplay
 autoprefixing
@@ -10,6 +11,7 @@ Beavercreek
 Bevs
 biomejs
 bitwarden
+blockquotes
 browserlist
 browsersync
 btns
