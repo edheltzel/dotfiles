@@ -14,7 +14,7 @@ error_symbol = '[](bold red)'
 [shell]
 fish_indicator = ""
 unknown_indicator = "?"
-style = "bold fg:240"
+style = "bold fg:white"
 disabled = false
 ## end character ##
 
@@ -37,7 +37,7 @@ conflicted = "[ ](fg:red bg:bright-black)"
 ahead = "[ ×${count} ](white)"
 behind = "[ ×${count} ](white)"
 diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
-untracked = "️[ ×${count} ](fg:215)"
+untracked = "️[ ×${count} ](yellow)"
 stashed = " "
 modified = "[󰏫 ×${count} ](bright-yellow)"
 staged = "[󰌴 ×${count} ](bright-green)"
@@ -56,7 +56,7 @@ style = "yellow"
 disabled = false
 time_format = "%I:%M%P"
 # style = "fg:black" # use for dark terminal themes
-style = "fg:white"   # use for light terminal themes
+style = "fg:white"                # use for light terminal themes
 format = "[\uf43a $time]($style)"
 ## end right prompt ##
 
