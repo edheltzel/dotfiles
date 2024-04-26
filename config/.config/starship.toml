@@ -55,7 +55,8 @@ style = "yellow"
 [time]
 disabled = false
 time_format = "%I:%M%P"
-style = "fg:black"
+# style = "fg:black"                # use for dark terminal themes
+style = "fg:white"                # use for light terminal themes
 format = "[\uf43a $time]($style)"
 ## end right prompt ##
 
