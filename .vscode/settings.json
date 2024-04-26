@@ -1,29 +1,29 @@
 {
-	"cSpell.words": [
-		"abbrex",
-		"AFPS",
-		"Astro",
-		"csrutil",
-		"dotfiles",
-		"Duti",
-		"emptytrash",
-		"fishfile",
-		"forrepos",
-		"gpgsign",
-		"jorgebucaran",
-		"keyid",
-		"Mbps",
-		"nvim",
-		"procs",
-		"ripgrep",
-		"tigrc",
-		"tldr",
-		"tmol",
-		"Unstowing",
-		"zoxide"
-	],
-	"workbench.colorCustomizations": {
-		"titleBar.activeForeground": "#f6c206",
-		"statusBar.background": "#1b1501"
-	}
+  "cSpell.words": [
+    "abbrex",
+    "AFPS",
+    "Astro",
+    "csrutil",
+    "dotfiles",
+    "Duti",
+    "emptytrash",
+    "fishfile",
+    "forrepos",
+    "gpgsign",
+    "jorgebucaran",
+    "keyid",
+    "Mbps",
+    "nvim",
+    "procs",
+    "ripgrep",
+    "tigrc",
+    "tldr",
+    "tmol",
+    "Unstowing",
+    "zoxide"
+  ],
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#c19c1a",
+    // "statusBar.background": "#9b1501"
+  }
 }
