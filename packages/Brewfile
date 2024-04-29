@@ -213,7 +213,7 @@ cask 'discord'              # Chat app
 cask 'whatsapp'             # Chat app
 
 # Personal Applications
-cask 'authy'                # 2FA app
+#cask 'authy'                # 2FA app - sunset use iOs or Android apps
 cask 'bitwarden'            # Password manager
 cask 'cyberduck'            # Mount remote storage locations
 cask 'google-drive'         # Cloud storage
