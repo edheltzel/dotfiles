@@ -37,7 +37,6 @@ defaults write NSGlobalDomain AppleHighlightColor -string '0.847059 0.847059 0.8
 # Large  : 3
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
-
 # Show scroll bars
 # Automatically based on mouse or trackpad : `Automatic`
 # When scrolling                           : `WhenScrolling`
@@ -155,11 +154,10 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # For VS Code Insiders
 # defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 
-
 # Set a blazingly fast keyboard repeat rate
 # To simiulate the set rates visit - https://mac-key-repeat.zaymon.dev/
-# KeyRepeat: 1 = 15ms 2 = 30ms
-# InitialKeyRepeat: 9 = 135ms 10 = 150ms 11 = 165ms 12 = 180ms
+# KeyRepeat: 1=15ms 2=30ms
+# InitialKeyRepeat: 9=135ms 10=150ms 11=165ms 12=180ms
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write NSGlobalDomain KeyRepeat -int 2
 
@@ -172,10 +170,10 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-systemsetup -settimezone "America/New_York" > /dev/null
+systemsetup -settimezone "America/New_York" >/dev/null
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2>/dev/null
 
 ################################################################################
 # Desktop, Screen saver & Screen stuff                                         #
@@ -208,7 +206,6 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -331,7 +328,7 @@ sudo pmset -b sleep 5
 sudo pmset -a standbydelay 86400
 
 # Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+sudo systemsetup -setcomputersleep Off >/dev/null
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
