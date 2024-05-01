@@ -62,6 +62,7 @@ hcomm
 heltzel
 highlightedyank
 htmlmin
+HTMX
 ifel
 Incenta
 indexnow
@@ -71,6 +72,7 @@ ITCSS
 iterm
 jampack
 Jamstack
+Laravel
 lazyvim
 lightningcss
 linkify
