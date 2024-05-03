@@ -41,4 +41,5 @@ if status is-interactive
     abbr --add usebash 'chsh -s $(which bash)'
     abbr --add usezsh 'chsh -s $(which zsh)'
     abbr --add upp topgrade
+    abbr --add psrv 'php -S localhost:8888'
 end
