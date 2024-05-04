@@ -11,5 +11,8 @@ dynamic_title = true
 option_as_alt = "Both"
 
 [font]
-normal.family = "SauceCodePro Nerd Font Mono"
+normal.family = "SauceCodePro Nerd Font"
+normal.style = "Regular"
+bold.style = "Regular"
+italic.style = "Italic"
 size = 19
