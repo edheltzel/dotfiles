@@ -41,3 +41,4 @@ action = "SpawnNewInstance"
 key = "="
 mods = "Command|Control"
 action = "Quit"
+# macos natural text editing
