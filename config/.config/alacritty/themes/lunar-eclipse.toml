@@ -7,6 +7,10 @@ bright_foreground= "#8a8fb1"
 text = "#0c0935"
 background = "#c79e34"
 
+[colors.cursor]
+cursor = "#FFFFFF"
+text = "#101119"
+
 [colors.normal]
 black = "#698188"
 red = "#e9334c"
@@ -26,3 +30,15 @@ blue = "#64b6f8"
 magenta = "#b960eb"
 cyan = "#65d6d4"
 white = "#e5edfc"
+
+[colors.hints.end]
+background = "#A6ADC8"
+foreground = "#1E1E2E"
+
+[colors.hints.start]
+background = "#F9E2AF"
+foreground = "#1E1E2E"
+
+[colors.search.matches]
+background = "#e5edfc"
+foreground = "#1E1E2E"
