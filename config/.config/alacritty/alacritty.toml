@@ -21,3 +21,23 @@ size = 18
 
 [mouse]
 hide_when_typing = true
+
+[cursor]
+thickness = 0.10
+blink_interval = 500
+blink_timeout = 0
+
+[cursor.style]
+blinking = "Always"
+
+### keyboard bindings ###
+# new instance of alacritty in root
+[[keyboard.bindings]]
+key = "N"
+mods = "Command|Shift"
+action = "SpawnNewInstance"
+# kill window
+[[keyboard.bindings]]
+key = "="
+mods = "Command|Control"
+action = "Quit"
