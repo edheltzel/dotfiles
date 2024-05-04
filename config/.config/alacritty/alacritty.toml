@@ -1,0 +1,15 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "transparent"
+padding.x = 10
+padding.y = 25
+opacity = 0.85
+blur = true
+dynamic_title = true
+option_as_alt = "Both"
+
+[font]
+normal.family = "SauceCodePro Nerd Font Mono"
+size = 19
