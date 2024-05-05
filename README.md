@@ -1,4 +1,4 @@
-# Ed's Dotfiles
+# Mr EdHeltzel's Dotfiles
 
 ### My setup for 🐠 Fish shell on  macOS - `v3`
 
@@ -65,7 +65,7 @@ Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS
   7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
 </details>
 
-## **👋 For future Ed**:
+## **👋 For future Mr EdHeltzel**:
 
 Since we have a bad habit of forgetting things:
 
@@ -123,6 +123,8 @@ There are two options for managing packages with GNU Stow:
   - misc dotfiles that are stored in the $HOME directory
 - git (git/)
   - git configuration
+- zsh (zsh/)
+  - Zsh configuration files (this kind of sort of mimics fish - WIP)
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
