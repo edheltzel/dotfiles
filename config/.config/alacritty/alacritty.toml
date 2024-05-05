@@ -11,6 +11,8 @@ opacity = 0.85
 blur = true
 dynamic_title = true
 option_as_alt = "Both"
+dimensions.columns = 135
+dimensions.lines = 40
 
 [font]
 normal.family = "SauceCodePro Nerd Font"
@@ -26,9 +28,8 @@ hide_when_typing = true
 thickness = 0.10
 blink_interval = 500
 blink_timeout = 0
+style.blinking = "Always"
 
-[cursor.style]
-blinking = "Always"
 
 ### keyboard bindings ###
 # new instance of alacritty in root
@@ -41,4 +42,8 @@ action = "SpawnNewInstance"
 key = "="
 mods = "Command|Control"
 action = "Quit"
-# macos natural text editing
+# open config with ⌘ + ,
+[[keyboard.bindings]]
+key = ","
+mods = "Command"
+action = "Open"
