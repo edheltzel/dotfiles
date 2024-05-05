@@ -40,7 +40,7 @@ brew 'starship'                             # Cross-shell prompt - Rust
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
 brew 'zsh-autopair'                        # Auto-pairing for zsh
-brew 'olets/tap/zsh-abbr'                 # Abbreviations for zsh
+brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 
 # CLI Essentials
 brew 'git'          # Version controll
@@ -116,7 +116,7 @@ cask 'devtoys'                      # Dev tools/utilities for Mac
 cask 'iterm2'                       # Better terminalemulator
 cask 'sequel-ace'                   # MySQL database management
 cask 'typora'                       # Just a simple markdown editor
-cask 'visual-studio-code-insiders'  # Code editor - Insiders edition - Default
+cask 'visual-studio-code@insiders'  # Code editor - Insiders edition - Default
 cask 'local'                        # Local WordPress development
 cask 'diffmerge'                    # File comparison tool
 
@@ -229,7 +229,8 @@ cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://u
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in
 cask 'brave-browser'             # Brave browser
-cask 'firefox-developer-edition' # Firefox dev edition
+cask 'brave-browser@beta'        # Brave beta browser
+cask 'firefox@developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
 
 # Fonts
