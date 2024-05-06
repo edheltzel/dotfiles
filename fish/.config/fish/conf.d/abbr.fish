@@ -43,4 +43,5 @@ if status is-interactive
     abbr --add upp topgrade
     abbr --add psrv 'php -S localhost:8888'
     abbr --add tmux 'zellij'
+    abbr --add omp 'oh-my-posh'
 end
