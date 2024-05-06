@@ -68,7 +68,7 @@
             "threshold": 0
           },
           "style": "diamond",
-          "template": " \udb81\udd1b{{ .FormattedMs }}",
+          "template": " \udb81\udd1b {{ .FormattedMs }}",
           "type": "executiontime"
         }
       ],
