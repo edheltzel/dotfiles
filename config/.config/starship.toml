@@ -47,7 +47,7 @@ style = "white"
 
 [cmd_duration]
 min_time = 1
-format = "[󰔛 $duration]($style)"
+format = "[\udb81\udd1b $duration]($style)"
 style = "yellow"
 ## end prompt ##
 
