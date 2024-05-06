@@ -36,6 +36,7 @@ tap 'teamookla/speedtest'   # Command line speed test utility
 #############################################################
 brew 'fish'                                 # My Default Shell
 brew 'starship'                             # Cross-shell prompt - Rust
+brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
 
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
