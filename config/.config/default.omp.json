@@ -52,7 +52,7 @@
           "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}<p:terminal-yellow> {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<p:pistachio-green> {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }}",
           "properties": {
             "fetch_status": true,
-            "branch_icon": "\ue725 "
+            "branch_icon": "\uf418 "
           }
         },
         {
@@ -62,7 +62,7 @@
           "template": " \uf00d"
         },
         {
-          "foreground": "p:terminal-yellow",
+          "foreground": "p:pastel-grey",
           "properties": {
             "style": "austin",
             "threshold": 0
@@ -79,49 +79,61 @@
       "overflow": "hide",
       "segments": [
         {
+          "type": "aws",
+          "style": "plain",
+          "foreground": "p:terminal-yellow",
+          "template": "\uf270 {{.Profile}}{{if .Region}}@{{.Region}}{{end}} "
+        },
+        {
+          "type": "npm",
+          "style": "plain",
+          "foreground": "p:terminal-red",
+          "template": "\ue616 {{ .Full }} "
+        },
+        {
           "type": "node",
           "style": "plain",
           "foreground": "p:pistachio-green",
           "template": "\ue718 {{ .Full }} "
         },
         {
+          "type": "go",
+          "style": "plain",
+          "foreground": "p:light-sky-blue",
+          "template": "\uf1a0 {{ .Full}} "
+        },
+        {
           "type": "php",
           "style": "plain",
           "foreground": "p:terminal-blue",
-          "template": "\ue73d {{ .Full }} "
+          "template": "\ue608 {{ .Full }} "
         },
         {
           "type": "python",
           "style": "plain",
           "foreground": "p:terminal-yellow",
-          "template": "\uE235 {{ .Full }}"
-        },
-        {
-          "type": "julia",
-          "style": "plain",
-          "foreground": "p:terminal-magenta",
-          "template": "\uE624 {{ .Full }}"
+          "template": "\ue606 {{ .Full }} "
         },
         {
           "type": "ruby",
           "style": "plain",
           "foreground": "p:terminal-red",
-          "template": "\uE791 {{ .Full}}"
+          "template": "\udb83\udd2d {{ .Full}} "
         },
         {
-          "type": "go",
+          "type": "rust",
           "style": "plain",
-          "foreground": "p:light-sky-blue",
-          "template": "\uFCD1 {{ .Full}}"
+          "foreground": "p:terminal-yellow",
+          "template": " {{ .Full}} "
         },
         {
           "type": "time",
           "style": "plain",
           "foreground": "p:terminal-white",
           "properties": {
-            "time_format": "\uf43a 03:04 PM"
+            "time_format": "\ue641 03:04 PM"
           },
-          "template": " {{ .CurrentDate | date .Format }} "
+          "template": "{{ .CurrentDate | date .Format }}"
         }
       ],
       "type": "prompt"
