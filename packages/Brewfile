@@ -235,10 +235,11 @@ cask 'firefox@developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
 
 # Fonts
-cask 'font-cascadia-code'         # Dev Font - Primary
-cask 'font-fira-code-nerd-font'   # Dev/Terminal Font - Secondary
-cask 'font-cascadia-code-pl'      # Terminal Font - Primary
-cask 'font-inter'                 # UI font
+cask 'font-cascadia-code'             # Dev Font - Primary
+cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
+cask 'font-cascadia-code-pl'          # Terminal Font - Primary
+cask 'font-sauce-code-pro-nerd-font'  # Terminal Font - Secondary
+cask 'font-inter'                     # UI font
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
