@@ -40,7 +40,7 @@
         {
           "foreground": "#c00c00",
           "style": "plain",
-           "template": " {{ .Full }} ",
+          "template": " {{ .Full }} ",
           "type": "npm"
         },
         {
@@ -113,16 +113,16 @@
           "type": "text"
         }
       ],
-    "valid_line": {
+      "valid_line": {
         "background": "transparent",
         "foreground": "#ffffff",
         "template": "<#e0def4,#286983>\uf42e </><#286983,transparent>\ue0b4</> "
-    },
-    "error_line": {
+      },
+      "error_line": {
         "background": "transparent",
         "foreground": "#ffffff",
         "template": "<#eb6f92,#286983>\ue009 </><#286983,transparent>\ue0b4</> "
-    },
+      },
       "type": "prompt"
     }
   ],
