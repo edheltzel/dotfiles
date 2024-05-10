@@ -7,6 +7,25 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  // General options
+  "buffer_font_size": 16,
+  "buffer_font_family": "CascadiaCodeRoman-SemiLight",
+  "buffer_font_features": {
+    "calt": true
+  },
+  "centered_layout": {
+    "left_padding": 0.3,
+    "right_padding": 0
+  },
+  "ui_font_family": "CascadiaCodeRoman-SemiLight",
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "git_status": true
+  },
+  "soft_wrap": "preferred_line_length",
+  "tab_size": 2,
   "project_panel": {
     "dock": "right"
   },
@@ -16,15 +35,21 @@
   "assistant": {
     "dock": "left"
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "theme": "Atelier Lakeside Dark",
-  "buffer_font_family": "FiraCode Nerd Font Mono",
+  // Theme options
+  "theme": {
+    "mode": "dark",
+    "dark": "Atelier Lakeside Dark",
+    "light": "Atelier Lakeside Light"
+  },
+  // Vim options
   "vim_mode": true,
   "vim_status_bar": true,
   "relative_line_numbers": true,
+  // Terminal options
   "terminal": {
+    "blinking": "on",
     "copy_on_select": true,
-    "font_family": "SauceCodePro Nerd Font"
+    "font_family": "SauceCodePro Nerd Font",
+    "font_size": 16
   }
 }
