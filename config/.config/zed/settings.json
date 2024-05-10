@@ -7,8 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "chat_panel": {
+  "project_panel": {
     "dock": "right"
+  },
+  "chat_panel": {
+    "dock": "left"
   },
   "assistant": {
     "dock": "left"
