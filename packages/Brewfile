@@ -258,6 +258,7 @@ cask 'quicklookapk',   args: { require_sha: false } # QL for Android APKs
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac OS Mods, Imrovments, & Utilities
+cask 'alt-tab'            # Windows like alt-tab
 brew 'm-cli'              # All in one MacOS management CLI app: m help
 cask 'hiddenbar'          # Hide / show annoying menubar icons
 cask 'itsycal'            # Calendar in menubar
