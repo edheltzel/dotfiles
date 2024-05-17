@@ -42,6 +42,7 @@ if status is-interactive
     abbr --add usezsh 'chsh -s $(which zsh)'
     abbr --add upp topgrade
     abbr --add psrv 'php -S localhost:8888'
-    abbr --add tmux 'zellij'
-    abbr --add omp 'oh-my-posh'
+    abbr --add tmux zellij
+    abbr --add omp oh-my-posh
+    abbr --add newcode 'npx --package yo --package generator-code -- yo code'
 end
