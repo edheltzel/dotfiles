@@ -45,7 +45,8 @@ set -gx PNPM_HOME $HOME/Library/pnpm
 set -gx PATH "$PNPM_HOME" $PATH
 
 # Bun
-set -g fish_user_paths $HOME/.bun/bin $fish_user_paths
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # FZF and FD helpers for NeoVim
 set -x FZF_DEFAULT_COMMAND "fd --type f"
