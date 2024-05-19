@@ -1,5 +1,5 @@
 format = "[\u279c](#7AA2F7) $all"
-right_format = "$time"
+right_format = "$cmd_duration"
 
 command_timeout = 2000
 
@@ -23,6 +23,7 @@ disabled = false
 [directory]
 format = "[$path]($style)[$read_only]($read_only_style) [\u26a1](#7DCFFF)"
 read_only = " "
+truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
@@ -48,19 +49,22 @@ deleted = "[ ×${count} ](bright-red)"
 renamed = "[ ×${count} ](fg:214)"
 style = "white"
 
-[cmd_duration]
-min_time = 1
-format = "[󰔛 $duration]($style)"
-style = "#CFC9C2"
 ## end prompt ##
 
 ## start right prompt ##
-[time]
+[cmd_duration]
 disabled = false
-time_format = "%I:%M%P"
-# style = "fg:black" # use for dark terminal themes
-style = "fg:#C0CAF5"         # use for light terminal themes
-format = "[ $time]($style)"
+min_time = 1
+format = "[󰔛 $duration]($style)"
+style = "#CFC9C2"
+
+## Add to right_format above to enable ##
+# [time]
+# disabled = false
+# time_format = "%I:%M%P"
+# # style = "fg:black" # use for light color terminal themes
+# style = "fg:#C0CAF5"         # use for dark color terminal themes
+# format = "[ $time]($style)"
 ## end right prompt ##
 
 ## start custom symbols ##
