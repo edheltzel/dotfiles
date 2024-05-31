@@ -1,10 +1,13 @@
-format = "[\u279c](#7AA2F7) $all"
+format = "$all"
 right_format = "$cmd_duration"
 
 command_timeout = 2000
 
 [battery]
 disabled = true
+## arrow character ##
+# [\u279c](#7AA2F7)
+## end arrow character ##
 
 ## start character ##
 [character]
@@ -21,7 +24,7 @@ disabled = false
 ## start prompt ##
 
 [directory]
-format = "[$path]($style)[$read_only]($read_only_style) [\u26a1](#7DCFFF)"
+format = "[\u26a1](#7DCFFF)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…/"
 

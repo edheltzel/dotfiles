@@ -15,7 +15,7 @@ dimensions.columns = 135
 dimensions.lines = 40
 
 [font]
-normal.family = "SauceCodePro Nerd Font"
+normal.family = "SpaceMono Nerd Font"
 normal.style = "Regular"
 bold.style = "Bold"
 italic.style = "Italic"
