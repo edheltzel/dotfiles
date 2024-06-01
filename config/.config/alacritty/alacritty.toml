@@ -15,11 +15,11 @@ dimensions.columns = 135
 dimensions.lines = 40
 
 [font]
-normal.family = "SpaceMono Nerd Font"
+normal.family = "FiraCode Nerd Font Mono"
 normal.style = "Regular"
 bold.style = "Bold"
 italic.style = "Italic"
-size = 18
+size = 16
 
 [mouse]
 hide_when_typing = true
