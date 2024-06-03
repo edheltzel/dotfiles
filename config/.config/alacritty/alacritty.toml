@@ -1,5 +1,7 @@
-import = ["~/.config/alacritty/themes/lunar-eclipse.toml"]
-
+import = [
+  "~/.config/alacritty/themes/lunar-eclipse.toml",
+  "~/.config/alacritty/keybindings.toml"
+  ]
 [env]
 TERM = "xterm-256color"
 
@@ -7,7 +9,7 @@ TERM = "xterm-256color"
 decorations = "transparent"
 padding.x = 10
 padding.y = 25
-opacity = 0.85
+opacity = 0.9
 blur = true
 dynamic_title = true
 option_as_alt = "Both"
@@ -31,33 +33,3 @@ thickness = 0.10
 blink_interval = 500
 blink_timeout = 0
 style.blinking = "Always"
-
-
-### keyboard bindings ###
-# new instance of alacritty in root
-[[keyboard.bindings]]
-key = "N"
-mods = "Command|Shift"
-action = "SpawnNewInstance"
-# kill window
-[[keyboard.bindings]]
-key = "="
-mods = "Command|Control"
-action = "Quit"
-## Macos natural text editing ##
-# open config with ⌘ + ,
-[[keyboard.bindings]]
-key = ","
-mods = "Command"
-action = "Open"
-# delete entire line with ⌘ + backspace
-[[keyboard.bindings]]
-key = "Back"
-mods = "Command"
-chars = "\u0015"
-# Skip work left/right with alt + left/right
-[[keyboard.bindings]]
-key = "Left"
-mods = "Alt"
-chars = "\u001b"
-# [[keyboard.bindings]]
