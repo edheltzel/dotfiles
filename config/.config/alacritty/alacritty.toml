@@ -44,8 +44,20 @@ action = "SpawnNewInstance"
 key = "="
 mods = "Command|Control"
 action = "Quit"
+## Macos natural text editing ##
 # open config with ⌘ + ,
 [[keyboard.bindings]]
 key = ","
 mods = "Command"
 action = "Open"
+# delete entire line with ⌘ + backspace
+[[keyboard.bindings]]
+key = "Back"
+mods = "Command"
+chars = "\u0015"
+# Skip work left/right with alt + left/right
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001b"
+# [[keyboard.bindings]]
