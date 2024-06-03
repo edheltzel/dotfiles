@@ -52,6 +52,7 @@ alias unzip 'ouch decompress'
 alias listzip 'ouch list'
 alias lzip 'ouch list'
 alias wget 'wget -c'
+alias mux 'zellij'
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
