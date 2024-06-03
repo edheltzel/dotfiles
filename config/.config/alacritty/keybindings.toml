@@ -5,14 +5,15 @@ bindings = [
   { key = "N", mods = "Command|Shift", action = "SpawnNewInstance" },
   # kill window
   { key = "=", mods = "Command|Control", action = "Quit" },
+  { key = "W", mods = "Command|Shift", action = "Quit" },
   # open config with ⌘ + ,
   { key = ",", mods = "Command", action = "Open" },
   # delete entire line with ⌘ + backspace
-  { key = "Back", mods = "Command", chars = "\u0015" },
+  { key = "Back", mods = "Command", chars = "0x08" },
   # move cursor to next/previous word with ⌥ + left/right
-  { key = "Left", mods = "Alt", chars = "\u001bD" },
-  { key = "Right", mods = "Alt", chars = "\u001bC" },
+  { key = "Left", mods = "Option", chars = "0x01" },
+  { key = "Right", mods = "Option", chars = "0x05" },
   # jump to beginning/end of line with ⌘ + left/right
-  { key = "Left", mods = "Command", chars = "\u001bOH" },
-  { key = "Right", mods = "Command", chars = "\u001bOF" },
-]
+  { key = "Left", mods = "Command", chars = "0x01" },
+  { key = "Right", mods = "Command", chars = "0x05" },
+  ]

@@ -6,15 +6,16 @@ import = [
 TERM = "xterm-256color"
 
 [window]
-decorations = "transparent"
-padding.x = 10
-padding.y = 25
-opacity = 0.9
 blur = true
+decorations = "Buttonless"
 dynamic_title = true
-option_as_alt = "Both"
 dimensions.columns = 135
-dimensions.lines = 40
+dimensions.lines = 41
+opacity = 0.9
+padding.x = 10
+padding.y = 5
+
+option_as_alt = "Both"
 
 [font]
 normal.family = "FiraCode Nerd Font Mono"
