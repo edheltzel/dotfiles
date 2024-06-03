@@ -107,19 +107,8 @@ brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 brew 'figlet'       # Output text as big ASCII art text
 brew 'neofetch'     # Show system data and ditstro info
 #############################################################
-# 2. Software Development                                   #
+# 2. Software / Web Development                             #
 #############################################################
-
-# Development Apps
-cask 'dbeaver-community'            # Database management
-cask 'dbngin'                       # Local MySQL database management
-cask 'devtoys'                      # Dev tools/utilities for Mac
-cask 'iterm2'                       # Better terminalemulator
-cask 'sequel-ace'                   # MySQL database management
-cask 'typora'                       # Just a simple markdown editor
-cask 'visual-studio-code@insiders'  # Code editor - Insiders edition - Default
-cask 'local'                        # Local WordPress development
-cask 'diffmerge'                    # File comparison tool
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew 'bun'                    # All-in-one toolkit for JS/TS
@@ -214,9 +203,7 @@ cask 'discord'              # Chat app
 cask 'whatsapp'             # Chat app
 
 # Personal Applications
-#cask 'authy'                # 2FA app - sunset use iOs or Android apps
 cask 'bitwarden'            # Password manager
-cask 'cyberduck'            # Mount remote storage locations
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'obsidian'             # Note taking app
@@ -240,6 +227,21 @@ cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
 cask 'font-cascadia-code-pl'          # Terminal Font - Primary
 cask 'font-sauce-code-pro-nerd-font'  # Terminal Font - Secondary
 cask 'font-inter'                     # UI font
+
+# Development Apps
+cask 'alacritty'                    # GPU accelerated terminal
+cask 'cyberduck'                    # Mount remote storage locations
+cask 'dbeaver-community'            # Database management
+cask 'devtoys'                      # Dev tools/utilities for Mac
+cask 'dbngin'                       # Local MySQL database management
+cask 'diffmerge'                    # File comparison tool
+cask 'gitkraken'                    # Git client GUI
+cask 'iterm2'                       # Better terminalemulator
+cask 'local'                        # Local WordPress development
+cask 'sequel-ace'                   # MySQL database management
+cask 'tableplush'                   # Database management
+cask 'typora'                       # Just a simple markdown editor
+cask 'visual-studio-code@insiders'  # Code editor - Insiders edition - Default
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
