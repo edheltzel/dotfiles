@@ -237,7 +237,7 @@ cask 'gitkraken'                    # Git client GUI
 cask 'iterm2'                       # Better terminalemulator
 cask 'local'                        # Local WordPress development
 cask 'sequel-ace'                   # MySQL database management
-cask 'tableplush'                   # Database management
+cask 'tableplus'                   # Database management
 cask 'typora'                       # Just a simple markdown editor
 cask 'visual-studio-code@insiders'  # Code editor - Insiders edition - Default
 
