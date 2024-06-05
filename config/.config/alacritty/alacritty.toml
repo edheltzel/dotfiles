@@ -1,16 +1,14 @@
-import = [
-  "~/.config/alacritty/themes/lunar-eclipse.toml",
-  "~/.config/alacritty/keybindings.toml"
-  ]
+import = ["~/.config/alacritty/themes/lunar-eclipse.toml", "~/.config/alacritty/keybindings.toml"]
+
 [env]
 TERM = "xterm-256color"
 
 [window]
 blur = true
-  decorations = "Buttonless"
+decorations = "Buttonless"
 dynamic_title = true
-dimensions.columns = 135
-dimensions.lines = 41
+dimensions.columns = 120
+dimensions.lines = 30
 opacity = 0.9
 padding.x = 10
 padding.y = 5
@@ -23,11 +21,14 @@ normal.style = "Regular"
 bold.style = "Bold"
 italic.style = "Italic"
 size = 16
+offset.x = 0
+offset.y = 1
 
 [mouse]
 hide_when_typing = true
 [selection]
 save_to_clipboard = true
+
 
 [cursor]
 thickness = 0.10

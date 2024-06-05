@@ -13,4 +13,4 @@ bindings = [
   # jump to beginning/end of line with ⌘ + left/right
   { key = "Left", mods = "Command", chars = "\u001bOH" },
   { key = "Right", mods = "Command", chars = "\u001bOF" },
-  ]
+]
