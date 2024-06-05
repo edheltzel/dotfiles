@@ -222,11 +222,9 @@ cask 'firefox@developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
 
 # Fonts
-cask 'font-cascadia-code'             # Dev Font - Primary
+cask 'font-cascadia-code-nf'          # Dev/Terminal Font - Primary
 cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
-cask 'font-cascadia-code-pl'          # Terminal Font - Primary
-cask 'font-sauce-code-pro-nerd-font'  # Terminal Font - Secondary
-cask 'font-inter'                     # UI font
+cask 'font-inter'                     # Design font
 
 # Development Apps
 cask 'alacritty'                    # GPU accelerated terminal
