@@ -76,13 +76,13 @@ brew 'zoxide'       # Auto-learning navigation (better cd/jump) - Rust --> fish 
 
 
 # CLI Image Processing and Compression
-brew 'gdk-pixbuf' # Image loading library
-brew 'graphicsmagick' # Image manipulation
-brew 'imagemagick' # Image manipulation
-brew 'jpegoptim' # JPEG image compressionjk
-brew 'mozjpeg' # JPEG image compression
-brew 'optipng' # PNG image compression
-brew 'pango' # Text layout and rendering
+brew 'gdk-pixbuf'         # Image loading library
+brew 'graphicsmagick'     # Image manipulation
+brew 'imagemagick'        # Image manipulation
+brew 'jpegoptim'          # JPEG image compression
+brew 'mozjpeg'            # JPEG image compression
+brew 'optipng'            # PNG image compression
+brew 'pango'              # Text layout and rendering
 
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
