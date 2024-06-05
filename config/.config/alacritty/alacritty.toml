@@ -16,13 +16,13 @@ padding.y = 5
 option_as_alt = "Both"
 
 [font]
-normal.family = "FiraCode Nerd Font Mono"
+normal.family = "Cascadia Code NF"
 normal.style = "Regular"
 bold.style = "Bold"
 italic.style = "Italic"
 size = 16
-offset.x = 0
-offset.y = 1
+offset.x = 1
+offset.y = 2
 
 [mouse]
 hide_when_typing = true
