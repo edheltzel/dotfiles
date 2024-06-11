@@ -73,8 +73,6 @@ brew 'sd'           # RegEx find and replace (better sed) - Rust
 # brew 'watchexec'    # Run command whenever file changes - Rust
 brew 'zoxide'       # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
-
-
 # CLI Image Processing and Compression
 brew 'gdk-pixbuf'         # Image loading library
 brew 'graphicsmagick'     # Image manipulation
