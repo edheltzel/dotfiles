@@ -44,7 +44,7 @@ brew 'zsh-autopair'                        # Auto-pairing for zsh
 brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 
 # CLI Essentials
-brew 'git'          # Version controll
+brew 'git'          # Version control
 brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager
 brew 'topgrade'     # Upgrade all the things - Rust
@@ -181,10 +181,13 @@ cask 'gpg-suite'         # GPG encryption files
 #########################################################
 
 # Creativity
-cask 'adobe-creative-cloud' # Adobe Creative Cloud
+# cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
+cask 'affinity-designer'    # Illustrator replacement
+cask 'affinity-publisher'   # InDesign replacement 
+cask 'affinity-photo'       # Photoshop replacement
 
 # Media
 cask 'boom'                 # Audio enhancer
