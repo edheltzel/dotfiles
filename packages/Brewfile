@@ -137,6 +137,7 @@ brew 'tdewolff/tap/minify'    # Minify HTML, CSS, JS, JSON, SVG, XML
 
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
+brew 'httpie'             # Command line HTTP client
 brew 'docker'             # Containers
 brew 'orbstack'           # Docker image viewer
 brew 'doctl'              # DigitalOcean CLI
@@ -186,7 +187,7 @@ cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
 cask 'affinity-designer'    # Illustrator replacement
-cask 'affinity-publisher'   # InDesign replacement 
+cask 'affinity-publisher'   # InDesign replacement
 cask 'affinity-photo'       # Photoshop replacement
 
 # Media
