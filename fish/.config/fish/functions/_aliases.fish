@@ -17,10 +17,10 @@ alias ... 'cd ../..'
 alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 alias ...... 'cd ../../../../..'
+alias l 'eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize --group-directories-first'
+alias ll 'eza -lagh --git --icons --group-directories-first'
 alias la 'eza -lagh --git --icons --group-directories-first --sort modified'
-alias l 'eza -lagh --git --icons'
-alias ll 'eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize'
-alias cll 'clear; and eza -lah --icons --sort modified'
+alias cll 'clear; and eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize --group-directories-first'
 
 ## Tree view
 alias tree 'eza -Ta --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
@@ -34,8 +34,8 @@ alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
 alias cuts 'cd ~/.dotfiles; and eval $EDITOR .'
-alias oo 'open .'
 alias o open
+alias oo 'open .'
 alias oa 'open -a'
 alias del trash
 alias sdel 'sudo rm -rf'
@@ -52,7 +52,7 @@ alias unzip 'ouch decompress'
 alias listzip 'ouch list'
 alias lzip 'ouch list'
 alias wget 'wget -c'
-alias mux 'zellij'
+alias mux zellij
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
