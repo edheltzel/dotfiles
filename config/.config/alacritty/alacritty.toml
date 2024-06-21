@@ -6,29 +6,22 @@ TERM = "xterm-256color"
 [window]
 blur = true
 decorations = "Buttonless"
-dynamic_title = true
-dimensions.columns = 120
-dimensions.lines = 30
 opacity = 0.9
-padding.x = 10
-padding.y = 5
-
 option_as_alt = "Both"
+dimensions = { columns = 120, lines = 30 }
+padding = { x = 10, y = 5 }
 
 [font]
-normal.family = "Cascadia Code NF"
-normal.style = "Regular"
+size = 16
+offset = { x = 1, y = 2 }
+normal = { family = "Cascadia Code NF", style = "Regular" }
 bold.style = "Bold"
 italic.style = "Italic"
-size = 16
-offset.x = 1
-offset.y = 2
 
 [mouse]
 hide_when_typing = true
 [selection]
 save_to_clipboard = true
-
 
 [cursor]
 thickness = 0.10
