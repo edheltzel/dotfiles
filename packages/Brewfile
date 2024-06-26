@@ -210,7 +210,7 @@ cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'notion'               # Notes and Tasks
 cask 'obsidian'             # Note taking app
-cask 'spotify'
+cask 'spotify'              # Music streaming
 
 # Utility Applications
 cask 'namechanger'          # Rename files in bulk
