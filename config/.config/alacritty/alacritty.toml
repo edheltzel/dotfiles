@@ -11,6 +11,9 @@ option_as_alt = "Both"
 dimensions = { columns = 120, lines = 30 }
 padding = { x = 10, y = 5 }
 
+[scrolling]
+history = 25000
+
 [font]
 size = 16
 offset = { x = 1, y = 2 }
