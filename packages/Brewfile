@@ -208,6 +208,7 @@ cask 'whatsapp'             # Chat app
 cask 'bitwarden'            # Password manager
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
+cask 'notion'               # Notes and Tasks
 cask 'obsidian'             # Note taking app
 cask 'spotify'
 
