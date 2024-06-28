@@ -13,7 +13,7 @@ export XDG_BIN_HOME="${HOME}/.local/bin"
 export XDG_LIB_HOME="${HOME}/.local/lib"
 
 # Apps and Volumes
-export BROWSER="brave"
+export BROWSER="brave browser"
 export EDITOR="code-insiders"
 export PAGER="most"
 export TERMINAL="iterm"
