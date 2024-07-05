@@ -1,6 +1,6 @@
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = code-insiders --wait
+  editor       = code --wait
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
@@ -37,13 +37,13 @@
   tool = vscode
   colorMoved = default
 [difftool "vscode"]
-  cmd = code-insiders --wait --diff $LOCAL $REMOTE
+  cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
   tool = vscode
   log  = true
   conflictstyle = diff3
 [mergetool "vscode"]
-  cmd = code-insiders --wait $MERGED
+  cmd = code --wait $MERGED
 [apply]
   whitespace = fix
 [interactive]

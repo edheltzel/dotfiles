@@ -14,7 +14,7 @@ export XDG_LIB_HOME="${HOME}/.local/lib"
 
 # Apps and Volumes
 # export BROWSER="brave browser"
-export EDITOR="code-insiders"
+export EDITOR="code"
 export PAGER="most"
 export TERMINAL="iterm"
 # export DROPBOX="${HOME}/Library/CloudStorage/Dropbox-RDM"

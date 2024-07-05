@@ -48,7 +48,7 @@ alias config='cd ~/.config && l'
 
 # Editors/Utitlities
 alias upp='topgrade'
-alias code='code-insiders'
+# alias code='code-insiders'
 alias vim='nvim'
 alias btm='btm --battery --fahrenheit'
 alias top='btm --battery --fahrenheit'
