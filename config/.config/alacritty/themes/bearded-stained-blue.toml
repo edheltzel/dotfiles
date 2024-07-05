@@ -1,0 +1,45 @@
+# lunar eclipse theme - @edheltzel
+[colors.primary]
+background = "#0E121E"
+foreground= "#575D70"
+bright_foreground= "#575D70"
+
+[colors.selection]
+text = "#121726"
+background = "#c9a022"
+
+[colors.cursor]
+cursor = "#c9a022"
+text = "#121726"
+
+[colors.normal]
+black = "#121726"
+red = "#C13838"
+green = "#37ae6f"
+yellow = "#c9a022"
+blue = "#3398DB"
+magenta = "#CC71BC"
+cyan = "#24B5A8"
+white = "#bec6df"
+
+[colors.bright]
+black = "#575D70"
+red = "#e61313"
+green = "#15d06d"
+yellow = "#ebb100"
+blue = "#0f9fff"
+magenta = "#e954cf"
+cyan = "#03d6c3"
+white = "#ffffff"
+
+[colors.hints.end]
+background = "#A6ADC8"
+foreground = "#1E1E2E"
+
+[colors.hints.start]
+background = "#F9E2AF"
+foreground = "#1E1E2E"
+
+[colors.search.matches]
+background = "#e5edfc"
+foreground = "#1E1E2E"
