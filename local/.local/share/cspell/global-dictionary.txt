@@ -91,6 +91,7 @@ overscroll
 pagedown
 pageup
 pnpm
+pnpx
 preinstall
 pubkey
 purgecss
