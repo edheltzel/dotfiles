@@ -7,6 +7,7 @@ source ~/.config/fish/conf.d/abbr.fish
 source ~/.config/fish/conf.d/colors.fish # this could be obsolete by starship & eza
 
 fnm env --use-on-cd | source
-# Prompts - Starship & Oh My Posh
+# Starship Prompt
 starship init fish | source
+# OH My Posh Prompt
 # oh-my-posh init fish --config ~/.config/default.omp.json | source
