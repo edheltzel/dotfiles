@@ -133,10 +133,6 @@ There are two options for managing packages with GNU Stow:
   - Configuration files for various applications
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
-- warp (warp/)
-  - Includes my [Lunar Eclipse theme](https://github.com/edheltzel/lunar-eclispe-for-terminal) and Warp preferences.
-  - iTerm2 is my daily driver, I really want to like Warp, but I just can't get into it.
-  - iTerm's preferences are synced with iCloud Drive.
 
 ## Scripts
 
