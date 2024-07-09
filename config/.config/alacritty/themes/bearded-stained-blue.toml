@@ -1,8 +1,8 @@
 # lunar eclipse theme - @edheltzel
 [colors.primary]
 background = "#0E121E"
-foreground= "#575D70"
-bright_foreground= "#575D70"
+foreground= "#6C738A"
+bright_foreground= "#7F869B"
 
 [colors.selection]
 text = "#121726"

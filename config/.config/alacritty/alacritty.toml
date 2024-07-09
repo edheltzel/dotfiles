@@ -1,4 +1,8 @@
-import = ["~/.config/alacritty/themes/bearded-stained-blue.toml", "~/.config/alacritty/keybindings.toml"]
+import = [
+  # "~/.config/alacritty/themes/lunar-eclipse.toml",
+  "~/.config/alacritty/themes/bearded-stained-blue.toml",
+  "~/.config/alacritty/keybindings.toml"
+]
 
 [env]
 TERM = "xterm-256color"
