@@ -245,6 +245,7 @@ cask 'typora'                         # Just a simple markdown editor
 cask 'visual-studio-code'             # Code editor - Default
 # cask 'visual-studio-code@insiders'  # Code editor - Insiders edition
 cask 'ollama'                         # Ollama for LLMs
+brew 'ollama'                         # Ollama cli for LLMs
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
