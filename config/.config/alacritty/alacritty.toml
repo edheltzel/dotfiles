@@ -1,6 +1,5 @@
 import = [
-  # "~/.config/alacritty/themes/lunar-eclipse.toml",
-  "~/.config/alacritty/themes/bearded-stained-blue.toml",
+  "~/.config/alacritty/themes/atelier-lakeside-dark.toml",
   "~/.config/alacritty/keybindings.toml"
 ]
 

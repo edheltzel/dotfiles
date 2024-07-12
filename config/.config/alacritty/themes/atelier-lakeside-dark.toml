@@ -1,0 +1,53 @@
+# modified atelier lakeside dark theme - @edheltzel
+[colors.primary]
+background = "#0b0d0e"
+foreground= "#7ea2b4"
+bright_foreground= "#7ea2b4"
+
+[colors.selection]
+text = "#0b0d0e"
+background = "#c79e34"
+
+[colors.cursor]
+cursor = "#7ea2b4"
+text = "#161b1d"
+
+[colors.normal]
+black = "#1f292e"
+red = "#d22d72"
+green = "#568c3b"
+yellow = "#8a8a0f"
+blue = "#257fad"
+magenta = "#b72dd2"
+cyan = "#2d8f6f"
+white = "#c1e4f6"
+
+[colors.bright]
+black = "#1f292e"
+red = "#d22d72"
+green = "#568c3b"
+yellow = "#8a8a0f"
+blue = "#257fad"
+magenta = "#b72dd2"
+cyan = "#2d8f6f"
+white = "#c1e4f6"
+# black = "#516d7b"
+# red = "#935c25"
+# green = "#516d7b"
+# yellow = "#5a7b8c"
+# blue = "#7195a8"
+# magenta = "#6b6bb8"
+# cyan = "#7ea2b4"
+# white = "#ebf8ff"
+
+[colors.hints.end]
+background = "#A6ADC8"
+foreground = "#1E1E2E"
+
+[colors.hints.start]
+background = "#F9E2AF"
+foreground = "#1E1E2E"
+
+[colors.search.matches]
+background = "#e5edfc"
+foreground = "#1E1E2E"
