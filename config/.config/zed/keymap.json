@@ -1,0 +1,9 @@
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-ctrl-=": "pane::CloseActiveItem",
+      "ctrl-alt-p": "workspace::ToggleZoom"
+    }
+  }
+]

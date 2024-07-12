@@ -9,7 +9,7 @@
 {
   // General options
   "buffer_font_size": 16,
-  "buffer_font_family": "CascadiaCodeRoman-SemiLight",
+  "buffer_font_family": "Cascadia Code NF",
   "buffer_font_features": {
     "calt": true
   },
@@ -17,7 +17,7 @@
     "left_padding": 0.3,
     "right_padding": 0
   },
-  "ui_font_family": "CascadiaCodeRoman-SemiLight",
+  "ui_font_family": "Cascadia Code NF",
   "tab_bar": {
     "show_nav_history_buttons": false
   },
@@ -39,7 +39,7 @@
   "theme": {
     "mode": "dark",
     "dark": "Atelier Lakeside Dark",
-    "light": "Atelier Lakeside Light"
+    "light": "Atelier Seaside Light"
   },
   // Vim options
   "vim_mode": true,
@@ -49,7 +49,7 @@
   "terminal": {
     "blinking": "on",
     "copy_on_select": true,
-    "font_family": "SauceCodePro Nerd Font",
+    "font_family": "Cascadia Code NF",
     "font_size": 16
   }
 }
