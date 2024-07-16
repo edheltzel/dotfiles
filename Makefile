@@ -27,7 +27,7 @@ run: ## Symlink all dotfiles w/Stow
 	done
 	@echo "Dotfiles stowed successfully"
 
-.PHONY: stow
+.PHONY: stow add
 stow: ## Add individual packages w/Stow
 	@if [ -z "${pkg}" ]; then \
 		echo "Error: Please specify a package to stow. \n$(YELLOW)ie: $(YELLOW)make stow pkg=<pacakgeName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
@@ -40,7 +40,7 @@ stow: ## Add individual packages w/Stow
 	stow ${pkg}
 	@echo "${pkg} was added"
 
-.PHONY: unstow
+.PHONY: unstow remove
 unstow: ## Remove individual packages w/Stow
 	@if [ -z "${pkg}" ]; then \
 		echo "Error: Please specify a package to unstow. \n$(YELLOW)ie: $(YELLOW)make unstow pkg=<pacakgeName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
@@ -53,8 +53,7 @@ unstow: ## Remove individual packages w/Stow
 	stow --delete ${pkg}
 	@echo "${pkg} was removed"
 
-
-.PHONY: update
+.PHONY: update up
 update:
 	@for pkg in $(STOW_PACKAGES); do \
 		stow --restow $$pkg; \
@@ -67,3 +66,7 @@ delete: ## Delete all dotfiles w/Stow
 		stow --delete $$pkg; \
 	done
 	@echo "$(WHITE)Dotfiles zapped! ⚡️"
+
+up: update ## Same as update command
+add: stow ## Same as stow command
+remove: unstow ## Same as unstow command
