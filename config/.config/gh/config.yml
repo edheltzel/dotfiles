@@ -15,6 +15,11 @@ aliases:
   add: issue create --title
   todo: issue create -a @me --title
   mine: issue list -a @me
+  rel: release create --generate-notes --latest
+  web: repo view --web
+  mr: pr create -a "@me" --fill
+  clog: changelog new
+
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
 http_unix_socket:
 # What web browser gh should use when opening URLs. If blank, will refer to environment.
