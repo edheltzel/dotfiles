@@ -9,7 +9,7 @@ alias mv 'mv -i'
 alias rm 'rm -i'
 
 alias md 'mkdir -p'
-alias rd rmdir
+alias rd 'rmdir -p'
 
 # Navigation
 alias .. 'cd ..'
