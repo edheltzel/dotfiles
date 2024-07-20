@@ -56,7 +56,6 @@ brew 'bat'          # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
 brew 'broot'       # File tree explorer (better tree) - Rust
 brew 'chafa'       # Image to ASCII art converter
-# brew 'cmake'        # Build system
 brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
 brew 'duti'         # Set default apps for file types
 brew 'eza'          # Listing files with info (better ls) replaces exa - Rust
@@ -70,7 +69,6 @@ brew 'most'         # Multi-window scroll pager (better less)
 brew 'ripgrep'      # Searching within files (better grep) - Rust
 brew 'rsync'        # Fast incremental file transfer
 brew 'sd'           # RegEx find and replace (better sed) - Rust
-# brew 'watchexec'    # Run command whenever file changes - Rust
 brew 'zoxide'       # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
 # CLI Image Processing and Compression
