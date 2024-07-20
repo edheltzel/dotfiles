@@ -193,7 +193,6 @@ cask 'affinity-photo'       # Photoshop replacement
 # Media
 cask 'boom'                 # Audio enhancer
 cask 'iina'                 # Media player
-cask 'imageoptim'           # Image compression
 cask 'kap'                  # Screen recorder
 cask 'keycastr'             # Display keystrokes
 brew 'pandoc'               # Universal file converter
@@ -232,7 +231,6 @@ cask 'font-inter'                     # Design font
 # Development Apps
 cask 'alacritty'                      # GPU accelerated terminal
 cask 'cyberduck'                      # Mount remote storage locations
-cask 'dbeaver-community'              # Database management
 cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'dbngin'                         # Local MySQL database management
 cask 'diffmerge'                      # File comparison tool
@@ -243,9 +241,6 @@ cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
 cask 'typora'                         # Just a simple markdown editor
 cask 'visual-studio-code'             # Code editor - Default
-# cask 'visual-studio-code@insiders'  # Code editor - Insiders edition
-cask 'ollama'                         # Ollama for LLMs
-brew 'ollama'                         # Ollama cli for LLMs
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
