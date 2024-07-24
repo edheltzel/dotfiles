@@ -5,5 +5,14 @@
       "cmd-ctrl-=": "pane::CloseActiveItem",
       "ctrl-alt-p": "workspace::ToggleZoom"
     }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd"
+    }
   }
 ]
