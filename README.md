@@ -1,4 +1,4 @@
-# Mr EdHeltzel's Dotfiles
+<h1 id="to-the-top">Mr EdHeltzel's Dotfiles</h1>
 
 ### My setup for 🐠 Fish shell on  macOS - `v3`
 
@@ -11,8 +11,16 @@ Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS
   - [v2](https://github.com/edheltzel/dotfiles/tree/v2) uses fish shell + custom scripts
 </details>
 
+Table of Contents:
+- [Prerequisites](#prereq)
+- [The Nitty Gritty](#the-nitty-gritty)
+- [Troubleshooting](#troubleshooting)
+  - [Dotfiles](#troubleshoot-dotfiles)
+  - [MacOS](#troubleshoot-macos)
+- [TODOs](#todos)
+- [Scripts](#scripts)
 
-## Prerequisites
+<h2 id="prereq">Prerequisites <a href="#to-the-top">↑</a></h2>
 
 <details>
   <summary><strong>Install with a single line...</strong></summary>
@@ -65,9 +73,9 @@ Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS
   7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
 </details>
 
-## **👋 For future Mr EdHeltzel**:
+<h2 id="for-future-ed">👋 For future Mr EdHeltzel<a href="#to-the-top">↑</a></h2>
 
-Since we have a bad habit of forgetting things:
+Since we have a bad habit of forgetting things - see [Troubleshooting](#troubleshooting):
 
 1. Installing Xcode Command Line Tools
     - `sudo softwardupdate -i -a && xcode-select --install` This will install `git` and `make` if not already installed.
@@ -87,7 +95,8 @@ Since we have a bad habit of forgetting things:
     - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (in macos/security.sh)
     - Make sure to run `fnm env --use-on-cd | source` to enable auto-switching of Node versions. (in fish)
 
-## The Nitty Gritty
+
+<h2 id="the-nitty-gritty">The Nitty Gritty <a href="#to-the-top">↑</a></h2>
 
 Originally, I used a series of custom scripts to create symlinks, and it worked, but I've since switched to using [GNU Stow][STOW]. This is way easier to manage.
 
@@ -134,7 +143,7 @@ There are two options for managing packages with GNU Stow:
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
 
-## Scripts
+<h2 id="scripts">Scripts <a href="#to-the-top">↑</a></h2>
 
 Any of the scripts can be run individually at any time to update/reset as needed. ie: `cd ~/.dotfiles && ./duti/duti.sh`
 
@@ -152,7 +161,8 @@ Any of the scripts can be run individually at any time to update/reset as needed
 - Helper Scripts (scripts/)
   - `functions.sh` - Contains helper functions for for the scripts
 
-## Troubleshooting
+<h2 id="troubleshooting">Troubleshooting <a href="#to-the-top">↑</a></h2>
+<h4 id="troubleshoot-dotfiles">Dotfiles<a href="#to-the-top">↑</a></h4>
 <details>
   <summary>Fish: Fisher Plugin Manager</summary>
   In the past, Fisher (fish plugin manager) would do something weird or introduce a breaking change - just reinstall Fisher.
@@ -220,6 +230,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
       allowedSignersFile = PATH_TO_YOUR_ALLOWED_SIGNERS_FILE
   ```
   If you choose to use this, make sure you look at that `./git/git.sh`; this script is where the provisioning of `.gitconfig.local` happens.
+</details>
 <details>
   <summary>GPG Commit Signing - <em>optional</em></summary>
 
@@ -241,6 +252,43 @@ Any of the scripts can be run individually at any time to update/reset as needed
     - To get VSCode setup follow this [article](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
   - **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
 </details>
+<details>
+  <summary>Rust and Cargo</summary>
+  From time to time, `cargo` will fail to update/upgrade using `topgrade`. This is generally due to something changing inside of the Rust system that doesn't allow `cargo install cargo-update` to work.
+
+  **The solution:**
+  Uninstall and reinstall `rust` and `rustup-init` along with `cargo` using `brew`.
+
+  ```shell
+  brew uninstall rustup-init;
+  and brew reinstall rust;
+  and cargo uninstall cargo;
+  cargo install cargo-update --force;
+  topgrade --only cargo
+  ```
+</details>
+<details>
+  <summary>SSH Agent</summary>
+  In the even when restarting macOS, the SSH agent will not be running, even though it is configured to run on login. A result of this is that Git will keep asking for your SSH Passphrase, to resolve this you will need to execute the following:
+
+  ```shell
+  eval ssh-agent;
+  and ssh-add --apple-use-keychain
+  ```
+  <small>What this does: Starts the SSH agent and adds the SSH key to the keychain.</small>
+
+  Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-agent) to manage the SSH agent, we only have to run this once.
+</details>
+<h4 id="troubleshoot-macos">MacOS<a href="#to-the-top">↑</a></h4>
+<details>
+  <summary>WindowServer RAM Leak</summary>
+  As of `2024-07` there is a known bug/issue with macOS where the WindowServer will consume CPU and/or Memory. It is annoying. From my experience, this is related to more than one external monitor. My current workaround is to kill the WindowServer on macOS, which logs you out. Once you log back in the WindowServer will be restarted and your RAM usage will be back in normal ranges. This is a workaround until Apple fixes the issue, which will probably never happen.
+  <strong>Usage:</strong>
+  <ul>
+    <li>Open iTerm/Alacritty</li>
+    <li>run `killws` <em>(work for both Fish and Zsh)</em></li>
+    <li>Log back into your account</li>
+  </ul>
 </details>
 <details>
   <summary>Media Control Keys</summary>
@@ -253,18 +301,24 @@ Any of the scripts can be run individually at any time to update/reset as needed
   ```
   This `luanchctl` will reenable media key, which in turn will control Spotify 🙂
 </details>
+<details>
+  <summary>Ethernet Backhaul</summary>
+  Run the `flashEthernet` function to "flush" the Ethernet backhaul.
 
-
-
-## TODOs
+  ```shell
+  flashEthernet; and echo 'Ethernet backhaul flushed'
+  speedtest
+  ```
+</details>
+<h2 id="todos">TODOs <a href="#to-the-top">↑</a></h2>
 
 - [ ] Look into other/better options that Stow:
   - [ ][Tuckr](https://github.com/RaphGL/Tuckr)
   - [ ][Rotz](https://github.com/volllly/rotz)
 - [ ] Convert fish functions to zsh functions - **WIP**
-- [ ] zsh completions doesn't seem to be working as expected [issue #40](https://github.com/edheltzel/dotfiles/issues/40)
+- [ ] zsh completions seem to be broken [issue #40](https://github.com/edheltzel/dotfiles/issues/40)
   - [ ] Look into zsh-completions vs autocomplete
-- [x] Consider using [NixOS](https://nixos.org/) for package management over Homebrew. ie: [good example](https://github.com/biosan/dotfiles)
+- [ ] Consider using [NixOS](https://nixos.org/) for package management over Homebrew. ie: [good example](https://github.com/biosan/dotfiles)
 - [x] include zsh abbreviations
 - [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
@@ -292,3 +346,4 @@ Any of the scripts can be run individually at any time to update/reset as needed
 [ThanksKalis]: https://kalis.me/dotfiles-automating-macos-system-configuration/
 [ThanksLissy]: https://github.com/lissy93/dotfiles
 [ThanksJake]: https://www.jakewiesler.com/blog/managing-dotfiles
+[Troubleshooting]: #troubleshooting
