@@ -72,6 +72,7 @@ ITCSS
 iterm
 jampack
 Jamstack
+keychain
 Laravel
 lazyvim
 lightningcss
@@ -102,6 +103,7 @@ renderfile
 repodir
 restow
 Roadmap
+rustup
 scminput
 scrollback
 setend
