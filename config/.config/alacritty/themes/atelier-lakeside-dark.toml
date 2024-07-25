@@ -37,9 +37,9 @@ background = "#A6ADC8"
 foreground = "#1E1E2E"
 
 [colors.hints.start]
-background = "#F9E2AF"
+background = "#e5edfc"
 foreground = "#1E1E2E"
 
 [colors.search.matches]
-background = "#e5edfc"
+background = "#F9E2AF"
 foreground = "#1E1E2E"
