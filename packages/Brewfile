@@ -227,13 +227,14 @@ cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
 cask 'font-inter'                     # Design font
 
 # Development Apps
-cask 'alacritty'                      # GPU accelerated terminal
+cask 'alacritty'                      # GPU accelerated terminal - Rust
 cask 'cyberduck'                      # Mount remote storage locations
-cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'dbngin'                         # Local MySQL database management
+cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'diffmerge'                      # File comparison tool
 cask 'gitkraken'                      # Git client GUI
 cask 'iterm2'                         # Better terminalemulator
+cask 'kitty'                          # terminal emulator - Rust
 cask 'local'                          # Local WordPress development
 cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
