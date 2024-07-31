@@ -217,7 +217,6 @@ cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://u
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in
 cask 'brave-browser'             # Brave browser
-cask 'brave-browser@beta'        # Brave beta browser
 cask 'firefox@developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
 
