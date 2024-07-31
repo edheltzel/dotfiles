@@ -181,7 +181,7 @@ cask 'gpg-suite'         # GPG encryption files
 
 # Creativity
 # cask 'adobe-creative-cloud' # Adobe Creative Cloud
-cask 'figma'                # Design tool
+cask 'figma@beta'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
 cask 'affinity-designer'    # Illustrator replacement
