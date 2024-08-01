@@ -225,6 +225,7 @@ cask 'font-cascadia-code-nf'          # Dev/Terminal Font
 cask 'font-geist-mono-nerd-font'      # Dev/Terminal Font - Primary
 cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
 cask 'font-inter'                     # Design font
+cask 'font-geist'                     # Design font 
 
 # Development Apps
 cask 'alacritty'                      # GPU accelerated terminal - Rust
