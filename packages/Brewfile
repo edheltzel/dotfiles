@@ -219,6 +219,7 @@ cask 'choosy'                    # Choose which browser to open links in
 cask 'brave-browser'             # Brave browser
 cask 'firefox@developer-edition' # Firefox dev edition
 cask 'google-chrome'             # Chrome browser
+cask 'responsively'              # Browser Testing
 
 # Fonts
 cask 'font-cascadia-code-nf'          # Dev/Terminal Font
