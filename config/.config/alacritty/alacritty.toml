@@ -13,6 +13,7 @@ opacity = 0.9
 option_as_alt = "Both"
 dimensions = { columns = 120, lines = 30 }
 padding = { x = 10, y = 5 }
+position= { x = 670, y = 413 }
 
 [scrolling]
 history = 25000
@@ -20,7 +21,7 @@ history = 25000
 [font]
 size = 16
 offset = { x = 1, y = 1 }
-normal = { family = "Cascadia Code NF", style = "Regular" }
+normal = { family = "GeistMono Nerd Font", style = "Light" }
 bold.style = "Bold"
 italic.style = "Italic"
 
