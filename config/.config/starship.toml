@@ -1,18 +1,15 @@
 format = "$all"
-right_format = "$cmd_duration"
+# right_format = "$cmd_duration"
 
 command_timeout = 2000
 
 [battery]
 disabled = true
-## arrow character ##
-# [\u279c](#7AA2F7)
-## end arrow character ##
 
 ## start character ##
 [character]
 success_symbol = '[](bold #9ECE6A)'
-error_symbol = '[](bold #F7768E)'
+error_symbol = '[](bold #F7768E)'
 
 [shell]
 fish_indicator = ""
@@ -22,13 +19,13 @@ disabled = false
 ## end character ##
 
 ## start prompt ##
-
 [directory]
 format = "[\u26a1](#7DCFFF)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…/"
 
 [git_branch]
+style = "#F141A8"
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
 
@@ -39,6 +36,7 @@ deleted_style = "#F7768E"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
+style = "white"
 format = "([$all_status$ahead_behind]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
 ahead = "[ ×${count} ](white)"
@@ -50,62 +48,65 @@ modified = "[ ×${count} ](#E0AF68)"
 staged = "[ ×${count} ](bright-green)"
 deleted = "[ ×${count} ](bright-red)"
 renamed = "[ ×${count} ](fg:214)"
-style = "white"
 
-## end prompt ##
-
-## start right prompt ##
 [cmd_duration]
 disabled = false
 min_time = 1
 format = "[󰔛 $duration]($style)"
 style = "#CFC9C2"
-
-## Add to right_format above to enable ##
-# [time]
-# disabled = false
-# time_format = "%I:%M%P"
-# # style = "fg:black" # use for light color terminal themes
-# style = "fg:#C0CAF5"         # use for dark color terminal themes
-# format = "[ $time]($style)"
-## end right prompt ##
+## end prompt ##
 
 ## start custom symbols ##
-
-[aws]
-symbol = "  "
-format = "[$symbol($version )]($style)"
-
 [package]
 symbol = "󰏗 "
 
+[aws]
+style = "#FFA400"
+format = "[$symbol($version )]($style)"
+symbol = "  "
+
 [deno]
-symbol = "󱍢 "
 format = "[$symbol($version )]($style)"
 style = "bright-black"
-
-[golang]
-format = "[$symbol($version )]($style)"
-symbol = " "
+symbol = "󱍢 "
 
 [nodejs]
 format = "[$symbol($version )]($style)"
 symbol = "󰎙 "
 detect_extensions = []
 
+[bun]
+format = "[$symbol($version )]($style)"
+style = "#CCBEA7"
+detect_extensions = []
+
+[golang]
+style = "#7FD5EA"
+format = "[$symbol($version )]($style)"
+symbol = " "
+
+[lua]
+style = "blue"
+format = "[$symbol($version )]($style)"
+symbol = " "
+
 [php]
+style = "#4063DB"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [python]
+style = "#906cff"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [ruby]
+style = "#CF043D"
 format = "[$symbol($version )]($style)"
 symbol = "󰴭 "
 
 [rust]
+style = "#99908A"
 format = "[$symbol($version )]($style)"
 symbol = " "
 ## end custom symbols ##

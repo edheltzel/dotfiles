@@ -6,123 +6,148 @@ alignment = "left"
 type = "prompt"
 newline = true
 
-  [[blocks.segments]]
-  foreground = "cyan"
-  style = "plain"
-  template = "{{ .Path }} "
-  type = "path"
+[[blocks.segments]]
+foreground = "cyan"
+style = "plain"
+template = "<#7DCFFF>\u26a1</>{{ .Path }} "
+type = "path"
 
-    [blocks.segments.properties]
-    style = "folder"
+[blocks.segments.properties]
+style = "folder"
 
-  [[blocks.segments]]
-  foreground = "#F141A8"
-  style = "diamond"
-  template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152> {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} "
-  type = "git"
+[[blocks.segments]]
+foreground = "#F141A8"
+style = "diamond"
+template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152> {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} "
+type = "git"
 
-    [blocks.segments.properties]
-    branch_icon = " "
-    fetch_stash_count = true
-    fetch_status = true
-    fetch_e_count = true
+[blocks.segments.properties]
+branch_icon = " "
+fetch_stash_count = true
+fetch_status = true
+fetch_e_count = true
 
-  [[blocks.segments]]
-  foreground = "#FFA400"
-  style = "plain"
-  template = " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
-  type = "aws"
+[[blocks.segments]]
+type = "aws"
+foreground = "#FFA400"
+style = "plain"
+template = " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
 
-  [[blocks.segments]]
-  foreground = "#ff7a14"
-  style = "plain"
-  template = "{{if .Version}} 󰏗 {{.Version}} {{end}}"
-  type = "project"
+[[blocks.segments]]
+type = "project"
+foreground = "#FF7A14"
+style = "plain"
+template = "{{if .Version}} 󰏗 {{.Version}} {{end}}"
 
-  [[blocks.segments]]
-  foreground = "#c00c00"
-  style = "plain"
-  template = " {{ .Full }} "
-  type = "npm"
+[[blocks.segments]]
+foreground = "darkGray"
+style = "plain"
+template = "󱍢 {{ .Full }} "
+type = "deno"
 
-  [[blocks.segments]]
-  foreground = "green"
-  style = "plain"
-  template = "󰎙 {{ .Full }} "
-  type = "node"
+[[blocks.segments]]
+foreground = "green"
+style = "plain"
+template = "󰎙 {{ .Full }} "
+type = "node"
 
-    [blocks.segments.properties]
-    fetch_version = true
+[[blocks.segments]]
+display_mode = "files"
+files = ["package-lock.json"]
+foreground = "#C00C00"
+style = "plain"
+template = " {{ .Full }} "
+type = "npm"
 
-  [[blocks.segments]]
-  foreground = "#CF043D"
-  style = "plain"
-  template = "󰴭 {{.Full}} "
-  type = "ruby"
+[[blocks.segments]]
+display_mode = "files"
+files = ["pnpm-lock.yaml"]
+foreground = "#F9AD06"
+style = "plain"
+template = "󱇚 {{ .Full }} "
+type = "pnpm"
 
-  [[blocks.segments]]
-  foreground = "#4063DB"
-  style = "plain"
-  template = " {{.Full}} "
-  type = "php"
+[[blocks.segments]]
+display_mode = "files"
+files = ["bun.lockb"]
+foreground = "#CCBEA7"
+style = "plain"
+template = "🥟 {{ .Full }} "
+type = "bun"
 
-  [[blocks.segments]]
-  foreground = "#7FD5EA"
-  style = "plain"
-  template = " {{.Full}} "
-  type = "go"
+[blocks.segments.properties]
+fetch_version = true
 
-  [[blocks.segments]]
-  foreground = "#906cff"
-  style = "plain"
-  template = " {{.Full}} "
-  type = "python"
+[[blocks.segments]]
+foreground = "#7FD5EA"
+style = "plain"
+template = " {{.Full}} "
+type = "go"
 
-  [[blocks.segments]]
-  foreground = "#99908A"
-  style = "plain"
-  template = " {{.Full}} "
-  type = "rust"
+[[blocks.segments]]
+foreground = "blue"
+style = "plain"
+template = " {{.Full}} "
+type = "lua"
 
-  [[blocks.segments]]
-  foreground = "blue"
-  style = "plain"
-  template = " {{.Full}} "
-  type = "lua"
+[[blocks.segments]]
+foreground = "#4063DB"
+style = "plain"
+template = " {{.Full}} "
+type = "php"
 
-  [[blocks.segments]]
-  foreground = "yellow"
-  leading_diamond = "<yellow>󰔛</>"
-  style = "diamond"
-  template = " {{ .FormattedMs }} "
-  type = "executiontime"
+[[blocks.segments]]
+foreground = "#906CFF"
+style = "plain"
+template = " {{.Full}} "
+type = "python"
 
-    [blocks.segments.properties]
-    style = "roundrock"
-    threshold = 0
+[[blocks.segments]]
+foreground = "#CF043D"
+style = "plain"
+template = "󰴭 {{.Full}} "
+type = "ruby"
+
+[[blocks.segments]]
+foreground = "#99908A"
+style = "plain"
+template = " {{.Full}} "
+type = "rust"
+
+
+[[blocks.segments]]
+foreground = "#CFC9C2"
+leading_diamond = "<#CFC9C2>󰔛</>"
+style = "diamond"
+template = " {{ .FormattedMs }} "
+type = "executiontime"
+
+[blocks.segments.properties]
+style = "roundrock"
+threshold = 0
 
 [[blocks]]
+type = "prompt"
 alignment = "left"
 newline = true
-type = "prompt"
 
-  [[blocks.segments]]
-  foreground = "green"
-  style = "plain"
-  template = "❯ "
-  type = "text"
+[[blocks.segments]]
+type = "text"
+foreground_templates = ["{{ if gt .Code 0 }}#F7768E{{ end }}", "{{ if eq .Code 0}}#9ECE6A{{ end }}"]
+style = "plain"
+template = "❯ "
 
-  [blocks.valid_line]
-  background = "transparent"
-  foreground = "#ffffff"
-  template = "<#e0def4,#286983> </><#286983,transparent></> "
+[blocks.valid_line]
+background = "transparent"
+foreground = "#FFFFFF"
+template = "<#E0DEF4,#286983> </><#286983,transparent></> "
 
-  [blocks.error_line]
-  background = "transparent"
-  foreground = "#ffffff"
-  template = "<#eb6f92,#286983> </><#286983,transparent></> "
+[blocks.error_line]
+background = "transparent"
+foreground = "#FFFFFF"
+template = "<#EB6F92,#286983> </><#286983,transparent></> "
 
 [transient_prompt]
-  foreground = "green"
-  background = "transparent"
-  template = "❯ "
+foreground = "green"
+background = "transparent"
+template = "❯ "
