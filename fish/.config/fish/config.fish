@@ -8,6 +8,12 @@ source ~/.config/fish/conf.d/colors.fish # this could be obsolete by starship & 
 
 fnm env --use-on-cd | source
 # Starship Prompt
+function starship_transient_prompt_func
+  starship module character
+end
 starship init fish | source
+enable_transience
+
 # OH My Posh Prompt
 # oh-my-posh init fish --config ~/.config/default.omp.json | source
+# oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
