@@ -1,0 +1,122 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 2
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+  [[blocks.segments]]
+  foreground = "cyan"
+  style = "plain"
+  template = "{{ .Path }} "
+  type = "path"
+
+    [blocks.segments.properties]
+    style = "folder"
+
+  [[blocks.segments]]
+  foreground = "#F141A8"
+  style = "diamond"
+  template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152> {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} "
+  type = "git"
+
+    [blocks.segments.properties]
+    branch_icon = " "
+    fetch_stash_count = true
+    fetch_status = true
+    fetch_e_count = true
+
+  [[blocks.segments]]
+  foreground = "#FFA400"
+  style = "plain"
+  template = " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+  type = "aws"
+
+  [[blocks.segments]]
+  foreground = "#ff7a14"
+  style = "plain"
+  template = "{{if .Version}} 󰏗 {{.Version}} {{end}}"
+  type = "project"
+
+  [[blocks.segments]]
+  foreground = "#c00c00"
+  style = "plain"
+  template = " {{ .Full }} "
+  type = "npm"
+
+  [[blocks.segments]]
+  foreground = "green"
+  style = "plain"
+  template = "󰎙 {{ .Full }} "
+  type = "node"
+
+    [blocks.segments.properties]
+    fetch_version = true
+
+  [[blocks.segments]]
+  foreground = "#CF043D"
+  style = "plain"
+  template = "󰴭 {{.Full}} "
+  type = "ruby"
+
+  [[blocks.segments]]
+  foreground = "#4063DB"
+  style = "plain"
+  template = " {{.Full}} "
+  type = "php"
+
+  [[blocks.segments]]
+  foreground = "#7FD5EA"
+  style = "plain"
+  template = " {{.Full}} "
+  type = "go"
+
+  [[blocks.segments]]
+  foreground = "#906cff"
+  style = "plain"
+  template = " {{.Full}} "
+  type = "python"
+
+  [[blocks.segments]]
+  foreground = "#99908A"
+  style = "plain"
+  template = " {{.Full}} "
+  type = "rust"
+
+  [[blocks.segments]]
+  foreground = "blue"
+  style = "plain"
+  template = " {{.Full}} "
+  type = "lua"
+
+  [[blocks.segments]]
+  foreground = "yellow"
+  leading_diamond = "<yellow>󰔛</>"
+  style = "diamond"
+  template = " {{ .FormattedMs }} "
+  type = "executiontime"
+
+    [blocks.segments.properties]
+    style = "roundrock"
+    threshold = 0
+
+[[blocks]]
+alignment = "left"
+newline = true
+type = "prompt"
+
+  [[blocks.segments]]
+  foreground = "green"
+  style = "plain"
+  template = "❯ "
+  type = "text"
+
+  [blocks.valid_line]
+  background = "transparent"
+  foreground = "#ffffff"
+  template = "<#e0def4,#286983> </><#286983,transparent></> "
+
+  [blocks.error_line]
+  background = "transparent"
+  foreground = "#ffffff"
+  template = "<#eb6f92,#286983> </><#286983,transparent></> "
