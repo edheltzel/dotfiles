@@ -78,7 +78,7 @@ detect_extensions = []
 [bun]
 format = "[$symbol($version )]($style)"
 style = "#CCBEA7"
-symbol = " "
+symbol = " "
 detect_extensions = []
 
 [golang]
