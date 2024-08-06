@@ -33,6 +33,11 @@
     "dock": "left"
   },
   "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o"
+    },
+    "version": "2",
     "dock": "left"
   },
   // Theme options
