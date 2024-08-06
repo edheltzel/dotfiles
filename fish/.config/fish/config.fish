@@ -9,7 +9,7 @@ source ~/.config/fish/conf.d/colors.fish # this could be obsolete by starship & 
 fnm env --use-on-cd | source
 
 ### start Prompt ###
-# # Starship Prompt
+# Starship Prompt
 function starship_transient_prompt_func
   starship module character
 end
