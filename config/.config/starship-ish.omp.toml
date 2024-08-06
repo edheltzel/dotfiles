@@ -4,6 +4,7 @@ version = 2
 [[blocks]]
 alignment = "left"
 type = "prompt"
+newline = true
 
   [[blocks.segments]]
   foreground = "cyan"
@@ -120,3 +121,8 @@ type = "prompt"
   background = "transparent"
   foreground = "#ffffff"
   template = "<#eb6f92,#286983> </><#286983,transparent></> "
+
+[transient_prompt]
+  foreground = "green"
+  background = "transparent"
+  template = "❯ "
