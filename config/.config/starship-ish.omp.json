@@ -1,0 +1,175 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "var":{
+    "lightning": "⚡",
+    "lightningColor": "#7DCFFF"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "type": "prompt",
+      "segments": [
+        {
+          "foreground": "cyan",
+          "style": "plain",
+          "template": "<{{ .Var.lightningColor }}>{{ .Var.lightning }}</>{{ .Path }} ",
+          "type": "path",
+          "properties": {
+            "style": "agnoster_short",
+            "hide_root_location": true,
+            "folder_icon": "…"
+          }
+        },
+        {
+          "foreground": "#F141A8",
+          "style": "plain",
+          "template": "<#7ea2b4>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152> {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} ",
+          "type": "git",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_upstream_icon": true,
+            "fetch_e_count": true,
+            "fetch_stash_count": true,
+            "fetch_status": true
+          }
+        },
+        {
+          "foreground": "#FFA400",
+          "style": "plain",
+          "template": " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "type": "aws"
+        },
+        {
+          "foreground": "#FF7A14",
+          "style": "plain",
+          "template": "{{if .Version}} 󰏗 {{.Version}} {{end}}",
+          "type": "project"
+        },
+        {
+          "foreground": "darkGray",
+          "style": "plain",
+          "template": "󱍢 {{ .Full }} ",
+          "type": "deno"
+        },
+        {
+          "foreground": "green",
+          "style": "plain",
+          "template": "󰎙 {{ .Full }} ",
+          "type": "node"
+        },
+        {
+          "display_mode": "files",
+          "files": [
+            "package-lock.json"
+          ],
+          "foreground": "#C00C00",
+          "style": "plain",
+          "template": " {{ .Full }} ",
+          "type": "npm"
+        },
+        {
+          "display_mode": "files",
+          "files": [
+            "pnpm-lock.yaml"
+          ],
+          "foreground": "#F9AD06",
+          "style": "plain",
+          "template": "󱇚 {{ .Full }} ",
+          "type": "pnpm"
+        },
+        {
+          "display_mode": "files",
+          "files": [
+            "bun.lockb"
+          ],
+          "foreground": "#CCBEA7",
+          "style": "plain",
+          "template": "  {{ .Full }} ",
+          "type": "bun",
+          "properties": {
+            "fetch_version": true
+          }
+        },
+        {
+          "foreground": "#7FD5EA",
+          "style": "plain",
+          "template": " {{.Full}} ",
+          "type": "go"
+        },
+        {
+          "foreground": "blue",
+          "style": "plain",
+          "template": " {{.Full}} ",
+          "type": "lua"
+        },
+        {
+          "foreground": "#4063DB",
+          "style": "plain",
+          "template": " {{.Full}} ",
+          "type": "php"
+        },
+        {
+          "foreground": "#906CFF",
+          "style": "plain",
+          "template": " {{.Full}} ",
+          "type": "python"
+        },
+        {
+          "foreground": "#CF043D",
+          "style": "plain",
+          "template": "󰴭 {{.Full}} ",
+          "type": "ruby"
+        },
+        {
+          "foreground": "#99908A",
+          "style": "plain",
+          "template": " {{.Full}} ",
+          "type": "rust"
+        },
+        {
+          "foreground": "#CFC9C2",
+          "style": "plain",
+          "template": "<#CFC9C2>󰔛</> {{ .FormattedMs }} ",
+          "type": "executiontime",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 0
+          }
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "type": "prompt",
+      "segments": [
+        {
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#F7768E{{ end }}",
+            "{{ if eq .Code 0}}#9ECE6A{{ end }}"
+          ],
+          "style": "plain",
+          "template": "❯ ",
+          "type": "text"
+        }
+      ],
+      "error_line": {
+        "background": "transparent",
+        "foreground": "#FFFFFF",
+        "template": "<#EB6F92,#286983> </><#286983,transparent></> "
+      },
+      "valid_line": {
+        "background": "transparent",
+        "foreground": "#FFFFFF",
+        "template": "<#E0DEF4,#286983> </><#286983,transparent></> "
+      }
+    }
+  ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "green",
+    "template": "❯ "
+  }
+}

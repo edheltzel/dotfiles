@@ -17,4 +17,4 @@ starship init fish | source
 enable_transience
 
 # OH My Posh Prompt
-# oh-my-posh init fish --config ~/.config/starship-ish.omp.toml | source
+# oh-my-posh init fish --config ~/.config/starship-ish.omp.json| source
