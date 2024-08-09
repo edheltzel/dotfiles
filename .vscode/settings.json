@@ -1,4 +1,7 @@
 {
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#6b6bb8"
+  },
   "cSpell.words": [
     "abbrex",
     "AFPS",
