@@ -33,6 +33,7 @@
 .liquid
 .list
 .log
+.lua
 .mod
 .njk
 .php
@@ -53,6 +54,7 @@
 .twig
 .txt
 .vue
+.webc
 .xhtml
 .xml
 .yaml
