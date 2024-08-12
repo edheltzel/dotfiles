@@ -1,6 +1,7 @@
 alacritty
 alpinejs
 astro
+astrojs
 Autocare
 Autoconvert
 autofit
