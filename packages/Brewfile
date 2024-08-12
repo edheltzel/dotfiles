@@ -206,7 +206,7 @@ cask 'bitwarden'            # Password manager
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'notion'               # Notes and Tasks
-cask 'obsidian'             # Note taking app
+# cask 'obsidian'             # Note taking app
 cask 'spotify'              # Music streaming
 
 # Utility Applications
@@ -226,7 +226,7 @@ cask 'font-cascadia-code-nf'          # Dev/Terminal Font
 cask 'font-geist-mono-nerd-font'      # Dev/Terminal Font - Primary
 cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
 cask 'font-inter'                     # Design font
-cask 'font-geist'                     # Design font 
+cask 'font-geist'                     # Design font
 
 # Development Apps
 cask 'alacritty'                      # GPU accelerated terminal - Rust
@@ -236,7 +236,6 @@ cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'diffmerge'                      # File comparison tool
 cask 'gitkraken'                      # Git client GUI
 cask 'iterm2'                         # Better terminalemulator
-cask 'kitty'                          # terminal emulator - Rust
 cask 'local'                          # Local WordPress development
 cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
