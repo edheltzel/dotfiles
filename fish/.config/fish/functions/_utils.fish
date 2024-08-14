@@ -7,3 +7,8 @@ end
 function matrix
     $HOME/.config/fish/utils/matrix.sh
 end
+
+# list all bat themes with a preview
+function batthemes
+    bat --list-themes | fzf --preview="bat --theme={} --color=always Makefile" | pbcopy
+end
