@@ -1,5 +1,4 @@
 # Stow global ignore - skip these files
-
 .DS_Store
 .git
 .gitignore

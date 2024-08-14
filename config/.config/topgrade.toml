@@ -22,9 +22,10 @@ cleanup = true
 # Skip sending a notification at the end of a run (default: false)
 skip_notify = true
 
-# Commands to run before anything
+######## Commands to run BEFORE anything ########
 # [pre_commands]
-# Commands to run after anything
+
+######### Commands to run AFTER anything ########
 [post_commands]
 "Brew - Cleanup" = "brew cleanup --prune=all"
 "Node - Corepack Enable Pnpm" = "corepack enable && echo corepack pnpm: $(tput bold)$(tput setaf 2)enabled$(tput sgr0)"
@@ -34,26 +35,20 @@ skip_notify = true
 # Custom commands
 [commands]
 [python]
-
 [composer]
 self_update = true
-
 [brew]
 greedy_cask = true
 autoremove = true
-
 [linux]
 [git]
 # Git repositories that you want to pull and push
 repos = ["~/.config/nvim"]
-
 [windows]
-
 # Causes Topgrade to rename itself during the run to allow package managers
 # to upgrade it. Use this only if you installed Topgrade by using a package
 # manager such as Scoop or Cargo
 self_rename = true
-
 [npm]
 [yarn]
 [vim]
