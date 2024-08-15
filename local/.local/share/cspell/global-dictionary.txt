@@ -1,5 +1,6 @@
 alacritty
 alpinejs
+arounds
 astro
 astrojs
 Autocare
