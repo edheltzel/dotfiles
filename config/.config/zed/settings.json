@@ -8,6 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   // General options
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
   "buffer_font_size": 16,
   "buffer_font_family": "Cascadia Code NF",
   "buffer_font_features": {

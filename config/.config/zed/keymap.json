@@ -14,5 +14,11 @@
       "e": "vim::NextSubwordEnd",
       "g e": "vim::PreviousSubwordEnd"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-k cmd-x": "zed::Extensions"
+    }
   }
 ]
