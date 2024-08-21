@@ -178,7 +178,7 @@ cask 'gpg-suite'         # GPG encryption files
 
 #############################################################
 # 3. Desktop Applications                                   #
-#########################################################
+#############################################################
 
 # Creativity
 # cask 'adobe-creative-cloud' # Adobe Creative Cloud
