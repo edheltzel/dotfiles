@@ -204,9 +204,10 @@ cask 'whatsapp'             # Chat app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
+cask 'clickup'              # Project management
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
-cask 'notion'               # Notes and Tasks
+# cask 'notion'               # Notes and Tasks
 # cask 'obsidian'             # Note taking app
 cask 'spotify'              # Music streaming
 
