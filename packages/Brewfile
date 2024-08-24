@@ -273,6 +273,7 @@ cask 'keka'               # File archiver and extractor
 
 # Mac App Store Installs
 mas 'ColorSlurp', id: 1287239339
+mas 'Amphetamine', id: 937984704
 mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
