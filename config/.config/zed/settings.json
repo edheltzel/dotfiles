@@ -46,7 +46,7 @@
   // Theme options
   "theme": {
     "mode": "dark",
-    "dark": "Atelier Cave Dark",
+    "dark": "Atelier Lakeside Dark",
     "light": "Atelier Seaside Light"
   },
   // Vim options
