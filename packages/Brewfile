@@ -164,6 +164,7 @@ brew 'nmap'               # Port scanning
 brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
 brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
 brew 'dog'                # DNS lookup client (better dig) - Rust
+brew 'hyperfine'          # Benchmark command-line programs
 
 # Security Utilities
 # brew 'bitwarden-cli'     # Bitwarden CLI - outdated - use https://github.com/bitwarden/cli/
@@ -214,7 +215,7 @@ cask 'spotify'              # Music streaming
 # Utility Applications
 cask 'namechanger'          # Rename files in bulk
 cask 'onyx'                 # System maintenance
-cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://usevia.app/
+# cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://usevia.app/
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
