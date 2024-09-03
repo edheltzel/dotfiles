@@ -6,7 +6,7 @@ if status is-interactive
     abbr --add casks 'brew list --cask'
     abbr --add cl clear
     # abbr --add cls '$DROPBOX/Clients'
-    abbr --add co 'code'
+    abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
     abbr --add cargos 'cargo install --list'
@@ -45,4 +45,5 @@ if status is-interactive
     abbr --add tmux zellij
     abbr --add omp oh-my-posh
     abbr --add newcode 'npx --package yo --package generator-code -- yo code'
+    abbr --add confi confetti
 end

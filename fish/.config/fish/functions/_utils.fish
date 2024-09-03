@@ -12,3 +12,7 @@ end
 function batthemes
     bat --list-themes | fzf --preview="bat --theme={} --color=always Makefile" | pbcopy
 end
+
+function confetti
+    open "raycast://extensions/raycast/raycast/confetti"
+end
