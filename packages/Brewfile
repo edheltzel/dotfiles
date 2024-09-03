@@ -209,7 +209,7 @@ cask 'clickup'              # Project management
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 # cask 'notion'               # Notes and Tasks
-# cask 'obsidian'             # Note taking app
+cask 'obsidian'             # Note taking app
 cask 'spotify'              # Music streaming
 
 # Utility Applications
