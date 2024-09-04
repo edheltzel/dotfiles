@@ -198,6 +198,7 @@ cask 'keycastr'             # Display keystrokes
 brew 'pandoc'               # Universal file converter
 cask 'vlc'                  # Media player
 brew 'webp'                 # WebP image format
+cask 'shottr'               # Screenshot and recorder app
 
 # Communication and Chat
 cask 'discord'              # Chat app
@@ -209,7 +210,7 @@ cask 'clickup'              # Project management
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 # cask 'notion'               # Notes and Tasks
-cask 'obsidian'             # Note taking app
+# cask 'obsidian'             # Note taking app
 cask 'spotify'              # Music streaming
 
 # Utility Applications
