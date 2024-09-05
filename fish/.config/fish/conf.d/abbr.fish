@@ -12,6 +12,7 @@ if status is-interactive
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
+    abbr --add lg lazygit
     abbr --add dls '~/Downloads/'
     abbr --add gems 'gem list'
     abbr --add gg 'go get GITHUB_URL'
