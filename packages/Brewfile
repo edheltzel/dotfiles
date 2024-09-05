@@ -95,7 +95,7 @@ brew 'rclone'       # Manage cloud storage
 
 # CLI Development Suits
 # brew 'lazydocker'   # Full Docker management app - Go
-# brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
+brew 'lazygit'  # TUI for git - Go
 
 # CLI Docs and Cheatsheets
 brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
