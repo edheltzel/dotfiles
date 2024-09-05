@@ -19,17 +19,18 @@
 cask_args appdir: '/Applications', require_sha: true
 
 # Taps
-tap 'buo/cask-upgrade' # Upgrade casks
-tap 'clementtsang/bottom' # Resource monitor (better top) - Rust
-tap 'eddieantonio/eddieantonio' #
-tap 'github/gh' # Interact with GitHub PRs, issues, repos
-tap 'homebrew/cask-drivers' # for drivers
-tap 'homebrew/cask-fonts' # for fonts
-tap 'homebrew/cask-versions'
-tap 'kyoh86/tap' # for 'sd' - RegEx find and replace (better sed) - Rust
-tap 'over-sh/bun' # All-in-one toolkit for JS/TS
-tap 'sass/sass' # Sass
-tap 'teamookla/speedtest'   # Command line speed test utility
+tap 'buo/cask-upgrade' 					# Upgrade casks
+tap 'clementtsang/bottom' 			#	Resource monitor (better top) - Rust
+tap 'eddieantonio/eddieantonio' # Eddie Antonio's Homebrew Tap
+tap 'github/gh'									# Interact with GitHub PRs, issues, repos
+tap 'homebrew/cask-drivers' 		# for drivers
+tap 'homebrew/cask-fonts' 			# for fonts
+tap 'homebrew/cask-versions' 		# for versions
+tap 'kyoh86/tap' 								# for 'sd' - RegEx find and replace (better sed) - Rust
+tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
+tap 'sass/sass' 								# Sass
+tap 'teamookla/speedtest'   		# Command line speed test utility
+tap 'localsend/localsend' 			# LocalSend - AirDrop for everything else
 
 #############################################################
 # 1. Command Line                                           #
@@ -209,21 +210,17 @@ cask 'bitwarden'            # Password manager
 cask 'clickup'              # Project management
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
-# cask 'notion'               # Notes and Tasks
-# cask 'obsidian'             # Note taking app
 cask 'spotify'              # Music streaming
 
 # Utility Applications
-cask 'namechanger'          # Rename files in bulk
+cask 'transnomino'          # A batch rename utility
 cask 'onyx'                 # System maintenance
-# cask 'qmk-toolbox'          # Keyboard firmware flashing - paired with https://usevia.app/
+brew 'localsend'            # AirDrop like app for everything else
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser@beta'        # Brave browser - Primary
-# cask 'firefox@developer-edition' # Firefox Dev Edition
 cask 'firefox@nightly'           # Firefox Nightly - Secondary
-# cask 'google-chrome'             # Chrome browser
 cask 'responsively'              # Browser Testing
 
 # Fonts
