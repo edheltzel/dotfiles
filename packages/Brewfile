@@ -222,6 +222,7 @@ cask 'choosy'                    # Choose which browser to open links in - Defau
 cask 'brave-browser@beta'        # Brave browser - Primary
 cask 'firefox@nightly'           # Firefox Nightly - Secondary
 cask 'responsively'              # Browser Testing
+cask 'zen-browser'               # Zen Browser - something new to try
 
 # Fonts
 cask 'font-cascadia-code-nf'          # Dev/Terminal Font
