@@ -28,10 +28,10 @@ hide_when_typing = true
 save_to_clipboard = true
 
 [cursor]
-thickness = 0.10
 blink_interval = 500
 blink_timeout = 0
 style.blinking = "Always"
+style.shape = "Block"
 
 [debug]
 log_level = "Off"

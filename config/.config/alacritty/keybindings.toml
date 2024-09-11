@@ -7,7 +7,6 @@ bindings = [
   { key = "=", mods = "Command|Control", action = "Quit" },
   { key = "W", mods = "Command|Shift", action = "Quit" },
   # open config with ⌘ + ,
-  { key = ",", mods = "Command", action = "Open" },
   # delete entire line with ⌘ + backspace
   { key = "Back", mods = "Command", chars = "\u0015" },
   # jump to beginning/end of line with ⌘ + left/right
