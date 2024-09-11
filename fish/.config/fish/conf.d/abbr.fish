@@ -4,6 +4,7 @@ if status is-interactive
     abbr --add binfo 'brew info'
     abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
+    abbr --add bic 'brew install % --cask'
     abbr --add cl clear
     # abbr --add cls '$DROPBOX/Clients'
     abbr --add co code
