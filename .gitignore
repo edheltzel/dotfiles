@@ -6,7 +6,16 @@
 ### VIM ###
 NetrwTreeListing*
 nvim/.config/nvim/lazy-lock.json
-
+### LazyVim ###
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+#
 ### Karabiner ###
 karabiner/automatic_backups/
 
