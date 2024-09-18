@@ -5,7 +5,7 @@ sudo -v
 . ../scripts/functions.sh
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
-python_packages="python_packages.txt"
+python_packages="pipx_packages.txt"
 ruby_packages="ruby_packages.txt"
 rust_packages="rust_packages.txt"
 
