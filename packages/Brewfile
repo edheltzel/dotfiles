@@ -123,6 +123,7 @@ brew 'php'                    # PHP
 brew 'postgresql@14'          # PostgreSQL database engine
 brew 'python'                 # Python 2
 brew 'python3'                # Python 3
+brew 'pipx'                   # Python - i dont use python 
 brew 'rbenv'                  # Ruby version manager
 brew 'redis'                  # Redis database engine
 brew 'ruby-build'             # Ruby build plugin for rbenv
