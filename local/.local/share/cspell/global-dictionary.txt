@@ -139,6 +139,7 @@ unstows
 vite
 vspacecode
 waitlist
+webc
 webm
 webp
 wezterm
