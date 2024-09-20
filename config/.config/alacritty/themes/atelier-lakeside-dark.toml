@@ -1,12 +1,12 @@
 # modified atelier lakeside dark theme - @edheltzel
 [colors.primary]
 background = "#0b0d0e"
-foreground= "#7ea2b4"
-bright_foreground= "#7ea2b4"
+foreground = "#7ea2b4"
+bright_foreground = "#7ea2b4"
 
 [colors.selection]
 text = "#0b0d0e"
-background = "#c79e34"
+background = "#a06e3b"
 
 [colors.cursor]
 cursor = "#7ea2b4"
