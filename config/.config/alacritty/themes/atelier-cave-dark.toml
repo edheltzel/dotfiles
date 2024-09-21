@@ -1,0 +1,44 @@
+# modified atelier lakeside dark theme - @edheltzel
+[colors.primary]
+background = "#19171c"
+foreground = "#8b8792"
+bright_foreground = "#8b8792"
+
+[colors.selection]
+text = "#19171c"
+background = "#a06e3b"
+
+[colors.cursor]
+cursor = "#8b8792"
+text = "#19171c"
+
+[colors.normal]
+black = "#19171c"
+red = "#be4678"
+green = "#2a9292"
+yellow = "#a06e3b"
+blue = "#576ddb"
+magenta = "#955ae7"
+cyan = "#398bc6"
+white = "#8b8792"
+
+[colors.bright]
+black = "#655f6d"
+red = "#aa573c"
+green = "#26232a"
+yellow = "#7e7887"
+magenta = "#e2dfe7"
+cyan = "#bf40bf"
+white = "#8b8792"
+
+[colors.hints.end]
+background = "#8b8792"
+foreground = "#19171c"
+
+[colors.hints.start]
+background = "#e2dfe7"
+foreground = "#19171c"
+
+[colors.search.matches]
+background = "#a06e3b"
+foreground = "#26232a"
