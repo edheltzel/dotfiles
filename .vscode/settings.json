@@ -2,6 +2,9 @@
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#6b6bb8"
   },
+  "files.associations": {
+    "*.conf": "shellscript"
+  },
   "cSpell.words": [
     "abbrex",
     "AFPS",
