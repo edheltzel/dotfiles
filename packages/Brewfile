@@ -52,34 +52,38 @@ brew 'topgrade'     # Upgrade all the things - Rust
 brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 
 # CLI Basics
-brew 'ack'          # Search tool like grep, but faster
-brew 'bat'          # Output highlighting (better cat) - Rust
+brew 'ack'                  # Search tool like grep, but faster
+brew 'bat'                  # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
-brew 'broot'       # File tree explorer (better tree) - Rust
-brew 'chafa'       # Image to ASCII art converter
-brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
-brew 'duti'         # Set default apps for file types
-brew 'eza'          # Listing files with info (better ls) replaces exa - Rust
-brew 'fd'           # Find files - Rust
-brew 'fzf'          # Fuzzy file finder and filtering - Go
-brew 'grc'          # Colorize terminal output
-brew 'hexyl'        # Hex viewer - Rust
-brew 'jq'           # JSON parser, output and query files
-brew 'mas'          # Mac App Store CLI
-brew 'most'         # Multi-window scroll pager (better less)
-brew 'ripgrep'      # Searching within files (better grep) - Rust
-brew 'rsync'        # Fast incremental file transfer
-brew 'sd'           # RegEx find and replace (better sed) - Rust
-brew 'zoxide'       # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
+brew 'broot'                # File tree explorer (better tree) - Rust
+brew 'chafa'                # Image to ASCII art converter
+brew 'yazi'                 # File manager - Rust
+brew 'coreutils'            # GNU core utilities (those that come with macOS are outdated)
+brew 'duti'                 # Set default apps for file types
+brew 'eza'                  # Listing files with info (better ls) replaces exa - Rust
+brew 'fd'                   # Find files - Rust
+brew 'fzf'                  # Fuzzy file finder and filtering - Go
+brew 'grc'                  # Colorize terminal output
+brew 'hexyl'                # Hex viewer - Rust
+brew 'jq'                   # JSON parser, output and query files
+brew 'mas'                  # Mac App Store CLI
+brew 'most'                 # Multi-window scroll pager (better less)
+brea 'poppler'              # PDF rendering library
+brew 'ripgrep'              # Searching within files (better grep) - Rust
+brew 'rsync'                # Fast incremental file transfer
+brew 'sd'                   # RegEx find and replace (better sed) - Rust
+brew 'sevenzip'             # 7-Zip file archiver
+brew 'zoxide'               # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
 # CLI Image Processing and Compression
-brew 'gdk-pixbuf'         # Image loading library
-brew 'graphicsmagick'     # Image manipulation
-brew 'imagemagick'        # Image manipulation
-brew 'jpegoptim'          # JPEG image compression
-brew 'mozjpeg'            # JPEG image compression
-brew 'optipng'            # PNG image compression
-brew 'pango'              # Text layout and rendering
+brew 'ffmpegthumbnailer'    # Create thumbnails from videos
+brew 'gdk-pixbuf'           # Image loading library
+brew 'graphicsmagick'       # Image manipulation
+brew 'imagemagick'          # Image manipulation
+brew 'jpegoptim'            # JPEG image compression
+brew 'mozjpeg'              # JPEG image compression
+brew 'optipng'              # PNG image compression
+brew 'pango'                # Text layout and rendering
 
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
@@ -123,7 +127,7 @@ brew 'php'                    # PHP
 brew 'postgresql@14'          # PostgreSQL database engine
 brew 'python'                 # Python 2
 brew 'python3'                # Python 3
-brew 'pipx'                   # Python - i dont use python 
+brew 'pipx'                   # Python - i dont use python
 brew 'rbenv'                  # Ruby version manager
 brew 'redis'                  # Redis database engine
 brew 'ruby-build'             # Ruby build plugin for rbenv
@@ -226,8 +230,8 @@ cask 'responsively'              # Browser Testing
 cask 'zen-browser'               # Zen Browser - something new to try
 
 # Fonts
-cask 'font-cascadia-code-nf'          # Dev/Terminal Font
-cask 'font-geist-mono-nerd-font'      # Dev/Terminal Font - Primary
+cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
+cask 'font-cascadia-code-nf'          # Dev/Terminal Font - Primary (i use Dank Mono)
 cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
 cask 'font-inter'                     # Design font
 cask 'font-geist'                     # Design font
