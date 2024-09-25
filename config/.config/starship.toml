@@ -8,8 +8,8 @@ disabled = true
 
 ## start character ##
 [character]
-success_symbol = '[](bold #9ECE6A)'
-error_symbol = '[](bold #F7768E)'
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 
 [shell]
 fish_indicator = ""
@@ -20,23 +20,23 @@ disabled = false
 
 ## start prompt ##
 [directory]
-format = "[\u26a1](#7DCFFF)[$path]($style)[$read_only]($read_only_style) "
+format = "[󱐋](#7DCFFF)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…/"
 
 [git_branch]
-style = "#F141A8"
+style = "bright-cyan"
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
 
 [git_metrics]
 disabled = false
-added_style = "#9ECE6A"
-deleted_style = "#F7768E"
+added_style = "green"
+deleted_style = "red"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
-style = "white"
+style = "white︎"
 format = "([$all_status$ahead_behind]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
 ahead = "[ ×${count} ](white)"
