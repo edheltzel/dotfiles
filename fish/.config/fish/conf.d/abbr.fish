@@ -48,4 +48,5 @@ if status is-interactive
     abbr --add omp oh-my-posh
     abbr --add newcode 'npx --package yo --package generator-code -- yo code'
     abbr --add confi confetti
+    abbr --add yy yazi
 end
