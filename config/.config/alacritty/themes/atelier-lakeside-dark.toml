@@ -1,18 +1,20 @@
 # modified atelier lakeside dark theme - @edheltzel
+[colors]
+draw_bold_text_with_bright_colors = true
 [colors.primary]
-background = "#0b0d0e"
+background = "#0B0D0E"
 foreground = "#7ea2b4"
 bright_foreground = "#7ea2b4"
 
 [colors.selection]
-text = "#0b0d0e"
+text = "#0B0D0E"
 background = "#a06e3b"
 
 [colors.cursor]
 cursor = "#7ea2b4"
 text = "#161b1d"
 
-[colors.normal]
+[colors.bright]
 black = "#1f292e"
 red = "#d22d72"
 green = "#568c3b"
@@ -22,7 +24,7 @@ magenta = "#b72dd2"
 cyan = "#2d8f6f"
 white = "#c1e4f6"
 
-[colors.bright]
+[colors.normal]
 black = "#516d7b"
 red = "#935c25"
 green = "#516d7b"
