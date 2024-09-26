@@ -1,0 +1,7 @@
+# The defaults are very good, nothing too fany here.
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+[manager]
+ratio          = [ 1, 3, 4 ]
+show_hidden    = true
+[preview]
+wrap            = "yes"
