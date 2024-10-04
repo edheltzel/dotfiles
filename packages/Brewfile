@@ -218,6 +218,7 @@ cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'spotify'              # Music streaming
 
 # Utility Applications
+cask 'bettertouchtool'      # MacOS automation/customization tool
 cask 'transnomino'          # A batch rename utility
 cask 'onyx'                 # System maintenance
 brew 'localsend'            # AirDrop like app for everything else
@@ -225,9 +226,9 @@ brew 'localsend'            # AirDrop like app for everything else
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser@beta'        # Brave browser - Primary
-cask 'firefox@nightly'           # Firefox Nightly - Secondary
+cask 'zen-browser'               # Zen Browser - Secondary
+cask 'firefox@nightly'           # Firefox Nightly - Tertiary
 cask 'responsively'              # Browser Testing
-cask 'zen-browser'               # Zen Browser - something new to try
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
