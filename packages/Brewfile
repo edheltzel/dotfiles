@@ -237,19 +237,23 @@ cask 'font-inter'                     # Design font
 cask 'font-geist'                     # Design font
 
 # Development Apps
-cask 'alacritty'                      # GPU accelerated terminal - Rust
 cask 'cyberduck'                      # Mount remote storage locations
 cask 'dbngin'                         # Local MySQL database management
 cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'diffmerge'                      # File comparison tool
-cask 'gitkraken'                      # Git client GUI
-cask 'iterm2'                         # Better terminalemulator
+# cask 'gitkraken'                      # Git client GUI
 cask 'local'                          # Local WordPress development
 cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
-cask 'typora'                         # Just a simple markdown editor
+cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
-cask 'jetbrains-toolbox'              # JetBrains Toolbox
+cask 'zed'                            # Code editor - Rust
+
+# Terminal emulators
+cask 'alacritty'                      # GPU accelerated terminal - Rust
+cask 'iterm2'                         # Better terminalemulator
+cask 'kitty'                          # GPU based Terminal emulator
+cask 'wezterm'                        # GPU-accelerated cross-platform terminal emulator and multiplexer
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
