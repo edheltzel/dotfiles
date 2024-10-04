@@ -285,7 +285,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
   As of `2024-07` there is a known bug/issue with macOS where the WindowServer will consume CPU and/or Memory. It is annoying. From my experience, this is related to more than one external monitor. My current workaround is to kill the WindowServer on macOS, which logs you out. Once you log back in the WindowServer will be restarted and your RAM usage will be back in normal ranges. This is a workaround until Apple fixes the issue, which will probably never happen.
   <strong>Usage:</strong>
   <ul>
-    <li>Open iTerm/Alacritty</li>
+    <li>Open your Terminal</li>
     <li>run `killws` <em>(work for both Fish and Zsh)</em></li>
     <li>Log back into your account</li>
   </ul>
