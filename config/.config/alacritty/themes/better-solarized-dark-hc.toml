@@ -1,0 +1,47 @@
+# modified solarized dark theme for higher contrast - @edheltzel
+
+[colors.primary]
+background = "#001e26"
+foreground = "#9bc1c2"
+bright_foreground = "#9bc1c2"
+
+[colors.selection]
+text = "#001e26"
+
+background = "#b17e28"
+
+[colors.cursor]
+cursor = "#f34a00"
+text = "#001e26"
+
+[colors.normal]
+black = "#002731"
+red = "#d01b24"
+green = "#6bbe6c"
+yellow = "#a57705"
+blue = "#2075c7"
+magenta = "#c61b6e"
+cyan = "#259185"
+white = "#e9e2cb"
+
+[colors.bright]
+black = "#006388"
+red = "#f4153b"
+green = "#50ee84"
+yellow = "#b17e28"
+blue = "#178dc7"
+magenta = "#e14d8e"
+cyan = "#00b29e"
+white = "#fcf4dc"
+
+[colors.hints.end]
+background = "#9bc1c2"
+foreground = "#001e26"
+
+[colors.hints.start]
+background = "#e2dfe7"
+foreground = "#001e26"
+
+[colors.search.matches]
+background = "#b17e28"
+foreground = "#001e26"
