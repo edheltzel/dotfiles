@@ -4,9 +4,9 @@ alias egrep 'egrep --color=auto'
 alias fgrep 'fgrep --color=auto'
 
 # Git aliases (no included in gitconfig)
-alias sta 'state' # gitnow
-alias cma 'commit-all' # gitnow
-alias cm 'commit' # gitnow
+alias sta state # gitnow
+alias cma commit-all # gitnow
+alias cm commit # gitnow
 
 # Confirm before overwriting
 alias cp 'cp -Ri'
@@ -58,6 +58,8 @@ alias listzip 'ouch list'
 alias lzip 'ouch list'
 alias wget 'wget -c'
 alias mux zellij
+alias wz wezterm
+alias wez wezterm
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
