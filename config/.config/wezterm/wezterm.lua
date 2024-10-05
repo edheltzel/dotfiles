@@ -1,10 +1,10 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local fish_path = "/opt/homebrew/bin/fish"
-
--- Load ./keymaps.lua
+-- Load key mappings and key tables from external file
 local keymaps = require("keymaps")
+
+local fish_path = "/opt/homebrew/bin/fish"
 
 local config = {}
 -- Use config builder object if possible
@@ -15,7 +15,8 @@ end
 -- Settings
 config.default_prog = { fish_path, "-l" }
 
--- Key mappings and key tables - see keymaps.lua
+-- Load leader (super+k), maps and tables - see keymaps.lua
+config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
@@ -29,7 +30,12 @@ config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
-config.default_workspace = "main"
+config.default_workspace = wezterm.nerdfonts.cod_rocket
+
+-- initial window size
+config.initial_cols = 90
+config.initial_rows = 40
+
 
 -- Dim inactive panes with Solarized theme in mind
 config.inactive_pane_hsb = {
@@ -37,57 +43,23 @@ config.inactive_pane_hsb = {
   brightness = 0.5,  -- Dim brightness to half for a clear distinction
 }
 
--- Custom tab bar colors
-config.colors = {
-  tab_bar = {
-    background = "#002b36", -- Solarized base03
-
-    active_tab = {
-      bg_color = "#073642", -- Solarized base02
-      fg_color = "#93a1a1", -- Solarized base1
-    },
-
-    inactive_tab = {
-      bg_color = "#002b36", -- Solarized base03
-      fg_color = "#839496", -- Solarized base0
-    },
-
-    inactive_tab_hover = {
-      bg_color = "#586e75", -- Solarized base01
-      fg_color = "#93a1a1", -- Solarized base1
-    },
-
-    new_tab = {
-      bg_color = "#073642", -- Solarized base02
-      fg_color = "#93a1a1", -- Solarized base1
-    },
-
-    new_tab_hover = {
-      bg_color = "#586e75", -- Solarized base01
-      fg_color = "#93a1a1", -- Solarized base1
-    },
-  },
-
-  -- Pane split color
-  split = "#586e75", -- Solarized base01
-}
-
 -- Tab bar
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = false
+
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
   local stat = window:active_workspace()
-  local stat_color = "#f7768e"
+  local stat_color = "#F7768E"
   -- Utilize this to display LDR or current key table name
   if window:active_key_table() then
     stat = window:active_key_table()
-    stat_color = "#7dcfff"
+    stat_color = "#BB9AF7"
   end
   if window:leader_is_active() then
-    stat = "LDR"
-    stat_color = "#bb9af7"
+    stat = wezterm.nerdfonts.md_lightning_bolt .. wezterm.nerdfonts.md_lightning_bolt
+    stat_color = "#7DCFFF"
   end
 
   local basename = function(s)
@@ -139,6 +111,41 @@ wezterm.on("update-status", function(window, pane)
     { Text = "  " },
   }))
 end)
+
+-- Custom tab bar colors
+config.colors = {
+  tab_bar = {
+    background = "#002B36", -- Solarized base03
+
+    active_tab = {
+      bg_color = "#073642", -- Solarized base02
+      fg_color = "#93A1A1", -- Solarized base1
+    },
+
+    inactive_tab = {
+      bg_color = "#002B36", -- Solarized base03
+      fg_color = "#839496", -- Solarized base0
+    },
+
+    inactive_tab_hover = {
+      bg_color = "#586E75", -- Solarized base01
+      fg_color = "#93A1A1", -- Solarized base1
+    },
+
+    new_tab = {
+      bg_color = "#073642", -- Solarized base02
+      fg_color = "#93A1A1", -- Solarized base1
+    },
+
+    new_tab_hover = {
+      bg_color = "#586E75", -- Solarized base01
+      fg_color = "#93A1A1", -- Solarized base1
+    },
+  },
+
+  -- Pane split color
+  split = "#586E75", -- Solarized base01
+}
 
 --[[ Appearance setting for when I need to take pretty screenshots
 config.enable_tab_bar = false

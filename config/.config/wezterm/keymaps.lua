@@ -1,6 +1,9 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
+-- Define the leader key
+local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1500 }
+
 -- Define key mappings
 local keys = {
   { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
@@ -83,6 +86,7 @@ local key_tables = {
 }
 
 return {
+  leader = leader,
   keys = keys,
   key_tables = key_tables,
 }
