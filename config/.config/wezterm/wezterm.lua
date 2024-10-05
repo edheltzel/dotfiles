@@ -3,6 +3,9 @@ local act = wezterm.action
 
 local fish_path = "/opt/homebrew/bin/fish"
 
+-- Load ./keymaps.lua
+local keymaps = require("keymaps")
+
 local config = {}
 -- Use config builder object if possible
 if wezterm.config_builder then
@@ -11,6 +14,10 @@ end
 
 -- Settings
 config.default_prog = { fish_path, "-l" }
+
+-- Key mappings and key tables - see keymaps.lua
+config.keys = keymaps.keys
+config.key_tables = keymaps.key_tables
 
 config.color_scheme = "Solarized Dark Higher Contrast"
 config.font = wezterm.font_with_fallback({
@@ -24,10 +31,10 @@ config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
 
--- Dim inactive panes
+-- Dim inactive panes with Solarized theme in mind
 config.inactive_pane_hsb = {
-  saturation = 0.9,
-  brightness = 0.5,
+  saturation = 0.9,  -- Slightly reduce saturation for a muted effect
+  brightness = 0.5,  -- Dim brightness to half for a clear distinction
 }
 
 -- Custom tab bar colors
@@ -60,125 +67,9 @@ config.colors = {
       fg_color = "#93a1a1", -- Solarized base1
     },
   },
-    -- Pane split color
-  split = "#073642", -- Solarized base02
-}
 
--- Keys - iTerm-ish
-config.leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1500 }
-config.keys = {
-  { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
-  { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },
-
-  -- Natural Editing
-  -- Bind Cmd+Backspace to delete the entire line
-  {
-    key = 'Backspace',
-    mods = 'CMD',
-    action = wezterm.action.SendString('\x15'), -- Ctrl+U
-  },
-  -- Bind Cmd+LeftArrow to move to the start of the line
-  {
-    key = 'LeftArrow',
-    mods = 'CMD',
-    action = wezterm.action.SendString('\x01'), -- Ctrl+A
-  },
-  {
-    key = 'h',
-    mods = 'CMD|CTRL',
-    action = wezterm.action.SendString('\x01'), -- Ctrl+A
-  },
-  -- Bind Cmd+RightArrow to move to the end of the line
-  {
-    key = 'RightArrow',
-    mods = 'CMD',
-    action = wezterm.action.SendString('\x05'), -- Ctrl+E
-  },
-  {
-    key = 'l',
-    mods = 'CMD|CTRL',
-    action = wezterm.action.SendString('\x05'), -- Ctrl+E
-  },
-  -- Bind Leader+k to run the `clear` command
-  {
-    key = 'k',
-    mods = 'LEADER',
-    action = wezterm.action.Multiple {
-      wezterm.action.SendKey { key = 'C', mods = 'CTRL' },
-      wezterm.action.SendKey { key = 'L', mods = 'CTRL' },
-    },
-  },
-  -- Bind Cmd+Ctrl+= to close the active pane
-  {
-    key = '=',
-    mods = 'CMD|CTRL',
-    action = wezterm.action.CloseCurrentPane { confirm = true },
-  },
-
-  -- Pane keybindings
-  { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
-  { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
-  { key = "w", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
-  { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
-  { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }), },
-
-  -- Tab keybindings
-  { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
-  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
-  { key = "n", mods = "LEADER", action = act.ShowTabNavigator },
-  {
-    key = "e",
-    mods = "LEADER",
-    action = act.PromptInputLine({
-      description = wezterm.format({
-        { Attribute = { Intensity = "Bold" } },
-        { Foreground = { AnsiColor = "Fuchsia" } },
-        { Text = "Renaming Tab Title...:" },
-      }),
-      action = wezterm.action_callback(function(window, pane, line)
-        if line then
-          window:active_tab():set_title(line)
-        end
-      end),
-    }),
-  },
-  -- Key table for moving tabs around
-  { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
-  { key = "[", mods = "SUPER|CTRL", action = act.MoveTabRelative(-1) },
-  { key = "]", mods = "SUPER|CTRL", action = act.MoveTabRelative(1) },
-
-  -- Workspace
-  { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
-}
--- Jump to a tab with index (⌘+k 1-9 OR ⌘+1-9 )
-for i = 1, 9 do
-  table.insert(config.keys, {
-    key = tostring(i),
-    mods = "LEADER",
-    action = act.ActivateTab(i - 1),
-  })
-end
-
-config.key_tables = {
-  resize_pane = {
-    { key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
-    { key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
-    { key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
-    { key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
-    { key = "Escape", action = "PopKeyTable" },
-    { key = "Enter", action = "PopKeyTable" },
-  },
-  move_tab = {
-    { key = "h", action = act.MoveTabRelative(-1) },
-    { key = "j", action = act.MoveTabRelative(-1) },
-    { key = "k", action = act.MoveTabRelative(1) },
-    { key = "l", action = act.MoveTabRelative(1) },
-    { key = "Escape", action = "PopKeyTable" },
-    { key = "Enter", action = "PopKeyTable" },
-  },
+  -- Pane split color
+  split = "#586e75", -- Solarized base01
 }
 
 -- Tab bar
@@ -248,5 +139,16 @@ wezterm.on("update-status", function(window, pane)
     { Text = "  " },
   }))
 end)
+
+--[[ Appearance setting for when I need to take pretty screenshots
+config.enable_tab_bar = false
+config.window_padding = {
+  left = '0.5cell',
+  right = '0.5cell',
+  top = '0.5cell',
+  bottom = '0cell',
+
+}
+--]]
 
 return config
