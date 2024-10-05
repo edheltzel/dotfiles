@@ -49,4 +49,5 @@ if status is-interactive
     abbr --add newcode 'npx --package yo --package generator-code -- yo code'
     abbr --add confi confetti
     abbr --add yy yazi
+    abbr --add wez wezterm
 end
