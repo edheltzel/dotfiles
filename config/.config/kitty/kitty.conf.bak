@@ -31,6 +31,6 @@ include ./keybindings.conf
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
-include current-theme.conf
+# Better Solarized Dark Higher Contrast
+include ./themes/better-solarized-dark-hc.conf
 # END_KITTY_THEME

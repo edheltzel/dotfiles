@@ -20,7 +20,8 @@ config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
-config.color_scheme = "Solarized Dark Higher Contrast"
+-- config.color_scheme = "Solarized Dark igher ontrast
+config.color_scheme = "tokyonight_night"
 config.font = wezterm.font_with_fallback({
   { family = "Cascadia Code NF", scale = 1.5 },
   { family = "FiraCode Nerd Font Mono", scale = 1.3 },
@@ -110,41 +111,6 @@ wezterm.on("update-status", function(window, pane)
     { Text = "  " },
   }))
 end)
-
--- Custom tab bar colors
-config.colors = {
-  tab_bar = {
-    background = "#002B36", -- Solarized base03
-
-    active_tab = {
-      bg_color = "#073642", -- Solarized base02
-      fg_color = "#93A1A1", -- Solarized base1
-    },
-
-    inactive_tab = {
-      bg_color = "#002B36", -- Solarized base03
-      fg_color = "#839496", -- Solarized base0
-    },
-
-    inactive_tab_hover = {
-      bg_color = "#586E75", -- Solarized base01
-      fg_color = "#93A1A1", -- Solarized base1
-    },
-
-    new_tab = {
-      bg_color = "#073642", -- Solarized base02
-      fg_color = "#93A1A1", -- Solarized base1
-    },
-
-    new_tab_hover = {
-      bg_color = "#586E75", -- Solarized base01
-      fg_color = "#93A1A1", -- Solarized base1
-    },
-  },
-
-  -- Pane split color
-  split = "#586E75", -- Solarized base01
-}
 
 --[[ Appearance setting for when I need to take pretty screenshots
 config.enable_tab_bar = false
