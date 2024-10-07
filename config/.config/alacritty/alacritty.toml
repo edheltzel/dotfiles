@@ -1,4 +1,7 @@
-import = ["~/.config/alacritty/themes/better-solarized-dark-hc.toml", "~/.config/alacritty/keybindings.toml"]
+import = [
+  "~/.config/alacritty/themes/better-solarized-dark-hc.toml",
+  "~/.config/alacritty/keybindings.toml",
+]
 
 [env]
 TERM = "xterm-256color"
@@ -6,7 +9,7 @@ TERM = "xterm-256color"
 [window]
 blur = true
 decorations = "Buttonless"
-opacity = 0.9
+opacity = 1
 option_as_alt = "Both"
 dimensions = { columns = 120, lines = 30 }
 padding = { x = 10, y = 5 }

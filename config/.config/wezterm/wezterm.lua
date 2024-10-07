@@ -26,7 +26,7 @@ config.font = wezterm.font_with_fallback({
   { family = "FiraCode Nerd Font Mono", scale = 1.3 },
 })
 config.macos_window_background_blur = 10
-config.window_background_opacity = 0.9
+-- config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
@@ -36,11 +36,10 @@ config.default_workspace = wezterm.nerdfonts.cod_rocket
 config.initial_cols = 90
 config.initial_rows = 40
 
-
 -- Dim inactive panes with Solarized theme in mind
 config.inactive_pane_hsb = {
-  saturation = 0.9,  -- Slightly reduce saturation for a muted effect
-  brightness = 0.5,  -- Dim brightness to half for a clear distinction
+  saturation = 0.9, -- Slightly reduce saturation for a muted effect
+  brightness = 0.5, -- Dim brightness to half for a clear distinction
 }
 
 -- Tab bar
