@@ -222,6 +222,7 @@ cask 'bettertouchtool'      # MacOS automation/customization tool
 cask 'transnomino'          # A batch rename utility
 cask 'onyx'                 # System maintenance
 brew 'localsend'            # AirDrop like app for everything else
+cask 'via'                  # Keyboard configurator
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
