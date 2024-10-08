@@ -20,11 +20,10 @@ config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
--- config.color_scheme = "Solarized Dark igher ontrast
 config.color_scheme = "tokyonight_night"
+-- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Cascadia Code NF", scale = 1.5 },
-  { family = "FiraCode Nerd Font Mono", scale = 1.3 },
+  { family = "Lilex", scale= 1.45 },
 })
 config.macos_window_background_blur = 10
 -- config.window_background_opacity = 0.9

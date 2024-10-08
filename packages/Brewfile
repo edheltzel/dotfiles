@@ -233,10 +233,13 @@ cask 'responsively'              # Browser Testing
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
-cask 'font-cascadia-code-nf'          # Dev/Terminal Font - Primary (i use Dank Mono)
-cask 'font-fira-code-nerd-font'       # Dev Font - Secondary
+
+cask 'font-lilex-nerd-font'           # Dev/Terminal Font - Primary
+cask 'font-cascadia-code-nf'          # Dev/Terminal Font - Secondary
+cask 'font-fira-code-nerd-font'       # Dev Font - Tertiary
 cask 'font-inter'                     # Design font
-cask 'font-geist'                     # Design font
+cask 'font-geist'                     # Design font - Secondary
+cask 'font-lilex'                     # Design font
 
 # Development Apps
 cask 'cyberduck'                      # Mount remote storage locations

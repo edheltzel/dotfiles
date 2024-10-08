@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/better-solarized-dark-hc.toml",
+  "~/.config/alacritty/themes/atelier-lakeside-dark.toml",
   "~/.config/alacritty/keybindings.toml",
 ]
 
@@ -21,8 +21,8 @@ history = 25000
 [font]
 size = 16
 offset = { x = 1, y = 1 }
-normal = { family = "Cascadia Code NF", style = "Light" }
-bold.style = "Bold"
+normal = { family = "Lilex Nerd Font", style = "Regular" }
+bold.style = "Regular"
 italic.style = "Italic"
 
 [mouse]
