@@ -222,8 +222,9 @@ cask 'bettertouchtool'      # MacOS automation/customization tool
 cask 'transnomino'          # A batch rename utility
 cask 'onyx'                 # System maintenance
 brew 'localsend'            # AirDrop like app for everything else
-cask 'via'                  # Keyboard configuration desktop client
-
+cask 'via'                  # Keyboard configuration desktop client alternative: https://get.vial.today/download/
+brew 'shortcat'             # vim motions for MacOS free alternative to Homerow: https://www.homerow.app/
+#
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser@beta'        # Brave browser - Primary
@@ -280,6 +281,7 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 cask 'alt-tab'            # Windows like alt-tab
 brew 'm-cli'              # All in one MacOS management CLI app: m help
 cask 'hiddenbar'          # Hide / show annoying menubar icons
+brew 'jordanbaird-ice'    # Menubar management app for MacOS
 cask 'itsycal'            # Calendar in menubar
 cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
