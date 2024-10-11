@@ -227,10 +227,10 @@ brew 'shortcat'             # vim motions for MacOS free alternative to Homerow:
 #
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
-cask 'brave-browser@beta'        # Brave browser - Primary
-cask 'zen-browser'               # Zen Browser - Secondary
+cask 'brave-browser@nightly'     # Brave browser - Primary
 cask 'firefox@nightly'           # Firefox Nightly - Tertiary
 cask 'responsively'              # Browser Testing
+cask 'zen-browser'               # Zen Browser - Secondary
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
