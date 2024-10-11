@@ -31,6 +31,7 @@ tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
 tap 'sass/sass' 								# Sass
 tap 'teamookla/speedtest'   		# Command line speed test utility
 tap 'localsend/localsend' 			# LocalSend - AirDrop for everything else
+tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
 
 #############################################################
 # 1. Command Line                                           #
@@ -107,6 +108,7 @@ brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 # CLI Misc
 brew 'figlet'       # Output text as big ASCII art text
 brew 'neofetch'     # Show system data and ditstro info
+
 #############################################################
 # 2. Software / Web Development                             #
 #############################################################
@@ -163,6 +165,7 @@ brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
 brew 'zaquestion/tap/lab' # GitLab CLI
+brew 'atac'               # A simple API client (postman like) in your terminal - Rust
 
 # Network and Security Testing
 brew 'bettercap'          # Network, scanning and moniroting
@@ -171,6 +174,8 @@ brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
 brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
 brew 'dog'                # DNS lookup client (better dig) - Rust
 brew 'hyperfine'          # Benchmark command-line programs
+cask 'wireshark'
+brew 'termshark'
 
 # Security Utilities
 # brew 'bitwarden-cli'     # Bitwarden CLI - outdated - use https://github.com/bitwarden/cli/
@@ -181,7 +186,10 @@ brew 'lynis'             # Scan system for common security issues
 brew 'nss'               # Network Security Services
 brew 'openssl'           # Cryptography and SSL/TLS Toolkit
 brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
+brew 'sshs'              # Terminal user interface for SSH - Rust
 cask 'gpg-suite'         # GPG encryption files
+brew 'age'               # Simple, modern and secure encryption tool - Go
+brew 'portal'            # file transfer utility - Go
 
 #############################################################
 # 3. Desktop Applications                                   #
