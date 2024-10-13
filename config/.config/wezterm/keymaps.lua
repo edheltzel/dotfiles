@@ -10,16 +10,25 @@ local keys = {
   { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },
 
   -- Natural Editing
-  { key = 'Backspace', mods = 'CMD', action = wezterm.action.SendString('\x15') }, -- Ctrl+U
-  { key = 'LeftArrow', mods = 'CMD', action = wezterm.action.SendString('\x01') }, -- Ctrl+A
-  { key = 'h', mods = 'CMD|CTRL', action = wezterm.action.SendString('\x01') }, -- Ctrl+A
-  { key = 'RightArrow', mods = 'CMD', action = wezterm.action.SendString('\x05') }, -- Ctrl+E
-  { key = 'l', mods = 'CMD|CTRL', action = wezterm.action.SendString('\x05') }, -- Ctrl+E
-  { key = 'k', mods = 'LEADER', action = wezterm.action.Multiple {
-    wezterm.action.SendKey { key = 'C', mods = 'CTRL' },
-    wezterm.action.SendKey { key = 'L', mods = 'CTRL' },
-  }},
-  { key = '=', mods = 'CMD|CTRL', action = wezterm.action.CloseCurrentPane { confirm = true } },
+  { key = "Backspace", mods = "CMD", action = wezterm.action.SendString("\x15") }, -- Ctrl+U
+  { key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
+  { key = "h", mods = "CMD|CTRL", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
+  { key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
+  { key = "l", mods = "CMD|CTRL", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
+  --[[
+   This clears the screen without clearning the scrollback but make sure to
+   add a MacOS keyboard short for Wezterm to change the Clear scrollback to something
+   else. I use `ctrl+shift+k` for this. This is workaround 
+  --]]
+  {
+    key = "k",
+    mods = "LEADER",
+    action = wezterm.action.Multiple({
+      wezterm.action.SendKey({ key = "C", mods = "CTRL" }),
+      wezterm.action.SendKey({ key = "L", mods = "CTRL" }),
+    }),
+  },
+  { key = "=", mods = "CMD|CTRL", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
   { key = "f", mods = "CMD|CTRL", action = wezterm.action.ToggleFullScreen },
 
   -- Pane keybindings
@@ -36,18 +45,22 @@ local keys = {
   { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
   { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
   { key = "n", mods = "LEADER", action = act.ShowTabNavigator },
-  { key = "e", mods = "LEADER", action = act.PromptInputLine({
-    description = wezterm.format({
-      { Attribute = { Intensity = "Bold" } },
-      { Foreground = { AnsiColor = "Fuchsia" } },
-      { Text = "Renaming Tab Title...:" },
+  {
+    key = "e",
+    mods = "LEADER",
+    action = act.PromptInputLine({
+      description = wezterm.format({
+        { Attribute = { Intensity = "Bold" } },
+        { Foreground = { AnsiColor = "Fuchsia" } },
+        { Text = "Renaming Tab Title...:" },
+      }),
+      action = wezterm.action_callback(function(window, pane, line)
+        if line then
+          window:active_tab():set_title(line)
+        end
+      end),
     }),
-    action = wezterm.action_callback(function(window, pane, line)
-      if line then
-        window:active_tab():set_title(line)
-      end
-    end),
-  })},
+  },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   { key = "[", mods = "SUPER|CTRL", action = act.MoveTabRelative(-1) },
   { key = "]", mods = "SUPER|CTRL", action = act.MoveTabRelative(1) },

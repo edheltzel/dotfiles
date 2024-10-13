@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+
 local act = wezterm.action
 
 -- Load key mappings and key tables from external file
@@ -23,7 +24,7 @@ config.key_tables = keymaps.key_tables
 config.color_scheme = "tokyonight_night"
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Lilex", scale= 1.45 },
+  { family = "Lilex", scale = 1.45 },
 })
 config.macos_window_background_blur = 10
 -- config.window_background_opacity = 0.9

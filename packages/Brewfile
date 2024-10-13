@@ -96,11 +96,12 @@ brew 'procs'        # Advanced process viewer (better ps) - Rust
 
 # CLI Productivity Apps
 brew 'rclone'       # Manage cloud storage
-# brew 'kondo'        # Clean up old files and directories - Rust
+brew 'kondo'        # Clean up old files and directories - Rust
+brew 'portal'       # file transfer utility - Go
 
 # CLI Development Suits
 # brew 'lazydocker'   # Full Docker management app - Go
-brew 'lazygit'  # TUI for git - Go
+brew 'lazygit'        # TUI for git - Go
 
 # CLI Docs and Cheatsheets
 brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
@@ -189,7 +190,6 @@ brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
 brew 'sshs'              # Terminal user interface for SSH - Rust
 cask 'gpg-suite'         # GPG encryption files
 brew 'age'               # Simple, modern and secure encryption tool - Go
-brew 'portal'            # file transfer utility - Go
 
 #############################################################
 # 3. Desktop Applications                                   #
