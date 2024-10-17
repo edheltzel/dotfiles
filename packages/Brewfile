@@ -292,8 +292,7 @@ cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
 cask 'typinator'          # Text expander - macOS only
 cask 'keka'               # File archiver and extractor
-cask 'hammerspoon'        # macOS automation tool
-cask 'bettertouchtool'    # MacOS automation/customization tool
+# cask 'hammerspoon'        # macOS automation tool
 cask 'karabiner-elements' # Keyboard customization tool
 cask 'keyboard-cowboy'    # Missing Keyboard shotcut utility
 
