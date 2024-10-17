@@ -1,9 +1,11 @@
 // cSpell:disable
+// @ref https://github.com/edheltzel/karabiner?tab=readme-ov-file
 import fs from "fs";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 
 const rules: KarabinerRules[] = [
+
   // Define the Hyper key itself
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
@@ -156,8 +158,73 @@ const rules: KarabinerRules[] = [
       a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       w: open("raycast://extensions/mackopes/quit-applications/index"),
       h: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
-    },
+    }
   }),
+  {
+    description: "Vim-style navigation with Ctrl + hjkl",
+    manipulators: [
+      {
+        type: "basic",
+        from: {
+          key_code: "h",
+          modifiers: {
+            mandatory: ["control"],
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            key_code: "left_arrow",
+          },
+        ],
+      },
+      {
+        type: "basic",
+        from: {
+          key_code: "j",
+          modifiers: {
+            mandatory: ["control"],
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            key_code: "down_arrow",
+          },
+        ],
+      },
+      {
+        type: "basic",
+        from: {
+          key_code: "k",
+          modifiers: {
+            mandatory: ["control"],
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            key_code: "up_arrow",
+          },
+        ],
+      },
+      {
+        type: "basic",
+        from: {
+          key_code: "l",
+          modifiers: {
+            mandatory: ["control"],
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            key_code: "right_arrow",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 fs.writeFileSync(
