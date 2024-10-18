@@ -21,7 +21,7 @@
 
 Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
 
-![keyboard](./keyboard.jpg)
+![keyboard](https://github.com/Vonng/Capslock/raw/master/mac_v3/images/keyboard.png)
 
 > **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0.
 
