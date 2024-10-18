@@ -1603,151 +1603,151 @@
                                     "key_code": "e",
                                     "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a mail" }],
+                                "to": [{ "shell_command": "open https://mail.google.com/mail/u/0/#inbox" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "e = safari",
+                                "description": "e = figma",
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Safari" }],
+                                "to": [{ "shell_command": "open -a Figma" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "command + r = preview",
+                                "description": "command + r = Zed",
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Preview" }],
+                                "to": [{ "shell_command": "open -a Zed" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + r = terminal",
+                                "description": "option + r = Spotify",
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a terminal" }],
+                                "to": [{ "shell_command": "open -a Spotify" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "r = iTerm2",
+                                "description": "r = Visual Studio Code",
                                 "from": {
                                     "key_code": "r",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a iTerm" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + t = typora",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Typora" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + t = notes",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a notes" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "t = iTerm2",
-                                "from": {
-                                    "key_code": "t",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Visual Studio Code'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "command + y = karabiner",
+                                "description": "command + t = Obsidian",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [{ "shell_command": "open -a Obsidian" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "option + t = Typora",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [{ "shell_command": "open -a Typora" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "t = WezTerm",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [{ "shell_command": "open -a WezTerm" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "command + y = Brave",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Brave Browser Beta'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "option + y = Karabiner",
+                                "from": {
+                                    "key_code": "y",
+                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open -a Karabiner-Elements" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + y = amphetamine",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a amphetamine" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "y = Siri",
+                                "description": "y = Zen",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Siri" }],
+                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "command + f = Dash",
+                                "description": "command + f = Clickup",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Dash" }],
+                                "to": [{ "shell_command": "open -a Clickup" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + f = Dictionary",
+                                "description": "option + f = Invoice Ninja",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Dictionary" }],
+                                "to": [{ "shell_command": "open -a 'Invoice Ninja'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "f = Finder",
+                                "description": "f = Raycast Clipboard History",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a finder" }],
+                                "to": [{ "shell_command": "open raycast://extensions/raycast/clipboard-history/clipboard-history" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "command + g = Chrome",
+                                "description": "command + g = Illustrator",
                                 "from": {
                                     "key_code": "g",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Google Chrome'" }],
+                                "to": [{ "shell_command": "open -a 'Adobe Illustrator 2025'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + g = Calender",
+                                "description": "option + g = InDesign",
                                 "from": {
                                     "key_code": "g",
                                     "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Calendar" }],
+                                "to": [{ "shell_command": "open -a 'Adobe InDesign 2025'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "g = Intellij IDEA",
+                                "description": "g = Photoshop",
                                 "from": {
                                     "key_code": "g",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'IntelliJ IDEA'" }],
+                                "to": [{ "shell_command": "open -a 'Adobe Photoshop 2025'" }],
                                 "type": "basic"
                             }
                         ]
@@ -1987,7 +1987,7 @@
                     "to": [{ "key_code": "f5" }]
                 }
             ],
-            "name": "Base Layer",
+            "name": "Default Layer",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
@@ -2025,7 +2025,7 @@
                     "ignore": true
                 }
             ],
-            "name": "Default",
+            "name": "Just a Hyper Key",
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
