@@ -2,10 +2,17 @@
 # paths = ["/etc/topgrade.toml"]
 
 [misc]
-pre_sudo = true
+pre_sudo = false
 
 # Disable specific steps - same options as the command line flag
-disable = ["system", "vscode", "containers", "bun_packages", "ruby_gems", "tlmgr"]
+disable = [
+  "system",
+  "vscode",
+  "containers",
+  "bun_packages",
+  "ruby_gems",
+  "tlmgr",
+]
 
 # Ignore failures for these steps
 ignore_failures = ["git_repos", "pnpm", "yarn", "bun_packages"]
