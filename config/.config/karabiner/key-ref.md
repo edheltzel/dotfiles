@@ -116,10 +116,10 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 
 |   Key\Mod    |        <kbd>✱</kbd>        | <kbd>⌘</kbd>  |   <kbd>⌥</kbd>   |
 | :----------: | :------------------------: | :-----------: | :--------------: |
-| <kbd>E</kbd> |           Figma            |    Finder     |      Gmail       |
+| <kbd>E</kbd> |           Figma            |     Vscode    |     Gmail        |
 | <kbd>R</kbd> |     Visual Studio Code     |      Zed      |     Spotify      |
 | <kbd>T</kbd> |          WezTerm           |   Obsidian    |      Typora      |
-| <kbd>Y</kbd> |        Zen Browser         | Brave Browser | Karabiner Elemen |
+| <kbd>Y</kbd> |        Zen Browser         | Brave Browser | Karabiner Elements |
 | <kbd>F</kbd> | Raycast: Clipboard History |    Clickup    |  Invoice Ninja   |
 | <kbd>G</kbd> |         Photoshop          |  Illustrator  |     InDesign     |
 
@@ -160,7 +160,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |                   <kbd>⇭</kbd>                   |           Numlock            |            ⏫⏬            |       Fast / Slow        |
 |                        🖱️L                        |  Mouse Left Click (Button1)  |            🖱️B            | Mouse Backward (Button4) |
 |                        🖱️R                        | Mouse Right Click (Button2)  |            🖱️F            | Mouse Forward (Button5)  |
-|                        🖱️M                        | Mouse Middle Click (Button3) |            🖲️             |       Mouse Wheel        |
+|                        🖱️                         | Mouse Middle Click (Button3) |            🖲️             |       Mouse Wheel        |
 
 
 
