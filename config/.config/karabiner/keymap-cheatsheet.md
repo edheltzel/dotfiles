@@ -103,11 +103,11 @@
 
 |   Key\Mod    |        <kbd>✱</kbd>        | <kbd>⌘</kbd>  |    <kbd>⌥</kbd>    |
 | :----------: | :------------------------: | :-----------: | :----------------: |
-| <kbd>E</kbd> |           Figma            |    Vscode     |       Gmail        |
-| <kbd>R</kbd> |     Visual Studio Code     |      Zed      |      Spotify       |
-| <kbd>T</kbd> |          WezTerm           |   Obsidian    |       Typora       |
+| <kbd>E</kbd> |           Vscode           |   Obsidian    |        Zed         |
+| <kbd>R</kbd> |           Gmail            | Edit Dotfiles |      Spotify       |
+| <kbd>T</kbd> |          WezTerm           |    Clickup    | Raycast: Topgrade  |
 | <kbd>Y</kbd> |        Zen Browser         | Brave Browser | Karabiner Elements |
-| <kbd>F</kbd> | Raycast: Clipboard History |    Clickup    |   Invoice Ninja    |
+| <kbd>F</kbd> | Raycast: Clipboard History |     Figma     |   Invoice Ninja    |
 | <kbd>G</kbd> |         Photoshop          |  Illustrator  |      InDesign      |
 
 ### Shifter
