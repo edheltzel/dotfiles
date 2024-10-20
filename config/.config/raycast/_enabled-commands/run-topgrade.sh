@@ -8,7 +8,7 @@
 # Optional parameters:
 # @raycast.icon 🤖
 # @raycast.packageName Terminal Utilities
-# @raycast.needsConfirmation true
+# @raycast.needsConfirmation false
 
 # Documentation:
 # @raycast.description Update all packages
@@ -18,5 +18,5 @@
 open -a WezTerm
 sleep 1  # Wait for WezTerm to open
 osascript -e 'tell application "WezTerm" to activate'
-osascript -e 'tell application "System Events" to keystroke "upp"'
+osascript -e 'tell application "System Events" to keystroke "topgrade"'
 osascript -e 'tell application "System Events" to key code 36' # Press Enter
