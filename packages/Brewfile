@@ -226,12 +226,13 @@ cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'spotify'              # Music streaming
 
 # Utility Applications
-cask 'bettertouchtool'      # MacOS automation/customization tool
-cask 'transnomino'          # A batch rename utility
-cask 'onyx'                 # System maintenance
-brew 'localsend'            # AirDrop like app for everything else
-cask 'via'                  # Keyboard configuration desktop client
-brew 'shortcat'             # vim motions for MacOS
+cask 'bettertouchtool'           # MacOS automation/customization tool
+cask 'transnomino'               # A batch rename utility
+cask 'onyx'                      # System maintenance
+brew 'shortcat'                  # vim motions for MacOS
+brew 'localsend'                 # AirDrop like app for everything else
+cask 'via'                       # Keyboard configuration desktop client
+cask 'nikitabobko/tap/aerospace' # Tiling window manager
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
