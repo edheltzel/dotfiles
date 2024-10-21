@@ -16,17 +16,22 @@ end
 -- Settings
 config.default_prog = { fish_path, "-l" }
 
+-- Audio
+config.audible_bell = "SystemBeep"
+
 -- Load leader (super+k), maps and tables - see keymaps.lua
 config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
 config.color_scheme = "tokyonight_night"
+
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
   { family = "Lilex", scale = 1.45 },
 })
 config.macos_window_background_blur = 10
+
 -- config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
@@ -49,9 +54,11 @@ config.status_update_interval = 1000
 config.tab_bar_at_bottom = false
 
 wezterm.on("update-status", function(window, pane)
+
   -- Workspace name
   local stat = window:active_workspace()
   local stat_color = "#F7768E"
+
   -- Utilize this to display LDR or current key table name
   if window:active_key_table() then
     stat = window:active_key_table()
@@ -63,6 +70,7 @@ wezterm.on("update-status", function(window, pane)
   end
 
   local basename = function(s)
+
     -- Nothing a little regex can't fix
     return string.gsub(s, "(.*[/\\])(.*)", "%2")
   end
@@ -83,6 +91,7 @@ wezterm.on("update-status", function(window, pane)
 
   -- Current command
   local cmd = pane:get_foreground_process_name()
+
   -- CWD and CMD could be nil (e.g. viewing log using Ctrl-Alt-l)
   cmd = cmd and basename(cmd) or ""
 
