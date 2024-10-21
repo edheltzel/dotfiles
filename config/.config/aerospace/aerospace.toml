@@ -1,3 +1,4 @@
+# Aerospace docs:
 # after-login-command = []
 # after-startup-command = []
 start-at-login = true
@@ -55,17 +56,18 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10' #monitor 2
-alt-b = 'workspace B' #brave browser
-alt-c = 'workspace C' #clickup
-alt-f = 'workspace F' #figma
-alt-g = 'workspace G' #indesign
-alt-i = 'workspace I' #illustrator
-alt-o = 'workspace O' #obsidian
-alt-p = 'workspace P' #photoshop
-alt-s = 'workspace S' #spotify
-alt-t = 'workspace T' #wezterm
-alt-v = 'workspace V' #vscode
-alt-z = 'workspace Z' #zen browser
+alt-b = 'workspace B' # B - brave browser
+alt-c = 'workspace C' # C - clickup
+alt-f = 'workspace F' # F - figma
+alt-g = 'workspace G' # G - indesign
+alt-i = 'workspace I' # I - illustrator
+alt-o = 'workspace O' # O - obsidian
+alt-p = 'workspace P' # P - photoshop
+alt-s = 'workspace S' # S - spotify
+alt-t = 'workspace T' # T - terminal
+alt-v = 'workspace V' # V - vscode
+alt-w = 'workspace W' # W -Microsoft Teams
+alt-z = 'workspace Z' # Z - zen browser
 
 alt-shift-1 = 'move-node-to-workspace 1' #monitor 1 - primary
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -85,8 +87,9 @@ alt-shift-i = 'move-node-to-workspace I' #illustrator
 alt-shift-o = 'move-node-to-workspace O' #obsidian
 alt-shift-p = 'move-node-to-workspace P' #photoshop
 alt-shift-s = 'move-node-to-workspace S' #spotify
-alt-shift-t = 'move-node-to-workspace T' #wezterm
+alt-shift-t = 'move-node-to-workspace T' #terminal
 alt-shift-v = 'move-node-to-workspace V' #vscode
+alt-shift-w = 'move-node-to-workspace W' #microsoft teams
 alt-shift-z = 'move-node-to-workspace Z' #zen browser
 
 alt-tab = 'workspace-back-and-forth'
@@ -123,17 +126,17 @@ run = "move-node-to-workspace F"
 
 # Photoshop
 [[on-window-detected]]
-if.app-id = 'com.abode.photoshop'
+if.app-id = 'com.adobe.Photoshop'
 run = "move-node-to-workspace P"
 
 # Illustrator
 [[on-window-detected]]
-if.app-id = 'com.abode.illustrator'
+if.app-id = 'com.adobe.illustrator'
 run = "move-node-to-workspace I"
 
 # InDesign
 [[on-window-detected]]
-if.app-id = 'com.abode.indesign'
+if.app-id = 'com.adobe.InDesign'
 run = "move-node-to-workspace G"
 
 # Visual Studio Code
@@ -144,6 +147,11 @@ run = "move-node-to-workspace V"
 # Wezterm
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
+run = "move-node-to-workspace T"
+
+# Kitty
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
 run = "move-node-to-workspace T"
 
 # Clickup
@@ -160,6 +168,12 @@ run = "move-node-to-workspace O"
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = "move-node-to-workspace S"
-# force to secondary monitor
+# Microsoft Teams
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = "move-node-to-workspace W"
+
+# These workspaces are always on my secondary monitor
 [workspace-to-monitor-force-assignment]
-S = 'secondary'
+S = 'secondary' #spotify
+W = 'secondary' #microsoft teams
