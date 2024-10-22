@@ -1672,12 +1672,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + y = Brave",
+                                "description": "command + y = Zen",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Brave Browser Beta'" }],
+                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
                                 "type": "basic"
                             },
                             {
@@ -1690,12 +1690,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "y = Zen",
+                                "description": "y = Brave",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
+                                "to": [{ "shell_command": "open -a 'Brave Browser Beta'" }],
                                 "type": "basic"
                             },
                             {
