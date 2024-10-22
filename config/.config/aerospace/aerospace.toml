@@ -99,7 +99,10 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling','mode main',] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
@@ -178,17 +181,17 @@ run = "move-node-to-workspace W"
 if.app-id = 'dev.zed.Zed'
 run = "move-node-to-workspace Z"
 
-# Timemachine
-[[on-window-detected]]
-if.app-id = 'com.apple.backup.launcher'
-run = ['layout floating', 'move-node-to-workspace 2']
 
 ### Always Float
+# Timemachine - this does not seem to work - need to ask or create an issue.
+[[on-window-detected]]
+if.app-id = 'com.apple.backup.launcher'
+run = ['layout floating', 'move-node-to-workspace 1']
+
 # Finder
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
-run = 'layout floating'
-
+run = ['layout floating', 'move-node-to-workspace 1']
 # Raycast
 [[on-window-detected]]
 if.app-id = 'com.raycast.macos'
