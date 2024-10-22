@@ -204,6 +204,10 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.jordanbaird.Ice'
 run = 'layout floating'
+# Shottr
+[[on-window-detected]]
+if.app-id = 'cc.ffitch.shottr'
+run = 'layout floating'
 
 ###--- Force these workspace to secondary monitor ---###
 [workspace-to-monitor-force-assignment]
