@@ -16,6 +16,10 @@ end
 -- Settings
 config.default_prog = { fish_path, "-l" }
 
+-- Cursor
+config.cursor_blink_rate = 500
+config.default_cursor_style = "BlinkingBar"
+
 -- Audio
 config.audible_bell = "SystemBeep"
 
@@ -54,7 +58,6 @@ config.status_update_interval = 1000
 config.tab_bar_at_bottom = false
 
 wezterm.on("update-status", function(window, pane)
-
   -- Workspace name
   local stat = window:active_workspace()
   local stat_color = "#F7768E"
@@ -70,7 +73,6 @@ wezterm.on("update-status", function(window, pane)
   end
 
   local basename = function(s)
-
     -- Nothing a little regex can't fix
     return string.gsub(s, "(.*[/\\])(.*)", "%2")
   end
