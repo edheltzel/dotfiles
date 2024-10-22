@@ -184,7 +184,6 @@ if.app-id = 'com.apple.backup.launcher'
 run = ['layout floating', 'move-node-to-workspace 2']
 
 ### Always Float
-
 # Finder
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
@@ -193,6 +192,11 @@ run = 'layout floating'
 # Raycast
 [[on-window-detected]]
 if.app-id = 'com.raycast.macos'
+run = 'layout floating'
+
+# Ice Bar
+[[on-window-detected]]
+if.app-id = 'com.jordanbaird.Ice'
 run = 'layout floating'
 
 ###--- Force these workspace to secondary monitor ---###
