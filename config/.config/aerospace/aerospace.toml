@@ -15,7 +15,7 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
-automatically-unhide-macos-hidden-apps = false
+automatically-unhide-macos-hidden-apps = true
 
 [key-mapping]
 preset = 'qwerty'
@@ -93,15 +93,13 @@ alt-shift-z = 'move-node-to-workspace Z'  # (z)ed editor
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
+### Service Mode
 alt-shift-semicolon = 'mode service'
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [
-  'layout floating tiling',
-  'mode main',
-] # Toggle between floating and tiling layout
+f = ['layout floating tiling','mode main',] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
@@ -109,7 +107,7 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-# Move apps to specific workspaces
+### Move apps to specific workspaces
 # Zen Browser
 [[on-window-detected]]
 if.app-id = 'com.mozilla.com.zen.browser'
@@ -127,7 +125,7 @@ run = "move-node-to-workspace B"
 
 # Figma
 [[on-window-detected]]
-if.app-id = 'com.figma.desktop'
+if.app-id = 'com.figma.Desktop'
 run = "move-node-to-workspace F"
 
 # InDesign
@@ -149,7 +147,7 @@ run = "move-node-to-workspace O"
 [[on-window-detected]]
 if.app-id = 'com.adobe.Photoshop'
 run = "move-node-to-workspace P"
-#
+
 # Spotify
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
@@ -185,6 +183,17 @@ run = "move-node-to-workspace Z"
 if.app-id = 'com.apple.backup.launcher'
 run = ['layout floating', 'move-node-to-workspace 2']
 
+### Always Float
+
+# Finder
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+# Raycast
+[[on-window-detected]]
+if.app-id = 'com.raycast.macos'
+run = 'layout floating'
 
 ###--- Force these workspace to secondary monitor ---###
 [workspace-to-monitor-force-assignment]
