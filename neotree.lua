@@ -1,5 +1,5 @@
 return {
-  -- Changed windows position to right, excluded some directories
+  -- Moves explorer to the right and excludes some files/directories
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
