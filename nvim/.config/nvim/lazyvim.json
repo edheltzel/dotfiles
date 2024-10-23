@@ -1,6 +1,16 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.lang.astro",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.php",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.ui.mini-animate",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "news": {
     "NEWS.md": "6520"
