@@ -1645,12 +1645,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + t = Clickup",
+                                "description": "command + t = Kitty",
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Clickup" }],
+                                "to": [{ "shell_command": "open -a Kitty" }],
                                 "type": "basic"
                             },
                             {
