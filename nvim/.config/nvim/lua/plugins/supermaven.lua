@@ -1,20 +1,20 @@
-return {
+require("lazy").setup({
   {
     "supermaven-inc/supermaven-nvim",
     config = function()
       require("supermaven-nvim").setup({
         keymaps = {
-          accept_suggestion = "<C-A-j>",
+          accept_suggestion = "<Tab>",
           clear_suggestion = "<C-]>",
           accept_word = "<C-j>",
         },
-        ignore_filetypes = { cpp = true },
+        ignore_filetype = { cpp = true },
         color = {
           suggestion_color = "#292D43",
           cterm = 244,
         },
-        log_level = "info", -- set to "off" to disable logging completely
-        disable_inline_completion = false, -- disables inline completion for use with cmp
+        log_level = "info",
+        disable_inline_completion = false,
         disable_keymaps = false,
         condition = function()
           return false
@@ -22,4 +22,4 @@ return {
       })
     end,
   },
-}
+}, {})
