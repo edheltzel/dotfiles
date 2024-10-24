@@ -28,7 +28,10 @@ config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
-config.color_scheme = "tokyonight_night"
+-- Color Scheme - see: https://wezfurlong.org/wezterm/colorschemes/index.html
+--
+-- config.color_scheme = "tokyonight_night"
+config.color_scheme = "Eldritch"
 
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
