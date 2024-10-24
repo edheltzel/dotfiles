@@ -20,9 +20,9 @@
 }
 
 /* Cursor */
-.monaco-editor .cursor {
+/* .monaco-editor .cursor {
   background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
-}
+} */
 
 /* Command prompt blur */
 #command-blur {
