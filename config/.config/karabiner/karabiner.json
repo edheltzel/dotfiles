@@ -1272,18 +1272,18 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + i = Illustrator",
+                                "description": "command + g = Illustrator",
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "g",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Adobe Illustrator 2025'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + i = InDesign",
+                                "description": "option + g = InDesign",
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "g",
                                     "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Adobe InDesign 2025'" }],
