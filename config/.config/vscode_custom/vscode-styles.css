@@ -35,7 +35,6 @@
   backdrop-filter: blur(8px);
 }
 
-
 .quick-input-widget {
   transform: translateY(-50%) !important;
   top: 50% !important;
@@ -71,15 +70,19 @@
   max-height: calc(50vh - 60px) !important;
   overflow-y: auto !important;
 }
-
 .quick-input-titlebar {
-  background-color: #16161E !important;
+  background-color: #212337 !important;
+  color: #9FA9DEAA !important;
+  display: none !important;
 }
 
 .quick-input-header {
   padding: 8px 6px 8px !important;
 }
 
+.monaco-icon-label>.monaco-icon-label-container>.monaco-icon-description-container>.label-description{
+  white-space: inherit !important;
+}
 .monaco-scrollable-element .shadow.top {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .75) !important;
   top: -3px !important;
