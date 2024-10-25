@@ -1,5 +1,5 @@
-import = [
-  "~/.config/alacritty/themes/atelier-lakeside-dark.toml",
+general.import = [
+  "~/.config/alacritty/themes/eldritch.toml",
   "~/.config/alacritty/keybindings.toml",
 ]
 
