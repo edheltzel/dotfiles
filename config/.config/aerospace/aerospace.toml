@@ -56,7 +56,6 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10' # monitor 2 - secondary
-alt-b = 'workspace B'  # B - zen/brave (b)rowser
 alt-e = 'workspace E'  # E - vscode/zed (e)ditor
 alt-f = 'workspace F'  # F - (f)igma
 alt-g = 'workspace G'  # G - indesi(g)n
@@ -66,6 +65,7 @@ alt-p = 'workspace P'  # P - (p)hotoshop
 alt-s = 'workspace S'  # S - (s)potify
 alt-t = 'workspace T'  # T - (t)erminal
 alt-w = 'workspace M'  # M - (m)icrosoft teams
+alt-y = 'workspace Y'  # Y - zen/brave - matches my hyper key config
 
 alt-shift-1 = 'move-node-to-workspace 1'  # monitor 1 - primary
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -77,7 +77,6 @@ alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 10' # monitor 2 - secondary
-alt-shift-b = 'move-node-to-workspace B'  # zen/brave (b)rowser
 alt-shift-e = 'move-node-to-workspace E'  # vscode (e)ditor - matches my hpyer key config
 alt-shift-f = 'move-node-to-workspace F'  # (f)igma
 alt-shift-g = 'move-node-to-workspace G'  # indesi(g)n
@@ -87,6 +86,7 @@ alt-shift-p = 'move-node-to-workspace P'  # (p)hotoshop
 alt-shift-s = 'move-node-to-workspace S'  # (s)potify
 alt-shift-t = 'move-node-to-workspace T'  # (t)erminal
 alt-shift-m = 'move-node-to-workspace M'  # (m)icrosoft teams
+alt-shift-y = 'move-node-to-workspace Y'  # zen/brave - matches my hyper key config
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -114,7 +114,7 @@ run = "move-node-to-workspace B"
 # Brave Browser
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser.beta'
-run = "move-node-to-workspace B"
+run = "move-node-to-workspace Y"
 
 # Clickup - going back to the browser version - b/c of the Toggl extension tracking
 # [[on-window-detected]]
