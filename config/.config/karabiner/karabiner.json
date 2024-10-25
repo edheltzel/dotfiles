@@ -3367,7 +3367,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open raycast://script-commands/edit-dotfile"
+                    "shell_command": "open raycast://script-commands/edit-dotfiles"
                   }
                 ],
                 "type": "basic"
