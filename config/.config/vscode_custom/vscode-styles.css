@@ -71,8 +71,6 @@
   overflow-y: auto !important;
 }
 .quick-input-titlebar {
-  background-color: #212337 !important;
-  color: #9FA9DEAA !important;
   display: none !important;
 }
 
@@ -90,13 +88,11 @@
 
 .scrollbar.vertical .slider {
   width: 2px !important;
-  background: #7aa2f7 !important;
   border-radius: 5px !important;
   margin-left: 10px !important;
 }
 
 .scrollbar.horizontal .slider {
-  background: #7aa2f7 !important;
   border-radius: 5px !important;
   height: 2px !important;
 }
