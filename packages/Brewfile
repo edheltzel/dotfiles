@@ -32,6 +32,7 @@ tap 'sass/sass' 								# Sass
 tap 'teamookla/speedtest'   		# Command line speed test utility
 tap 'localsend/localsend' 			# LocalSend - AirDrop for everything else
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
+tap 'FelixKratz/formulae'       # JankyBorders - window borders for MacOS
 
 #############################################################
 # 1. Command Line                                           #
@@ -295,7 +296,7 @@ cask 'typinator'          # Text expander - macOS only
 cask 'keka'               # File archiver and extractor
 # cask 'hammerspoon'        # macOS automation tool
 cask 'karabiner-elements' # Keyboard customization tool
-cask 'keyboard-cowboy'    # Missing Keyboard shotcut utility
+brew 'border'             # window borders for MacOS - FelixKratz/formulae tap
 
 # Mac App Store Installs
 mas 'ColorSlurp', id: 1287239339
