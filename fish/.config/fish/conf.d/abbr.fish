@@ -1,5 +1,5 @@
 if status is-interactive
-    abbr --add atm neofetch
+    abbr --add atm fastfetch
     abbr --add bi 'brew install '
     abbr --add binfo 'brew info'
     abbr --add brews 'brew list'

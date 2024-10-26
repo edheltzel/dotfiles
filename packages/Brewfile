@@ -108,8 +108,8 @@ brew 'lazygit'        # TUI for git - Go
 brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 
 # CLI Misc
-brew 'figlet'       # Output text as big ASCII art text
-brew 'neofetch'     # Show system data and ditstro info
+brew 'figlet'        # Output text as big ASCII art text
+brew 'fastfetch'     # Show system data and ditstro info - neofetch is archived
 
 #############################################################
 # 2. Software / Web Development                             #
