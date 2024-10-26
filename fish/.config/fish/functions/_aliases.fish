@@ -51,8 +51,8 @@ alias sdel 'sudo rm -rf'
 # Editors and Utilities
 # alias code code-insiders
 alias btm 'btm --battery --fahrenheit'
-alias top 'btm --battery --fahrenheit'
-alias bottom 'btm --battery --fahrenheit'
+alias top 'btm'
+alias bottom 'btm'
 alias serve miniserve #start a simple http server
 alias du dua
 alias zip 'ouch compress'
