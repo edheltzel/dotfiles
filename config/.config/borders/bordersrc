@@ -1,4 +1,16 @@
 #!/bin/bash
+# Elbritch colors - https://github.com/eldritch-theme/eldritch
+# 0xff212337 = #212337
+# 0xff323449 = #323449
+# 0xffebfafa = #ebfafa
+# 0xff7081d0 = #7081d0
+# 0xff04d1f9 = #04d1f9
+# 0xff37f499 = #37f499
+# 0xfff7c67f = #f7c67f
+# 0xfff265b5 = #f265b5
+# 0xffa48cf2 = #a48cf2
+# 0xfff16c75 = #f16c75
+# 0xfff1fc79 = #f1fc79
 
 options=(
 	style=round
