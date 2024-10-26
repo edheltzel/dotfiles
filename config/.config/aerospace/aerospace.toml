@@ -1,6 +1,10 @@
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 # after-login-command = []
-# after-startup-command = []
+
+after-startup-command = [
+  # depends on JankyBorders
+  'exec-and-forget borders'
+]
 start-at-login = true
 
 enable-normalization-flatten-containers = true
@@ -33,6 +37,7 @@ outer.right = 10
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
+
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
@@ -64,7 +69,7 @@ alt-o = 'workspace O'  # O - (o)bsidian
 alt-p = 'workspace P'  # P - (p)hotoshop
 alt-s = 'workspace S'  # S - (s)potify
 alt-t = 'workspace T'  # T - (t)erminal
-alt-w = 'workspace M'  # M - (m)icrosoft teams
+alt-m = 'workspace M'  # M - (m)icrosoft teams
 alt-y = 'workspace Y'  # Y - zen/brave - matches my hyper key config
 
 alt-shift-1 = 'move-node-to-workspace 1'  # monitor 1 - primary
@@ -169,7 +174,7 @@ run = "move-node-to-workspace E"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
-run = "move-node-to-workspace W"
+run = "move-node-to-workspace M"
 
 # Zed Editor
 [[on-window-detected]]
@@ -186,11 +191,16 @@ run = ['layout floating', 'move-node-to-workspace 1']
 # Finder
 # [[on-window-detected]]
 # if.app-id = 'com.apple.finder'
-# run = ['layout floating', 'move-node-to-workspace 1']
+# run = 'layout v_accordion' # not supported yet :(
 
 # Raycast
 [[on-window-detected]]
 if.app-id = 'com.raycast.macos'
+run = 'layout floating'
+
+# Karabiner Elements
+[[on-window-detected]]
+if.app-id = 'org.pqrs.Karabiner-Elements.Settings'
 run = 'layout floating'
 
 # Toggl
