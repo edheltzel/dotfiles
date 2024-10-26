@@ -34,6 +34,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Finder: ctrl+cmd click to drag and drop anywhere on the windows
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 # Display full POSIX path as Finder window title set to TRUE
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
 
