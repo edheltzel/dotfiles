@@ -41,7 +41,7 @@ config.macos_window_background_blur = 10
 
 -- config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
-config.window_close_confirmation = "AlwaysPrompt"
+config.window_close_confirmation = "NeverPrompt" -- AlwaysPrompt | NeverPrompt
 config.scrollback_lines = 3000
 config.default_workspace = wezterm.nerdfonts.cod_rocket
 
