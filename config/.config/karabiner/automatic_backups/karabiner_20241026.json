@@ -1209,14 +1209,22 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + e = Edit Dotfiles",
+                                "description": "command + k = Kitty",
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [{ "shell_command": "open -a Kitty" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "command + t = Edit Dotfiles",
+                                "from": {
+                                    "key_code": "t",
                                     "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open raycast://script-commands/edit-dotfiles" }],
                                 "type": "basic"
-
                             },
                             {
                                 "description": "option + t = Raycast: Topgrade",
