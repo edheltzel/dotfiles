@@ -43,6 +43,7 @@
     "softwardupdate",
     "spacebar",
     "spctl",
+    "terminalfont",
     "tigrc",
     "timestamping",
     "tldr",
@@ -50,6 +51,7 @@
     "typora",
     "UIOP",
     "Unstowing",
+    "wmtheme",
     "zoxide"
   ],
 }
