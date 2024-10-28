@@ -2481,15 +2481,6 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "t = WezTerm",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a WezTerm" }],
-                                "type": "basic"
-                            },
-                            {
                                 "description": "command + y = Zen",
                                 "from": {
                                     "key_code": "y",
@@ -2514,15 +2505,6 @@
                                     "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Invoice Ninja'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + m = Microsoft Teams",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Microsoft Teams'" }],
                                 "type": "basic"
                             },
                             {
