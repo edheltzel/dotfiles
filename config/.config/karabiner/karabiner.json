@@ -1469,20 +1469,7 @@
                                 ],
                                 "type": "basic"
                             },
-                            {
-                                "description": "control + i = command + h (hide current window)",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "h",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
+
                             {
                                 "description": "option + i = mouse right click",
                                 "from": {
