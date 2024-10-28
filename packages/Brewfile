@@ -23,9 +23,6 @@ tap 'buo/cask-upgrade' 					# Upgrade casks
 tap 'clementtsang/bottom' 			#	Resource monitor (better top) - Rust
 tap 'eddieantonio/eddieantonio' # Eddie Antonio's Homebrew Tap
 tap 'github/gh'									# Interact with GitHub PRs, issues, repos
-tap 'homebrew/cask-drivers' 		# for drivers
-tap 'homebrew/cask-fonts' 			# for fonts
-tap 'homebrew/cask-versions' 		# for versions
 tap 'kyoh86/tap' 								# for 'sd' - RegEx find and replace (better sed) - Rust
 tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
 tap 'sass/sass' 								# Sass
@@ -156,7 +153,6 @@ brew 'monolith'           # Save web pages as single files - Rust
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
 brew 'git-delta'          # Git diff viewer - Rust
 brew 'git-extras'         # Extra git commands for common tasks
-brew 'git-flow-avh'       # Git extensions to provide high-level repository operations
 brew 'git-lfs'            # Git Large File Storage
 brew 'gitkraken'          # Git client GUI
 brew 'gitkraken-cli'      # GitKraken CLI
@@ -281,7 +277,6 @@ cask 'qlstephen'      # QL for dev text files
 cask 'qlvideo'        # QL for video formats
 cask 'quicklook-csv'  # QL for tables in CSV format
 cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
-cask 'quicklookapk',   args: { require_sha: false } # QL for Android APKs
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac OS Mods, Imrovments, & Utilities
