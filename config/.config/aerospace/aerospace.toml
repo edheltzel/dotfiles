@@ -108,11 +108,6 @@ run = "move-node-to-workspace B"
 if.app-id = 'com.brave.Browser.beta'
 run = "move-node-to-workspace Y"
 
-# Clickup - going back to the browser version - b/c of the Toggl extension tracking
-# [[on-window-detected]]
-# if.app-id = 'com.clickup.desktop-app'
-# run = "move-node-to-workspace C"
-
 # Figma
 [[on-window-detected]]
 if.app-id = 'com.figma.Desktop'
@@ -157,8 +152,8 @@ run = "move-node-to-workspace T"
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = "move-node-to-workspace E"
-# Microsoft Teams
 
+# Microsoft Teams
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = "move-node-to-workspace M"
@@ -174,11 +169,6 @@ run = "move-node-to-workspace E"
 [[on-window-detected]]
 if.app-id = 'com.apple.backup.launcher'
 run = ['layout floating', 'move-node-to-workspace 1']
-
-# Finder
-# [[on-window-detected]]
-# if.app-id = 'com.apple.finder'
-# run = 'layout v_accordion' # not supported yet :(
 
 # Raycast
 [[on-window-detected]]
@@ -208,4 +198,4 @@ run = 'layout floating'
 ###--- Force these workspace to secondary monitor ---###
 [workspace-to-monitor-force-assignment]
 R = 'secondary' #spotify
-W = 'secondary' #microsoft teams
+M = 'secondary' #microsoft teams
