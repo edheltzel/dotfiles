@@ -152,7 +152,7 @@ There are two options for managing packages with GNU Stow:
 
 Any of the scripts can be run individually at any time to update/reset as needed. ie: `cd ~/.dotfiles && ./duti/duti.sh`
 
-- macOS (macos/)
+- macObS (macos/)
   - `macos.sh` - Executes a long list of commands pertaining to macOS Preferences – **DO NOT** blindly run this script - it is a WIP with each macOS update things change.
 - packages (packages/)
   - `packages.sh` - Installs the Brewfile and each package manager's packages based on the `.txt` files.
@@ -294,6 +294,9 @@ Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-
 
 </details>
 <h4 id="troubleshoot-macos">MacOS<a href="#to-the-top">↑</a></h4>
+
+I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.sh` - it's a great resource to see what the default key repeat rate will be.  fs
+
 <details>
   <summary>WindowServer RAM Leak</summary>
   As of `2024-07` there is a known bug/issue with macOS where the WindowServer will consume CPU and/or Memory. It is annoying. From my experience, this is related to more than one external monitor. My current workaround is to kill the WindowServer on macOS, which logs you out. Once you log back in the WindowServer will be restarted and your RAM usage will be back in normal ranges. This is a workaround until Apple fixes the issue, which will probably never happen.
@@ -329,13 +332,10 @@ speedtest
 </details>
 <h2 id="todos">TODOs <a href="#to-the-top">↑</a></h2>
 
-- [ ] Look into other/better options that Stow:
-  - [][Tuckr](https://github.com/RaphGL/Tuckr)
-  - [][Rotz](https://github.com/volllly/rotz)
+- [ ] Consider using [Home Manager](https://nix-community.github.io/home-manager/) for package management.
 - [ ] Convert fish functions to zsh functions - **WIP**
 - [ ] zsh completions seem to be broken [issue #40](https://github.com/edheltzel/dotfiles/issues/40)
   - [ ] Look into zsh-completions vs autocomplete
-- [ ] Consider using [NixOS](https://nixos.org/) for package management over Homebrew. ie: [good example](https://github.com/biosan/dotfiles)
 - [x] include zsh abbreviations
 - [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
@@ -361,3 +361,4 @@ speedtest
 [ThanksKalis]: https://kalis.me/dotfiles-automating-macos-system-configuration/
 [ThanksLissy]: https://github.com/lissy93/dotfiles
 [ThanksJake]: https://www.jakewiesler.com/blog/managing-dotfiles
+[def]: https://github.com/RaphGL/Tuckr
