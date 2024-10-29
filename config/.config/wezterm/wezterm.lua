@@ -126,15 +126,4 @@ wezterm.on("update-status", function(window, pane)
   }))
 end)
 
---[[ Appearance setting for when I need to take pretty screenshots
-config.enable_tab_bar = false
-config.window_padding = {
-  left = '0.5cell',
-  right = '0.5cell',
-  top = '0.5cell',
-  bottom = '0cell',
-
-}
---]]
-
 return config
