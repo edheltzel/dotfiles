@@ -21,7 +21,7 @@ config.cursor_blink_rate = 500
 config.default_cursor_style = "BlinkingBar"
 
 -- Audio
-config.audible_bell = "SystemBeep"
+-- config.audible_bell = "SystemBeep"
 
 -- Load leader (super+k), maps and tables - see keymaps.lua
 config.leader = keymaps.leader
@@ -37,12 +37,12 @@ config.color_scheme = "Eldritch"
 config.font = wezterm.font_with_fallback({
   { family = "Lilex", scale = 1.45 },
 })
-config.macos_window_background_blur = 10
+-- config.macos_window_background_blur = 10
 
 -- config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt" -- AlwaysPrompt | NeverPrompt
-config.scrollback_lines = 3000
+config.scrollback_lines = 10000
 config.default_workspace = wezterm.nerdfonts.cod_rocket
 
 -- initial window size
@@ -58,7 +58,7 @@ config.inactive_pane_hsb = {
 -- Tab bar
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
-config.tab_bar_at_bottom = false
+config.tab_bar_at_bottom = true
 
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
@@ -116,11 +116,11 @@ wezterm.on("update-status", function(window, pane)
     -- Wezterm has a built-in nerd fonts
     -- https://wezfurlong.org/wezterm/config/lua/wezterm/nerdfonts.html
     { Text = wezterm.nerdfonts.md_folder .. "  " .. cwd },
-    { Text = " | " },
+    { Text = " ⋮ " },
     { Foreground = { Color = "#e0af68" } },
     { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd },
     "ResetAttributes",
-    { Text = " | " },
+    { Text = " ⋮ " },
     { Text = wezterm.nerdfonts.md_clock .. "  " .. time },
     { Text = "  " },
   }))
