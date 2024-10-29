@@ -35,7 +35,7 @@
                                 "type": "basic"
                             },
                             {
-                              "description": "shift + command + h = MOUSE WHEEL LEFT FAST",
+                                "description": "shift + command + h = MOUSE WHEEL LEFT FAST",
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
@@ -653,15 +653,6 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "e = VSCode",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Visual Studio Code'" }],
-                                "type": "basic"
-                            },
-                            {
                                 "description": "command + r = Spotify",
                                 "from": {
                                     "key_code": "r",
@@ -686,15 +677,6 @@
                                     "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open raycast://script-commands/run-topgrade" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "t = WezTerm",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a WezTerm" }],
                                 "type": "basic"
                             },
                             {
@@ -1403,7 +1385,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "description": "option + i = mouse right click",
                                 "from": {
