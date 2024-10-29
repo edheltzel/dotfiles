@@ -194,6 +194,11 @@ run = 'layout floating'
 if.app-id = 'cc.ffitch.shottr'
 run = 'layout floating'
 
+# Shottr
+[[on-window-detected]]
+if.app-id = 'com.getdropbox.dropbox'
+run = 'layout floating'
+
 ###--- Force these workspace to secondary monitor ---###
 [workspace-to-monitor-force-assignment]
 R = 'secondary' #spotify
