@@ -29,7 +29,6 @@ config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
 -- Color Scheme - see: https://wezfurlong.org/wezterm/colorschemes/index.html
---
 -- config.color_scheme = "tokyonight_night"
 config.color_scheme = "Eldritch"
 
