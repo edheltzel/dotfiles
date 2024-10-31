@@ -38,7 +38,7 @@ alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
-alias cuts 'cd ~/.dotfiles; and eval $EDITOR .'
+alias cuts 'eval $EDITOR ~/.dotfiles/dotfiles.code-workspace'
 alias kb 'cd ~/RDM\ Dropbox/Ed\ Heltzel/Apps/Obsidian/KB/'
 
 # Actions
