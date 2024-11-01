@@ -120,8 +120,8 @@ alt-shift-l = ['join-with right', 'mode main']
 ### Move apps to specific workspaces
 # Zen Browser
 [[on-window-detected]]
-if.app-id = 'com.mozilla.com.zen.browser'
-run = "move-node-to-workspace B"
+if.app-id = 'org.mozilla.com.zen.browser'
+run = "move-node-to-workspace Y"
 
 # Brave Browser
 [[on-window-detected]]
