@@ -73,9 +73,9 @@ alt-0 = 'workspace 10' # monitor 2 - secondary
 alt-e = 'workspace E'  # E - vscode/zed (e)ditor
 alt-f = 'workspace F'  # F - (f)igma
 alt-g = 'workspace G'  # G - (g)raphic design -> indesign/illustrator/photoshop
+alt-m = 'workspace M'  # M - (m)usic & (m)icrosoft teams + spotify
 alt-o = 'workspace O'  # O - (o)bsidian
 alt-t = 'workspace T'  # T - (t)erminal
-alt-m = 'workspace M'  # M - (m)usic & (m)icrosoft teams + spotify
 alt-y = 'workspace Y'  # Y - zen/brave
 
 alt-shift-1 = 'move-node-to-workspace 1'  # monitor 1 - primary
@@ -91,10 +91,10 @@ alt-shift-0 = 'move-node-to-workspace 10' # monitor 2 - secondary
 alt-shift-e = 'move-node-to-workspace E'  # E - vscode (e)ditor - matches my hpyer key config
 alt-shift-f = 'move-node-to-workspace F'  # F - (f)igma
 alt-shift-g = 'move-node-to-workspace G'  # G - (g)raphic design -> indesign/illustrator/photoshop
+alt-shift-m = 'move-node-to-workspace M'  # M - (m)usic & (m)icrosoft teams + spotify
 alt-shift-o = 'move-node-to-workspace O'  # O - (o)bsidian
 alt-shift-p = 'move-node-to-workspace P'  # P - (p)hotoshop
 alt-shift-t = 'move-node-to-workspace T'  # T - (t)erminal
-alt-shift-m = 'move-node-to-workspace M'  # M - (m)usic & (m)icrosoft teams + spotify
 alt-shift-y = 'move-node-to-workspace Y'  # Y - zen/brave
 
 alt-tab = 'workspace-back-and-forth'
