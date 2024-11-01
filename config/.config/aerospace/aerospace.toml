@@ -1,7 +1,16 @@
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 # after-login-command = []
+# Run Sketchybar together with AeroSpace
+# sketchbar has a built-in detection of already running process,
+# so it won't be run twice on AeroSpace restart
 after-startup-command = [
+  'exec-and-forget sketchybar',
   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=4.0',
+]
+
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
 start-at-login = true
@@ -18,18 +27,19 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
-automatically-unhide-macos-hidden-apps = false
+# focuses app regardless of visibility
+automatically-unhide-macos-hidden-apps = true
 
 [key-mapping]
 preset = 'qwerty'
 
 [gaps]
-inner.horizontal = 20
-inner.vertical = 20
-outer.left = 20
-outer.bottom = 20
-outer.top = 20
-outer.right = 20
+inner.horizontal = 5
+inner.vertical = 5
+outer.left = 5
+outer.bottom = 5
+outer.top = 35
+outer.right = 5
 
 [mode.main.binding]
 
