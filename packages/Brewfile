@@ -46,6 +46,7 @@ brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 # CLI Essentials
 brew 'git'          # Version control
 brew 'neovim'       # Text editor
+brew 'helix'        # Text editor
 brew 'stow'         # Dotfile manager
 brew 'topgrade'     # Upgrade all the things - Rust
 brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
