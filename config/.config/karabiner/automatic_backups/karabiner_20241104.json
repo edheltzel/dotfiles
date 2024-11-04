@@ -752,8 +752,7 @@
                     "to": [{ "key_code": "f5" }]
                 }
             ],
-            "name": "BigMac - Keychron Q11 CapsLock Mods",
-            "selected": true,
+            "name": "Keychron Q11 - CapLock Enhancements",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -2720,6 +2719,7 @@
                 ]
             },
             "name": "MacDaddy",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
