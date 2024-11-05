@@ -4,12 +4,12 @@
 gui:
   theme:
     activeBorderColor:
-      - green
+      - "#37f499"
       - bold
     inactiveBorderColor:
       - "#747BA2"
     searchingActiveBorderColor:
-      - cyan
+      - "#f265b5"
       - bold
     optionsTextColor:
       - blue
