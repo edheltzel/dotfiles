@@ -1,4 +1,5 @@
-* {
+
+*{
   font-family: Lilex, monospace;
 }
 
@@ -19,6 +20,12 @@
   justify-content: flex-end !important;
 }
 
+.action-item.icon:not(.checked) > a{
+  color: rgba(112, 129, 208, 0.29) !important;
+}
+.action-item.icon:not(.checked) > a[class*='activity-workbench-view-extension-project-manager-'] {
+  background-color: rgba(112, 129, 208, 0.29) !important;
+}
 /* Cursor */
 /* .monaco-editor .cursor {
   background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
