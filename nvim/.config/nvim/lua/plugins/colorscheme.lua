@@ -6,24 +6,13 @@ return {
     opts = {},
   },
   {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1000,
-    opts = {
-      style = "night",
-    },
-  },
-  {
-    "craftzdog/solarized-osaka.nvim",
+    "scottmckendry/cyberdream.nvim",
     lazy = false,
     priority = 1000,
     opts = function(_, opts)
       opts.transparent = true
       opts.italic_comments = true
-      opts.styles = {
-        sidebar = "transparent",
-        floats = "dark",
-      }
+      opts.borderless_telescope = false
     end,
   },
   {
@@ -31,5 +20,18 @@ return {
     opts = {
       colorscheme = "eldritch",
     },
+  },
+
+  -- modicator (auto color line number based on vim mode)
+  {
+    "mawkler/modicator.nvim",
+    dependencies = "scottmckendry/cyberdream.nvim",
+    init = function()
+      -- These are required for Modicator to work
+      vim.o.cursorline = false
+      vim.o.number = true
+      vim.o.termguicolors = true
+    end,
+    opts = {},
   },
 }
