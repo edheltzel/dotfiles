@@ -947,7 +947,7 @@
     "command": "editor.toggleFold",
     "key": "Enter",
     "name": "Toggle Code Folding open/close",
-    "when": "vim.mode == 'Normal' && (editorTextFocus && !editorReadonly && !inputFocus)"
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !editorReadonly && !inputFocus)"
   },
   {
     "command": "editor.action.moveLinesDownAction",
