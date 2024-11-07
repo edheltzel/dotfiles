@@ -129,6 +129,7 @@
 	"editor.tabSize": 2,
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.wordWrapColumn": 120,
+	"workbench.activityBar.location": "bottom",
 	"workbench.colorTheme": "Eldritch",
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.pinnedTabSizing": "shrink",
@@ -525,5 +526,4 @@
 			"type": "command"
 		}
 	],
-	"workbench.activityBar.location": "bottom",
 }
