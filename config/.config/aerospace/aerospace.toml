@@ -28,7 +28,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
 # focuses app regardless of visibility
-automatically-unhide-macos-hidden-apps = true
+automatically-unhide-macos-hidden-apps = false
 
 [key-mapping]
 preset = 'qwerty'
