@@ -28,8 +28,7 @@ config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
--- Color Scheme - see: https://wezfurlong.org/wezterm/colorschemes/index.html
--- config.color_scheme = "tokyonight_night"
+-- Color Scheme - see: https://wezfurlong.org/wezmerm/colorschemes/index.html
 config.color_scheme = "Eldritch"
 
 -- Nerdfonts are baked into Wezterm
@@ -76,7 +75,6 @@ wezterm.on("update-status", function(window, pane)
   end
 
   local basename = function(s)
-    -- Nothing a little regex can't fix
     return string.gsub(s, "(.*[/\\])(.*)", "%2")
   end
 
@@ -84,10 +82,8 @@ wezterm.on("update-status", function(window, pane)
   local cwd = pane:get_current_working_dir()
   if cwd then
     if type(cwd) == "userdata" then
-      -- Wezterm introduced the URL object in 20240127-113634-bbcac864
       cwd = basename(cwd.file_path)
     else
-      -- 20230712-072601-f4abf8fd or earlier version
       cwd = basename(cwd)
     end
   else
@@ -108,7 +104,7 @@ wezterm.on("update-status", function(window, pane)
     { Foreground = { Color = stat_color } },
     { Text = "  " },
     { Text = wezterm.nerdfonts.oct_table .. "  " .. stat },
-    { Text = " |" },
+    { Text = " ⋮ " },
   }))
 
   -- Right status
