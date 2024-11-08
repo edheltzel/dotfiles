@@ -1,11 +1,35 @@
+/**
+ *  Lilex Nerd Font
+ * Elbritch colors - https://github.com/eldritch-theme/eldritch
+ * #212337
+ * #323449
+ * #ebfafa
+ * #7081d0
+ * #04d1f9
+ * #37f499
+ * #f7c67f
+ * #f265b5
+ * #a48cf2
+ * #f16c75
+ * #f1fc79
+*/
 /* Font - affects vscode setting: editor.fontFamily */
 * {
-  font-family: Lilex, CommitMono monospace;
+  font-family: CommitMono, monospace;
 }
 
 /* Explore */
-[aria-label="Open Editors"] + h3 {
+[aria-label="Timeline"] + h3 {
   color: coral !important;
+}
+
+[aria-label="Open Editors"] + h3,
+[aria-label="Source Control"] + h3.title {
+  color: #f265b5 !important;
+}
+
+[aria-label="Favorites Section"] > h3.title {
+  color: #f265b5 !important;
 }
 
 /* Project Title */
