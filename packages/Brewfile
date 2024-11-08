@@ -242,6 +242,9 @@ cask 'zen-browser'               # Zen Browser - Secondary
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 
+cask 'sf-symbols'
+brew 'font-sf-pro'
+
 cask 'font-lilex-nerd-font'           # Dev/Terminal Font - Primary
 cask 'font-commit-mono-nerd-font'     # Dev/Terminal Font - Tertiary
 cask 'font-cascadia-code-nf'          # Dev/Terminal Font - Secondary
