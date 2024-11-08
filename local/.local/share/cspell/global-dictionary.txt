@@ -78,6 +78,7 @@ Jamstack
 keychain
 Laravel
 lazyvim
+Leachate
 lightningcss
 linkify
 lockb
