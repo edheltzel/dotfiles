@@ -55,6 +55,8 @@
 	// DJLint
 	"djlint.pythonPath": "/Users/ed/.local/pipx/venvs/djlint/bin/python",
 	"djlint.useVenv": false,
+	// Find It Faster
+	"find-it-faster.general.useTerminalInEditor": true,
 	// Core Editor Settings
 	"editor.accessibilitySupport": "off",
 	"editor.bracketPairColorization.enabled": true,
