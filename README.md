@@ -16,6 +16,10 @@ Table of Contents:
 
 - [Prerequisites](#prereq)
 - [The Nitty Gritty](#the-nitty-gritty)
+- [MacOS Mods](#macos-mods)
+  - [Aerospace Window Manager](#window-manager)
+  - [Sketchybar](#status-bar)
+  - [Karabiner Elements](#keyboard-hacks)
 - [Troubleshooting](#troubleshooting)
   - [Dotfiles](#troubleshoot-dotfiles)
   - [MacOS](#troubleshoot-macos)
@@ -165,6 +169,11 @@ Any of the scripts can be run individually at any time to update/reset as needed
     - run `./duti/duti.sh` to reset the default applications for file types
 - Helper Scripts (scripts/)
   - `functions.sh` - Contains helper functions for for the scripts
+
+<h2 id="macos-mods">MacOS Mods <a href="#to-the-top">↑</a></h2>
+<h4 id="window-manager">Aerospace Window Manager <a href="#to-the-top">↑</a></h4>
+<h4 id="status-bar">Sketchybar <a href="#to-the-top">↑</a></h4>
+<h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
 
 <h2 id="troubleshooting">Troubleshooting <a href="#to-the-top">↑</a></h2>
 <h4 id="troubleshoot-dotfiles">Dotfiles<a href="#to-the-top">↑</a></h4>
