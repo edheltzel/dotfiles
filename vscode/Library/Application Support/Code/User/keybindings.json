@@ -678,11 +678,6 @@
     "title": "GitLens Inspect"
   },
   {
-    "command": "workbench.action.findInFiles",
-    "key": "cmd-k cmd-f",
-    "title": "Find in Files"
-  },
-  {
     "command": "supermaven.newConversationTab",
     "key": "cmd-k a",
     "title": "Supermavne Open Chat"
@@ -1117,5 +1112,29 @@
     "name": "Focss on PM Favorites",
     "key": "cmd+k p",
     "command": "projectsExplorerFavorites.focus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "find-it-faster.findFiles"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "-find-it-faster.findFiles"
+  },
+  {
+    "key": "ctrl+alt+u",
+    "command": "find-it-faster.findWithinFiles"
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "-find-it-faster.findWithinFiles"
+  },
+  {
+    "key": "ctrl+shift+alt+u",
+    "command": "find-it-faster.findWithinFilesWithType"
+  },
+  {
+    "key": "ctrl+shift+cmd+u",
+    "command": "-find-it-faster.findWithinFilesWithType"
   }
 ]
