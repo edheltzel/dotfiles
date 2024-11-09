@@ -7,11 +7,10 @@ after-startup-command = [
   'exec-and-forget sketchybar',
   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=4.0',
 ]
-
 # Notify Sketchybar about workspace change
-# exec-on-workspace-change = ['/bin/bash', '-c',
-#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
-# ]
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
 
 start-at-login = true
 
