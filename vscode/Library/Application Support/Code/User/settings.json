@@ -14,7 +14,9 @@
 	},
 	"[markdown]": {
 		"editor.formatOnPaste": true,
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
+		"editor.wordWrap": "bounded",
+		"editor.wordWrapColumn": 100
 	},
 	"[toml]": {
 		"editor.defaultFormatter": "tamasfe.even-better-toml"
@@ -23,8 +25,8 @@
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	// Extensions Settings
-	"accessibility.dimUnfocused.enabled": true,
-	"accessibility.dimUnfocused.opacity": 0.6,
+	// "accessibility.dimUnfocused.enabled": true,
+	// "accessibility.dimUnfocused.opacity": 0.6,
 	// CSpell
 	"cSpell.customDictionaries": {
 		"custom-global-dictionary": {
@@ -66,8 +68,8 @@
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.cursorWidth": 3,
 	"editor.foldingStrategy": "indentation",
-	"editor.fontFamily": "CommitMono, Symbols Nerd Font",
-	"editor.fontLigatures": "'cv03','ss01','ss02','ss03','ss04','ss02'",
+	"editor.fontFamily": "Dank Mono, Symbols Nerd Font",
+	"editor.fontLigatures": true,
 	"editor.fontSize": 18,
 	"editor.formatOnPaste": false,
 	"editor.formatOnSave": false,
@@ -129,8 +131,8 @@
 	"editor.stickyScroll.maxLineCount": 3,
 	"editor.stickyScroll.scrollWithEditor": false,
 	"editor.tabSize": 2,
-	"editor.wordWrap": "wordWrapColumn",
-	"editor.wordWrapColumn": 120,
+	"editor.wordWrap": "on",
+	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
 	"workbench.colorTheme": "Eldritch",
 	"workbench.editor.editorActionsLocation": "hidden",
@@ -179,7 +181,7 @@
 		"GIT_EDITOR_CONTEXT": "code"
 	},
 	"terminal.integrated.fontFamily": "Lilex, Lilex Nerd Font Mono",
-	"terminal.integrated.fontSize": 18,
+	"terminal.integrated.fontSize": 17,
 	"terminal.integrated.fontWeightBold": "400",
 	"terminal.integrated.scrollback": 10000,
 	// Git Settings
@@ -285,6 +287,7 @@
 	"vim.easymotion": true,
 	"vim.highlightedyank.color": "#ffffff30",
 	"vim.highlightedyank.enable": true,
+	"vim.textwidth": 100,
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"args": {

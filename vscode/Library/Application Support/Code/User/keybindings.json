@@ -1113,9 +1113,4 @@
     "key": "cmd+k p",
     "command": "projectsExplorerFavorites.focus"
   },
-  {
-    "command": "workbench.action.findInFiles",
-    "key": "cmd-k cmd-f",
-    "title": "Find in Files"
-  },
 ]
