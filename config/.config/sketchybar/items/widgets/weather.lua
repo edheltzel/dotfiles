@@ -52,14 +52,15 @@ local function get_icon(icon_url)
 		["tsra_sct"] = "􀇗", -- Scattered thunderstorms
 		["tsra_hi"] = "􀇟", -- Heavy thunderstorms
 		["snow"] = "􀇎", -- Snow
-		["rain_snow"] = "􀇑", -- Rain and snow
+    ["rain_snow"] = "􀇑", -- Rain and snow
 		["fzra"] = "􀇑", -- Freezing rain
 		["fog"] = "􀇋", -- Fog
 	}
 
-	-- Extract the icon code from the URL, handling day/night prefix
-	local icon_code = string.match(icon_url or "", "/land/[^/]+/([^%?]+)")
-	return icons_map[icon_code] or ""
+	-- Extract the icon code from the URL, handling day/night prefix and removing any additional parameters
+	local icon_code = string.match(icon_url or "", "/land/[^/]+/([^,?]+)")
+	print("Extracted icon code: " .. (icon_code or "nil")) -- Debug print
+	return icons_map[icon_code] or "􀇈" -- Default to a generic weather icon if no match
 end
 
 local function fetch_weather_data(callback)
