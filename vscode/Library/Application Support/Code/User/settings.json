@@ -277,7 +277,7 @@
 	"vim.cursorStylePerMode.insert": "line",
 	"vim.cursorStylePerMode.normal": "block-outline",
 	"vim.easymotion": true,
-	"vim.highlightedyank.color": "#ffffff30",
+	"vim.highlightedyank.color": "#f265b530",
 	"vim.highlightedyank.enable": true,
 	"vim.textwidth": 100,
 	"vim.normalModeKeyBindingsNonRecursive": [
