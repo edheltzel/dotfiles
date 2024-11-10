@@ -1,5 +1,4 @@
 /**
- *  Lilex Nerd Font
  * Elbritch colors - https://github.com/eldritch-theme/eldritch
  * #212337
  * #323449
@@ -13,9 +12,14 @@
  * #f16c75
  * #f1fc79
 */
-/* Font - affects vscode setting: editor.fontFamily */
-* {
-  font-family: Dank Mono, monospace;
+/* Font - for UI elements only */
+.mac {
+  font-family: Lilex, monospace;
+}
+
+/* Exclude editor from font override */
+.monaco-editor {
+  font-family: inherit;
 }
 
 /* Explore */
