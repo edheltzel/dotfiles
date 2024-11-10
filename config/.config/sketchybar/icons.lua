@@ -48,8 +48,8 @@ local icons = {
             play_pause = "􀊈",
         },
         ramicons = {
-            swap = "󰁄",
-            ram = "󰍛",
+            swap = "􀫥",
+            ram = "􀧓",
         }
     },
 }
