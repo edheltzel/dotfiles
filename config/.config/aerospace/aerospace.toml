@@ -39,7 +39,7 @@ inner.horizontal = 20
 inner.vertical = 20
 outer.left = 20
 outer.bottom = 10
-outer.top = 40
+outer.top = 45
 outer.right = 20
 
 [mode.main.binding]
