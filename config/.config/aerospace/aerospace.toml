@@ -1,5 +1,6 @@
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 # after-login-command = []
+#
 # Run Sketchybar together with AeroSpace
 # sketchbar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
@@ -11,7 +12,7 @@ after-startup-command = [
 exec-on-workspace-change = [
   '/bin/bash',
   '-c',
-  'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+  'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
 ]
 start-at-login = true
 
@@ -42,10 +43,8 @@ outer.top = 40
 outer.right = 20
 
 [mode.main.binding]
-
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
-
 
 alt-h = 'focus left'
 alt-j = 'focus down'
@@ -60,18 +59,17 @@ alt-shift-l = 'move right'
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
-alt-1 = 'workspace 1'  # monitor 1 - primary
+alt-1 = 'workspace 1' # monitor 1 - primary
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-0 = 'workspace 10' # monitor 2 - secondary
-alt-e = 'workspace E'  # E - vscode/zed (e)ditor
-alt-f = 'workspace F'  # F - (f)igma
-alt-g = 'workspace G'  # G - (g)raphic design -> indesign/illustrator/photoshop
-alt-m = 'workspace M'  # M - (m)usic & (m)icrosoft teams + spotify
-alt-o = 'workspace O'  # O - (o)bsidian
-alt-t = 'workspace T'  # T - (t)erminal
-alt-y = 'workspace Y'  # Y - zen/brave
+alt-e = 'workspace E'  # E - (e)ditors -> vscode/obsidian/typora
+alt-d = 'workspace D'  # D - (d)esign -> figma/indesign/illustrator/photoshop
+alt-m = 'workspace M'  # M - (m)icrosoft -> teams/word/excel/powerpoint
+alt-r = 'workspace R'  # R - (r)adio -> spotify/music/podcasts
+alt-t = 'workspace T'  # T - (t)erminal -> wezterm/kitty
+alt-y = 'workspace Y'  # Y - (y)ahoo -> browsers zen/brave/safari/firefox
 
 alt-shift-1 = 'move-node-to-workspace 1'  # monitor 1 - primary
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -79,13 +77,11 @@ alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-0 = 'move-node-to-workspace 10' # monitor 2 - secondary
 alt-shift-e = 'move-node-to-workspace E'  # E - vscode (e)ditor - matches my hpyer key config
-alt-shift-f = 'move-node-to-workspace F'  # F - (f)igma
-alt-shift-g = 'move-node-to-workspace G'  # G - (g)raphic design -> indesign/illustrator/photoshop
+alt-shift-d = 'move-node-to-workspace D'  # D - (d)esign -> figma/indesign/illustrator/photoshop
 alt-shift-m = 'move-node-to-workspace M'  # M - (m)usic & (m)icrosoft teams + spotify
-alt-shift-o = 'move-node-to-workspace O'  # O - (o)bsidian
-alt-shift-p = 'move-node-to-workspace P'  # P - (p)hotoshop
-alt-shift-t = 'move-node-to-workspace T'  # T - (t)erminal
-alt-shift-y = 'move-node-to-workspace Y'  # Y - zen/brave
+alt-shift-r = 'move-node-to-workspace R'  # R - (r)adio -> spotify/music/podcasts
+alt-shift-t = 'move-node-to-workspace T'  # T - (t)erminals -> wezterm/kitty
+alt-shift-y = 'move-node-to-workspace Y'  # Y - (y)ahoo -> browsers zen/brave/safari/firefox
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -94,11 +90,16 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 alt-shift-semicolon = 'mode service'
 
 [mode.service.binding]
-esc = ['reload-config', 'mode main']                       # reload config
-r = ['flatten-workspace-tree', 'mode main']                # reset layout
-f = ['layout floating tiling', 'mode main']                # Toggle between floating and tiling layout
+esc = ['reload-config', 'mode main'] # reload config
+r = ['flatten-workspace-tree', 'mode main'] # reset layout
+f = [
+  'layout floating tiling',
+  'mode main',
+]
+# Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
+# Join windows
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
@@ -110,40 +111,65 @@ alt-shift-l = ['join-with right', 'mode main']
 if.app-id = 'org.mozilla.com.zen.browser'
 run = "move-node-to-workspace Y"
 
+# Firefox
+[[on-window-detected]]
+if.app-id = 'org.mozilla.nightly'
+run = "move-node-to-workspace Y"
+
 # Brave Browser
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser.beta'
 run = "move-node-to-workspace Y"
 
+# Safari Browser
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = "move-node-to-workspace Y"
+
 # Figma
 [[on-window-detected]]
 if.app-id = 'com.figma.Desktop'
-run = "move-node-to-workspace F"
+run = "move-node-to-workspace D"
 
 # InDesign
 [[on-window-detected]]
 if.app-id = 'com.adobe.InDesign'
-run = "move-node-to-workspace G"
+run = "move-node-to-workspace D"
 
 # Illustrator
 [[on-window-detected]]
 if.app-id = 'com.adobe.illustrator'
-run = "move-node-to-workspace G"
+run = "move-node-to-workspace D"
 
 # Photoshop
 [[on-window-detected]]
 if.app-id = 'com.adobe.Photoshop'
-run = "move-node-to-workspace G"
+run = "move-node-to-workspace D"
+
+# Visual Studio Code
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = "move-node-to-workspace E"
+
+# Zed Editor
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = "move-node-to-workspace E"
 
 # Obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = "move-node-to-workspace O"
+run = "move-node-to-workspace E"
 
 # Spotify
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = "move-node-to-workspace M"
+run = "move-node-to-workspace R"
+
+# Podcasts
+[[on-window-detected]]
+if.app-id = 'com.apple.podcasts'
+run = "move-node-to-workspace R"
 
 # Wezterm
 [[on-window-detected]]
@@ -155,20 +181,15 @@ run = "move-node-to-workspace T"
 if.app-id = 'net.kovidgoyal.kitty'
 run = "move-node-to-workspace T"
 
-# Visual Studio Code
-[[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = "move-node-to-workspace E"
-
 # Microsoft Teams
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = "move-node-to-workspace M"
 
-# Zed Editor
+# Microsoft PowerPoint
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed'
-run = "move-node-to-workspace E"
+if.app-id = 'com.microsoft.Powerpoint'
+run = "move-node-to-workspace M"
 
 
 ### Always Float
@@ -202,7 +223,7 @@ run = 'layout floating'
 if.app-id = 'cc.ffitch.shottr'
 run = 'layout floating'
 
-# Shottr
+# Dropbox
 [[on-window-detected]]
 if.app-id = 'com.getdropbox.dropbox'
 run = 'layout floating'
