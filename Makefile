@@ -1,4 +1,4 @@
-STOW_PACKAGES := dots git zsh fish nvim config vscode local hammerspoon
+STOW_PACKAGES := dots git zsh fish nvim config vscode local
 YELLOW := \033[33m
 GREEN := \033[32m
 WHITE := \033[37m
