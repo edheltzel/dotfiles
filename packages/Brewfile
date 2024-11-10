@@ -213,7 +213,6 @@ cask 'shottr'               # Screenshot and recorder app
 
 # Communication and Chat
 cask 'discord'              # Chat app
-cask 'whatsapp'             # Chat app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
@@ -223,7 +222,7 @@ cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'spotify'              # Music streaming
 
 # Utility Applications
-cask 'bettertouchtool'           # MacOS automation/customization tool
+cask 'alt-tab'                   # Windows like alt-tab
 cask 'transnomino'               # A batch rename utility
 cask 'onyx'                      # System maintenance
 brew 'shortcat'                  # vim motions for MacOS
@@ -235,7 +234,6 @@ cask 'nikitabobko/tap/aerospace' # Tiling window manager
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser@nightly'     # Brave browser - Primary
 cask 'firefox@nightly'           # Firefox Nightly - Tertiary
-cask 'responsively'              # Browser Testing
 cask 'zen-browser'               # Zen Browser - Secondary
 
 # Fonts
@@ -244,20 +242,18 @@ cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 cask 'sf-symbols'
 brew 'font-sf-pro'
 
-cask 'font-lilex-nerd-font'           # Dev/Terminal Font - Primary
-cask 'font-commit-mono-nerd-font'     # Dev/Terminal Font - Tertiary
-cask 'font-cascadia-code-nf'          # Dev/Terminal Font - Secondary
-cask 'font-fira-code-nerd-font'       # Dev Font - Quaternary (4th)
 cask 'font-inter'                     # Design font
 cask 'font-geist'                     # Design font
 cask 'font-lilex'                     # Design font
+cask 'font-lilex-nerd-font'           # Dev/Terminal Font - Primary
 cask 'font-commit-mono'               # Design font
+cask 'font-commit-mono-nerd-font'     # Dev/Terminal Font - Tertiary
+cask 'font-fira-code-nerd-font'       # Dev Font - Quaternary (4th)
 
 # Development Apps
 cask 'cyberduck'                      # Mount remote storage locations
 cask 'dbngin'                         # Local MySQL database management
 cask 'devtoys'                        # Dev tools/utilities for Mac
-cask 'diffmerge'                      # File comparison tool
 cask 'local'                          # Local WordPress development
 cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
@@ -285,16 +281,14 @@ cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac OS Mods, Imrovments, & Utilities
-cask 'alt-tab'            # Windows like alt-tab
+# cask 'alt-tab'            # Windows like alt-tab
+# brew 'jordanbaird-ice'    # Ice bar - using Sketchybar currently
+# cask 'itsycal'            # Calendar in menubar
 brew 'm-cli'              # All in one MacOS management CLI app: m help
-#cask 'hiddenbar'          # Hide / show annoying menubar icons
-brew 'jordanbaird-ice'    # preplaces HiddenBar
-cask 'itsycal'            # Calendar in menubar
 cask 'openinterminal'     # Finder button, opens directory in terminal
 cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
 cask 'typinator'          # Text expander - macOS only
 cask 'keka'               # File archiver and extractor
-# cask 'hammerspoon'        # macOS automation tool
 cask 'karabiner-elements' # Keyboard customization tool
 brew 'border'             # window borders for MacOS - FelixKratz/formulae tap
 brew 'sketchybar'         # status bar replacement for MacOS
@@ -310,5 +304,4 @@ mas 'Qi FM', id: 147969619
 mas 'ColorNoise', id: 1640045375
 mas 'Todoist: To-Do List & Tasks', id: 585829637
 mas 'Toggl Track: Hours & Time Log', id: 1291898086
-mas 'Simplenote - Notes and Memos', id: 692867256
 #mas 'Xcode', id: 497799835
