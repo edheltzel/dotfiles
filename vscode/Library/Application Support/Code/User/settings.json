@@ -134,12 +134,10 @@
 	"editor.wordWrap": "on",
 	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
-	"workbench.colorTheme": "Eldritch",
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.showIcons": false,
 	"workbench.editor.showTabs": "none",
-	"workbench.iconTheme": "catppuccin-latte",
 	"workbench.layoutControl.enabled": false,
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "none",
@@ -459,52 +457,6 @@
 			"type": "command"
 		},
 		{
-			"command": "todo-tree-view.focus",
-			"icon": "list-tree",
-			"keys": "T.o",
-			"name": "Toggle TODO Tree",
-			"type": "command"
-		},
-		{
-			"command": "timeline.focus",
-			"icon": "history",
-			"keys": "T.f",
-			"name": "Focus File Timeline",
-			"type": "command"
-		},
-		{
-			"bindings": [
-				{
-					"command": "supermaven.newConversationTab",
-					"icon": "comment",
-					"key": "c",
-					"name": "Supermaven - Open Chat"
-				},
-				{
-					"command": "supermaven.addToChat",
-					"icon": "plus",
-					"key": "a",
-					"name": "Supermaven - Add to Chat"
-				},
-				{
-					"command": "supermaven.editWithSupermaven",
-					"icon": "edit",
-					"key": "e",
-					"name": "Edit with Supermaven"
-				},
-				{
-					"command": "supermaven.fixWithSupermaven",
-					"icon": "check",
-					"key": "f",
-					"name": "Supermaven - Fix"
-				}
-			],
-			"icon": "hubot",
-			"keys": "a",
-			"name": "Ai Chats",
-			"type": "bindings"
-		},
-		{
 			"keys": "f.t",
 			"position": "-1"
 		},
@@ -515,20 +467,8 @@
 			"name": "Toggle File Explorer",
 			"position": "7",
 			"type": "command"
-		},
-		{
-			"command": "gitProjectManager.openProject",
-			"icon": "window",
-			"keys": "f.g",
-			"name": "GPM: Open Project in Current Window",
-			"type": "command"
-		},
-		{
-			"command": "gitProjectManager.openProject",
-			"icon": "empty-window",
-			"keys": "f.G",
-			"name": "GPM: Open Project in New Window",
-			"type": "command"
 		}
 	],
+	"workbench.iconTheme": "catppuccin-latte",
+	"workbench.colorTheme": "Eldritch",
 }
