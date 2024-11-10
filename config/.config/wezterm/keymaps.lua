@@ -37,6 +37,7 @@ local keys = {
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
   { key = "w", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
+  --maximize pane ↓
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
   { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
 
