@@ -134,10 +134,12 @@
 	"editor.wordWrap": "on",
 	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
+	"workbench.colorTheme": "Eldritch",
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.showIcons": false,
 	"workbench.editor.showTabs": "none",
+	"workbench.iconTheme": "catppuccin-latte",
 	"workbench.layoutControl.enabled": false,
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "none",
@@ -260,10 +262,8 @@
 	"path-intellisense.showHiddenFiles": true,
 	// Security
 	"security.workspace.trust.enabled": false,
-	// Supermaven
-	"supermaven.enable": {
-		"*": true
-	},
+	// SuperMaven
+	"supermaven.enable": { "*": true },
 	"supermaven.enableFixWithSupermaven": true,
 	"supermaven.enableJumpSuggestions": false,
 	// Tailwind CSS
@@ -272,12 +272,6 @@
 	"telemetry.telemetryLevel": "crash",
 	// TOML
 	"evenBetterToml.formatter.columnWidth": 120,
-	// Token Colors
-	"editor.tokenColorCustomizations": {
-		"[Eldritch]": {
-			"textMateRules": []
-		}
-	},
 	// VIM
 	"vim.changeWordIncludesWhitespace": true,
 	"vim.cursorStylePerMode.insert": "line",
@@ -469,6 +463,4 @@
 			"type": "command"
 		}
 	],
-	"workbench.iconTheme": "catppuccin-latte",
-	"workbench.colorTheme": "Eldritch",
 }
