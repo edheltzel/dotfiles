@@ -5,15 +5,15 @@
 # sketchbar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
 after-startup-command = [
-  'exec-and-forget sketchybar',
+  # 'exec-and-forget sketchybar',
   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=4.0',
 ]
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
-]
+# exec-on-workspace-change = [
+#   '/bin/bash',
+#   '-c',
+#   'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+# ]
 start-at-login = true
 
 enable-normalization-flatten-containers = true
@@ -59,7 +59,7 @@ alt-shift-l = 'move right'
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
-alt-1 = 'workspace 1' # monitor 1 - primary
+alt-1 = 'workspace 1'  # monitor 1 - primary
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
@@ -90,12 +90,9 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 alt-shift-semicolon = 'mode service'
 
 [mode.service.binding]
-esc = ['reload-config', 'mode main'] # reload config
+esc = ['reload-config', 'mode main']        # reload config
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [
-  'layout floating tiling',
-  'mode main',
-]
+f = ['layout floating tiling', 'mode main']
 # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
