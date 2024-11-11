@@ -4,8 +4,8 @@
 # Run Sketchybar together with AeroSpace
 # sketchbar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
+# add this to after-start-command -> 'exec-and-forget sketchybar',
 after-startup-command = [
-  # 'exec-and-forget sketchybar',
   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=4.0',
 ]
 # Notify Sketchybar about workspace change
@@ -38,8 +38,8 @@ preset = 'qwerty'
 inner.horizontal = 20
 inner.vertical = 20
 outer.left = 20
-outer.bottom = 10
-outer.top = 45
+outer.bottom = 20
+outer.top = 20
 outer.right = 20
 
 [mode.main.binding]
