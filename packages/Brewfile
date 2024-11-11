@@ -222,13 +222,30 @@ cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'spotify'              # Music streaming
 
 # Utility Applications
-cask 'alt-tab'                   # Windows like alt-tab
-cask 'transnomino'               # A batch rename utility
+brew 'm-cli'                     # All in one MacOS management CLI app: m help
 cask 'onyx'                      # System maintenance
+cask 'transnomino'               # A batch rename utility
 brew 'shortcat'                  # vim motions for MacOS
 brew 'localsend'                 # AirDrop like app for everything else
+cask 'openinterminal'            # Finder button, opens directory in terminal
+cask 'itsycal'                   # Calendar in menubar
+brew 'stats'                     # System stats in menubar
+cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
+cask 'typinator'                 # Text expander - macOS only
+cask 'keka'                      # File archiver and extractor
+
+# Keyboard Hacks
 cask 'via'                       # Keyboard configuration desktop client
+cask 'karabiner-elements'        # Keyboard customization tool
+
+# Menu Bar Hacks
+brew 'sketchybar'                # status bar replacement for MacOS
+brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
+
+# Window Management & Tiling
+cask 'alt-tab'                   # Windows like alt-tab
 cask 'nikitabobko/tap/aerospace' # Tiling window manager
+brew 'border'                    # window borders for MacOS - FelixKratz/formulae tap
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
@@ -279,19 +296,6 @@ cask 'qlvideo'        # QL for video formats
 cask 'quicklook-csv'  # QL for tables in CSV format
 cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
-
-# Mac OS Mods, Imrovments, & Utilities
-# cask 'alt-tab'            # Windows like alt-tab
-# brew 'jordanbaird-ice'    # Ice bar - using Sketchybar currently
-# cask 'itsycal'            # Calendar in menubar
-brew 'm-cli'              # All in one MacOS management CLI app: m help
-cask 'openinterminal'     # Finder button, opens directory in terminal
-cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
-cask 'typinator'          # Text expander - macOS only
-cask 'keka'               # File archiver and extractor
-cask 'karabiner-elements' # Keyboard customization tool
-brew 'border'             # window borders for MacOS - FelixKratz/formulae tap
-brew 'sketchybar'         # status bar replacement for MacOS
 
 # Mac App Store Installs
 mas 'ColorSlurp', id: 1287239339
