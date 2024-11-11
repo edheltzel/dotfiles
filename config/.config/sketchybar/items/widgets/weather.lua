@@ -170,7 +170,7 @@ local function hide_details()
 	weather_info:set({ popup = { drawing = false } })
 end
 
-local function toggle_details()
+local function toggle_details(env)
 	local should_draw = weather_info:query().popup.drawing == "off"
 	if should_draw then
 		weather_info:set({ popup = { drawing = true } })
@@ -198,6 +198,10 @@ local function toggle_details()
 		end)
 	else
 		hide_details()
+	end
+
+	if env.BUTTON == "right" then
+		sbar.exec("open -a Weather")
 	end
 end
 
