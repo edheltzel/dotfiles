@@ -55,13 +55,14 @@ keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
+-- VSpaceCode Keymaps - VSCODE-ish
+keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save file" }) -- Save file - VSpaceCode
+keymap.set("n", "<ENTER>", "za", { desc = "Code Folding" }) -- Code Folding
+
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-
--- Save file - like VSpaceCode
-vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save file" })
 
 -- package-info keymaps
 set_keymap(
