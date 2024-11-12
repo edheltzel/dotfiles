@@ -1,19 +1,23 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+-- key
+-- <M> = alt
+-- <C> = ctrl
+-- <leader> = space
+-- <s> = shift
+
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 local Util = require("lazyvim.util")
 
+-- using zellji instead of tmux
 -- keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { silent = true })
 -- keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", { silent = true })
 -- keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", { silent = true })
 -- keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", { silent = true })
 -- keymap.set("n", "<C-\\>", "<Cmd>NvimTmuxNavigateLastActive<CR>", { silent = true })
 -- keymap.set("n", "<C-Space>", "<Cmd>NvimTmuxNavigateNavigateNext<CR>", { silent = true })
-
--- Save file - VSpaceCode
-vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save file" })
 
 -- Borderless terminal
 vim.keymap.set("n", "<C-/>", function()
@@ -32,10 +36,13 @@ keymap.del("n", "<C-Down>")
 keymap.del("n", "<C-Up>")
 keymap.del("n", "<C-Right>")
 
-keymap.set("n", "<M-h>", '<Cmd>lua require("tmux").resize_left()<CR>', { silent = true })
-keymap.set("n", "<M-j>", '<Cmd>lua require("tmux").resize_bottom()<CR>', { silent = true })
-keymap.set("n", "<M-k>", '<Cmd>lua require("tmux").resize_top()<CR>', { silent = true })
-keymap.set("n", "<M-l>", '<Cmd>lua require("tmux").resize_right()<CR>', { silent = true })
+-- clear search highlights
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+
+-- keymap.set("n", "<M-h>", '<Cmd>lua require("tmux").resize_left()<CR>', { silent = true })
+-- keymap.set("n", "<M-j>", '<Cmd>lua require("tmux").resize_bottom()<CR>', { silent = true })
+-- keymap.set("n", "<M-k>", '<Cmd>lua require("tmux").resize_top()<CR>', { silent = true })
+-- keymap.set("n", "<M-l>", '<Cmd>lua require("tmux").resize_right()<CR>', { silent = true })
 
 local set_keymap = vim.api.nvim_set_keymap
 
@@ -48,11 +55,19 @@ keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+
+-- Save file - like VSpaceCode
+vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save file" })
+
 -- package-info keymaps
 set_keymap(
   "n",
   "<leader>cpt",
-  "<cmd>lua require('package-info').toggle()<cr>",
+  "<cmd>ua require('package-info').toggle()<cr>",
   { silent = true, noremap = true, desc = "Toggle" }
 )
 set_keymap(
