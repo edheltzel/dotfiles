@@ -12,8 +12,8 @@ set -gx XDG_VIDEOS_DIR $HOME/Videos
 # cargo - IDK if this is necessary
 set -gx CARGO_TARGET_DIR /var/folders/88/3h9cyc4979d2l6p7xkn79yqr0000gn/T/cargo-installx9AWBr
 
-# set Visual Studio Code as default editor use code, code-insiders, subl or vim
-set -gx EDITOR code
+# set the Default Editor use cursor, code, code-insiders, nvim
+set -gx EDITOR cursor
 
 string match -q "$TERM_PROGRAM" vscode
 and . (code --locate-shell-integration-path fish)
