@@ -64,7 +64,7 @@ alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-0 = 'workspace 10' # monitor 2 - secondary
-alt-e = 'workspace E'  # E - (e)ditors -> vscode/obsidian/typora
+alt-e = 'workspace E'  # E - (e)ditors -> vscode/cursor
 alt-d = 'workspace D'  # D - (d)esign -> figma/indesign/illustrator/photoshop
 alt-m = 'workspace M'  # M - (m)icrosoft -> teams/word/excel/powerpoint
 alt-n = 'workspace N'  # N - (n)otes -> notes/reminders
@@ -77,9 +77,9 @@ alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-0 = 'move-node-to-workspace 10' # monitor 2 - secondary
-alt-shift-e = 'move-node-to-workspace E'  # E - vscode (e)ditor - matches my hpyer key config
+alt-shift-e = 'move-node-to-workspace E'  # E - (e)ditor -> vscode/cursor
 alt-shift-d = 'move-node-to-workspace D'  # D - (d)esign -> figma/indesign/illustrator/photoshop
-alt-shift-m = 'move-node-to-workspace M'  # M - (m)usic & (m)icrosoft teams + spotify
+alt-shift-m = 'move-node-to-workspace M'  # M - (m)icrosoft -> teams/word/excel/powerpoint
 alt-shift-n = 'move-node-to-workspace N'  # N - (n)otes -> notes/reminders
 alt-shift-r = 'move-node-to-workspace R'  # R - (r)adio -> spotify/music/podcasts
 alt-shift-t = 'move-node-to-workspace T'  # T - (t)erminals -> wezterm/kitty
@@ -155,9 +155,9 @@ run = "move-node-to-workspace E"
 if.app-id = 'dev.zed.Zed'
 run = "move-node-to-workspace E"
 
-# Obsidian
+# Cursor
 [[on-window-detected]]
-if.app-id = 'md.obsidian'
+if.app-id = 'com.todesktop.230313mzl4w4u92'
 run = "move-node-to-workspace E"
 
 # Spotify
@@ -203,9 +203,9 @@ run = "move-node-to-workspace N"
 
 ### Always Float
 # Timemachine - this does not seem to work - need to ask or create an issue.
-[[on-window-detected]]
-if.app-id = 'com.apple.backup.launcher'
-run = ['layout floating', 'move-node-to-workspace 1']
+# [[on-window-detected]]
+# if.app-id = 'com.apple.backup.launcher'
+# run = ['layout floating', 'move-node-to-workspace 1']
 
 # Raycast
 [[on-window-detected]]

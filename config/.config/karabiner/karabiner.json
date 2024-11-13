@@ -3657,7 +3657,7 @@
             "description": "Hyper Launch Apps",
             "manipulators": [
               {
-                "description": "option + e = Cursor",
+                "description": "option + e = VSCode",
                 "from": {
                   "key_code": "e",
                   "modifiers": {
@@ -3672,7 +3672,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a Cursor"
+                    "shell_command": "open -a 'Visual Studio Code'"
                   }
                 ],
                 "type": "basic"

@@ -683,11 +683,6 @@
     "title": "Supermavne Open Chat"
   },
   {
-    "command": "workbench.action.toggleAuxiliaryBar",
-    "key": "cmd-k cmd-b",
-    "title": "Toggle Secondary Side Bar Visibility"
-  },
-  {
     "command": "workbench.action.increaseViewSize",
     "key": "cmd-ctrl+alt+shift+=",
     "title": "Increase View Size when Side Bar Focused",
@@ -1112,5 +1107,15 @@
     "name": "Focss on PM Favorites",
     "key": "cmd+k p",
     "command": "projectsExplorerFavorites.focus"
+  },
+  {
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "key": "cmd-k cmd-b",
+    "title": "Toggle Secondary Side Bar Visibility"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
   },
 ]
