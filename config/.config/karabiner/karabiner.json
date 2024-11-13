@@ -3657,7 +3657,7 @@
             "description": "Hyper Launch Apps",
             "manipulators": [
               {
-                "description": "option + e = Obsidian",
+                "description": "option + e = Cursor",
                 "from": {
                   "key_code": "e",
                   "modifiers": {
@@ -3672,7 +3672,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a Obsidian"
+                    "shell_command": "open -a Cursor"
                   }
                 ],
                 "type": "basic"
@@ -3761,27 +3761,6 @@
                 "type": "basic"
               },
               {
-                "description": "command + t = WezTerm",
-                "from": {
-                  "key_code": "t",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_command",
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a WezTerm"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
                 "description": "option + t = Raycast: Topgrade",
                 "from": {
                   "key_code": "t",
@@ -3798,6 +3777,27 @@
                 "to": [
                   {
                     "shell_command": "open raycast://script-commands/run-topgrade"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "command + t = Kitty",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'kitty'"
                   }
                 ],
                 "type": "basic"
