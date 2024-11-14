@@ -7,12 +7,12 @@ if status is-interactive
     abbr --add bic --set-cursor 'brew install % --cask'
     abbr --add cl clear
     # abbr --add cls '$DROPBOX/Clients'
-    abbr --add vs code
-    abbr --add vsn 'code -n .'
-    abbr --add vso 'code -r .'
-    abbr --add co cursor
-    abbr --add con 'cursor -n .'
-    abbr --add coo 'cursor -r .'
+    abbr --add cr code
+    abbr --add crn 'code -n .'
+    abbr --add cro 'code -r .'
+    abbr --add co code
+    abbr --add con 'code -n .'
+    abbr --add coo 'code -r .'
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
