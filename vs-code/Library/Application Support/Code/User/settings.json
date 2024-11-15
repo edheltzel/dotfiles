@@ -66,6 +66,9 @@
 		"quickfix.biome": "always"
 	},
 	"editor.cursorSmoothCaretAnimation": "on",
+	// "editor.cursorSurroundingLines": 99,
+	"editor.cursorBlinking": "phase",
+	"editor.cursorSurroundingLinesStyle": "all",
 	"editor.cursorWidth": 3,
 	"editor.foldingStrategy": "indentation",
 	"editor.fontFamily": "Dank Mono, Symbols Nerd Font",
@@ -272,6 +275,11 @@
 	"telemetry.telemetryLevel": "crash",
 	// TOML
 	"evenBetterToml.formatter.columnWidth": 120,
+	"workbench.colorCustomizations": {
+		"[Eldritch]": {
+			"cursorColumnColor": "#37f49910",
+		}
+	},
 	// VIM
 	"vim.changeWordIncludesWhitespace": true,
 	"vim.cursorStylePerMode.insert": "line",
