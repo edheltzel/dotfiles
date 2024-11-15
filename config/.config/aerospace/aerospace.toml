@@ -227,6 +227,11 @@ run = 'layout floating'
 if.app-id = 'com.toggl.daneel'
 run = 'layout floating'
 
+# ColorSlurp
+[[on-window-detected]]
+if.app-id = 'com.IdeaPunch.ColorSlurp'
+run = 'layout floating'
+
 # Ice Bar
 [[on-window-detected]]
 if.app-id = 'com.jordanbaird.Ice'
