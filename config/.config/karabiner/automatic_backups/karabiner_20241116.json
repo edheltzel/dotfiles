@@ -206,7 +206,7 @@
                     "to": [{ "key_code": "f5" }]
                 }
             ],
-            "name": "Q11 Hyper Nav + Launch",
+            "name": "Hyper Nav + Launch",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -2115,6 +2115,7 @@
         {
             "complex_modifications": {
                 "rules": [
+
                     {
                         "description": "Caps Lock → Hyper Key (⌃⌥⇧⌘) (Escape if alone)",
                         "manipulators": [
@@ -2151,182 +2152,10 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Hyper Navigation",
-                        "manipulators": [
-                            {
-                                "description": " h = left",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "left_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " j = down",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "down_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " k = up",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "up_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " l = right",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "right_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " u = page_up",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_up" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " i = page_down",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_down" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " o = home",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "home" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " p = end",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "end" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Launch",
-                        "manipulators": [
-                            {
-                                "description": "option + e = Cursor",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Cursor" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + e = Zed",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Zed" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + r = Spotify",
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Spotify" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + d = Edit Dotfiles",
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/edit-dotfiles" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + t = Raycast: Topgrade",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/run-topgrade" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + y = Zen",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + y = Via",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Via" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + f = Invoice Ninja",
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Invoice Ninja'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + g = Illustrator",
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe Illustrator 2025'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + g = InDesign",
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe InDesign 2025'" }],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
-            "name": "MacDaddy Hyper Key + Nav + Launch",
+            "name": "Hyper/Escape Only",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
