@@ -19,8 +19,8 @@ local Util = require("lazyvim.util")
 -- keymap.set("n", "<C-\\>", "<Cmd>NvimTmuxNavigateLastActive<CR>", { silent = true })
 -- keymap.set("n", "<C-Space>", "<Cmd>NvimTmuxNavigateNavigateNext<CR>", { silent = true })
 
--- Borderless terminal
-vim.keymap.set("n", "<C-/>", function()
+-- Borderless terminal - like vscode
+vim.keymap.set("n", "<C-`>", function()
   Util.terminal(nil, { border = "none" })
 end, { desc = "Term with border" })
 
