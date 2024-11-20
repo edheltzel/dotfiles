@@ -2,7 +2,7 @@
 # after-login-command = []
 #
 # Run Sketchybar together with AeroSpace
-# sketchbar has a built-in detection of already running process,
+# sketchybar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
 # add this to after-start-command -> 'exec-and-forget sketchybar',
 after-startup-command = [
@@ -64,26 +64,26 @@ alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-0 = 'workspace 10' # monitor 2 - secondary
-alt-e = 'workspace E'  # E - (e)ditors -> vscode/cursor
-alt-d = 'workspace D'  # D - (d)esign -> figma/indesign/illustrator/photoshop
-alt-m = 'workspace M'  # M - (m)icrosoft -> teams/word/excel/powerpoint
-alt-n = 'workspace N'  # N - (n)otes -> notes/reminders/freeform
-alt-r = 'workspace R'  # R - (r)adio -> spotify/music/podcasts -> (r)eply messages
-alt-t = 'workspace T'  # T - (t)erminal -> wezterm/kitty
-alt-y = 'workspace Y'  # Y - (y)ahoo -> browsers zen/brave/safari/firefox
+alt-e = 'workspace E'  # E - Editors -> vscode/cursor
+alt-d = 'workspace D'  # D - Design -> figma/indesign/illustrator/photoshop
+alt-m = 'workspace M'  # M - Microsoft -> teams/word/excel/powerpoint
+alt-n = 'workspace N'  # N - Notes -> notes/reminders/freeform
+alt-r = 'workspace R'  # R - Radio -> spotify/music/podcasts -> Reply messages
+alt-t = 'workspace T'  # T - Terminal -> wezterm/kitty
+alt-y = 'workspace Y'  # Y - Yahoo -> browsers zen/brave/safari/firefox
 
 alt-shift-1 = 'move-node-to-workspace 1'  # monitor 1 - primary
 alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-0 = 'move-node-to-workspace 10' # monitor 2 - secondary
-alt-shift-e = 'move-node-to-workspace E'  # E - (e)ditor -> vscode/cursor
-alt-shift-d = 'move-node-to-workspace D'  # D - (d)esign -> figma/indesign/illustrator/photoshop
-alt-shift-m = 'move-node-to-workspace M'  # M - (m)icrosoft -> teams/word/excel/powerpoint
-alt-shift-n = 'move-node-to-workspace N'  # N - (n)otes -> notes/reminders/freeform
-alt-shift-r = 'move-node-to-workspace R'  # R - (r)adio -> spotify/music/podcasts -> (r)eply messages
-alt-shift-t = 'move-node-to-workspace T'  # T - (t)erminals -> wezterm/kitty
-alt-shift-y = 'move-node-to-workspace Y'  # Y - (y)ahoo -> browsers zen/brave/safari/firefox
+alt-shift-e = 'move-node-to-workspace E'  # E - Editor -> vscode/cursor
+alt-shift-d = 'move-node-to-workspace D'  # D - Design -> figma/indesign/illustrator/photoshop
+alt-shift-m = 'move-node-to-workspace M'  # M - Microsoft -> teams/word/excel/powerpoint
+alt-shift-n = 'move-node-to-workspace N'  # N - Notes -> notes/reminders/freeform
+alt-shift-r = 'move-node-to-workspace R'  # R - Radio -> spotify/music/podcasts -> Reply w/messages
+alt-shift-t = 'move-node-to-workspace T'  # T - Terminals -> wezterm/kitty
+alt-shift-y = 'move-node-to-workspace Y'  # Y - Yahoo -> browsers zen/brave/safari/firefox
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
