@@ -1,1121 +1,698 @@
 /* cSpell:disable */
 // Place your key bindings in this file to override the defaults
 [
-  // navigate open files/tabs
-  {
-    "command": "workbench.action.focusFirstEditorGroup",
-    "key": "ctrl+1",
-    "title": "Focus First Editor Group"
-  },
-  {
-    "command": "-workbench.action.focusFirstEditorGroup",
-    "key": "cmd-1",
-    "title": "Removes Focus First Editor Group"
-  },
-  {
-    "command": "workbench.action.focusSecondEditorGroup",
-    "key": "ctrl+2",
-    "title": "Focus Second Editor Group"
-  },
-  {
-    "command": "-workbench.action.focusSecondEditorGroup",
-    "key": "cmd-2",
-    "title": "Removes Focus Second Editor Group"
-  },
-  {
-    "command": "workbench.action.focusThirdEditorGroup",
-    "key": "ctrl+3",
-    "title": "Focus Third Editor Group"
-  },
-  {
-    "command": "-workbench.action.focusThirdEditorGroup",
-    "key": "cmd-3",
-    "title": "Removes Focus Third Editor Group"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex1",
-    "key": "cmd-1",
-    "title": "Open Editor At Index 1"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex1",
-    "key": "ctrl+1",
-    "title": "Removes Open Editor At Index 1"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex2",
-    "key": "cmd-2",
-    "title": "Open Editor At Index 2"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex2",
-    "key": "ctrl+2",
-    "title": "Removes Open Editor At Index 2"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex3",
-    "key": "cmd-3",
-    "title": "Open Editor At Index 3"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex3",
-    "key": "ctrl+3",
-    "title": "Removes Open Editor At Index 3"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex4",
-    "key": "cmd-4",
-    "title": "Open Editor At Index 4"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex4",
-    "key": "ctrl+4",
-    "title": "Removes Open Editor At Index 4"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex5",
-    "key": "cmd-5",
-    "title": "Open Editor At Index 5"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex5",
-    "key": "ctrl+5",
-    "title": "Removes Open Editor At Index 5"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex6",
-    "key": "cmd-6",
-    "title": "Open Editor At Index 6"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex6",
-    "key": "ctrl+6",
-    "title": "Removes Open Editor At Index 6"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex7",
-    "key": "cmd-7",
-    "title": "Open Editor At Index 7"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex7",
-    "key": "ctrl+7",
-    "title": "Removes Open Editor At Index 7"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex8",
-    "key": "cmd-8",
-    "title": "Open Editor At Index 8"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex8",
-    "key": "ctrl+8",
-    "title": "Removes Open Editor At Index 8"
-  },
-  {
-    "command": "workbench.action.openEditorAtIndex9",
-    "key": "cmd-9",
-    "title": "Open Editor At Index 9"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex9",
-    "key": "ctrl+9",
-    "title": "Removes Open Editor At Index 9"
-  },
-  // open JSON settings
-  {
-    "command": "workbench.action.openApplicationSettingsJson",
-    "key": "alt+cmd-,",
-    "title": "Open Application Settings JSON"
-  },
-  // terminal
-  {
-    "command": "workbench.action.terminal.kill",
-    "key": "ctrl+cmd-=",
-    "title": "Kill Terminal"
-  },
-  {
-    "command": "workbench.action.terminal.split",
-    "key": "shift+cmd-d",
-    "title": "Split Terminal",
-    "when": "terminalFocus"
-  },
-  {
-    "command": "workbench.action.toggleMaximizedPanel",
-    "key": "ctrl+alt+p",
-    "title": "Toggle Maximized Panel"
-  },
-  {
-    "command": "workbench.action.terminal.new",
-    "key": "cmd-n",
-    "title": "New Terminal",
-    "when": "terminalFocus"
-  },
-  {
-    "command": "workbench.action.terminal.focusNext",
-    "key": "ctrl+shift+j",
-    "title": "Focus Next Terminal",
-    "when": "terminalFocus"
-  },
-  {
-    "command": "editor.emmet.action.incrementNumberByOneTenth",
-    "key": "ctrl+up",
-    "title": "Increment Number by One Tenth",
-    "when": "editorTextFocus"
-  },
-  {
-    "command": "editor.emmet.action.decrementNumberByOneTenth",
-    "key": "ctrl+down",
-    "title": "Decrement Number by One Tenth",
-    "when": "editorTextFocus"
-  },
-  // increase/decrease number by 1
-  {
-    "command": "editor.emmet.action.incrementNumberByOne",
-    "key": "ctrl+alt+up",
-    "title": "Increment Number by One",
-    "when": "editorTextFocus"
-  },
-  {
-    "command": "editor.emmet.action.decrementNumberByOne",
-    "key": "ctrl+alt+down",
-    "title": "Decrement Number by One",
-    "when": "editorTextFocus"
-  },
-  // increase/decrease number by 10
-  {
-    "command": "editor.emmet.action.decrementNumberByTen",
-    "key": "shift+down",
-    "title": "Decrement Number by Ten",
-    "when": "editorTextFocus"
-  },
-  {
-    "command": "editor.emmet.action.incrementNumberByTen",
-    "key": "shift+up",
-    "title": "Increment Number by Ten",
-    "when": "editorTextFocus"
-  },
-  // Git
-  {
-    "command": "workbench.view.scm",
-    "key": "cmd-k cmd-g",
-    "when": "workbench.scm.active"
-  },
-  {
-    "command": "git.push",
-    "key": "ctrl+cmd-home",
-    "title": "Git Push"
-  },
-  // Explorer - File tree
-  {
-    "command": "workbench.view.explorer",
-    "key": "cmd-k cmd-e",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "title": "Rename File",
-    "command": "renameFile",
-    "key": "cmd-enter",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "-renameFile",
-    "key": "enter",
-    "title": "Unset Default - Rename File",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "title": "Next Side Bar View",
-    "command": "workbench.action.nextSideBarView",
-    "key": "ctrl+alt+]",
-  },
-  {
-    "title": "Previous Side Bar View",
-    "command": "workbench.action.previousSideBarView",
-    "key": "ctrl+alt+[",
-  },
-  {
-    "title": "Duplicate Lines Up Action",
-    "command": "editor.action.copyLinesUpAction",
-    "key": "cmd-shift-u",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "title": "Duplicate Lines Down Action",
-    "command": "editor.action.copyLinesDownAction",
-    "key": "cmd-shift-d",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "command": "editor.action.transformToUppercase",
-    "key": "cmd-k cmd-u",
-    "title": "Transform to Upercase"
-  },
-  {
-    "command": "editor.action.transformToLowercase",
-    "key": "cmd-k cmd-l",
-    "title": "Transform to lowercase"
-  },
-  {
-    "command": "workbench.action.terminal.clear",
-    "key": "cmd-k cmd-k",
-    "title": "Clear Terminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "command": "-workbench.action.terminal.clear",
-    "key": "cmd-k",
-    "title": "Clear Terminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "command": "editor.emmet.action.toggleComment",
-    "key": "ctrl+alt+/",
-    "title": "Emmet Toggle Comment"
-  },
-  {
-    "command": "editor.emmet.action.updateTag",
-    "key": "shift+cmd-i",
-    "title": "Emmet Update Tag"
-  },
-  // which key - show in all areas
-  {
-    "command": "whichkey.show",
-    "key": "alt+space",
-    "title": "Show Whichkey",
-    "when": "!editorTextFocus"
-  },
-  {
-    "command": "editor.action.sortLinesAscending",
-    "key": "ctrl+cmd-pageup",
-    "title": "Sort Lines Ascending"
-  },
-  {
-    "command": "editor.action.sortLinesDescending",
-    "key": "ctrl+cmd-pagedown",
-    "title": "Sort Lines Descending"
-  },
-  {
-    "command": "workbench.files.action.collapseExplorerFolders",
-    "key": "alt+pageup",
-    "title": "Collapse Explorer Folders"
-  },
-  {
-    "command": "workbench.action.files.saveWithoutFormatting",
-    "key": "ctrl+shift+s",
-    "title": "Save Without Formatting"
-  },
-  {
-    "command": "-workbench.action.files.saveWithoutFormatting",
-    "key": "cmd-k s",
-    "title": "Save Without Formatting"
-  },
-  {
-    "command": "issue.createIssueFromFile",
-    "key": "alt+i",
-    "title": "Create Issue From File",
-    "when": "!issues.creatingFromFile && resourceScheme == 'newIssue' && config.files.autoSave != 'off'"
-  },
-  {
-    "command": "-issue.createIssueFromFile",
-    "key": "cmd-s",
-    "title": "Create Issue From File",
-    "when": "!issues.creatingFromFile && resourceScheme == 'newIssue' && config.files.autoSave != 'off'"
-  },
-  {
-    "command": "git-graph.view",
-    "key": "ctrl+shift+alt+cmd-6",
-    "title": "Git Graph View"
-  },
-  {
-    "command": "-postman-for-vscode.sidebar-panel.focus",
-    "key": "alt+cmd-p",
-    "title": "Postman Sidebar Panel Focus"
-  },
-  {
-    "command": "selectNextSuggestion",
-    "key": "ctrl+j",
-    "title": "Select Next Suggestion Down Arrow",
-    "when": "suggestWidgetVisible"
-  },
-  {
-    "command": "selectPrevSuggestion",
-    "key": "ctrl+k",
-    "title": "Select Previous Suggestion Up Arrow",
-    "when": "suggestWidgetVisible"
-  },
-  {
-    "command": "workbench.action.quickOpenSelectNext",
-    "key": "ctrl+j",
-    "title": "Quick Open Select Next",
-    "when": "inQuickOpen"
-  },
-  {
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "key": "ctrl+k",
-    "title": "Quick Open Select Previous",
-    "when": "inQuickOpen"
-  },
-  {
-    "command": "workbench.action.navigateLeft",
-    "key": "ctrl+h",
-    "title": "Navigate Left",
-    "when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
-  },
-  {
-    "command": "workbench.action.navigateDown",
-    "key": "ctrl+j",
-    "title": "Navigate Down",
-    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
-  },
-  {
-    "command": "workbench.action.navigateUp",
-    "key": "ctrl+k",
-    "title": "Navigate Up",
-    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
-  },
-  {
-    "command": "workbench.action.navigateRight",
-    "key": "ctrl+l",
-    "title": "Navigate Right",
-    "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
-  },
-  // Quick Navigation for diff view
-  {
-    "command": "workbench.action.compareEditor.focusSecondarySide",
-    "key": "ctrl+h",
-    "title": "Compare Editor Focus Secondary Side",
-    "when": "isInDiffEditor && !isInDiffLeftEditor"
-  },
-  {
-    "command": "workbench.action.navigateLeft",
-    "key": "ctrl+h",
-    "title": "Navigate Left",
-    "when": "isInDiffEditor && isInDiffLeftEditor"
-  },
-  {
-    "command": "workbench.action.compareEditor.focusPrimarySide",
-    "key": "ctrl+l",
-    "title": "Compare Editor Focus Primary Side",
-    "when": "isInDiffEditor && isInDiffLeftEditor"
-  },
-  {
-    "command": "workbench.action.navigateRight",
-    "key": "ctrl+l",
-    "title": "Navigate Right",
-    "when": "isInDiffEditor && !isInDiffLeftEditor"
-  },
-  {
-    "command": "vspacecode.space",
-    "key": "space",
-    "title": "Space",
-    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-  },
-  {
-    "command": "vspacecode.space",
-    "key": "space",
-    "title": "Space",
-    "when": "sideBarFocus && !inputFocus && !whichkeyActive"
-  },
-  {
-    "command": "extension.vim_tab",
-    "key": "tab",
-    "title": "Tab",
-    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-  },
-  {
-    "command": "-extension.vim_tab",
-    "key": "tab",
-    "title": "Tab",
-    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "magit.discard-at-point",
-    "key": "x",
-    "title": "Discard",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.discard-at-point",
-    "key": "k",
-    "title": "Discard"
-  },
-  {
-    "command": "magit.reverse-at-point",
-    "key": "-",
-    "title": "Reverse",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.reverse-at-point",
-    "key": "v",
-    "title": "Reverse"
-  },
-  {
-    "command": "magit.reverting",
-    "key": "shift+-",
-    "title": "Revert",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.reverting",
-    "key": "shift+v",
-    "title": "Revert"
-  },
-  {
-    "command": "magit.resetting",
-    "key": "shift+o",
-    "title": "Reset",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.resetting",
-    "key": "shift+x",
-    "title": "Reset"
-  },
-  {
-    "command": "-magit.reset-mixed",
-    "key": "x",
-    "title": "Reset Mixed"
-  },
-  {
-    "command": "-magit.reset-hard",
-    "key": "ctrl+u x",
-    "title": "Reset Hard"
-  },
-  {
-    "command": "-magit.show-refs",
-    "key": "y",
-    "title": "Show Magit Refs"
-  },
-  {
-    "command": "vspacecode.showMagitRefMenu",
-    "key": "y",
-    "title": "Show Magit Refs",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
-  },
-  {
-    "command": "selectNextSuggestion",
-    "key": "ctrl+j",
-    "title": "Select Next Suggestion Down Arrow",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "command": "selectPrevSuggestion",
-    "key": "ctrl+k",
-    "title": "Select Previous Suggestion Up Arrow",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "command": "acceptSelectedSuggestion",
-    "key": "ctrl+l",
-    "title": "Accept Selected Suggestion Left Arrow",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "command": "showNextParameterHint",
-    "key": "ctrl+j",
-    "title": "Show Next Parameter Hint",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-  },
-  {
-    "command": "showPrevParameterHint",
-    "key": "ctrl+k",
-    "title": "Show Previous Parameter Hint",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-  },
-  {
-    "command": "selectNextCodeAction",
-    "key": "ctrl+j",
-    "title": "Select Next Code Action",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "command": "selectPrevCodeAction",
-    "key": "ctrl+k",
-    "title": "Select Previous Code Action",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "command": "acceptSelectedCodeAction",
-    "key": "ctrl+l",
-    "title": "Accept Selected Code Action",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "command": "file-browser.stepOut",
-    "key": "ctrl+h",
-    "title": "Step Out",
-    "when": "inFileBrowser"
-  },
-  {
-    "command": "file-browser.stepIn",
-    "key": "ctrl+l",
-    "title": "Step In",
-    "when": "inFileBrowser"
-  },
-  {
-    "command": "-workbench.action.zoomIn",
-    "key": "cmd-=",
-    "title": "Removes Default Zoom In"
-  },
-  {
-    "command": "-workbench.action.zoomOut",
-    "key": "cmd--",
-    "title": "Removes Default Zoom Out"
-  },
-  {
-    "command": "workbench.view.extension.gitlensPanel",
-    "key": "ctrl+alt+cmd-l",
-    "title": "Launch GitLens Panel"
-  },
-  {
-    "command": "explorer.newFolder",
-    "key": "ctrl+shift+n",
-    "title": "New Folder in Explorer",
-    "when": "filesExplorerFocus"
-  },
-  {
-    "command": "explorer.newFile",
-    "key": "ctrl+n",
-    "title": "New File in Explorer",
-    "when": "filesExplorerFocus"
-  },
-  {
-    "command": "workbench.action.terminal.focusNextPane",
-    "key": "cmd-]",
-    "title": "Focus Next Pane in Terminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "command": "-workbench.action.terminal.focusNextPane",
-    "key": "alt+cmd-right",
-    "title": "Focus Previous Pane in Terminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "key": "cmd-[",
-    "title": "Focus Next Pane in Terminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "command": "-workbench.action.terminal.focusPreviousPane",
-    "key": "alt+cmd-left",
-    "title": "Focus Previous Pane in Terminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "command": "workbench.action.toggleCenteredLayout",
-    "key": "ctrl+alt+home",
-    "title": "Toggle Centered Layout"
-  },
-  {
-    "command": "continue.focusContinueInputWithoutClear",
-    "key": "ctrl+alt+l",
-    "title": "Focus Continue Input"
-  },
-  {
-    "command": "-continue.focusContinueInputWithoutClear",
-    "key": "shift+cmd-l",
-    "title": "Removes Default Focus Continue Input"
-  },
-  {
-    "command": "workbench.action.nextPanelView",
-    "key": "ctrl+shift+]",
-    "title": "Next Panel View"
-  },
-  {
-    "command": "workbench.action.previousPanelView",
-    "key": "ctrl+shift+[",
-    "title": "Previous Panel View"
-  },
-  {
-    "command": "workbench.action.terminal.killEditor",
-    "key": "cmd-ctrl+=",
-    "title": "Kill Terminal",
-    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
-  },
-  {
-    "command": "editor.action.moveLinesUpAction",
-    "key": "alt+k",
-    "title": "Move Line Up",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "command": "editor.action.moveLinesDownAction",
-    "key": "alt+j",
-    "title": "Move Line Down",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "command": "workbench.action.output.toggleOutput",
-    "key": "shift+cmd-2",
-    "title": "Toggle Output",
-    "when": "workbench.panel.output.active"
-  },
-  {
-    "command": "-workbench.action.output.toggleOutput",
-    "key": "shift+cmd-u",
-    "title": "Toggle Output",
-    "when": "workbench.panel.output.active"
-  },
-  {
-    "command": "workbench.view.extensions",
-    "key": "cmd-k cmd-x",
-    "title": "Toggle Extensions",
-    "when": "viewContainer.workbench.view.extensions.enabled"
-  },
-  {
-    "command": "workbench.view.debug",
-    "key": "cmd-k cmd-d",
-    "title": "Toggle Debug Console",
-    "when": "viewContainer.workbench.view.debug.enabled"
-  },
-  {
-    "command": "workbench.view.extension.gitlensInspect",
-    "key": "cmd-k l",
-    "title": "GitLens Inspect"
-  },
-  {
-    "command": "supermaven.newConversationTab",
-    "key": "cmd-k a",
-    "title": "Supermavne Open Chat"
-  },
-  {
-    "command": "workbench.action.increaseViewSize",
-    "key": "cmd-ctrl+alt+shift+=",
-    "title": "Increase View Size when Side Bar Focused",
-    "when": "sideBarFocus"
-  },
-  {
-    "command": "workbench.action.decreaseViewSize",
-    "key": "cmd-ctrl+alt+shift+-",
-    "title": "Decrease View Size when Side Bar Focused",
-    "when": "sideBarFocus"
-  },
-  {
-    "command": "workbench.action.increaseViewWidth",
-    "key": "ctrl+shift+alt+cmd-=",
-    "title": "Increase View Width when Editor Focused",
-    "when": "editorFocus"
-  },
-  {
-    "command": "workbench.action.decreaseViewWidth",
-    "key": "ctrl+shift+alt+cmd--",
-    "title": "Decrease View Width when Editor Focused",
-    "when": "editorFocus"
-  },
-  {
-    "command": "workbench.action.increaseViewSize",
-    "key": "ctrl+shift+alt+cmd-=",
-    "title": "Increase View Size when Panel Focused",
-    "when": "panelFocus"
-  },
-  {
-    "command": "workbench.action.decreaseViewSize",
-    "key": "ctrl+shift+alt+cmd--",
-    "title": "Decrease View Size when Panel Focused",
-    "when": "panelFocus"
-  },
-  {
-    "command": "workbench.action.increaseViewSize",
-    "key": "ctrl+shift+alt+cmd-=",
-    "title": "Increase View Size when Secondary Side Bar Focused",
-    "when": "auxiliaryBarVisible && auxiliaryBarFocus"
-  },
-  {
-    "command": "workbench.action.decreaseViewSize",
-    "key": "ctrl+shift+alt+cmd--",
-    "title": "Decrease View Size when Secondary Side Bar Focused",
-    "when": "auxiliaryBarVisible && auxiliaryBarFocus && !inputFocus"
-  },
-  {
-    "command": "workbench.action.zoomReset",
-    "key": "shift+cmd-0"
-  },
-  {
-    "command": "workbench.view.extension.claude-dev-ActivityBar",
-    "key": "cmd-k cmd-a"
-  },
-  {
-    "command": "lazygit.openLazygit",
-    "key": "cmd-k g"
-  },
-  {
-    "command": "outline.focus",
-    "key": "cmd-k cmd-o"
-  },
-  /////////////////////////////   VSpaceCode   /////////////////////////////////
-  {
-    "command": "vspacecode.space",
-    "key": "space",
-    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-  },
-  {
-    "command": "vspacecode.space",
-    "key": "space",
-    "when": "sideBarFocus && !inputFocus && !whichkeyActive"
-  },
-  {
-    "command": "extension.vim_tab",
-    "key": "tab",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-  },
-  {
-    "command": "-extension.vim_tab",
-    "key": "tab",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "magit.discard-at-point",
-    "key": "x",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.discard-at-point",
-    "key": "k"
-  },
-  {
-    "command": "magit.reverse-at-point",
-    "key": "-",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.reverse-at-point",
-    "key": "v"
-  },
-  {
-    "command": "magit.reverting",
-    "key": "shift--",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.reverting",
-    "key": "shift-v"
-  },
-  {
-    "command": "magit.resetting",
-    "key": "shift-o",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "-magit.resetting",
-    "key": "shift-x"
-  },
-  {
-    "command": "-magit.reset-mixed",
-    "key": "x"
-  },
-  {
-    "command": "-magit.reset-hard",
-    "key": "ctrl-u x"
-  },
-  {
-    "command": "-magit.show-refs",
-    "key": "y"
-  },
-  {
-    "command": "vspacecode.showMagitRefMenu",
-    "key": "y",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
-  },
-  {
-    "command": "-magit.refresh",
-    "key": "g",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "vspacecode.showMagitRefreshMenu",
-    "key": "g",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "command": "workbench.action.quickOpenSelectNext",
-    "key": "ctrl-j",
-    "when": "inQuickOpen"
-  },
-  {
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "key": "ctrl-k",
-    "when": "inQuickOpen"
-  },
-  {
-    "command": "selectNextSuggestion",
-    "key": "ctrl-j",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "command": "selectPrevSuggestion",
-    "key": "ctrl-k",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "command": "acceptSelectedSuggestion",
-    "key": "ctrl-l",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "command": "showNextParameterHint",
-    "key": "ctrl-j",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-  },
-  {
-    "command": "showPrevParameterHint",
-    "key": "ctrl-k",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-  },
-  {
-    "command": "selectNextCodeAction",
-    "key": "ctrl-j",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "command": "selectPrevCodeAction",
-    "key": "ctrl-k",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "command": "acceptSelectedCodeAction",
-    "key": "ctrl-l",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "command": "file-browser.stepOut",
-    "key": "ctrl-h",
-    "when": "inFileBrowser"
-  },
-  {
-    "command": "file-browser.stepIn",
-    "key": "ctrl-l",
-    "when": "inFileBrowser"
-  },
-  {
-    "command": "whichkey.undoKey",
-    "key": "backspace",
-    "when": "whichkeyActive"
-  },
-  // Vim: Window/Buffer Navigation
-  {
-    "command": "workbench.action.navigateLeft",
-    "key": "ctrl-h",
-    "name": "Go to LEFT Pane",
-    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "command": "workbench.action.navigateRight",
-    "key": "ctrl-l",
-    "name": "Go to RIGHT Pane",
-    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "command": "workbench.action.navigateUp",
-    "key": "ctrl-k",
-    "name": "Go to UP Pane",
-    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "command": "workbench.action.navigateDown",
-    "key": "ctrl-j",
-    "name": "Go to DOWN Pane",
-    "when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "command": "workbench.action.nextEditor",
-    "key": "shift-l",
-    "name": "Go to NEXT Tab",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "command": "workbench.action.nextEditor",
-    "key": "shift-h",
-    "name": "Go to PREVIOUS Tab",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-  },
-  // Vim: Coding Navigation
-  {
-    "command": "editor.toggleFold",
-    "key": "Enter",
-    "name": "Toggle Code Folding open/close",
-    "when": "vim.mode == 'Normal' && (editorTextFocus && !editorReadonly)"
-  },
-  {
-    "command": "editor.action.moveLinesDownAction",
-    "key": "shift-j",
-    "name": "Move Line Down",
-    "when": "vim.mode != 'Insert' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.moveLinesUpAction",
-    "key": "shift-k",
-    "name": "Move Line Up",
-    "when": "vim.mode != 'Insert' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.codeAction",
-    "key": "shift-j ",
-    "name": "Show Code Actions",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.showHover",
-    "key": "shift-k",
-    "name": "Show Hover Info",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  // Multi-Cursor
-  {
-    "key": "alt+cmd+k",
-    "command": "editor.action.insertCursorAbove",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+cmd+j",
-    "command": "editor.action.insertCursorBelow",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+cmd+u",
-    "command": "cursorUndo",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+cmd+shift+u",
-    "command": "cursorRedo",
-    "when": "editorTextFocus"
-  },
-  // File Explorer
-  {
-    "command": "renameFile",
-    "key": "r",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "filesExplorer.copy",
-    "key": "c",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "filesExplorer.paste",
-    "key": "p",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "filesExplorer.cut",
-    "key": "x",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "deleteFile",
-    "key": "d",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.newFile",
-    "key": "a",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.newFolder",
-    "key": "shift-a",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.openToSide",
-    "key": "s",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "args": {
-      "commands": [
-        "workbench.action.splitEditorDown",
-        "explorer.openAndPassFocus",
-        "workbench.action.closeOtherEditors"
-      ]
-    },
-    "command": "runCommands",
-    "key": "shift-s",
-    "name": "Split Down",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.openAndPassFocus",
-    "key": "enter",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "-renameFile",
-    "key": "enter",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  // Toggle Sidebar and Views
-  {
-    "command": "workbench.view.explorer",
-    "key": "cmd-k cmd-e",
-    "name": "Focus Explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "command": "workbench.files.action.focusOpenEditorsView",
-    "key": "cmd-k e",
-    "when": "workbench.explorer.openEditorsView.active"
-  },
-  {
-    "command": "-workbench.files.action.focusOpenEditorsView",
-    "key": "cmd-k e",
-    "when": "workbench.explorer.openEditorsView.active"
-  },
-  {
-    "command": "markdown.showPreview",
-    "key": "cmd-k cmd-v",
-    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
-  },
-  {
-    "command": "workbench.action.terminal.toggleTerminal",
-    "key": "cmd-k t",
-    "when": "terminal.active"
-  },
-  {
-    "command": "workbench.actions.view.problems",
-    "key": "cmd-k cmd-p",
-    "when": "workbench.panel.markers.view.active"
-  },
-  // Git
-  {
-    "command": "workbench.view.scm",
-    "key": "cmd-k cmd-g",
-    "when": "workbench.scm.active"
-  },
-  {
-    "command": "git.push",
-    "key": "ctrl-cmd-home",
-    "title": "Git Push"
-  },
-  {
-    "command": "lazygit.openLazygit",
-    "key": "cmd-k g"
-  },
-  {
-    "command": "-gitProjectManager.openRecents",
-    "key": "alt+cmd+q"
-  },
-  {
-    "command": "workbench.action.openGlobalKeybindingsFile",
-    "key": "ctrl+cmd+,"
-  },
-  {
-    "name": "Focss on PM Favorites",
-    "key": "cmd+k p",
-    "command": "projectsExplorerFavorites.focus"
-  },
-  {
-    "command": "workbench.action.toggleAuxiliaryBar",
-    "key": "cmd-k cmd-b",
-    "title": "Toggle Secondary Side Bar Visibility"
-  },
-  {
-    "key": "cmd+l",
-    "command": "-expandLineSelection",
-    "when": "textInputFocus"
-  },
+	{
+		"command": "workbench.action.openGlobalKeybindingsFile",
+		"key": "ctrl+cmd+,"
+	},
+	{
+		"command": "workbench.action.toggleCenteredLayout",
+		"key": "ctrl+alt+home",
+		"title": "Toggle Centered Layout"
+	},
+	{
+		"command": "workbench.action.openApplicationSettingsJson",
+		"key": "alt+cmd-,",
+		"title": "Open Application Settings JSON"
+	},
+	// VSpaceCode
+	{
+		"command": "whichkey.show",
+		"key": "alt+space",
+		"title": "Show Whichkey in all areas",
+		"when": "!editorTextFocus"
+	},
+	{
+		"command": "vspacecode.space",
+		"key": "space",
+		"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+	},
+	{
+		"command": "vspacecode.space",
+		"key": "space",
+		"when": "sideBarFocus && !inputFocus && !whichkeyActive"
+	},
+	{
+		"command": "extension.vim_tab",
+		"key": "tab",
+		"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
+	},
+	{
+		"command": "-extension.vim_tab",
+		"key": "tab",
+		"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"command": "magit.discard-at-point",
+		"key": "x",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"command": "-magit.discard-at-point",
+		"key": "k"
+	},
+	{
+		"command": "magit.reverse-at-point",
+		"key": "-",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"command": "-magit.reverse-at-point",
+		"key": "v"
+	},
+	{
+		"command": "magit.reverting",
+		"key": "shift--",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"command": "-magit.reverting",
+		"key": "shift-v"
+	},
+	{
+		"command": "magit.resetting",
+		"key": "shift-o",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"command": "-magit.resetting",
+		"key": "shift-x"
+	},
+	{
+		"command": "-magit.reset-mixed",
+		"key": "x"
+	},
+	{
+		"command": "-magit.reset-hard",
+		"key": "ctrl-u x"
+	},
+	{
+		"command": "-magit.show-refs",
+		"key": "y"
+	},
+	{
+		"command": "vspacecode.showMagitRefMenu",
+		"key": "y",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
+	},
+	{
+		"command": "-magit.refresh",
+		"key": "g",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"command": "vspacecode.showMagitRefreshMenu",
+		"key": "g",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"command": "workbench.action.quickOpenSelectNext",
+		"key": "ctrl-j",
+		"when": "inQuickOpen"
+	},
+	{
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"key": "ctrl-k",
+		"when": "inQuickOpen"
+	},
+	{
+		"command": "selectNextSuggestion",
+		"key": "ctrl-j",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"command": "selectPrevSuggestion",
+		"key": "ctrl-k",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"command": "acceptSelectedSuggestion",
+		"key": "ctrl-l",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"command": "showNextParameterHint",
+		"key": "ctrl-j",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"command": "showPrevParameterHint",
+		"key": "ctrl-k",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"command": "selectNextCodeAction",
+		"key": "ctrl-j",
+		"when": "codeActionMenuVisible"
+	},
+	{
+		"command": "selectPrevCodeAction",
+		"key": "ctrl-k",
+		"when": "codeActionMenuVisible"
+	},
+	{
+		"command": "acceptSelectedCodeAction",
+		"key": "ctrl-l",
+		"when": "codeActionMenuVisible"
+	},
+	{
+		"command": "file-browser.stepOut",
+		"key": "ctrl-h",
+		"when": "inFileBrowser"
+	},
+	{
+		"command": "file-browser.stepIn",
+		"key": "ctrl-l",
+		"when": "inFileBrowser"
+	},
+	{
+		"command": "whichkey.undoKey",
+		"key": "backspace",
+		"when": "whichkeyActive"
+	},
+	// Vim: Window/Buffer Navigation
+	{
+		"name": "Go to LEFT Pane",
+		"key": "ctrl-h",
+		"command": "workbench.action.navigateLeft",
+		"when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+	},
+	{
+		"name": "Go to RIGHT Pane",
+		"key": "ctrl-l",
+		"command": "workbench.action.navigateRight",
+		"when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+	},
+	{
+		"name": "Go to UP Pane",
+		"key": "ctrl-k",
+		"command": "workbench.action.navigateUp",
+		"when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+	},
+	{
+		"name": "Go to DOWN Pane",
+		"key": "ctrl-j",
+		"command": "workbench.action.navigateDown",
+		"when": "vim.mode != 'Insert' && (editorTextFocus || !inputFocus)"
+	},
+	{
+		"command": "workbench.action.nextEditor",
+		"key": "shift-l",
+		"name": "Go to NEXT Tab",
+		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+	},
+	{
+		"command": "workbench.action.nextEditor",
+		"key": "shift-h",
+		"name": "Go to PREVIOUS Tab",
+		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+	},
+	// Vim: Coding Navigation
+	{
+		"name": "Toggle Code Folding open/close",
+		"key": "Enter",
+		"command": "editor.toggleFold",
+		"when": "vim.mode == 'Normal' && (editorTextFocus || !editorReadonly)"
+	},
+	{
+		"name": "Move Line Down",
+		"command": "editor.action.moveLinesDownAction",
+		"key": "shift-j",
+		"when": "vim.mode != 'Insert' && editorTextFocus"
+	},
+	{
+		"name": "Move Line Up",
+		"command": "editor.action.moveLinesUpAction",
+		"key": "shift-k",
+		"when": "vim.mode != 'Insert' && editorTextFocus"
+	},
+	{
+		"name": "Show Code Actions",
+		"key": "shift-j ",
+		"command": "editor.action.codeAction",
+		"when": "vim.mode == 'Normal' && editorTextFocus"
+	},
+	{
+		"name": "Show Hover Info",
+		"command": "editor.action.showHover",
+		"key": "shift-k",
+		"when": "vim.mode == 'Normal' && editorTextFocus"
+	},
+	// Multi-Cursor
+	{
+		"key": "alt+cmd+k",
+		"command": "editor.action.insertCursorAbove",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+j",
+		"command": "editor.action.insertCursorBelow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+u",
+		"command": "cursorUndo",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+shift+u",
+		"command": "cursorRedo",
+		"when": "editorTextFocus"
+	},
+	// Code Editing
+	{
+		"title": "Duplicate Lines Up Action",
+		"command": "editor.action.copyLinesUpAction",
+		"key": "cmd-shift-u",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"title": "Duplicate Lines Down Action",
+		"command": "editor.action.copyLinesDownAction",
+		"key": "cmd-shift-d",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"command": "editor.action.transformToUppercase",
+		"key": "cmd-k cmd-u",
+		"title": "Transform to Upercase"
+	},
+	{
+		"command": "editor.action.transformToLowercase",
+		"key": "cmd-k cmd-l",
+		"title": "Transform to lowercase"
+	},
+	// File Explorer
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "c",
+		"command": "filesExplorer.copy",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "x",
+		"command": "filesExplorer.cut",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "d",
+		"command": "deleteFile",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "shift-a",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "s",
+		"command": "explorer.openToSide",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"name": "Split Down",
+		"key": "shift-s",
+		"command": "runCommands",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+		"args": {
+			"commands": [
+				"workbench.action.splitEditorDown",
+				"explorer.openAndPassFocus",
+				"workbench.action.closeOtherEditors"
+			]
+		}
+	},
+	{
+		"key": "enter",
+		"command": "explorer.openAndPassFocus",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	// Toggle Sidebar and Views
+	{
+		"title": "Next Side Bar View",
+		"command": "workbench.action.nextSideBarView",
+		"key": "ctrl+alt+]",
+	},
+	{
+		"title": "Previous Side Bar View",
+		"command": "workbench.action.previousSideBarView",
+		"key": "ctrl+alt+[",
+	},
+	{
+		"command": "workbench.files.action.collapseExplorerFolders",
+		"key": "alt+pageup",
+		"title": "Collapse Explorer Folders"
+	},
+	{
+		"name": "Focus Explorer",
+		"command": "workbench.view.explorer",
+		"key": "cmd-k cmd-e",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"command": "workbench.files.action.focusOpenEditorsView",
+		"key": "cmd-k e",
+		"when": "workbench.explorer.openEditorsView.active"
+	},
+	{
+		"command": "-workbench.files.action.focusOpenEditorsView",
+		"key": "cmd-k e",
+		"when": "workbench.explorer.openEditorsView.active"
+	},
+	{
+		"command": "workbench.action.toggleAuxiliaryBar",
+		"key": "cmd-k cmd-b",
+		"title": "Toggle Secondary Sidebar Visibility"
+	},
+	{
+		"command": "outline.focus",
+		"key": "cmd-k cmd-o"
+	},
+	{
+		"command": "markdown.showPreview",
+		"key": "cmd-k cmd-v",
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	},
+	{
+		"command": "workbench.actions.view.problems",
+		"key": "cmd-k cmd-p",
+		"when": "workbench.panel.markers.view.active"
+	},
+	{
+		"command": "markdown.showPreview",
+		"key": "cmd-k cmd-v",
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	},
+	{
+		"command": "workbench.action.increaseViewSize",
+		"key": "cmd-ctrl+alt+shift+=",
+		"title": "Increase View Size when Side Bar Focused",
+		"when": "sideBarFocus"
+	},
+	{
+		"command": "workbench.action.decreaseViewSize",
+		"key": "cmd-ctrl+alt+shift+-",
+		"title": "Decrease View Size when Side Bar Focused",
+		"when": "sideBarFocus"
+	},
+	{
+		"command": "workbench.action.increaseViewWidth",
+		"key": "ctrl+shift+alt+cmd-=",
+		"title": "Increase View Width when Editor Focused",
+		"when": "editorFocus"
+	},
+	{
+		"command": "workbench.action.decreaseViewWidth",
+		"key": "ctrl+shift+alt+cmd--",
+		"title": "Decrease View Width when Editor Focused",
+		"when": "editorFocus"
+	},
+	{
+		"command": "workbench.action.increaseViewSize",
+		"key": "ctrl+shift+alt+cmd-=",
+		"title": "Increase View Size when Panel Focused",
+		"when": "panelFocus"
+	},
+	{
+		"command": "workbench.action.decreaseViewSize",
+		"key": "ctrl+shift+alt+cmd--",
+		"title": "Decrease View Size when Panel Focused",
+		"when": "panelFocus"
+	},
+	{
+		"command": "workbench.action.increaseViewSize",
+		"key": "ctrl+shift+alt+cmd-=",
+		"title": "Increase View Size when Secondary Side Bar Focused",
+		"when": "auxiliaryBarVisible && auxiliaryBarFocus"
+	},
+	{
+		"command": "workbench.action.decreaseViewSize",
+		"key": "ctrl+shift+alt+cmd--",
+		"title": "Decrease View Size when Secondary Side Bar Focused",
+		"when": "auxiliaryBarVisible && auxiliaryBarFocus && !inputFocus"
+	},
+	{
+		"command": "workbench.action.output.toggleOutput",
+		"key": "shift+cmd-2",
+		"title": "Toggle Output",
+		"when": "workbench.panel.output.active"
+	},
+	{
+		"command": "-workbench.action.output.toggleOutput",
+		"key": "shift+cmd-u",
+		"title": "Toggle Output",
+		"when": "workbench.panel.output.active"
+	},
+	{
+		"command": "workbench.view.extensions",
+		"key": "cmd-k cmd-x",
+		"title": "Toggle Extensions",
+		"when": "viewContainer.workbench.view.extensions.enabled"
+	},
+	{
+		"command": "workbench.view.debug",
+		"key": "cmd-k cmd-d",
+		"title": "Toggle Debug Console",
+		"when": "viewContainer.workbench.view.debug.enabled"
+	},
+	// Terminal
+	{
+		"command": "workbench.action.terminal.toggleTerminal",
+		"key": "cmd-k t",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+cmd+=",
+		"command": "workbench.action.terminal.killViewOrEditor",
+		"title": "Kill Terminal",
+		"when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+	},
+	{
+		"command": "workbench.action.terminal.clear",
+		"key": "cmd-k cmd-k",
+		"title": "Clear Terminal",
+		"when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+	},
+	{
+		"command": "-workbench.action.terminal.clear",
+		"key": "cmd-k",
+		"title": "Clear Terminal",
+		"when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+	},
+	{
+		"command": "workbench.action.terminal.split",
+		"key": "shift+cmd-d",
+		"title": "Split Terminal",
+		"when": "terminalFocus"
+	},
+	// AI and Chats
+	{
+		"command": "workbench.view.extension.claude-dev-ActivityBar",
+		"key": "cmd-k cmd-a"
+	},
+	{
+		"command": "supermaven.newConversationTab",
+		"key": "cmd-k a",
+		"title": "Supermavne Open Chat"
+	},
+	// Git
+	{
+		"command": "workbench.view.scm",
+		"key": "cmd-k cmd-g",
+		"when": "workbench.scm.active"
+	},
+	{
+		"command": "git.push",
+		"key": "ctrl-cmd-home",
+		"title": "Git Push"
+	},
+	{
+		"command": "lazygit.openLazygit",
+		"key": "cmd-k g"
+	},
+	{
+		"key": "ctrl+cmd+=",
+		"command": "workbench.action.terminal.killViewOrEditor"
+	},
+	// Diff View
+	{
+		"command": "workbench.action.compareEditor.focusSecondarySide",
+		"key": "ctrl+h",
+		"title": "Compare Editor Focus Secondary Side",
+		"when": "isInDiffEditor && !isInDiffLeftEditor"
+	},
+	{
+		"command": "workbench.action.navigateLeft",
+		"key": "ctrl+h",
+		"title": "Navigate Left",
+		"when": "isInDiffEditor && isInDiffLeftEditor"
+	},
+	{
+		"command": "workbench.action.compareEditor.focusPrimarySide",
+		"key": "ctrl+l",
+		"title": "Compare Editor Focus Primary Side",
+		"when": "isInDiffEditor && isInDiffLeftEditor"
+	},
+	{
+		"command": "workbench.action.navigateRight",
+		"key": "ctrl+l",
+		"title": "Navigate Right",
+		"when": "isInDiffEditor && !isInDiffLeftEditor"
+	},
+	// Zoom
+	{
+		"command": "workbench.action.zoomReset",
+		"key": "shift+cmd-0"
+	},
+	{
+		"command": "-workbench.action.zoomIn",
+		"key": "cmd-=",
+		"title": "Removes Default Zoom In"
+	},
+	{
+		"command": "-workbench.action.zoomOut",
+		"key": "cmd--",
+		"title": "Removes Default Zoom Out"
+	},
+	// Emmet
+	{
+		"command": "editor.emmet.action.toggleComment",
+		"key": "ctrl+alt+/",
+		"title": "Emmet Toggle Comment"
+	},
+	{
+		"command": "editor.emmet.action.updateTag",
+		"key": "shift+cmd-i",
+		"title": "Emmet Update Tag"
+	},
+	// Buffer/Tab navigation
+	{
+		"command": "workbench.action.focusFirstEditorGroup",
+		"key": "ctrl+1",
+		"title": "Focus First Editor Group"
+	  },
+	  {
+		"command": "-workbench.action.focusFirstEditorGroup",
+		"key": "cmd-1",
+		"title": "Removes Focus First Editor Group"
+	  },
+	  {
+		"command": "workbench.action.focusSecondEditorGroup",
+		"key": "ctrl+2",
+		"title": "Focus Second Editor Group"
+	  },
+	  {
+		"command": "-workbench.action.focusSecondEditorGroup",
+		"key": "cmd-2",
+		"title": "Removes Focus Second Editor Group"
+	  },
+	  {
+		"command": "workbench.action.focusThirdEditorGroup",
+		"key": "ctrl+3",
+		"title": "Focus Third Editor Group"
+	  },
+	  {
+		"command": "-workbench.action.focusThirdEditorGroup",
+		"key": "cmd-3",
+		"title": "Removes Focus Third Editor Group"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex1",
+		"key": "cmd-1",
+		"title": "Open Editor At Index 1"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex1",
+		"key": "ctrl+1",
+		"title": "Removes Open Editor At Index 1"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex2",
+		"key": "cmd-2",
+		"title": "Open Editor At Index 2"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex2",
+		"key": "ctrl+2",
+		"title": "Removes Open Editor At Index 2"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex3",
+		"key": "cmd-3",
+		"title": "Open Editor At Index 3"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex3",
+		"key": "ctrl+3",
+		"title": "Removes Open Editor At Index 3"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex4",
+		"key": "cmd-4",
+		"title": "Open Editor At Index 4"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex4",
+		"key": "ctrl+4",
+		"title": "Removes Open Editor At Index 4"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex5",
+		"key": "cmd-5",
+		"title": "Open Editor At Index 5"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex5",
+		"key": "ctrl+5",
+		"title": "Removes Open Editor At Index 5"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex6",
+		"key": "cmd-6",
+		"title": "Open Editor At Index 6"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex6",
+		"key": "ctrl+6",
+		"title": "Removes Open Editor At Index 6"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex7",
+		"key": "cmd-7",
+		"title": "Open Editor At Index 7"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex7",
+		"key": "ctrl+7",
+		"title": "Removes Open Editor At Index 7"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex8",
+		"key": "cmd-8",
+		"title": "Open Editor At Index 8"
+	  },
+	  {
+		"command": "-workbench.action.openEditorAtIndex8",
+		"key": "ctrl+8",
+		"title": "Removes Open Editor At Index 8"
+	  },
+	  {
+		"command": "workbench.action.openEditorAtIndex9",
+		"key": "cmd-9",
+		"title": "Open Editor At Index 9"
+	  },
 ]
