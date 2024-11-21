@@ -11,10 +11,10 @@ fnm env --use-on-cd | source
 ### start Prompt ###
 # Starship Prompt
 function starship_transient_prompt_func
-  starship module character
+    starship module character
 end
 starship init fish | source
 enable_transience
 
 # OH My Posh Prompt
-# oh-my-posh init fish --config ~/.config/starship-ish.omp.json| source
+# oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
