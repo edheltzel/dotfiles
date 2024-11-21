@@ -195,6 +195,11 @@ run = "move-node-to-workspace M"
 if.app-id = 'com.microsoft.Powerpoint'
 run = "move-node-to-workspace M"
 
+# Microsoft Word
+[[on-window-detected]]
+if.app-id = 'comd.microsoft.Word'
+run = "move-node-to-workspace M"
+
 # Apple Notes
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
