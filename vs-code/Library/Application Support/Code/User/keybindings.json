@@ -6,7 +6,7 @@
 		"key": "ctrl+cmd+,"
 	},
 	{
-		"command": "workbench.action.toggleCenteredLayout",
+    "command": "workbench.action.toggleCenteredLayout",
 		"key": "ctrl+alt+home",
 		"title": "Toggle Centered Layout"
 	},
