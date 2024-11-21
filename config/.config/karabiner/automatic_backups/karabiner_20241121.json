@@ -186,15 +186,7 @@
                                 },
                                 "to": [{ "shell_command": "open -a 'Microsoft Teams'" }],
                                 "type": "basic"
-                            },
-                            {
-                                "description": "command + t = Kitty Terminal",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a kitty" }],
-                                "type": "basic"
+
                             }
                         ]
                     }
@@ -225,7 +217,6 @@
                 }
             ],
             "name": "Q11 Hyper Nav + Launch",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -2346,6 +2337,7 @@
                 ]
             },
             "name": "MacDaddy Hyper Key + Nav + Launch",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
