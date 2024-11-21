@@ -1,175 +1,196 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
   "var": {
     "lightning": "⚡",
     "lightningColor": "#7DCFFF"
   },
+  "transient_prompt": {
+    "template": "❯ ",
+    "foreground": "green",
+    "background": "transparent"
+  },
   "blocks": [
     {
-      "alignment": "left",
-      "newline": true,
       "type": "prompt",
+      "alignment": "left",
       "segments": [
         {
-          "foreground": "cyan",
-          "style": "plain",
-          "template": "<{{ .Var.lightningColor }}>{{ .Var.lightning }}</>{{ .Path }} ",
-          "type": "path",
           "properties": {
-            "style": "agnoster_short",
+            "cache_duration": "none",
+            "folder_icon": "\u2026",
             "hide_root_location": true,
-            "folder_icon": "…"
-          }
+            "style": "agnoster_short"
+          },
+          "template": "<{{ .Var.lightningColor }}>{{ .Var.lightning }}</>{{ .Path }} ",
+          "foreground": "cyan",
+          "type": "path",
+          "style": "plain"
         },
         {
-          "foreground": "#F141A8",
-          "style": "plain",
-          "template": "<#7ea2b4>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152> {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} ",
-          "type": "git",
           "properties": {
-            "branch_icon": " ",
-            "fetch_upstream_icon": true,
+            "branch_icon": "\uf418 ",
+            "cache_duration": "none",
             "fetch_e_count": true,
             "fetch_stash_count": true,
-            "fetch_status": true
-          }
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": "<#7ea2b4>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152>\uf448 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf420 {{ .StashCount }}{{ end }} ",
+          "foreground": "#F141A8",
+          "type": "git",
+          "style": "plain"
         },
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\uf270 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
           "foreground": "#FFA400",
-          "style": "plain",
-          "template": " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-          "type": "aws"
+          "type": "aws",
+          "style": "plain"
         },
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{if .Version}} \udb80\udfd7 {{.Version}} {{end}}",
           "foreground": "#FF7A14",
-          "style": "plain",
-          "template": "{{if .Version}} 󰏗 {{.Version}} {{end}}",
-          "type": "project"
+          "type": "project",
+          "style": "plain"
         },
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\udb84\udf62 {{ .Full }} ",
           "foreground": "darkGray",
-          "style": "plain",
-          "template": "󱍢 {{ .Full }} ",
-          "type": "deno"
+          "type": "deno",
+          "style": "plain"
         },
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\udb80\udf99 {{ .Full }} ",
           "foreground": "green",
-          "style": "plain",
-          "template": "󰎙 {{ .Full }} ",
-          "type": "node"
+          "type": "node",
+          "style": "plain"
         },
         {
-          "display_mode": "files",
-          "files": [
-            "package-lock.json"
-          ],
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue71e {{ .Full }} ",
           "foreground": "#C00C00",
-          "style": "plain",
-          "template": " {{ .Full }} ",
-          "type": "npm"
+          "type": "npm",
+          "style": "plain"
         },
         {
-          "display_mode": "files",
-          "files": [
-            "pnpm-lock.yaml"
-          ],
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\udb84\uddda {{ .Full }} ",
           "foreground": "#F9AD06",
-          "style": "plain",
-          "template": "󱇚 {{ .Full }} ",
-          "type": "pnpm"
+          "type": "pnpm",
+          "style": "plain"
         },
         {
-          "display_mode": "files",
-          "files": [
-            "bun.lockb"
-          ],
-          "foreground": "#CCBEA7",
-          "style": "plain",
-          "template": "  {{ .Full }} ",
-          "type": "bun",
           "properties": {
+            "cache_duration": "none",
             "fetch_version": true
-          }
+          },
+          "template": "\ue28d  {{ .Full }} ",
+          "foreground": "#CCBEA7",
+          "type": "bun",
+          "style": "plain"
         },
         {
-          "foreground": "#7FD5EA",
-          "style": "plain",
-          "template": " {{.Full}} ",
-          "type": "go"
-        },
-        {
-          "foreground": "blue",
-          "style": "plain",
-          "template": " {{.Full}} ",
-          "type": "lua"
-        },
-        {
-          "foreground": "#4063DB",
-          "style": "plain",
-          "template": " {{.Full}} ",
-          "type": "php"
-        },
-        {
-          "foreground": "#906CFF",
-          "style": "plain",
-          "template": " {{.Full}} ",
-          "type": "python"
-        },
-        {
-          "foreground": "#CF043D",
-          "style": "plain",
-          "template": "󰴭 {{.Full}} ",
-          "type": "ruby"
-        },
-        {
-          "foreground": "#99908A",
-          "style": "plain",
-          "template": " {{.Full}} ",
-          "type": "rust"
-        },
-        {
-          "foreground": "#CFC9C2",
-          "style": "plain",
-          "template": "<#CFC9C2>󰔛</> {{ .FormattedMs }} ",
-          "type": "executiontime",
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\uf1a0 {{.Full}} ",
+          "foreground": "#7FD5EA",
+          "type": "go",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue620 {{.Full}} ",
+          "foreground": "blue",
+          "type": "lua",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue608 {{.Full}} ",
+          "foreground": "#4063DB",
+          "type": "php",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue606 {{.Full}} ",
+          "foreground": "#906CFF",
+          "type": "python",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\udb83\udd2d {{.Full}} ",
+          "foreground": "#CF043D",
+          "type": "ruby",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue68b {{.Full}} ",
+          "foreground": "#99908A",
+          "type": "rust",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "style": "roundrock",
             "threshold": 0
-          }
+          },
+          "template": "<#CFC9C2>\udb81\udd1b</> {{ .FormattedMs }} ",
+          "foreground": "#CFC9C2",
+          "type": "executiontime",
+          "style": "plain"
         }
-      ]
+      ],
+      "newline": true
     },
     {
-      "alignment": "left",
-      "newline": true,
       "type": "prompt",
+      "alignment": "left",
       "segments": [
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "❯ ",
+          "type": "text",
+          "style": "plain",
           "foreground_templates": [
             "{{ if gt .Code 0 }}#F7768E{{ end }}",
             "{{ if eq .Code 0}}#9ECE6A{{ end }}"
-          ],
-          "style": "plain",
-          "template": "❯ ",
-          "type": "text"
+          ]
         }
       ],
-      "error_line": {
-        "background": "transparent",
-        "foreground": "#FFFFFF",
-        "template": "<#EB6F92,#286983> </><#286983,transparent></> "
-      },
-      "valid_line": {
-        "background": "transparent",
-        "foreground": "#FFFFFF",
-        "template": "<#E0DEF4,#286983> </><#286983,transparent></> "
-      }
+      "newline": true
     }
   ],
-  "transient_prompt": {
-    "background": "transparent",
-    "foreground": "green",
-    "template": "❯ "
-  }
+  "version": 3
 }
