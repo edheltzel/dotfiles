@@ -1,38 +1,25 @@
+# cSpell: disable
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
-# after-login-command = []
-#
-# Run Sketchybar together with AeroSpace
-# sketchybar has a built-in detection of already running process,
-# so it won't be run twice on AeroSpace restart
-# add this to after-start-command -> 'exec-and-forget sketchybar',
-after-startup-command = [
-  'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=4.0',
-]
-# Notify Sketchybar about workspace change
+after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=4.0']
 # exec-on-workspace-change = [
 #   '/bin/bash',
 #   '-c',
 #   'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+#   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=4.0',
 # ]
 start-at-login = true
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-accordion-padding = 30
-
-# Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'tiles' #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
+automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
 
-# focuses app regardless of visibility
-automatically-unhide-macos-hidden-apps = false
-
-[key-mapping]
-preset = 'qwerty'
+accordion-padding = 300
 
 [gaps]
 inner.horizontal = 20
@@ -42,7 +29,12 @@ outer.bottom = 20
 outer.top = 20
 outer.right = 20
 
+[key-mapping]
+preset = 'qwerty'
 [mode.main.binding]
+alt-ctrl-shift-f = 'fullscreen' #MEH key = Left alt-ctrl-shift
+alt-ctrl-cmd-f = 'layout floating' #LCAG key = Left alt-ctrl-cmd
+
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
@@ -62,202 +54,165 @@ alt-shift-equal = 'resize smart +50'
 alt-1 = 'workspace 1'  # monitor 1 - primary
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
 alt-0 = 'workspace 10' # monitor 2 - secondary
-alt-e = 'workspace E'  # E - Editors -> vscode/cursor
+alt-e = 'workspace E'  # E - Editors -> vscode/cursor + wezterm/kitty
 alt-d = 'workspace D'  # D - Design -> figma/indesign/illustrator/photoshop
 alt-m = 'workspace M'  # M - Microsoft -> teams/word/excel/powerpoint
 alt-n = 'workspace N'  # N - Notes -> notes/reminders/freeform
 alt-r = 'workspace R'  # R - Radio -> spotify/music/podcasts -> Reply messages
-alt-t = 'workspace T'  # T - Terminal -> wezterm/kitty
 alt-y = 'workspace Y'  # Y - Yahoo -> browsers zen/brave/safari/firefox
 
-alt-shift-1 = 'move-node-to-workspace 1'  # monitor 1 - primary
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-0 = 'move-node-to-workspace 10' # monitor 2 - secondary
-alt-shift-e = 'move-node-to-workspace E'  # E - Editor -> vscode/cursor
-alt-shift-d = 'move-node-to-workspace D'  # D - Design -> figma/indesign/illustrator/photoshop
-alt-shift-m = 'move-node-to-workspace M'  # M - Microsoft -> teams/word/excel/powerpoint
-alt-shift-n = 'move-node-to-workspace N'  # N - Notes -> notes/reminders/freeform
-alt-shift-r = 'move-node-to-workspace R'  # R - Radio -> spotify/music/podcasts -> Reply w/messages
-alt-shift-t = 'move-node-to-workspace T'  # T - Terminals -> wezterm/kitty
-alt-shift-y = 'move-node-to-workspace Y'  # Y - Yahoo -> browsers zen/brave/safari/firefox
+alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'  # monitor 1 - primary
+alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
+alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
+alt-shift-0 = 'move-node-to-workspace 10 --focus-follows-window' # monitor 2 - secondary
+alt-shift-e = 'move-node-to-workspace E --focus-follows-window'  # E - Editors -> vscode/cursor + wezterm/kitty
+alt-shift-d = 'move-node-to-workspace D --focus-follows-window'  # D - Design -> figma/indesign/illustrator/photoshop
+alt-shift-m = 'move-node-to-workspace M --focus-follows-window'  # M - Microsoft -> teams/word/excel/powerpoint
+alt-shift-n = 'move-node-to-workspace N --focus-follows-window'  # N - Notes -> notes/reminders/freeform
+alt-shift-r = 'move-node-to-workspace R --focus-follows-window'  # R - Radio -> spotify/music/podcasts -> Reply w/messages
+alt-shift-y = 'move-node-to-workspace Y --focus-follows-window'  # Y - Yahoo -> browsers zen/brave/safari/firefox
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-### Service Mode
-alt-shift-semicolon = 'mode service'
-
+# See: https://nikitabobko.github.io/AeroSpace/commands#mode
+## Service Mode
+alt-shift-enter= 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']        # reload config
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = ['layout floating tiling', 'mode main']
-# Toggle between floating and tiling layout
+b = ['balance-sizes', 'mode main'] # balance windows
 backspace = ['close-all-windows-but-current', 'mode main']
 
-# Join windows
+# See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-### Move apps to specific workspaces
-# Zen Browser
+# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 [[on-window-detected]]
-if.app-id = 'org.mozilla.com.zen.browser'
+if.app-id = 'org.mozilla.com.zen.browser'#Zen Browser
 run = "move-node-to-workspace Y"
 
-# Firefox
 [[on-window-detected]]
-if.app-id = 'org.mozilla.nightly'
+if.app-id = 'org.mozilla.nightly'#Firefox
 run = "move-node-to-workspace Y"
 
-# Brave Browser
 [[on-window-detected]]
-if.app-id = 'com.brave.Browser.beta'
+if.app-id = 'com.brave.Browser.beta'#Brave Browser
 run = "move-node-to-workspace Y"
 
-# Safari Browser
 [[on-window-detected]]
-if.app-id = 'com.apple.Safari'
+if.app-id = 'com.apple.Safari'#Safari Browser
 run = "move-node-to-workspace Y"
 
-# Figma
 [[on-window-detected]]
-if.app-id = 'com.figma.Desktop'
+if.app-id = 'com.figma.Desktop'#Figma
 run = "move-node-to-workspace D"
 
-# InDesign
 [[on-window-detected]]
-if.app-id = 'com.adobe.InDesign'
+if.app-id = 'com.adobe.InDesign'#InDesign
 run = "move-node-to-workspace D"
 
-# Illustrator
 [[on-window-detected]]
-if.app-id = 'com.adobe.illustrator'
+if.app-id = 'com.adobe.illustrator'#Illustrator
 run = "move-node-to-workspace D"
 
-# Photoshop
 [[on-window-detected]]
-if.app-id = 'com.adobe.Photoshop'
+if.app-id = 'com.adobe.Photoshop'#Photoshop
 run = "move-node-to-workspace D"
 
-# Visual Studio Code
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
+if.app-id = 'com.microsoft.VSCode'#VSCode
 run = "move-node-to-workspace E"
 
-# Zed Editor
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed'
+if.app-id = 'dev.zed.Zed'#Zed
 run = "move-node-to-workspace E"
 
-# Cursor
 [[on-window-detected]]
-if.app-id = 'com.todesktop.230313mzl4w4u92'
+if.app-id = 'com.todesktop.230313mzl4w4u92'#Cursor
 run = "move-node-to-workspace E"
 
-# Spotify
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
+if.app-id = 'com.spotify.client'#Spotify
 run = "move-node-to-workspace R"
 
-# Podcasts
 [[on-window-detected]]
-if.app-id = 'com.apple.podcasts'
+if.app-id = 'com.apple.MobileSMS'#Messages
 run = "move-node-to-workspace R"
 
-# Messages
 [[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = "move-node-to-workspace R"
+if.app-id = 'com.github.wez.wezterm'#Wezterm
+run = "move-node-to-workspace E"
 
-# Wezterm
 [[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-run = "move-node-to-workspace T"
+if.app-id = 'net.kovidgoyal.kitty'#Kitty
+run = "move-node-to-workspace E"
 
-# Kitty
 [[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty'
-run = "move-node-to-workspace T"
-
-# Microsoft Teams
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
+if.app-id = 'com.microsoft.teams2'#Teams
 run = "move-node-to-workspace M"
 
-# Microsoft PowerPoint
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Powerpoint'
+if.app-id = 'com.microsoft.Powerpoint'#PowerPoint
 run = "move-node-to-workspace M"
 
-# Microsoft Word
 [[on-window-detected]]
-if.app-id = 'comd.microsoft.Word'
+if.app-id = 'comd.microsoft.Word'#Word
 run = "move-node-to-workspace M"
 
-# Apple Notes
 [[on-window-detected]]
-if.app-id = 'com.apple.Notes'
+if.app-id = 'com.apple.Notes'#Notes
 run = "move-node-to-workspace N"
 
-# Apple Reminders
 [[on-window-detected]]
-if.app-id = 'com.apple.reminders'
+if.app-id = 'com.apple.reminders'#Reminders
 run = "move-node-to-workspace N"
 
-# Apple Freeform
 [[on-window-detected]]
-if.app-id = 'com.apple.freeform'
+if.app-id = 'com.apple.freeform'#Freeform
 run = "move-node-to-workspace N"
 
-### Always Float
-# Timemachine
-# this does not work correctly - best to quit AeroSpace when using
-# [[on-window-detected]]
-# if.app-id = 'com.apple.backup.launcher'
-# run = ['layout floating', 'move-node-to-workspace 1']
-
-# Raycast
+#See: https://nikitabobko.github.io/AeroSpace/commands#layout
+## Always Float
 [[on-window-detected]]
-if.app-id = 'com.raycast.macos'
+if.app-id = 'com.apple.finder'#Finder
 run = 'layout floating'
 
-# Karabiner Elements
 [[on-window-detected]]
-if.app-id = 'org.pqrs.Karabiner-Elements.Settings'
+if.app-id = 'com.raycast.macos'#Raycast
 run = 'layout floating'
 
-# Toggl
 [[on-window-detected]]
-if.app-id = 'com.toggl.daneel'
+if.app-id = 'org.pqrs.Karabiner-Elements.Settings'#Karabiner Elements
 run = 'layout floating'
 
-# ColorSlurp
 [[on-window-detected]]
-if.app-id = 'com.IdeaPunch.ColorSlurp'
+if.app-id = 'com.toggl.daneel'#Toggl
 run = 'layout floating'
 
-# Ice Bar
 [[on-window-detected]]
-if.app-id = 'com.jordanbaird.Ice'
+if.app-id = 'com.IdeaPunch.ColorSlurp'#ColorSlurp
 run = 'layout floating'
 
-# Shottr
 [[on-window-detected]]
-if.app-id = 'cc.ffitch.shottr'
+if.app-id = 'com.jordanbaird.Ice'#IceBar
 run = 'layout floating'
 
-# Dropbox
 [[on-window-detected]]
-if.app-id = 'com.getdropbox.dropbox'
+if.app-id = 'cc.ffitch.shottr'#Shottr
 run = 'layout floating'
 
-###--- Force these workspace to secondary monitor ---###
+[[on-window-detected]]
+if.app-id = 'com.getdropbox.dropbox'#Dropbox
+run = 'layout floating'
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
+## Force to secondary monitor
 [workspace-to-monitor-force-assignment]
 R = 'secondary' #spotify
 M = 'secondary' #microsoft teams
