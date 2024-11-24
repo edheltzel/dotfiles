@@ -26,17 +26,17 @@ local cal = sbar.add("item", {
 	padding_left = -2,
 })
 
--- german Date
+-- Date
 cal:subscribe({ "forced", "routine", "system_woke" }, function(env)
 	local weekdayNames = {
-		"So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."
+		"Sun", "Mon", "Tue", "Wed", "Th.", "Fri", "Sat"
 	}
 	local monthNames = {
-		"Jan.", "Feb.", "März", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sep.", "Okt.", "Nov.", "Dez."
+		"Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."
 	}
 
 	cal:set({
-		icon = weekdayNames[tonumber(os.date("%w")) + 1] ..
+		icon = weekdayNames[tonumber(os.date("%w ")) + 1] ..
 			os.date("%d") .. " " .. monthNames[tonumber(os.date("%m"))],
 		label = "｜" .. os.date("%H:%M:%S")
 	})
@@ -45,8 +45,3 @@ end)
 cal:subscribe("mouse.clicked", function(env)
 	sbar.exec("open -a 'Calendar'")
 end)
-
--- english date
--- cal:subscribe({ "forced", "routine", "system_woke" }, function(env)
---   cal:set({ icon = os.date("%a. %d %b."), label = os.date("%H:%M") })
--- end)
