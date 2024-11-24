@@ -1,4 +1,5 @@
 ###############################################################
+# cspell: disable
 # ~/.Brewfile - Software Installs for MacOS                   #
 #                                                             #
 # List of packages to be installed / updated via Homebrew     #
@@ -234,10 +235,10 @@ cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
 cask 'typinator'                 # Text expander - macOS only
 cask 'keka'                      # File archiver and extractor
 
-# Keyboard Hacks
+# Keyboard/Mouse Hacks
 cask 'via'                       # Keyboard configuration desktop client
 cask 'karabiner-elements'        # Keyboard customization tool
-
+cask mac-mouse-fix               # Mouse fix for MacBooks
 # Menu Bar Hacks
 brew 'sketchybar'                # status bar replacement for MacOS
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently

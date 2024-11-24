@@ -694,5 +694,9 @@
 		"command": "workbench.action.openEditorAtIndex9",
 		"key": "cmd-9",
 		"title": "Open Editor At Index 9"
-	  },
+		},
+		{
+			"key": "ctrl+cmd+p",
+			"command": "workbench.action.toggleMaximizedPanel"
+		},
 ]
