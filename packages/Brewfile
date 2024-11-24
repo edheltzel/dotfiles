@@ -235,10 +235,10 @@ cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
 cask 'typinator'                 # Text expander - macOS only
 cask 'keka'                      # File archiver and extractor
 
-# Keyboard/Mouse Hacks
+# Keyboard+Mouse Hacks
 cask 'via'                       # Keyboard configuration desktop client
 cask 'karabiner-elements'        # Keyboard customization tool
-cask mac-mouse-fix               # Mouse fix for MacBooks
+
 # Menu Bar Hacks
 brew 'sketchybar'                # status bar replacement for MacOS
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
@@ -250,9 +250,9 @@ brew 'border'                    # window borders for MacOS - FelixKratz/formula
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
-cask 'brave-browser@nightly'     # Brave browser - Primary
+cask 'brave-browser@nightly'     # Brave browser - Secondary
 cask 'firefox@nightly'           # Firefox Nightly - Tertiary
-cask 'zen-browser'               # Zen Browser - Secondary
+cask 'zen-browser'               # Zen Browser - Primary
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
