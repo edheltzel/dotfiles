@@ -197,62 +197,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                      "description": "Mouse 4 => Back",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "pointing_button": "button4"
-                          },
-                          "to": [
-                            {
-                              "repeat": false,
-                              "key_code": "left_arrow",
-                              "modifiers": [
-                                "left_command"
-                              ]
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "frontmost_application_if",
-                              "bundle_identifiers": [
-                                "^com\\.apple\\.Safari$"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "description": "Mouse 5 => Forward",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "pointing_button": "button5"
-                          },
-                          "to": [
-                            {
-                              "repeat": false,
-                              "key_code": "right_arrow",
-                              "modifiers": [
-                                "left_command"
-                              ]
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "frontmost_application_if",
-                              "bundle_identifiers": [
-                                "^com\\.apple\\.Safari$"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
                     }
                 ]
             },
@@ -264,14 +208,6 @@
                         "vendor_id": 13364
                     },
                     "manipulate_caps_lock_led": false
-                },
-                {
-                    "identifiers": {
-                        "is_pointing_device": true,
-                        "product_id": 64160,
-                        "vendor_id": 9639
-                    },
-                    "ignore": false
                 }
             ],
             "fn_function_keys": [
