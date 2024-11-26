@@ -55,11 +55,11 @@ alt-1 = 'workspace 1'  # monitor 1 - primary
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-0 = 'workspace 10' # monitor 2 - secondary
-alt-e = 'workspace E'  # E - Editors -> vscode/cursor + wezterm/kitty
+alt-e = 'workspace E'  # E - Editors -> vscode/cursor + wezterm/kittyr
 alt-d = 'workspace D'  # D - Design -> figma/indesign/illustrator/photoshop
-alt-m = 'workspace M'  # M - Microsoft -> teams/word/excel/powerpoint
+alt-m = 'workspace M'  # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
 alt-n = 'workspace N'  # N - Notes -> notes/reminders/freeform
-alt-r = 'workspace R'  # R - Radio -> spotify/music/podcasts -> Reply messages
+alt-r = 'workspace R'  # R - Radio -> spotify/music/podcasts
 alt-y = 'workspace Y'  # Y - Yahoo -> browsers zen/brave/safari/firefox
 
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'  # monitor 1 - primary
@@ -68,9 +68,9 @@ alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-0 = 'move-node-to-workspace 10 --focus-follows-window' # monitor 2 - secondary
 alt-shift-e = 'move-node-to-workspace E --focus-follows-window'  # E - Editors -> vscode/cursor + wezterm/kitty
 alt-shift-d = 'move-node-to-workspace D --focus-follows-window'  # D - Design -> figma/indesign/illustrator/photoshop
-alt-shift-m = 'move-node-to-workspace M --focus-follows-window'  # M - Microsoft -> teams/word/excel/powerpoint
+alt-shift-m = 'move-node-to-workspace M --focus-follows-window'  # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
 alt-shift-n = 'move-node-to-workspace N --focus-follows-window'  # N - Notes -> notes/reminders/freeform
-alt-shift-r = 'move-node-to-workspace R --focus-follows-window'  # R - Radio -> spotify/music/podcasts -> Reply w/messages
+alt-shift-r = 'move-node-to-workspace R --focus-follows-window'  # R - Radio -> spotify/music/podcasts
 alt-shift-y = 'move-node-to-workspace Y --focus-follows-window'  # Y - Yahoo -> browsers zen/brave/safari/firefox
 
 alt-tab = 'workspace-back-and-forth'
@@ -142,16 +142,20 @@ if.app-id = 'com.spotify.client'#Spotify
 run = "move-node-to-workspace R"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'#Messages
-run = "move-node-to-workspace R"
-
-[[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'#Wezterm
 run = "move-node-to-workspace E"
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'#Kitty
 run = "move-node-to-workspace E"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'#Messages
+run = "move-node-to-workspace M"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'#Mail
+run = "move-node-to-workspace M"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'#Teams
@@ -213,6 +217,6 @@ run = 'layout floating'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
 ## Force to secondary monitor
-[workspace-to-monitor-force-assignment]
-R = 'secondary' #spotify
-M = 'secondary' #microsoft teams
+# [workspace-to-monitor-force-assignment]
+# R = 'secondary' #Spotify
+# M = 'secondary' #Messages
