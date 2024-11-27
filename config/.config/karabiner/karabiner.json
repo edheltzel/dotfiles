@@ -188,6 +188,15 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "option + m = Apple Mail",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Mail'" }],
+                                "type": "basic"
+                            },
+                            {
                                 "description": "command + t = Kitty Terminal",
                                 "from": {
                                     "key_code": "t",
@@ -199,60 +208,52 @@
                         ]
                     },
                     {
-                      "description": "Mouse 4 => Back",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "pointing_button": "button4"
-                          },
-                          "to": [
+                        "description": "Mouse 4 => Back",
+                        "manipulators": [
                             {
-                              "repeat": false,
-                              "key_code": "left_arrow",
-                              "modifiers": [
-                                "left_command"
-                              ]
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Safari$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "pointing_button": "button4" },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command"],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
                             }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "frontmost_application_if",
-                              "bundle_identifiers": [
-                                "^com\\.apple\\.Safari$"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
+                        ]
                     },
                     {
-                      "description": "Mouse 5 => Forward",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "pointing_button": "button5"
-                          },
-                          "to": [
+                        "description": "Mouse 5 => Forward",
+                        "manipulators": [
                             {
-                              "repeat": false,
-                              "key_code": "right_arrow",
-                              "modifiers": [
-                                "left_command"
-                              ]
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Safari$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "pointing_button": "button5" },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command"],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
                             }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "frontmost_application_if",
-                              "bundle_identifiers": [
-                                "^com\\.apple\\.Safari$"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
+                        ]
                     }
                 ]
             },
