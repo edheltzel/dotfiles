@@ -22,9 +22,9 @@ default-root-container-layout = 'accordion' #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
+automatically-unhide-macos-hidden-apps = false                  #focuses app regardless of visibility
 
-accordion-padding = 300
+accordion-padding = 180
 
 [gaps]
 inner.horizontal = 20
@@ -61,29 +61,32 @@ alt-0 = 'workspace 0'
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
-alt-e = 'workspace E'  # E - Editors -> vscode/cursor + wezterm/kitty
-alt-d = 'workspace D'  # D - Design -> figma/indesign/illustrator/photoshop
-alt-m = 'workspace M'  # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
-alt-n = 'workspace N'  # N - Notes -> notes/reminders/freeform
-alt-r = 'workspace R'  # R - Radio -> spotify/music/podcasts
-alt-y = 'workspace Y'  # Y - Yahoo -> browsers zen/brave/safari/firefox
+alt-e = 'workspace E' # E - Editors -> vscode/cursor + wezterm/kitty
+alt-d = 'workspace D' # D - Design -> figma/indesign/illustrator/photoshop
+alt-m = 'workspace M' # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
+alt-n = 'workspace N' # N - Notes -> notes/reminders/freeform
+alt-r = 'workspace R' # R - Radio -> spotify/music/podcasts
+alt-y = 'workspace Y' # Y - Yahoo -> browsers zen/brave/safari/firefox
 
 alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
 alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-shift-e = 'move-node-to-workspace E --focus-follows-window'  # E - Editors -> vscode/cursor + wezterm/kitty
-alt-shift-d = 'move-node-to-workspace D --focus-follows-window'  # D - Design -> figma/indesign/illustrator/photoshop
-alt-shift-m = 'move-node-to-workspace M --focus-follows-window'  # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
-alt-shift-n = 'move-node-to-workspace N --focus-follows-window'  # N - Notes -> notes/reminders/freeform
-alt-shift-r = 'move-node-to-workspace R --focus-follows-window'  # R - Radio -> spotify/music/podcasts
-alt-shift-y = 'move-node-to-workspace Y --focus-follows-window'  # Y - Yahoo -> browsers zen/brave/safari/firefox
+alt-shift-e = 'move-node-to-workspace E --focus-follows-window' # E - Editors -> vscode/cursor + wezterm/kitty
+alt-shift-d = 'move-node-to-workspace D --focus-follows-window' # D - Design -> figma/indesign/illustrator/photoshop
+alt-shift-m = 'move-node-to-workspace M --focus-follows-window' # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
+alt-shift-n = 'move-node-to-workspace N --focus-follows-window' # N - Notes -> notes/reminders/freeform
+alt-shift-r = 'move-node-to-workspace R --focus-follows-window' # R - Radio -> spotify/music/podcasts
+alt-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y - Yahoo -> browsers zen/brave/safari/firefox
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 ## Service Mode
-alt-shift-enter = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_enter_service_mode']
+alt-shift-enter = [
+  'mode service',
+  'exec-and-forget sketchybar --trigger aerospace_enter_service_mode',
+]
 [mode.service.binding]
 esc = ['reload-config', 'mode main']                       # reload config
 r = ['flatten-workspace-tree', 'mode main']                # reset layout
@@ -133,7 +136,7 @@ if.app-id = 'com.microsoft.VSCode' #VSCode
 run = "move-node-to-workspace E"
 
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed' #Zed
+if.app-id = 'dev.zed.Zed'        #Zed
 run = "move-node-to-workspace E"
 
 [[on-window-detected]]
