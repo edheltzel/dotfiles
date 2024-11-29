@@ -12,14 +12,14 @@ return {
 
     bar = {
         bg = 0x00000000,
-        border = 0xff2c2e34
+        border = 0x00000000
     },
     popup = {
-        bg = 0xc02c2e34,
-        border = 0xff7f8490
+        bg = 0xff21222c,
+        border = 0x709071F4
     },
-    bg1 = 0xff363944,
-    bg2 = 0xff414550,
+    bg1 = 0xff323449,
+    bg2 = 0xff323449,
 
     rainbow = {0xffff007c, 0xffc53b53, 0xffff757f, 0xff41a6b5, 0xff4fd6be, 0xffc3e88d, 0xffffc777, 0xff9d7cd8,
                0xffff9e64, 0xffbb9af7, 0xff7dcfff, 0xff7aa2f7},

@@ -18,7 +18,7 @@ if status is-interactive
     abbr --add local '~/.local/'
     abbr --add lg lazygit
     abbr --add dls '~/Downloads/'
-    abbr --add eva 'eval ssh-agent; and ssh-add --apple-use-keychain'
+    abbr --add eva 'eval ssh-agent -s; and ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
     abbr --add gems 'gem list'
     abbr --add gg 'go get GITHUB_URL'
     abbr --add ghw 'gh repo view --web'
