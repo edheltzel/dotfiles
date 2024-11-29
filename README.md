@@ -2,6 +2,8 @@
 
 ### My setup for 🐠 Fish shell on  macOS - `v3`
 
+![image](./local/.local/__repoImages/workspace-setup.png)
+
 Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment. Again, this is my personal setup and **changes often**, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first. But get inspired, take what you want, and leave the rest to make it your own.
 
 <details>
@@ -89,7 +91,6 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 1. Installing Xcode Command Line Tools
    - `sudo softwardupdate -i -a && xcode-select --install` This will install `git` and `make` if not already installed.
 2. Generate a new SSH key and add to GitHub
-
    - [Generate a new ssh keys][GENSSHKEY]
    - `eval "$(ssh-agent -s)" && ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
@@ -293,7 +294,7 @@ topgrade --only cargo
   In the even when restarting macOS, the SSH agent will not be running, even though it is configured to run on login. A result of this is that Git will keep asking for your SSH Passphrase, to resolve this you will need to execute the following:
 
 ```shell
-eval ssh-agent;
+eval ssh-agent -s;
 and ssh-add --apple-use-keychain
 ```
 
