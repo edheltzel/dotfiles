@@ -48,7 +48,7 @@ local volume_bracket = sbar.add("bracket", "widgets.volume.bracket", {volume_ico
         border_width = 1
     },
     popup = {
-        align = "center"
+        align = "right"
     }
 })
 
@@ -181,4 +181,3 @@ volume_icon:subscribe("mouse.scrolled", volume_scroll)
 volume_percent:subscribe("mouse.clicked", volume_toggle_details)
 volume_percent:subscribe("mouse.exited.global", volume_collapse_details)
 volume_percent:subscribe("mouse.scrolled", volume_scroll)
-

@@ -24,7 +24,7 @@ local media_cover = sbar.add("item", {
     drawing = false,
     updates = true,
     popup = {
-        align = "center",
+        align = "right",
         horizontal = true
     }
 })
