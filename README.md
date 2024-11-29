@@ -141,7 +141,7 @@ There are two options for managing packages with GNU Stow:
 2. Use the Makefile: `make stow pkg=nvim` or `make unstow pkg=nvim`
    - The `pkg=` variable must be specified.
 
-## Stow Packages
+## Stow Packages - dots git zsh fish nvim config vs-cursor vs-code local
 
 - dots (dots/)
   - misc dotfiles that are stored in the $HOME directory
@@ -152,9 +152,13 @@ There are two options for managing packages with GNU Stow:
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
-  - When I need Vim, I use [LazyVim](lazyVim) - lightly customized.
+  - When I need Vim, I use [LazyVim](lazyVim) - lightly customized. (Secondary Editor)
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
+- vs-cursor(vs-cursor/)
+  - Cursor configuration, ie: keybindings, settings, and custom stuff. (checking out the hype)
+- vs-code(vs-code/)
+  - VSCode configuration, ie: keybindings, settings, and custom stuff.(Primary Editor)
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
 
