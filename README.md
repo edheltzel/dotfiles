@@ -141,7 +141,7 @@ There are two options for managing packages with GNU Stow:
 2. Use the Makefile: `make stow pkg=nvim` or `make unstow pkg=nvim`
    - The `pkg=` variable must be specified.
 
-## Stow Packages - dots git zsh fish nvim config vs-cursor vs-code local
+## Stow Packages
 
 - dots (dots/)
   - misc dotfiles that are stored in the $HOME directory
@@ -183,15 +183,16 @@ Any of the scripts can be run individually at any time to update/reset as needed
 <h2 id="macos-mods">MacOS Mods <a href="#to-the-top">↑</a></h2>
 
 >[!NOTE]
-> For Aerospace and Sketchybar, I'm constantly changing my config to fit my needs.
+> For Aerospace, Sketchybar, & Karabiner Elements, I'm constantly changing my config to fit my needs and preferences.
 
 <h4 id="window-manager">Aerospace Window Manager <a href="#to-the-top">↑</a></h4>
 <h4 id="status-bar">Sketchybar <a href="#to-the-top">↑</a></h4>
+Sketchybar is at the bottom of my screen. I use this just to keep track of my workspaces and what apps are open in each workspace. I also use Ice.app to change the appearance of the navtive macOS menu bar.
+
 <h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
 
->[!NOTE]
-> This is another constantly changing config. I use QMK/VIA along with Raycast to launch apps but chord keys using Karabiner Elements, ie: `hyper + cmd + d` launches my Dotfiles repo in VSCode.
-> This could definitely be improved and simplified by using only Karabiner Elements.
+I use QMK/VIA along with Raycast to launch apps but chord keys using Karabiner Elements, ie: `hyper + cmd + d` launches my Dotfiles repo in VSCode. This could definitely be improved and simplified by using only Karabiner Elements.
+
 <h2 id="troubleshooting">Troubleshooting <a href="#to-the-top">↑</a></h2>
 <h4 id="troubleshoot-dotfiles">Dotfiles<a href="#to-the-top">↑</a></h4>
 <details>
