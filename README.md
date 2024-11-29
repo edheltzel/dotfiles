@@ -4,7 +4,12 @@
 
 ![image](./local/.local/__repoImages/workspace-setup.png)
 
-Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment. Again, this is my personal setup and **changes often**, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first. But get inspired, take what you want, and leave the rest to make it your own.
+Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment.
+
+> [!WARNING]
+Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
+
+But get **inspired**, take what you want, and leave the rest to make it your own.
 
 <details>
   <summary>Older Versions</summary>
@@ -147,9 +152,13 @@ There are two options for managing packages with GNU Stow:
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
-  - When I need Vim, I use [LazyVim](lazyVim) - lightly customized.
+  - When I need Vim, I use [LazyVim](lazyVim) - lightly customized. (Secondary Editor)
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
+- vs-cursor(vs-cursor/)
+  - Cursor configuration, ie: keybindings, settings, and custom stuff. (checking out the hype)
+- vs-code(vs-code/)
+  - VSCode configuration, ie: keybindings, settings, and custom stuff.(Primary Editor)
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
 
@@ -172,9 +181,17 @@ Any of the scripts can be run individually at any time to update/reset as needed
   - `functions.sh` - Contains helper functions for for the scripts
 
 <h2 id="macos-mods">MacOS Mods <a href="#to-the-top">↑</a></h2>
+
+>[!NOTE]
+> For Aerospace, Sketchybar, & Karabiner Elements, I'm constantly changing my config to fit my needs and preferences.
+
 <h4 id="window-manager">Aerospace Window Manager <a href="#to-the-top">↑</a></h4>
 <h4 id="status-bar">Sketchybar <a href="#to-the-top">↑</a></h4>
+Sketchybar is at the bottom of my screen. I use this just to keep track of my workspaces and what apps are open in each workspace. I also use Ice.app to change the appearance of the navtive macOS menu bar.
+
 <h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
+
+I use QMK/VIA along with Raycast to launch apps but chord keys using Karabiner Elements, ie: `hyper + cmd + d` launches my Dotfiles repo in VSCode. This could definitely be improved and simplified by using only Karabiner Elements.
 
 <h2 id="troubleshooting">Troubleshooting <a href="#to-the-top">↑</a></h2>
 <h4 id="troubleshoot-dotfiles">Dotfiles<a href="#to-the-top">↑</a></h4>
