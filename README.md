@@ -187,7 +187,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
 
 <h4 id="window-manager">Aerospace Window Manager <a href="#to-the-top">↑</a></h4>
 <h4 id="status-bar">Sketchybar <a href="#to-the-top">↑</a></h4>
-Sketchybar is at the bottom of my screen. I use this just to keep track of my workspaces and what apps are open in each workspace. I also use Ice.app to change the appearance of the navtive macOS menu bar.
+Sketchybar is at the bottom of my screen. I use this just to keep track of my workspaces and what apps are open in each workspace. I also use Ice.app to change the appearance of the native macOS menu bar.
 
 <h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
 
