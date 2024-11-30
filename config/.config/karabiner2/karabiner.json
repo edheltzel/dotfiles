@@ -8,37 +8,84 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Hyper Key (⌃⌥⇧⌘)",
+            "description": "Hyper Navigation",
             "manipulators": [
               {
-                "description": "Caps Lock -> Hyper Key",
+                "description": "h = left",
                 "from": {
-                  "key_code": "caps_lock",
+                  "key_code": "h",
                   "modifiers": {
-                    "optional": [
-                      "any"
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
                     ]
                   }
                 },
                 "to": [
                   {
-                    "set_variable": {
-                      "name": "hyper",
-                      "value": 1
-                    }
+                    "key_code": "left_arrow"
                   }
                 ],
-                "to_after_key_up": [
+                "type": "basic"
+              },
+              {
+                "description": "k = up",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
                   {
-                    "set_variable": {
-                      "name": "hyper",
-                      "value": 0
-                    }
+                    "key_code": "up_arrow"
                   }
                 ],
-                "to_if_alone": [
+                "type": "basic"
+              },
+              {
+                "description": "j = down",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "down_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "l = down",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow"
                   }
                 ],
                 "type": "basic"

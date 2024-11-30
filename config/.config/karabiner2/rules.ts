@@ -3,89 +3,142 @@ import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 
 const rules: KarabinerRules[] = [
-  // Define the Hyper key itself
+  // Hyper key it set with QMK/VIA
+  // caps_lock = hyper & enter = hyper when held enter when tapped
   {
-    description: "Hyper Key (⌃⌥⇧⌘)",
+    description: "Hyper Navigation",
     manipulators: [
       {
-        description: "Caps Lock -> Hyper Key",
+        description: "h = left",
         from: {
-          key_code: "caps_lock",
+          key_code: "h",
           modifiers: {
-            optional: ["any"],
+            mandatory: [
+              "right_command",
+              "right_control",
+              "right_shift",
+              "right_option",
+            ],
           },
         },
-        to: [
-          {
-            set_variable: {
-              name: "hyper",
-              value: 1,
-            },
-          },
-        ],
-        to_after_key_up: [
-          {
-            set_variable: {
-              name: "hyper",
-              value: 0,
-            },
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "escape",
-          },
-        ],
+        to: [{ key_code: "left_arrow" }],
         type: "basic",
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
+      {
+        description: "k = up",
+        from: {
+          key_code: "k",
+          modifiers: {
+            mandatory: [
+              "right_command",
+              "right_control",
+              "right_shift",
+              "right_option",
+            ],
+          },
+        },
+        to: [{ key_code: "up_arrow" }],
+        type: "basic",
+      },
+      {
+        description: "j = down",
+        from: {
+          key_code: "j",
+          modifiers: {
+            mandatory: [
+              "right_command",
+              "right_control",
+              "right_shift",
+              "right_option",
+            ],
+          },
+        },
+        to: [{ key_code: "down_arrow" }],
+        type: "basic",
+      },
+      {
+        description: "l = right",
+        from: {
+          key_code: "j",
+          modifiers: {
+            mandatory: [
+              "right_command",
+              "right_control",
+              "right_shift",
+              "right_option",
+            ],
+          },
+        },
+        to: [{ key_code: "right_arrow" }],
+        type: "basic",
+      },
+      {
+        description: "u = page_up",
+        from: {
+          key_code: "u",
+          modifiers: {
+            mandatory: [
+              "right_command",
+              "right_control",
+              "right_shift",
+              "right_option",
+            ],
+          },
+        },
+        to: [{ key_code: "page_up" }],
+        type: "basic",
+      },
+      {
+        description: "i = page_down",
+        from: {
+          key_code: "i",
+          modifiers: {
+            mandatory: [
+              "right_command",
+              "right_control",
+              "right_shift",
+              "right_option",
+            ],
+          },
+        },
+        to: [{ key_code: "page_down" }],
+        type: "basic",
+      },
     ],
   },
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
-    // b = "B"rowse
-    b: {
-      t: open("https://twitter.com"),
-      // Quarterly "P"lan
-      p: open("https://mxstbr.com/cal"),
-      y: open("https://news.ycombinator.com"),
-      f: open("https://facebook.com"),
-      r: open("https://reddit.com"),
-      h: open("https://hashnode.com/draft"),
+    // Open Scripts/Links -> cording hyper + alt + key
+    left_alt:{
+      c: open("https://app.clickup.com/2308619/home"),
+      d: open("raycast://script-commands/edit-dotfiles"), // Macro 2
+      t: open("raycast://script-commands/run-topgrade"), // Macro 1
+      m: app("Mail"),
+    },
+    // Open Apps -> cording hyper + cmd + key
+    left_command: {
+      d: app("Adobe InDesign 2025"),
+      f: app("Invoice Ninja"),
+      i: app("Adobe Illustrator"),
+      m: app("Microsoft Teams"),
+      r: app("Spotify"),
+      v: app("Via"),
+      y: app("Zen Browser"),
+      z: app("Zed"),
     },
     // o = "Open" applications
     o: {
+      d: app("Discord"),
       1: app("1Password"),
       g: app("Google Chrome"),
       c: app("Notion Calendar"),
-      v: app("Zed"),
-      d: app("Discord"),
       s: app("Slack"),
       e: app("Superhuman"),
       n: app("Notion"),
       t: app("Terminal"),
-      // Open todo list managed via *H*ypersonic
       h: open(
         "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
       ),
       z: app("zoom.us"),
-      // "M"arkdown (Reflect.app)
       m: app("Reflect"),
       r: app("Reflect"),
       f: app("Finder"),
