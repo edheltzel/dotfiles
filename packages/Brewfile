@@ -191,13 +191,13 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 #############################################################
 
 # Creativity
-# cask 'adobe-creative-cloud' # Adobe Creative Cloud
-cask 'figma'                # Design tool
-cask 'nucleo'               # Icon manager
-cask 'principle'            # Prototyping tool
+cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity-designer'    # Illustrator replacement
 cask 'affinity-publisher'   # InDesign replacement
 cask 'affinity-photo'       # Photoshop replacement
+cask 'figma'                # Design tool
+cask 'nucleo'               # Icon manager
+cask 'principle'            # Prototyping tool
 
 # Media
 cask 'boom'                 # Audio enhancer
@@ -211,6 +211,7 @@ cask 'shottr'               # Screenshot and recorder app
 
 # Communication and Chat
 cask 'discord'              # Chat app
+cask 'chatgpt'              # ChatGPT app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
@@ -237,7 +238,7 @@ cask 'via'                       # Keyboard configuration desktop client
 cask 'karabiner-elements'        # Keyboard customization tool
 
 # Menu Bar Hacks
-brew 'sketchybar'                # status bar replacement for MacOS
+brew 'sketchybar'                # status bar replacement for MacOS - paired with Aerospace
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
