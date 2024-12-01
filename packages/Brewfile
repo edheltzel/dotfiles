@@ -27,7 +27,6 @@ tap 'kyoh86/tap' 								# for 'sd' - RegEx find and replace (better sed) - Rust
 tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
 tap 'sass/sass' 								# Sass
 tap 'teamookla/speedtest'   		# Command line speed test utility
-tap 'localsend/localsend' 			# LocalSend - AirDrop for everything else
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
 tap 'FelixKratz/formulae'       # JankyBorders/Sketchybar - MacOS utilites
 
@@ -47,7 +46,7 @@ brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 brew 'git'          # Version control
 brew 'neovim'       # Text editor
 brew 'helix'        # Text editor
-brew 'stow'         # Dotfile manager
+brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
 brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 
@@ -155,8 +154,6 @@ brew 'gh'                 # Interact with GitHub PRs, issues, repos
 brew 'git-delta'          # Git diff viewer - Rust
 brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-lfs'            # Git Large File Storage
-brew 'gitkraken'          # Git client GUI
-brew 'gitkraken-cli'      # GitKraken CLI
 brew 'miniserve'          # Static file server
 brew 'mkcert'             # Local HTTPS development
 brew 'scc'                # Source code counter - Go
@@ -194,13 +191,13 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 #############################################################
 
 # Creativity
-# cask 'adobe-creative-cloud' # Adobe Creative Cloud
-cask 'figma'                # Design tool
-cask 'nucleo'               # Icon manager
-cask 'principle'            # Prototyping tool
+cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity-designer'    # Illustrator replacement
 cask 'affinity-publisher'   # InDesign replacement
 cask 'affinity-photo'       # Photoshop replacement
+cask 'figma'                # Design tool
+cask 'nucleo'               # Icon manager
+cask 'principle'            # Prototyping tool
 
 # Media
 cask 'boom'                 # Audio enhancer
@@ -214,6 +211,7 @@ cask 'shottr'               # Screenshot and recorder app
 
 # Communication and Chat
 cask 'discord'              # Chat app
+cask 'chatgpt'              # ChatGPT app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
@@ -240,7 +238,7 @@ cask 'via'                       # Keyboard configuration desktop client
 cask 'karabiner-elements'        # Keyboard customization tool
 
 # Menu Bar Hacks
-brew 'sketchybar'                # status bar replacement for MacOS
+brew 'sketchybar'                # status bar replacement for MacOS - paired with Aerospace
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling

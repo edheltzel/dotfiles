@@ -197,13 +197,13 @@
 	},
 	{
 		"command": "workbench.action.nextEditor",
-		"key": "shift-l",
+		"key": "shift-cmd-l",
 		"name": "Go to NEXT Tab",
 		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
 	},
 	{
 		"command": "workbench.action.nextEditor",
-		"key": "shift-h",
+		"key": "shift-cmd-h",
 		"name": "Go to PREVIOUS Tab",
 		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
 	},

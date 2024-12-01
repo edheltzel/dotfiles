@@ -23,73 +23,27 @@ export function createHyperSubLayer(
   commands: HyperKeySublayer,
   allSubLayerVariables: string[]
 ): Manipulator[] {
-  const subLayerVariableName = generateSubLayerVariableName(sublayer_key);
-
   return [
-    // When Hyper + sublayer_key is pressed, set the variable to 1; on key_up, set it to 0 again
-    {
-      description: `Toggle Hyper sublayer ${sublayer_key}`,
-      type: "basic",
-      from: {
-        key_code: sublayer_key,
-        modifiers: {
-          optional: ["any"],
-        },
-      },
-      to_after_key_up: [
-        {
-          set_variable: {
-            name: subLayerVariableName,
-            // The default value of a variable is 0: https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/conditions/variable/
-            // That means by using 0 and 1 we can filter for "0" in the conditions below and it'll work on startup
-            value: 0,
-          },
-        },
-      ],
-      to: [
-        {
-          set_variable: {
-            name: subLayerVariableName,
-            value: 1,
-          },
-        },
-      ],
-      // This enables us to press other sublayer keys in the current sublayer
-      // (e.g. Hyper + O > M even though Hyper + M is also a sublayer)
-      // basically, only trigger a sublayer if no other sublayer is active
-      conditions: [
-        ...allSubLayerVariables
-          .filter(
-            (subLayerVariable) => subLayerVariable !== subLayerVariableName
-          )
-          .map((subLayerVariable) => ({
-            type: "variable_if" as const,
-            name: subLayerVariable,
-            value: 0,
-          })),
-        {
-          type: "variable_if",
-          name: "hyper",
-          value: 1,
-        },
-      ],
-    },
     // Define the individual commands that are meant to trigger in the sublayer
     ...(Object.keys(commands) as (keyof typeof commands)[]).map(
       (command_key): Manipulator => ({
         ...commands[command_key],
-        type: "basic" as const,
+        type: "basic",
         from: {
           key_code: command_key,
           modifiers: {
-            optional: ["any"],
+            mandatory: [
+              "right_control",
+              "right_command",
+              "right_option",
+              "right_shift"
+            ],
           },
         },
-        // Only trigger this command if the variable is 1 (i.e., if Hyper + sublayer is held)
         conditions: [
           {
             type: "variable_if",
-            name: subLayerVariableName,
+            name: generateSubLayerVariableName(sublayer_key),
             value: 1,
           },
         ],
@@ -106,10 +60,6 @@ export function createHyperSubLayer(
 export function createHyperSubLayers(subLayers: {
   [key_code in KeyCode]?: HyperKeySublayer | LayerCommand;
 }): KarabinerRules[] {
-  const allSubLayerVariables = (
-    Object.keys(subLayers) as (keyof typeof subLayers)[]
-  ).map((sublayer_key) => generateSubLayerVariableName(sublayer_key));
-
   return Object.entries(subLayers).map(([key, value]) =>
     "to" in value
       ? {
@@ -117,35 +67,58 @@ export function createHyperSubLayers(subLayers: {
           manipulators: [
             {
               ...value,
-              type: "basic" as const,
+              type: "basic",
               from: {
                 key_code: key as KeyCode,
                 modifiers: {
-                  optional: ["any"],
+                  mandatory: [
+                    "right_control",
+                    "right_command",
+                    "right_option",
+                    "right_shift"
+                  ],
                 },
               },
-              conditions: [
-                {
-                  type: "variable_if",
-                  name: "hyper",
-                  value: 1,
-                },
-                ...allSubLayerVariables.map((subLayerVariable) => ({
-                  type: "variable_if" as const,
-                  name: subLayerVariable,
-                  value: 0,
-                })),
-              ],
             },
           ],
         }
       : {
           description: `Hyper Key sublayer "${key}"`,
-          manipulators: createHyperSubLayer(
-            key as KeyCode,
-            value,
-            allSubLayerVariables
-          ),
+          manipulators: [
+            // Add the sublayer activator
+            {
+              type: "basic",
+              from: {
+                key_code: key as KeyCode,
+                modifiers: {
+                  mandatory: [
+                    "right_control",
+                    "right_command",
+                    "right_option",
+                    "right_shift"
+                  ],
+                },
+              },
+              to: [
+                {
+                  set_variable: {
+                    name: generateSubLayerVariableName(key as KeyCode),
+                    value: 1,
+                  },
+                },
+              ],
+              to_after_key_up: [
+                {
+                  set_variable: {
+                    name: generateSubLayerVariableName(key as KeyCode),
+                    value: 0,
+                  },
+                },
+              ],
+            },
+            // Add the sublayer commands
+            ...createHyperSubLayer(key as KeyCode, value, []),
+          ],
         }
   );
 }
@@ -188,20 +161,6 @@ export function shell(
       shell_command: command.trim(),
     })),
     description: commands.join(" && "),
-  };
-}
-
-/**
- * Shortcut for managing window sizing with Rectangle
- */
-export function rectangle(name: string): LayerCommand {
-  return {
-    to: [
-      {
-        shell_command: `open -g rectangle://execute-action?name=${name}`,
-      },
-    ],
-    description: `Window: ${name}`,
   };
 }
 

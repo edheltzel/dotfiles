@@ -18,10 +18,45 @@ export interface Parameters {
   "basic.simultaneous_threshold_milliseconds"?: number;
 }
 
+// Add new Mouse Navigation types and utilities
+export type MouseNavigationMapping = {
+  button: string;
+  key_code: KeyCode;
+  description: string;
+};
+
+export function createMouseNavigationRules(
+  mappings: MouseNavigationMapping[],
+  appBundleId: string
+): KarabinerRules[] {
+  return mappings.map(mapping => ({
+    description: mapping.description,
+    manipulators: [
+      {
+        conditions: [
+          {
+            bundle_identifiers: [appBundleId],
+            type: "frontmost_application_if"
+          }
+        ],
+        from: { pointing_button: mapping.button },
+        to: [
+          {
+            key_code: mapping.key_code,
+            modifiers: ["left_command"],
+            repeat: false
+          }
+        ],
+        type: "basic"
+      }
+    ]
+  }));
+}
+
 type Conditions =
   | FrontMostApplicationCondition
   | DeviceCondition
-  | KeybaordTypeCondition
+  | KeyboardTypeCondition
   | InputSourceCondition
   | VaribaleCondition
   | EventChangedCondition;
@@ -53,7 +88,7 @@ interface Identifiers {
   is_built_in_keyboard?: boolean;
 }
 
-type KeybaordTypeCondition = {
+type KeyboardTypeCondition = {
   type: "keyboard_type_if" | "keyboard_type_unless";
   keyboard_types: string[];
   description?: string;
@@ -116,6 +151,7 @@ type ModifiersKeys =
 
 export interface From {
   key_code?: KeyCode;
+  pointing_button?: string;  // Added this for mouse button support
   simultaneous?: SimultaneousFrom[];
   simultaneous_options?: SimultaneousOptions;
   modifiers?: Modifiers;
@@ -136,6 +172,7 @@ export interface To {
   };
   mouse_key?: MouseKey;
   pointing_button?: string;
+  repeat?: boolean;  // Added this for repeat support
   /**
    * Power Management plugin
    * @example: sleep system
@@ -154,6 +191,38 @@ export interface MouseKey {
 
 export interface SoftwareFunction {
   iokit_power_management_sleep_system?: {};
+}
+
+// Add new Hyper Navigation types and utilities
+export const hyperModifiers = [
+  "right_command",
+  "right_control",
+  "right_shift",
+  "right_option"
+] as const;
+
+export type HyperNavigationMapping = Record<string, KeyCode>;
+
+export interface HyperNavigationRule extends KarabinerRules {
+  description: string;
+  manipulators: Manipulator[];
+}
+
+export function createHyperNavigationRule(mappings: HyperNavigationMapping): HyperNavigationRule {
+  return {
+    description: "Hyper Navigation",
+    manipulators: Object.entries(mappings).map(([from_key, to_key]) => ({
+      description: `${from_key} = ${to_key}`,
+      from: {
+        key_code: from_key as KeyCode,
+        modifiers: {
+          mandatory: hyperModifiers
+        }
+      },
+      to: [{ key_code: to_key }],
+      type: "basic"
+    }))
+  };
 }
 
 export type KeyCode =
