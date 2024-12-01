@@ -1,0 +1,18 @@
+{
+  "name": "karabiner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Max Stoiber <contact@mxstbr.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.19.67",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "tsx": "^4.19.2"
+  },
+  "scripts": {
+    "build": "tsx rules.ts",
+    "watch": "nodemon --exec pnpm build -e ts"
+  },
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+}

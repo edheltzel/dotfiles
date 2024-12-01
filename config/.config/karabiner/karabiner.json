@@ -2,2433 +2,878 @@
     "global": { "show_in_menu_bar": false },
     "profiles": [
         {
-            "name": "No Mods",
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
-        },
-        {
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Hyper Navigation",
+                        "description": "Hyper Key (⌃⌥⇧⌘)",
                         "manipulators": [
                             {
-                                "description": " h = left",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "left_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " j = down",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "down_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " k = up",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "up_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " l = right",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "right_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " u = page_up",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_up" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " i = page_down",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_down" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " o = home",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "home" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " p = end",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "end" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Launch",
-                        "manipulators": [
-                            {
-                                "description": "command + y = Zen Browser",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + y = Brave Browser Beta",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Brave Browser Beta'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + e = Cursor",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Cursor" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + e = Zed",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Zed" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + r = Spotify",
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Spotify" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + d = Edit Dotfiles",
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/edit-dotfiles" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + t = Raycast: Topgrade",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/run-topgrade" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + y = Zen",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + y = Via",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Via" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + f = Invoice Ninja",
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Invoice Ninja'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + g = Illustrator",
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe Illustrator 2025'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + g = InDesign",
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe InDesign 2025'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + m = Microsoft Teams",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Microsoft Teams'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + m = Apple Mail",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Mail'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + t = Kitty Terminal",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a kitty" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Mouse 4 => Back",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": { "pointing_button": "button4" },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["left_command"],
-                                        "repeat": false
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Mouse 5 => Forward",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": { "pointing_button": "button5" },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["left_command"],
-                                        "repeat": false
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "devices": [
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 480,
-                        "vendor_id": 13364
-                    },
-                    "manipulate_caps_lock_led": false
-                },
-                {
-                    "identifiers": {
-                        "is_pointing_device": true,
-                        "product_id": 64160,
-                        "vendor_id": 9639
-                    },
-                    "ignore": false
-                }
-            ],
-            "fn_function_keys": [
-                {
-                    "from": { "key_code": "f1" },
-                    "to": [{ "key_code": "f1" }]
-                },
-                {
-                    "from": { "key_code": "f2" },
-                    "to": [{ "key_code": "f2" }]
-                },
-                {
-                    "from": { "key_code": "f5" },
-                    "to": [{ "key_code": "f5" }]
-                }
-            ],
-            "name": "Q11 Hyper Nav + Launch",
-            "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
-        },
-        {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "Caps Lock → Hyper Key (⌃⌥⇧⌘) (Escape if alone)",
-                        "manipulators": [
-                            {
-                                "description": "capslock = esc(click) | hyper(hold)",
+                                "description": "Caps Lock -> Hyper Key",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_shift",
-                                        "modifiers": ["right_command", "right_control", "right_option"]
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + spacebar",
+                        "manipulators": [
                             {
-                                "description": "escape = capslock switch",
-                                "from": {
-                                    "key_code": "escape",
-                                    "modifiers": {
-                                        "mandatory": ["right_command", "right_control", "right_shift", "right_option"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [
+                                "conditions": [
                                     {
-                                        "key_code": "caps_lock",
-                                        "modifiers": ["left_control"]
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_y",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "spacebar = language switch",
+                                "description": "Open raycast://extensions/stellate/mxstbr-commands/create-notion-todo",
                                 "from": {
                                     "key_code": "spacebar",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + spacebar = emoji",
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_control", "left_command"]
-                                    }
-                                ],
+                                "to": [{ "shell_command": "open raycast://extensions/stellate/mxstbr-commands/create-notion-todo" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Hyper Navigation",
+                        "description": "Hyper Key + y",
                         "manipulators": [
                             {
-                                "description": "command + h = shift + left",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
+                                "conditions": [
                                     {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + h = option + shift + left (select word ahead)",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["left_option", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + h = ctrl + shift + tab (prev tab)",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_control", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + h = ctrl + left (prev desktop)",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + h = mouse left",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": -1600 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + h = mouse left fast",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": -3200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + h = mouse wheel left",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": 64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + h = mouse wheel left fast",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": 128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + j = shift + down",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + j = option + shift + down (select para ahead)",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": ["left_shift"]
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
                                     },
                                     {
-                                        "key_code": "down_arrow",
-                                        "modifiers": ["left_shift"]
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
                                     },
                                     {
-                                        "key_code": "down_arrow",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + j = command + tab (next application)",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + j = ctrl + down (focus application)",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + j = mouse down",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": 1600 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + j = mouse down fast",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": 3200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + j = mouse wheel down",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": 64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + j = mouse wheel down fast",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": 128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " j = down",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "down_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + k = shift + up",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + k = option + shift + up (select line above)",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_shift"]
+                                        "name": "hyper_sublayer_y",
+                                        "type": "variable_if",
+                                        "value": 0
                                     },
                                     {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_shift"]
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 0
                                     },
                                     {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + k = command + tab (prev application)",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_command", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + k = ctrl + up (expose all)",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + k = mouse up",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": -1600 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + k = mouse up fast",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": -3200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + k = mouse wheel up",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": -64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + k = mouse wheel up fast",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": -128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " k = up",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "up_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + l = shift + right",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + l = option + shift + right (select word after)",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["left_shift", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + l = command + tab (next tab)",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + l = ctrl + right (next desktop)",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + l = mouse move right",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": 1600 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + l = mouse move right fast",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": 3200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + l = mouse wheel right",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": -64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + l = mouse wheel right fast",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": -128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " l = right",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "right_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + u = shift + page_up",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "page_up",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + u = shift + page_up",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "page_up",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + u = option + command + hyphen (zoom out)",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["left_command", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + u = ctrl + command + f (fullscreen)",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f",
-                                        "modifiers": ["left_control", "left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + u = mouse left click",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button1" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + u = mouse left click",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button1" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + u = mouse wheel left (rev)",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": -64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + u = mouse wheel left (rev) fast",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": -128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " u = page_up",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_up" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + i = shift + home",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "home",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + i = select whole line to head",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    { "key_code": "end" },
-                                    {
-                                        "key_code": "home",
-                                        "modifiers": ["left_shift"]
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 0
                                     },
                                     {
-                                        "key_code": "home",
-                                        "modifiers": ["left_shift"]
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + i = command + shift + ` (prev window within app)",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["left_command", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + i = mouse right click",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button2" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + i = mouse move down fast",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button2" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + i = mouse wheel down (rev)",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": -64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + i = mouse wheel down (rev) fast",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": -128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " i = home",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "home" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + o = shift + end",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "end",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + o = select whole",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    { "key_code": "home" },
-                                    {
-                                        "key_code": "end",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + o = command ` (next window within app)",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + o = option + command + h (expose all)",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + o = mouse backward",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button4" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + o = mouse backward",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button4" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + o = mouse wheel up (rev)",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": 64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + o = mouse wheel up (rev) fast",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": 128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " o = end",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "end" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + p = shift + page_down",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "page_down",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + command + p = shift + page_down",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_option", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "page_down",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + p = option + command + equal_sign (zoom in)",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign",
-                                        "modifiers": ["left_command", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + p = LaunchPad",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Launchpad'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + p = mouse forward",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button5" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + p = mouse forward",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button5" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + control + p = mouse wheel right (rev)",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": 64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + p = mouse wheel right (rev) fast",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": 128 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " p = page_down",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_down" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + shift + enter = button1 (mouse left click)",
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": { "mandatory": ["left_control", "left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button1" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "enter = button1 (mouse left click)",
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button1" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + enter = button2 (mouse right click)",
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button2" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + enter = button3 (mouse middle click)",
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button3" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + enter = button4 (mouse back)",
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button4" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + enter = button5 (mouse forward)",
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "pointing_button": "button5" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + up arrow = mouse wheel up",
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": -64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + down arrow = mouse wheel down",
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": 64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + left arrow = mouse wheel left",
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": 64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + right arrow = mouse wheel right",
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": -64 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + up arrow = mouse wheel up slow",
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": -32 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + down arrow = mouse wheel down slow",
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": 32 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + left arrow = mouse wheel left slow",
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": 32 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + option + right arrow = mouse wheel right slow",
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": -32 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + up arrow = mouse wheel up fast",
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": 256 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + down arrow = mouse wheel down fast",
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "vertical_wheel": -256 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + left arrow = mouse wheel left fast",
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": 256 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + command + right arrow = mouse wheel right fast",
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": { "mandatory": ["left_shift", "left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "horizontal_wheel": -256 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + up arrow = mouse up slow",
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": -800 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + down arrow = mouse down slow",
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": 800 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + left arrow = mouse left slow",
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": -800 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + right arrow = mouse right slow",
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": 800 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + up arrow = mouse up fast",
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": -4200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + down arrow = mouse down fast",
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": 4200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + left arrow = mouse left fast",
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": -4200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + right arrow = mouse right fast",
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": 4200 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "up arrow = mouse up",
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": -1600 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "down arrow = mouse down",
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "y": 1600 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "left arrow = mouse left",
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": -1600 } }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "right arrow = mouse right",
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "mouse_key": { "x": 1600 } }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Deletion",
-                        "manipulators": [
-                            {
-                                "description": "option + n = delete whole line",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + m = move line down",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": ["left_option", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + , = move line up",
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_option", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + . = delete whole line",
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + n = delete whole line",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["left_shift", "left_command"]
-                                    },
-                                    { "key_code": "delete_or_backspace" }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + m = delete word ahead",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": ["left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + , = delete word after",
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_forward",
-                                        "modifiers": ["left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + . = delete whole line",
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["left_shift", "left_command"]
-                                    },
-                                    { "key_code": "delete_or_backspace" }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "n = delete a word ahead",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": ["left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "m = delete a char ahead",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "delete_or_backspace" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": ", = delete a char after",
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "delete_forward" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": ". = delete a word after",
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_forward",
-                                        "modifiers": ["left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper to Control Window(s)",
-                        "manipulators": [
-                            {
-                                "description": "shift + tab = alter tab",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + tab = alter desktop",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command tab = alter app rev",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_command", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "tab = alter app",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + q = lock screen",
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": ["left_control", "left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + q = logout",
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": ["left_shift", "left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + q = force close app",
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "q = close app",
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "shift + w = sleep",
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_shift", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "pmset sleepnow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + w = display sleep",
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "pmset displaysleepnow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + w = close all tab of app",
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "w",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "w = close tab",
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "w",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + a = launchpad",
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Launchpad'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + a = show desktop",
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "f11" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + a = expose all",
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "control + s = alter app-win rev",
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["left_control", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["left_command", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + s = alter app-win",
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + s = alter tab sheet rev",
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_control", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "s = alter tab sheet",
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Launch Apps",
-                        "manipulators": [
-                            {
-                                "description": "option + e = Cursor",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Cursor" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + e = Zed",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Zed" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "e = VSCode",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Visual Studio Code'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + e = Edit Dotfiles",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/edit-dotfiles" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + r = Spotify",
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Spotify" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + t = Raycast: Topgrade",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/run-topgrade" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + y = Zen",
+                                "description": "Open -a 'Safari.app'",
                                 "from": {
                                     "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + y = Via",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Via" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + f = Invoice Ninja",
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Invoice Ninja'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + i = Illustrator",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe Illustrator 2025'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + i = InDesign",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe InDesign 2025'" }],
+                                "to": [{ "shell_command": "open -a 'Safari.app'" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Hyper as Shift (Shifter)",
+                        "description": "Hyper Key sublayer \"b\"",
                         "manipulators": [
                             {
-                                "description": "command + hyphen = scale down",
-                                "from": {
-                                    "key_code": "hyphen",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
+                                "conditions": [
                                     {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["left_command"]
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_y",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "hyphen = _",
+                                "description": "Toggle Hyper sublayer b",
                                 "from": {
-                                    "key_code": "hyphen",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + equal_sign = scale up",
-                                "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "equal_sign = +",
-                                "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + open_bracket [ = {",
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "open_bracket",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + open_bracket [ = <",
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "comma",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "open_bracket [ = (",
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "9",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + close_bracket ] = }",
-                                "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "close_bracket",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "option + close_bracket ] = }",
-                                "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "period",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "close_bracket ] = )",
-                                "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "0",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "backslash \\ = command + / (comment)",
-                                "from": {
-                                    "key_code": "backslash",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "slash",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "slash / = command + / (comment)",
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "slash",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + semicolon = !",
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "semicolon = :",
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "semicolon",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + quote = equal_sign",
-                                "from": {
-                                    "key_code": "quote",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "equal_sign" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "quote = equal_sign",
-                                "from": {
-                                    "key_code": "quote",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "equal_sign" }],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "fn_function_keys": [
-                {
-                    "from": { "key_code": "f1" },
-                    "to": [{ "key_code": "f1" }]
-                },
-                {
-                    "from": { "key_code": "f2" },
-                    "to": [{ "key_code": "f2" }]
-                },
-                {
-                    "from": { "key_code": "f5" },
-                    "to": [{ "key_code": "f5" }]
-                }
-            ],
-            "name": "Keychron Q11 - ALL ENABLED",
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
-        },
-        {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "Caps Lock → Hyper Key (⌃⌥⇧⌘) (Escape if alone)",
-                        "manipulators": [
-                            {
-                                "description": "capslock = esc(click) | hyper(hold)",
-                                "from": {
-                                    "key_code": "caps_lock",
+                                    "key_code": "b",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_shift",
-                                        "modifiers": ["right_command", "right_control", "right_option"]
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_b",
+                                            "value": 1
+                                        }
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "escape" }],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_b",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "description": "escape = capslock switch",
-                                "from": {
-                                    "key_code": "escape",
-                                    "modifiers": {
-                                        "mandatory": ["right_command", "right_control", "right_shift", "right_option"],
-                                        "optional": ["caps_lock"]
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
+                                ],
+                                "description": "Open https://twitter.com",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://twitter.com" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://mxstbr.com/cal",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://mxstbr.com/cal" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://news.ycombinator.com",
+                                "from": {
+                                    "key_code": "y",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://news.ycombinator.com" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://facebook.com",
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://facebook.com" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://reddit.com",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://reddit.com" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://hashnode.com/draft",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://hashnode.com/draft" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key sublayer \"o\"",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_y",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Toggle Hyper sublayer o",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "caps_lock",
-                                        "modifiers": ["left_control"]
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_o",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_o",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Navigation",
-                        "manipulators": [
+                            },
                             {
-                                "description": " h = left",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a '1Password.app'",
                                 "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "1",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_arrow" }],
+                                "to": [{ "shell_command": "open -a '1Password.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": " j = down",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Google Chrome.app'",
                                 "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "g",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "down_arrow" }],
+                                "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": " k = up",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Notion Calendar.app'",
                                 "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "c",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "up_arrow" }],
+                                "to": [{ "shell_command": "open -a 'Notion Calendar.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": " l = right",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Zed.app'",
                                 "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "v",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "right_arrow" }],
+                                "to": [{ "shell_command": "open -a 'Zed.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": " u = page_up",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_up" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " i = page_down",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "page_down" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " o = home",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "home" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": " p = end",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "key_code": "end" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Launch",
-                        "manipulators": [
-                            {
-                                "description": "option + e = Cursor",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Cursor" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + e = Zed",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Zed" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + r = Spotify",
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Spotify" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "command + d = Edit Dotfiles",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Discord.app'",
                                 "from": {
                                     "key_code": "d",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open raycast://script-commands/edit-dotfiles" }],
+                                "to": [{ "shell_command": "open -a 'Discord.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + t = Raycast: Topgrade",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Slack.app'",
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Slack.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Superhuman.app'",
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Superhuman.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Notion.app'",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Notion.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Terminal.app'",
                                 "from": {
                                     "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open raycast://script-commands/run-topgrade" }],
+                                "to": [{ "shell_command": "open -a 'Terminal.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "command + y = Zen",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026",
                                 "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "h",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
+                                "to": [{ "shell_command": "open notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + y = Via",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'zoom.us.app'",
                                 "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "z",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a Via" }],
+                                "to": [{ "shell_command": "open -a 'zoom.us.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + f = Invoice Ninja",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Reflect.app'",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Reflect.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Reflect.app'",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Reflect.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Finder.app'",
                                 "from": {
                                     "key_code": "f",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Invoice Ninja'" }],
+                                "to": [{ "shell_command": "open -a 'Finder.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "command + g = Illustrator",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Texts.app'",
                                 "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "i",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Adobe Illustrator 2025'" }],
+                                "to": [{ "shell_command": "open -a 'Texts.app'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "option + g = InDesign",
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Spotify.app'",
                                 "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["left_option", "right_command", "right_control", "right_shift", "right_option"] }
+                                    "key_code": "p",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Adobe InDesign 2025'" }],
+                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'iA Presenter.app'",
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'iA Presenter.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open Texts",
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open Texts" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key sublayer \"r\"",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_y",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Toggle Hyper sublayer r",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_r",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_r",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2",
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/thomas/color-picker/pick-color",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/thomas/color-picker/pick-color" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://script-commands/dismiss-notifications",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://script-commands/dismiss-notifications" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/raycast/raycast/confetti",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/raycast/raycast/confetti" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/peduarte/silent-mention/index",
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/peduarte/silent-mention/index" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/raycast/clipboard-history/clipboard-history",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/raycast/clipboard-history/clipboard-history" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Shortcat (homerow) Trigger",
+                        "manipulators": [
+                            {
+                                "description": "Right Control => Shortcat",
+                                "from": { "key_code": "right_control" },
+                                "to": [{ "key_code": "right_control" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["right_command", "right_option", "right_shift", "right_control"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     }
                 ]
             },
-            "name": "MacDaddy Hyper Key + Nav + Launch",
+            "name": "Default",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
