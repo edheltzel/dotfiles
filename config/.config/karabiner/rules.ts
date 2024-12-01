@@ -60,70 +60,35 @@ const rules: KarabinerRules[] = [
     }
   ], "^com\\.apple\\.Safari$"),
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
-    b: {
-      t: open("https://twitter.com"),
-      // Quarterly "P"lan
-      p: open("https://mxstbr.com/cal"),
-      y: open("https://news.ycombinator.com"),
-      f: open("https://facebook.com"),
+    // hyper + left_alt
+    left_alt: {
+      e: app("Cursor"), // e - editor
+      s: app("Spotify"),
+      t: open("raycast://script-commands/run-topgrade"),
+      f: app("Invoice Ninja"), // f - finance
+      g: app("Adobe InDesign 2025"), // g - graphic design
+      n: app("Obsidian"),
+      m: app("Messages"),
+      y: app("Brave Browser Beta"),
+    },
+    // hyper + left_command
+    left_command: {
+      d: open("raycast://script-commands/edit-dotfiles"),
+      e: app("Zed"), // e - editor
+      f: app("Figma"),
+      g: app("Adobe Illustrator 2025"), // g - graphic design
+      m: app("Microsoft Teams"),
+      n: open("raycast://customWindowManagementCommand?&name=-FieldNotes"),
+      t: app("kitty"),
+      v: app("Via"),
+      y: app("Zen Browser"),
+    },
+    // hyper + left_control
+    left_control: {
+      c: open("https://app.clickup.com/2308619/home"),
       r: open("https://reddit.com"),
-      h: open("https://hashnode.com/draft"),
-    },
-    // o = "Open" applications
-    o: {
-      1: app("1Password"),
-      g: app("Google Chrome"),
-      c: app("Notion Calendar"),
-      v: app("Zed"),
-      d: app("Discord"),
-      s: app("Slack"),
-      e: app("Superhuman"),
-      n: app("Notion"),
-      t: app("Terminal"),
-      // Open todo list managed via *H*ypersonic
-      h: open(
-        "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      ),
-      z: app("zoom.us"),
-      // "M"arkdown (Reflect.app)
-      m: app("Reflect"),
-      r: app("Reflect"),
-      f: app("Finder"),
-      // "i"Message
-      i: app("Texts"),
-      p: app("Spotify"),
-      a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
-      w: open("Texts"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
-    },
-    // r = "Raycast"
-    r: {
-      c: open("raycast://extensions/thomas/color-picker/pick-color"),
-      n: open("raycast://script-commands/dismiss-notifications"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-      ),
-      e: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      ),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
-      h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
-      1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-      ),
+      x: open("https://x.com"),
+      g: open("https://github.com/edheltzel/dotfiles"),
     },
   }),
   {
