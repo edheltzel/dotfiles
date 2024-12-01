@@ -1,50 +1,68 @@
 import * as fs from "fs";
-import { KarabinerRules } from "./types";
+import {
+  KarabinerRules,
+  createHyperNavigationRule,
+  createMouseNavigationRules
+} from "./types";
 import { createHyperSubLayers, app, open, shell } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
-    manipulators: [
-      {
-        description: "Caps Lock -> Hyper Key",
-        from: {
-          key_code: "caps_lock",
-          modifiers: {
-            optional: ["any"],
-          },
+    manipulators: [{
+      description: "Caps Lock -> Hyper Key",
+      from: {
+        key_code: "caps_lock",
+        modifiers: {
+          optional: ["any"],
         },
-        to: [
-          {
-            set_variable: {
-              name: "hyper",
-              value: 1,
-            },
-          },
-        ],
-        to_after_key_up: [
-          {
-            set_variable: {
-              name: "hyper",
-              value: 0,
-            },
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "escape",
-          },
-        ],
-        type: "basic",
       },
-    ],
+      to: [
+        {
+          key_code: "right_shift",
+          modifiers: [
+            "right_control",
+            "right_command",
+            "right_option"
+          ]
+        }
+      ],
+      to_if_alone: [
+        {
+          key_code: "escape",
+        },
+      ],
+      type: "basic",
+    }],
   },
+  createHyperNavigationRule({
+    h: "left_arrow",
+    j: "down_arrow",
+    k: "up_arrow",
+    l: "right_arrow",
+    u: "page_up",
+    i: "page_down",
+    o: "home",
+    p: "end"
+  }),
+  ...createMouseNavigationRules([
+    // Mouse navigation for Safari
+    {
+      button: "button4",
+      key_code: "left_arrow",
+      description: "Mouse 4 => Back"
+    },
+    {
+      button: "button5",
+      key_code: "right_arrow",
+      description: "Mouse 5 => Forward"
+    }
+  ], "^com\\.apple\\.Safari$"),
   ...createHyperSubLayers({
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
     ),
-    y: app("Safari"),
     b: {
       t: open("https://twitter.com"),
       // Quarterly "P"lan
@@ -116,7 +134,7 @@ const rules: KarabinerRules[] = [
         from: {
           key_code: "right_control",
         },
-        to:  [
+        to: [
           {
             key_code: "right_control"
           },
@@ -124,7 +142,7 @@ const rules: KarabinerRules[] = [
         to_if_alone: [
           {
             key_code: "spacebar",
-            modifiers:[
+            modifiers: [
               "right_command",
               "right_option",
               "right_shift",
@@ -148,6 +166,24 @@ fs.writeFileSync(
       profiles: [
         {
           name: "Default",
+          devices: [
+            {
+              identifiers: {
+                is_keyboard: true,
+                product_id: 480,
+                vendor_id: 13364
+              },
+              manipulate_caps_lock_led: false
+            },
+            {
+              identifiers: {
+                is_pointing_device: true,
+                product_id: 64160,
+                vendor_id: 9639
+              },
+              ignore: false
+            }
+          ],
           complex_modifications: {
             rules,
           },
