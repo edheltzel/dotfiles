@@ -5,9 +5,9 @@
   "author": "Max Stoiber <contact@mxstbr.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.19.67",
-    "nodemon": "^2.0.22",
-    "prettier": "^2.8.8",
+    "@types/node": "^18.7.19",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
     "tsx": "^4.19.2"
   },
   "scripts": {
