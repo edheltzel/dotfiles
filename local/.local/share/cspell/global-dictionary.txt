@@ -65,6 +65,7 @@ gitignores
 hcomm
 heltzel
 highlightedyank
+homerow
 htmlmin
 HTMX
 ifel
