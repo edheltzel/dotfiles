@@ -18,3 +18,6 @@ enable_transience
 
 # OH My Posh Prompt
 # oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
+
+# Added by Windsurf
+fish_add_path /Users/ed/.codeium/windsurf/bin
