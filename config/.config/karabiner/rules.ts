@@ -62,7 +62,6 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // hyper + left_alt
     left_alt: {
-      d: open("'raycast://customWindowManagementCommand?&name=-Dev'"),
       e: app("Cursor"), // e - editor
       s: app("Spotify"),
       t: open("raycast://script-commands/run-topgrade"),
