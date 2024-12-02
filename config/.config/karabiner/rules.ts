@@ -73,6 +73,7 @@ const rules: KarabinerRules[] = [
     },
     // hyper + left_command
     left_command: {
+      c: app("ClickUp"),
       d: open("raycast://script-commands/edit-dotfiles"),
       e: app("Zed"), // e - editor
       f: app("Figma"),
@@ -82,13 +83,6 @@ const rules: KarabinerRules[] = [
       t: app("kitty"),
       v: app("Via"),
       y: app("Zen Browser"),
-    },
-    // hyper + left_control
-    left_control: {
-      c: open("https://app.clickup.com/2308619/home"),
-      r: open("https://reddit.com"),
-      x: open("https://x.com"),
-      g: open("https://github.com/edheltzel/dotfiles"),
     },
   }),
   {
