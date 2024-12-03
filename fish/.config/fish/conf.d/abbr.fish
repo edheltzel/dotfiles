@@ -7,12 +7,15 @@ if status is-interactive
     abbr --add bic --set-cursor 'brew install % --cask'
     abbr --add cl clear
     # abbr --add cls '$DROPBOX/Clients'
-    abbr --add cr code
-    abbr --add crn 'code -n .'
-    abbr --add cro 'code -r .'
+    # abbr --add cr code
+    # abbr --add crn 'code -n .'
+    # abbr --add cro 'code -r .'
     abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
+    abbr --add ws windsurf
+    abbr --add wsn 'windsurf -n .'
+    abbr --add wso 'windsurf -r .'
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'

@@ -383,7 +383,7 @@
 	// VSCode Custom CSS
 	"vscode_custom_css.imports": [
 		"file://${userHome}/Library/Application Support/Code/User/customStuff/vscode-styles.css",
-		"file://${userHome}/Library/Application Support/Code/User/customStuff/vscode-scripts.js"
+		// "file://${userHome}/Library/Application Support/Code/User/customStuff/vscode-scripts.js"
 	],
 	"vscode_custom_css.statusbar": false,
 	// VSpaceCode
