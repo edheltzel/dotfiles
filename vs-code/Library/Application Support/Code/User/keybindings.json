@@ -345,12 +345,12 @@
 	{
 		"title": "Next Side Bar View",
 		"command": "workbench.action.nextSideBarView",
-		"key": "ctrl+alt+]",
+		"key": "ctrl+alt+cmd+]",
 	},
 	{
 		"title": "Previous Side Bar View",
 		"command": "workbench.action.previousSideBarView",
-		"key": "ctrl+alt+[",
+		"key": "ctrl+alt+cmd+[",
 	},
 	{
 		"command": "workbench.files.action.collapseExplorerFolders",

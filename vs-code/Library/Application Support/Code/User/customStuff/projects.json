@@ -12,7 +12,9 @@
 		"name": "KB 🧠",
 		"rootPath": "/Users/ed/Developer/KB",
 		"paths": [],
-		"tags": ["Personal"],
+		"tags": [
+			"Personal"
+		],
 		"enabled": true
 	},
 	{
@@ -49,6 +51,13 @@
 		"tags": [
 			"VSCode"
 		],
+		"enabled": true
+	},
+	{
+		"name": "mac",
+		"rootPath": "/Users/ed/Developer/work/mac/mac3",
+		"paths": [],
+		"tags": ["Clients"],
 		"enabled": true
 	}
 ]
