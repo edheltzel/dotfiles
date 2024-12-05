@@ -73,7 +73,6 @@ const rules: KarabinerRules[] = [
     },
     // hyper + left_command
     left_command: {
-      c: app("ClickUp"),
       d: open("raycast://script-commands/edit-dotfiles"),
       e: app("Zed"), // e - editor
       f: app("Figma"),
