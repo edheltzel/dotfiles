@@ -2,7 +2,7 @@ import * as fs from "fs";
 import {
   KarabinerRules,
   createHyperNavigationRule,
-  createMouseNavigationRules
+  createMouseNavigationRules,
 } from "./types";
 import { createHyperSubLayers, app, open, shell } from "./utils";
 
@@ -10,31 +10,29 @@ const rules: KarabinerRules[] = [
   // Define the Hyper key itself
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
-    manipulators: [{
-      description: "Caps Lock -> Hyper Key",
-      from: {
-        key_code: "caps_lock",
-        modifiers: {
-          optional: ["any"],
+    manipulators: [
+      {
+        description: "Caps Lock -> Hyper Key",
+        from: {
+          key_code: "caps_lock",
+          modifiers: {
+            optional: ["any"],
+          },
         },
+        to: [
+          {
+            key_code: "right_shift",
+            modifiers: ["right_control", "right_command", "right_option"],
+          },
+        ],
+        to_if_alone: [
+          {
+            key_code: "escape",
+          },
+        ],
+        type: "basic",
       },
-      to: [
-        {
-          key_code: "right_shift",
-          modifiers: [
-            "right_control",
-            "right_command",
-            "right_option"
-          ]
-        }
-      ],
-      to_if_alone: [
-        {
-          key_code: "escape",
-        },
-      ],
-      type: "basic",
-    }],
+    ],
   },
   createHyperNavigationRule({
     h: "left_arrow",
@@ -44,21 +42,24 @@ const rules: KarabinerRules[] = [
     u: "page_up",
     i: "page_down",
     o: "home",
-    p: "end"
+    p: "end",
   }),
-  ...createMouseNavigationRules([
-    // Mouse navigation for Safari
-    {
-      button: "button4",
-      key_code: "left_arrow",
-      description: "Mouse 4 => Back"
-    },
-    {
-      button: "button5",
-      key_code: "right_arrow",
-      description: "Mouse 5 => Forward"
-    }
-  ], "^com\\.apple\\.Safari$"),
+  ...createMouseNavigationRules(
+    [
+      // Mouse navigation for Safari
+      {
+        button: "button4",
+        key_code: "left_arrow",
+        description: "Mouse 4 => Back",
+      },
+      {
+        button: "button5",
+        key_code: "right_arrow",
+        description: "Mouse 5 => Forward",
+      },
+    ],
+    "^com\\.apple\\.Safari$"
+  ),
   ...createHyperSubLayers({
     // hyper + left_alt
     left_alt: {
@@ -81,7 +82,7 @@ const rules: KarabinerRules[] = [
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"),
       t: app("kitty"),
       v: app("Via"),
-      y: app("Zen Browser"),
+      y: app("Safari"),
     },
   }),
   {
@@ -94,7 +95,7 @@ const rules: KarabinerRules[] = [
         },
         to: [
           {
-            key_code: "right_control"
+            key_code: "right_control",
           },
         ],
         to_if_alone: [
@@ -104,8 +105,8 @@ const rules: KarabinerRules[] = [
               "right_command",
               "right_option",
               "right_shift",
-              "right_control"
-            ]
+              "right_control",
+            ],
           },
         ],
         type: "basic",
@@ -129,18 +130,18 @@ fs.writeFileSync(
               identifiers: {
                 is_keyboard: true,
                 product_id: 480,
-                vendor_id: 13364
+                vendor_id: 13364,
               },
-              manipulate_caps_lock_led: false
+              manipulate_caps_lock_led: false,
             },
             {
               identifiers: {
                 is_pointing_device: true,
                 product_id: 64160,
-                vendor_id: 9639
+                vendor_id: 9639,
               },
-              ignore: false
-            }
+              ignore: false,
+            },
           ],
           complex_modifications: {
             rules,
