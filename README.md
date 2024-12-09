@@ -155,8 +155,8 @@ There are two options for managing packages with GNU Stow:
   - When I need Vim, I use [LazyVim](lazyVim) - lightly customized. (Secondary Editor)
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
-- vs-code(vs-code/)
-  - VSCode/Windsurf configuration, ie: keybindings, settings, and custom stuff.(Primary Editor)
+- editors(editors/)
+  - VSCode & Windsurf configurations, ie: keybindings, settings, and custom stuff.(Windsurf is my Primary Editor)
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
 
