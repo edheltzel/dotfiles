@@ -1,3 +1,4 @@
+# cspell: disable
 if status is-interactive
     abbr --add atm fastfetch
     abbr --add bi 'brew install '
@@ -7,15 +8,16 @@ if status is-interactive
     abbr --add bic --set-cursor 'brew install % --cask'
     abbr --add cl clear
     # abbr --add cls '$DROPBOX/Clients'
-    # abbr --add cr code
-    # abbr --add crn 'code -n .'
-    # abbr --add cro 'code -r .'
+    # Editors & Terminals
     abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
     abbr --add ws windsurf
     abbr --add wsn 'windsurf -n .'
     abbr --add wso 'windsurf -r .'
+    abbr --add vim nvim
+    abbr --add wez wezterm
+
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
@@ -42,19 +44,17 @@ if status is-interactive
     abbr --add grabit 'wget -mkEpnp url_here'
     abbr --add link 'ln -s'
     abbr --add symlink 'ln -s'
-    abbr --add amux 'tmux at -t base'
-    abbr --add tkill 'tmux kill-session -t'
-    abbr --add nmux 'tmux new -s "base"'
-    abbr --add vim nvim
     abbr --add wrg wrangler
     abbr --add usebash 'chsh -s $(which bash)'
     abbr --add usezsh 'chsh -s $(which zsh)'
     abbr --add upp topgrade
     abbr --add psrv 'php -S localhost:8888'
-    abbr --add tmux zellij
     abbr --add omp oh-my-posh
     abbr --add newcode 'npx --package yo --package generator-code -- yo code'
     abbr --add confi confetti
+    abbr --add tmux zellij
+    abbr --add amux 'tmux at -t base'
+    abbr --add tkill 'tmux kill-session -t'
+    abbr --add nmux 'tmux new -s "base"'
     abbr --add yz yazi
-    abbr --add wez wezterm
 end
