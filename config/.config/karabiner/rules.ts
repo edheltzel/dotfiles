@@ -7,7 +7,7 @@ import {
 import { createHyperSubLayers, app, open, shell } from "./utils";
 
 const rules: KarabinerRules[] = [
-  // Define the Hyper key itself
+  // Defines the hyper key using right modifiers to allow for chording with left modifiers
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
     manipulators: [
