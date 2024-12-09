@@ -148,6 +148,7 @@ return {
     ["Logseq"] = ":logseq:",
     ["Reeder"] = ":reeder5:",
     ["Code"] = ":code:",
+    ["Windsurf"] = ":code:",
     ["Cursor"] = ":code:",
     ["Code - Insiders"] = ":code:",
     ["Notion"] = ":notion:",
@@ -214,4 +215,3 @@ return {
     ["ChatGPT"] = ":openai:",
     ["default"] = ":default:"
 }
-  
