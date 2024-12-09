@@ -97,13 +97,13 @@ const rules: KarabinerRules[] = [
       y: app("Safari"),
     },
   }),
-  // Shortcat Configuration
+  // Homerow Configuration
   // Enables keyboard-driven UI navigation using homerow keys
   {
-    description: "Shortcat (homerow) Trigger",
+    description: "Homerow Trigger",
     manipulators: [
       {
-        description: "Right Control => Shortcat",
+        description: "Right Control => Homerow",
         from: {
           key_code: "right_control",
         },
@@ -142,6 +142,7 @@ fs.writeFileSync(
           devices: [
             {
               identifiers: {
+                // Keychron Q11 keyboard
                 is_keyboard: true,
                 product_id: 480,
                 vendor_id: 13364,
@@ -150,6 +151,7 @@ fs.writeFileSync(
             },
             {
               identifiers: {
+                // ProtoArc EM01 NL trackball
                 is_pointing_device: true,
                 product_id: 64160,
                 vendor_id: 9639,

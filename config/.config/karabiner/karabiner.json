@@ -478,10 +478,10 @@
                         ]
                     },
                     {
-                        "description": "Shortcat (homerow) Trigger",
+                        "description": "Homerow Trigger",
                         "manipulators": [
                             {
-                                "description": "Right Control => Shortcat",
+                                "description": "Right Control => Homerow",
                                 "from": { "key_code": "right_control" },
                                 "to": [{ "key_code": "right_control" }],
                                 "to_if_alone": [
