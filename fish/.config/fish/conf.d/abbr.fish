@@ -56,5 +56,6 @@ if status is-interactive
     abbr --add amux 'tmux at -t base'
     abbr --add tkill 'tmux kill-session -t'
     abbr --add nmux 'tmux new -s "base"'
+    abbr --add yy yazi
     abbr --add yz yazi
 end
