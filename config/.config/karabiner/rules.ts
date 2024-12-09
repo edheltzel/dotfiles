@@ -6,8 +6,12 @@ import {
 } from "./types";
 import { createHyperSubLayers, app, open, shell } from "./utils";
 
+// Array of Karabiner configuration rules
 const rules: KarabinerRules[] = [
-  // Defines the hyper key using right modifiers to allow for chording with left modifiers
+  // Main Hyper Key Configuration
+  // Transforms Caps Lock into a powerful modifier key combination (Control + Option + Shift + Command)
+  // When pressed alone, it acts as Escape
+  // Uses right modifiers to allow for combinations with left modifiers
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
     manipulators: [
@@ -34,6 +38,9 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+  // Vim-style navigation using Hyper key
+  // Maps h,j,k,l to arrow keys
+  // Additional mappings for page navigation (u,i,o,p)
   createHyperNavigationRule({
     h: "left_arrow",
     j: "down_arrow",
@@ -44,9 +51,10 @@ const rules: KarabinerRules[] = [
     o: "home",
     p: "end",
   }),
+  // Mouse button configuration for Safari
+  // Maps mouse buttons 4 and 5 to back/forward navigation
   ...createMouseNavigationRules(
     [
-      // Mouse navigation for Safari
       {
         button: "button4",
         key_code: "left_arrow",
@@ -60,8 +68,12 @@ const rules: KarabinerRules[] = [
     ],
     "^com\\.apple\\.Safari$"
   ),
+  // Application launching shortcuts using Hyper key combinations
+  // Two layers of shortcuts:
+  // 1. Hyper + left_alt: Primary application shortcuts
+  // 2. Hyper + left_command: Secondary application shortcuts
   ...createHyperSubLayers({
-    // hyper + left_alt
+    // First layer: Hyper + left_alt shortcuts
     left_alt: {
       e: app("Cursor"), // e - editor
       s: app("Spotify"),
@@ -72,7 +84,7 @@ const rules: KarabinerRules[] = [
       m: app("Messages"),
       y: app("Brave Browser Beta"),
     },
-    // hyper + left_command
+    // Second layer: Hyper + left_command shortcuts
     left_command: {
       d: open("raycast://script-commands/edit-dotfiles"),
       e: app("Zed"), // e - editor
@@ -85,6 +97,8 @@ const rules: KarabinerRules[] = [
       y: app("Safari"),
     },
   }),
+  // Shortcat Configuration
+  // Enables keyboard-driven UI navigation using homerow keys
   {
     description: "Shortcat (homerow) Trigger",
     manipulators: [
