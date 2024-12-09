@@ -12,11 +12,11 @@ set -gx XDG_VIDEOS_DIR $HOME/Videos
 # cargo - IDK if this is necessary
 set -gx CARGO_TARGET_DIR /var/folders/88/3h9cyc4979d2l6p7xkn79yqr0000gn/T/cargo-installx9AWBr
 
-# set the Default Editor use code, code-insiders, nvim, cursor
-set -gx EDITOR code
+# set the Default Editor use code, code-insiders, nvim, windsurf, or cursor
+set -gx EDITOR windsurf
 
 string match -q "$TERM_PROGRAM" vscode
-and . (code --locate-shell-integration-path fish)
+and . (windsurf --locate-shell-integration-path fish)
 
 # Volumes
 set -gx VOL xxx
