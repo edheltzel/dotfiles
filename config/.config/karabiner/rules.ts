@@ -90,7 +90,7 @@ const rules: KarabinerRules[] = [
       e: app("Zed"), // e - editor
       f: app("Figma"),
       g: app("Adobe Illustrator 2025"), // g - graphic design
-      m: app("Mail"),
+      m: app("Microsoft Teams"),
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"),
       t: app("kitty"),
       v: app("Via"),
