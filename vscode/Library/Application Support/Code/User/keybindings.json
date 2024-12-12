@@ -703,5 +703,9 @@
 		"key": "shift+ctrl+l",
 		"command": "editor.action.selectHighlights",
 		"when": "editorFocus"
+	},
+	{
+		"key": "alt+cmd+n",
+		"command": "projectManager.listProjectsNewWindow"
 	}
 ]
