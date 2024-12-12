@@ -5,14 +5,16 @@
   "author": "Max Stoiber <contact@mxstbr.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.7.19",
+    "@types/node": "^22.10.2",
     "nodemon": "^3.1.7",
-    "prettier": "^2.7.1",
+    "npm-check-updates": "^17.1.11",
+    "prettier": "^3.4.2",
     "tsx": "^4.19.2"
   },
   "scripts": {
     "build": "tsx rules.ts",
-    "watch": "nodemon --exec pnpm build -e ts"
-  },
-  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+    "watch": "nodemon --exec pnpm build -e ts",
+		"upgrade": "bunx npm-check-updates -ui",
+    "purge": "./.scrub.sh purge"
+  }
 }
