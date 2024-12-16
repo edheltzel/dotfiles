@@ -30,7 +30,7 @@ run: ## Symlink all dotfiles w/Stow
 .PHONY: stow add
 stow: ## Add individual packages w/Stow
 	@if [ -z "${pkg}" ]; then \
-		echo "Error: Please specify a package to stow. \n$(YELLOW)ie: $(YELLOW)make stow pkg=<pacakgeName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
+		echo "Error: Please specify a package to stow. \n$(YELLOW)ie: $(YELLOW)make stow pkg=<packageName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
 		exit 1; \
 	fi
 	@if [[ ! " ${STOW_PACKAGES} " =~ " ${pkg} " ]]; then \
@@ -43,7 +43,7 @@ stow: ## Add individual packages w/Stow
 .PHONY: unstow remove
 unstow: ## Remove individual packages w/Stow
 	@if [ -z "${pkg}" ]; then \
-		echo "Error: Please specify a package to unstow. \n$(YELLOW)ie: $(YELLOW)make unstow pkg=<pacakgeName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
+		echo "Error: Please specify a package to unstow. \n$(YELLOW)ie: $(YELLOW)make unstow pkg=<packageName>$(CLR) \n$(WHITE)Available packages:$(CLR) $(STOW_PACKAGES)"; \
 		exit 1; \
 	fi
 	@if [[ ! " ${STOW_PACKAGES} " =~ " ${pkg} " ]]; then \
