@@ -181,7 +181,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
 <h2 id="macos-mods">MacOS Mods <a href="#to-the-top">↑</a></h2>
 
 >[!NOTE]
-> For Aerospace, Sketchybar, & Karabiner Elements, I'm constantly changing my config to fit my needs and preferences.
+> For Aerospace, Sketchybar, & Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.
 
 <h4 id="window-manager">Aerospace Window Manager <a href="#to-the-top">↑</a></h4>
 <h4 id="status-bar">Sketchybar <a href="#to-the-top">↑</a></h4>
@@ -189,7 +189,13 @@ Sketchybar is at the bottom of my screen. I use this just to keep track of my wo
 
 <h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
 
-I use QMK/VIA along with Raycast to launch apps but chord keys using Karabiner Elements, ie: `hyper + cmd + d` launches my Dotfiles repo in VSCode. This could definitely be improved and simplified by using only Karabiner Elements.
+For my keyboard hacks, I use a combination of QMK/VIA along with Raycast to launch apps but I also chord the Hyper Key with other modifiers using Karabiner Elements.
+
+My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (notice that it is the right side modifiers only.)
+
+ie: `hyper + left_cmd + d` launches my Dotfiles repo in my default editor.
+
+See the Readme for more details: [config/.config/karabiner/README.md](./config/.config/karabiner/README.md)
 
 <h2 id="troubleshooting">Troubleshooting <a href="#to-the-top">↑</a></h2>
 <h4 id="troubleshoot-dotfiles">Dotfiles<a href="#to-the-top">↑</a></h4>

@@ -12,9 +12,9 @@
     "tsx": "^4.19.2"
   },
   "scripts": {
+    "start": "nodemon --exec bun run build -e ts",
     "build": "tsx rules.ts",
-    "watch": "nodemon --exec pnpm build -e ts",
-		"upgrade": "bunx npm-check-updates -ui",
+    "upgrade": "bunx npm-check-updates -ui",
     "purge": "./.scrub.sh purge"
   }
 }
