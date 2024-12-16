@@ -363,10 +363,10 @@ speedtest
 </details>
 <h2 id="todos">TODOs <a href="#to-the-top">↑</a></h2>
 
-- [ ] Consider using [Home Manager](https://nix-community.github.io/home-manager/) for package management.
 - [ ] Convert fish functions to zsh functions - **WIP**
 - [ ] zsh completions seem to be broken [issue #40](https://github.com/edheltzel/dotfiles/issues/40)
   - [ ] Look into zsh-completions vs autocomplete
+- [x] Consider using [Home Manager](https://nix-community.github.io/home-manager/) for package management.
 - [x] include zsh abbreviations
 - [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
