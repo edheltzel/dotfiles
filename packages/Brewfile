@@ -222,6 +222,7 @@ cask 'spotify'              # Music streaming
 cask 'brainfm'              # BrainFM - Music streaming
 
 # Utility Applications
+cask 'displaylink'               # DisplayLink drivers
 brew 'm-cli'                     # All in one MacOS management CLI app: m help
 cask 'onyx'                      # System maintenance
 cask 'transnomino'               # A batch rename utility
