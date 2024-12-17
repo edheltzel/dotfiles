@@ -94,7 +94,7 @@ const rules: KarabinerRules[] = [
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"),
       t: app("kitty"),
       v: app("Via"),
-      y: app("Safari"),
+      y: app("Zen Browser"),
     },
   }),
   // Homerow Configuration
