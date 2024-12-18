@@ -68,32 +68,33 @@ const rules: KarabinerRules[] = [
     ],
     "^com\\.apple\\.Safari$"
   ),
-  // Application launching shortcuts using Hyper key combinations
+  // App launching shortcuts using Hyper key combinations - see Raycast settings for Hyper+non_modifier_key shortcuts
   // Two layers of shortcuts:
   // 1. Hyper + left_alt: Primary application shortcuts
   // 2. Hyper + left_command: Secondary application shortcuts
   ...createHyperSubLayers({
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
-      e: app("Cursor"), // e - editor
-      s: app("Spotify"),
-      t: open("raycast://script-commands/run-topgrade"),
       f: app("Invoice Ninja"), // f - finance
-      g: app("Adobe InDesign 2025"), // g - graphic design
-      n: app("Obsidian"),
-      m: app("Messages"),
+      m: app("Messages"), // m - Apple Messages
+      s: app("Spotify"),
       y: app("Brave Browser Beta"),
+      // QMK Macros
+      v: app("Via"), // M0
+      t: open("raycast://script-commands/run-topgrade"), // M1
+      d: open("raycast://script-commands/edit-dotfiles"), // M2
+      n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
-      d: open("raycast://script-commands/edit-dotfiles"),
-      e: app("Zed"), // e - editor
-      f: app("Figma"),
-      g: app("Adobe Illustrator 2025"), // g - graphic design
-      m: app("Microsoft Teams"),
-      n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"),
+      b: app("BambuStudio"), // b - BambuStudio
+      f: app("Figma"), // f - Figma
+      d: app("Adobe InDesign 2025"), // d - Adobe InDesign
+      i: app("Adobe Illustrator 2025"), // i - Adobe Illustrator
+      p: app("Adobe Photoshop 2025"), // p - Adobe Photoshop
+      m: app("Microsoft Teams"), // m - Microsoft Teams
+      n: app("Obsidian"), // n - Obsidian notes
       t: app("kitty"),
-      v: app("Via"),
       y: app("Zen Browser"),
     },
   }),
