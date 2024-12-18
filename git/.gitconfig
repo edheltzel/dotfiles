@@ -34,16 +34,16 @@
   changed   = green
   untracked = cyan
 [diff]
-  tool = vscode
+  tool = windsurf
   colorMoved = default
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "windsurf"]
+  cmd = windsurf --wait --diff $LOCAL $REMOTE
 [merge]
-  tool = vscode
+  tool = windsurf
   log  = true
   conflictstyle = diff3
-[mergetool "vscode"]
-  cmd = code --wait $MERGED
+[mergetool "windsurf"]
+  cmd = windsurf --wait $MERGED
 [apply]
   whitespace = fix
 [interactive]
