@@ -94,7 +94,6 @@ const rules: KarabinerRules[] = [
       m: app("Microsoft Teams"), // m - Microsoft Teams
       n: app("Obsidian"), // n - Obsidian notes
       t: app("kitty"),
-      y: app("Brave Browser Beta"),
     },
   }),
   // Homerow Configuration
