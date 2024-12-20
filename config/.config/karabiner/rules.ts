@@ -78,7 +78,6 @@ const rules: KarabinerRules[] = [
       f: app("Invoice Ninja"), // f - finance
       m: app("Messages"), // m - Apple Messages
       s: app("Spotify"),
-      y: app("Brave Browser Beta"),
       // QMK Macros
       v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
@@ -95,7 +94,7 @@ const rules: KarabinerRules[] = [
       m: app("Microsoft Teams"), // m - Microsoft Teams
       n: app("Obsidian"), // n - Obsidian notes
       t: app("kitty"),
-      y: app("Zen Browser"),
+      y: app("Brave Browser Beta"),
     },
   }),
   // Homerow Configuration
