@@ -95,6 +95,9 @@ const rules: KarabinerRules[] = [
       s: app("Spotify"),
       t: app("kitty"), // t - kitty terminal
     },
+    left_shift: {
+      m: app("Mail"),
+    },
   }),
   // Homerow Configuration
   // Enables keyboard-driven UI navigation using homerow keys
