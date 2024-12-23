@@ -92,7 +92,7 @@ const rules: KarabinerRules[] = [
       p: app("Adobe Photoshop 2025"), // p - Adobe Photoshop
       m: app("Microsoft Teams"), // m - Microsoft Teams
       n: app("Obsidian"), // n - Obsidian notes
-      s: app("Spotify"), // s - Spotify
+      s: app("Spotify"),
       t: app("kitty"), // t - kitty terminal
     },
   }),
