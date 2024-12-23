@@ -66,7 +66,7 @@ const rules: KarabinerRules[] = [
         description: "Mouse 5 => Forward",
       },
     ],
-    "^com\\.apple\\.Safari$"
+    "^com\\.apple\\.Safari$",
   ),
   // App launching shortcuts using Hyper key combinations - see Raycast settings for Hyper+non_modifier_key shortcuts
   // Two layers of shortcuts:
@@ -77,7 +77,6 @@ const rules: KarabinerRules[] = [
     left_alt: {
       f: app("Invoice Ninja"), // f - finance
       m: app("Messages"), // m - Apple Messages
-      s: app("Spotify"),
       // QMK Macros
       v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
@@ -93,7 +92,11 @@ const rules: KarabinerRules[] = [
       p: app("Adobe Photoshop 2025"), // p - Adobe Photoshop
       m: app("Microsoft Teams"), // m - Microsoft Teams
       n: app("Obsidian"), // n - Obsidian notes
-      t: app("kitty"),
+      s: app("Spotify"),
+      t: app("kitty"), // t - kitty terminal
+    },
+    left_shift: {
+      m: app("Mail"),
     },
   }),
   // Homerow Configuration
@@ -165,6 +168,6 @@ fs.writeFileSync(
       ],
     },
     null,
-    2
-  )
+    2,
+  ),
 );
