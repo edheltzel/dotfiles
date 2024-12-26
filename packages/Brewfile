@@ -227,7 +227,8 @@ brew 'm-cli'                     # All in one MacOS management CLI app: m help
 cask 'onyx'                      # System maintenance
 cask 'transnomino'               # A batch rename utility
 brew 'shortcat'                  # vim motions for MacOS
-brew 'localsend'                 # AirDrop like app for everything else
+cask 'mouseless'                 # Mouseless app for MacOS  
+# brew 'localsend'                 # AirDrop like app for everything else
 cask 'openinterminal'            # Finder button, opens directory in terminal
 cask 'itsycal'                   # Calendar in menubar
 brew 'stats'                     # System stats in menubar
