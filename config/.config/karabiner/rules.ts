@@ -86,7 +86,6 @@ const rules: KarabinerRules[] = [
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
-      b: app("BambuStudio"), // b - BambuStudio
       f: app("Figma"), // f - Figma
       d: app("Adobe InDesign 2025"), // d - Adobe InDesign
       i: app("Adobe Illustrator 2025"), // i - Adobe Illustrator
@@ -95,6 +94,8 @@ const rules: KarabinerRules[] = [
       comma: app("System Settings"),
     },
     a: {
+      b: app("BambuStudio"),
+      f: app("Autodesk Fusion"),
       k: app("kitty"),
       m: app("Mail"),
       o: app("Obsidian"),
