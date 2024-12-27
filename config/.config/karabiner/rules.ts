@@ -82,6 +82,7 @@ const rules: KarabinerRules[] = [
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
+      i: open("raycast://extensions/raycast/raycast-ai/ai-chat")
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
@@ -91,13 +92,15 @@ const rules: KarabinerRules[] = [
       i: app("Adobe Illustrator 2025"), // i - Adobe Illustrator
       p: app("Adobe Photoshop 2025"), // p - Adobe Photoshop
       m: app("Microsoft Teams"), // m - Microsoft Teams
-      n: app("Obsidian"), // n - Obsidian notes
-      s: app("Spotify"),
-      t: app("kitty"), // t - kitty terminal
+      comma: app("System Settings"),
     },
-    left_shift: {
+    a: {
+      k: app("kitty"),
       m: app("Mail"),
-    },
+      o: app("Obsidian"),
+      s: app("Spotify"),
+      slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
+    }
   }),
   // Homerow Configuration
   // Enables keyboard-driven UI navigation using homerow keys

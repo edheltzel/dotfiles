@@ -106,11 +106,23 @@ export function createHyperSubLayers(subLayers: {
                     value: 1,
                   },
                 },
+                {
+                  set_variable: {
+                    name: "in_sublayer",
+                    value: 1,
+                  },
+                },
               ],
               to_after_key_up: [
                 {
                   set_variable: {
                     name: generateSubLayerVariableName(key as KeyCode),
+                    value: 0,
+                  },
+                },
+                {
+                  set_variable: {
+                    name: "in_sublayer",
                     value: 0,
                   },
                 },

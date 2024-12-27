@@ -220,7 +220,14 @@ export function createHyperNavigationRule(mappings: HyperNavigationMapping): Hyp
         }
       },
       to: [{ key_code: to_key }],
-      type: "basic"
+      type: "basic",
+      conditions: [
+        {
+          type: "variable_unless",
+          name: "in_sublayer",
+          value: 1
+        }
+      ]
     }))
   };
 }

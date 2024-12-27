@@ -78,14 +78,7 @@
                     "key_code": "left_arrow"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
                 "description": "j = down_arrow",
@@ -105,14 +98,7 @@
                     "key_code": "down_arrow"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
                 "description": "k = up_arrow",
@@ -132,14 +118,7 @@
                     "key_code": "up_arrow"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
                 "description": "l = right_arrow",
@@ -159,14 +138,7 @@
                     "key_code": "right_arrow"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
                 "description": "u = page_up",
@@ -186,14 +158,7 @@
                     "key_code": "page_up"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
                 "description": "i = page_down",
@@ -213,14 +178,7 @@
                     "key_code": "page_down"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
                 "description": "o = home",
@@ -240,14 +198,7 @@
                     "key_code": "home"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
                 "description": "p = end",
@@ -267,14 +218,7 @@
                     "key_code": "end"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               }
             ]
           },
@@ -356,24 +300,12 @@
                       "name": "hyper_sublayer_left_alt",
                       "value": 1
                     }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
-                      "value": 1
-                    }
                   }
                 ],
                 "to_after_key_up": [
                   {
                     "set_variable": {
                       "name": "hyper_sublayer_left_alt",
-                      "value": 0
-                    }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
                       "value": 0
                     }
                   }
@@ -540,33 +472,6 @@
                     "value": 1
                   }
                 ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat"
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
-                "type": "basic",
-                "from": {
-                  "key_code": "i",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
               }
             ]
           },
@@ -592,24 +497,12 @@
                       "name": "hyper_sublayer_left_command",
                       "value": 1
                     }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
-                      "value": 1
-                    }
                   }
                 ],
                 "to_after_key_up": [
                   {
                     "set_variable": {
                       "name": "hyper_sublayer_left_command",
-                      "value": 0
-                    }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
                       "value": 0
                     }
                   }
@@ -780,13 +673,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'System Settings.app'"
+                    "shell_command": "open -a 'Obsidian.app'"
                   }
                 ],
-                "description": "Open -a 'System Settings.app'",
+                "description": "Open -a 'Obsidian.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "comma",
+                  "key_code": "n",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -800,6 +693,122 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_left_command",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Spotify.app'"
+                  }
+                ],
+                "description": "Open -a 'Spotify.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_command",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'kitty.app'"
+                  }
+                ],
+                "description": "Open -a 'kitty.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_command",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key sublayer \"left_shift\"",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_left_shift",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_left_shift",
+                      "value": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Mail.app'"
+                  }
+                ],
+                "description": "Open -a 'Mail.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_shift",
                     "value": 1
                   }
                 ]
@@ -828,12 +837,6 @@
                       "name": "hyper_sublayer_a",
                       "value": 1
                     }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
-                      "value": 1
-                    }
                   }
                 ],
                 "to_after_key_up": [
@@ -842,120 +845,6 @@
                       "name": "hyper_sublayer_a",
                       "value": 0
                     }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
-                      "value": 0
-                    }
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'kitty.app'"
-                  }
-                ],
-                "description": "Open -a 'kitty.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Mail.app'"
-                  }
-                ],
-                "description": "Open -a 'Mail.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "m",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Obsidian.app'"
-                  }
-                ],
-                "description": "Open -a 'Obsidian.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "o",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Spotify.app'"
-                  }
-                ],
-                "description": "Open -a 'Spotify.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "s",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 1
                   }
                 ]
               },
@@ -968,7 +857,7 @@
                 "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
                 "type": "basic",
                 "from": {
-                  "key_code": "slash",
+                  "key_code": "i",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
