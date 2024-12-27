@@ -1,0 +1,10 @@
+config-file = colors/eldritch
+
+window-padding-x = 4,2
+window-padding-y = 6,0
+
+font-family = "Lilex"
+font-size = 17
+
+macos-titlebar-style = hidden
+confirm-close-surface = false
