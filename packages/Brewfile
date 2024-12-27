@@ -227,7 +227,7 @@ brew 'm-cli'                     # All in one MacOS management CLI app: m help
 cask 'onyx'                      # System maintenance
 cask 'transnomino'               # A batch rename utility
 brew 'shortcat'                  # vim motions for MacOS
-cask 'mouseless'                 # Mouseless app for MacOS  
+cask 'mouseless'                 # Mouseless app for MacOS
 # brew 'localsend'                 # AirDrop like app for everything else
 cask 'openinterminal'            # Finder button, opens directory in terminal
 cask 'itsycal'                   # Calendar in menubar
@@ -283,8 +283,9 @@ cask 'windsurf'                       # Ai Code editor
 cask 'cursor'                         # Ai Code editor
 
 # Terminal emulators
-cask 'kitty'                          # GPU based Terminal emulator
-cask 'wezterm'                        # GPU-accelerated cross-platform terminal emulator and multiplexer
+cask 'ghostty'                        # Terminal emulator - Zig
+cask 'kitty'                          # Terminal emulator - Python/C
+cask 'wezterm'                        # Terminal emulator - Rust
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
