@@ -33,12 +33,14 @@ config.color_scheme = "Eldritch"
 
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Lilex", weight = "Regular", scale = 1.45 },
+  { family = "Lilex",      weight = "Regular", scale = 1.45 },
   { family = "CommitMono", weight = "Regular", scale = 1.45 },
 })
 
--- config.macos_window_background_blur = 50
--- config.window_background_opacity = 0.9
+-- Window Config
+config.max_fps = 240
+config.macos_window_background_blur = 50
+config.window_background_opacity = 0.8
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt" -- AlwaysPrompt | NeverPrompt
 config.scrollback_lines = 10000
