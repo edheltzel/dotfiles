@@ -8,3 +8,8 @@ font-size = 17
 
 macos-titlebar-style = hidden
 confirm-close-surface = false
+
+quick-terminal-animation-duration = 0.08
+
+keybind = super+i=inspector:toggle
+keybind = super+r=reload_config
