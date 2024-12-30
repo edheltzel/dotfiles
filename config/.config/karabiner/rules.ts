@@ -96,7 +96,7 @@ const rules: KarabinerRules[] = [
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
       f: app("Autodesk Fusion"),
-      g: app("Ghostty"),
+      t: app("Wezterm"),
       k: app("kitty"),
       m: app("Mail"),
       o: app("Obsidian"),
