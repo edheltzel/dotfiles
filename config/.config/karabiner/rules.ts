@@ -78,11 +78,10 @@ const rules: KarabinerRules[] = [
       f: app("Invoice Ninja"), // f - finance
       m: app("Messages"), // m - Apple Messages
       // QMK Macros
-      v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
-      i: open("raycast://extensions/raycast/raycast-ai/ai-chat")
+      i: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
@@ -94,6 +93,7 @@ const rules: KarabinerRules[] = [
       comma: app("System Settings"),
     },
     a: {
+      slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
       f: app("Autodesk Fusion"),
       g: app("Ghostty"),
@@ -101,8 +101,8 @@ const rules: KarabinerRules[] = [
       m: app("Mail"),
       o: app("Obsidian"),
       s: app("Spotify"),
-      slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-    }
+      v: app("Via"),
+    },
   }),
   // Homerow Configuration
   // Enables keyboard-driven UI navigation using homerow keys
