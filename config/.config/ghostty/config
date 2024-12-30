@@ -1,3 +1,11 @@
 theme = tokyonight
 font-family = "Lilex"
 font-size = 17
+
+macos-non-native-fullscreen = true
+
+quick-terminal-position = "bottom"
+keybind = cmd+control+alt+space=toggle_quick_terminal
+
+keybind = super+i=inspector:toggle
+keybind = super+r=reload_config
