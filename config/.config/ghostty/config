@@ -1,11 +1,12 @@
-theme = tokyonight
+config-file = "colors/eldritch"
 font-family = "Lilex"
 font-size = 17
 
+window-colorspace = "display-p3"
 macos-non-native-fullscreen = true
 
 quick-terminal-position = "bottom"
 keybind = cmd+control+alt+space=toggle_quick_terminal
 
-keybind = super+i=inspector:toggle
-keybind = super+r=reload_config
+keybind = cmd+i=inspector:toggle
+keybind = cmd+r=reload_config
