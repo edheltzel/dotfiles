@@ -33,7 +33,7 @@ config.color_scheme = "Eldritch"
 
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Lilex", weight = "Regular", scale = 1.45 },
+  { family = "Lilex",      weight = "Regular", scale = 1.45 },
   { family = "CommitMono", weight = "Regular", scale = 1.45 },
 })
 
