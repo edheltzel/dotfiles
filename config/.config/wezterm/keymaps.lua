@@ -18,7 +18,7 @@ local keys = {
   --[[
    This clears the screen without clearning the scrollback but make sure to
    add a MacOS keyboard short for Wezterm to change the Clear scrollback to something
-   else. I use `ctrl+shift+k` for this. This is workaround
+   else. I use `ctrl+shift+k` for this. This is a workaround
   --]]
   {
     key = "k",

@@ -3,6 +3,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 -- Load key mappings and key tables from external file
+-- see ./keybindings.lua
 local keymaps = require("keymaps")
 
 local fish_path = "/opt/homebrew/bin/fish"
@@ -29,18 +30,19 @@ config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
 -- Color Scheme - see: https://wezfurlong.org/wezmerm/colorschemes/index.html
+-- see ./colors/eldritch.toml
 config.color_scheme = "Eldritch"
 
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Lilex",      weight = "Regular", scale = 1.45 },
+  { family = "Lilex", weight = "Regular", scale = 1.45 },
   { family = "CommitMono", weight = "Regular", scale = 1.45 },
 })
 
 -- Window Config
 config.max_fps = 240
--- config.macos_window_background_blur = 50
--- config.window_background_opacity = 0.85
+config.macos_window_background_blur = 30
+config.window_background_opacity = 0.95
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt" -- AlwaysPrompt | NeverPrompt
 config.scrollback_lines = 10000
@@ -50,7 +52,7 @@ config.default_workspace = wezterm.nerdfonts.cod_rocket
 config.initial_cols = 90
 config.initial_rows = 40
 
--- Dim inactive panes with Solarized theme in mind
+-- Dim inactive panes with Eldritch theme
 config.inactive_pane_hsb = {
   saturation = 0.9, -- Slightly reduce saturation for a muted effect
   brightness = 0.5, -- Dim brightness to half for a clear distinction
@@ -111,8 +113,6 @@ wezterm.on("update-status", function(window, pane)
 
   -- Right status
   window:set_right_status(wezterm.format({
-    -- Wezterm has a built-in nerd fonts
-    -- https://wezfurlong.org/wezterm/config/lua/wezterm/nerdfonts.html
     { Text = wezterm.nerdfonts.md_folder .. "  " .. cwd },
     { Text = " ⋮ " },
     { Foreground = { Color = "#e0af68" } },
