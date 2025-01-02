@@ -92,3 +92,6 @@ alias mfs 'php artisan migrate:fresh --seed'
 alias phpunit vendor/bin/phpunit
 alias pest vendor/bin/pest
 alias vapor vendor/bin/vapor
+
+## Games ##
+alias doom 'cd ~/Developer/games/terminal-doom; and zig-out/bin/terminal-doom'
