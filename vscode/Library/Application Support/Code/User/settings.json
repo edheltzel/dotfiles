@@ -278,6 +278,9 @@
 	"workbench.colorCustomizations": {
 		"[Eldritch]": {
 			"cursorColumnColor": "#37f49910",
+			"editor.background": "#18192B",
+			"editorGutter.background": "#18192B",
+			"editorStickyScroll.background": "#0F1013",
 		}
 	},
 	// VIM

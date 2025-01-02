@@ -139,6 +139,7 @@ brew 'sass/sass/migrator'     # Sass mignration tool
 brew 'sass/sass/sass'         # Sass CSS preprocessor
 brew 'sqlite'                 # SQLite database engine
 brew 'tdewolff/tap/minify'    # Minify HTML, CSS, JS, JSON, SVG, XML
+brew 'zig'                    # Zig language
 
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
