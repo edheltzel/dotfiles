@@ -191,7 +191,7 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 # 3. Desktop Applications                                   #
 #############################################################
 
-# Creativity
+# Creativity & 3D
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity-designer'    # Illustrator replacement
 cask 'affinity-publisher'   # InDesign replacement
@@ -199,6 +199,10 @@ cask 'affinity-photo'       # Photoshop replacement
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
+cask 'openscad'             # 3D CAD Modeller
+cask 'kicad'                # Electronics Design Automation
+cask 'autodesk-fusion'      # 3D CAD
+cask 'bambu-studio'         # 3D Slicer
 
 # Media
 cask 'boom'                 # Audio enhancer
