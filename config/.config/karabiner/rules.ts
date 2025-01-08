@@ -76,12 +76,13 @@ const rules: KarabinerRules[] = [
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
       f: app("Invoice Ninja"), // f - finance
+      k: app("kitty"),
       m: app("Messages"), // m - Apple Messages
       // QMK Macros
+      v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
-      i: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
@@ -90,6 +91,7 @@ const rules: KarabinerRules[] = [
       i: app("Adobe Illustrator 2025"),
       p: app("Adobe Photoshop 2025"),
       m: app("Microsoft Teams"),
+      o: app("Obsidian"),
       comma: app("System Settings"),
     },
     a: {
@@ -97,10 +99,9 @@ const rules: KarabinerRules[] = [
       b: app("BambuStudio"),
       f: app("Autodesk Fusion"),
       g: app("Ghostty"),
-      t: app("Wezterm"),
-      k: app("kitty"),
+      k: app("KiCad"),
       m: app("Mail"),
-      o: app("Obsidian"),
+      o: app("OpenSCAD-2021.01"),
       s: app("Spotify"),
       v: app("Via"),
     },

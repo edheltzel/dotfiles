@@ -267,12 +267,44 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'kitty.app'",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_alt",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Messages.app'",
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Messages.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_alt",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Via.app'",
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Via.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -321,22 +353,6 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open 'raycast://customWindowManagementCommand?&name=-FieldNotes'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_alt",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat" }],
                                 "type": "basic"
                             }
                         ]
@@ -467,6 +483,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Obsidian.app'",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'System Settings.app'",
                                 "from": {
                                     "key_code": "comma",
@@ -587,28 +619,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Wezterm.app'",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Wezterm.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'kitty.app'",
+                                "description": "Open -a 'KiCad.app'",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
+                                "to": [{ "shell_command": "open -a 'KiCad.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -635,12 +651,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Obsidian.app'",
+                                "description": "Open -a 'OpenSCAD-2021.01.app'",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
+                                "to": [{ "shell_command": "open -a 'OpenSCAD-2021.01.app'" }],
                                 "type": "basic"
                             },
                             {
