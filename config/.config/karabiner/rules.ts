@@ -101,7 +101,9 @@ const rules: KarabinerRules[] = [
       g: app("Ghostty"),
       k: app("KiCad"),
       m: app("Mail"),
+      n: app("Notes"), // hyper+n via Raycast
       o: app("OpenSCAD-2021.01"),
+      r: app("Reminders"), // hyper+r via Raycast
       s: app("Spotify"),
       v: app("Via"),
     },
