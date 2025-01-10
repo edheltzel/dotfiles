@@ -92,45 +92,44 @@ const rules: KarabinerRules[] = [
       p: app("Adobe Photoshop 2025"),
       m: app("Microsoft Teams"),
       o: app("Obsidian"),
+      s: app("Safari"),
       comma: app("System Settings"),
     },
     a: {
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
+      d: open("~/Downloads"),
       f: app("Autodesk Fusion"),
       g: app("Ghostty"),
       k: app("KiCad"),
       m: app("Mail"),
-      n: app("Notes"), // hyper+n via Raycast
+      n: app("Notes"),
       o: app("OpenSCAD-2021.01"),
-      r: app("Reminders"), // hyper+r via Raycast
+      r: app("Reminders"),
       s: app("Spotify"),
       v: app("Via"),
     },
   }),
-  // Homerow Configuration
-  // Enables keyboard-driven UI navigation using homerow keys
+  // RightCMD => alt+backspace
+  // quickly deletes the last word with a single tap
   {
-    description: "Homerow Trigger",
+    description: "Delete Last Word",
     manipulators: [
       {
-        description: "Right Control => Homerow",
+        description: "Right CMD => Alt+Backspace",
         from: {
-          key_code: "right_control",
+          key_code: "right_command",
         },
         to: [
           {
-            key_code: "right_control",
+            key_code: "right_command",
           },
         ],
         to_if_alone: [
           {
-            key_code: "spacebar",
+            key_code: "delete_or_backspace",
             modifiers: [
-              "right_command",
-              "right_option",
-              "right_shift",
-              "right_control",
+              "right_alt",
             ],
           },
         ],
