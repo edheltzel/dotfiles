@@ -108,6 +108,7 @@ const rules: KarabinerRules[] = [
       r: app("Reminders"),
       s: app("Spotify"),
       v: app("Via"),
+      y: app("Zen Browser"),
     },
   }),
   // RightCMD => alt+backspace
