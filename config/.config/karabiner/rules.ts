@@ -138,6 +138,36 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+  // Homerow Configuration
+  // Enables keyboard-driven UI navigation using homerow keys
+  {
+    description: "Homerow Trigger",
+    manipulators: [
+      {
+        description: "Right Control => Homerow",
+        from: {
+          key_code: "right_control",
+        },
+        to: [
+          {
+            key_code: "right_control",
+          },
+        ],
+        to_if_alone: [
+          {
+            key_code: "spacebar",
+            modifiers: [
+              "right_command",
+              "right_option",
+              "right_shift",
+              "right_control",
+            ],
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  },
 ];
 
 fs.writeFileSync(
