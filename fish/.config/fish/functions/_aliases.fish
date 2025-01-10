@@ -49,7 +49,7 @@ alias del trash
 alias sdel 'sudo rm -rf'
 
 # Editors and Utilities
-alias code windsurf
+# alias code windsurf
 alias serve miniserve #start a simple http server
 alias du dua
 alias zip 'ouch compress'
