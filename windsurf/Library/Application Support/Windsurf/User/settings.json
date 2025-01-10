@@ -468,7 +468,14 @@
 			"name": "Toggle File Explorer",
 			"position": "7",
 			"type": "command"
-		}
+		},
+		{
+			"command": "lazygit.openLazygit",
+			"icon": "git-pull-request-closed",
+			"keys": "g.g",
+			"name": "Open Lazygit",
+			"position": "0",
+			"type": "command"
+		},
 	],
-	"windsurf.autocompleteSpeed": "fast",
 }
