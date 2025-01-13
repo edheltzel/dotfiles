@@ -77,7 +77,6 @@ const rules: KarabinerRules[] = [
     left_alt: {
       f: app("Invoice Ninja"), // f - finance
       k: app("kitty"),
-      m: app("Messages"), // m - Apple Messages
       // QMK Macros
       v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
@@ -98,18 +97,22 @@ const rules: KarabinerRules[] = [
     a: {
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
+      c: app("OpenSCAD-2021.01"),
       d: open("~/Downloads"),
       f: app("Autodesk Fusion"),
       g: app("Ghostty"),
       k: app("KiCad"),
-      m: app("Mail"),
+      m: app("Messages"), // m - Apple Messages
       n: app("Notes"),
-      o: app("OpenSCAD-2021.01"),
+      o: app("OrcaSlicer"),
       r: app("Reminders"),
       s: app("Spotify"),
       v: app("Via"),
-      y: app("Zen Browser"),
+      y: app("Brave Browser Beta"),
     },
+    m:{
+      k: app("Mail")
+    }
   }),
   // RightCMD => alt+backspace
   // quickly deletes the last word with a single tap
