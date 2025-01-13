@@ -42,6 +42,7 @@ alias cuts 'eval $EDITOR ~/.dotfiles/dotfiles.code-workspace'
 alias kb 'eval $EDITOR ~/Developer/kb'
 
 # Actions
+alias e '$EDITOR' # open in Default Editor
 alias o open
 alias oo 'open .'
 alias oa 'open -a'

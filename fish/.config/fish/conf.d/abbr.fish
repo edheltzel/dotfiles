@@ -9,6 +9,8 @@ if status is-interactive
     abbr --add cl clear
     # abbr --add cls '$DROPBOX/Clients'
     # Editors & Terminals
+    abbr --add ee 'e -r .'
+    abbr --add en 'e -n .'
     abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
