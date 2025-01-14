@@ -1,11 +1,13 @@
 ### OSX ###
 .DS_Store
+
 ### Git ###
 #git/.gitconfig-local
 
 ### VIM ###
 NetrwTreeListing*
 nvim/.config/nvim/lazy-lock.json
+#
 ### LazyVim ###
 tt.*
 .tests
@@ -15,7 +17,10 @@ debug
 foo.*
 *.log
 data
-#
+
+### Helix Editor ###
+config/.config/helix/runtime
+
 ### Karabiner ###
 karabiner/automatic_backups/
 

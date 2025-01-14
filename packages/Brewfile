@@ -242,7 +242,9 @@ cask 'typinator'                 # Text expander - macOS only
 cask 'keka'                      # File archiver and extractor
 
 # Keyboard+Mouse Hacks
+brew 'qmk/qmk/qmk'               # Keyboard firmware
 cask 'via'                       # Keyboard configuration desktop client
+cask 'vial'                      # Keyboard configuration desktop client
 cask 'karabiner-elements'        # Keyboard customization tool
 
 # Menu Bar Hacks
