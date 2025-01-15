@@ -1,6 +1,16 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.ai.codeium",
+    "lazyvim.plugins.extras.ai.supermaven",
+    "lazyvim.plugins.extras.editor.snacks_picker",
+    "lazyvim.plugins.extras.lang.astro",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.lang.zig"
   ],
   "news": {
     "NEWS.md": "10960"
