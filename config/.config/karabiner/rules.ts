@@ -95,6 +95,7 @@ const rules: KarabinerRules[] = [
       comma: app("System Settings"),
     },
     a: {
+      0: open("'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"),
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
       c: app("OpenSCAD-2021.01"),
@@ -110,7 +111,7 @@ const rules: KarabinerRules[] = [
       v: app("Via"),
       y: app("Brave Browser Beta"),
     },
-    m:{
+    m: {
       k: app("Mail")
     }
   }),
