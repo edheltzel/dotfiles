@@ -76,7 +76,6 @@ const rules: KarabinerRules[] = [
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
       f: app("Invoice Ninja"), // f - finance
-      k: app("kitty"),
       // QMK Macros
       v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
@@ -90,6 +89,7 @@ const rules: KarabinerRules[] = [
       i: app("Adobe Illustrator 2025"),
       p: app("Adobe Photoshop 2025"),
       m: app("Microsoft Teams"),
+      k: app("kitty"),
       o: app("Obsidian"),
       s: app("Safari"),
       comma: app("System Settings"),
