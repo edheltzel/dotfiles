@@ -451,12 +451,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'kitty.app'",
+                                "description": "Open -a 'KiCad.app'",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
+                                "to": [{ "shell_command": "open -a 'KiCad.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -667,12 +667,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'KiCad.app'",
+                                "description": "Open -a 'kitty.app'",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'KiCad.app'" }],
+                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
                                 "type": "basic"
                             },
                             {
