@@ -84,6 +84,7 @@ brew 'jpegoptim'            # JPEG image compression
 brew 'mozjpeg'              # JPEG image compression
 brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
+brew 'glow'                 # Render markdown on the CLI
 
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
