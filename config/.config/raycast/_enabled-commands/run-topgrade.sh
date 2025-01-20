@@ -15,8 +15,8 @@
 # @raycast.author edheltzel
 # @raycast.authorURL https://raycast.com/edheltzel
 
-open -a kitty
+open -a wezterm
 sleep 1 # Wait for terminal to open
-osascript -e 'tell application "kitty" to activate'
+osascript -e 'tell application "wezterm" to activate'
 osascript -e 'tell application "System Events" to keystroke "topgrade"'
 osascript -e 'tell application "System Events" to key code 36' # Press Enter
