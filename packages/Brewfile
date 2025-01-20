@@ -56,6 +56,7 @@ brew 'bat'                  # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
 brew 'broot'                # File tree explorer (better tree) - Rust
 brew 'chafa'                # Image to ASCII art converter
+brew 'assimp'               # Open source library to import various 3d-model-formats in an uniform manner
 brew 'yazi'                 # File manager - Rust
 brew 'coreutils'            # GNU core utilities (those that come with macOS are outdated)
 brew 'duti'                 # Set default apps for file types
@@ -83,6 +84,7 @@ brew 'jpegoptim'            # JPEG image compression
 brew 'mozjpeg'              # JPEG image compression
 brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
+brew 'glow'                 # Render markdown on the CLI
 
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
@@ -191,7 +193,7 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 # 3. Desktop Applications                                   #
 #############################################################
 
-# Creativity
+# Creativity & 3D
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity-designer'    # Illustrator replacement
 cask 'affinity-publisher'   # InDesign replacement
@@ -199,6 +201,11 @@ cask 'affinity-photo'       # Photoshop replacement
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
+cask 'blender'              # 3D Software
+cask 'openscad'             # 3D CAD Modeller
+cask 'kicad'                # Electronics Design Automation
+cask 'autodesk-fusion'      # 3D CAD
+cask 'bambu-studio'         # 3D Slicer
 
 # Media
 cask 'boom'                 # Audio enhancer
@@ -238,7 +245,9 @@ cask 'typinator'                 # Text expander - macOS only
 cask 'keka'                      # File archiver and extractor
 
 # Keyboard+Mouse Hacks
+brew 'qmk/qmk/qmk'               # Keyboard firmware
 cask 'via'                       # Keyboard configuration desktop client
+cask 'vial'                      # Keyboard configuration desktop client
 cask 'karabiner-elements'        # Keyboard customization tool
 
 # Menu Bar Hacks

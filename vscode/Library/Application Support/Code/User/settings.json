@@ -280,7 +280,7 @@
 			"cursorColumnColor": "#37f49910",
 			"editor.background": "#18192B",
 			"editorGutter.background": "#18192B",
-			"editorStickyScroll.background": "#0F1013",
+			"editorStickyScroll.background": "#0F1013"
 		}
 	},
 	// VIM
@@ -472,6 +472,14 @@
 			"name": "Toggle File Explorer",
 			"position": "7",
 			"type": "command"
-		}
+		},
+		{
+			"command": "lazygit.openLazygit",
+			"icon": "git-pull-request-closed",
+			"keys": "g.g",
+			"name": "Open Lazygit",
+			"position": "0",
+			"type": "command"
+		},
 	],
 }

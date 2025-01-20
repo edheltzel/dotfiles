@@ -137,7 +137,7 @@
 	"editor.wordWrap": "on",
 	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
-	"workbench.colorTheme": "Eldritch",
+	"workbench.colorTheme": "Tokyo Night",
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.showIcons": false,
@@ -271,14 +271,7 @@
 	"telemetry.telemetryLevel": "crash",
 	// TOML
 	"evenBetterToml.formatter.columnWidth": 120,
-	"workbench.colorCustomizations": {
-		"[Eldritch]": {
-			"cursorColumnColor": "#37f49910",
-			"editor.background": "#18192B",
-			"editorGutter.background": "#18192B",
-			"editorStickyScroll.background": "#0F1013"
-		}
-	},
+	"workbench.colorCustomizations": {},
 	// VIM
 	"vim.changeWordIncludesWhitespace": true,
 	"vim.cursorStylePerMode.insert": "line",
@@ -468,7 +461,14 @@
 			"name": "Toggle File Explorer",
 			"position": "7",
 			"type": "command"
-		}
+		},
+		{
+			"command": "lazygit.openLazygit",
+			"icon": "git-pull-request-closed",
+			"keys": "g.g",
+			"name": "Open Lazygit",
+			"position": "0",
+			"type": "command"
+		},
 	],
-	"windsurf.autocompleteSpeed": "fast",
 }

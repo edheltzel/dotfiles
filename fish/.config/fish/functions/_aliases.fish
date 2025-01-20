@@ -38,10 +38,12 @@ alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
-alias cuts 'eval $EDITOR ~/.dotfiles/dotfiles.code-workspace'
-alias kb 'eval $EDITOR ~/Developer/kb'
 
+alias cuts 'eval $EDITOR ~/.dotfiles/dotfiles.code-workspace'
+alias ed 'cd ~/.dotfiles; and nvim .'
+#
 # Actions
+alias e '$EDITOR' # open in Default Editor
 alias o open
 alias oo 'open .'
 alias oa 'open -a'
@@ -49,7 +51,7 @@ alias del trash
 alias sdel 'sudo rm -rf'
 
 # Editors and Utilities
-alias code windsurf
+# alias code windsurf
 alias serve miniserve #start a simple http server
 alias du dua
 alias zip 'ouch compress'

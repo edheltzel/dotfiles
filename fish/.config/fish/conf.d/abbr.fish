@@ -9,6 +9,8 @@ if status is-interactive
     abbr --add cl clear
     # abbr --add cls '$DROPBOX/Clients'
     # Editors & Terminals
+    abbr --add ee 'e -r .'
+    abbr --add en 'e -n .'
     abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
@@ -22,10 +24,10 @@ if status is-interactive
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
     abbr --add lg lazygit
+    abbr --add gg lazygit
     abbr --add dls '~/Downloads/'
     abbr --add eva 'eval ssh-agent -s; and ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
     abbr --add gems 'gem list'
-    abbr --add gg 'go get GITHUB_URL'
     abbr --add ghw 'gh repo view --web'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
     abbr --add ghm --set-cursor 'gh pr merge % --merge'
