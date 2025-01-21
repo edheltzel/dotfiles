@@ -204,7 +204,8 @@ cask 'principle'            # Prototyping tool
 cask 'blender'              # 3D Software
 cask 'openscad'             # 3D CAD Modeller
 cask 'kicad'                # Electronics Design Automation
-cask 'autodesk-fusion'      # 3D CAD
+cask 'freecad'              # 3D CAD - open source
+cask 'autodesk-fusion'      # 3D CAD - freeware
 cask 'bambu-studio'         # 3D Slicer
 
 # Media
