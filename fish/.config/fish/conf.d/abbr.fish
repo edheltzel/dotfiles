@@ -43,6 +43,7 @@ if status is-interactive
     abbr --add buns 'bun pm ls -g'
     abbr --add siz 'du -khsc'
     abbr --add sp speedtest
+    abbr --add spp speedtest
     abbr --add grabit 'wget -mkEpnp url_here'
     abbr --add link 'ln -s'
     abbr --add symlink 'ln -s'
