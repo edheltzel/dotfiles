@@ -42,8 +42,8 @@ if status is-interactive
     abbr --add pnpms 'pnpm list -g'
     abbr --add buns 'bun pm ls -g'
     abbr --add siz 'du -khsc'
-    abbr --add sp speedtest
-    abbr --add spp speedtest
+    abbr --add sp 'speedtest -u Gbps'
+    abbr --add spp 'speedtest -u Gbps'
     abbr --add grabit 'wget -mkEpnp url_here'
     abbr --add link 'ln -s'
     abbr --add symlink 'ln -s'
