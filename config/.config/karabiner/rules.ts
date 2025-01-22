@@ -91,17 +91,19 @@ const rules: KarabinerRules[] = [
       m: app("Microsoft Teams"),
       k: app("KiCad"),
       s: app("Safari"),
+      v: app("Vial"),
       comma: app("System Settings"),
     },
     a: {
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
+      3: app("Autodesk Fusion"),
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
       c: app("OpenSCAD-2021.01"),
       d: open("~/Downloads"),
-      f: app("Autodesk Fusion"),
+      f: app("FreeCAD"),
       g: app("Ghostty"),
       k: app("kitty"),
       m: app("Messages"), // m - Apple Messages
@@ -109,7 +111,6 @@ const rules: KarabinerRules[] = [
       o: app("Obsidian"),
       r: app("Reminders"),
       s: app("Spotify"),
-      v: app("Via"),
       y: app("Brave Browser Beta"),
     },
     m: {

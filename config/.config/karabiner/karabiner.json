@@ -483,6 +483,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Vial.app'",
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Vial.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'System Settings.app'",
                                 "from": {
                                     "key_code": "comma",
@@ -545,6 +561,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Autodesk Fusion.app'",
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -619,12 +651,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Autodesk Fusion.app'",
+                                "description": "Open -a 'FreeCAD.app'",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
+                                "to": [{ "shell_command": "open -a 'FreeCAD.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -737,22 +769,6 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Spotify.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Via.app'",
-                                "from": {
-                                    "key_code": "v",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Via.app'" }],
                                 "type": "basic"
                             },
                             {
