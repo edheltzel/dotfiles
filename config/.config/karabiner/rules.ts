@@ -78,9 +78,11 @@ const rules: KarabinerRules[] = [
       f: app("Invoice Ninja"), // f - finance
       // QMK Macros
       v: app("Via"), // M0
+      l: app("Vial"),
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
+      o: open("~/Downloads"),
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
@@ -89,28 +91,26 @@ const rules: KarabinerRules[] = [
       i: app("Adobe Illustrator 2025"),
       p: app("Adobe Photoshop 2025"),
       m: app("Microsoft Teams"),
-      k: app("KiCad"),
-      s: app("Safari"),
-      v: app("Vial"),
+      t: app("Ghostty"), // t - terminal
+      y: app("Safari"),
       comma: app("System Settings"),
     },
+    // Third layer: Hyper + a (app) shortcuts
     a: {
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       3: app("Autodesk Fusion"),
+      4: app("FreeCAD"),
+      5: app("KiCad"),
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
-      c: app("OpenSCAD-2021.01"),
-      d: open("~/Downloads"),
-      f: app("FreeCAD"),
-      g: app("Ghostty"),
-      k: app("kitty"),
       m: app("Messages"), // m - Apple Messages
       n: app("Notes"),
       o: app("Obsidian"),
       r: app("Reminders"),
       s: app("Spotify"),
+      t: app("kitty"), // t - terminal
       y: app("Brave Browser Beta"),
     },
     m: {
