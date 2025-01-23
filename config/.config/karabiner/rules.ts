@@ -83,6 +83,7 @@ const rules: KarabinerRules[] = [
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
       o: open("~/Downloads"),
+      y: app("Safari"),
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
@@ -92,7 +93,7 @@ const rules: KarabinerRules[] = [
       p: app("Adobe Photoshop 2025"),
       m: app("Microsoft Teams"),
       t: app("Ghostty"), // t - terminal
-      y: app("Safari"),
+      y: app("Brave Browser Beta"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -111,7 +112,6 @@ const rules: KarabinerRules[] = [
       r: app("Reminders"),
       s: app("Spotify"),
       t: app("kitty"), // t - terminal
-      y: app("Brave Browser Beta"),
     },
     m: {
       k: app("Mail"),
