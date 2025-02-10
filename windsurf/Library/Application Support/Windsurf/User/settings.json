@@ -471,4 +471,5 @@
 			"type": "command"
 		},
 	],
+	"windsurf.autoExecutionPolicy": "off",
 }
