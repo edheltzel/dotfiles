@@ -75,10 +75,10 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
-      f: app("Invoice Ninja"), // f - finance
+      f: app("Invoice Ninja"),
       // QMK Macros
-      v: app("Via"), // M0
       l: app("Vial"),
+      v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
@@ -92,8 +92,7 @@ const rules: KarabinerRules[] = [
       i: app("Adobe Illustrator 2025"),
       p: app("Adobe Photoshop 2025"),
       m: app("Microsoft Teams"),
-      t: app("Ghostty"), // t - terminal
-      y: app("Brave Browser Beta"),
+      y: app("Brave Browser"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -101,20 +100,14 @@ const rules: KarabinerRules[] = [
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
-      3: app("Autodesk Fusion"),
-      4: app("FreeCAD"),
-      5: app("KiCad"),
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       b: app("BambuStudio"),
-      m: app("Messages"), // m - Apple Messages
-      n: app("Notes"),
-      o: app("Obsidian"),
-      r: app("Reminders"),
-      s: app("Spotify"),
-      t: app("kitty"), // t - terminal
-    },
-    m: {
+      f: app("Autodesk Fusion"),
       k: app("Mail"),
+      m: app("Messages"),
+      o: app("Obsidian"),
+      s: app("Spotify"),
+      t: app("kitty"),
     },
   }),
   // RightCMD => alt+backspace
