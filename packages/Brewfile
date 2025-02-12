@@ -193,7 +193,7 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 # 3. Desktop Applications                                   #
 #############################################################
 
-# Creativity & 3D
+# Creativity
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity-designer'    # Illustrator replacement
 cask 'affinity-publisher'   # InDesign replacement
@@ -201,12 +201,16 @@ cask 'affinity-photo'       # Photoshop replacement
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool
+
+# 3D Modeling & CAD
 cask 'blender'              # 3D Software
 cask 'openscad'             # 3D CAD Modeller
-cask 'kicad'                # Electronics Design Automation
+cask 'kicad'                # Electronics Design Automation - PCB design
 cask 'freecad'              # 3D CAD - open source
 cask 'autodesk-fusion'      # 3D CAD - freeware
 cask 'bambu-studio'         # 3D Slicer
+cask 'orcaslicer'           # 3D Slicer
+cask 'lycheeslicer'         # 3D Slicer
 
 # Media
 cask 'boom'                 # Audio enhancer
@@ -217,6 +221,7 @@ brew 'pandoc'               # Universal file converter
 cask 'vlc'                  # Media player
 brew 'webp'                 # WebP image format
 cask 'shottr'               # Screenshot and recorder app
+cask 'obs'                  # Screen recorder
 
 # Communication and Chat
 cask 'discord'              # Chat app
@@ -289,13 +294,12 @@ cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
-cask 'zed'                            # Code editor - Rust
+#cask 'zed'                            # Code editor - Rust
 cask 'windsurf'                       # Ai Code editor
-cask 'cursor'                         # Ai Code editor
 
 # Terminal emulators
-cask 'ghostty'                        # Terminal emulator - Zig
-cask 'kitty'                          # Terminal emulator - Python/C
+#cask 'ghostty'                        # Terminal emulator - Zig
+#cask 'kitty'                          # Terminal emulator - Python/C
 cask 'wezterm'                        # Terminal emulator - Rust
 
 #############################################################
