@@ -267,12 +267,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Via.app'",
+                                "description": "Open -a 'Vial.app'",
                                 "from": {
-                                    "key_code": "v",
+                                    "key_code": "l",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Via.app'" }],
+                                "to": [{ "shell_command": "open -a 'Vial.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -283,12 +283,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Vial.app'",
+                                "description": "Open -a 'Via.app'",
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "v",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Vial.app'" }],
+                                "to": [{ "shell_command": "open -a 'Via.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -467,22 +467,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Adobe Photoshop 2025.app'",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe Photoshop 2025.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'Microsoft Teams.app'",
                                 "from": {
                                     "key_code": "m",
@@ -499,12 +483,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Ghostty.app'",
+                                "description": "Open -a 'Obsidian.app'",
                                 "from": {
-                                    "key_code": "t",
+                                    "key_code": "o",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
+                                "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -515,12 +499,28 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Brave Browser Beta.app'",
+                                "description": "Open -a 'Adobe Photoshop 2025.app'",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Adobe Photoshop 2025.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Brave Browser.app'",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Brave Browser Beta.app'" }],
+                                "to": [{ "shell_command": "open -a 'Brave Browser.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -603,54 +603,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Autodesk Fusion.app'",
-                                "from": {
-                                    "key_code": "3",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'FreeCAD.app'",
-                                "from": {
-                                    "key_code": "4",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'FreeCAD.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'KiCad.app'",
-                                "from": {
-                                    "key_code": "5",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'KiCad.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
                                 "from": {
                                     "key_code": "slash",
@@ -683,6 +635,54 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Autodesk Fusion.app'",
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Mail.app'",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Mail.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'LycheeSlicer.app'",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'LycheeSlicer.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Messages.app'",
                                 "from": {
                                     "key_code": "m",
@@ -699,44 +699,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Notes.app'",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Notes.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Obsidian.app'",
+                                "description": "Open -a 'OrcaSlicer.app'",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Reminders.app'",
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Reminders.app'" }],
+                                "to": [{ "shell_command": "open -a 'OrcaSlicer.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -753,78 +721,6 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Spotify.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'kitty.app'",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Key sublayer \"m\"",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hyper_sublayer_m",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "set_variable": {
-                                            "name": "in_sublayer",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hyper_sublayer_m",
-                                            "value": 0
-                                        }
-                                    },
-                                    {
-                                        "set_variable": {
-                                            "name": "in_sublayer",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_m",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Mail.app'",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Mail.app'" }],
                                 "type": "basic"
                             }
                         ]

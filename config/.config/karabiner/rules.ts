@@ -90,8 +90,9 @@ const rules: KarabinerRules[] = [
       f: app("Figma"),
       d: app("Adobe InDesign 2025"),
       i: app("Adobe Illustrator 2025"),
-      p: app("Adobe Photoshop 2025"),
       m: app("Microsoft Teams"),
+      o: app("Obsidian"),
+      p: app("Adobe Photoshop 2025"),
       y: app("Brave Browser"),
       comma: app("System Settings"),
     },
@@ -101,13 +102,14 @@ const rules: KarabinerRules[] = [
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      b: app("BambuStudio"),
-      f: app("Autodesk Fusion"),
       k: app("Mail"),
       m: app("Messages"),
-      o: app("Obsidian"),
       s: app("Spotify"),
-      t: app("kitty"),
+      // 3D modeling and slicing
+      f: app("Autodesk Fusion"),
+      b: app("BambuStudio"), // BambuLabs A1+Mini
+      l: app("LycheeSlicer"), // Resin printers
+      o: app("OrcaSlicer"), // FDM printers
     },
   }),
   // RightCMD => alt+backspace
