@@ -619,60 +619,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'BambuStudio.app'",
-                                "from": {
-                                    "key_code": "b",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'BambuStudio.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Autodesk Fusion.app'",
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'Mail.app'",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Mail.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'LycheeSlicer.app'",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'LycheeSlicer.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -699,12 +651,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'OrcaSlicer.app'",
+                                "description": "Open -a 'Spotify.app'",
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "s",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'OrcaSlicer.app'" }],
+                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -715,12 +667,60 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Spotify.app'",
+                                "description": "Open -a 'Autodesk Fusion.app'",
                                 "from": {
-                                    "key_code": "s",
+                                    "key_code": "f",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'BambuStudio.app'",
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'BambuStudio.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'LycheeSlicer.app'",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'LycheeSlicer.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'OrcaSlicer.app'",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'OrcaSlicer.app'" }],
                                 "type": "basic"
                             }
                         ]
