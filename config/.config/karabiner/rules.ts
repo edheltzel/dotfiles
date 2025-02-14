@@ -75,15 +75,14 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
-      f: app("Invoice Ninja"),
+      o: open("~/Downloads"),
+      y: app("Safari"),
       // QMK Macros
-      l: app("Vial"),
       v: app("Via"), // M0
+      l: app("Vial"), // M4
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
-      o: open("~/Downloads"),
-      y: app("Safari"),
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
@@ -105,6 +104,7 @@ const rules: KarabinerRules[] = [
       k: app("Mail"),
       m: app("Messages"),
       s: app("Spotify"),
+      i: app("Invoice Ninja"),
       // 3D modeling and slicing
       f: app("Autodesk Fusion"),
       b: app("BambuStudio"), // BambuLabs A1+Mini
