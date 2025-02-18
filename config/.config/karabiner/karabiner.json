@@ -251,12 +251,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Invoice Ninja.app'",
+                                "description": "Open ~/Downloads",
                                 "from": {
-                                    "key_code": "f",
+                                    "key_code": "o",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Invoice Ninja.app'" }],
+                                "to": [{ "shell_command": "open ~/Downloads" }],
                                 "type": "basic"
                             },
                             {
@@ -267,12 +267,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Vial.app'",
+                                "description": "Open -a 'Safari.app'",
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "y",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Vial.app'" }],
+                                "to": [{ "shell_command": "open -a 'Safari.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -289,6 +289,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Via.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_alt",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Vial.app'",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Vial.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -337,38 +353,6 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open 'raycast://customWindowManagementCommand?&name=-FieldNotes'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_alt",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open ~/Downloads",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open ~/Downloads" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_alt",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Safari.app'",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Safari.app'" }],
                                 "type": "basic"
                             }
                         ]
@@ -657,6 +641,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Invoice Ninja.app'",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Invoice Ninja.app'" }],
                                 "type": "basic"
                             },
                             {
