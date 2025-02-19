@@ -106,10 +106,10 @@ const rules: KarabinerRules[] = [
       s: app("Spotify"),
       i: app("Invoice Ninja"),
       // 3D modeling and slicing
+      h: open("https://cad.onshape.com/signin"),
       f: app("Autodesk Fusion"),
-      b: app("BambuStudio"), // BambuLabs A1+Mini
-      l: app("LycheeSlicer"), // Resin printers
-      o: app("OrcaSlicer"), // FDM printers
+      b: app("BambuStudio"),
+      o: app("OrcaSlicer"),
     },
   }),
   // RightCMD => alt+backspace

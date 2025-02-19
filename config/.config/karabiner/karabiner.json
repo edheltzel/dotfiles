@@ -667,6 +667,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open https://cad.onshape.com/signin",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open https://cad.onshape.com/signin" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Autodesk Fusion.app'",
                                 "from": {
                                     "key_code": "f",
@@ -689,22 +705,6 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'BambuStudio.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'LycheeSlicer.app'",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'LycheeSlicer.app'" }],
                                 "type": "basic"
                             },
                             {
