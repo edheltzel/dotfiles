@@ -499,6 +499,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Spotify.app'",
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Brave Browser.app'",
                                 "from": {
                                     "key_code": "y",
@@ -635,22 +651,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Spotify.app'",
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'Invoice Ninja.app'",
                                 "from": {
                                     "key_code": "i",
@@ -689,6 +689,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Shapr3D.app'",
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Shapr3D.app'" }],
                                 "type": "basic"
                             },
                             {
