@@ -39,7 +39,7 @@ alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
 
-alias cuts 'eval $EDITOR ~/.dotfiles/dotfiles.code-workspace'
+alias cuts 'eval $EDITOR ~/.dotfiles'
 alias ed 'cd ~/.dotfiles; and nvim .'
 #
 # Actions
