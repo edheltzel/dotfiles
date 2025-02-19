@@ -472,4 +472,6 @@
 		},
 	],
 	"windsurf.autoExecutionPolicy": "off",
+	"windsurf.autocompleteSpeed": "default",
+	"windsurf.explainAndFixInCurrentConversation": true,
 }
