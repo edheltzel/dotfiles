@@ -11,14 +11,18 @@
 # 0xffa48cf2 = #a48cf2
 # 0xfff16c75 = #f16c75
 # 0xfff1fc79 = #f1fc79
-# dark mode use:
-#   active_color=0xffa48cf2
-#   inactive_color=0xff212337
+# Light mode use:
+#  active_color=0xff212337
+#  inactive_color=0xffebfafa
+# Dark mode use:
+#  active_color=0xffa48cf2
+#  inactive_color=0xff212337
+
 options=(
   style=round
   width=5.0
-  active_color=0xff212337
-  inactive_color=0xffebfafa
+  active_color=0xffa48cf2
+  inactive_color=0xff212337
 )
 
 borders "${options[@]}"
