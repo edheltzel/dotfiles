@@ -515,6 +515,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'kitty.app'",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Brave Browser.app'",
                                 "from": {
                                     "key_code": "y",
@@ -737,6 +753,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'OrcaSlicer.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'xTool Creative Space.app'",
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'xTool Creative Space.app'" }],
                                 "type": "basic"
                             }
                         ]
