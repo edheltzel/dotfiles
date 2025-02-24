@@ -88,7 +88,7 @@ const rules: KarabinerRules[] = [
     left_command: {
       f: app("Figma"),
       d: app("Adobe InDesign 2025"),
-      i: app("Adobe Illustrator 2025"),
+      i: app("Adobe Illustrator"),
       m: app("Microsoft Teams"),
       o: app("Obsidian"),
       p: app("Adobe Photoshop 2025"),
