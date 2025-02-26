@@ -89,7 +89,7 @@ brew 'glow'                 # Render markdown on the CLI
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
 brew 'btop'         # Resource monitor
-brew 'ctop'         # Docker Container metrics and monitoring - Go
+brew 'ctop'         # Container metrics and monitoring - Go
 brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
 brew 'duf'          # Get info on mounted disks (better df) - Go
 brew 'procs'        # Advanced process viewer (better ps) - Rust
@@ -100,7 +100,7 @@ brew 'kondo'        # Clean up old files and directories - Rust
 brew 'portal'       # file transfer utility - Go
 
 # CLI Development Suits
-# brew 'lazydocker'   # Full Docker management app - Go
+brew 'lazydocker'   # Full Docker management app - Go
 brew 'lazygit'        # TUI for git - Go
 
 # CLI Docs and Cheatsheets
@@ -146,7 +146,8 @@ brew 'zig'                    # Zig language
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
 brew 'httpie'             # Command line HTTP client
-brew 'docker'             # Containers
+#brew 'docker'             # Containers
+brew 'podman'             # Containers
 brew 'orbstack'           # Docker image viewer
 brew 'doctl'              # DigitalOcean CLI
 brew 's3cmd'              # S3 command line tool
