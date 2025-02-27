@@ -94,7 +94,7 @@ const rules: KarabinerRules[] = [
       p: app("Adobe Photoshop 2025"),
       s: app("Spotify"),
       t: app("kitty"),
-      y: app("Zen"),
+      y: app("Brave Browser Beta"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
