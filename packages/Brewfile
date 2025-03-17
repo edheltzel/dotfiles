@@ -223,7 +223,7 @@ cask 'vlc'                  # Media player
 brew 'webp'                 # WebP image format
 cask 'shottr'               # Screenshot and recorder app
 cask 'obs'                  # Screen recorder
-
+cask 'capcut'               # Video Editing
 # Communication and Chat
 cask 'discord'              # Chat app
 cask 'chatgpt'              # ChatGPT app
