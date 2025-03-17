@@ -319,6 +319,7 @@ cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac App Store Installs
+mas 'Shapr3d', id: 1091675654
 mas 'ColorSlurp', id: 1287239339
 mas 'Amphetamine', id: 937984704
 mas 'Icon Slate', id: 439697913
