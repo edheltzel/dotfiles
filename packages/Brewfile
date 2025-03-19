@@ -233,7 +233,7 @@ cask 'bitwarden'            # Password manager
 cask 'clickup'              # Project management
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
-cask 'spotify'              # Music streaming
+#cask 'spotify'              # Music streaming
 cask 'brainfm'              # BrainFM - Music streaming
 
 # Utility Applications
