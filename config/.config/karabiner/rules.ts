@@ -93,7 +93,7 @@ const rules: KarabinerRules[] = [
       o: app("Obsidian"),
       p: app("Adobe Photoshop 2025"),
       s: app("Spotify"),
-      t: app("kitty"),
+      t: app("Toggl Track"),
       y: app("Brave Browser Beta"),
       comma: app("System Settings"),
     },
