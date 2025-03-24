@@ -89,6 +89,7 @@ const rules: KarabinerRules[] = [
       f: app("Figma"),
       d: app("Adobe InDesign 2025"),
       i: app("Adobe Illustrator"),
+      k: app("kitty"),
       m: app("Microsoft Teams"),
       o: app("Obsidian"),
       p: app("Adobe Photoshop 2025"),
