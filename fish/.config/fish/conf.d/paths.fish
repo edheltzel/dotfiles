@@ -57,3 +57,6 @@ test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '
 
 # # Docker
 # set -g fish_user_paths $HOME/.docker/bin $fish_user_paths
+
+# Code Name Goose
+set -gx PATH $PATH /Users/ed/.local/bin
