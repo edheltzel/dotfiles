@@ -295,8 +295,9 @@ cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
+cask 'block-goose'                    # On Machine AI Agent
 #cask 'zed'                            # Code editor - Rust
-cask 'windsurf'                       # Ai Code editor
+#cask 'windsurf'                       # AI Code editor
 
 # Terminal emulators
 #cask 'ghostty'                        # Terminal emulator - Zig
