@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Dots",
+		"name": "Dots ⊙",
 		"rootPath": "/Users/ed/.dotfiles",
 		"paths": [],
 		"tags": [
@@ -18,7 +18,7 @@
 		"enabled": true
 	},
 	{
-		"name": "FD Esbuild",
+		"name": "FD Esbuild 🚀",
 		"rootPath": "/Users/ed/Developer/personal/flightdeck_projects/flightdeck-esbuild",
 		"paths": [],
 		"tags": [
@@ -27,7 +27,7 @@
 		"enabled": true
 	},
 	{
-		"name": "FD Parcel",
+		"name": "FD Parcel 🚀",
 		"rootPath": "/Users/ed/Developer/personal/flightdeck_projects/flightdeck-parcel",
 		"paths": [],
 		"tags": [
@@ -36,7 +36,7 @@
 		"enabled": true
 	},
 	{
-		"name": "better-nunjucks",
+		"name": "better-nunjucks 🫣️",
 		"rootPath": "/Users/ed/Developer/personal/vscode_extensions/better-nunjucks",
 		"paths": [],
 		"tags": [
@@ -45,7 +45,7 @@
 		"enabled": true
 	},
 	{
-		"name": "better-solarized",
+		"name": "better-solarized ☯️",
 		"rootPath": "/Users/ed/Developer/personal/vscode_extensions/better-solarized",
 		"paths": [],
 		"tags": [

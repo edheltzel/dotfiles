@@ -95,7 +95,6 @@ const rules: KarabinerRules[] = [
       p: app("Adobe Photoshop 2025"),
       s: app("Spotify"),
       t: app("Toggl Track"),
-      y: app("Brave Browser Beta"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -114,6 +113,7 @@ const rules: KarabinerRules[] = [
       b: app("BambuStudio"),
       o: app("OrcaSlicer"),
       x: app("xTool Creative Space"),
+      y: app("Brave Browser Beta"),
     },
   }),
   // RightCMD => alt+backspace

@@ -172,7 +172,7 @@ brew 'bettercap'          # Network, scanning and moniroting
 brew 'nmap'               # Port scanning
 brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
 brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
-brew 'dog'                # DNS lookup client (better dig) - Rust
+# brew 'dog'                # DNS lookup client (better dig) - Rust
 brew 'hyperfine'          # Benchmark command-line programs
 cask 'wireshark'
 brew 'termshark'
