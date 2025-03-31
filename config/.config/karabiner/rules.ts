@@ -75,7 +75,6 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
-      o: open("~/Downloads"),
       y: app("Safari"),
       // QMK Macros
       v: app("Via"), // M0
@@ -115,6 +114,13 @@ const rules: KarabinerRules[] = [
       x: app("xTool Creative Space"),
       y: app("Brave Browser Beta"),
     },
+    // Fourth layer: Hyper + f (Finder) shortcuts
+    f: {
+      m: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'"),
+      o: open("~/Downloads"),
+      p: open("~/Desktop"),
+      y: open("~/Documents/3D-CAD"),
+    }
   }),
   // RightCMD => alt+backspace
   // quickly deletes the last word with a single tap
