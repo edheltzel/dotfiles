@@ -28,7 +28,7 @@ tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
 tap 'sass/sass' 								# Sass
 tap 'teamookla/speedtest'   		# Command line speed test utility
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
-tap 'FelixKratz/formulae'       # JankyBorders/Sketchybar - MacOS utilites
+#tap 'FelixKratz/formulae'       # JankyBorders(borders)/Sketchybar - MacOS utilites
 
 #############################################################
 # 1. Command Line                                           #
@@ -49,6 +49,7 @@ brew 'helix'        # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
 brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
+
 
 # CLI Basics
 brew 'ack'                  # Search tool like grep, but faster
@@ -264,7 +265,7 @@ brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
 # Window Management & Tiling
 cask 'alt-tab'                   # Windows like alt-tab
 cask 'nikitabobko/tap/aerospace' # Tiling window manager
-brew 'border'                    # window borders for MacOS - FelixKratz/formulae tap
+#brew 'border'                    # window borders for MacOS - FelixKratz/formulae tap
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
