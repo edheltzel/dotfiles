@@ -387,12 +387,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Figma.app'",
+                                "description": "Open -a 'Finder.app'",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Figma.app'" }],
+                                "to": [{ "shell_command": "open -a 'Finder.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -499,12 +499,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Spotify.app'",
+                                "description": "Open -a 'Toggl Track.app'",
                                 "from": {
-                                    "key_code": "s",
+                                    "key_code": "t",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+                                "to": [{ "shell_command": "open -a 'Toggl Track.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -515,12 +515,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Toggl Track.app'",
+                                "description": "Open -a 'Brave Browser Beta.app'",
                                 "from": {
-                                    "key_code": "t",
+                                    "key_code": "y",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Toggl Track.app'" }],
+                                "to": [{ "shell_command": "open -a 'Brave Browser Beta.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -619,12 +619,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Mail.app'",
+                                "description": "Open -a 'Figma.app'",
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "f",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Mail.app'" }],
+                                "to": [{ "shell_command": "open -a 'Figma.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -667,54 +667,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open https://cad.onshape.com/signin",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open https://cad.onshape.com/signin" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Autodesk Fusion.app'",
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Shapr3D.app'",
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Shapr3D.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_a",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'BambuStudio.app'",
                                 "from": {
                                     "key_code": "b",
@@ -747,12 +699,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'xTool Creative Space.app'",
+                                "description": "Open -a 'Shapr3D.app'",
                                 "from": {
-                                    "key_code": "x",
+                                    "key_code": "s",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'xTool Creative Space.app'" }],
+                                "to": [{ "shell_command": "open -a 'Shapr3D.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -763,12 +715,44 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Brave Browser Beta.app'",
+                                "description": "Open -a 'Autodesk Fusion.app'",
                                 "from": {
-                                    "key_code": "y",
+                                    "key_code": "c",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Brave Browser Beta.app'" }],
+                                "to": [{ "shell_command": "open -a 'Autodesk Fusion.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open https://cad.onshape.com/signin",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open https://cad.onshape.com/signin" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'xTool Creative Space.app'",
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'xTool Creative Space.app'" }],
                                 "type": "basic"
                             }
                         ]
@@ -809,6 +793,22 @@
                                         }
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_f",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open ~/",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open ~/" }],
                                 "type": "basic"
                             },
                             {

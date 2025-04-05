@@ -85,15 +85,15 @@ const rules: KarabinerRules[] = [
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
-      f: app("Figma"),
+      f: app("Finder"),
       d: app("Adobe InDesign 2025"),
       i: app("Adobe Illustrator"),
       k: app("kitty"),
       m: app("Microsoft Teams"),
       o: app("Obsidian"),
       p: app("Adobe Photoshop 2025"),
-      s: app("Spotify"),
       t: app("Toggl Track"),
+      y: app("Brave Browser Beta"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -102,20 +102,20 @@ const rules: KarabinerRules[] = [
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      k: app("Mail"),
+      f: app("Figma"),
       m: app("Messages"),
       i: app("Invoice Ninja"),
       // 3D modeling and slicing
-      h: open("https://cad.onshape.com/signin"),
-      f: app("Autodesk Fusion"),
-      s: app("Shapr3D"),
       b: app("BambuStudio"),
       o: app("OrcaSlicer"),
+      s: app("Shapr3D"),
+      c: app("Autodesk Fusion"),
+      h: open("https://cad.onshape.com/signin"),
       x: app("xTool Creative Space"),
-      y: app("Brave Browser Beta"),
     },
     // Fourth layer: Hyper + f (Finder) shortcuts
     f: {
+      h: open("~/"),
       m: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
