@@ -707,5 +707,9 @@
 	{
 		"key": "alt+cmd+n",
 		"command": "projectManager.listProjectsNewWindow"
+	},
+	{
+		"key": "ctrl+cmd+r",
+		"command": "workbench.action.restartExtensionHost"
 	}
 ]
