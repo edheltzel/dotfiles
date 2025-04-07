@@ -75,6 +75,9 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
+      0: open(
+        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
+      ),
       y: app("Safari"),
       // QMK Macros
       v: app("Via"), // M0
@@ -98,9 +101,6 @@ const rules: KarabinerRules[] = [
     },
     // Third layer: Hyper + a (app) shortcuts
     a: {
-      0: open(
-        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
-      ),
       slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       f: app("Figma"),
       m: app("Messages"),
