@@ -213,7 +213,6 @@ cask 'freecad'              # 3D CAD - open source
 cask 'autodesk-fusion'      # 3D CAD - freeware
 cask 'bambu-studio'         # 3D Slicer
 cask 'orcaslicer'           # 3D Slicer
-cask 'lycheeslicer'         # 3D Slicer
 
 # Media
 cask 'boom'                 # Audio enhancer
