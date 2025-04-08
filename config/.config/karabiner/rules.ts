@@ -79,6 +79,7 @@ const rules: KarabinerRules[] = [
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       y: app("Safari"),
+      k: app("Karabiner-Elements"),
       // QMK Macros
       v: app("Via"), // M0
       l: app("Vial"), // M4
@@ -104,6 +105,7 @@ const rules: KarabinerRules[] = [
       n: app("Invoice Ninja"),
       p: app("Adobe Photoshop 2025"),
       // 3D modeling, slicing & laser cutting
+      1: app("FreeCAD"),
       b: app("BambuStudio"),
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),

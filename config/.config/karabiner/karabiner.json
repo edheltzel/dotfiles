@@ -283,6 +283,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Karabiner-Elements.app'",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Karabiner-Elements.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_alt",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Via.app'",
                                 "from": {
                                     "key_code": "v",
@@ -529,6 +545,22 @@
                                         }
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'FreeCAD.app'",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'FreeCAD.app'" }],
                                 "type": "basic"
                             },
                             {
