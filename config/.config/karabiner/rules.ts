@@ -89,23 +89,21 @@ const rules: KarabinerRules[] = [
     // Second layer: Hyper + left_command shortcuts
     left_command: {
       f: app("Finder"),
-      d: app("Adobe InDesign 2025"),
-      i: app("Adobe Illustrator"),
-      k: app("kitty"),
       m: app("Microsoft Teams"),
       o: app("Obsidian"),
-      p: app("Adobe Photoshop 2025"),
       t: app("Toggl Track"),
       y: app("Brave Browser Beta"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
     a: {
-      slash: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      d: app("Adobe InDesign 2025"),
       f: app("Figma"),
+      i: app("Adobe Illustrator"),
       m: app("Messages"),
-      i: app("Invoice Ninja"),
-      // 3D modeling and slicing
+      n: app("Invoice Ninja"),
+      p: app("Adobe Photoshop 2025"),
+      // 3D modeling, slicing & laser cutting
       b: app("BambuStudio"),
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),

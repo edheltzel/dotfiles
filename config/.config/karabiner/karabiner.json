@@ -419,54 +419,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Adobe InDesign 2025.app'",
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe InDesign 2025.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Adobe Illustrator.app'",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe Illustrator.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'kitty.app'",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'Microsoft Teams.app'",
                                 "from": {
                                     "key_code": "m",
@@ -489,22 +441,6 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Adobe Photoshop 2025.app'",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Adobe Photoshop 2025.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -603,12 +539,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
+                                "description": "Open -a 'Adobe InDesign 2025.app'",
                                 "from": {
-                                    "key_code": "slash",
+                                    "key_code": "d",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat" }],
+                                "to": [{ "shell_command": "open -a 'Adobe InDesign 2025.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -625,6 +561,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Figma.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Adobe Illustrator.app'",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Adobe Illustrator.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -653,10 +605,26 @@
                                 ],
                                 "description": "Open -a 'Invoice Ninja.app'",
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "n",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Invoice Ninja.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_a",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Adobe Photoshop 2025.app'",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Adobe Photoshop 2025.app'" }],
                                 "type": "basic"
                             },
                             {
