@@ -28,7 +28,6 @@ tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
 tap 'sass/sass' 								# Sass
 tap 'teamookla/speedtest'   		# Command line speed test utility
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
-#tap 'FelixKratz/formulae'       # JankyBorders(borders)/Sketchybar - MacOS utilites
 
 #############################################################
 # 1. Command Line                                           #
@@ -148,7 +147,6 @@ brew 'zig'                    # Zig language
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
 brew 'httpie'             # Command line HTTP client
-#brew 'docker'             # Containers
 brew 'podman'             # Containers
 brew 'orbstack'           # Docker image viewer
 brew 'doctl'              # DigitalOcean CLI
@@ -174,7 +172,6 @@ brew 'bettercap'          # Network, scanning and moniroting
 brew 'nmap'               # Port scanning
 brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
 brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
-# brew 'dog'                # DNS lookup client (better dig) - Rust
 brew 'hyperfine'          # Benchmark command-line programs
 cask 'wireshark'
 brew 'termshark'
@@ -234,7 +231,6 @@ cask 'bitwarden'            # Password manager
 cask 'clickup'              # Project management
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
-#cask 'spotify'              # Music streaming
 cask 'brainfm'              # BrainFM - Music streaming
 
 # Utility Applications
@@ -296,13 +292,13 @@ cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
+
+# RAG+CAG LLM 
 cask 'block-goose'                    # On Machine AI Agent
-#cask 'zed'                            # Code editor - Rust
-#cask 'windsurf'                       # AI Code editor
+cask 'ollama'
+brew 'ollama'
 
 # Terminal emulators
-#cask 'ghostty'                        # Terminal emulator - Zig
-#cask 'kitty'                          # Terminal emulator - Python/C
 cask 'wezterm'                        # Terminal emulator - Rust
 
 #############################################################

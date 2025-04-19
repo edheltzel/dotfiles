@@ -92,6 +92,7 @@ const rules: KarabinerRules[] = [
       f: app("Finder"),
       m: app("Microsoft Teams"),
       o: app("Obsidian"),
+      p: app("Passwords"),
       t: app("Toggl Track"),
       y: app("Brave Browser Beta"),
       comma: app("System Settings"),
