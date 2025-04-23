@@ -36,3 +36,4 @@ private/ssh/
 .gitsecret/keys/random_seed
 !*.secret
 config/.config/lazygit/state.yml
+.vsce
