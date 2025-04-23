@@ -7,7 +7,7 @@
 Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment.
 
 > [!WARNING]
-Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
+> Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
 
 But get **inspired**, take what you want, and leave the rest to make it your own.
 
@@ -24,8 +24,8 @@ Table of Contents:
 - [Prerequisites](#prereq)
 - [The Nitty Gritty](#the-nitty-gritty)
 - [MacOS Mods](#macos-mods)
-  - [Aerospace Window Manager](#window-manager)
-  - [Sketchybar](#status-bar)
+  - [~~Aerospace Window Manager~~ Stage Manager + Raycast + Alt-Tab](#window-manager)
+  - [~~Sketchybar~~ Ice Bar](#status-bar)
   - [Karabiner Elements](#keyboard-hacks)
 - [Troubleshooting](#troubleshooting)
   - [Dotfiles](#troubleshoot-dotfiles)
@@ -96,6 +96,7 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 1. Installing Xcode Command Line Tools
    - `sudo softwardupdate -i -a && xcode-select --install` This will install `git` and `make` if not already installed.
 2. Generate a new SSH key and add to GitHub
+
    - [Generate a new ssh keys][GENSSHKEY]
    - `eval "$(ssh-agent -s)" && ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
@@ -180,12 +181,12 @@ Any of the scripts can be run individually at any time to update/reset as needed
 
 <h2 id="macos-mods">MacOS Mods <a href="#to-the-top">↑</a></h2>
 
->[!NOTE]
-> For Aerospace, Sketchybar, & Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.
+> [!NOTE]
+> For Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.
 
-<h4 id="window-manager">Aerospace Window Manager <a href="#to-the-top">↑</a></h4>
-<h4 id="status-bar">Sketchybar <a href="#to-the-top">↑</a></h4>
-Sketchybar is at the bottom of my screen. I use this just to keep track of my workspaces and what apps are open in each workspace. I also use Ice.app to change the appearance of the native macOS menu bar.
+<h4 id="window-manager">~~Aerospace Window~~~ Native MacOS Stage Manager + Raycast + Alt-Tab <a href="#to-the-top">↑</a></h4>
+<h4 id="status-bar">Ice Bar <a href="#to-the-top">↑</a></h4>
+I only use Ice.app to change the appearance of the native MacOS menu bar.
 
 <h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
 
@@ -326,7 +327,7 @@ Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-
 </details>
 <h4 id="troubleshoot-macos">MacOS<a href="#to-the-top">↑</a></h4>
 
-I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.sh` - it's a great resource to see what the default key repeat rate will be.  fs
+I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.sh` - it's a great resource to see what the default key repeat rate will be. fs
 
 <details>
   <summary>WindowServer RAM Leak</summary>
@@ -392,4 +393,3 @@ speedtest
 [ThanksKalis]: https://kalis.me/dotfiles-automating-macos-system-configuration/
 [ThanksLissy]: https://github.com/lissy93/dotfiles
 [ThanksJake]: https://www.jakewiesler.com/blog/managing-dotfiles
-[def]: https://github.com/RaphGL/Tuckr
