@@ -259,14 +259,13 @@ brew 'sketchybar'                # status bar replacement for MacOS - paired wit
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
+# I now use native MacOS Stage Manager with Raycast window management
 cask 'alt-tab'                   # Windows like alt-tab
-cask 'nikitabobko/tap/aerospace' # Tiling window manager
-#brew 'border'                    # window borders for MacOS - FelixKratz/formulae tap
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
-cask 'brave-browser@nightly'     # Brave browser - Secondary
-cask 'firefox@nightly'           # Firefox Nightly - Tertiary
+cask 'brave-browser@beta'        # Brave browser - Secondary
+#cask 'firefox@nightly'          # Firefox Nightly - Tertiary
 cask 'zen-browser'               # Zen Browser - Primary
 
 # Fonts
@@ -295,7 +294,7 @@ cask 'visual-studio-code'             # Code editor - Default
 
 # RAG+CAG LLM 
 cask 'block-goose'                    # On Machine AI Agent
-cask 'ollama'
+cask 'ollama'                         # Local LLMs 
 brew 'ollama'
 
 # Terminal emulators
