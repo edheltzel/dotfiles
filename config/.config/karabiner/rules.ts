@@ -105,6 +105,7 @@ const rules: KarabinerRules[] = [
       m: app("Messages"),
       n: app("Invoice Ninja"),
       p: app("Adobe Photoshop 2025"),
+      t: app("WezTerm"),
       // 3D modeling, slicing & laser cutting
       1: app("FreeCAD"),
       b: app("BambuStudio"),
@@ -117,11 +118,13 @@ const rules: KarabinerRules[] = [
     // Fourth layer: Hyper + f (Finder) shortcuts
     f: {
       h: open("~/"),
-      m: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'"),
+      m: open(
+        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+      ),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
       y: open("~/Documents/3D-CAD"),
-    }
+    },
   }),
   // RightCMD => alt+backspace
   // quickly deletes the last word with a single tap
