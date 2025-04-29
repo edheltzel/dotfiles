@@ -109,6 +109,7 @@ const rules: KarabinerRules[] = [
       // 3D modeling, slicing & laser cutting
       1: app("FreeCAD"),
       b: app("BambuStudio"),
+      e: app("ElegooSlicer"),
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),
       c: app("Autodesk Fusion"),
