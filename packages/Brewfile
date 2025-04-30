@@ -173,8 +173,9 @@ brew 'nmap'               # Port scanning
 brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
 brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
 brew 'hyperfine'          # Benchmark command-line programs
-cask 'wireshark'
+cask 'wireshark'          # Network protocol analyzer
 brew 'termshark'
+cask 'lulu'               # LuLu - Open source firewall 
 
 # Security Utilities
 # brew 'bitwarden-cli'     # Bitwarden CLI - outdated - use https://github.com/bitwarden/cli/
