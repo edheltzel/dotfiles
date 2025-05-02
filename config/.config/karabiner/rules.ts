@@ -122,6 +122,7 @@ const rules: KarabinerRules[] = [
       m: open(
         "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
       ),
+      comma: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
       y: open("~/Documents/3D-CAD"),

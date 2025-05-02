@@ -883,6 +883,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open ~/Documents",
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open ~/Documents" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_f",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open ~/Downloads",
                                 "from": {
                                     "key_code": "o",
