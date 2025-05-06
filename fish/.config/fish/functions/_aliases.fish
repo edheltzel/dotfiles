@@ -54,10 +54,10 @@ alias sdel 'sudo rm -rf'
 # alias code windsurf
 alias serve miniserve #start a simple http server
 alias du dua
-alias zip 'ouch compress'
-alias unzip 'ouch decompress'
-alias listzip 'ouch list'
-alias lzip 'ouch list'
+# alias zip 'ouch compress'
+# alias unzip 'ouch decompress'
+# alias listzip 'ouch list'
+# alias lzip 'ouch list'
 alias wget 'wget -c'
 alias mux zellij
 alias wz wezterm
