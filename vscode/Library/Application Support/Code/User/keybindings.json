@@ -711,5 +711,9 @@
 	{
 		"key": "ctrl+cmd+r",
 		"command": "workbench.action.restartExtensionHost"
+	},
+	{
+		"key": "ctrl+alt+cmd+i",
+		"command": "editor.emmet.action.wrapWithAbbreviation"
 	}
 ]
