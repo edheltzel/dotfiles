@@ -7,6 +7,7 @@ if status is-interactive
     abbr --add casks 'brew list --cask'
     abbr --add bic --set-cursor 'brew install % --cask'
     abbr --add cl clear
+    abbr --add cw center_window
     # abbr --add cls '$DROPBOX/Clients'
     # Editors & Terminals
     abbr --add ee 'e -r .'
@@ -14,9 +15,6 @@ if status is-interactive
     abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
-    abbr --add ws windsurf
-    abbr --add wsn 'windsurf -n .'
-    abbr --add wso 'windsurf -r .'
     abbr --add vim nvim
     abbr --add wez wezterm
 
