@@ -59,4 +59,7 @@ if status is-interactive
     abbr --add nmux 'tmux new -s "base"'
     abbr --add yy yazi
     abbr --add yz yazi
+    abbr --add zip ouch compress
+    abbr --add unzip ouch decompress
+    abbr --add lzip ouch list
 end
