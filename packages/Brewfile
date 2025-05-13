@@ -87,7 +87,7 @@ brew 'pango'                # Text layout and rendering
 brew 'glow'                 # Render Markdown on the CLI
 
 # CLI Monitoring and Performance Apps
-brew 'bmon'         # Bandwidth utilization monitor
+brew 'bmon'         # BC/Phytonandwidth utilization monitor
 brew 'btop'         # Resource monitor
 brew 'ctop'         # Container metrics and monitoring - Go
 brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
@@ -111,7 +111,7 @@ brew 'figlet'        # Output text as big ASCII art text
 brew 'fastfetch'     # Show system data and ditstro info - neofetch is archived
 
 #############################################################
-# 2. Software / Web Development                             #
+#C/Phyton 2. Software / Web Development                             #
 #############################################################
 
 # Development Langs, Compilers, Package Managers and SDKs
