@@ -335,31 +335,6 @@
             ]
           },
           {
-            "description": "Hyper Key + y",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Zen Browser.app'"
-                  }
-                ],
-                "description": "Open -a 'Zen Browser.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "y",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                }
-              }
-            ]
-          },
-          {
             "description": "Hyper Key sublayer \"left_alt\"",
             "manipulators": [
               {
@@ -407,13 +382,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open ~/Downloads"
+                    "shell_command": "open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"
                   }
                 ],
-                "description": "Open ~/Downloads",
+                "description": "Open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
                 "type": "basic",
                 "from": {
-                  "key_code": "o",
+                  "key_code": "0",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -441,6 +416,33 @@
                 "type": "basic",
                 "from": {
                   "key_code": "y",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_alt",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Karabiner-Elements.app'"
+                  }
+                ],
+                "description": "Open -a 'Karabiner-Elements.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -643,67 +645,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Figma.app'"
+                    "shell_command": "open -a 'Finder.app'"
                   }
                 ],
-                "description": "Open -a 'Figma.app'",
+                "description": "Open -a 'Finder.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "f",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Adobe InDesign 2025.app'"
-                  }
-                ],
-                "description": "Open -a 'Adobe InDesign 2025.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "d",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Adobe Illustrator 2025.app'"
-                  }
-                ],
-                "description": "Open -a 'Adobe Illustrator 2025.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "i",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -778,10 +726,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Adobe Photoshop 2025.app'"
+                    "shell_command": "open -a 'Passwords.app'"
                   }
                 ],
-                "description": "Open -a 'Adobe Photoshop 2025.app'",
+                "description": "Open -a 'Passwords.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "p",
@@ -805,10 +753,37 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Brave Browser.app'"
+                    "shell_command": "open -a 'Toggl Track.app'"
                   }
                 ],
-                "description": "Open -a 'Brave Browser.app'",
+                "description": "Open -a 'Toggl Track.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_command",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Brave Browser Beta.app'"
+                  }
+                ],
+                "description": "Open -a 'Brave Browser Beta.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "y",
@@ -906,13 +881,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"
+                    "shell_command": "open -a 'FreeCAD.app'"
                   }
                 ],
-                "description": "Open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
+                "description": "Open -a 'FreeCAD.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "0",
+                  "key_code": "1",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -933,13 +908,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat"
+                    "shell_command": "open -a 'Autodesk Fusion.app'"
                   }
                 ],
-                "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
+                "description": "Open -a 'Autodesk Fusion.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "slash",
+                  "key_code": "c",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -960,13 +935,67 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Mail.app'"
+                    "shell_command": "open -a 'Adobe InDesign 2025.app'"
                   }
                 ],
-                "description": "Open -a 'Mail.app'",
+                "description": "Open -a 'Adobe InDesign 2025.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "k",
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Figma.app'"
+                  }
+                ],
+                "description": "Open -a 'Figma.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Adobe Illustrator.app'"
+                  }
+                ],
+                "description": "Open -a 'Adobe Illustrator.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "i",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1014,40 +1043,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Spotify.app'"
-                  }
-                ],
-                "description": "Open -a 'Spotify.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "s",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open -a 'Invoice Ninja.app'"
                   }
                 ],
                 "description": "Open -a 'Invoice Ninja.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "i",
+                  "key_code": "n",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1068,13 +1070,40 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Autodesk Fusion.app'"
+                    "shell_command": "open -a 'Adobe Photoshop 2025.app'"
                   }
                 ],
-                "description": "Open -a 'Autodesk Fusion.app'",
+                "description": "Open -a 'Adobe Photoshop 2025.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "f",
+                  "key_code": "p",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'WezTerm.app'"
+                  }
+                ],
+                "description": "Open -a 'WezTerm.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1122,13 +1151,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'LycheeSlicer.app'"
+                    "shell_command": "open -a 'ElegooSlicer.app'"
                   }
                 ],
-                "description": "Open -a 'LycheeSlicer.app'",
+                "description": "Open -a 'ElegooSlicer.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "l",
+                  "key_code": "e",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1169,6 +1198,296 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Shapr3D.app'"
+                  }
+                ],
+                "description": "Open -a 'Shapr3D.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open https://cad.onshape.com/signin"
+                  }
+                ],
+                "description": "Open https://cad.onshape.com/signin",
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'xTool Creative Space.app'"
+                  }
+                ],
+                "description": "Open -a 'xTool Creative Space.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "x",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key sublayer \"f\"",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_f",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "in_sublayer",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_f",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "in_sublayer",
+                      "value": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open ~/"
+                  }
+                ],
+                "description": "Open ~/",
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_f",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open '/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'"
+                  }
+                ],
+                "description": "Open '/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_f",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open ~/Documents"
+                  }
+                ],
+                "description": "Open ~/Documents",
+                "type": "basic",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_f",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open ~/Downloads"
+                  }
+                ],
+                "description": "Open ~/Downloads",
+                "type": "basic",
+                "from": {
+                  "key_code": "o",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_f",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open ~/Desktop"
+                  }
+                ],
+                "description": "Open ~/Desktop",
+                "type": "basic",
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_f",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open ~/Documents/3D-CAD"
+                  }
+                ],
+                "description": "Open ~/Documents/3D-CAD",
+                "type": "basic",
+                "from": {
+                  "key_code": "y",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_f",
                     "value": 1
                   }
                 ]
