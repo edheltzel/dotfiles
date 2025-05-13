@@ -94,6 +94,7 @@ const rules: KarabinerRules[] = [
       o: app("Obsidian"),
       p: app("Passwords"),
       t: app("Toggl Track"),
+      u: app("ClickUp"),
       y: app("Brave Browser Beta"),
       comma: app("System Settings"),
     },

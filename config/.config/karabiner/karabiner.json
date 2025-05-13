@@ -499,6 +499,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'ClickUp.app'",
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'ClickUp.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Brave Browser Beta.app'",
                                 "from": {
                                     "key_code": "y",
