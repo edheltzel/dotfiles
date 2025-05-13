@@ -34,7 +34,7 @@ tap 'julien-cpsn/atac'          # A simple API client (postman like) in your ter
 #############################################################
 brew 'fish'                                 # My Default Shell
 brew 'starship'                             # Cross-shell prompt - Rust
-brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
+#brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
 
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
@@ -44,11 +44,10 @@ brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 # CLI Essentials
 brew 'git'          # Version control
 brew 'neovim'       # Text editor
-brew 'helix'        # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
-brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
-
+#brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
+brew 'tmux'         # Terminal multiplexer  
 
 # CLI Basics
 brew 'ack'                  # Search tool like grep, but faster
@@ -85,7 +84,7 @@ brew 'jpegoptim'            # JPEG image compression
 brew 'mozjpeg'              # JPEG image compression
 brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
-brew 'glow'                 # Render markdown on the CLI
+brew 'glow'                 # Render Markdown on the CLI
 
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # Bandwidth utilization monitor
@@ -299,7 +298,8 @@ cask 'ollama'                         # Local LLMs
 brew 'ollama'
 
 # Terminal emulators
-cask 'wezterm'                        # Terminal emulator - Rust
+cask 'wezterm'                        # Secondary:Terminal emulator - Rust
+cask 'kitty'                          # Primary: Terminal emulator
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
