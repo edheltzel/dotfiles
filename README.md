@@ -148,8 +148,6 @@ There are two options for managing packages with GNU Stow:
   - misc dotfiles that are stored in the $HOME directory
 - git (git/)
   - git configuration
-- zsh (zsh/)
-  - Zsh configuration files (this kind of sort of mimics fish - WIP)
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
@@ -335,7 +333,7 @@ I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.
   <strong>Usage:</strong>
   <ul>
     <li>Open your Terminal</li>
-    <li>run `killws` <em>(work for both Fish and Zsh)</em></li>
+    <li>run `killws`</li>
     <li>Log back into your account</li>
   </ul>
 </details>
@@ -364,9 +362,9 @@ speedtest
 </details>
 <h2 id="todos">TODOs <a href="#to-the-top">↑</a></h2>
 
-- [ ] Convert fish functions to zsh functions - **WIP**
-- [ ] zsh completions seem to be broken [issue #40](https://github.com/edheltzel/dotfiles/issues/40)
-  - [ ] Look into zsh-completions vs autocomplete
+- [x] ~~Convert fish functions to zsh functions - **WIP**~~ this was a dumb idea
+- [x] ~~zsh completions seem to be broken [issue #40](https://github.com/edheltzel/dotfiles/issues/40)~~
+  - [x] ~~Look into zsh-completions vs autocomplete~~
 - [x] Consider using [Home Manager](https://nix-community.github.io/home-manager/) for package management.
 - [x] include zsh abbreviations
 - [x] Create a single-line install script to execute bootstrap.sh
