@@ -80,12 +80,14 @@ const rules: KarabinerRules[] = [
       ),
       y: app("Safari"),
       k: app("Karabiner-Elements"),
+      p: open("raycast://extensions/jomifepe/bitwarden/search"),
       // QMK Macros
       v: app("Via"), // M0
       l: app("Vial"), // M4
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
+
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {

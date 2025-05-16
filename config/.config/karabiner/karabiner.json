@@ -299,6 +299,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open raycast://extensions/jomifepe/bitwarden/search",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/jomifepe/bitwarden/search" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_alt",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Via.app'",
                                 "from": {
                                     "key_code": "v",
