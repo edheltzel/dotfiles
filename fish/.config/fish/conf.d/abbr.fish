@@ -8,6 +8,7 @@ if status is-interactive
     abbr --add bic --set-cursor 'brew install % --cask'
     abbr --add cl clear
     abbr --add cw center_window
+    abbr --add cat 'bat -pp'
     # abbr --add cls '$DROPBOX/Clients'
     # Editors & Terminals
     abbr --add ee 'e -r .'
