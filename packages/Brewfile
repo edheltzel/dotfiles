@@ -47,7 +47,7 @@ brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
 #brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
-brew 'tmux'         # Terminal multiplexer  
+brew 'tmux'         # Terminal multiplexer
 
 # CLI Basics
 brew 'ack'                  # Search tool like grep, but faster
@@ -174,7 +174,7 @@ brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
 brew 'hyperfine'          # Benchmark command-line programs
 cask 'wireshark'          # Network protocol analyzer
 brew 'termshark'
-cask 'lulu'               # LuLu - Open source firewall 
+cask 'lulu'               # LuLu - Open source firewall
 
 # Security Utilities
 # brew 'bitwarden-cli'     # Bitwarden CLI - outdated - use https://github.com/bitwarden/cli/
@@ -293,8 +293,8 @@ cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
 
 # RAG+CAG LLM - Agentic AI Agents
-cask 'block-goose'                    # On Machine AI Agent
-cask 'ollama'                         # Local LLMs 
+# cask 'block-goose'                    # On Machine AI Agent
+cask 'ollama'                         # Local LLMs
 brew 'ollama'
 caks 'repo-prompt'                    # Repo prompt for LLMs
 
