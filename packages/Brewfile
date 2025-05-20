@@ -292,10 +292,11 @@ cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
 
-# RAG+CAG LLM 
+# RAG+CAG LLM - Agentic AI Agents
 cask 'block-goose'                    # On Machine AI Agent
 cask 'ollama'                         # Local LLMs 
 brew 'ollama'
+caks 'repo-prompt'                    # Repo prompt for LLMs
 
 # Terminal emulators
 cask 'wezterm'                        # Secondary:Terminal emulator - Rust
