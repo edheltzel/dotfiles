@@ -259,8 +259,8 @@ brew 'sketchybar'                # status bar replacement for MacOS - paired wit
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
-# I now use native MacOS Stage Manager with Raycast window management
-cask 'alt-tab'                   # Windows like alt-tab
+cask 'nikitabobko/tap/aerospace' # Window Management
+cask 'alt-tab'                   # A Windows like alt-tab
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
