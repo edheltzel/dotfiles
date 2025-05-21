@@ -1,16 +1,9 @@
 # cSpell: disable
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 after-startup-command = [
-  'exec-and-forget sketchybar',
   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0',
 ]
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE FOCUSED_DISPLAY=$(aerospace list-monitors --focused | awk "{print $1}")',
-]
 on-focus-changed = [
-  'exec-and-forget sketchybar --trigger aerospace_focus_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
   'move-mouse window-lazy-center',
 ]
 
@@ -39,57 +32,60 @@ outer.right = 20
 preset = 'qwerty'
 
 [mode.main.binding]
-alt-ctrl-shift-f = 'fullscreen'    #MEH key = Left alt-ctrl-shift
-alt-ctrl-cmd-f = 'layout floating' #LCAG key = Left alt-ctrl-cmd
+#LCAG key = Left ctrl-alt-cmd (M4)
+#MEH key = Left alt-ctrl-shift (M5)
 
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
+alt-ctrl-shift-f = 'layout floating' #MEH
 
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+alt-ctrl-cmd-slash = 'layout tiles horizontal vertical' #LCAG
+alt-ctrl-cmd-comma = 'layout accordion horizontal vertical' #LCAG
 
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
+ctrl-alt-cmd-h = 'focus left' #LCAG
+ctrl-alt-cmd-j = 'focus down' #LCAG
+ctrl-alt-cmd-k = 'focus up' #LCAG
+ctrl-alt-cmd-l = 'focus right' #LCAG
+
+alt-ctrl-shift-j = 'move down' #MEH
+alt-ctrl-shift-h = 'move left' #MEH
+alt-ctrl-shift-k = 'move up' #MEH
+alt-ctrl-shift-l = 'move right' #MEH
 
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
-alt-0 = 'workspace 0'
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-e = 'workspace E' # E - Editors -> vscode/windsurf + wezterm/kitty
-alt-d = 'workspace D' # D - Design -> figma/indesign/illustrator/photoshop
-alt-m = 'workspace M' # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
-alt-n = 'workspace N' # N - Notes -> notes/reminders/freeform
-alt-r = 'workspace R' # R - Radio -> spotify/music/podcasts
-alt-y = 'workspace Y' # Y - Yahoo -> browsers zen/brave/safari/firefox
+ctrl-cmd-0 = 'workspace 0'
+ctrl-cmd-1 = 'workspace 1'
+ctrl-cmd-2 = 'workspace 2'
+ctrl-cmd-3 = 'workspace 3'
+ctrl-cmd-4 = 'workspace 4'
+ctrl-cmd-e = 'workspace E' # E - Editors -> vscode/windsurf + wezterm/kitty
+ctrl-cmd-d = 'workspace D' # D - Design -> figma/indesign/illustrator/photoshop
+ctrl-cmd-m = 'workspace M' # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
+ctrl-cmd-n = 'workspace N' # N - Notes -> notes/reminders/freeform
+ctrl-cmd-r = 'workspace R' # R - Radio -> spotify/music/podcasts
+ctrl-cmd-y = 'workspace Y' # Y - Yahoo -> browsers zen/brave/safari/firefox
 
-alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
-alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-alt-shift-e = 'move-node-to-workspace E --focus-follows-window' # E - Editors -> vscode/windsurf + wezterm/kitty
-alt-shift-d = 'move-node-to-workspace D --focus-follows-window' # D - Design -> figma/indesign/illustrator/photoshop
-alt-shift-m = 'move-node-to-workspace M --focus-follows-window' # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
-alt-shift-n = 'move-node-to-workspace N --focus-follows-window' # N - Notes -> notes/reminders/freeform
-alt-shift-r = 'move-node-to-workspace R --focus-follows-window' # R - Radio -> spotify/music/podcasts
-alt-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y - Yahoo -> browsers zen/brave/safari/firefox
+# MEH key (M5)
+alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
+alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
+alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
+alt-ctrl-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
+alt-ctrl-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
+alt-ctrl-shift-e = 'move-node-to-workspace E --focus-follows-window' # E -> vscode + wezterm/kitty
+alt-ctrl-shift-d = 'move-node-to-workspace D --focus-follows-window' # D -> figma/indesign/illustrator/photoshop
+alt-ctrl-shift-m = 'move-node-to-workspace M --focus-follows-window' # M -> teams/word/excel/powerpoint
+alt-ctrl-shift-n = 'move-node-to-workspace N --focus-follows-window' # N -> notes/reminders/freeform
+alt-ctrl-shift-u = 'move-node-to-workspace U --focus-follows-window' # U -> clickup/messages
+alt-ctrl-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y -> browsers zen/brave/safari/firefox
 
-alt-tab = 'workspace-back-and-forth'
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+alt-shift-tab = 'workspace-back-and-forth'
+#alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 ## Service Mode
 alt-shift-enter = [
-  'mode service',
-  'exec-and-forget sketchybar --trigger aerospace_enter_service_mode',
+  'mode service'
 ]
+
 [mode.service.binding]
 esc = ['reload-config', 'mode main']                       # reload config
 r = ['flatten-workspace-tree', 'mode main']                # reset layout
@@ -102,12 +98,9 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+## Dedicated Workspaces for Apps
 [[on-window-detected]]
-if.app-id = 'org.mozilla.com.zen.browser' #Zen Browser
-run = "move-node-to-workspace Y"
-
-[[on-window-detected]]
-if.app-id = 'org.mozilla.nightly' #Firefox
+if.app-id = 'app.zen-browser.zen' #Zen Browser
 run = "move-node-to-workspace Y"
 
 [[on-window-detected]]
@@ -139,32 +132,12 @@ if.app-id = 'com.microsoft.VSCode' #VSCode
 run = "move-node-to-workspace E"
 
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed'        #Zed
-run = "move-node-to-workspace E"
-
-[[on-window-detected]]
-if.app-id = 'com.todesktop.230313mzl4w4u92' #Cursor
-run = "move-node-to-workspace E"
-
-[[on-window-detected]]
-if.app-id = 'com.spotify.client' #Spotify
-run = "move-node-to-workspace R"
-
-[[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm' #Wezterm
 run = "move-node-to-workspace E"
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty' #Kitty
 run = "move-node-to-workspace E"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS' #Messages
-run = "move-node-to-workspace M"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'     #Mail
-run = "move-node-to-workspace M"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2' #Teams
@@ -189,6 +162,14 @@ run = "move-node-to-workspace N"
 [[on-window-detected]]
 if.app-id = 'com.apple.freeform' #Freeform
 run = "move-node-to-workspace N"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS' #Messages
+run = "move-node-to-workspace U"
+
+[[on-window-detected]]
+if.app-id = 'com.clickup.desktop-app' #Clickup
+run = "move-node-to-workspace U"
 
 #See: https://nikitabobko.github.io/AeroSpace/commands#layout
 ## Always Float
@@ -226,6 +207,6 @@ run = 'layout floating'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
 ## Force to secondary monitor
-[workspace-to-monitor-force-assignment]
-R = 'secondary' #Spotify
-M = 'secondary' #Messages
+# [workspace-to-monitor-force-assignment]
+# R = 'secondary' #Spotify
+# M = 'secondary' #Messages
