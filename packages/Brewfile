@@ -28,6 +28,7 @@ tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
 tap 'sass/sass' 								# Sass
 tap 'teamookla/speedtest'   		# Command line speed test utility
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
+tap 'FelixKratz/formulae'       # A tap for Janky Borders see brew borders
 
 #############################################################
 # 1. Command Line                                           #
@@ -259,8 +260,10 @@ brew 'sketchybar'                # status bar replacement for MacOS - paired wit
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
-cask 'nikitabobko/tap/aerospace' # Window Management
 cask 'alt-tab'                   # A Windows like alt-tab
+
+cask 'nikitabobko/tap/aerospace' # Window Management
+brew 'borders'                   # A window borders manager
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
