@@ -17,6 +17,14 @@
     {
       "passKeys": "",
       "pattern": "https?://typ.ing/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://usevia.app/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://vial.rocks/*"
     }
   ]
 }
