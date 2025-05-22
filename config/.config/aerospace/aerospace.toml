@@ -1,11 +1,5 @@
-# cSpell: disable
-# Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
-after-startup-command = [
-  'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0',
-]
-on-focus-changed = [
-  'move-mouse window-lazy-center',
-]
+# cSpell: disable - Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
+after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0']
 
 start-at-login = false
 
@@ -16,23 +10,26 @@ default-root-container-layout = 'accordion' #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = ['move-mouse window-lazy-center']
+
 automatically-unhide-macos-hidden-apps = false                  #focuses app regardless of visibility
 
 accordion-padding = 150
 
 [gaps]
-inner.horizontal = 20
-inner.vertical = 20
-outer.left = 20
-outer.top = 30
-outer.bottom = [{ monitor."PA328QV" = 40 }, { monitor."PA278QV" = 40 }, 20]
-outer.right = 20
+inner.horizontal = 10
+inner.vertical = 10
+outer.top = 5
+outer.left = 10
+outer.right = 10
+outer.bottom = 0
+#outer.bottom = [{ monitor."PA328QV" = 40 }, { monitor."PA278QV" = 40 }, 20]
 
 [key-mapping]
 preset = 'qwerty'
 
 [mode.main.binding]
-#LCAG key = Left ctrl-alt-cmd (M4)
+#LCAG key = Left alt-ctrl-cmd (M4)
 #MEH key = Left alt-ctrl-shift (M5)
 
 # LCAG - M4 key
@@ -68,7 +65,8 @@ ctrl-cmd-u = 'workspace U' # U -> clickup/toggl
 ctrl-cmd-w = 'workspace W' # W -> word/excel/powerpoint
 ctrl-cmd-y = 'workspace Y' # Y -> browsers zen/brave/safari
 
-# Move window to workspace using MEH - M5 key
+# Move window to workspace
+# MEH - M5 key
 alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
@@ -86,9 +84,7 @@ alt-ctrl-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y -> brow
 alt-shift-tab = 'workspace-back-and-forth'
 
 ## Service Mode
-alt-shift-enter = [
-  'mode service'
-]
+alt-shift-enter = ['mode service']
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']                       # reload config
