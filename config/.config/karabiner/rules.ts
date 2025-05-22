@@ -80,7 +80,7 @@ const rules: KarabinerRules[] = [
       ),
       y: app("Safari"),
       k: app("Karabiner-Elements"),
-      p: open("Passwords"),
+      p: app("Passwords"),
       // QMK Macros
       v: app("Via"), // M0
       l: app("Vial"), // M4
@@ -94,7 +94,7 @@ const rules: KarabinerRules[] = [
       f: app("Finder"),
       m: app("Microsoft Teams"),
       o: app("Obsidian"),
-      p: app("raycast://extensions/jomifepe/bitwarden/search"),
+      p: open("raycast://extensions/jomifepe/bitwarden/search"),
       t: app("Toggl Track"),
       u: app("ClickUp"),
       y: app("Brave Browser Beta"),
