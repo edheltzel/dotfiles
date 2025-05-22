@@ -35,16 +35,16 @@ preset = 'qwerty'
 #LCAG key = Left ctrl-alt-cmd (M4)
 #MEH key = Left alt-ctrl-shift (M5)
 
-alt-ctrl-shift-f = 'layout floating' #MEH
-
+# LCAG - M4 key
 alt-ctrl-cmd-slash = 'layout tiles horizontal vertical' #LCAG
 alt-ctrl-cmd-comma = 'layout accordion horizontal vertical' #LCAG
-
 ctrl-alt-cmd-h = 'focus left' #LCAG
 ctrl-alt-cmd-j = 'focus down' #LCAG
 ctrl-alt-cmd-k = 'focus up' #LCAG
 ctrl-alt-cmd-l = 'focus right' #LCAG
 
+# MEH - M5 key
+alt-ctrl-shift-f = 'layout floating' #MEH
 alt-ctrl-shift-j = 'move down' #MEH
 alt-ctrl-shift-h = 'move left' #MEH
 alt-ctrl-shift-k = 'move up' #MEH
@@ -53,19 +53,22 @@ alt-ctrl-shift-l = 'move right' #MEH
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
+# overflow workspaces
 ctrl-cmd-0 = 'workspace 0'
 ctrl-cmd-1 = 'workspace 1'
 ctrl-cmd-2 = 'workspace 2'
 ctrl-cmd-3 = 'workspace 3'
 ctrl-cmd-4 = 'workspace 4'
-ctrl-cmd-e = 'workspace E' # E - Editors -> vscode/windsurf + wezterm/kitty
-ctrl-cmd-d = 'workspace D' # D - Design -> figma/indesign/illustrator/photoshop
-ctrl-cmd-m = 'workspace M' # M - Microsoft -> teams/word/excel/powerpoint -> Messages/Mail
-ctrl-cmd-n = 'workspace N' # N - Notes -> notes/reminders/freeform
-ctrl-cmd-r = 'workspace R' # R - Radio -> spotify/music/podcasts
-ctrl-cmd-y = 'workspace Y' # Y - Yahoo -> browsers zen/brave/safari/firefox
+# named workspaces
+ctrl-cmd-e = 'workspace E' # E -> vscode + kitty/wezterm
+ctrl-cmd-d = 'workspace D' # D -> figma/indesign/illustrator/photoshop
+ctrl-cmd-m = 'workspace M' # M -> Teams/Messages/Discord
+ctrl-cmd-n = 'workspace N' # N -> notes/reminders/freeform
+ctrl-cmd-u = 'workspace U' # U -> clickup/toggl
+ctrl-cmd-w = 'workspace W' # W -> word/excel/powerpoint
+ctrl-cmd-y = 'workspace Y' # Y -> browsers zen/brave/safari
 
-# MEH key (M5)
+# MEH - M5 key
 alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
@@ -76,6 +79,7 @@ alt-ctrl-shift-d = 'move-node-to-workspace D --focus-follows-window' # D -> figm
 alt-ctrl-shift-m = 'move-node-to-workspace M --focus-follows-window' # M -> teams/word/excel/powerpoint
 alt-ctrl-shift-n = 'move-node-to-workspace N --focus-follows-window' # N -> notes/reminders/freeform
 alt-ctrl-shift-u = 'move-node-to-workspace U --focus-follows-window' # U -> clickup/messages
+alt-ctrl-shift-w = 'move-node-to-workspace W --focus-follows-window' # W -> word/excel/powerpoint
 alt-ctrl-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y -> browsers zen/brave/safari/firefox
 
 alt-shift-tab = 'workspace-back-and-forth'
@@ -145,11 +149,11 @@ run = "move-node-to-workspace M"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Powerpoint' #PowerPoint
-run = "move-node-to-workspace M"
+run = "move-node-to-workspace W"
 
 [[on-window-detected]]
 if.app-id = 'comd.microsoft.Word' #Word
-run = "move-node-to-workspace M"
+run = "move-node-to-workspace W"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'    #Notes
@@ -165,7 +169,7 @@ run = "move-node-to-workspace N"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS' #Messages
-run = "move-node-to-workspace U"
+run = "move-node-to-workspace M"
 
 [[on-window-detected]]
 if.app-id = 'com.clickup.desktop-app' #Clickup
@@ -185,9 +189,9 @@ run = 'layout floating'
 if.app-id = 'org.pqrs.Karabiner-Elements.Settings' #Karabiner Elements
 run = 'layout floating'
 
-[[on-window-detected]]
-if.app-id = 'com.toggl.daneel' #Toggl
-run = 'layout floating'
+# [[on-window-detected]]
+# if.app-id = 'com.toggl.daneel' #Toggl
+# run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.IdeaPunch.ColorSlurp' #ColorSlurp
