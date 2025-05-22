@@ -38,10 +38,10 @@ preset = 'qwerty'
 # LCAG - M4 key
 alt-ctrl-cmd-slash = 'layout tiles horizontal vertical' #LCAG
 alt-ctrl-cmd-comma = 'layout accordion horizontal vertical' #LCAG
-ctrl-alt-cmd-h = 'focus left' #LCAG
-ctrl-alt-cmd-j = 'focus down' #LCAG
-ctrl-alt-cmd-k = 'focus up' #LCAG
-ctrl-alt-cmd-l = 'focus right' #LCAG
+alt-ctrl-cmd-h = 'focus left' #LCAG
+alt-ctrl-cmd-j = 'focus down' #LCAG
+alt-ctrl-cmd-k = 'focus up' #LCAG
+alt-ctrl-cmd-l = 'focus right' #LCAG
 
 # MEH - M5 key
 alt-ctrl-shift-f = 'layout floating' #MEH
@@ -68,7 +68,7 @@ ctrl-cmd-u = 'workspace U' # U -> clickup/toggl
 ctrl-cmd-w = 'workspace W' # W -> word/excel/powerpoint
 ctrl-cmd-y = 'workspace Y' # Y -> browsers zen/brave/safari
 
-# MEH - M5 key
+# Move window to workspace using MEH - M5 key
 alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
@@ -82,8 +82,8 @@ alt-ctrl-shift-u = 'move-node-to-workspace U --focus-follows-window' # U -> clic
 alt-ctrl-shift-w = 'move-node-to-workspace W --focus-follows-window' # W -> word/excel/powerpoint
 alt-ctrl-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y -> browsers zen/brave/safari/firefox
 
+# Jump back and forth between workspaces
 alt-shift-tab = 'workspace-back-and-forth'
-#alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 ## Service Mode
 alt-shift-enter = [
