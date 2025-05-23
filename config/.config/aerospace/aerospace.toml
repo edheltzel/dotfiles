@@ -61,6 +61,7 @@ ctrl-cmd-e = 'workspace E' # E -> vscode + kitty/wezterm
 ctrl-cmd-d = 'workspace D' # D -> figma/indesign/illustrator/photoshop
 ctrl-cmd-m = 'workspace M' # M -> Teams/Messages/Discord
 ctrl-cmd-n = 'workspace N' # N -> notes/reminders/freeform
+ctrl-cmd-s = 'workspace S' # S -> slicers/all-cad software
 ctrl-cmd-u = 'workspace U' # U -> clickup/toggl
 ctrl-cmd-w = 'workspace W' # W -> word/excel/powerpoint
 ctrl-cmd-y = 'workspace Y' # Y -> browsers zen/brave/safari
@@ -76,6 +77,7 @@ alt-ctrl-shift-e = 'move-node-to-workspace E --focus-follows-window' # E -> vsco
 alt-ctrl-shift-d = 'move-node-to-workspace D --focus-follows-window' # D -> figma/indesign/illustrator/photoshop
 alt-ctrl-shift-m = 'move-node-to-workspace M --focus-follows-window' # M -> teams/word/excel/powerpoint
 alt-ctrl-shift-n = 'move-node-to-workspace N --focus-follows-window' # N -> notes/reminders/freeform
+alt-ctrl-shift-s = 'move-node-to-workspace S --focus-follows-window' # S -> slicers/all-cad software
 alt-ctrl-shift-u = 'move-node-to-workspace U --focus-follows-window' # U -> clickup/messages
 alt-ctrl-shift-w = 'move-node-to-workspace W --focus-follows-window' # W -> word/excel/powerpoint
 alt-ctrl-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y -> browsers zen/brave/safari/firefox
@@ -98,109 +100,123 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-## Dedicated Workspaces for Apps
+##### Dedicated Workspaces for Apps #####
+# Workspace Y
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen' #Zen Browser
 run = "move-node-to-workspace Y"
-
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser.beta' #Brave Browser
 run = "move-node-to-workspace Y"
-
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'   #Safari Browser
 run = "move-node-to-workspace Y"
 
+# Workspace D
 [[on-window-detected]]
 if.app-id = 'com.figma.Desktop'  #Figma
 run = "move-node-to-workspace D"
-
 [[on-window-detected]]
 if.app-id = 'com.adobe.InDesign' #InDesign
 run = "move-node-to-workspace D"
-
 [[on-window-detected]]
 if.app-id = 'com.adobe.illustrator' #Illustrator
 run = "move-node-to-workspace D"
-
 [[on-window-detected]]
 if.app-id = 'com.adobe.Photoshop' #Photoshop
 run = "move-node-to-workspace D"
 
+# Workspace N
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode' #VSCode
 run = "move-node-to-workspace E"
-
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm' #Wezterm
 run = "move-node-to-workspace E"
-
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty' #Kitty
 run = "move-node-to-workspace E"
 
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2' #Teams
-run = "move-node-to-workspace M"
-
+# Workspace N
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Powerpoint' #PowerPoint
 run = "move-node-to-workspace W"
-
 [[on-window-detected]]
 if.app-id = 'comd.microsoft.Word' #Word
 run = "move-node-to-workspace W"
 
+# Workspace N
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'    #Notes
 run = "move-node-to-workspace N"
-
 [[on-window-detected]]
 if.app-id = 'com.apple.reminders' #Reminders
 run = "move-node-to-workspace N"
-
 [[on-window-detected]]
 if.app-id = 'com.apple.freeform' #Freeform
 run = "move-node-to-workspace N"
 
+# Workspace M
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS' #Messages
 run = "move-node-to-workspace M"
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2' #Teams
+run = "move-node-to-workspace M"
 
+# Workspace U
 [[on-window-detected]]
 if.app-id = 'com.clickup.desktop-app' #Clickup
 run = "move-node-to-workspace U"
+[[on-window-detected]]
+if.app-id = 'com.toggl.daneel' #Toggl
+run = 'move-node-to-workspace U'
 
-#See: https://nikitabobko.github.io/AeroSpace/commands#layout
-## Always Float
+# Workspace S
+[[on-window-detected]]
+if.app-id = 'com.bambulab.bambu-studio' #BambuSlicer
+run = "move-node-to-workspace S"
+[[on-window-detected]]
+if.app-id = 'com.softfever3d.orca-slicer' #OrcaSlicer
+run = "move-node-to-workspace S"
+[[on-window-detected]]
+if.app-id = 'com.elegoo3d.elegoo-slicer' #ElegooSlicer
+run = "move-node-to-workspace S"
+[[on-window-detected]]
+if.app-id = 'com.anycubic.AnycubicPhotonWorkshop' #AnycubicPhotonWorkshop
+run = "move-node-to-workspace S"
+[[on-window-detected]]
+if.app-id = 'com.shapr3d.shapr' #Shapr3D
+run = "move-node-to-workspace S"
+[[on-window-detected]]
+if.app-id = 'com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion' #Fusion360
+run = "move-node-to-workspace S"
+[[on-window-detected]]
+if.app-id = 'org.blenderfoundation.blender' #Blender
+run = "move-node-to-workspace S"
+[[on-window-detected]]
+if.app-id = 'org.freecad.FreeCAD' #FreeCAD
+run = "move-node-to-workspace S"
+
+##### ALWAYS FLOAT - https://nikitabobko.github.io/AeroSpace/commands#layout #####
 [[on-window-detected]]
 if.app-id = 'com.apple.finder' #Finder
 run = 'layout floating'
-
 [[on-window-detected]]
 if.app-id = 'com.raycast.macos' #Raycast
 run = 'layout floating'
-
 [[on-window-detected]]
 if.app-id = 'org.pqrs.Karabiner-Elements.Settings' #Karabiner Elements
 run = 'layout floating'
-
-# [[on-window-detected]]
-# if.app-id = 'com.toggl.daneel' #Toggl
-# run = 'layout floating'
-
 [[on-window-detected]]
 if.app-id = 'com.IdeaPunch.ColorSlurp' #ColorSlurp
 run = 'layout floating'
-
 [[on-window-detected]]
 if.app-id = 'com.jordanbaird.Ice' #IceBar
 run = 'layout floating'
-
 [[on-window-detected]]
 if.app-id = 'cc.ffitch.shottr' #Shottr
 run = 'layout floating'
-
 [[on-window-detected]]
 if.app-id = 'com.getdropbox.dropbox' #Dropbox
 run = 'layout floating'
