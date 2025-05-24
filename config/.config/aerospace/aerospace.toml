@@ -14,14 +14,14 @@ on-focus-changed = ['move-mouse window-lazy-center']
 
 automatically-unhide-macos-hidden-apps = false                  #focuses app regardless of visibility
 
-accordion-padding = 150
+accordion-padding = 50
 
 [gaps]
 inner.horizontal = 10
 inner.vertical = 10
 outer.top = 5
-outer.left = 10
-outer.right = 10
+outer.left = 5
+outer.right= 5
 outer.bottom = 5
 #outer.bottom = [{ monitor."PA328QV" = 40 }, { monitor."PA278QV" = 40 }, 20]
 
