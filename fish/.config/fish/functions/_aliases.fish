@@ -97,3 +97,6 @@ alias vapor vendor/bin/vapor
 
 ## Games ##
 alias doom 'cd ~/Developer/games/terminal-doom; and zig-out/bin/terminal-doom'
+
+## Ai ##
+alias cc 'claude' # Claude Code
