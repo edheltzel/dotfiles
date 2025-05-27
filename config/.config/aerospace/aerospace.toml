@@ -220,6 +220,9 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.getdropbox.dropbox' #Dropbox
 run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.aone.keka' #Keka
+run = 'layout floating'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
 ## Force to secondary monitor

@@ -531,12 +531,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Brave Browser Beta.app'",
+                                "description": "Open -a 'Zen.app'",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Brave Browser Beta.app'" }],
+                                "to": [{ "shell_command": "open -a 'Zen.app'" }],
                                 "type": "basic"
                             },
                             {
