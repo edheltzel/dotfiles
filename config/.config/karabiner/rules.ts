@@ -97,7 +97,8 @@ const rules: KarabinerRules[] = [
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       t: app("Toggl Track"),
       u: app("ClickUp"),
-      y: app("Brave Browser Beta"),
+      // y: app("Brave Browser Beta"),
+      y: app("Zen"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
