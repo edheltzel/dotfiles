@@ -4,6 +4,12 @@
 ### Git ###
 #git/.gitconfig-local
 
+### Helix Editor ###
+config/.config/helix/runtime
+
+### VSCode ###
+.vsce
+
 ### VIM ###
 NetrwTreeListing*
 nvim/.config/nvim/lazy-lock.json
@@ -17,15 +23,17 @@ debug
 foo.*
 *.log
 data
-
-### Helix Editor ###
-config/.config/helix/runtime
+### LazyGit ###
+config/.config/lazygit/state.yml
 
 ### Karabiner ###
 karabiner/automatic_backups/
 
 ### Raycast Extensions ###
 config/raycast/extensions/
+
+### AI shit ###
+.claude/
 
 ### REPOS ###
 repos/work.list
@@ -35,5 +43,4 @@ repos/playground.list
 private/ssh/
 .gitsecret/keys/random_seed
 !*.secret
-config/.config/lazygit/state.yml
-.vsce
+
