@@ -93,6 +93,7 @@ neovim
 npmrc
 nunjucks
 onehalf
+osascript
 outdir
 overscroll
 pagedown
