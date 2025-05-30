@@ -268,7 +268,8 @@ brew 'borders'                   # A window borders manager
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser@beta'        # Brave browser - Secondary
-#cask 'firefox@nightly'          # Firefox Nightly - Tertiary
+cask 'google-chrome'             # Chrome - tests
+cask 'firefox'                   # Firefox - tests
 cask 'zen-browser'               # Zen Browser - Primary
 
 # Fonts
