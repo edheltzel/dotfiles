@@ -22,6 +22,8 @@ if status is-interactive
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
+    abbr --add wp '~/.wallpapers/'
+    abbr --add wall '~/.wallpapers/'
     abbr --add lg lazygit
     abbr --add gg lazygit
     abbr --add dls '~/Downloads/'
