@@ -270,7 +270,7 @@ cask 'choosy'                    # Choose which browser to open links in - Defau
 cask 'brave-browser@beta'        # Brave browser - Secondary
 cask 'google-chrome'             # Chrome - tests
 cask 'firefox'                   # Firefox - tests
-cask 'zen'               		     # Zen browser - Primary
+cask 'zen'                       # Zen browser - Primary
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
