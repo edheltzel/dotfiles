@@ -78,16 +78,17 @@ const rules: KarabinerRules[] = [
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
-      y: app("Safari"),
+      c: app("Notion Calendar"),
       k: app("Karabiner-Elements"),
+      m: app("Notion Mail"),
       p: app("Passwords"),
+      y: app("Safari"),
       // QMK Macros
       v: app("Via"), // M0
       l: app("Vial"), // M4
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
-
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
