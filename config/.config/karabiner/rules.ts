@@ -79,9 +79,7 @@ const rules: KarabinerRules[] = [
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       k: app("Karabiner-Elements"),
-      m: app("Mail"),
       p: app("Passwords"),
-      r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       y: app("Brave Browser Beta"),
 
       // QMK Macros
@@ -96,6 +94,7 @@ const rules: KarabinerRules[] = [
       f: app("Finder"),
       m: app("Microsoft Teams"),
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
+      r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       t: app("Toggl Track"),
       y: app("Zen"),
       comma: app("System Settings"),
@@ -129,6 +128,7 @@ const rules: KarabinerRules[] = [
       h: open("~/"),
       j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
       k: open("'/Users/ed/RDM Dropbox'",),
+      m: app("Mail"),
     },
   }),
   // RightCMD => alt+backspace
