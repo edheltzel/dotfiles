@@ -128,7 +128,6 @@ const rules: KarabinerRules[] = [
       h: open("~/"),
       j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
       k: open("'/Users/ed/RDM Dropbox'",),
-      m: app("Mail"),
     },
   }),
   // RightCMD => alt+backspace
