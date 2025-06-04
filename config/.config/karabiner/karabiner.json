@@ -283,22 +283,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Mail.app'",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Mail.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_alt",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'Passwords.app'",
                                 "from": {
                                     "key_code": "p",
@@ -1001,6 +985,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open '/Users/ed/RDM Dropbox'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_f",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Mail.app'",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Mail.app'" }],
                                 "type": "basic"
                             }
                         ]

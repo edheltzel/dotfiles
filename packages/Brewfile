@@ -229,7 +229,6 @@ cask 'chatgpt'              # ChatGPT app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
-cask 'clickup'              # Project management
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'brainfm'              # BrainFM - Music streaming
@@ -241,7 +240,6 @@ cask 'onyx'                      # System maintenance
 cask 'transnomino'               # A batch rename utility
 brew 'shortcat'                  # vim motions for MacOS
 cask 'mouseless'                 # Mouseless app for MacOS
-# brew 'localsend'                 # AirDrop like app for everything else
 cask 'openinterminal'            # Finder button, opens directory in terminal
 cask 'itsycal'                   # Calendar in menubar
 brew 'stats'                     # System stats in menubar
@@ -256,14 +254,14 @@ cask 'vial'                      # Keyboard configuration desktop client
 cask 'karabiner-elements'        # Keyboard customization tool
 
 # Menu Bar Hacks
-brew 'sketchybar'                # status bar replacement for MacOS - paired with Aerospace
+# brew 'sketchybar'                # status bar replacement for MacOS - paired with Aerospace
 brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
 cask 'alt-tab'                   # A Windows like alt-tab
 
 cask 'nikitabobko/tap/aerospace' # Window Management
-brew 'borders'                   # A window borders manager
+# brew 'borders'                   # A window borders manager
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
