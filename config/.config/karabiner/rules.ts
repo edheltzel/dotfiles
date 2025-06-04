@@ -78,11 +78,12 @@ const rules: KarabinerRules[] = [
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
-      c: app("Notion Calendar"),
       k: app("Karabiner-Elements"),
-      m: app("Notion Mail"),
+      m: app("Mail"),
       p: app("Passwords"),
+      r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       y: app("Safari"),
+
       // QMK Macros
       v: app("Via"), // M0
       l: app("Vial"), // M4
@@ -94,11 +95,8 @@ const rules: KarabinerRules[] = [
     left_command: {
       f: app("Finder"),
       m: app("Microsoft Teams"),
-      o: app("Obsidian"),
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       t: app("Toggl Track"),
-      u: app("ClickUp"),
-      // y: app("Brave Browser Beta"),
       y: app("Zen"),
       comma: app("System Settings"),
     },
@@ -123,19 +121,20 @@ const rules: KarabinerRules[] = [
     },
     // Fourth layer: Hyper + f (Finder) shortcuts
     f: {
-      h: open("~/"),
-      m: open(
-        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
-      ),
-      comma: open("~/Documents"),
+      y: open("~/Documents/3D-CAD"),
+      u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),
+      i: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
-      y: open("~/Documents/3D-CAD"),
+      h: open("~/"),
+      j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
+      k: open("'/Users/ed/RDM Dropbox'",),
     },
   }),
   // RightCMD => alt+backspace
+  // Right CMD if held - alt+backspace if tapped
   // quickly deletes the last word with a single tap
-  {
+{
     description: "Delete Last Word",
     manipulators: [
       {
@@ -159,7 +158,7 @@ const rules: KarabinerRules[] = [
     ],
   },
   // Homerow Configuration
-  // Enables keyboard-driven UI navigation using homerow keys
+  // Enables keyboard-driven arrow navigation using homerow keys (←h,↓j,↑k,l→)
   {
     description: "Homerow Trigger",
     manipulators: [
@@ -190,6 +189,7 @@ const rules: KarabinerRules[] = [
   },
 ];
 
+// trigger karabiner profiles based on hardware device
 fs.writeFileSync(
   "karabiner.json",
   JSON.stringify(
