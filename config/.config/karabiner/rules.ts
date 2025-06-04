@@ -82,7 +82,7 @@ const rules: KarabinerRules[] = [
       m: app("Mail"),
       p: app("Passwords"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
-      y: app("Safari"),
+      y: app("Brave Browser Beta"),
 
       // QMK Macros
       v: app("Via"), // M0
