@@ -162,7 +162,7 @@ const rules: KarabinerRules[] = [
     description: "Homerow Trigger",
     manipulators: [
       {
-        description: "Right Control => Homerow",
+        description: "Right Control => Homerow App",
         from: {
           key_code: "right_control",
         },
