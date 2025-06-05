@@ -78,7 +78,6 @@ const rules: KarabinerRules[] = [
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
-      k: app("Karabiner-Elements"),
       p: app("Passwords"),
       y: app("Brave Browser Beta"),
 
@@ -88,6 +87,7 @@ const rules: KarabinerRules[] = [
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=-FieldNotes'"), // M3
+      q: open("https://launcher.keychron.com/#/keymap"), // M5
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
