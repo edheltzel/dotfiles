@@ -111,6 +111,8 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 6. Optional steps for DX and nice to haves:
    - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (in macos/security.sh)
    - Make sure to run `fnm env --use-on-cd | source` to enable auto-switching of Node versions. (in fish)
+7. Wallpapers are stored in `~/.wallpapers/` which now lives in it's own [repo here](https://github.com/edheltzel/wallpapers)
+   - Raycast uses this repo/directory to set wallpapers
 
 <h2 id="the-nitty-gritty">The Nitty Gritty <a href="#to-the-top">↑</a></h2>
 
@@ -157,7 +159,7 @@ There are two options for managing packages with GNU Stow:
 - editors(editors/)
   - VSCode & Windsurf configurations, ie: keybindings, settings, and custom stuff.(Windsurf is my Primary Editor)
 - local (local/)
-  - User-specific data not configuration-related. ie: dictionaries, wallpapers, misc items that mean nothing, etc.
+  - User-specific data not configuration-related. ie: dictionaries and misc items that mean nothing, etc.
 
 <h2 id="scripts">Scripts <a href="#to-the-top">↑</a></h2>
 
