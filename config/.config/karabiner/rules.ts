@@ -211,7 +211,7 @@ fs.writeFileSync(
             },
             {
               identifiers: {
-                // ProtoArc EM01 NL trackball
+                // ProtoArc EM01 NL trackball - currently not using this but leaving it in place
                 is_pointing_device: true,
                 product_id: 64160,
                 vendor_id: 9639,
