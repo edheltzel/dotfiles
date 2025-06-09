@@ -158,7 +158,8 @@
 	"files.associations": {
 		"*.svg": "html",
 		"*.webc": "nunjucks",
-		"_redirects": "plaintext"
+		"_redirects": "plaintext",
+		"*.h": "c"
 	},
 	"files.insertFinalNewline": true,
 	"files.simpleDialog.enable": true,

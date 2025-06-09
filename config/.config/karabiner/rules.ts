@@ -107,7 +107,7 @@ const rules: KarabinerRules[] = [
       m: app("Messages"),
       n: app("Invoice Ninja"),
       p: app("Adobe Photoshop 2025"),
-      t: app("WezTerm"),
+      t: app("Ghostty"),
       // 3D modeling, slicing & laser cutting
       1: app("FreeCAD"),
       b: app("BambuStudio"),
