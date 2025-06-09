@@ -1,0 +1,15 @@
+config-file = "colors/eldritch"
+font-family = "Lilex Nerd Font Mono"
+window-inherit-font-size = false
+font-size = 17
+window-colorspace = "display-p3"
+
+background-opacity = 0.95
+background-blur-radius = 20
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = true
+
+quick-terminal-position = "top"
+  keybind = global:cmd+control+alt+space=toggle_quick_terminal
+
+keybind = cmd+i=inspector:toggle
