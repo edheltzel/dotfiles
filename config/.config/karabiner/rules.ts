@@ -168,11 +168,6 @@ const rules: KarabinerRules[] = [
             optional: ["any"],
           },
         },
-        to: [
-          {
-            key_code: "tab",
-          },
-        ],
         to_delayed_action: {
           to_if_invoked: [
             {
