@@ -10,12 +10,19 @@ export interface Manipulator {
   to?: To[];
   to_after_key_up?: To[];
   to_if_alone?: To[];
+  to_delayed_action?: ToDelayedAction;
   parameters?: Parameters;
   conditions?: Conditions[];
 }
 
+export interface ToDelayedAction {
+  to_if_invoked?: To[];
+  to_if_canceled?: To[];
+}
+
 export interface Parameters {
   "basic.simultaneous_threshold_milliseconds"?: number;
+  "basic.to_delayed_action_delay_milliseconds"?: number;
 }
 
 // Add new Mouse Navigation types and utilities
@@ -194,12 +201,12 @@ export interface SoftwareFunction {
 }
 
 // Add new Hyper Navigation types and utilities
-export const hyperModifiers = [
+export const hyperModifiers: ModifiersKeys[] = [
   "right_command",
   "right_control",
   "right_shift",
   "right_option"
-] as const;
+];
 
 export type HyperNavigationMapping = Record<string, KeyCode>;
 

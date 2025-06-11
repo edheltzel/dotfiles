@@ -156,32 +156,44 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
-  // Homerow Configuration
-  // Enables keyboard-driven arrow navigation using homerow keys (←h,↓j,↑k,l→)
+  // Homerow Configuration - Double Tap Tab
   {
-    description: "Homerow Trigger",
+    description: "Homerow Trigger - Double Tap Tab",
     manipulators: [
       {
-        description: "Right Control => Homerow App",
+        description: "Double Tap Tab => Homerow App",
         from: {
-          key_code: "right_control",
+          key_code: "tab",
+          modifiers: {
+            optional: ["any"],
+          },
         },
         to: [
           {
-            key_code: "right_control",
+            key_code: "tab",
           },
         ],
-        to_if_alone: [
-          {
-            key_code: "spacebar",
-            modifiers: [
-              "right_command",
-              "right_option",
-              "right_shift",
-              "right_control",
-            ],
-          },
-        ],
+        to_delayed_action: {
+          to_if_invoked: [
+            {
+              key_code: "tab",
+            },
+          ],
+          to_if_canceled: [
+            {
+              key_code: "spacebar",
+              modifiers: [
+                "right_command",
+                "right_option",
+                "right_shift",
+                "right_control",
+              ],
+            },
+          ],
+        },
+        parameters: {
+          "basic.to_delayed_action_delay_milliseconds": 250,
+        },
         type: "basic",
       },
     ],
