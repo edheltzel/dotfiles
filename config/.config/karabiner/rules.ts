@@ -113,8 +113,6 @@ const rules: KarabinerRules[] = [
       description: "Delete Last Word"
     },
     // Add more modifier tap rules here as needed
-    // Example: left_control: { key_code: "escape", description: "Control/Escape" },
-    // Example: right_shift: { key_code: "return_or_enter", description: "Shift/Enter" },
   }),
   // Double-tap rules - define multiple keys with double-tap actions
   ...createDoubleTapRules({
