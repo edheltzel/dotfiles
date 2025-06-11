@@ -125,12 +125,13 @@ const rules: KarabinerRules[] = [
       description: "Trigger Homerow",
       delayMs: 250
     },
-    delete_or_backspace: {
-      key_code: "delete_or_backspace",
-      modifiers: ["right_alt"],
-      description: "Delete Last Word",
-      delayMs: 250
-    },
+    // FIXME: key repeat behavior breaks with this rule ie: holding down backspace does not work.
+    // delete_or_backspace: {
+    //   key_code: "delete_or_backspace",
+    //   modifiers: ["right_alt"],
+    //   description: "Delete Last Word",
+    //   delayMs: 250
+    // },
     // Add more double-tap rules here as needed
   }),
 ];

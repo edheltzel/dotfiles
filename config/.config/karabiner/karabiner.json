@@ -1028,29 +1028,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Delete Last Word",
-                        "manipulators": [
-                            {
-                                "description": "Double Tap delete_or_backspace => delete_or_backspace + right_alt",
-                                "from": {
-                                    "key_code": "delete_or_backspace",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "parameters": { "basic.to_delayed_action_delay_milliseconds": 250 },
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "key_code": "delete_or_backspace",
-                                            "modifiers": ["right_alt"]
-                                        }
-                                    ],
-                                    "to_if_invoked": [{ "key_code": "delete_or_backspace" }]
-                                },
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
