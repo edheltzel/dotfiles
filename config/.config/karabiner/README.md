@@ -61,10 +61,11 @@ bun pm ls #lists all the dependencies - not an npm script but a bun command
 ```
 
 ## Keyboards
-`as of 2024-12-20`
-- [Lily58 Pro](https://github.com/kata0510/Lily58/tree/master) - Current build - waiting on components
-- [Corne v4.1](https://github.com/foostan/crkbd) - Next build PCBs are on-hand
+`as of 2025-06-11`
 - [Keychron Q11](https://milktooth.com/products/switches/silent-sakura-53g) with [HMK SILENT SAKURA - 53G SILENT LINEAR SWITCH](https://milktooth.com/products/switches/silent-sakura-53g) capped with [Double Shot OSA PBT](https://www.keychron.com/collections/all-keycaps/products/double-shot-osa-pbt-side-printed-full-keycap-set) - Current daily driver
+- [Ergodox HotDox 76](https://apos.audio/products/ergodox-76-hot-dox-v2-mechanical-keyboard?srsltid=AfmBOorfnF8PeVuveSldB05vMahx-WyE9YPSLrQ3JPWAHbBd9y78qNr8) - Secondary daily driver - have not configured everything I want yet.
+- [Lily58 Pro](https://github.com/kata0510/Lily58/tree/master) - Current build
+- [Corne v4.1](https://github.com/foostan/crkbd) - Next build PCBs are on-hand
 - Apple Keyboard (Macbook Air M1)
 - [Das Professional 4](https://www.daskeyboard.com/daskeyboard-4-professional-for-mac/) - retired
 - [Keychron K10 Pro](https://www.keychron.com/products/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-iso-layout-collection) - retired
