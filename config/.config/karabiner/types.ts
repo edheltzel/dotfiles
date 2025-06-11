@@ -239,6 +239,192 @@ export function createHyperNavigationRule(mappings: HyperNavigationMapping): Hyp
   };
 }
 
+// Helper function to create the main Hyper Key rule (Caps Lock -> Hyper Key = Control + Option + Shift + Command)
+export function createHyperKeyRule(): KarabinerRules {
+  return {
+    description: "Hyper Key (⌃⌥⇧⌘)",
+    manipulators: [
+      {
+        description: "Caps Lock -> Hyper Key",
+        from: {
+          key_code: "caps_lock",
+          modifiers: {
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            key_code: "right_shift",
+            modifiers: ["right_control", "right_command", "right_option"],
+          },
+        ],
+        to_if_alone: [
+          {
+            key_code: "escape",
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  };
+}
+
+// Helper function to create a modifier key with tap-to-action behavior
+export function createModifierTapRule(
+  fromKey: KeyCode,
+  tapAction: { key_code: KeyCode; modifiers?: ModifiersKeys[] },
+  description: string
+): KarabinerRules {
+  return {
+    description,
+    manipulators: [
+      {
+        description: `${fromKey} => ${tapAction.key_code}${tapAction.modifiers ? ` + ${tapAction.modifiers.join('+')}` : ''}`,
+        from: {
+          key_code: fromKey,
+        },
+        to: [
+          {
+            key_code: fromKey,
+          },
+        ],
+        to_if_alone: [
+          {
+            key_code: tapAction.key_code,
+            modifiers: tapAction.modifiers,
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  };
+}
+
+// Type for defining multiple modifier tap rules at once
+export type ModifierTapMapping = {
+  [key in KeyCode]?: {
+    key_code: KeyCode;
+    modifiers?: ModifiersKeys[];
+    description?: string;
+  };
+};
+
+// Helper function to create multiple modifier tap rules at once
+export function createModifierTapRules(
+  mappings: ModifierTapMapping
+): KarabinerRules[] {
+  return Object.entries(mappings).map(([fromKey, tapAction]) => ({
+    description: tapAction.description || `${fromKey} Tap Rule`,
+    manipulators: [
+      {
+        description: `${fromKey} => ${tapAction.key_code}${tapAction.modifiers ? ` + ${tapAction.modifiers.join('+')}` : ''}`,
+        from: {
+          key_code: fromKey as KeyCode,
+        },
+        to: [
+          {
+            key_code: fromKey as KeyCode,
+          },
+        ],
+        to_if_alone: [
+          {
+            key_code: tapAction.key_code,
+            modifiers: tapAction.modifiers,
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  }));
+}
+
+// Helper function to create double-tap trigger rules
+export function createDoubleTapRule(
+  triggerKey: KeyCode,
+  action: { key_code: KeyCode; modifiers?: ModifiersKeys[] },
+  description: string,
+  delayMs: number = 250
+): KarabinerRules {
+  return {
+    description,
+    manipulators: [
+      {
+        description: `Double Tap ${triggerKey} => ${action.key_code}${action.modifiers ? ` + ${action.modifiers.join('+')}` : ''}`,
+        from: {
+          key_code: triggerKey,
+          modifiers: {
+            optional: ["any"],
+          },
+        },
+        to_delayed_action: {
+          to_if_invoked: [
+            {
+              key_code: triggerKey,
+            },
+          ],
+          to_if_canceled: [
+            {
+              key_code: action.key_code,
+              modifiers: action.modifiers,
+            },
+          ],
+        },
+        parameters: {
+          "basic.to_delayed_action_delay_milliseconds": delayMs,
+        },
+        type: "basic",
+      },
+    ],
+  };
+}
+
+// Type for defining multiple double-tap rules at once
+export type DoubleTapMapping = {
+  [key in KeyCode]?: {
+    key_code: KeyCode;
+    modifiers?: ModifiersKeys[];
+    description?: string;
+    delayMs?: number;
+  };
+};
+
+// Helper function to create multiple double-tap rules at once
+export function createDoubleTapRules(
+  mappings: DoubleTapMapping
+): KarabinerRules[] {
+  return Object.entries(mappings).map(([triggerKey, action]) => ({
+    description: action.description || `Double Tap ${triggerKey} Rule`,
+    manipulators: [
+      {
+        description: `Double Tap ${triggerKey} => ${action.key_code}${action.modifiers ? ` + ${action.modifiers.join('+')}` : ''}`,
+        from: {
+          key_code: triggerKey as KeyCode,
+          modifiers: {
+            optional: ["any"],
+          },
+        },
+        to_delayed_action: {
+          to_if_invoked: [
+            {
+              key_code: triggerKey as KeyCode,
+            },
+          ],
+          to_if_canceled: [
+            {
+              key_code: action.key_code,
+              modifiers: action.modifiers,
+            },
+          ],
+        },
+        parameters: {
+          "basic.to_delayed_action_delay_milliseconds": action.delayMs || 250,
+        },
+        type: "basic",
+      },
+    ],
+  }));
+}
+
 export type KeyCode =
   | "caps_lock"
   | "left_control"

@@ -3,41 +3,18 @@ import {
   KarabinerRules,
   createHyperNavigationRule,
   createMouseNavigationRules,
+  createHyperKeyRule,
+  createModifierTapRule,
+  createModifierTapRules,
+  createDoubleTapRule,
+  createDoubleTapRules,
 } from "./types";
 import { createHyperSubLayers, app, open, shell } from "./utils";
 
 // Array of Karabiner configuration rules
 const rules: KarabinerRules[] = [
   // Main Hyper Key Configuration
-  // Transforms Caps Lock into a powerful modifier key combination (Control + Option + Shift + Command)
-  // When pressed alone, it acts as Escape
-  // Uses right modifiers to allow for combinations with left modifiers
-  {
-    description: "Hyper Key (⌃⌥⇧⌘)",
-    manipulators: [
-      {
-        description: "Caps Lock -> Hyper Key",
-        from: {
-          key_code: "caps_lock",
-          modifiers: {
-            optional: ["any"],
-          },
-        },
-        to: [
-          {
-            key_code: "right_shift",
-            modifiers: ["right_control", "right_command", "right_option"],
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "escape",
-          },
-        ],
-        type: "basic",
-      },
-    ],
-  },
+  createHyperKeyRule(),
   // Vim-style navigation using Hyper key
   // Maps h,j,k,l to arrow keys
   // Additional mappings for page navigation (u,i,o,p)
@@ -68,10 +45,7 @@ const rules: KarabinerRules[] = [
     ],
     "^com\\.apple\\.Safari$",
   ),
-  // App launching shortcuts using Hyper key combinations - see Raycast settings for Hyper+non_modifier_key shortcuts
-  // Two layers of shortcuts:
-  // 1. Hyper + left_alt: Primary application shortcuts
-  // 2. Hyper + left_command: Secondary application shortcuts
+  // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
     // First layer: Hyper + left_alt shortcuts
     left_alt: {
@@ -108,7 +82,6 @@ const rules: KarabinerRules[] = [
       n: app("Invoice Ninja"),
       p: app("Adobe Photoshop 2025"),
       t: app("Ghostty"),
-      // 3D modeling, slicing & laser cutting
       1: app("FreeCAD"),
       b: app("BambuStudio"),
       e: app("ElegooSlicer"),
@@ -122,6 +95,7 @@ const rules: KarabinerRules[] = [
     f: {
       y: open("~/Documents/3D-CAD"),
       u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),
+      // u: open("'/Users/ed/RDM Dropbox/Clients'",),
       i: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
@@ -130,69 +104,35 @@ const rules: KarabinerRules[] = [
       k: open("'/Users/ed/RDM Dropbox'",),
     },
   }),
-  // RightCMD => alt+backspace
-  // Right CMD if held - alt+backspace if tapped
-  // quickly deletes the last word with a single tap
-{
-    description: "Delete Last Word",
-    manipulators: [
-      {
-        description: "Right CMD => Alt+Backspace",
-        from: {
-          key_code: "right_command",
-        },
-        to: [
-          {
-            key_code: "right_command",
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "delete_or_backspace",
-            modifiers: ["right_alt"],
-          },
-        ],
-        type: "basic",
-      },
-    ],
-  },
-  // Homerow Configuration - Double Tap Tab
-  {
-    description: "Homerow Trigger - Double Tap Tab",
-    manipulators: [
-      {
-        description: "Double Tap Tab => Homerow App",
-        from: {
-          key_code: "tab",
-          modifiers: {
-            optional: ["any"],
-          },
-        },
-        to_delayed_action: {
-          to_if_invoked: [
-            {
-              key_code: "tab",
-            },
-          ],
-          to_if_canceled: [
-            {
-              key_code: "spacebar",
-              modifiers: [
-                "right_command",
-                "right_option",
-                "right_shift",
-                "right_control",
-              ],
-            },
-          ],
-        },
-        parameters: {
-          "basic.to_delayed_action_delay_milliseconds": 250,
-        },
-        type: "basic",
-      },
-    ],
-  },
+  // Modifier tap rules - define multiple modifier keys with tap actions
+  ...createModifierTapRules({
+    // Right CMD => alt+backspace when tapped (delete last word)
+    right_command: {
+      key_code: "delete_or_backspace",
+      modifiers: ["right_alt"],
+      description: "Delete Last Word"
+    },
+    // Add more modifier tap rules here as needed
+    // Example: left_control: { key_code: "escape", description: "Control/Escape" },
+    // Example: right_shift: { key_code: "return_or_enter", description: "Shift/Enter" },
+  }),
+  // Double-tap rules - define multiple keys with double-tap actions
+  ...createDoubleTapRules({
+    // Double-tap Tab => Homerow trigger
+    tab: {
+      key_code: "spacebar",
+      modifiers: ["right_command", "right_option", "right_shift", "right_control"],
+      description: "Trigger Homerow",
+      delayMs: 250
+    },
+    delete_or_backspace: {
+      key_code: "delete_or_backspace",
+      modifiers: ["right_alt"],
+      description: "Delete Last Word",
+      delayMs: 250
+    },
+    // Add more double-tap rules here as needed
+  }),
 ];
 
 // trigger karabiner profiles based on hardware device
