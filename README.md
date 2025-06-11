@@ -190,11 +190,11 @@ I only use Ice.app to change the appearance of the native MacOS menu bar.
 
 <h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
 
-For my keyboard hacks, I use a combination of QMK/VIA along with Raycast to launch apps but I also chord the Hyper Key with other modifiers using Karabiner Elements.
+For most of my keyboard hacking, I'm using a combination of QMK (thru VIA app), with Raycast, but I leverage Karabiner Elements for more complex modifications, like chording the Hyper Key with other modifiers.
 
 My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (notice that it is the right side modifiers only.)
 
-ie: `hyper + left_cmd + d` launches my Dotfiles repo in my default editor.
+ie: `hyper + left_alt + d` launches my Dotfiles repo in my default editor.
 
 See the Readme for more details: [config/.config/karabiner/README.md](./config/.config/karabiner/README.md)
 
