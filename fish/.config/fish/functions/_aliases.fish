@@ -31,13 +31,14 @@ alias cll 'clear; and eza --long --all --header --git --icons --no-permissions -
 alias tree 'eza -Ta --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 alias ltd 'eza -TaD --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 
-
 # Project shortcuts/aliases
 alias projects 'cd ~/Developer'
 alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
+alias llm 'cd ~/.ollama/'
+alias ol ollama
 
 alias cuts 'eval $EDITOR ~/.dotfiles'
 alias ed 'cd ~/.dotfiles; and nvim .'
@@ -99,4 +100,4 @@ alias vapor vendor/bin/vapor
 alias doom 'cd ~/Developer/games/terminal-doom; and zig-out/bin/terminal-doom'
 
 ## Ai ##
-alias cc 'claude' # Claude Code
+alias cc claude # Claude Code
