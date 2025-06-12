@@ -37,7 +37,7 @@ alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
-alias llm 'cd ~/.ollama/modules'
+alias llm 'cd ~/.ollama/models'
 alias ol ollama
 
 alias cuts 'eval $EDITOR ~/.dotfiles'
