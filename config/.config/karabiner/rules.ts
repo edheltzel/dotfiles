@@ -118,12 +118,12 @@ const rules: KarabinerRules[] = [
   // Double-tap rules - define multiple keys with double-tap actions
   ...createDoubleTapRules({
     // Double-tap Tab => Homerow trigger
-    tab: {
-      key_code: "spacebar",
-      modifiers: ["right_command", "right_option", "right_shift", "right_control"],
-      description: "Trigger Homerow",
-      delayMs: 250
-    },
+    // tab: {
+    //   key_code: "spacebar",
+    //   modifiers: ["right_command", "right_option", "right_shift", "right_control"],
+    //   description: "Trigger Homerow",
+    //   delayMs: 250
+    // },
     // FIXME: key repeat behavior breaks with this rule ie: holding down backspace does not work.
     // delete_or_backspace: {
     //   key_code: "delete_or_backspace",

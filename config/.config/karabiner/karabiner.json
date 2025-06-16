@@ -1021,29 +1021,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Trigger Homerow",
-                        "manipulators": [
-                            {
-                                "description": "Double Tap tab => spacebar + right_command+right_option+right_shift+right_control",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "parameters": { "basic.to_delayed_action_delay_milliseconds": 250 },
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "key_code": "spacebar",
-                                            "modifiers": ["right_command", "right_option", "right_shift", "right_control"]
-                                        }
-                                    ],
-                                    "to_if_invoked": [{ "key_code": "tab" }]
-                                },
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
