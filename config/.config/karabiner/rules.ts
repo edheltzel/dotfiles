@@ -70,7 +70,7 @@ const rules: KarabinerRules[] = [
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       t: app("Toggl Track"),
-      y: app("Zen"),
+      y: app("Safari"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
