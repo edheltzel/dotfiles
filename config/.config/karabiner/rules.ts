@@ -70,7 +70,7 @@ const rules: KarabinerRules[] = [
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       t: app("Toggl Track"),
-      y: app("Safari"),
+      y: app("Zen"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -89,6 +89,7 @@ const rules: KarabinerRules[] = [
       s: app("Shapr3D"),
       c: app("Autodesk Fusion"),
       h: open("https://cad.onshape.com/signin"),
+      y: app("Safari"),
       x: app("xTool Creative Space"),
     },
     // Fourth layer: Hyper + f (Finder) shortcuts
