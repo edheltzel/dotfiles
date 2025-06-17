@@ -113,17 +113,22 @@ const rules: KarabinerRules[] = [
       modifiers: ["right_alt"],
       description: "Delete Last Word"
     },
+    right_control: {
+      key_code: "spacebar",
+      modifiers: ["right_command", "right_option", "right_shift", "right_control"],
+      description: "Trigger Homerow",
+    }
     // Add more modifier tap rules here as needed
   }),
   // Double-tap rules - define multiple keys with double-tap actions
   ...createDoubleTapRules({
     // Double-tap Tab => Homerow trigger
-    right_shift: {
-      key_code: "spacebar",
-      modifiers: ["right_command", "right_option", "right_shift", "right_control"],
-      description: "Trigger Homerow",
-      delayMs: 250
-    }
+    // right_shift: {
+    //   key_code: "spacebar",
+    //   modifiers: ["right_command", "right_option", "right_shift", "right_control"],
+    //   description: "Trigger Homerow",
+    //   delayMs: 250
+    // }
     // Add more double-tap rules here as needed
   }),
 ];
