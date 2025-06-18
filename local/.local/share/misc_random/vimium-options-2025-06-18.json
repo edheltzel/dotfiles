@@ -4,15 +4,7 @@
   "exclusionRules": [
     {
       "passKeys": "",
-      "pattern": "https?://mail.google.com/*"
-    },
-    {
-      "passKeys": "",
       "pattern": "https?://monkeytype.com/*"
-    },
-    {
-      "passKeys": "",
-      "pattern": "https?://app.clickup.com/*"
     },
     {
       "passKeys": "",
@@ -20,11 +12,11 @@
     },
     {
       "passKeys": "",
-      "pattern": "https?://usevia.app/*"
+      "pattern": "https?://mail.google.com/*"
     },
     {
       "passKeys": "",
-      "pattern": "https?://vial.rocks/*"
+      "pattern": "https?://app.spoolstock.com/*"
     }
   ]
 }
