@@ -53,7 +53,6 @@ const rules: KarabinerRules[] = [
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       p: app("Passwords"),
-
       // QMK Macros
       v: app("Via"), // M0
       l: open("raycast://script-commands/quit-fieldnotes"), // M4
@@ -64,8 +63,8 @@ const rules: KarabinerRules[] = [
     },
     // Second layer: Hyper + left_command shortcuts
     left_command: {
+      c: app("Google Chrome"), // Browser - testing
       f: app("Finder"),
-      m: app("Microsoft Teams"),
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       t: app("Toggl Track"),
@@ -81,15 +80,12 @@ const rules: KarabinerRules[] = [
       n: app("Invoice Ninja"),
       p: app("Adobe Photoshop 2025"),
       t: app("Ghostty"),
-      1: app("FreeCAD"),
       b: app("BambuStudio"),
       e: app("ElegooSlicer"),
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),
       c: app("Autodesk Fusion"),
-      h: open("https://cad.onshape.com/signin"),
       y: app("Safari"), // Browser - secondary
-      g: app("Google Chrome"), // Browser - testing
       x: app("xTool Creative Space"),
     },
     // Fourth layer: Hyper + f (Finder) shortcuts
@@ -103,6 +99,13 @@ const rules: KarabinerRules[] = [
       h: open("~/"),
       j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
       k: open("'/Users/ed/RDM Dropbox'",),
+    },
+    // Fifth layer: Hyper + m (Microsoft) shortcuts
+    m: {
+      e: app("Microsoft Excel"),
+      t: app("Microsoft Teams"),
+      w: app("Microsoft Word"),
+      p: app("Microsoft PowerPoint"),
     },
   }),
   // Modifier tap rules - define multiple modifier keys with tap actions
