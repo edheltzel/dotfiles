@@ -53,7 +53,6 @@ const rules: KarabinerRules[] = [
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       p: app("Passwords"),
-      y: app("Brave Browser Beta"),
 
       // QMK Macros
       v: app("Via"), // M0
@@ -70,7 +69,7 @@ const rules: KarabinerRules[] = [
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       t: app("Toggl Track"),
-      y: app("Zen"),
+      y: app("Zen"), // Browser - primary
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -89,7 +88,8 @@ const rules: KarabinerRules[] = [
       s: app("Shapr3D"),
       c: app("Autodesk Fusion"),
       h: open("https://cad.onshape.com/signin"),
-      y: app("Safari"),
+      y: app("Safari"), // Browser - secondary
+      g: app("Google Chrome"), // Browser - testing
       x: app("xTool Creative Space"),
     },
     // Fourth layer: Hyper + f (Finder) shortcuts
