@@ -5,11 +5,11 @@
   "author": "Ed Heltzel <ed@rainyday.media> -> originally by Max Stoiber <contact@mxstbr.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^22.10.2",
-    "nodemon": "^3.1.7",
-    "npm-check-updates": "^17.1.11",
-    "prettier": "^3.4.2",
-    "tsx": "^4.19.2"
+    "@types/node": "^22.15.32",
+    "nodemon": "^3.1.10",
+    "npm-check-updates": "^17.1.18",
+    "prettier": "^3.5.3",
+    "tsx": "^4.20.3"
   },
   "scripts": {
     "start": "nodemon --exec bun run build -e ts",

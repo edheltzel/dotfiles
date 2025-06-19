@@ -102,10 +102,10 @@ const rules: KarabinerRules[] = [
     },
     // Fifth layer: Hyper + m (Microsoft) shortcuts
     m: {
-      e: app("Microsoft Excel"),
-      t: app("Microsoft Teams"),
       w: app("Microsoft Word"),
-      p: app("Microsoft PowerPoint"),
+      e: app("Microsoft Excel"),
+      s: app("Microsoft PowerPoint"),
+      t: app("Microsoft Teams"),
     },
   }),
   // Modifier tap rules - define multiple modifier keys with tap actions
