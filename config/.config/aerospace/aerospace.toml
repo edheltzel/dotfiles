@@ -1,7 +1,8 @@
-# cSpell: disable - Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
+# cSpell: disable
+# Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0']
 
-start-at-login = false
+start-at-login = true
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -14,26 +15,25 @@ on-focus-changed = ['move-mouse window-lazy-center']
 
 automatically-unhide-macos-hidden-apps = false                  #focuses app regardless of visibility
 
-accordion-padding = 50
+accordion-padding = 5
 
 [gaps]
-inner.horizontal = 10
-inner.vertical = 10
-outer.top = 5
+inner.horizontal = 5
+inner.vertical = 5
+outer.top = 2
 outer.left = 5
 outer.right= 5
 outer.bottom = 5
-#outer.bottom = [{ monitor."PA328QV" = 40 }, { monitor."PA278QV" = 40 }, 20]
 
 [key-mapping]
 preset = 'qwerty'
 
 [mode.main.binding]
-#LCA key = Left alt-ctrl (M3)
-#LCAG key = Left alt-ctrl-cmd (M4)
-#MEH key = Left alt-ctrl-shift (M5)
+#LCA = Left alt-ctrl (M3)
+#LCAG = Left alt-ctrl-cmd (M4)
+#MEH = Left alt-ctrl-shift (M5)
 
-# LCAG - M4 key
+# LCAG - M4
 alt-ctrl-cmd-slash = 'layout tiles horizontal vertical' #LCAG
 alt-ctrl-cmd-comma = 'layout accordion horizontal vertical' #LCAG
 alt-ctrl-cmd-h = 'focus left' #LCAG
@@ -41,7 +41,7 @@ alt-ctrl-cmd-j = 'focus down' #LCAG
 alt-ctrl-cmd-k = 'focus up' #LCAG
 alt-ctrl-cmd-l = 'focus right' #LCAG
 
-# MEH - M5 key
+# MEH - M5
 alt-ctrl-shift-f = 'layout floating' #MEH
 alt-ctrl-shift-j = 'move down' #MEH
 alt-ctrl-shift-h = 'move left' #MEH
@@ -52,35 +52,24 @@ alt-ctrl-minus = 'resize smart -50'
 alt-ctrl-equal = 'resize smart +50'
 
 # Set workspaces both named and overflow
-#LCA - M3 key
-alt-ctrl-0 = 'workspace 0' # 0 -> overflow
-alt-ctrl-1 = 'workspace 1' # 1 -> overflow
-alt-ctrl-2 = 'workspace 2' # 2 -> overflow
-alt-ctrl-3 = 'workspace 3' # 3 -> 3D modeling/all-cad software
-alt-ctrl-e = 'workspace E' # E -> vscode/kitty/typora
-alt-ctrl-d = 'workspace D' # D -> figma/indesign/illustrator/photoshop
-alt-ctrl-m = 'workspace M' # M -> Teams/Messages/Discord
-alt-ctrl-n = 'workspace N' # N -> notes/reminders
-alt-ctrl-s = 'workspace S' # S -> 3D slicers
-alt-ctrl-w = 'workspace W' # W -> word/excel/powerpoint
-alt-ctrl-y = 'workspace Y' # Y -> browsers zen/brave/safari
+#LCA - M3
+alt-ctrl-backtick = 'workspace home' # backtick ` -> all apps
+alt-ctrl-0 = 'workspace overflow' # 0 -> overflow
+alt-ctrl-1 = 'workspace code' # 1 -> dev/brwosers apps
+alt-ctrl-2 = 'workspace design' # 2 -> design/work apps
+alt-ctrl-3 = 'workspace chat' # 3 -> chat
 
 # Move window to workspace
-# MEH - M5 key
-alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
-alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-ctrl-shift-3 = 'move-node-to-workspace 3 --focus-follows-window' # 3 -> 3D modeling/all-cad software
-alt-ctrl-shift-e = 'move-node-to-workspace E --focus-follows-window' # E -> editors - vscode/kitty/typora
-alt-ctrl-shift-d = 'move-node-to-workspace D --focus-follows-window' # D -> design -figma/indesign/illustrator/photoshop
-alt-ctrl-shift-m = 'move-node-to-workspace M --focus-follows-window' # M -> messages/teams
-alt-ctrl-shift-n = 'move-node-to-workspace N --focus-follows-window' # N -> notes/reminder
-alt-ctrl-shift-s = 'move-node-to-workspace S --focus-follows-window' # S -> 3D slicers
-alt-ctrl-shift-w = 'move-node-to-workspace W --focus-follows-window' # W -> word/excel/powerpoint
-alt-ctrl-shift-y = 'move-node-to-workspace Y --focus-follows-window' # Y -> browsers zen/brave/safari/firefox
+#MEH - M5
+alt-ctrl-cmd-backtick = 'move-node-to-workspace home --focus-follows-window'
+alt-ctrl-cmd-0 = 'move-node-to-workspace overflow --focus-follows-window'
+alt-ctrl-cmd-1 = 'move-node-to-workspace code --focus-follows-window'
+alt-ctrl-cmd-2 = 'move-node-to-workspace design --focus-follows-window'
+alt-ctrl-cmd-3 = 'move-node-to-workspace chat --focus-follows-window'
 
 # Jump back and forth between workspaces
-alt-shift-tab = 'workspace-back-and-forth'
+#LCA - M3
+alt-ctrl-tab = 'workspace-back-and-forth'
 
 ## Service Mode
 alt-shift-enter = ['mode service']
@@ -98,128 +87,27 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 ##### Dedicated Workspaces for Apps #####
-# Workspace 3
+# Chat Workspace
 [[on-window-detected]]
-if.app-id = 'com.shapr3d.shapr' #Shapr3D
-run = "move-node-to-workspace 3"
-[[on-window-detected]]
-if.app-id = 'com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion' #Fusion360
-run = "move-node-to-workspace 3"
-[[on-window-detected]]
-if.app-id = 'org.blenderfoundation.blender' #Blender
-run = "move-node-to-workspace 3"
-[[on-window-detected]]
-if.app-id = 'org.freecad.FreeCAD' #FreeCAD
-run = "move-node-to-workspace 3"
+if.app-name-regex-substring  = 'Messages|Microsoft Teams'
+run = "move-node-to-workspace chat"
 
-# Workspace D
+# Design Workspace
 [[on-window-detected]]
-if.app-id = 'com.figma.Desktop'  #Figma
-run = "move-node-to-workspace D"
-[[on-window-detected]]
-if.app-id = 'com.adobe.InDesign' #InDesign
-run = "move-node-to-workspace D"
-[[on-window-detected]]
-if.app-id = 'com.adobe.illustrator' #Illustrator
-run = "move-node-to-workspace D"
-[[on-window-detected]]
-if.app-id = 'com.adobe.Photoshop' #Photoshop
-run = "move-node-to-workspace D"
+if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*Slicer|.*Studio"
+run = "move-node-to-workspace design"
 
-# Workspace E
+# Dev Workspace
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode' #VSCode
-run = "move-node-to-workspace E"
-[[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty' #Kitty
-run = "move-node-to-workspace E"
-[[on-window-detected]]
-if.app-id = 'abnerworks.Typora' #Typora
-run = "move-node-to-workspace E"
+if.app-name-regex-substring = 'Visual Studio Code|Typora|kitty|WezTerm|Zen|Brave Browser Beta|Safari|Google Chrome'
+run = "move-node-to-workspace code"
 
-# Workspace M
+# Overflow Workspace
 [[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS' #Messages
-run = "move-node-to-workspace M"
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2' #Teams
-run = "move-node-to-workspace M"
+if.app-name-regex-substring = 'TablePlus|Sequel Ace'
+run = "move-node-to-workspace overflow"
 
-# Workspace N
+# Floating Windows
 [[on-window-detected]]
-if.app-id = 'com.apple.Notes'    #Notes
-run = "move-node-to-workspace N"
-[[on-window-detected]]
-if.app-id = 'com.apple.reminders' #Reminders
-run = "move-node-to-workspace N"
-
-# Workspace S
-[[on-window-detected]]
-if.app-id = 'com.bambulab.bambu-studio' #BambuSlicer
-run = "move-node-to-workspace S"
-[[on-window-detected]]
-if.app-id = 'com.softfever3d.orca-slicer' #OrcaSlicer
-run = "move-node-to-workspace S"
-[[on-window-detected]]
-if.app-id = 'com.elegoo3d.elegoo-slicer' #ElegooSlicer
-run = "move-node-to-workspace S"
-[[on-window-detected]]
-if.app-id = 'com.anycubic.AnycubicPhotonWorkshop' #AnycubicPhotonWorkshop
-run = "move-node-to-workspace S"
-
-# Workspace W
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Powerpoint' #PowerPoint
-run = "move-node-to-workspace W"
-[[on-window-detected]]
-if.app-id = 'comd.microsoft.Word' #Word
-run = "move-node-to-workspace W"
-
-# Workspace Y
-[[on-window-detected]]
-if.app-id = 'app.zen-browser.zen' #Zen Browser
-run = "move-node-to-workspace Y"
-[[on-window-detected]]
-if.app-id = 'com.brave.Browser.beta' #Brave Browser
-run = "move-node-to-workspace Y"
-[[on-window-detected]]
-if.app-id = 'com.apple.Safari'   #Safari Browser
-run = "move-node-to-workspace Y"
-
-##### ALWAYS FLOAT - https://nikitabobko.github.io/AeroSpace/commands#layout #####
-[[on-window-detected]]
-if.app-id = 'com.apple.finder' #Finder
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'com.raycast.macos' #Raycast
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'org.pqrs.Karabiner-Elements.Settings' #Karabiner Elements
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'com.IdeaPunch.ColorSlurp' #ColorSlurp
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'com.jordanbaird.Ice' #IceBar
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'cc.ffitch.shottr' #Shottr
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'com.getdropbox.dropbox' #Dropbox
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'com.aone.keka' #Keka
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'com.objective-see.lulu.app' #LuLu
-run = 'layout floating'
-[[on-window-detected]]
-if.app-id = 'com.toggl.daneel' #Toggl
-run = 'layout floating'
-
-# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
-## Force to secondary monitor
-# [workspace-to-monitor-force-assignment]
-# R = 'secondary' #Spotify
-# M = 'secondary' #Messages
+if.app-name-regex-substring = '.*finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|.*toggl|Cyberduck'
+run = "layout floating"
