@@ -2,7 +2,7 @@
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0']
 
-start-at-login = true
+start-at-login = false
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -28,57 +28,55 @@ outer.bottom = 5
 [key-mapping]
 preset = 'qwerty'
 
+########## MAIN BINDINGS ##########
+# M3=LCA alt-ctrl
+# M4=LCAG alt-ctrl-cmd
+
 [mode.main.binding]
-#LCA = Left alt-ctrl (M3)
-#LCAG = Left alt-ctrl-cmd (M4)
-#MEH = Left alt-ctrl-shift (M5)
+## Layouts/Focus - M4
+alt-ctrl-cmd-slash = 'layout tiles horizontal vertical'
+alt-ctrl-cmd-comma = 'layout accordion horizontal vertical'
+alt-ctrl-cmd-h = 'focus left'
+alt-ctrl-cmd-j = 'focus down'
+alt-ctrl-cmd-k = 'focus up'
+alt-ctrl-cmd-l = 'focus right'
 
-# LCAG - M4
-alt-ctrl-cmd-slash = 'layout tiles horizontal vertical' #LCAG
-alt-ctrl-cmd-comma = 'layout accordion horizontal vertical' #LCAG
-alt-ctrl-cmd-h = 'focus left' #LCAG
-alt-ctrl-cmd-j = 'focus down' #LCAG
-alt-ctrl-cmd-k = 'focus up' #LCAG
-alt-ctrl-cmd-l = 'focus right' #LCAG
-
-# MEH - M5
-alt-ctrl-shift-f = 'layout floating' #MEH
-alt-ctrl-shift-j = 'move down' #MEH
-alt-ctrl-shift-h = 'move left' #MEH
-alt-ctrl-shift-k = 'move up' #MEH
-alt-ctrl-shift-l = 'move right' #MEH
+## Moves/Floating - M3
+alt-ctrl-f = 'layout floating'
+alt-ctrl-j = 'move down'
+alt-ctrl-h = 'move left'
+alt-ctrl-k = 'move up'
+alt-ctrl-l = 'move right'
 
 alt-ctrl-minus = 'resize smart -50'
 alt-ctrl-equal = 'resize smart +50'
 
-# Set workspaces both named and overflow
-#LCA - M3
+########## WORKSPACES ##########
+## Jump - M3
+alt-ctrl-tab = 'workspace-back-and-forth'
+
+## Workspaces - M3
 alt-ctrl-backtick = 'workspace home' # backtick ` -> all apps
 alt-ctrl-0 = 'workspace overflow' # 0 -> overflow
 alt-ctrl-1 = 'workspace code' # 1 -> dev/brwosers apps
 alt-ctrl-2 = 'workspace design' # 2 -> design/work apps
 alt-ctrl-3 = 'workspace chat' # 3 -> chat
 
-# Move window to workspace
-#MEH - M5
+## Move to Workspace - M4
 alt-ctrl-cmd-backtick = 'move-node-to-workspace home --focus-follows-window'
 alt-ctrl-cmd-0 = 'move-node-to-workspace overflow --focus-follows-window'
 alt-ctrl-cmd-1 = 'move-node-to-workspace code --focus-follows-window'
 alt-ctrl-cmd-2 = 'move-node-to-workspace design --focus-follows-window'
 alt-ctrl-cmd-3 = 'move-node-to-workspace chat --focus-follows-window'
 
-# Jump back and forth between workspaces
-#LCA - M3
-alt-ctrl-tab = 'workspace-back-and-forth'
 
-## Service Mode
+########## SERVICE MODE ##########
 alt-shift-enter = ['mode service']
-
 [mode.service.binding]
-esc = ['reload-config', 'mode main']                       # reload config
-r = ['flatten-workspace-tree', 'mode main']                # reset layout
-f = ['layout floating tiling', 'mode main']
-b = ['balance-sizes', 'mode main']                         # balance windows
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main'] #
+f = ['layout floating tiling', 'mode main'] #
+b = ['balance-sizes', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
@@ -86,7 +84,12 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-##### Dedicated Workspaces for Apps #####
+### Dedicated Workspaces
+# Home Workspace
+[[on-window-detected]]
+if.app-name-regex-substring  = 'Zen|Brave Browser Beta|Safari|Google Chrome'
+run = "move-node-to-workspace home"
+
 # Chat Workspace
 [[on-window-detected]]
 if.app-name-regex-substring  = 'Messages|Microsoft Teams'
@@ -99,10 +102,16 @@ run = "move-node-to-workspace design"
 
 # Dev Workspace
 [[on-window-detected]]
-if.app-name-regex-substring = 'Visual Studio Code|Typora|kitty|WezTerm|Zen|Brave Browser Beta|Safari|Google Chrome'
+if.app-name-regex-substring = 'Visual Studio Code|Typora|kitty|WezTerm'
 run = "move-node-to-workspace code"
 
+# Overflow Workspace
+[[on-window-detected]]
+if.app-name-regex-substring = 'Notes|Reminders|Toggl|Cyberduck'
+run = "move-node-to-workspace overflow"
+
 # Floating Windows
+#Toggl and Cyberduck both always open in Overflow but are floating
 [[on-window-detected]]
 if.app-name-regex-substring = '.*finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|.*toggl|Cyberduck'
 run = "layout floating"
