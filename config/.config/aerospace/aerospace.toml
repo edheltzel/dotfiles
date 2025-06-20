@@ -102,11 +102,6 @@ run = "move-node-to-workspace design"
 if.app-name-regex-substring = 'Visual Studio Code|Typora|kitty|WezTerm|Zen|Brave Browser Beta|Safari|Google Chrome'
 run = "move-node-to-workspace code"
 
-# Overflow Workspace
-[[on-window-detected]]
-if.app-name-regex-substring = 'TablePlus|Sequel Ace'
-run = "move-node-to-workspace overflow"
-
 # Floating Windows
 [[on-window-detected]]
 if.app-name-regex-substring = '.*finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|.*toggl|Cyberduck'
