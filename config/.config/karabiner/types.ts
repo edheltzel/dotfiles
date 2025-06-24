@@ -34,15 +34,17 @@ export type MouseNavigationMapping = {
 
 export function createMouseNavigationRules(
   mappings: MouseNavigationMapping[],
-  appBundleId: string
+  appBundleIds: string | string[]
 ): KarabinerRules[] {
+  const bundleIds = Array.isArray(appBundleIds) ? appBundleIds : [appBundleIds];
+
   return mappings.map(mapping => ({
     description: mapping.description,
     manipulators: [
       {
         conditions: [
           {
-            bundle_identifiers: [appBundleId],
+            bundle_identifiers: bundleIds,
             type: "frontmost_application_if"
           }
         ],

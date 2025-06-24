@@ -164,7 +164,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$"
+                                            "^com\\.apple\\.Safari$",
+                                            "^com\\.vivaldi\\.Vivaldi$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -188,7 +189,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$"
+                                            "^com\\.apple\\.Safari$",
+                                            "^com\\.vivaldi\\.Vivaldi$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }

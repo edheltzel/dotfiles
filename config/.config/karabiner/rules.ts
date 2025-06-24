@@ -28,7 +28,7 @@ const rules: KarabinerRules[] = [
     o: "home",
     p: "end",
   }),
-  // Mouse button configuration for Safari
+  // Mouse button configuration for Safari and Vivaldi
   // Maps mouse buttons 4 and 5 to back/forward navigation
   ...createMouseNavigationRules(
     [
@@ -43,7 +43,7 @@ const rules: KarabinerRules[] = [
         description: "Mouse 5 => Forward",
       },
     ],
-    "^com\\.apple\\.Safari$",
+    ["^com\\.apple\\.Safari$", "^com\\.vivaldi\\.Vivaldi$"],
   ),
   // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
