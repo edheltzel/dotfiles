@@ -68,7 +68,6 @@ const rules: KarabinerRules[] = [
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       t: app("Toggl Track"),
-      y: app("Zen"), // Browser - primary
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -85,7 +84,6 @@ const rules: KarabinerRules[] = [
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),
       c: app("Autodesk Fusion"),
-      y: app("Safari"), // Browser - secondary
       x: app("xTool Creative Space"),
     },
     // Fourth layer: Hyper + f (Finder) shortcuts
@@ -106,6 +104,14 @@ const rules: KarabinerRules[] = [
       e: app("Microsoft Excel"),
       s: app("Microsoft PowerPoint"),
       t: app("Microsoft Teams"),
+    },
+    // Sixth layer: Hyper + left_control (just browsers)
+    left_control:{
+      s: app("Safari"),
+      b: app("Brave Browser Beta"),
+      c: app("Google Chrome"),
+      y: app("Vivaldi"),
+      z: app("Zen"),
     },
   }),
   // Modifier tap rules - define multiple modifier keys with tap actions
