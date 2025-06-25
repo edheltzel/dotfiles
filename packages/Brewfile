@@ -264,12 +264,12 @@ cask 'nikitabobko/tap/aerospace' # Window Management
 # brew 'borders'                   # A window borders manager
 
 # Browsers
-cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser@beta'        # Brave browser - Secondary
+cask 'choosy'                    # Choose which browser to open links in - Primary/Default
 cask 'google-chrome'             # Chrome - tests
 cask 'firefox'                   # Firefox - tests
-cask 'vivaldi'                   # Vivaldi
-cask 'zen'                       # Zen browser - Primary
+cask 'vivaldi@snapshot'          # Vivaldi
+cagk 'zen'                       # Zen browser - Primary
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
