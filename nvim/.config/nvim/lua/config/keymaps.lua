@@ -11,14 +11,6 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 local Util = require("lazyvim.util")
 
--- using zellji instead of tmux
--- keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { silent = true })
--- keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", { silent = true })
--- keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", { silent = true })
--- keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", { silent = true })
--- keymap.set("n", "<C-\\>", "<Cmd>NvimTmuxNavigateLastActive<CR>", { silent = true })
--- keymap.set("n", "<C-Space>", "<Cmd>NvimTmuxNavigateNavigateNext<CR>", { silent = true })
-
 -- Borderless terminal - like vscode
 vim.keymap.set("n", "<C-`>", function()
   Util.terminal(nil, { border = "none" })
@@ -38,11 +30,6 @@ keymap.del("n", "<C-Right>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-
--- keymap.set("n", "<M-h>", '<Cmd>lua require("tmux").resize_left()<CR>', { silent = true })
--- keymap.set("n", "<M-j>", '<Cmd>lua require("tmux").resize_bottom()<CR>', { silent = true })
--- keymap.set("n", "<M-k>", '<Cmd>lua require("tmux").resize_top()<CR>', { silent = true })
--- keymap.set("n", "<M-l>", '<Cmd>lua require("tmux").resize_right()<CR>', { silent = true })
 
 local set_keymap = vim.api.nvim_set_keymap
 
@@ -64,32 +51,35 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" }
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 
--- package-info keymaps
-set_keymap(
+keymap.set("n", "gh", "0", { desc = "Go to beginning of line" })
+keymap.set("n", "gl", "$", { desc = "Go to end of line" })
+
+-- package-info keymaps -> leader+cp
+keymap.set(
   "n",
   "<leader>cpt",
-  "<cmd>ua require('package-info').toggle()<cr>",
+  "<cmdua require('package-info').toggle()<cr>",
   { silent = true, noremap = true, desc = "Toggle" }
 )
-set_keymap(
+keymap.set(
   "n",
   "<leader>cpd",
-  "<cmd>lua require('package-info').delete()<cr>",
+  "<cmdua require('package-info').toggle()<cr>",
   { silent = true, noremap = true, desc = "Delete package" }
 )
-set_keymap(
+keymap.set(
   "n",
   "<leader>cpu",
   "<cmd>lua require('package-info').update()<cr>",
   { silent = true, noremap = true, desc = "Update package" }
 )
-set_keymap(
+keymap.set(
   "n",
   "<leader>cpi",
   "<cmd>lua require('package-info').install()<cr>",
   { silent = true, noremap = true, desc = "Install package" }
 )
-set_keymap(
+keymap.set(
   "n",
   "<leader>cpc",
   "<cmd>lua require('package-info').change_version()<cr>",
