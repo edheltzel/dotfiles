@@ -1169,16 +1169,16 @@
                         ]
                     },
                     {
-                        "description": "Trigger Homerow",
+                        "description": "Trigger Raycast",
                         "manipulators": [
                             {
-                                "description": "right_control => spacebar + right_command+right_option+right_shift+right_control",
+                                "description": "right_control => spacebar + right_command",
                                 "from": { "key_code": "right_control" },
                                 "to": [{ "key_code": "right_control" }],
                                 "to_if_alone": [
                                     {
                                         "key_code": "spacebar",
-                                        "modifiers": ["right_command", "right_option", "right_shift", "right_control"]
+                                        "modifiers": ["right_command"]
                                     }
                                 ],
                                 "type": "basic"

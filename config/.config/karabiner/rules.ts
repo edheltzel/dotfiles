@@ -124,8 +124,8 @@ const rules: KarabinerRules[] = [
     },
     right_control: {
       key_code: "spacebar",
-      modifiers: ["right_command", "right_option", "right_shift", "right_control"],
-      description: "Trigger Homerow",
+      modifiers: ["right_command"],
+      description: "Trigger Raycast",
     }
     // Add more modifier tap rules here as needed
   }),
