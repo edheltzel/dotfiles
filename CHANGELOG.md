@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v2.0](https://github.com/edheltzel/dotfiles/tree/v2.0) - 2024-07-16
+## [v2.0](https://github.com/edheltzel/dotfiles/tree/v2.0) - 2025-07-26
 
 [Full Changelog](https://github.com/edheltzel/dotfiles/compare/create...v2.0)
 
