@@ -10,3 +10,4 @@ typescript
 typescript-language-server
 wrangler
 @anthropic-ai/claude-code
+@google/gemini-cli
