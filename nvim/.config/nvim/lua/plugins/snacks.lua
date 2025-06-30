@@ -6,7 +6,6 @@ return {
         sources = {
           explorer = {
             layout = {
-              hidden = { "input" },
               layout = { position = "right" },
             },
           },
