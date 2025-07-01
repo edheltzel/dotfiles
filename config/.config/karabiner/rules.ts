@@ -13,9 +13,9 @@ import { createHyperSubLayers, app, open, shell } from "./utils";
 
 // Array of Karabiner configuration rules
 const rules: KarabinerRules[] = [
-  // Main Hyper Key Configuration
+  // see types.ts to configure Hyper key
   createHyperKeyRule(),
-  // Vim-style navigation using Hyper key
+  // Vim-style navigation with Hyper key
   // Maps h,j,k,l to arrow keys
   // Additional mappings for page navigation (u,i,o,p)
   createHyperNavigationRule({
@@ -47,7 +47,7 @@ const rules: KarabinerRules[] = [
   ),
   // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
-    // First layer: Hyper + left_alt shortcuts
+    //---  Hyper + left_alt shortcuts - First layer 
     left_alt: {
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
@@ -61,13 +61,14 @@ const rules: KarabinerRules[] = [
       n: open("'raycast://customWindowManagementCommand?&name=FieldNotes'"), // M3
       q: open("https://launcher.keychron.com/#/keymap"), // M5
     },
-    // Second layer: Hyper + left_command shortcuts
+    //---  Second layer: Hyper + left_command shortcuts
     left_command: {
       c: app("Google Chrome"), // Browser - testing
       f: app("Finder"),
+      l: app("Toggl Track"),
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
-      t: app("Toggl Track"),
+      t: app("kitty"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -106,7 +107,7 @@ const rules: KarabinerRules[] = [
       t: app("Microsoft Teams"),
     },
     // Sixth layer: Hyper + left_control (just browsers)
-    left_control:{
+    left_control: {
       s: app("Safari"),
       b: app("Brave Browser Beta"),
       c: app("Google Chrome"),

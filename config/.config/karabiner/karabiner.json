@@ -453,6 +453,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Toggl Track.app'",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Toggl Track.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open raycast://extensions/jomifepe/bitwarden/search",
                                 "from": {
                                     "key_code": "p",
@@ -485,12 +501,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Toggl Track.app'",
+                                "description": "Open -a 'kitty.app'",
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Toggl Track.app'" }],
+                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
                                 "type": "basic"
                             },
                             {
