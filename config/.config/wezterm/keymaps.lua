@@ -34,8 +34,8 @@ local keys = {
   -- Pane keybindings
   { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
   { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "h", mods = "SUPER|SHIFT|CTRL|ALT", action = act.ActivatePaneDirection("Prev") },
-  { key = "l", mods = "SUPER|SHIFT|CTRL|ALT", action = act.ActivatePaneDirection("Next") },
+  { key = "h", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Prev") },
+  { key = "l", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Next") },
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
   { key = "w", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
