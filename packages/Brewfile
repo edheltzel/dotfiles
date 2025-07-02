@@ -244,8 +244,10 @@ cask 'openinterminal'            # Finder button, opens directory in terminal
 cask 'itsycal'                   # Calendar in menubar
 brew 'stats'                     # System stats in menubar
 cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
-cask 'typinator'                 # Text expander - macOS only
+# cask 'typinator'                 # Text expander - macOS only
 cask 'keka'                      # File archiver and extractor
+cask 'homerow'                   # keyboaard shortcuts for every button in macOS
+cask 'kindavim'                  # Vim motions everywhere 
 
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'               # Keyboard firmware
