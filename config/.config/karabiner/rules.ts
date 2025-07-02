@@ -47,7 +47,7 @@ const rules: KarabinerRules[] = [
   ),
   // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
-    //---  Hyper + left_alt shortcuts - First layer 
+    //---  Hyper + left_alt shortcuts - First layer
     left_alt: {
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
