@@ -126,4 +126,7 @@ wezterm.on("update-status", function(window, pane)
   }))
 end)
 
+local toggle_terminal = wezterm.plugin.require("https://github.com/zsh-sage/toggle_terminal.wez")
+toggle_terminal.apply_to_config(config)
+
 return config
