@@ -715,5 +715,13 @@
 	{
 		"key": "ctrl+alt+cmd+i",
 		"command": "editor.emmet.action.wrapWithAbbreviation"
-	}
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\\\r\n"
+        },
+        "when": "terminalFocus"
+    }
 ]
