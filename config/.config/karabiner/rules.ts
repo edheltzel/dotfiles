@@ -91,7 +91,6 @@ const rules: KarabinerRules[] = [
     f: {
       y: open("~/Documents/3D-CAD"),
       u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),
-      // u: open("'/Users/ed/RDM Dropbox/Clients'",),
       i: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
@@ -108,11 +107,11 @@ const rules: KarabinerRules[] = [
     },
     // Sixth layer: Hyper + left_control (just browsers)
     left_control: {
+      y: app("Vivaldi"),
+      z: app("Zen"),
       s: app("Safari"),
       b: app("Brave Browser Beta"),
       c: app("Google Chrome"),
-      y: app("Vivaldi"),
-      z: app("Zen"),
     },
   }),
   // Modifier tap rules - define multiple modifier keys with tap actions
