@@ -68,7 +68,7 @@ const rules: KarabinerRules[] = [
       l: app("Toggl Track"),
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
-      t: app("kitty"),
+      t: app("WezTerm"),
       comma: app("System Settings"),
     },
     // Third layer: Hyper + a (app) shortcuts
@@ -79,7 +79,6 @@ const rules: KarabinerRules[] = [
       m: app("Messages"),
       n: app("Invoice Ninja"),
       p: app("Adobe Photoshop 2025"),
-      t: app("Ghostty"),
       b: app("BambuStudio"),
       e: app("ElegooSlicer"),
       o: app("OrcaSlicer"),
