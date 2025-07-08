@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
--- Define the leader key
+-- Define the leader key -> ⌘+k
 local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1500 }
 
 -- Define key mappings
@@ -30,7 +30,7 @@ local keys = {
   },
   { key = "=", mods = "CMD|CTRL", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
   { key = "f", mods = "CMD|CTRL", action = wezterm.action.ToggleFullScreen },
-
+  --
   -- Pane keybindings
   { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
   { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
@@ -39,10 +39,25 @@ local keys = {
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
   { key = "w", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
+  --
   --maximize pane ↓
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
   { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
-
+  --
+  -- resize window/pane/splits
+  {
+    key = "LeftArrow",
+    mods = "SUPER|CTRL",
+    action = act.AdjustPaneSize({ "Left", 5 }),
+  },
+  { key = "DownArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Down", 5 }) },
+  { key = "UpArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Up", 5 }) },
+  {
+    key = "RightArrow",
+    mods = "SUPER|CTRL",
+    action = act.AdjustPaneSize({ "Right", 5 }),
+  },
+  --
   -- Tab keybindings
   { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
   { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
@@ -75,7 +90,7 @@ local keys = {
     key = ",",
     mods = "SUPER|CTRL",
     action = wezterm.action.ReloadConfiguration,
-  }
+  },
 }
 
 -- Jump to a tab with index (⌘+k 1-9 OR ⌘+1-9)
