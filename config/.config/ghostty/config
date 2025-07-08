@@ -1,15 +1,24 @@
-config-file = "colors/eldritch"
+font-size = 18
 font-family = "Lilex Nerd Font Mono"
+window-title-font-family = "Lilex Nerd Font Mono"
 window-inherit-font-size = false
-font-size = 17
-window-colorspace = "display-p3"
 
-background-opacity = 0.95
-background-blur-radius = 20
-macos-titlebar-style = hidden
+alpha-blending = linear-corrected
+
+window-colorspace = "display-p3"
+config-file = "colors/eldritch"
+
+background-opacity = 0.85
+background-blur-radius = 25
+
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true
 macos-non-native-fullscreen = true
 
+mouse-hide-while-typing = true
 quick-terminal-position = "top"
   keybind = global:cmd+control+alt+space=toggle_quick_terminal
 
 keybind = cmd+i=inspector:toggle
+keybind = cmd+ctrl+,=reload_config
