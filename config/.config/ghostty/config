@@ -5,6 +5,7 @@ window-inherit-font-size = false
 
 alpha-blending = linear-corrected
 
+
 window-colorspace = "display-p3"
 config-file = "colors/eldritch"
 
@@ -17,8 +18,9 @@ macos-option-as-alt = true
 macos-non-native-fullscreen = true
 
 mouse-hide-while-typing = true
-quick-terminal-position = "top"
-  keybind = global:cmd+control+alt+space=toggle_quick_terminal
 
+quick-terminal-position = "top"
+
+keybind = global:cmd+control+alt+space=toggle_quick_terminal
 keybind = cmd+i=inspector:toggle
 keybind = cmd+ctrl+,=reload_config
