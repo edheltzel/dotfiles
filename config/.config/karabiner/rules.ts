@@ -63,13 +63,16 @@ const rules: KarabinerRules[] = [
     },
     //---  Second layer: Hyper + left_command shortcuts
     left_command: {
+      hyphen: open ("'raycast://extensions/rishabswift/word-search/word-spell'"),
+      comma: app("System Settings"),
       c: app("Google Chrome"), // Browser - testing
       f: app("Finder"),
       l: app("Toggl Track"),
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
-      t: app("WezTerm"),
-      comma: app("System Settings"),
+      k: app("kitty"), // Terminal - 1
+      w: app("WezTerm"), // Terminal - 2
+      g: app("Ghostty"), // Terminal - 3
     },
     // Third layer: Hyper + a (app) shortcuts
     a: {
