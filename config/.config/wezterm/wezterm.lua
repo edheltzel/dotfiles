@@ -4,7 +4,7 @@ local act = wezterm.action
 
 -- Load key mappings and key tables from external file
 -- see ./keybindings.lua
-local keymaps = require("keymaps")
+local keymaps = require("keybindings")
 
 local fish_path = "/opt/homebrew/bin/fish"
 
