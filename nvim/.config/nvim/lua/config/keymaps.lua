@@ -11,6 +11,17 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 local Util = require("lazyvim.util")
 
+-- UNSET EXISTING KEYMAPS
+keymap.del({ "n", "i", "v" }, "<A-j>")
+keymap.del({ "n", "i", "v" }, "<A-k>")
+keymap.del("n", "<C-Left>")
+keymap.del("n", "<C-Down>")
+keymap.del("n", "<C-Up>")
+keymap.del("n", "<C-Right>")
+
+-- REDO KEYMAP
+keymap.set("n", "U", "<C-r>", { desc = "Redo" })
+
 -- BORDERLESS TERMINAL - LIKE VSCODE
 vim.keymap.set({ "n", "t" }, "<C-`>", function()
   Util.terminal(nil, { border = "none" })
@@ -25,13 +36,6 @@ vim.keymap.set("n", "<leader>gg", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })
 end, { desc = "Lazygit (root dir)" })
 
-keymap.del({ "n", "i", "v" }, "<A-j>")
-keymap.del({ "n", "i", "v" }, "<A-k>")
-keymap.del("n", "<C-Left>")
-keymap.del("n", "<C-Down>")
-keymap.del("n", "<C-Up>")
-keymap.del("n", "<C-Right>")
-
 -- CLEAR SEARCH HIGHLIGHTS
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
@@ -41,11 +45,14 @@ keymap.set("n", "gl", "$", { desc = "Jump end of line" })
 
 local set_keymap = vim.api.nvim_set_keymap
 
--- SPLIT WINDOWS
+-- FLASH.NVIM KEYMAPS
+keymap.set({ "n", "x", "o" }, "<leader>jj", function()
+  require("flash").jump()
+end, { desc = "Flash" })
+
+-- WINDOWS/SPLITS/TABS
 keymap.set("n", "ss", ":vsplit<Return>", opts)
 keymap.set("n", "sv", ":split<Return>", opts)
-
--- TABS
 keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
@@ -58,11 +65,6 @@ keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-
--- FLASH.NVIM KEYMAPS
-keymap.set({ "n", "x", "o" }, "<leader>jj", function()
-  require("flash").jump()
-end, { desc = "Flash" })
 
 -- PACKAGE-INFO KEYMAPS
 set_keymap(
