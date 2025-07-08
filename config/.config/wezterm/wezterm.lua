@@ -21,6 +21,8 @@ config.default_prog = { fish_path, "-l" }
 config.cursor_blink_rate = 500
 config.default_cursor_style = "BlinkingBar"
 
+config.hide_mouse_cursor_when_typing = true
+
 -- Audio
 -- config.audible_bell = "SystemBeep"
 
@@ -35,10 +37,9 @@ config.color_scheme = "Eldritch"
 
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Lilex", weight = "Regular", scale = 1.45 },
-  { family = "CommitMono", weight = "Regular", scale = 1.45 },
+  { family = "Lilex", weight = "Regular", scale = 1.5 },
+  { family = "CommitMono", weight = "Regular", scale = 1.5 },
 })
-
 -- Window Config
 config.max_fps = 240
 config.window_background_opacity = 0.85

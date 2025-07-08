@@ -70,6 +70,12 @@ local keys = {
 
   -- Workspace
   { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
+  -- Reload config
+  {
+    key = ",",
+    mods = "SUPER|CTRL",
+    action = wezterm.action.ReloadConfiguration,
+  }
 }
 
 -- Jump to a tab with index (⌘+k 1-9 OR ⌘+1-9)
