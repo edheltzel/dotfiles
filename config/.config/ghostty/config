@@ -1,3 +1,5 @@
+initial-window = false
+window-save-state = never
 
 alpha-blending = linear-corrected
 
@@ -18,8 +20,6 @@ clipboard-read = allow
 clipboard-write = allow
 copy-on-select = true
 
-initial-window = false
-
 scrollback-limit = 1000000000
 
 window-colorspace = "display-p3"
@@ -35,4 +35,3 @@ macos-titlebar-proxy-icon = hidden
 
 keybind = global:cmd+control+alt+t=toggle_quick_terminal
 keybind = super+ctrl+,=reload_config
-
