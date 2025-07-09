@@ -1,5 +1,4 @@
 initial-window = false
-window-save-state = never
 
 alpha-blending = linear-corrected
 
@@ -16,9 +15,9 @@ quick-terminal-position = "left"
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = false
 
+copy-on-select = true
 clipboard-read = allow
 clipboard-write = allow
-copy-on-select = true
 
 scrollback-limit = 1000000000
 
