@@ -1,26 +1,38 @@
-font-size = 18
-font-family = "Lilex Nerd Font Mono"
-window-title-font-family = "Lilex Nerd Font Mono"
-window-inherit-font-size = false
 
 alpha-blending = linear-corrected
-
-
-window-colorspace = "display-p3"
-config-file = "colors/eldritch"
 
 background-opacity = 0.85
 background-blur-radius = 25
 
-macos-titlebar-style = tabs
-macos-titlebar-proxy-icon = hidden
-macos-option-as-alt = true
-macos-non-native-fullscreen = true
+config-file = "colors/eldritch"
+
+
+font-size = 18
+font-family = "Lilex Nerd Font Mono"
+
+quick-terminal-position = "left"
+quick-terminal-animation-duration = 0
+quick-terminal-autohide = false
+
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = true
+
+initial-window = false
+
+scrollback-limit = 1000000000
+
+window-colorspace = "display-p3"
+window-inherit-font-size = false
+window-padding-x = 10
+window-title-font-family = "Lilex Nerd Font Mono"
 
 mouse-hide-while-typing = true
+macos-non-native-fullscreen = true
+macos-option-as-alt = true
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
 
-quick-terminal-position = "top"
+keybind = global:cmd+control+alt+t=toggle_quick_terminal
+keybind = super+ctrl+,=reload_config
 
-keybind = global:cmd+control+alt+space=toggle_quick_terminal
-keybind = cmd+i=inspector:toggle
-keybind = cmd+ctrl+,=reload_config

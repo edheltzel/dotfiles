@@ -1,8 +1,10 @@
 local wezterm = require("wezterm")
 
 local act = wezterm.action
+local mux = wezterm.mux
 
--- Load key mappings and key tables from external file
+local keys = {}
+
 -- see ./keybindings.lua
 local keymaps = require("keybindings")
 
