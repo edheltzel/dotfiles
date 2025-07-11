@@ -53,6 +53,7 @@ renamed = "[ ×${count} ](fg:214)"
 disabled = false
 min_time = 1
 format = "[󰔛 $duration]($style)"
+show_milliseconds = true
 style = "#CFC9C2"
 ## end prompt ##
 
