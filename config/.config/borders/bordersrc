@@ -1,5 +1,5 @@
 #!/bin/bash
-# Elbritch colors - https://github.com/eldritch-theme/eldritch
+## Elbritch colors - https://github.com/eldritch-theme/eldritch
 # 0xff212337 = #212337
 # 0xff323449 = #323449
 # 0xffebfafa = #ebfafa
@@ -11,6 +11,12 @@
 # 0xffa48cf2 = #a48cf2
 # 0xfff16c75 = #f16c75
 # 0xfff1fc79 = #f1fc79
+## Rose Pine colors
+# 0xffc4a7e7 = #c4a7e7
+# 0xff2a283e = #2a283e
+#
+################################
+#
 # Light mode use:
 #  active_color=0xff212337
 #  inactive_color=0xffebfafa
@@ -21,8 +27,8 @@
 options=(
   style=round
   width=5.0
-  active_color=0xffa48cf2
-  inactive_color=0xff212337
+  active_color=0xffc4a7e7
+  inactive_color=0xff21202e
 )
 
 borders "${options[@]}"
