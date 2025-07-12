@@ -1,6 +1,8 @@
 # cSpell: disable
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
-after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0']
+after-startup-command = [
+  'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0',
+]
 
 start-at-login = false
 
@@ -13,7 +15,7 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
-automaticall-unhide-macos-hidden-apps = false                  #focuses app regardless of visibility
+automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
 
 accordion-padding = 5
 
@@ -22,7 +24,7 @@ inner.horizontal = 5
 inner.vertical = 5
 outer.top = 2
 outer.left = 5
-outer.right= 5
+outer.right = 5
 outer.bottom = 5
 
 [key-mapping]
@@ -57,10 +59,10 @@ alt-ctrl-tab = 'workspace-back-and-forth'
 
 ## Workspaces - M3
 alt-ctrl-backtick = 'workspace home' # backtick ` -> all apps
-alt-ctrl-0 = 'workspace overflow' # 0 -> overflow
-alt-ctrl-1 = 'workspace code' # 1 -> dev/brwosers apps
-alt-ctrl-2 = 'workspace design' # 2 -> design/work apps
-alt-ctrl-3 = 'workspace chat' # 3 -> chat
+alt-ctrl-0 = 'workspace overflow'    # 0 -> overflow
+alt-ctrl-1 = 'workspace code'        # 1 -> dev/brwosers apps
+alt-ctrl-2 = 'workspace design'      # 2 -> design/work apps
+alt-ctrl-3 = 'workspace chat'        # 3 -> chat
 
 ## Move to Workspace - M4
 alt-ctrl-cmd-backtick = 'move-node-to-workspace home --focus-follows-window'
@@ -74,8 +76,8 @@ alt-ctrl-cmd-3 = 'move-node-to-workspace chat --focus-follows-window'
 alt-shift-enter = ['mode service']
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main'] #
-f = ['layout floating tiling', 'mode main'] #
+r = ['flatten-workspace-tree', 'mode main']                #
+f = ['layout floating tiling', 'mode main']                #
 b = ['balance-sizes', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
@@ -87,12 +89,12 @@ alt-shift-l = ['join-with right', 'mode main']
 ### Dedicated Workspaces
 # Home Workspace
 [[on-window-detected]]
-if.app-name-regex-substring  = 'Zen|Brave Browser Beta|Safari|Google Chrome'
+if.app-name-regex-substring = 'Zen|Brave Browser Beta|Safari|Google Chrome'
 run = "move-node-to-workspace home"
 
 # Chat Workspace
 [[on-window-detected]]
-if.app-name-regex-substring  = 'Messages|Microsoft Teams'
+if.app-name-regex-substring = 'Messages|Microsoft Teams'
 run = "move-node-to-workspace chat"
 
 # Design Workspace
