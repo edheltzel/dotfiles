@@ -39,6 +39,10 @@ end, { desc = "Lazygit (root dir)" })
 -- CLEAR SEARCH HIGHLIGHTS
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
+-- REDO KEYMAP
+keymap.set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" })
+keymap.set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" })
+
 -- JUMP to BOL/EOL
 keymap.set("n", "gh", "^", { desc = "Jump beginning of line" })
 keymap.set("n", "gl", "$", { desc = "Jump end of line" })
