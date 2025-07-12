@@ -33,17 +33,17 @@ gui:
 
     # ROSE PINE THEME
     activeBorderColor:
-      - "#524f67"
+      - "#9893a5"
       - bold
     inactiveBorderColor:
-      - "#2a283e"
+      - "#524f67"
     searchingActiveBorderColor:
       - "#ebbcba"
       - bold
     optionsTextColor:
       - blue
     selectedLineBgColor:
-      - "#2a283e"
+      - "#524f67"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
