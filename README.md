@@ -184,7 +184,7 @@ Any of the scripts can be run individually at any time to update/reset as needed
 > [!NOTE]
 > For Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.
 
-<h4 id="window-manager">~~Aerospace Window~~~ Native MacOS Stage Manager + Raycast + Alt-Tab <a href="#to-the-top">↑</a></h4>
+<h4 id="window-manager">~~Aerospace Window~~ Native MacOS Stage Manager + Raycast + Alt-Tab <a href="#to-the-top">↑</a></h4>
 <h4 id="status-bar">Ice Bar <a href="#to-the-top">↑</a></h4>
 I only use Ice.app to change the appearance of the native MacOS menu bar.
 
