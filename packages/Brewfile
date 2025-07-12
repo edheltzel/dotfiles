@@ -51,6 +51,7 @@ brew 'topgrade'     # Upgrade all the things - Rust
 brew 'tmux'         # Terminal multiplexer
 
 # CLI Basics
+brew 'ast-grep'             # A fast and polyglot tool for code structural search, lint, rewriting at large scale
 brew 'ack'                  # Search tool like grep, but faster
 brew 'bat'                  # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
