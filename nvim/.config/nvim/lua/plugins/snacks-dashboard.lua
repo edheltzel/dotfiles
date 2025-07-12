@@ -20,7 +20,7 @@ return {
             { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
-          header = [[Hey Mr. Ed 👋!]],
+          header = [[Get Shit Done 💤]],
         },
       },
     },
