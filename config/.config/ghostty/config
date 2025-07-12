@@ -2,7 +2,7 @@ initial-window = false
 
 alpha-blending = linear-corrected
 
-background-opacity = 0.85
+background-opacity = 0.95
 background-blur-radius = 25
 
 theme = rose-pine-moon
