@@ -5,7 +5,7 @@ local mux = wezterm.mux
 
 local keys = {}
 
--- see ./keybindings.lua
+-- see ./keymaps.lua
 local keymaps = require("keybindings")
 
 local fish_path = "/opt/homebrew/bin/fish"

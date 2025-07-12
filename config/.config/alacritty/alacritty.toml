@@ -1,6 +1,6 @@
 general.import = [
   "~/.config/alacritty/themes/eldritch.toml",
-  "~/.config/alacritty/keybindings.toml",
+  "~/.config/alacritty/keymaps.toml",
 ]
 
 [env]
