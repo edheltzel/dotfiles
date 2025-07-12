@@ -1,6 +1,7 @@
-![image](../../../local/.local/__repoImages/neo.ed.png)
 
 # dotfiles/nvim/.config/nvim
+
+![image](../../../local/.local/__repoImages/neo.ed.png)
 
 <a href="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim"><img src="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim/badges/plugins?style=flat" /></a>
 <a href="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim"><img src="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim/badges/leaderkey?style=flat" /></a>
