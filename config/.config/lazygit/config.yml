@@ -3,29 +3,58 @@
 # this is the default config.
 gui:
   theme:
+    # ELDRITCH THEME
+    # activeBorderColor:
+    #   - "#37f499"
+    #   - bold
+    # inactiveBorderColor:
+    #   - "#747BA2"
+    # searchingActiveBorderColor:
+    #   - "#f265b5"
+    #   - bold
+    # optionsTextColor:
+    #   - blue
+    # selectedLineBgColor:
+    #   - "#323449"
+    # inactiveViewSelectedLineBgColor:
+    #   - bold
+    # cherryPickedCommitFgColor:
+    #   - "#a48cf2"
+    # cherryPickedCommitBgColor:
+    #   - cyan
+    # markedBaseCommitFgColor:
+    #   - blue
+    # markedBaseCommitBgColor:
+    #   - "#f1fc79"
+    # unstagedChangesColor:
+    #   - "#f16c75"
+    # defaultFgColor:
+    #   - "#ebfafa"
+
+    # ROSE PINE THEME
     activeBorderColor:
-      - "#37f499"
+      - "#524f67"
       - bold
     inactiveBorderColor:
-      - "#747BA2"
+      - "#2a283e"
     searchingActiveBorderColor:
-      - "#f265b5"
+      - "#ebbcba"
       - bold
     optionsTextColor:
       - blue
     selectedLineBgColor:
-      - "#323449"
+      - "#2a283e"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#a48cf2"
+      - "#c4a7e7"
     cherryPickedCommitBgColor:
       - cyan
     markedBaseCommitFgColor:
       - blue
     markedBaseCommitBgColor:
-      - "#f1fc79"
+      - "#f6c177"
     unstagedChangesColor:
-      - "#f16c75"
+      - "#eb6f92"
     defaultFgColor:
-      - "#ebfafa"
+      - "#e0def4"
