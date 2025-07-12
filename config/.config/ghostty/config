@@ -15,7 +15,7 @@ quick-terminal-position = "left"
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = false
 
-copy-on-select = true
+copy-on-select = clipboard
 clipboard-read = allow
 clipboard-write = allow
 
@@ -30,7 +30,8 @@ mouse-hide-while-typing = true
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
 macos-titlebar-style = tabs
-macos-titlebar-proxy-icon = hidden
+macos-titlebar-proxy-icon = visible
 
 keybind = global:cmd+control+alt+t=toggle_quick_terminal
 keybind = super+ctrl+,=reload_config
+keybind = super+ctrl+equal=close_surface
