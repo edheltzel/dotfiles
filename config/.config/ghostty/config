@@ -5,7 +5,8 @@ alpha-blending = linear-corrected
 background-opacity = 0.85
 background-blur-radius = 25
 
-config-file = "colors/eldritch"
+theme = rose-pine
+# config-file = "colors/eldritch"
 
 
 font-size = 18
