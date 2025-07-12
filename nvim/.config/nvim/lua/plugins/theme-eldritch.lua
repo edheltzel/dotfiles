@@ -19,10 +19,10 @@ return {
     },
   },
   -- set colorscheme/theme
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "eldritch",
-    },
-  },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "eldritch",
+  --   },
+  -- },
 }
