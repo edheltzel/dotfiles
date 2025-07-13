@@ -1,19 +1,6 @@
 -- https://github.com/okuuva/auto-save.nvim
---
--- This is a fork of original plugin `https://github.com/pocco81/auto-save.nvim`
--- but the original one was updated 2 years ago, and I was experiencing issues
--- with autoformat and undo/redo
---
--- Filename: ~/github/dotfiles-latest/neovim/neobean/lua/plugins/auto-save.lua
--- ~/github/dotfiles-latest/neovim/neobean/lua/plugins/auto-save.lua
-
--- My related YouTube video
--- Save neovim files automatically with auto-save.nvim
--- https://youtu.be/W5fjlU4tSpw
-
--- I had undo/redo issues when using the no longer maintained plugin from pocco81
--- So make sure you're using the right plugin, which is okuuva/auto-save.nvim
--- https://github.com/pocco81/auto-save.nvim/issues/70
+-- delay in milliseconds before auto saving
+DelayTime = 3000
 
 -- Autocommand for printing the autosaved message
 local group = vim.api.nvim_create_augroup("autosave", {})
@@ -28,10 +15,8 @@ vim.api.nvim_create_autocmd("User", {
   end,
 })
 
--- I do not want to save when I'm in visual mode because I'm usually moving
--- stuff from one place to another, or deleting it
--- I got this suggestion from the plugin maintainers
--- https://github.com/okuuva/auto-save.nvim/issues/67#issuecomment-2597631756
+-- No auto-save when in VISUAL mode
+-- see -> https://github.com/okuuva/auto-save.nvim/issues/67#issuecomment-2597631756
 local visual_event_group = vim.api.nvim_create_augroup("visual_event", { clear = true })
 
 vim.api.nvim_create_autocmd("ModeChanged", {
@@ -112,44 +97,6 @@ vim.api.nvim_create_autocmd("BufLeave", {
   end,
 })
 
--- -- I just needed to see all of the events happening when troubleshooting the
--- -- keymap to paste images in the assets directory
--- local debug_group = vim.api.nvim_create_augroup("debug_events", { clear = true })
---
--- local debug_events = {
---   "BufEnter",
---   "BufLeave",
---   "FileType",
---   "FocusLost",
---   "FocusGained",
---   "InsertEnter",
---   "InsertLeave",
---   "ModeChanged",
---   "QuitPre",
---   "TextChanged",
---   "WinEnter",
---   "WinLeave",
---   -- ... add any you suspect
--- }
---
--- for _, evt in ipairs(debug_events) do
---   vim.api.nvim_create_autocmd(evt, {
---     group = debug_group,
---     pattern = "*",
---     callback = function(opts)
---       -- Just print or log it somewhere
---       local msg = string.format(
---         "DEBUG EVENT: %s -> Buf=%d FileType=%s",
---         evt,
---         opts.buf,
---         vim.api.nvim_get_option_value("filetype", { buf = opts.buf })
---       )
---       print(msg)
---       -- or write to a file if needed
---     end,
---   })
--- end
-
 return {
   {
     "okuuva/auto-save.nvim",
@@ -200,16 +147,14 @@ return {
         -- Disable auto-save for the harpoon plugin, otherwise it just opens and closes
         -- https://github.com/ThePrimeagen/harpoon/issues/434
         --
-        -- don't save for `sql` file types
-        -- I do this so when working with dadbod the file is not saved every time
-        -- I make a change, and a SQL query executed
+        -- Disable auto-save for `sql` file types
         -- Run `:set filetype?` on a dadbod query to make sure of the filetype
         local filetype = vim.bo[buf].filetype
         if filetype == "harpoon" or filetype == "mysql" then
           return false
         end
 
-        -- Skip autosave if you're in an active snippet
+        -- Skip auto-save when in an active snippet
         if require("luasnip").in_snippet() then
           return false
         end
@@ -222,8 +167,8 @@ return {
       -- https://github.com/okuuva/auto-save.nvim/issues/55
       noautocmd = false,
       lockmarks = false, -- lock marks when saving, see `:h lockmarks` for more details
-      -- delay after which a pending save is executed (default 1000)
-      debounce_delay = 2000,
+      -- see global variable `DelayTime` in this file
+      debounce_delay = DelayTime,
       -- log debug messages to 'auto-save.log' file in neovim cache directory, set to `true` to enable
       debug = false,
     },
