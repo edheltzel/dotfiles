@@ -299,15 +299,19 @@ cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
 
-# RAG+CAG LLM - Agentic AI Agents
-# cask 'block-goose'                    # On Machine AI Agent
+# RAG+CAG LLM
+# cask 'repo-prompt'                    # Repo prompt for LLMs
 cask 'ollama'                         # Local LLMs
 brew 'ollama'
-caks 'repo-prompt'                    # Repo prompt for LLMs
+
+# Agentics+Agents
+# cask 'block-goose'                    # On Machine AI Agent
+brew 'opencode-ai/tap/opencode'       # Opensource equivalent of Claude Code
 
 # Terminal emulators
-cask 'wezterm'                        # Secondary:Terminal emulator - Rust
-cask 'kitty'                          # Primary: Terminal emulator
+cask 'ghostty'                        # Zig
+cask 'kitty'                          # Python+C
+cask 'wezterm'                        # Rust
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
