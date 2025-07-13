@@ -5,7 +5,7 @@ alpha-blending = linear-corrected
 background-opacity = 0.95
 background-blur-radius = 25
 
-theme = rose-pine-moon
+theme = rose-pine
 # config-file = "colors/eldritch"
 
 
@@ -25,6 +25,7 @@ scrollback-limit = 1000000000
 window-colorspace = "display-p3"
 window-inherit-font-size = false
 window-padding-x = 10
+window-save-state = always
 window-title-font-family = "Lilex Nerd Font Mono"
 
 mouse-hide-while-typing = true

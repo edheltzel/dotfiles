@@ -15,7 +15,7 @@ return {
               desc = "DOTFILES",
               action = ":cd ~/.dotfiles | :e .",
             },
-            { icon = " ", key = "o", desc = "Open Last Session", action = "<space>ql" },
+            { icon = " ", key = "o", desc = "Find Session", action = ":SessionSearch" },
             { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
             { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
