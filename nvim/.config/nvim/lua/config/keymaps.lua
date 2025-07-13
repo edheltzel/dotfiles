@@ -19,17 +19,14 @@ keymap.del("n", "<C-Down>")
 keymap.del("n", "<C-Up>")
 keymap.del("n", "<C-Right>")
 
--- REDO KEYMAP
-keymap.set("n", "U", "<C-r>", { desc = "Redo" })
+-- UNDO/REDO KEYMAP
+keymap.set("n", "U", "<C-r>", { desc = "Redo" }) -- redo with U
+keymap.set("n", "<D-z>", "u", { desc = "Redo" }) -- undo with cmd+z
 
--- BORDERLESS TERMINAL - LIKE VSCODE
+-- LAUNCH TERMINAL - LIKE VSCODE
 vim.keymap.set({ "n", "t" }, "<C-`>", function()
   Util.terminal(nil, { border = "none" })
 end, { desc = "Toggle terminal" })
-
-vim.keymap.set("n", "<D-z>", function()
-  Util.terminal(nil, { border = "none" })
-end, { desc = "Terminal with Cmd+z" })
 
 -- BORDERLESS LAZYGIT
 vim.keymap.set("n", "<leader>gg", function()
@@ -39,7 +36,7 @@ end, { desc = "Lazygit (root dir)" })
 -- CLEAR SEARCH HIGHLIGHTS
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
--- REDO KEYMAP
+-- ESCAPE INSERT MODE
 keymap.set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" })
 keymap.set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" })
 
