@@ -1,5 +1,5 @@
 
-# dotfiles/nvim/.config/nvim
+# NEO.ED Config
 
 ![image](../../../local/.local/__repoImages/neo.ed.png)
 
@@ -7,63 +7,88 @@
 <a href="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim"><img src="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim/badges/leaderkey?style=flat" /></a>
 <a href="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim"><img src="https://dotfyle.com/edheltzel/dotfiles-nvim-config-nvim/badges/plugin-manager?style=flat" /></a>
 
-## Install Instructions
+A modern Neovim configuration built on LazyVim with custom keymaps, AI integration, and a curated plugin selection.
 
- > Install requires Neovim 0.9+. Always review the code before installing a configuration.
+## Features
 
-Clone the repository and install the plugins:
+- **LazyVim Base**: Built on the solid foundation of LazyVim for a well-structured configuration
+- **AI Integration**: Supermaven AI completion for enhanced coding productivity
+- **Multiple Colorschemes**: Rose Pine, Catppuccin, Tokyo Night, Gruvbox, Eldritch, and Solarized Osaka
+- **File Management**: Neo-tree file explorer with intuitive navigation
+- **Enhanced Motion**: Smear cursor for smooth visual feedback
+- **Smart Keybindings**: Which-key integration for discoverable shortcuts
+- **Auto-sessions**: Custom keymaps for session management
+
+## Requirements
+
+- **Neovim 0.9+** (required)
+- **Git** (for plugin management)
+- **Node.js** (for some LSP servers and AI features)
+
+> ⚠️ Always review the code before installing any configuration.
+
+## Installation
+
+Clone the dotfiles repository:
 
 ```sh
-git clone git@github.com:edheltzel/dotfiles ~/.config/edheltzel/dotfiles
+git clone git@github.com:edheltzel/dotfiles ~/.dotfiles
 ```
 
-Open Neovim with this config:
+Launch Neovim with this configuration:
 
 ```sh
-NVIM_APPNAME=edheltzel/dotfiles/nvim/.config/nvim nvim
+NVIM_APPNAME=.dotfiles/nvim/.config/nvim nvim
+```
+
+Alternatively, create a symlink for easier access:
+
+```sh
+ln -sf ~/.dotfiles/nvim/.config/nvim ~/.config/nvim-ed
+NVIM_APPNAME=nvim-ed nvim
 ```
 
 ## Plugins
 
 ### ai
 
-+ [supermaven-inc/supermaven-nvim](https://dotfyle.com/plugins/supermaven-inc/supermaven-nvim)
+- [supermaven-inc/supermaven-nvim](https://dotfyle.com/plugins/supermaven-inc/supermaven-nvim)
 
 ### colorscheme
 
-+ [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)
-+ [eldritch-theme/eldritch.nvim](https://dotfyle.com/plugins/eldritch-theme/eldritch.nvim)
-+ [folke/tokyonight.nvim](https://dotfyle.com/plugins/folke/tokyonight.nvim)
-+ [craftzdog/solarized-osaka.nvim](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
-+ [rose-pine/neovim](https://dotfyle.com/plugins/rose-pine/neovim)
+- [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)
+- [eldritch-theme/eldritch.nvim](https://dotfyle.com/plugins/eldritch-theme/eldritch.nvim)
+- [folke/tokyonight.nvim](https://dotfyle.com/plugins/folke/tokyonight.nvim)
+- [craftzdog/solarized-osaka.nvim](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
+- [rose-pine/neovim](https://dotfyle.com/plugins/rose-pine/neovim)
 
 ### editing-support
 
-+ [folke/snacks.nvim](https://dotfyle.com/plugins/folke/snacks.nvim)
+- [folke/snacks.nvim](https://dotfyle.com/plugins/folke/snacks.nvim)
 
 ### file-explorer
 
-+ [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
+- [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
 
 ### keybinding
 
-+ [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)
+- [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)
 
 ### lua-colorscheme
 
-+ [ellisonleao/gruvbox.nvim](https://dotfyle.com/plugins/ellisonleao/gruvbox.nvim)
+- [ellisonleao/gruvbox.nvim](https://dotfyle.com/plugins/ellisonleao/gruvbox.nvim)
 
 ### motion
 
-+ [sphamba/smear-cursor.nvim](https://dotfyle.com/plugins/sphamba/smear-cursor.nvim)
+- [sphamba/smear-cursor.nvim](https://dotfyle.com/plugins/sphamba/smear-cursor.nvim)
 
 ### plugin-manager
 
-+ [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
+- [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
 
 ### preconfigured
 
-+ [LazyVim/LazyVim](https://dotfyle.com/plugins/LazyVim/LazyVim)
+- [LazyVim/LazyVim](https://dotfyle.com/plugins/LazyVim/LazyVim)
 
 ## Language Servers
 
