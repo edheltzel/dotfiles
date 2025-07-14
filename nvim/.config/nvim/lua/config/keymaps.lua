@@ -67,6 +67,13 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" }
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 
+-- AUTO-SESSION KEYMAPS - adds to which-key
+keymap.set("n", "<leader>qr", ":SessionRestore", { noremap = true, desc = "Restore Session" })
+keymap.set("n", "<leader>qs", ":SessionSearch<ENTER>", { noremap = true, desc = "Search Sessions" })
+keymap.set("n", "<leader>qS", ":SessionSave<ENTER>", { noremap = true, desc = "Save Session" })
+keymap.set("n", "<leader>qd", ":SessionDelete", { noremap = true, desc = "Delete Session" })
+keymap.set("n", "<leader>qx", ":SessionPurgeOrphaned", { noremap = true, desc = "Purge Orphan Session" })
+
 -- PACKAGE-INFO KEYMAPS
 set_keymap(
   "n",
