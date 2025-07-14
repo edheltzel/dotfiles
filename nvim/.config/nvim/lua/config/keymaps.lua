@@ -51,7 +51,7 @@ keymap.set({ "n", "x", "o" }, "<leader>jj", function()
   require("flash").jump()
 end, { desc = "Flash" })
 
--- WINDOWS/SPLITS/TABS
+-- WINDOWS/SPLITS/TAB
 keymap.set("n", "ss", ":vsplit<Return>", opts)
 keymap.set("n", "sv", ":split<Return>", opts)
 keymap.set("n", "te", ":tabedit", opts)

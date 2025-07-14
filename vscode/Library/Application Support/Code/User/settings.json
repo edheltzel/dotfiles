@@ -166,6 +166,8 @@
 		"_redirects": "plaintext",
 		"*.h": "c"
 	},
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 2000,
 	"files.insertFinalNewline": true,
 	"files.simpleDialog.enable": true,
 	"files.trimFinalNewlines": true,
