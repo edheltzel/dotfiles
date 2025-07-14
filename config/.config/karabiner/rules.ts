@@ -1,15 +1,15 @@
 import * as fs from "fs";
 import {
-  KarabinerRules,
-  createHyperNavigationRule,
-  createMouseNavigationRules,
-  createHyperKeyRule,
-  createModifierTapRule,
-  createModifierTapRules,
   createDoubleTapRule,
   createDoubleTapRules,
+  createHyperKeyRule,
+  createHyperNavigationRule,
+  createModifierTapRule,
+  createModifierTapRules,
+  createMouseNavigationRules,
+  KarabinerRules,
 } from "./types";
-import { createHyperSubLayers, app, open, shell } from "./utils";
+import { app, createHyperSubLayers, open, shell } from "./utils";
 
 // Array of Karabiner configuration rules
 const rules: KarabinerRules[] = [
@@ -63,7 +63,7 @@ const rules: KarabinerRules[] = [
     },
     //---  Second layer: Hyper + left_command shortcuts
     left_command: {
-      hyphen: open ("'raycast://extensions/rishabswift/word-search/word-spell'"),
+      hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       comma: app("System Settings"),
       c: app("Google Chrome"), // Browser - testing
       f: app("Finder"),
@@ -92,13 +92,17 @@ const rules: KarabinerRules[] = [
     // Fourth layer: Hyper + f (Finder) shortcuts
     f: {
       y: open("~/Documents/3D-CAD"),
-      u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),
+      u: open(
+        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+      ),
       i: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
       h: open("~/"),
-      j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
-      k: open("'/Users/ed/RDM Dropbox'",),
+      j: open(
+        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
+      ),
+      k: open("'/Users/ed/RDM Dropbox'"),
     },
     // Fifth layer: Hyper + m (Microsoft) shortcuts
     m: {
@@ -109,7 +113,7 @@ const rules: KarabinerRules[] = [
     },
     // Sixth layer: Hyper + left_control (just browsers)
     left_control: {
-      y: app("Vivaldi"),
+      y: app("Vivaldi"), // using v will trigger Raycast clipboard since that is set to hyper+v
       z: app("Zen"),
       s: app("Safari"),
       b: app("Brave Browser Beta"),
@@ -122,13 +126,13 @@ const rules: KarabinerRules[] = [
     right_command: {
       key_code: "delete_or_backspace",
       modifiers: ["right_alt"],
-      description: "Delete Last Word"
+      description: "Delete Last Word",
     },
     right_control: {
       key_code: "spacebar",
       modifiers: ["right_command"],
       description: "Trigger Raycast",
-    }
+    },
     // Add more modifier tap rules here as needed
   }),
   // Double-tap rules - define multiple keys with double-tap actions
