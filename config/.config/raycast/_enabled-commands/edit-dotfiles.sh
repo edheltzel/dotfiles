@@ -14,4 +14,4 @@
 # @raycast.author edheltzel
 # @raycast.authorURL https://raycast.com/edheltzel
 
-code -n ~/.dotfiles
+nvim -n ~/.dotfiles
