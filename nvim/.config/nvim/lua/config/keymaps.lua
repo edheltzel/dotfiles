@@ -5,7 +5,7 @@
 -- <M> = alt
 -- <C> = ctrl
 -- <leader> = space
--- <s> = shift
+-- <S> = shift
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
@@ -56,7 +56,7 @@ keymap.set("n", "ss", ":vsplit<Return>", opts)
 keymap.set("n", "sv", ":split<Return>", opts)
 keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
 
 -- VSpaceCode KEYMAPS - VSCODE-ish
 keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save file" }) -- Save file - VSpaceCode

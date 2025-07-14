@@ -11,5 +11,4 @@ select_alt = { fg = "red", bg = "gray" }
 # Unset mode
 unset_main = { bg = "red", bold = true }
 unset_alt = { fg = "red", bg = "gray" }
-
 # : }}}
