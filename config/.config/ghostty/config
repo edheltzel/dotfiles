@@ -3,8 +3,8 @@ initial-window = false
 
 alpha-blending = linear-corrected
 
-background-opacity = 0.95
-background-blur-radius = 25
+background-opacity = 0.90
+background-blur-radius = 35
 
 # theme = rose-pine
 config-file = "colors/eldritch"
