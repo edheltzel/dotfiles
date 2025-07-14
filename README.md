@@ -153,11 +153,11 @@ There are two options for managing packages with GNU Stow:
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
-  - When I need Vim, I use [LazyVim](lazyVim) - lightly customized. (Secondary Editor)
+  - A customized verions of [LazyVim](lazyVim) I call **NEO.ED**. (Primary Editor)
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
 - editors(editors/)
-  - VSCode & Windsurf configurations, ie: keybindings, settings, and custom stuff.(Windsurf is my Primary Editor)
+  - VSCode configurations, ie: keybindings, settings, and custom stuff.(Secondary Editor)
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries and misc items that mean nothing, etc.
 
