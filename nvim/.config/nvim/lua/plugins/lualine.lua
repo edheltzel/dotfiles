@@ -30,13 +30,14 @@ return {
     local colors = {
       bg = "#212337",
       fg = "#454E7D",
+      gray = "#586089",
       green = "#37F499",
       purple = "#A48CF2",
       red = "#F16c75",
       magenta = "#F265B5",
     }
     -- Custom colors
-    neo_ed.normal.a.fg = colors.fg
+    neo_ed.normal.a.fg = colors.gray
     neo_ed.normal.a.bg = colors.bg
     neo_ed.normal.b.fg = colors.fg
     neo_ed.normal.b.bg = colors.bg
