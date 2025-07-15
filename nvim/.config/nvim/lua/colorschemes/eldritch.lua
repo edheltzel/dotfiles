@@ -7,7 +7,7 @@ return {
     priority = 1000,
     opts = {
       palette = "default",
-      transparent = false,
+      transparent = true,
       styles = {
         sidebars = "dark",
         floats = "dark",
