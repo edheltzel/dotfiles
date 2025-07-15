@@ -28,7 +28,7 @@ keymap.set({ "n", "v" }, "<leader>d", "d", { desc = "Delete without yanking" })
 -- ESCAPE INSERT MODE
 keymap.set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" })
 keymap.set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" })
--- UNDO/REDO KEYMAP
+
 keymap.set("n", "U", "<C-r>", { desc = "Redo" }) -- redo with U
 keymap.set("n", "<D-z>", "u", { desc = "Redo" }) -- undo with cmd+z
 -- JUMP to BOL/EOL
@@ -36,6 +36,9 @@ keymap.set("n", "gh", "^", { desc = "Jump beginning of line" })
 keymap.set("n", "gl", "$", { desc = "Jump end of line" })
 -- CLEAR SEARCH HIGHLIGHTS
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+
+keymap.set("v", "<", "<gv", { desc = "Indent left and reslect" })
+keymap.set("v", ">", ">gv", { desc = "Indent right and reslect" })
 
 -- Windows/Splits/Tabs -----------------------------------------------------------------------
 -- SPLITS
@@ -95,6 +98,7 @@ keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
+--
 -- PACKAGE-INFO KEYMAPS
 set_keymap(
   "n",
