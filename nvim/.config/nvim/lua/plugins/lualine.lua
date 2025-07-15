@@ -27,37 +27,50 @@ return {
 
     local neo_ed = require("lualine.themes.eldritch")
 
-    -- Custom colours
-    neo_ed.normal.a.fg = "#454E7D"
-    neo_ed.normal.a.bg = "#212337"
-    neo_ed.normal.b.fg = "#454E7D"
-    neo_ed.normal.b.bg = "#212337"
+    local colors = {
+      bg = "#212337",
+      fg = "#454E7D",
+      green = "#37F499",
+      purple = "#A48CF2",
+      red = "#F16c75",
+      magenta = "#F265B5",
+    }
+    -- Custom colors
+    neo_ed.normal.a.fg = colors.fg
+    neo_ed.normal.a.bg = colors.bg
+    neo_ed.normal.b.fg = colors.fg
+    neo_ed.normal.b.bg = colors.bg
 
-    neo_ed.insert.a.fg = "#37F499"
-    neo_ed.insert.a.bg = "#212337"
-    neo_ed.insert.b.fg = "#454E7D"
-    neo_ed.insert.b.bg = "#212337"
+    neo_ed.insert.a.fg = colors.green
+    neo_ed.insert.a.bg = colors.bg
+    neo_ed.insert.b.fg = colors.fg
+    neo_ed.insert.b.bg = colors.bg
 
-    neo_ed.visual.a.fg = "#A48CF2"
-    neo_ed.visual.a.bg = "#212337"
-    neo_ed.visual.b.fg = "#454E7D"
-    neo_ed.visual.b.bg = "#212337"
+    neo_ed.visual.a.fg = colors.purple
+    neo_ed.visual.a.bg = colors.bg
+    neo_ed.visual.b.fg = colors.fg
+    neo_ed.visual.b.bg = colors.bg
 
-    neo_ed.replace.a.fg = "#F16c75"
-    neo_ed.replace.a.bg = "#212337"
-    neo_ed.replace.b.fg = "#454E7D"
-    neo_ed.replace.b.bg = "#212337"
+    neo_ed.replace.a.fg = colors.red
+    neo_ed.replace.a.bg = colors.bg
+    neo_ed.replace.b.fg = colors.fg
+    neo_ed.replace.b.bg = colors.bg
 
-    neo_ed.command.a.fg = "#F265B5"
-    neo_ed.command.a.bg = "#212337"
-    neo_ed.command.b.fg = "#454E7D"
-    neo_ed.command.b.bg = "#212337"
+    neo_ed.command.a.fg = colors.magenta
+    neo_ed.command.a.bg = colors.bg
+    neo_ed.command.b.fg = colors.fg
+    neo_ed.command.b.bg = colors.bg
 
-    neo_ed.inactive.b.fg = "#454E7D"
-    neo_ed.inactive.b.bg = "#212337"
+    neo_ed.terminal.a.fg = colors.magenta
+    neo_ed.terminal.a.bg = colors.bg
+    neo_ed.terminal.b.fg = colors.fg
+    neo_ed.terminal.b.bg = colors.bg
 
-    neo_ed.normal.c.fg = "#454E7D"
-    neo_ed.normal.c.bg = "#212337"
+    neo_ed.inactive.b.fg = colors.fg
+    neo_ed.inactive.b.bg = colors.bg
+
+    neo_ed.normal.c.fg = colors.fg
+    neo_ed.normal.c.bg = colors.bg
 
     require("lualine").setup({
       options = {
@@ -98,7 +111,7 @@ return {
         },
         lualine_y = { clients_lsp },
         lualine_z = {
-          { "location", separator = { left = "", right = " " }, icon = "" },
+          { "location", separator = { left = "", right = "" }, icon = "" },
         },
       },
       inactive_sections = {
