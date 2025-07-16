@@ -77,12 +77,13 @@ end, { desc = "Lazygit (root dir)" })
 
 -- VSCODE Like -------------------------------------------------------------------------------
 -- VSpaceCode-ish KEYMAPS
-keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save file" })
+keymap.set("n", "<leader>fs", "<cmd>w<CR>", { noremap = true, desc = "Save file" })
 keymap.set("n", "<ENTER>", "za", { desc = "Code Folding" })
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+
 -- LAUNCH TERMINAL
 vim.keymap.set({ "n", "t" }, "<C-`>", function()
   Util.terminal(nil, { border = "none" })
