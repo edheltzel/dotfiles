@@ -111,6 +111,8 @@ brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
 # CLI Misc
 brew 'figlet'        # Output text as big ASCII art text
 brew 'fastfetch'     # Show system data and ditstro info - neofetch is archived
+brew 'fortune'       # Print a random, hopefully interesting, adage
+brew 'cowsay'        # Print a cow with a message
 
 #############################################################
 #C/Phyton 2. Software / Web Development                             #
