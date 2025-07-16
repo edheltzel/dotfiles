@@ -9,6 +9,7 @@ return {
               layout = { position = "right" },
             },
           },
+          -- TODO: update keymaps for some of the items to better match VSpaceCode
           files = {
             hidden = true,
             ignored = true,
