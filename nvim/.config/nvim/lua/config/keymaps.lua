@@ -60,6 +60,9 @@ keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move window up" })
 keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move window right" })
 
 -- Plugins -----------------------------------------------------------------------------------
+-- HARDTIME - enable/disable
+keymap.set("n", "<leader>u0", ":Hardtime toggle<CR>", { desc = "Enable Hardtime" })
+
 -- FLASH.NVIM KEYMAPS
 keymap.set({ "n", "x", "o" }, "<leader>jj", function()
   require("flash").jump()
@@ -70,6 +73,7 @@ keymap.set("n", "<leader>qs", ":SessionSearch<ENTER>", { noremap = true, desc = 
 keymap.set("n", "<leader>qS", ":SessionSave<ENTER>", { noremap = true, desc = "Save Session" })
 keymap.set("n", "<leader>qd", ":SessionDelete", { noremap = true, desc = "Delete Session" })
 keymap.set("n", "<leader>qx", ":SessionPurgeOrphaned", { noremap = true, desc = "Purge Orphan Session" })
+--
 -- BORDERLESS LAZYGIT
 vim.keymap.set("n", "<leader>gg", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })

@@ -1,4 +1,5 @@
 return {
+  -- explorer and picker are the same plugin
   {
     "folke/snacks.nvim",
     opts = {

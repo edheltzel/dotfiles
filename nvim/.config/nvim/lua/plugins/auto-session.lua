@@ -5,10 +5,11 @@ return {
 
     config = function()
       vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-      require('auto-session').setup({
+      require("auto-session").setup({
+        bypass_save_filetypes = { "alpha", "dashboard" },
         suppressed_dirs = { "~/", "/", "~/Downloads", "~/Developer/", "~/Sites/", "~/Documents/" },
-        -- log_level = 'debug',
+        git_use_branch_name = true,
       })
-    end
+    end,
   },
 }

@@ -1,6 +1,6 @@
 -- https://github.com/okuuva/auto-save.nvim
 -- delay in milliseconds before auto saving
-DelayTime = 5000
+DelayTime = 60000
 
 -- Autocommand for printing the autosaved message
 local group = vim.api.nvim_create_augroup("autosave", {})
