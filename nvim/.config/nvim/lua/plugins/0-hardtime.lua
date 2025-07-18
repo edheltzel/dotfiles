@@ -1,4 +1,5 @@
 return {
+  -- this is to force better habits with motions
   "m4xshen/hardtime.nvim",
   enabled = true,
   dependencies = { "MunifTanjim/nui.nvim" },
