@@ -3,7 +3,9 @@ return {
     "folke/which-key.nvim",
     opts = {
       spec = {
-        { "<leader>cp", group = "packages", icon = { icon = "", color = "yellow" } },
+        -- see ../config/keymaps.lua for paired keymaps
+        { "<leader>cp", group = "Packages", icon = { icon = "", color = "yellow" } },
+        { "<leader>j", group = "Flash", icon = { icon = "󱈅", color = "white" } },
       },
     },
   },

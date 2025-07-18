@@ -66,7 +66,8 @@ keymap.set("n", "<leader>u0", ":Hardtime toggle<CR>", { desc = "Enable Hardtime"
 -- FLASH.NVIM KEYMAPS
 keymap.set({ "n", "x", "o" }, "<leader>jj", function()
   require("flash").jump()
-end, { desc = "Flash" })
+end, { desc = "Jump to character" })
+--
 -- AUTO-SESSION KEYMAPS - adds to which-key
 keymap.set("n", "<leader>qr", ":SessionRestore", { noremap = true, desc = "Restore Session" })
 keymap.set("n", "<leader>qs", ":SessionSearch<ENTER>", { noremap = true, desc = "Search Sessions" })
@@ -75,7 +76,7 @@ keymap.set("n", "<leader>qd", ":SessionDelete", { noremap = true, desc = "Delete
 keymap.set("n", "<leader>qx", ":SessionPurgeOrphaned", { noremap = true, desc = "Purge Orphan Session" })
 --
 -- BORDERLESS LAZYGIT
-vim.keymap.set("n", "<leader>gg", function()
+keymap.set("n", "<leader>gg", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })
 end, { desc = "Lazygit (root dir)" })
 
@@ -89,9 +90,10 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 
 -- LAUNCH TERMINAL
-vim.keymap.set({ "n", "t" }, "<C-`>", function()
+keymap.set({ "n", "t" }, "<C-`>", function()
   Util.terminal(nil, { border = "none" })
 end, { desc = "Toggle terminal" })
+
 -- LINE BUBBLING - Move lines up/down
 keymap.set("n", "<A-down>", ":m .+1<CR>==", { desc = "Move line down" })
 keymap.set("n", "<A-up>", ":m .-2<CR>==", { desc = "Move line up" })
