@@ -4150,7 +4150,7 @@
 								},
 								{
 									"key": "r",
-									"name": "Repaint rainbow",
+									"name": "Repaint ainbow",
 									"icon": "symbol-color",
 									"type": "command",
 									"command": "flutter.toggleRepaintRainbow"
@@ -10072,4 +10072,5 @@
 			]
 		}
 	],
+	"workbench.secondarySideBar.showLabels": false,
 }
