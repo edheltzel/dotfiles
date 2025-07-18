@@ -1,4 +1,5 @@
 return {
+  -- see https://github.com/nvim-lualine/lualine.nvim/discussions/1389#discussion-8072342
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
   init = function()
@@ -137,7 +138,7 @@ return {
             function()
               return LazyVim.lualine.root_dir({ icon = ">" })[1]()
             end,
-            color = { fg = Snacks.util.color("Special") }, -- Optional: Customize the appearance
+            color = { fg = Snacks.util.color("Comment") }, -- Optional: Customize the appearance
             padding = { left = 0, right = 0 },
             fmt = function(str)
               return add_width(str, "cwd")
