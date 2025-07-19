@@ -101,3 +101,4 @@ alias doom 'cd ~/Developer/games/terminal-doom; and zig-out/bin/terminal-doom'
 
 ## Ai ##
 alias cc claude # Claude Code
+alias kk claude # Claude Code
