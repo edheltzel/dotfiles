@@ -1,5 +1,4 @@
 {
-	// Language-specific Settings - cSpell:disable
 	"[css][scss][less]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
@@ -61,21 +60,21 @@
 	"find-it-faster.general.useTerminalInEditor": true,
 	// Core Editor Settings
 	"editor.accessibilitySupport": "off",
-	"editor.bracketPairColorization.enabled": true,
+	"editor.bracketPairC7lorization.enabled": true,
 	"editor.codeActionsOnSave": {
 		"quickfix.biome": "always"
 	},
 	"editor.cursorSmoothCaretAnimation": "on",
-	// "editor.cursorSurroundingLines": 99,
+	"editor.cursorSurroundingLines": 99,
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSurroundingLinesStyle": "all",
 	"editor.cursorWidth": 3,
 	"editor.foldingStrategy": "indentation",
-	"editor.fontFamily": "Dank Mono, Symbols Nerd Font",
+	"editor.fontFamily": "Lilex, Lilex Nerd Font Mono, Dank Mono, Symbols Nerd Font",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 19,
 	"editor.formatOnPaste": false,
-	"editor.formatOnSave": false,
+	"editor.formatOnSave": true,
 	"editor.formatOnType": false,
 	"editor.guides.bracketPairs": true,
 	"editor.guides.bracketPairsHorizontal": "active",
@@ -275,13 +274,13 @@
 	// Security
 	"security.workspace.trust.enabled": false,
 	// SuperMaven
-	"supermaven.enable": { "*": true },
+	"supermaven.enable": {
+		"*": true
+	},
 	"supermaven.enableFixWithSupermaven": true,
 	"supermaven.enableJumpSuggestions": false,
 	// Tailwind CSS
 	"tailwindCSS.emmetCompletions": true,
-	// Telemetry
-	"telemetry.telemetryLevel": "crash",
 	// TOML
 	"evenBetterToml.formatter.columnWidth": 120,
 	"workbench.colorCustomizations": {
