@@ -47,7 +47,7 @@ brew 'git'          # Version control
 brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
-#brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
+brew 'zellij'       # Terminal multiplexer (tmux replacement) - Rust
 brew 'tmux'         # Terminal multiplexer
 
 # CLI Basics
