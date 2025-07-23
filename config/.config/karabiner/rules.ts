@@ -104,7 +104,7 @@ const rules: KarabinerRules[] = [
     m: {
       w: app("Microsoft Word"),
       e: app("Microsoft Excel"),
-      s: app("Microsoft PowerPoint"),
+      p: app("Microsoft PowerPoint"),
       t: app("Microsoft Teams"),
     },
     // Sixth layer: Hyper + left_control (just browsers)
