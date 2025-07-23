@@ -1,4 +1,4 @@
-# Colorize grep output (good for log files)
+# Colorize grep output (good for log files) - #cspell:disable
 alias grep 'grep --color=auto'
 alias egrep 'egrep --color=auto'
 alias fgrep 'fgrep --color=auto'
@@ -40,9 +40,13 @@ alias dots 'cd ~/.dotfiles'
 alias llm 'cd ~/.ollama/models'
 alias ol ollama
 
+# Open dotfiles repo in current Default Editor (ie. Neovim/VSCode)
 alias cuts 'eval $EDITOR ~/.dotfiles'
-alias ed 'cd ~/.dotfiles; and nvim .'
-#
+alias edd 'eval $EDITOR  ~/.dotfiles'
+
+# Neovim actions
+alias nvv "nvim -c 'enew | put +' -c 'startinsert'" #opens a new file in neovim from clipboard contents
+
 # Actions
 alias e '$EDITOR' # open in Default Editor
 alias o open

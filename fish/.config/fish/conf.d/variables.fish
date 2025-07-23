@@ -12,8 +12,10 @@ set -gx XDG_VIDEOS_DIR $HOME/Videos
 # cargo - IDK if this is necessary
 set -gx CARGO_TARGET_DIR /var/folders/88/3h9cyc4979d2l6p7xkn79yqr0000gn/T/cargo-installx9AWBr
 
-# set the Default Editor use code, code-insiders, nvim, windsurf, or cursor
+# Default Editor use code, nvim, etc.
 set -gx EDITOR nvim
+# Default Terminal use kitty, wezterm, ghostty, etc.
+set -gx TERMINAL kitty
 
 string match -q "$TERM_PROGRAM" nvim
 and . (nvim --locate-shell-integration-path fish)
