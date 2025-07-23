@@ -7,6 +7,7 @@
 -- <C> = ctrl
 -- <leader> = space
 -- <S> = shift
+-- <CR> = carriage return
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
@@ -86,6 +87,10 @@ keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+
+-- SURROUNDS
+-- keymap.set("n", "<S>s", "gsd", { desc = "surrounds" })
+-- keymap.set("n", "<S>s", "gsd", { desc = "surrounds" })
 
 -- LAUNCH TERMINAL
 keymap.set({ "n", "t" }, "<C-`>", function()
