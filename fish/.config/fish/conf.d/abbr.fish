@@ -18,6 +18,7 @@ if status is-interactive
     abbr --add coo 'code -r .'
     abbr --add vim nvim
     abbr --add wez wezterm
+    abbr --add ccu 'bunx ccusage'
 
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
