@@ -11,4 +11,5 @@ option.undodir = vim.fn.expand("~/.local/share/nvim/undodir") -- set undo direct
 
 -- visual settings  -------------------------------------------------------------------------------
 option.cursorcolumn = true
-option.colorcolumn = "120"
+option.colorcolumn = "120" 
+
