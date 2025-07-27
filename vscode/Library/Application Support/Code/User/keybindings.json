@@ -729,14 +729,4 @@
     "command": "claude-code.insertAtMentioned",
     "when": "editorTextFocus"
   },
-  {
-    "key": "ctrl+cmd+k ctrl+cmd+k",
-    "command": "claude-code.runClaude.keyboard",
-    "when": "claude-code.hasClaudeInPath"
-  },
-  {
-    "key": "cmd+escape",
-    "command": "-claude-code.runClaude.keyboard",
-    "when": "claude-code.hasClaudeInPath"
-  },
 ]
