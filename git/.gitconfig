@@ -1,6 +1,6 @@
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = nvim --wait
+  editor       = code --wait
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
@@ -34,16 +34,16 @@
   changed   = green
   untracked = cyan
 [diff]
-  tool = nvim
+  tool =code
   colorMoved = default
-[difftool "nvim"]
-  cmd = nvim --wait --diff $LOCAL $REMOTE
+[difftool "code"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-  tool = nvim
+  tool =code
   log  = true
   conflictstyle = diff3
-[mergetool "nvim"]
-  cmd = nvim --wait $MERGED
+[mergetool "code"]
+  cmd = code --wait $MERGED
 [apply]
   whitespace = fix
 [interactive]

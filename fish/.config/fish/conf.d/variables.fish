@@ -13,7 +13,8 @@ set -gx XDG_VIDEOS_DIR $HOME/Videos
 set -gx CARGO_TARGET_DIR /var/folders/88/3h9cyc4979d2l6p7xkn79yqr0000gn/T/cargo-installx9AWBr
 
 # Default Editor use code, nvim, etc.
-set -gx EDITOR nvim
+set -gx EDITOR code
+
 # Default Terminal use kitty, wezterm, ghostty, etc.
 set -gx TERMINAL kitty
 
