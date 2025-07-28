@@ -1,3 +1,7 @@
+## AI ##
+alias cc claude # Claude Code
+alias kk claude # Claude Code
+
 # Colorize grep output (good for log files) - #cspell:disable
 alias grep 'grep --color=auto'
 alias egrep 'egrep --color=auto'
@@ -13,8 +17,12 @@ alias cp 'cp -Ri'
 alias mv 'mv -i'
 alias rm 'rm -i'
 
+# Create/delete directories
 alias md 'mkdir -p'
 alias rd 'rmdir -p'
+
+# Togpgrade 
+alias tg topgrade
 
 # Navigation
 alias .. 'cd ..'
@@ -27,7 +35,7 @@ alias ll 'eza -lagh --git --icons --group-directories-first'
 alias la 'eza -lagh --git --icons --group-directories-first --sort modified'
 alias cll 'clear; and eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize --group-directories-first'
 
-## Tree view
+# Tree view
 alias tree 'eza -Ta --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 alias ltd 'eza -TaD --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 
@@ -102,7 +110,3 @@ alias vapor vendor/bin/vapor
 
 ## Games ##
 alias doom 'cd ~/Developer/games/terminal-doom; and zig-out/bin/terminal-doom'
-
-## Ai ##
-alias cc claude # Claude Code
-alias kk claude # Claude Code
