@@ -1,6 +1,6 @@
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = code --wait
+  editor       = nvim --wait
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
