@@ -2,7 +2,7 @@
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0']
 
-start-at-login = false
+start-at-login = true
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -83,9 +83,9 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 ######### DEDICATED APP WORKSPACES ##########
-[[on-window-detected]] # Home Workspace
-if.app-name-regex-substring = 'Zen|Brave Browser Beta|Safari|Google Chrome'
-run = "move-node-to-workspace home"
+[[on-window-detected]] # hq Workspace
+if.app-name-regex-substring = 'Zen|Brave Browser Beta|Safari|Google Chrome|Vivaldi'
+run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Chat Workspace
 if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp'
