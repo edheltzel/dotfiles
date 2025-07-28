@@ -10,7 +10,7 @@ return {
   {
     "ghostty",
     dir = "/Applications/Ghostty.app/Contents/Resources/vim/vimfiles",
-    lazy = false,
+    lazy = true,
   },
   --
   -- nunjucks from jinja lsp
