@@ -469,6 +469,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Ghostty.app'",
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Finder.app'",
                                 "from": {
                                     "key_code": "f",
@@ -485,12 +501,44 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'kitty.app'",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Toggl Track.app'",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Toggl Track.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Obsidian.app'",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -533,44 +581,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'kitty.app'",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'WezTerm.app'",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'WezTerm.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Ghostty.app'",
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
                                 "type": "basic"
                             }
                         ]

@@ -66,13 +66,14 @@ const rules: KarabinerRules[] = [
       hyphen: open ("'raycast://extensions/rishabswift/word-search/word-spell'"),
       comma: app("System Settings"),
       c: app("Google Chrome"), // Browser - testing
+      g: app("Ghostty"), // Terminal - 3
       f: app("Finder"),
+      k: app("kitty"), // Terminal - 1
       l: app("Toggl Track"),
+      o: app("Obsidian"), // FieldNotes editor 
       p: open("raycast://extensions/jomifepe/bitwarden/search"),
       r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
-      k: app("kitty"), // Terminal - 1
       w: app("WezTerm"), // Terminal - 2
-      g: app("Ghostty"), // Terminal - 3
     },
     // Third layer: Hyper + a (app) shortcuts
     a: {
