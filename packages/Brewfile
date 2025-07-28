@@ -300,6 +300,7 @@ cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
+cask 'obsidian'                       # PKM editor
 
 # RAG+CAG LLM
 # cask 'repo-prompt'                    # Repo prompt for LLMs
