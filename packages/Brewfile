@@ -251,7 +251,7 @@ cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
 # cask 'typinator'                 # Text expander - macOS only
 cask 'keka'                      # File archiver and extractor
 cask 'homerow'                   # keyboaard shortcuts for every button in macOS
-cask 'kindavim'                  # Vim motions everywhere 
+cask 'kindavim'                  # Vim motions everywhere
 
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'               # Keyboard firmware
@@ -261,13 +261,13 @@ cask 'karabiner-elements'        # Keyboard customization tool
 
 # Menu Bar Hacks
 # brew 'sketchybar'                # status bar replacement for MacOS - paired with Aerospace
-brew 'jordanbaird-ice'           # Ice bar - Using Sketchybar currently
+brew 'jordanbaird-ice'            # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
-cask 'alt-tab'                   # A Windows like alt-tab
+cask 'alt-tab'                      # A Windows like alt-tab
 
-cask 'nikitabobko/tap/aerospace' # Window Management
-# brew 'borders'                   # A window borders manager
+cask 'nikitabobko/tap/aerospace'    # Window Management
+brew 'borders'                      # A window borders manager
 
 # Browsers
 cask 'brave-browser@beta'        # Brave browser - Secondary
