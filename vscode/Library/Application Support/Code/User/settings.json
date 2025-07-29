@@ -65,7 +65,7 @@
 		"quickfix.biome": "always"
 	},
 	"editor.cursorSmoothCaretAnimation": "on",
-	"editor.cursorSurroundingLines": 99,
+	// "editor.cursorSurroundingLines": 99,
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSurroundingLinesStyle": "all",
 	"editor.cursorWidth": 3,
