@@ -9,5 +9,6 @@ return {
         { "<leader>t", group = "Tabs", icon = { icon = "󰓩", color = "blue" } },
       },
     },
+    keys = {}
   },
 }

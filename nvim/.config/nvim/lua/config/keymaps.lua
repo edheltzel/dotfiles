@@ -22,7 +22,7 @@ keymap.del("n", "<C-Left>")
 keymap.del("n", "<C-Down>")
 keymap.del("n", "<C-Up>")
 keymap.del("n", "<C-Right>")
-
+--
 -- General -------------------------------------------------------------------------------
 -- Delete without yanking
 keymap.set({ "n", "v" }, "<leader>d", "d", { desc = "Delete without yanking" })
@@ -88,6 +88,9 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" }
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 
+-- Buffers
+keymap.set({ "n", "v" }, "<leader>bM", "<cmd>BufferLineCloseOthers<cr>", { desc = "Delete other buffers" })
+--
 -- SURROUNDS
 -- keymap.set("n", "<S>s", "gsd", { desc = "surrounds" })
 -- keymap.set("n", "<S>s", "gsd", { desc = "surrounds" })
