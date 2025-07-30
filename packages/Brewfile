@@ -301,6 +301,7 @@ cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
 cask 'obsidian'                       # PKM editor
+cask 'granola'                        # AI meeting transcriber
 
 # RAG+CAG LLM
 # cask 'repo-prompt'                    # Repo prompt for LLMs
