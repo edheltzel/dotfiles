@@ -69,8 +69,8 @@ alt-ctrl-cmd-4 = 'move-node-to-workspace overflow --focus-follows-window'
 alt-shift-enter = ['mode service']
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main']                #
-f = ['layout floating tiling', 'mode main']                #
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
 b = ['balance-sizes', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
@@ -80,28 +80,28 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 ######### DEDICATED APP WORKSPACES ##########
-[[on-window-detected]] # hq Workspace
+[[on-window-detected]] # HQ Workspace - macos Desktop 1 (alt-ctrl-0)
 if.app-name-regex-substring = 'Zen|Brave Browser Beta|Safari|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
-[[on-window-detected]] # Chat Workspace
-if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp'
-run = "move-node-to-workspace chat"
-
-[[on-window-detected]] # Designing Workspace
-if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*Slicer|.*Studio|Microsoft PowerPoint|Micorosft Word|Microsoft Excel"
-run = "move-node-to-workspace design"
-
-[[on-window-detected]] # Coding Workspace
+[[on-window-detected]] # Coding Workspace - macos Desktop 2 (alt-ctrl-1)
 if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Ghostty|Zed|Kiro'
 run = "move-node-to-workspace code"
 
-[[on-window-detected]] # Overflow Workspace
+[[on-window-detected]] # Designing Workspace - macos Desktop 3 (alt-ctrl-2)
+if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*Slicer|.*Studio|Microsoft PowerPoint|Micorosft Word|Microsoft Excel"
+run = "move-node-to-workspace design"
+
+[[on-window-detected]] # Chat Workspace - macos Desktop 4 (alt-ctrl-3)
+if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp'
+run = "move-node-to-workspace chat"
+
+[[on-window-detected]] # Overflow Workspace - macos Desktop 5 (alt-ctrl-4)
 if.app-name-regex-substring = 'Notes|Reminders'
 run = "move-node-to-workspace overflow"
 
 # Floating Windows
 # Toggl and Cyberduck both always open in Overflow but are floating
 [[on-window-detected]]
-if.app-name-regex-substring = '.*finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|.*toggl|Cyberduck|Preview'
+if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|.*toggl|Cyberduck|Preview'
 run = "layout floating"
