@@ -411,13 +411,13 @@
 			"name": "Go to Definition",
 			"type": "command"
 		},
-		// {
-		// 	"command": "workbench.action.toggleSidebarVisibility",
-		// 	"icon": "symbol-tree",
-		// 	"keys": "e.e",
-		// 	"name": "Toggle file explorer",
-		// 	"type": "command"
-		// },
+		{
+			"command": "workbench.action.toggleSidebarVisibility",
+			"icon": "symbol-tree",
+			"keys": "e.e",
+			"name": "Toggle Sidebar",
+			"type": "command"
+		},
 		{
 			"command": "editor.action.goToReferences",
 			"icon": "symbol-enum",
@@ -478,7 +478,7 @@
 			"position": "-1"
 		},
 		{
-			"command": "workbench.action.toggleSidebarVisibility",
+			"command": "workbench.view.explorer",
 			"icon": "list-tree",
 			"keys": "f.e",
 			"name": "Toggle File Explorer",
