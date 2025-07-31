@@ -411,6 +411,13 @@
 			"name": "Go to Definition",
 			"type": "command"
 		},
+		// {
+		// 	"command": "workbench.action.toggleSidebarVisibility",
+		// 	"icon": "symbol-tree",
+		// 	"keys": "e.e",
+		// 	"name": "Toggle file explorer",
+		// 	"type": "command"
+		// },
 		{
 			"command": "editor.action.goToReferences",
 			"icon": "symbol-enum",
