@@ -19,11 +19,9 @@ enable_transience
 # OH My Posh Prompt
 # oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
 
-# Added by Windsurf
-fish_add_path /Users/ed/.codeium/windsurf/bin
-
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+set -gx WARP_THEME_DIR "$HOME/.warp/themes"
