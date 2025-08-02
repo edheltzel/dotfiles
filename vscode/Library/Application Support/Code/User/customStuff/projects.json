@@ -9,15 +9,6 @@
 		"enabled": true
 	},
 	{
-		"name": "KB 🧠",
-		"rootPath": "/Users/ed/Developer/KB",
-		"paths": [],
-		"tags": [
-			"Personal"
-		],
-		"enabled": true
-	},
-	{
 		"name": "FD Esbuild 🚀",
 		"rootPath": "/Users/ed/Developer/personal/flightdeck_projects/flightdeck-esbuild",
 		"paths": [],
@@ -57,7 +48,9 @@
 		"name": "mac",
 		"rootPath": "/Users/ed/Developer/work/mac/mac3",
 		"paths": [],
-		"tags": ["Clients"],
+		"tags": [
+			"Clients"
+		],
 		"enabled": true
 	}
 ]
