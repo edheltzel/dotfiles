@@ -68,9 +68,10 @@ const rules: KarabinerRules[] = [
       equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       f: app("Finder"),
       l: app("Toggl Track"),
+      n: app("Invoice Ninja"),
       p: app("Passwords"),
-      j: app("WarpPreview"), // Terminal - 1
-      k: app("kitty"), // Terminal - 2
+      k: app("kitty"), // Terminal - 1
+      j: app("WarpPreview"), // Terminal - 2
       w: app("WezTerm"), // Terminal - 3
       g: app("Ghostty"), // Terminal - 4
     },
@@ -80,7 +81,6 @@ const rules: KarabinerRules[] = [
       f: app("Figma"),
       i: app("Adobe Illustrator"),
       m: app("Messages"),
-      n: app("Invoice Ninja"),
       p: app("Adobe Photoshop 2025"),
       b: app("BambuStudio"),
       e: app("ElegooSlicer"),
