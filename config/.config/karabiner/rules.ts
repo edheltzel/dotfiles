@@ -52,28 +52,27 @@ const rules: KarabinerRules[] = [
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
-      p: app("Passwords"),
       // QMK Macros
       v: app("Via"), // M0
-      l: open("raycast://script-commands/quit-fieldnotes"), // M4
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=FieldNotes'"), // M3
-      q: open("https://launcher.keychron.com/#/keymap"), // M5
+      l: open("raycast://script-commands/quit-fieldnotes"), // M4
+      p: open("raycast://extensions/jomifepe/bitwarden/search"), // M7
+      o: open("raycast://extensions/jomifepe/bitwarden/authenticator"), // M8
     },
     //---  Second layer: Hyper + left_command shortcuts
     left_command: {
-      hyphen: open ("'raycast://extensions/rishabswift/word-search/word-spell'"),
+      hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       comma: app("System Settings"),
-      c: app("Google Chrome"), // Browser - testing
-      g: app("Ghostty"), // Terminal - 3
+      equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       f: app("Finder"),
-      k: app("kitty"), // Terminal - 1
       l: app("Toggl Track"),
-      o: app("Obsidian"), // FieldNotes editor 
-      p: open("raycast://extensions/jomifepe/bitwarden/search"),
-      r: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
-      w: app("WezTerm"), // Terminal - 2
+      p: app("Passwords"),
+      j: app("WarpPreview"), // Terminal - 1
+      k: app("kitty"), // Terminal - 2
+      w: app("WezTerm"), // Terminal - 3
+      g: app("Ghostty"), // Terminal - 4
     },
     // Third layer: Hyper + a (app) shortcuts
     a: {
@@ -156,6 +155,9 @@ fs.writeFileSync(
       profiles: [
         {
           name: "Default",
+          virtual_hid_keyboard: {
+            keyboard_type_v2: "ansi"
+          },
           devices: [
             {
               identifiers: {

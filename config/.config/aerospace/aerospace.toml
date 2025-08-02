@@ -85,11 +85,11 @@ if.app-name-regex-substring = 'Zen|Brave Browser Beta|Safari|Google Chrome|Vival
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace - macos Desktop 2 (alt-ctrl-1)
-if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Ghostty|Zed|Kiro'
+if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Ghostty|Zed|Kiro|Warp*'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace - macos Desktop 3 (alt-ctrl-2)
-if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*Slicer|.*Studio|Microsoft PowerPoint|Micorosft Word|Microsoft Excel"
+if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft PowerPoint|Micorosft Word|Microsoft Excel"
 run = "move-node-to-workspace design"
 
 [[on-window-detected]] # Chat Workspace - macos Desktop 4 (alt-ctrl-3)

@@ -269,44 +269,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Passwords.app'",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Passwords.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_alt",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'Via.app'",
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Via.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_alt",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://script-commands/quit-fieldnotes",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/quit-fieldnotes" }],
                                 "type": "basic"
                             },
                             {
@@ -365,12 +333,44 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open https://launcher.keychron.com/#/keymap",
+                                "description": "Open raycast://script-commands/quit-fieldnotes",
                                 "from": {
-                                    "key_code": "q",
+                                    "key_code": "l",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open https://launcher.keychron.com/#/keymap" }],
+                                "to": [{ "shell_command": "open raycast://script-commands/quit-fieldnotes" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_alt",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/jomifepe/bitwarden/search",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/jomifepe/bitwarden/search" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_alt",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/jomifepe/bitwarden/authenticator",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/jomifepe/bitwarden/authenticator" }],
                                 "type": "basic"
                             }
                         ]
@@ -453,28 +453,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Google Chrome.app'",
+                                "description": "Open 'raycast://extensions/raycast/apple-reminders/create-reminder'",
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "equal_sign",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Ghostty.app'",
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
+                                "to": [{ "shell_command": "open 'raycast://extensions/raycast/apple-reminders/create-reminder'" }],
                                 "type": "basic"
                             },
                             {
@@ -501,22 +485,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'kitty.app'",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "description": "Open -a 'Toggl Track.app'",
                                 "from": {
                                     "key_code": "l",
@@ -533,28 +501,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Obsidian.app'",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/jomifepe/bitwarden/search",
+                                "description": "Open -a 'Passwords.app'",
                                 "from": {
                                     "key_code": "p",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/jomifepe/bitwarden/search" }],
+                                "to": [{ "shell_command": "open -a 'Passwords.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -565,12 +517,28 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open 'raycast://extensions/raycast/apple-reminders/create-reminder'",
+                                "description": "Open -a 'WarpPreview.app'",
                                 "from": {
-                                    "key_code": "r",
+                                    "key_code": "j",
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
-                                "to": [{ "shell_command": "open 'raycast://extensions/raycast/apple-reminders/create-reminder'" }],
+                                "to": [{ "shell_command": "open -a 'WarpPreview.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'kitty.app'",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'kitty.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -587,6 +555,22 @@
                                     "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'WezTerm.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_left_command",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Ghostty.app'",
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["right_control", "right_command", "right_option", "right_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
                                 "type": "basic"
                             }
                         ]

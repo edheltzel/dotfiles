@@ -399,51 +399,51 @@
   },
   {
     "command": "workbench.action.increaseViewSize",
-    "key": "cmd-ctrl+alt+shift+=",
+    "key": "ctrl+cmd+right",
     "title": "Increase View Size when Side Bar Focused",
     "when": "sideBarFocus"
   },
   {
     "command": "workbench.action.decreaseViewSize",
-    "key": "cmd-ctrl+alt+shift+-",
+    "key": "ctrl+cmd+left",
     "title": "Decrease View Size when Side Bar Focused",
     "when": "sideBarFocus"
   },
   {
     "command": "workbench.action.increaseViewWidth",
-    "key": "ctrl+shift+alt+cmd-=",
+    "key": "ctrl+cmd+right",
     "title": "Increase View Width when Editor Focused",
     "when": "editorFocus"
   },
   {
     "command": "workbench.action.decreaseViewWidth",
-    "key": "ctrl+shift+alt+cmd--",
+    "key": "ctrl+cmd+left",
     "title": "Decrease View Width when Editor Focused",
     "when": "editorFocus"
   },
   {
     "command": "workbench.action.increaseViewSize",
-    "key": "ctrl+shift+alt+cmd-=",
+    "key": "ctrl+cmd+right",
     "title": "Increase View Size when Panel Focused",
     "when": "panelFocus"
   },
   {
     "command": "workbench.action.decreaseViewSize",
-    "key": "ctrl+shift+alt+cmd--",
+    "key": "ctrl+cmd+left",
     "title": "Decrease View Size when Panel Focused",
     "when": "panelFocus"
   },
   {
     "command": "workbench.action.increaseViewSize",
-    "key": "ctrl+shift+alt+cmd-=",
+    "key": "ctrl+cmd+right",
     "title": "Increase View Size when Secondary Side Bar Focused",
-    "when": "auxiliaryBarVisible && auxiliaryBarFocus"
+    "when": "auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
     "command": "workbench.action.decreaseViewSize",
-    "key": "ctrl+shift+alt+cmd--",
+    "key": "ctrl+cmd+left",
     "title": "Decrease View Size when Secondary Side Bar Focused",
-    "when": "auxiliaryBarVisible && auxiliaryBarFocus && !inputFocus"
+    "when": "auxiliaryBarFocus && auxiliaryBarVisible && !inputFocus"
   },
   {
     "command": "workbench.action.output.toggleOutput",
@@ -736,5 +736,9 @@
   {
     "key": "cmd+escape",
     "command": "-claude-code.runClaude.keyboard"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
   },
 ]
