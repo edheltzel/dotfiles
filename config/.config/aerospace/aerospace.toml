@@ -13,9 +13,9 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
-automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
+automatically-unhide-macos-hidden-apps = true #focuses app regardless of visibility
 
-accordion-padding = 5
+accordion-padding = 30
 
 [gaps]
 inner.horizontal = 5
@@ -38,6 +38,8 @@ preset = 'qwerty'
 alt-ctrl-tab = 'workspace-back-and-forth' ## Cycle last 2 workspaces
 alt-ctrl-minus = 'resize smart -50'
 alt-ctrl-equal = 'resize smart +50'
+alt-ctrl-left = 'resize smart -50'
+alt-ctrl-right = 'resize smart +50'
 
 alt-ctrl-j = 'focus down'
 alt-ctrl-h = 'focus left'
@@ -66,7 +68,7 @@ alt-ctrl-cmd-3 = 'move-node-to-workspace chat --focus-follows-window'
 alt-ctrl-cmd-4 = 'move-node-to-workspace overflow --focus-follows-window'
 
 ## Service Mode - M2
-alt-shift-enter = ['mode service']
+alt-ctrl-enter = ['mode service']
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main']
