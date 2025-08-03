@@ -29,7 +29,7 @@ opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
 opt.undofile = true                           -- persistent undo
-opt.undodir = fun.expand('~/.vim/undodir')    -- undo directory 
+opt.undodir = fun.expand('~/.vim/undodir')    -- undo directory
 opt.updatetime = 300
 opt.timeoutlen = 500
 opt.ttimeoutlen = 0
@@ -52,7 +52,7 @@ opt.encoding = 'UTF-8'
 -- visual
 opt.termguicolors = true
 opt.signcolumn = 'yes'
-opt.colorcolumn = '100' 
+opt.colorcolumn = '100'
 opt.showmatch = true
 opt.matchtime = 1
 opt.cmdheight = 1
@@ -66,4 +66,5 @@ opt.lazyredraw = true
 opt.synmaxcol = 300
 opt.showmode = false
 opt.guicursor = 'n-v-c:block-blinkon250-blinkoff250,i-ci-ve:ver25-blinkon250-blinkoff250'
+
 cmd(":hi statusline guibg=NONE guifg=#0090d0")
