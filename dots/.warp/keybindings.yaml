@@ -1,0 +1,6 @@
+---
+Close Env Var Collection: ctrl-cmd-=
+"pane_group:resize_right": ctrl-cmd-=
+"input:open_completion_suggestions": ctrl-space
+"editor_view:insert_autosuggestion": tab
+"pane_group:resize_left": ctrl-cmd--
