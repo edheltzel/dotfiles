@@ -5,6 +5,7 @@ sudo -v
 . ../scripts/functions.sh
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
+global_packages="bun_packages.txt" #pnpm_packages.txt is another option
 python_packages="pipx_packages.txt"
 ruby_packages="ruby_packages.txt"
 rust_packages="rust_packages.txt"
@@ -51,6 +52,14 @@ install_node_packages() {
   npm install -g $(cat $node_packages)
   corepack enable
   success "All NPM global packages installed."
+}
+# Install global packages with Bun
+install_bun_packages() {
+  # Install Bun packages
+  info "Installing Bun packages..."
+  bun install -g $(cat $global_packages)
+  corepack enable
+  success "All global Bun packages installed."
 }
 
 # Define a function for installing packages with Python

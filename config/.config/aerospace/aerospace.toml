@@ -67,6 +67,11 @@ alt-ctrl-cmd-2 = 'move-node-to-workspace design --focus-follows-window'
 alt-ctrl-cmd-3 = 'move-node-to-workspace chat --focus-follows-window'
 alt-ctrl-cmd-4 = 'move-node-to-workspace overflow --focus-follows-window'
 
+## Open/focus apps using keybinds
+## TODO: test this out and see if we can drop Karabiner Elements
+## See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
+# cmd-alt-ctrl-shift-b = 'exec-and-forget open -a "Claude.app"'
+
 ## Service Mode - M2
 alt-ctrl-enter = ['mode service']
 [mode.service.binding]
