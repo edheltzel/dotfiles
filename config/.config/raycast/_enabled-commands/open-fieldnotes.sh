@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title bun install --globalFieldNotes
+# @raycast.title FieldNotes
 # @raycast.mode fullOutput
 
 # Optional parameters:
