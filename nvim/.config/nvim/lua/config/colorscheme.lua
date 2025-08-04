@@ -17,8 +17,8 @@ end
 -- Get all available themes by scanning the themes directory
 local function getAvailableThemes()
   local availableThemes = {}
-  local themeFiles = vim.fn.glob(vim.fn.stdpath('config') .. '/config/themes/*.lua', false, true)
-  
+  local themeFiles = vim.fn.glob(vim.fn.stdpath('config') .. '/lua/config/themes/*.lua', false, true)
+
   for _, file in ipairs(themeFiles) do
     local themeName = vim.fn.fnamemodify(file, ':t:r')
     local config = loadThemeConfig(themeName)
@@ -26,7 +26,7 @@ local function getAvailableThemes()
       availableThemes[themeName] = config
     end
   end
-  
+
   return availableThemes
 end
 

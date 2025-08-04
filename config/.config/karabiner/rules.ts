@@ -66,6 +66,7 @@ const rules: KarabinerRules[] = [
       hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       comma: app("System Settings"),
       equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
+      c: app("Claude"),
       f: app("Finder"),
       l: app("Toggl Track"),
       n: app("Invoice Ninja"),

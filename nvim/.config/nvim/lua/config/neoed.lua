@@ -1,0 +1,6 @@
+vim.g.active_theme = 'eldritch' -- eldritch,eldritch-dark,vague)
+require("config.base")
+require("config.keymaps")
+require("config.plugins")
+require("config.autocmd")
+require("config.colorscheme")
