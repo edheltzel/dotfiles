@@ -67,7 +67,6 @@ const rules: KarabinerRules[] = [
       comma: app("System Settings"),
       equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       c: app("Claude"),
-      f: app("Finder"),
       l: app("Toggl Track"),
       n: app("Invoice Ninja"),
       p: app("Passwords"),
@@ -90,8 +89,8 @@ const rules: KarabinerRules[] = [
       c: app("Autodesk Fusion"),
       x: app("xTool Creative Space"),
     },
-    // Fourth layer: Hyper + f (Finder) shortcuts
-    f: {
+    // Fourth layer: Hyper + d (directory) shortcuts
+    d: {
       y: open("~/Documents/3D-CAD"),
       u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),
       i: open("~/Documents"),

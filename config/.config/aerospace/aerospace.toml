@@ -1,19 +1,19 @@
 # cSpell: disable
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
-after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff212337 width=5.0']
+after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff3B446A width=5.0']
 
 start-at-login = true
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-default-root-container-layout = 'tiles'     #Possible values: tiles|accordion
+default-root-container-layout = 'accordion' #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
-automatically-unhide-macos-hidden-apps = true #focuses app regardless of visibility
+automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
 
 accordion-padding = 30
 
@@ -53,7 +53,7 @@ alt-ctrl-3 = 'workspace chat'     # 3 -> chat
 alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 
 ## Layouts/Move - M4
-alt-ctrl-cmd-slash = 'layout tiles horizontal vertical'
+alt-ctrl-cmd-period = 'layout tiles horizontal vertical'
 alt-ctrl-cmd-comma = 'layout accordion horizontal vertical'
 alt-ctrl-cmd-f = 'layout floating'                          # to undo see service mode
 alt-ctrl-cmd-h = 'move left'
@@ -67,10 +67,11 @@ alt-ctrl-cmd-2 = 'move-node-to-workspace design --focus-follows-window'
 alt-ctrl-cmd-3 = 'move-node-to-workspace chat --focus-follows-window'
 alt-ctrl-cmd-4 = 'move-node-to-workspace overflow --focus-follows-window'
 
-## Open/focus apps using keybinds
 ## TODO: test this out and see if we can drop Karabiner Elements
+## Open/focus apps using keybinds
 ## See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # cmd-alt-ctrl-shift-b = 'exec-and-forget open -a "Claude.app"'
+# cmd-alt-ctrl-shift-f = 'exec-and-forget open -a "Finder"'
 
 ## Service Mode - M2
 alt-ctrl-enter = ['mode service']

@@ -758,33 +758,6 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Finder.app'"
-                  }
-                ],
-                "description": "Open -a 'Finder.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "f",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open -a 'Toggl Track.app'"
                   }
                 ],
@@ -1318,12 +1291,12 @@
             ]
           },
           {
-            "description": "Hyper Key sublayer \"f\"",
+            "description": "Hyper Key sublayer \"d\"",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "f",
+                  "key_code": "d",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1336,7 +1309,7 @@
                 "to": [
                   {
                     "set_variable": {
-                      "name": "hyper_sublayer_f",
+                      "name": "hyper_sublayer_d",
                       "value": 1
                     }
                   },
@@ -1350,7 +1323,7 @@
                 "to_after_key_up": [
                   {
                     "set_variable": {
-                      "name": "hyper_sublayer_f",
+                      "name": "hyper_sublayer_d",
                       "value": 0
                     }
                   },
@@ -1384,7 +1357,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
@@ -1411,7 +1384,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
@@ -1438,7 +1411,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
@@ -1465,7 +1438,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
@@ -1492,7 +1465,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
@@ -1519,7 +1492,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
@@ -1546,7 +1519,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
@@ -1573,7 +1546,7 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_f",
+                    "name": "hyper_sublayer_d",
                     "value": 1
                   }
                 ]
