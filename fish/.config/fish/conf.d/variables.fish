@@ -22,7 +22,8 @@ string match -q "$TERM_PROGRAM" nvim
 and . (nvim --locate-shell-integration-path fish)
 
 # Default Editor use code, nvim, etc.
-set -gx EDITOR code
+# set -gx EDITOR code
+set -gx EDITOR nvim
 
 # Volumes
 set -gx VOL xxx
