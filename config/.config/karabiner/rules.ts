@@ -113,7 +113,6 @@ const rules: KarabinerRules[] = [
       z: app("Zen"),
       s: app("Safari"),
       b: app("Brave Browser Beta"),
-      c: app("Google Chrome"),
     },
   }),
   // Modifier tap rules - define multiple modifier keys with tap actions
