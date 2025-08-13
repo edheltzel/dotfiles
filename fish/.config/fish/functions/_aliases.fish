@@ -52,9 +52,6 @@ alias ol ollama
 alias cuts 'eval $EDITOR ~/.dotfiles'
 alias edd 'eval $EDITOR  ~/.dotfiles'
 
-# Neovim actions
-alias nvv "nvim -c 'enew | put +' -c 'startinsert'" #opens a new file in neovim from clipboard contents
-
 # Actions
 alias e '$EDITOR' # open in Default Editor
 alias o open
@@ -86,14 +83,10 @@ alias whois "grc whois" # colorized whois
 # SSH and localhost
 alias hostfile 'eval sudo $EDITOR /etc/hosts'
 alias editssh 'eval $EDITOR ~/.ssh'
-alias lssh 'grep -w -i Host ~/.ssh/config | sed s/Host//'
 
 # Docker aliases
 alias dk docker
 alias dc docker-compose
-
-# function tldrf --description 'tldr search and preview with fzf'
-alias tldrf 'tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 
 #### Language Support ####
 # Node - PNPM
@@ -107,6 +100,3 @@ alias mfs 'php artisan migrate:fresh --seed'
 alias phpunit vendor/bin/phpunit
 alias pest vendor/bin/pest
 alias vapor vendor/bin/vapor
-
-## Games ##
-alias doom 'cd ~/Developer/games/terminal-doom; and zig-out/bin/terminal-doom'

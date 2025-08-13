@@ -8,11 +8,7 @@ function matrix
     $HOME/.config/fish/utils/matrix.sh
 end
 
-# list all bat themes with a preview
-function batthemes
-    bat --list-themes | fzf --preview="bat --theme={} --color=always Makefile" | pbcopy
-end
-
-function confetti
-    open "raycast://extensions/raycast/raycast/confetti"
+# Terminal Doom
+function doom --description 'Terminal Doom'
+    cd $HOME/Developer/games/terminal-doom; and zig-out/bin/terminal-doom
 end
