@@ -1,6 +1,6 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- personal preferences
+--
 local option = vim.opt
 -- file handling  -------------------------------------------------------------------------------
 option.backup = false -- dont create backup files
@@ -11,4 +11,5 @@ option.undodir = vim.fn.expand("~/.local/share/nvim/undodir") -- set undo direct
 
 -- visual settings  -------------------------------------------------------------------------------
 option.cursorcolumn = true
-option.colorcolumn = "120"
+option.colorcolumn = "120" 
+
