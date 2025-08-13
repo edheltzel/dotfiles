@@ -34,6 +34,7 @@ config/raycast/extensions/
 
 ### AI shit ###
 .claude/
+.crush/
 
 ### REPOS ###
 repos/work.list
