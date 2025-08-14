@@ -53,6 +53,8 @@
 				<string>underline</string>
 				<key>tagsOptions</key>
 				<string>stippled_underline</string>
+				<key>gutterForeground</key>
+				<string>#4a5584</string>
 			</dict>
 		</dict>
 		<dict>
