@@ -4,6 +4,10 @@
 
 [mgr]
 
+prepend_keymap = [
+  { on = [ "g", "c" ], run = "plugin git-files", desc = "Show Git file changes" },
+]
+
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
   { on = "<C-[>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
