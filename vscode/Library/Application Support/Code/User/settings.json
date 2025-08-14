@@ -495,4 +495,5 @@
 			"type": "command"
 		},
 	],
+	"workbench.editor.showTabs": "none",
 }
