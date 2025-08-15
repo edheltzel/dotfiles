@@ -24,14 +24,6 @@
             "vendor_id": 9639
           },
           "ignore": false
-        },
-        {
-          "identifiers": {
-            "is_pointing_device": true,
-            "product_id": 304,
-            "vendor_id": 1390
-          },
-          "ignore": false
         }
       ],
       "complex_modifications": {
