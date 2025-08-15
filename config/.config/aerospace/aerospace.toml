@@ -46,7 +46,7 @@ alt-ctrl-h = 'focus left'
 alt-ctrl-k = 'focus up'
 alt-ctrl-l = 'focus right'
 
-alt-ctrl-0 = 'workspace hq'       # 0 -> all apps
+alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
 alt-ctrl-1 = 'workspace code'     # 1 -> dev/brwosers apps
 alt-ctrl-2 = 'workspace design'   # 2 -> design/work apps
 alt-ctrl-3 = 'workspace chat'     # 3 -> chat
