@@ -8,6 +8,9 @@ import {
   createModifierTapRules,
   createDoubleTapRule,
   createDoubleTapRules,
+  createMouseButtonRule,
+  MouseButtonAction,
+  BROWSER_BUNDLES,
 } from "./types";
 import { createHyperSubLayers, app, open, shell } from "./utils";
 
@@ -28,7 +31,7 @@ const rules: KarabinerRules[] = [
     o: "home",
     p: "end",
   }),
-  // Mouse button configuration for Safari and Vivaldi
+  // Mouse button configuration for Safari, Vivaldi, and Zen
   // Maps mouse buttons 4 and 5 to back/forward navigation
   ...createMouseNavigationRules(
     [
@@ -43,8 +46,17 @@ const rules: KarabinerRules[] = [
         description: "Mouse 5 => Forward",
       },
     ],
-    ["^com\\.apple\\.Safari$", "^com\\.vivaldi\\.Vivaldi$"],
+    [BROWSER_BUNDLES.SAFARI, BROWSER_BUNDLES.VIVALDI, BROWSER_BUNDLES.ZEN],
   ),
+  // Type-safe mouse button 3 configuration for Zen browser
+  // Maps button 3 to button 1 + left alt (Glance feature)
+  createMouseButtonRule({
+    fromButton: "button3",
+    toButton: "button1",
+    modifiers: ["left_alt"],
+    description: "Mouse Button 3 => Button 1 + Left Alt (Zen browser Glance)",
+    bundleIdentifiers: [BROWSER_BUNDLES.ZEN]
+  }),
   // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
     //---  Hyper + left_alt shortcuts - First layer

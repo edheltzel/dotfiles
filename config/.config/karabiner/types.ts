@@ -25,6 +25,13 @@ export interface Parameters {
   "basic.to_delayed_action_delay_milliseconds"?: number;
 }
 
+// Browser bundle identifier constants
+export const BROWSER_BUNDLES = {
+  SAFARI: "^com\\.apple\\.Safari$",
+  VIVALDI: "^com\\.vivaldi\\.Vivaldi$",
+  ZEN: "^app\\.zen-browser\\.zen$"
+} as const;
+
 // Add new Mouse Navigation types and utilities
 export type MouseNavigationMapping = {
   button: string;
@@ -62,6 +69,46 @@ export function createMouseNavigationRules(
   }));
 }
 
+// Mouse button action configuration type
+export type MouseButtonAction = {
+  fromButton: string;
+  toButton: string;
+  modifiers: ModifiersKeys[];
+  description: string;
+  bundleIdentifiers?: string[];
+};
+
+// Helper function to create a single mouse button rule
+export function createMouseButtonRule(config: MouseButtonAction): KarabinerRules {
+  const manipulator: Manipulator = {
+    type: "basic",
+    from: {
+      pointing_button: config.fromButton
+    },
+    to: [
+      {
+        pointing_button: config.toButton,
+        modifiers: config.modifiers
+      }
+    ]
+  };
+
+  // Add conditions if bundle identifiers are specified
+  if (config.bundleIdentifiers && config.bundleIdentifiers.length > 0) {
+    manipulator.conditions = [
+      {
+        type: "frontmost_application_if",
+        bundle_identifiers: config.bundleIdentifiers
+      }
+    ];
+  }
+
+  return {
+    description: config.description,
+    manipulators: [manipulator]
+  };
+}
+
 type Conditions =
   | FrontMostApplicationCondition
   | DeviceCondition
@@ -79,10 +126,10 @@ type FrontMostApplicationCondition = {
 
 type DeviceCondition = {
   type:
-    | "device_if"
-    | "device_unless"
-    | "device_exists_if"
-    | "device_exists_unless";
+  | "device_if"
+  | "device_unless"
+  | "device_exists_if"
+  | "device_exists_unless";
   identifiers: Identifiers;
   description?: string;
 };

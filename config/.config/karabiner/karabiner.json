@@ -297,7 +297,8 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.apple\\.Safari$",
-                      "^com\\.vivaldi\\.Vivaldi$"
+                      "^com\\.vivaldi\\.Vivaldi$",
+                      "^app\\.zen-browser\\.zen$"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -326,7 +327,8 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.apple\\.Safari$",
-                      "^com\\.vivaldi\\.Vivaldi$"
+                      "^com\\.vivaldi\\.Vivaldi$",
+                      "^app\\.zen-browser\\.zen$"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -344,6 +346,33 @@
                   }
                 ],
                 "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Mouse Button 3 => Button 1 + Left Alt (Zen browser Glance)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "pointing_button": "button3"
+                },
+                "to": [
+                  {
+                    "pointing_button": "button1",
+                    "modifiers": [
+                      "left_alt"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^app\\.zen-browser\\.zen$"
+                    ]
+                  }
+                ]
               }
             ]
           },
