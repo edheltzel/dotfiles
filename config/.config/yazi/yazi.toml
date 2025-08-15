@@ -15,7 +15,6 @@ show_symlink = true
 scrolloff = 5
 mouse_events = ["click", "scroll"]
 title_format = "Yazi: {cwd}"
-
 [preview]
 wrap = "no"
 tab_size = 2
@@ -249,3 +248,4 @@ sort_by = "none"
 sort_sensitive = false
 sort_reverse = false
 sort_translit = false
+

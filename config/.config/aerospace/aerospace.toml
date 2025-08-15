@@ -2,7 +2,7 @@
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
 after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff3B446A width=5.0']
 
-start-at-login = true
+start-at-login = false
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true

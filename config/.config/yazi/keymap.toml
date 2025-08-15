@@ -6,6 +6,7 @@
 
 prepend_keymap = [
   { on = [ "g", "c" ], run = "plugin git-files", desc = "Show Git file changes" },
+  { on = "T", run = "shell --orphan --confirm kitty", desc = "Open terminal at current dir" },
 ]
 
 keymap = [
