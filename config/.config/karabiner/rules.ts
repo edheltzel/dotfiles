@@ -121,7 +121,7 @@ const rules: KarabinerRules[] = [
     },
     // Sixth layer: Hyper + left_control (just browsers)
     left_control: {
-      y: app("Vivaldi"), // using v will trigger Raycast clipboard since that is set to hyper
+      y: app("Vivaldi"),
       z: app("Zen"),
       s: app("Safari"),
       b: app("Brave Browser Beta"),

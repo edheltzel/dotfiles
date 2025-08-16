@@ -150,6 +150,7 @@
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.showIcons": false,
+	"workbench.editor.showTabs": "none",
 	"workbench.iconTheme": "catppuccin-latte",
 	"catppuccin.syncWithIconPack": false,
 	"workbench.layoutControl.enabled": false,
@@ -495,5 +496,4 @@
 			"type": "command"
 		},
 	],
-	"workbench.editor.showTabs": "none",
 }
