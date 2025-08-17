@@ -872,114 +872,6 @@
                     "value": 1
                   }
                 ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'kitty.app'"
-                  }
-                ],
-                "description": "Open -a 'kitty.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'WarpPreview.app'"
-                  }
-                ],
-                "description": "Open -a 'WarpPreview.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "j",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'WezTerm.app'"
-                  }
-                ],
-                "description": "Open -a 'WezTerm.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "w",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Ghostty.app'"
-                  }
-                ],
-                "description": "Open -a 'Ghostty.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "g",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
               }
             ]
           },
@@ -1025,6 +917,33 @@
                       "name": "in_sublayer",
                       "value": 0
                     }
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Autodesk Fusion.app'"
+                  }
+                ],
+                "description": "Open -a 'Autodesk Fusion.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
                   }
                 ]
               },
@@ -1254,33 +1173,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "s",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_a",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Autodesk Fusion.app'"
-                  }
-                ],
-                "description": "Open -a 'Autodesk Fusion.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "c",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1544,33 +1436,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "j",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_d",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open '/Users/ed/RDM Dropbox'"
-                  }
-                ],
-                "description": "Open '/Users/ed/RDM Dropbox'",
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1881,6 +1746,114 @@
                 "type": "basic",
                 "from": {
                   "key_code": "b",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'kitty.app'"
+                  }
+                ],
+                "description": "Open -a 'kitty.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'WarpPreview.app'"
+                  }
+                ],
+                "description": "Open -a 'WarpPreview.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'WezTerm.app'"
+                  }
+                ],
+                "description": "Open -a 'WezTerm.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Ghostty.app'"
+                  }
+                ],
+                "description": "Open -a 'Ghostty.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "g",
                   "modifiers": {
                     "mandatory": [
                       "right_control",

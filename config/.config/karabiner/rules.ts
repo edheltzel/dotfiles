@@ -82,13 +82,10 @@ const rules: KarabinerRules[] = [
       l: app("Toggl Track"),
       n: app("Invoice Ninja"),
       p: app("Passwords"),
-      k: app("kitty"), // Terminal - 1
-      j: app("WarpPreview"), // Terminal - 2
-      w: app("WezTerm"), // Terminal - 3
-      g: app("Ghostty"), // Terminal - 4
     },
     // Third layer: Hyper + a (app) shortcuts
     a: {
+      3: app("Autodesk Fusion"),
       d: app("Adobe InDesign 2025"),
       f: app("Figma"),
       i: app("Adobe Illustrator"),
@@ -98,7 +95,6 @@ const rules: KarabinerRules[] = [
       e: app("ElegooSlicer"),
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),
-      c: app("Autodesk Fusion"),
       x: app("xTool Creative Space"),
     },
     // Fourth layer: Hyper + d (directory) shortcuts
@@ -110,7 +106,6 @@ const rules: KarabinerRules[] = [
       p: open("~/Desktop"),
       h: open("~/"),
       j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
-      k: open("'/Users/ed/RDM Dropbox'",),
     },
     // Fifth layer: Hyper + m (Microsoft) shortcuts
     m: {
@@ -125,6 +120,10 @@ const rules: KarabinerRules[] = [
       z: app("Zen"),
       s: app("Safari"),
       b: app("Brave Browser Beta"),
+      k: app("kitty"), // Terminal - 1
+      w: app("WarpPreview"), // Terminal - 2
+      t: app("WezTerm"), // Terminal - 3
+      g: app("Ghostty"), // Terminal - 4
     },
   }),
   // Modifier tap rules - define multiple modifier keys with tap actions
