@@ -20,8 +20,7 @@ return {
     local component_widths = {}
 
     -- check width of current component and add to maps
-    local function add_width(str, name)
-      if not str or str == "" then
+    local function add_width(str, name) if not str or str == "" then
         component_widths[name] = 0
         return str
       end
