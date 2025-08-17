@@ -26,14 +26,17 @@ keymap.del("n", "<C-Right>")
 -- General -------------------------------------------------------------------------------
 -- Delete without yanking
 keymap.set({ "n", "v" }, "<leader>d", "d", { desc = "Delete without yanking" })
--- ESCAPE INSERT MODE
-keymap.set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" })
-keymap.set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" })
+--
+keymap.set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" }) -- ESCAPE INSERT MODE
+keymap.set("t", "<Esc>", "<C-\\><C-n>") -- ESCAPE TERMINAL MODE
+--
 keymap.set("n", "U", "<C-r>", { desc = "Redo" }) -- redo with U
 keymap.set("n", "<D-z>", "u", { desc = "Redo" }) -- undo with cmd+z
+--
 -- JUMP to BOL/EOL
 keymap.set("n", "gh", "^", { desc = "Jump beginning of line" })
 keymap.set("n", "gl", "$", { desc = "Jump end of line" })
+--
 -- CLEAR SEARCH HIGHLIGHTS
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("v", "<", "<gv", { desc = "Indent left and reslect" })
