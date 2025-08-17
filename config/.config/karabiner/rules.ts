@@ -187,15 +187,15 @@ fs.writeFileSync(
               },
               ignore: false,
             },
-            {
-              identifiers: {
-                // Elecom EX-G PRO trackball
-                is_pointing_device: true,
-                product_id: 304,
-                vendor_id: 1390,
-              },
-              ignore: false,
-            },
+            // {
+            //   identifiers: {
+            //     // Elecom EX-G PRO trackball
+            //     is_pointing_device: true,
+            //     product_id: 304,
+            //     vendor_id: 1390,
+            //   },
+            //   ignore: false,
+            // },
           ],
           complex_modifications: {
             rules,
