@@ -311,6 +311,8 @@ brew 'ollama'
 # Agentics+Agents
 # cask 'block-goose'                    # On Machine AI Agent
 brew 'opencode-ai/tap/opencode'       # Opensource equivalent of Claude Code
+brew 'charmbracelet/tap/crush'
+brew 'gemini-cli'
 
 # Terminal emulators
 cask 'ghostty'                        # Zig
