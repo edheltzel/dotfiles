@@ -13,9 +13,9 @@ return {
     lazy = true,
   },
   --
-  -- nunjucks from jinja lsp
   "neovim/nvim-lspconfig",
   dependencies = {},
+
   -- LSP Configuration & Plugins
   {
     "neovim/nvim-lspconfig",
@@ -57,9 +57,9 @@ return {
           lang = "python",
         },
       }
-      -- require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-      -- For some reason `require("lspconfig")["jinja_lsp"] doesn't quite work right in v0.12 if neovim :shrug:`
+      -- require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
       vim.lsp.config["jinja_lsp"] = jinja_lsp
       require("mason").setup()
       require("mason-lspconfig").setup({
@@ -89,7 +89,20 @@ return {
       end
 
       configs.setup({
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
+        ensure_installed = {
+          "c",
+          "lua",
+          "vim",
+          "vimdoc",
+          "query",
+          "elixir",
+          "heex",
+          "javascript",
+          "html",
+          "astrojs",
+          "typescript",
+          "jinja",
+        },
         sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
         disable = disable_fn,
         highlight = {
