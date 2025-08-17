@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo -v
+# sudo -v
 
 # Define variables for each package manager and include the corresponding package lists
 . ../scripts/functions.sh
@@ -55,11 +55,7 @@ install_node_packages() {
 }
 # Install global packages with Bun
 install_bun_packages() {
-  # Install Bun packages
-  info "Installing Bun packages..."
   bun install -g $(cat $global_packages)
-  corepack enable
-  success "All global Bun packages installed."
 }
 
 # Define a function for installing packages with Python
@@ -127,3 +123,4 @@ install_node_packages
 # install_python_packages
 install_ruby_packages
 install_rust_packages
+install_bun_packages

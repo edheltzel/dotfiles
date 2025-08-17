@@ -69,12 +69,12 @@ brew 'hexyl'                # Hex viewer - Rust
 brew 'jq'                   # JSON parser, output and query files
 brew 'mas'                  # Mac App Store CLI
 brew 'most'                 # Multi-window scroll pager (better less)
-brea 'poppler'              # PDF rendering library
+brew 'poppler'              # PDF rendering library
 brew 'ripgrep'              # Searching within files (better grep) - Rust
 brew 'rsync'                # Fast incremental file transfer
 brew 'sd'                   # RegEx find and replace (better sed) - Rust
 brew 'sevenzip'             # 7-Zip file archiver
-brea 'xen'                  # Terminal CSV Processing - Rust
+brew 'xenso'                  # Terminal CSV Processing - Rust
 brew 'zoxide'               # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
 # CLI Image Processing and Compression
@@ -275,7 +275,7 @@ cask 'choosy'                    # Choose which browser to open links in - Defau
 cask 'google-chrome'             # For tests
 cask 'firefox'                   # For tests
 cask 'vivaldi'                   # Chromium
-cagk 'zen'                       # Gecko - daily driver
+cask 'zen'                       # Gecko - daily driver
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
