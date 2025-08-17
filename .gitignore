@@ -4,16 +4,13 @@
 ### Git ###
 #git/.gitconfig-local
 
-### Helix Editor ###
-config/.config/helix/runtime
-
 ### VSCode ###
 .vsce
 
-### VIM ###
+### Neovim ###
 NetrwTreeListing*
 nvim/.config/nvim/lazy-lock.json
-#
+
 ### LazyVim ###
 tt.*
 .tests
@@ -23,6 +20,7 @@ debug
 foo.*
 *.log
 data
+
 ### LazyGit ###
 config/.config/lazygit/state.yml
 
@@ -39,6 +37,10 @@ config/raycast/extensions/
 ### REPOS ###
 repos/work.list
 repos/playground.list
+
+### BACKUPS ###
+*.bak
+*.backup
 
 ### PRIVATE ###
 private/ssh/
