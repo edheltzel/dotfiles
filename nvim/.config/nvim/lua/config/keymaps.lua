@@ -27,7 +27,7 @@ keymap.del("n", "<C-Right>")
 -- Delete without yanking
 keymap.set({ "n", "v" }, "<leader>d", "d", { desc = "Delete without yanking" })
 --
-keymap.set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" }) -- ESCAPE INSERT MODE
+keymap.set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" }) -- ESCAPE INSERT MODE
 keymap.set("t", "<Esc>", "<C-\\><C-n>") -- ESCAPE TERMINAL MODE
 --
 keymap.set("n", "U", "<C-r>", { desc = "Redo" }) -- redo with U

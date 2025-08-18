@@ -90,18 +90,18 @@ return {
 
       configs.setup({
         ensure_installed = {
+          "astro",
           "c",
-          "lua",
-          "vim",
-          "vimdoc",
-          "query",
           "elixir",
           "heex",
-          "javascript",
           "html",
-          "astrojs",
-          "typescript",
+          "javascript",
           "jinja",
+          "lua",
+          "query",
+          "typescript",
+          "vim",
+          "vimdoc",
         },
         sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
         disable = disable_fn,
