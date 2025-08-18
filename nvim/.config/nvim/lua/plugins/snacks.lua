@@ -2,6 +2,32 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      persistance = {
+        need = 1,
+      },
+      --
+      picker = {
+        sources = {
+          explorer = {
+            layout = {
+              layout = { position = "right" },
+            },
+          },
+          -- TODO: update keymaps to match VSpaceCode
+          files = {
+            hidden = true,
+            ignored = true,
+            exclude = {
+              ".DS_Store",
+              "**/.git/*",
+              "**/node_modules/*",
+            },
+          },
+        },
+        hidden = true,
+        ignored = true,
+      },
+      --
       dashboard = {
         preset = {
           keys = {
