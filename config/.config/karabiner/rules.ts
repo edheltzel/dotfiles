@@ -68,8 +68,7 @@ const rules: KarabinerRules[] = [
       v: app("Via"), // M0
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
-      n: open("'raycast://customWindowManagementCommand?&name=FieldNotes'"), // M3
-      l: open("raycast://script-commands/quit-fieldnotes"), // M4
+      n: open("'raycast://customWindowManagementCommand?&name=1-FieldNotes'"), // M3
       p: open("raycast://extensions/jomifepe/bitwarden/search"), // M7
       o: open("raycast://extensions/jomifepe/bitwarden/authenticator"), // M8
     },
