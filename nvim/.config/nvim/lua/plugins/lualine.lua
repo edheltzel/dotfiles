@@ -20,7 +20,8 @@ return {
     local component_widths = {}
 
     -- check width of current component and add to maps
-    local function add_width(str, name) if not str or str == "" then
+    local function add_width(str, name)
+      if not str or str == "" then
         component_widths[name] = 0
         return str
       end
@@ -48,59 +49,13 @@ return {
 
     vim.o.laststatus = vim.g.lualine_laststatus
 
-    -- Custom theme and colors from lualine.lua
-    local neoEd = require("lualine.themes.eldritch")
-
-    local colors = {
-      bg = "#212337",
-      darkGray = "#323449",
-      fg = "#454E7D",
-      gray = "#586089",
-      green = "#37F499",
-      blue = "#04D1F9",
-      purple = "#A48CF2",
-      red = "#F16d75",
-      magenta = "#F265B5",
-    }
-    -- Apply custom colors to modes
-    neoEd.normal.a.fg = colors.fg
-    neoEd.normal.a.bg = colors.bg
-    neoEd.normal.b.fg = colors.fg
-    neoEd.normal.b.bg = colors.fg
-    neoEd.normal.c.fg = colors.fg
-    neoEd.normal.c.bg = colors.bg
-
-    neoEd.insert.a.bg = colors.magenta
-    neoEd.insert.a.fg = colors.bg
-    neoEd.insert.b.bg = colors.fg
-    neoEd.insert.b.fg = colors.bg
-
-    neoEd.visual.a.bg = colors.purple
-    neoEd.visual.a.fg = colors.bg
-    neoEd.visual.b.bg = colors.fg
-    neoEd.visual.b.fg = colors.bg
-
-    neoEd.replace.a.fg = colors.red
-    neoEd.replace.a.bg = colors.bg
-    neoEd.replace.b.fg = colors.fg
-    neoEd.replace.b.bg = colors.bg
-
-    neoEd.command.a.fg = colors.green
-    neoEd.command.a.bg = colors.bg
-    neoEd.command.b.fg = colors.fg
-    neoEd.command.b.bg = colors.bg
-
-    neoEd.terminal.a.fg = colors.bg
-    neoEd.terminal.a.bg = colors.red
-    neoEd.terminal.b.fg = colors.bg
-    neoEd.terminal.b.bg = colors.red
-
-    neoEd.inactive.b.fg = colors.fg
-    neoEd.inactive.b.bg = colors.bg
+    -- Import custom neoEd theme
+    local neoEd = require("themes.lualine.neoed").setup()
 
     local opts = {
       options = {
-        theme = neoEd,
+        --- @usage 'neoEd' | 'eldeitch' | 'rose-pine' | 'rose-pine-alt'
+        theme = "rose-pine-alt",
         component_separators = "",
         section_separators = "",
         globalstatus = vim.o.laststatus == 1,
