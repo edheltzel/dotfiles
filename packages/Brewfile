@@ -1,4 +1,4 @@
-###############################################################
+#Usq##############################################################
 # cspell: disable
 # ~/.Brewfile - Software Installs for MacOS                   #
 #                                                             #
@@ -270,12 +270,13 @@ cask 'nikitabobko/tap/aerospace'    # Window Management
 brew 'borders'                      # A window borders manager
 
 # Browsers
-cask 'brave-browser@beta'        # Chromium
 cask 'choosy'                    # Choose which browser to open links in - Default
-cask 'google-chrome'             # For tests
+cask 'chromium'                  # For tests
 cask 'firefox'                   # For tests
 cask 'vivaldi'                   # Chromium
 cask 'zen'                       # Gecko - daily driver
+cask 'safari-preview'            # For tests
+cask 'vladdoster/formulae/vimari' # Safari extension for Vim motions
 
 # Fonts
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
