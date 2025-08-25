@@ -59,30 +59,22 @@ const rules: KarabinerRules[] = [
   }),
   // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
-    //---  Hyper + left_alt shortcuts - First layer
-    left_alt: {
-      0: open(
-        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
-      ),
+    //---  Hyper + left_alt shortcuts
+    // left_alt: {},
+    //---  Hyper + left_command shortcuts
+    left_command: {
+      hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
+      comma: app("System Settings"),
+      equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       // QMK Macros
-      v: app("Via"), // M0
+      0: open("'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"),
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=1-FieldNotes'"), // M3
       p: open("raycast://extensions/jomifepe/bitwarden/search"), // M7
       o: open("raycast://extensions/jomifepe/bitwarden/authenticator"), // M8
     },
-    //---  Second layer: Hyper + left_command shortcuts
-    left_command: {
-      hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
-      comma: app("System Settings"),
-      equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
-      c: app("Claude"),
-      l: app("Toggl Track"),
-      n: app("Invoice Ninja"),
-      p: app("Passwords"),
-    },
-    // Third layer: Hyper + a (app) shortcuts
+    // Hyper + a (app) shortcuts
     a: {
       3: app("Autodesk Fusion"),
       d: app("Adobe InDesign 2025"),
@@ -95,8 +87,20 @@ const rules: KarabinerRules[] = [
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),
       x: app("xTool Creative Space"),
+      l: app("Toggl Track"),
+      n: app("Invoice Ninja"),
+      k: app("kitty"), // Terminal - 2
+      w: app("WezTerm"), // Terminal - 3
     },
-    // Fourth layer: Hyper + d (directory) shortcuts
+    // Hyper + w (web) shortcuts
+    w: {
+      s: app("Safari"),
+      c: app("Chromium"),
+      v: app("Vivaldi"),
+      z: app("Zen"),
+      p: app("Passwords"),
+    },
+    // Hyper + d (directory/document) shortcuts
     d: {
       y: open("~/Documents/3D-CAD"),
       u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),
@@ -106,23 +110,12 @@ const rules: KarabinerRules[] = [
       h: open("~/"),
       j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
     },
-    // Fifth layer: Hyper + m (Microsoft) shortcuts
+    // Hyper + m (Microsoft) shortcuts
     m: {
       w: app("Microsoft Word"),
       e: app("Microsoft Excel"),
       p: app("Microsoft PowerPoint"),
       t: app("Microsoft Teams"),
-    },
-    // Sixth layer: Hyper + left_control (just browsers)
-    left_control: {
-      y: app("Vivaldi"),
-      z: app("Zen"),
-      s: app("Safari"),
-      b: app("Brave Browser Beta"),
-      k: app("kitty"), // Terminal - 1
-      w: app("WarpPreview"), // Terminal - 2
-      t: app("WezTerm"), // Terminal - 3
-      g: app("Ghostty"), // Terminal - 4
     },
   }),
   // Modifier tap rules - define multiple modifier keys with tap actions
