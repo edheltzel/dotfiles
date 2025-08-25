@@ -1,3 +1,4 @@
+// cSpell: disable
 import * as fs from "fs";
 import {
   KarabinerRules,
@@ -63,8 +64,8 @@ const rules: KarabinerRules[] = [
     // left_alt: {},
     //---  Hyper + left_command shortcuts
     left_command: {
-      hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       comma: app("System Settings"),
+      hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
       // QMK Macros
       0: open("'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"),
