@@ -1,4 +1,8 @@
 @antfu/ni
+@anthropic-ai/claude-code
+@bitwarden/cli
+@charmland/crush
+@google/gemini-cli
 @vscode/vsce
 cspell
 easy-sharing
@@ -8,5 +12,3 @@ neovim
 typescript
 typescript-language-server
 wrangler
-@anthropic-ai/claude-code
-@google/gemini-cli
