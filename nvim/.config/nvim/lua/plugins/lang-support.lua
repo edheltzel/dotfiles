@@ -6,13 +6,6 @@ return {
     build = "make setup",
   },
   --
-  -- ghostty terminal config
-  {
-    "ghostty",
-    dir = "/Applications/Ghostty.app/Contents/Resources/vim/vimfiles",
-    lazy = true,
-  },
-  --
   "neovim/nvim-lspconfig",
   dependencies = {},
 

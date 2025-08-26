@@ -137,7 +137,7 @@
 	"editor.wordWrap": "on",
 	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
-	"workbench.colorTheme": "Rosé Pine Moon",
+	"workbench.colorTheme": "Rosé Pine",
 	"workbench.colorCustomizations": {
 		"[Eldritch]": {
 			"cursorColumnColor": "#37f49910",
