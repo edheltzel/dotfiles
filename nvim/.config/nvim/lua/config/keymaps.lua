@@ -85,7 +85,7 @@ end, { desc = "Lazygit (root dir)" })
 -- VSCODE Like -------------------------------------------------------------------------------
 -- VSpaceCode-ish KEYMAPS
 keymap.set("n", "<leader>fs", "<cmd>w<CR>", { noremap = true, desc = "Save file" })
--- keymap.set("n", "<leader>", "<leader>ff", { noremap = true, desc = "Open file" })
+-- keymap.set("n", "<leader>o", "<leader>ff", { noremap = true, desc = "Find a file" })
 keymap.set("n", "<ENTER>", "za", { desc = "Code Folding" })
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
@@ -100,9 +100,9 @@ keymap.set({ "n", "v" }, "<leader>bM", "<cmd>BufferLineCloseOthers<cr>", { desc 
 -- keymap.set("n", "<S>s", "gsd", { desc = "surrounds" })
 
 -- LAUNCH TERMINAL
-keymap.set({ "n", "t" }, "<C-`>", function()
-  Util.terminal(nil, { border = "none" })
-end, { desc = "Toggle terminal" })
+-- keymap.set({ "n", "t" }, "<C-`>", function()
+--   Util.terminal(nil, { border = "none" })
+-- end, { desc = "Toggle terminal" })
 
 -- LINE BUBBLING - Move lines up/down
 keymap.set("n", "<A-down>", ":m .+1<CR>==", { desc = "Move line down" })
