@@ -55,7 +55,7 @@ return {
     local opts = {
       options = {
         --- @usage 'neoEd' | 'eldeitch' | 'rose-pine' | 'rose-pine-alt'
-        theme = "rose-pine-alt",
+        theme = "neoEd",
         component_separators = "",
         section_separators = "",
         globalstatus = vim.o.laststatus == 1,

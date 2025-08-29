@@ -15,13 +15,13 @@ return {
       },
       {
         -- Open in the current working directory
-        "<leader>E",
+        "<leader>fE",
         "<cmd>Yazi cwd<cr>",
         desc = "Open the file manager in nvim's working directory",
       },
       {
         -- Open in the current root directory
-        "<leader>e",
+        "<leader>fe",
         "<cmd>Yazi<cr>",
         desc = "Open the file manager in nvim's root directory",
       },
