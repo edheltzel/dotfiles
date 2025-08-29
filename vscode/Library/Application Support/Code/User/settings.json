@@ -137,7 +137,7 @@
 	"editor.wordWrap": "on",
 	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
-	"workbench.colorTheme": "Rosé Pine",
+	"workbench.colorTheme": "Eldritch",
 	"workbench.colorCustomizations": {
 		"[Eldritch]": {
 			"cursorColumnColor": "#37f49910",
@@ -407,6 +407,14 @@
 			"type": "command"
 		},
 		{
+			"command": "workbench.action.quickOpen",
+			"icon": "file",
+			"keys": "f.f",
+			"name": "Go To File...",
+			"position": 1,
+			"type": "command"
+		},
+		{
 			"command": "workbench.action.showAllEditorsByMostRecentlyUsed",
 			"icon": "files",
 			"keys": ",",
@@ -443,14 +451,14 @@
 			"telemetry.telemetryLevel": "crash",
 			"type": "command"
 		},
-		{
-			"command": "file-browser.open",
-			"icon": "file",
-			"keys": "f.F",
-			"name": "Open File/Folder...",
-			"position": 2,
-			"type": "command"
-		},
+		// {
+		// 	"command": "file-browser.open",
+		// 	"icon": "file",
+		// 	"keys": "f.F",
+		// 	"name": "Open File/Folder...",
+		// 	"position": 2,
+		// 	"type": "command"
+		// },
 		{
 			"command": "workbench.action.closeAllEditors",
 			"icon": "clear-all",
