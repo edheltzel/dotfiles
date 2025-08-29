@@ -1,8 +1,8 @@
 ---
-"input:set_mode_terminal": cmd-j
 Close Env Var Collection: ctrl-cmd-=
-"input:set_mode_unlocked_agent": shift-cmd-I
-"pane_group:resize_right": ctrl-cmd-right
-"pane_group:resize_left": ctrl-cmd-left
 "input:open_completion_suggestions": tab
+"pane_group:resize_right": ctrl-cmd-right
+"input:set_mode_terminal": cmd-j
+"input:set_mode_unlocked_agent": shift-cmd-I
 "input:set_mode_unlocked_terminal": shift-cmd-J
+"pane_group:resize_left": ctrl-cmd-left
