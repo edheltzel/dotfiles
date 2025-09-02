@@ -101,7 +101,7 @@ const rules: KarabinerRules[] = [
       z: app("Zen"),
       p: app("Passwords"),
     },
-    // Hyper + d (directory/document) shortcuts
+    // Hyper + d (directory) shortcuts
     d: {
       y: open("~/Documents/3D-CAD"),
       u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),

@@ -74,9 +74,9 @@
 	"editor.fontFamily": "Lilex, Lilex Nerd Font Mono",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 19,
-	"editor.formatOnPaste": false,
+	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
-	"editor.formatOnType": false,
+	"editor.formatOnType": true,
 	"editor.guides.bracketPairs": true,
 	"editor.guides.bracketPairsHorizontal": "active",
 	"editor.hover.delay": 500,
@@ -147,13 +147,11 @@
 			"sideBar.foreground": "#767EA7",
 		}
 	},
-	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.showIcons": false,
 	"workbench.editor.showTabs": "none",
 	"workbench.iconTheme": "catppuccin-latte",
 	"catppuccin.syncWithIconPack": false,
-	"workbench.layoutControl.enabled": false,
 	"workbench.secondarySideBar.showLabels": false,
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "none",
@@ -161,8 +159,6 @@
 	"workbench.tree.expandMode": "doubleClick",
 	"workbench.tree.indent": 20,
 	"workbench.tree.stickyScrollMaxItemCount": 4,
-	// Window Settings
-	"window.commandCenter": false,
 	"window.density.editorTabHeight": "compact",
 	"window.title": "${dirty}${separator}${rootName}${separator}${profileName}",
 	// Files Settings
@@ -504,4 +500,7 @@
 			"type": "command"
 		},
 	],
+	"workbench.layoutControl.enabled": false,
+	"window.commandCenter": false,
+	"workbench.editor.editorActionsLocation": "hidden",
 }
