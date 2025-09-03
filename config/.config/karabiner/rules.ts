@@ -66,7 +66,7 @@ const rules: KarabinerRules[] = [
     left_command: {
       comma: app("System Settings"),
       hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
-      equal_sign: open("'raycast://extensions/raycast/apple-reminders/create-reminder'"),
+      equal_sign: open("'raycast://extensions/doist/todoist/create-task'"),
       // QMK Macros
       0: open("'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"),
       t: open("raycast://script-commands/run-topgrade"), // M1
