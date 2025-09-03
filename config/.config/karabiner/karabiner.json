@@ -497,10 +497,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open 'raycast://extensions/raycast/apple-reminders/create-reminder'"
+                    "shell_command": "open 'raycast://extensions/doist/todoist/create-task'"
                   }
                 ],
-                "description": "Open 'raycast://extensions/raycast/apple-reminders/create-reminder'",
+                "description": "Open 'raycast://extensions/doist/todoist/create-task'",
                 "type": "basic",
                 "from": {
                   "key_code": "equal_sign",
