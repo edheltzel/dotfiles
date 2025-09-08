@@ -524,6 +524,33 @@
               {
                 "to": [
                   {
+                    "shell_command": "open 'raycast://extensions/doist/todoist/home'"
+                  }
+                ],
+                "description": "Open 'raycast://extensions/doist/todoist/home'",
+                "type": "basic",
+                "from": {
+                  "key_code": "home",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_command",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open raycast://script-commands/run-topgrade"
                   }
                 ],
@@ -956,6 +983,33 @@
                 "type": "basic",
                 "from": {
                   "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Todoist.app'"
+                  }
+                ],
+                "description": "Open -a 'Todoist.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
                   "modifiers": {
                     "mandatory": [
                       "right_control",

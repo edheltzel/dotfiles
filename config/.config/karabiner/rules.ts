@@ -67,6 +67,7 @@ const rules: KarabinerRules[] = [
       comma: app("System Settings"),
       hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       equal_sign: open("'raycast://extensions/doist/todoist/create-task'"),
+      home: open("'raycast://extensions/doist/todoist/home'"),
       // QMK Macros
       0: open("'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"),
       t: open("raycast://script-commands/run-topgrade"), // M1
@@ -87,6 +88,7 @@ const rules: KarabinerRules[] = [
       e: app("ElegooSlicer"),
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),
+      t: app("Todoist"),
       x: app("xTool Creative Space"),
       l: app("Toggl Track"),
       n: app("Invoice Ninja"),
