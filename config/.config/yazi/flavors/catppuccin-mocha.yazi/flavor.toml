@@ -71,7 +71,7 @@ perm_exec  = { fg = "#a6e3a1" }
 # Progress
 progress_label  = { fg = "#ffffff", bold = true }
 progress_normal = { fg = "#89b4fa", bg = "#45475a" }
-progress_error  = { fg = "#f38ba8", bg = "#45475a" }
+progress_error  = { fg = "#89b4fa", bg = "#f38ba8" }
 
 # : }}}
 
@@ -110,7 +110,7 @@ border = { fg = "#89b4fa" }
 [tasks]
 border  = { fg = "#89b4fa" }
 title   = {}
-hovered = { fg = "#f5c2e7", underline = true }
+hovered = { fg = "#f5c2e7", bold = true }
 
 # : }}}
 
@@ -139,7 +139,18 @@ footer  = { fg = "#313244", bg = "#cdd6f4" }
 # : }}}
 
 
-# : Notify {{{
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#89b4fa" }
+title    = { fg = "#89b4fa" }
+tbl_col  = { fg = "#94e2d5" }
+tbl_cell = { fg = "#f5c2e7", bg = "#45475a" }
+
+# : }}}
+
+
+# : Notification {{{
 
 [notify]
 title_info  = { fg = "#a6e3a1" }
