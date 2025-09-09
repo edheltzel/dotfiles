@@ -1,8 +1,9 @@
 ---
-Close Env Var Collection: ctrl-cmd-=
 "input:open_completion_suggestions": tab
-"pane_group:resize_right": ctrl-cmd-right
 "input:set_mode_terminal": cmd-j
-"input:set_mode_unlocked_agent": shift-cmd-I
+"workspace:close_active_tab": none
+"code_view:close_saved_tabs": shift-cmd-R
 "input:set_mode_unlocked_terminal": shift-cmd-J
+"input:set_mode_unlocked_agent": shift-cmd-I
+"pane_group:resize_right": ctrl-cmd-right
 "pane_group:resize_left": ctrl-cmd-left
