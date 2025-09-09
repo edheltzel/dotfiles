@@ -1,0 +1,12 @@
+# Lazy SSH agent - only start when needed
+function ssh --wraps ssh
+    if test -z "$SSH_ENV"
+        set -xg SSH_ENV $HOME/.ssh/environment
+    end
+    
+    if not __ssh_agent_is_started
+        __ssh_agent_start
+    end
+    
+    command ssh $argv
+end
