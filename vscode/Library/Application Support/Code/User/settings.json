@@ -197,6 +197,7 @@
 	"terminal.integrated.fontSize": 17,
 	"terminal.integrated.fontWeightBold": "400",
 	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.shellIntegration.enabled": true,
 	"terminal.integrated.suggest.enabled": true,
 	// Git Settings
 	"git.autoStash": true,
