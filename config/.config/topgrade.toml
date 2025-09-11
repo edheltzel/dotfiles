@@ -9,13 +9,14 @@ disable = [
   "system",
   "vscode",
   "containers",
-  "bun_packages",
   "ruby_gems",
   "tlmgr",
+  "node",
+  "pnpm"
 ]
 
 # Ignore failures for these steps
-ignore_failures = ["git_repos", "pnpm", "yarn", "bun_packages"]
+ignore_failures = ["git_repos", "pnpm", "yarn", "bun_packages", "node"]
 
 # Don't ask for confirmations (no default value)
 assume_yes = true
