@@ -229,7 +229,6 @@ cask 'obs'                  # Screen recorder
 cask 'capcut'               # Video Editing
 # Communication and Chat
 cask 'discord'              # Chat app
-cask 'chatgpt'              # ChatGPT app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
@@ -302,20 +301,22 @@ cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor - Default
 cask 'obsidian'                       # PKM editor
-cask 'granola'                        # AI meeting transcriber
 
 # RAG+CAG LLM
 # cask 'repo-prompt'                    # Repo prompt for LLMs
 cask 'ollama'                         # Local LLMs
 brew 'ollama'
+cask 'granola'                        # AI meeting transcriber
+cask 'chatgpt'                        # AI chat
+cask 'claude'                         # AI chat
+cask 'block-goose'                    # On Machine AI Agent
 
-# Agentics+Agents
-# cask 'block-goose'                    # On Machine AI Agent
 brew 'opencode-ai/tap/opencode'       # Opensource equivalent of Claude Code
 brew 'charmbracelet/tap/crush'
 brew 'gemini-cli'
 
 # Terminal emulators
+cask 'warp'                           # Rust 
 cask 'ghostty'                        # Zig
 cask 'kitty'                          # Python+C
 cask 'wezterm'                        # Rust
