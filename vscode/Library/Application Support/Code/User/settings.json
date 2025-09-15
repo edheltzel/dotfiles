@@ -504,4 +504,6 @@
 	"workbench.layoutControl.enabled": false,
 	"window.commandCenter": false,
 	"workbench.editor.editorActionsLocation": "hidden",
+	"superdesign.aiModelProvider": "openrouter",
+	"superdesign.aiModel": "google/gemini-2.5-pro",
 }
