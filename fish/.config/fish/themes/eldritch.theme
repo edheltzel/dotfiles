@@ -1,0 +1,36 @@
+# Eldritch
+
+# Syntax highlighting colors
+fish_color_normal ebfafa
+fish_color_command 37f499
+fish_color_keyword a48cf2
+fish_color_quote f1fc79
+fish_color_redirection ebfafa
+fish_color_end a48cf2
+fish_color_option f7c67f
+fish_color_error f16c75
+fish_color_param 04d1f9
+fish_color_comment 7081d0
+fish_color_selection --background=76639e
+fish_color_search_match --background=76639e
+fish_color_operator a48cf2
+fish_color_escape a48cf2
+fish_color_autosuggestion 7081d0
+fish_color_status f16c75
+fish_color_cancel f16c75 --reverse
+fish_color_history_current --bold
+fish_color_valid_path --underline
+
+# Default prompt colors
+fish_color_cwd a48cf2
+fish_color_cwd_root f265b5
+fish_color_host 04d1f9
+fish_color_host_remote 04d1f9
+fish_color_user 37f499
+
+# Completion Pager Colors
+fish_pager_color_progress 7081d0
+fish_pager_color_prefix 04d1f9
+fish_pager_color_completion ebfafa
+fish_pager_color_description 7081d0
+fish_pager_color_selected_background --background=76639e

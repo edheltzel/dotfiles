@@ -9,6 +9,8 @@ set -gx XDG_MUSIC_DIR $HOME/Music
 set -gx XDG_PICTURES_DIR $HOME/Pictures
 set -gx XDG_VIDEOS_DIR $HOME/Videos
 
+set -gx EZA_CONFIG_DIR $HOME/.config/eza
+
 # cargo
 set -gx CARGO_TARGET_DIR /var/folders/88/3h9cyc4979d2l6p7xkn79yqr0000gn/T/cargo-installx9AWBr
 
