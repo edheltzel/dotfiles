@@ -506,4 +506,13 @@
 	"workbench.editor.editorActionsLocation": "hidden",
 	"superdesign.aiModelProvider": "openrouter",
 	"superdesign.aiModel": "google/gemini-2.5-pro",
+	"projectManager.git.maxDepthRecursion": 6,
+	"projectManager.vscode.baseFolders": [
+		"~/Developer/",
+		"~/Sites/"
+	],
+	"projectManager.any.maxDepthRecursion": 6,
+	"projectManager.svn.maxDepthRecursion": 6,
+	"projectManager.vscode.maxDepthRecursion": 6,
+	"projectManager.hg.maxDepthRecursion": 6,
 }
