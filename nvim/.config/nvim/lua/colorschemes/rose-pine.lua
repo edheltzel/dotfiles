@@ -7,7 +7,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      variant = "main",
+      variant = "auto",
       dark_variant = "main",
       dim_inactive_windows = true,
       extend_background_behind_borders = true,
