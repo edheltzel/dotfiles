@@ -19,17 +19,17 @@
 ################################
 #
 # Light mode use:
-#  active_color=0xff212337
-#  inactive_color=0xffebfafa
+  # active_color=0xff212337
+  # inactive_color=0xffebfafa
 # Dark mode use:
-#  active_color=0xffa48cf2
-#  inactive_color=0xff212337
+  # active_color=0xffa48cf2
+  # inactive_color=0xff3B446A
 
 options=(
   style=round
   width=5.0
-  active_color=0xffa48cf2
-  inactive_color=0xff3B446A
+  active_color=0xff212337
+  inactive_color=0xffebfafa
 )
 
 borders "${options[@]}"

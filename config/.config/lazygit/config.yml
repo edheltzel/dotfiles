@@ -4,32 +4,56 @@
 gui:
   theme:
     # ELDRITCH THEME
+    # activeBorderColor:
+    #   - "#37f499"
+    #   - bold
+    # inactiveBorderColor:
+    #   - "#747BA2"
+    # searchingActiveBorderColor:
+    #   - "#f265b5"
+    #   - bold
+    # optionsTextColor:
+    #   - blue
+    # selectedLineBgColor:
+    #   - "#323449"
+    # inactiveViewSelectedLineBgColor:
+    #   - bold
+    # cherryPickedCommitFgColor:
+    #   - "#a48cf2"
+    # cherryPickedCommitBgColor:
+    #   - cyan
+    # markedBaseCommitFgColor:
+    #   - blue
+    # markedBaseCommitBgColor:
+    #   - "#f1fc79"
+    # unstagedChangesColor:
+    #   - "#f16c75"
+    # defaultFgColor:
+    #   - "#ebfafa"
+
+    # Catppuccin LatteTHEME
     activeBorderColor:
-      - "#37f499"
+      - '#ea76cb'
       - bold
     inactiveBorderColor:
-      - "#747BA2"
-    searchingActiveBorderColor:
-      - "#f265b5"
-      - bold
+      - '#6c6f85'
     optionsTextColor:
-      - blue
+      - '#1e66f5'
     selectedLineBgColor:
-      - "#323449"
-    inactiveViewSelectedLineBgColor:
-      - bold
-    cherryPickedCommitFgColor:
-      - "#a48cf2"
+      - '#ccd0da'
     cherryPickedCommitBgColor:
-      - cyan
-    markedBaseCommitFgColor:
-      - blue
-    markedBaseCommitBgColor:
-      - "#f1fc79"
+      - '#bcc0cc'
+    cherryPickedCommitFgColor:
+      - '#ea76cb'
     unstagedChangesColor:
-      - "#f16c75"
+      - '#d20f39'
     defaultFgColor:
-      - "#ebfafa"
+      - '#4c4f69'
+    searchingActiveBorderColor:
+      - '#df8e1d'
+
+  authorColors:
+    '*': '#7287fd'
 
     # ROSE PINE THEME
     # activeBorderColor:
