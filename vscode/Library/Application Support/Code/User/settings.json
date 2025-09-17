@@ -150,7 +150,8 @@
 			"sideBar.foreground": "#767EA7",
 		},
 		"[Catppuccin Latte]": {
-			// "cursorColumnColor": "#37f49910",
+			"editorStickyScroll.background": "#e6e9ef",
+			"sideBar.foreground": "#6c6f85",
 		}
 	},
 	"workbench.editor.pinnedTabSizing": "shrink",
