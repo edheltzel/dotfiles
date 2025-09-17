@@ -137,7 +137,10 @@
 	"editor.wordWrap": "on",
 	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
-	"workbench.colorTheme": "Eldritch",
+	"workbench.preferredDarkColorTheme": "Eldritch",
+	"workbench.preferredLightColorTheme": "Catppuccin Latte",
+	"window.autoDetectColorScheme": true,
+	// "workbench.colorTheme": "Eldritch",
 	"workbench.colorCustomizations": {
 		"[Eldritch]": {
 			"cursorColumnColor": "#37f49910",
@@ -145,6 +148,9 @@
 			"editorGutter.background": "#18192B",
 			"editorStickyScroll.background": "#0F1013",
 			"sideBar.foreground": "#767EA7",
+		},
+		"[Catppuccin Latte]": {
+			// "cursorColumnColor": "#37f49910",
 		}
 	},
 	"workbench.editor.pinnedTabSizing": "shrink",
