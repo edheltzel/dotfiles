@@ -226,6 +226,33 @@
                 ]
               },
               {
+                "description": "d = page_down",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_down"
+                  }
+                ],
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "in_sublayer",
+                    "value": 1
+                  }
+                ]
+              },
+              {
                 "description": "o = home",
                 "from": {
                   "key_code": "o",

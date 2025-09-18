@@ -29,6 +29,7 @@ const rules: KarabinerRules[] = [
     l: "right_arrow",
     u: "page_up",
     i: "page_down",
+    d: "page_down", // more vim-like navigation
     o: "home",
     p: "end",
   }),
