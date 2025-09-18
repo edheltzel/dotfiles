@@ -522,4 +522,5 @@
 	"projectManager.svn.maxDepthRecursion": 6,
 	"projectManager.vscode.maxDepthRecursion": 6,
 	"projectManager.hg.maxDepthRecursion": 6,
+	"workbench.panel.showLabels": false,
 }
