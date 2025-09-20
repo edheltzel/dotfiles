@@ -29,7 +29,7 @@ const rules: KarabinerRules[] = [
     l: "right_arrow",
     u: "page_up",
     i: "page_down",
-    d: "page_down", // more vim-like navigation
+    // d: "page_down", // more vim-like navigation
     o: "home",
     p: "end",
   }),
@@ -79,6 +79,7 @@ const rules: KarabinerRules[] = [
     },
     // Hyper + a (app) shortcuts
     a: {
+      0: app("Passwords"),
       3: app("Autodesk Fusion"),
       d: app("Adobe InDesign 2025"),
       f: app("Figma"),
@@ -100,9 +101,10 @@ const rules: KarabinerRules[] = [
     w: {
       s: app("Safari"),
       c: app("Chromium"),
+      g: app("Google Chrome"),
       v: app("Vivaldi"),
       z: app("Zen"),
-      p: app("Passwords"),
+      p: app("Safari Technology Preview"),
     },
     // Hyper + d (directory) shortcuts
     d: {

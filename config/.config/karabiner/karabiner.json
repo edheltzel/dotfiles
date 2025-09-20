@@ -226,33 +226,6 @@
                 ]
               },
               {
-                "description": "d = page_down",
-                "from": {
-                  "key_code": "d",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "page_down"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
                 "description": "o = home",
                 "from": {
                   "key_code": "o",
@@ -754,6 +727,33 @@
                       "name": "in_sublayer",
                       "value": 0
                     }
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Passwords.app'"
+                  }
+                ],
+                "description": "Open -a 'Passwords.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "0",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
                   }
                 ]
               },
@@ -1293,6 +1293,33 @@
               {
                 "to": [
                   {
+                    "shell_command": "open -a 'Google Chrome.app'"
+                  }
+                ],
+                "description": "Open -a 'Google Chrome.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open -a 'Vivaldi.app'"
                   }
                 ],
@@ -1347,10 +1374,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Passwords.app'"
+                    "shell_command": "open -a 'Safari Technology Preview.app'"
                   }
                 ],
-                "description": "Open -a 'Passwords.app'",
+                "description": "Open -a 'Safari Technology Preview.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "p",
