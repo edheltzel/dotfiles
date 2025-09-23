@@ -61,7 +61,7 @@
 	"find-it-faster.general.useTerminalInEditor": true,
 	// Core Editor Settings
 	"editor.accessibilitySupport": "off",
-	"editor.bracketPairC7lorization.enabled": true,
+	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": {
 		"quickfix.biome": "always"
 	},
@@ -103,7 +103,7 @@
 		[
 			"{{",
 			"}}"
-		]
+		],
 	],
 	"editor.letterSpacing": 0.5,
 	"editor.linkedEditing": true,
@@ -152,7 +152,8 @@
 		"[Catppuccin Latte]": {
 			"editorStickyScroll.background": "#e6e9ef",
 			"sideBar.foreground": "#6c6f85",
-		}
+			"editorIndentGuide.activeBackground1": "#4c4f69"
+		},
 	},
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.showIcons": false,
@@ -523,4 +524,5 @@
 	"projectManager.vscode.maxDepthRecursion": 6,
 	"projectManager.hg.maxDepthRecursion": 6,
 	"workbench.panel.showLabels": false,
+	"workbench.editor.highlightModifiedTabs": true,
 }
