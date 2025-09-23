@@ -26,17 +26,14 @@ keymap.del("n", "<C-Right>")
 -- General -------------------------------------------------------------------------------
 -- Delete without yanking
 keymap.set({ "n", "v" }, "<leader>d", "d", { desc = "Delete without yanking" })
---
-keymap.set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" }) -- ESCAPE INSERT MODE
-keymap.set("t", "<Esc>", "<C-\\><C-n>") -- ESCAPE TERMINAL MODE
---
+-- ESCAPE INSERT MODE
+keymap.set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" })
+keymap.set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" })
 keymap.set("n", "U", "<C-r>", { desc = "Redo" }) -- redo with U
 keymap.set("n", "<D-z>", "u", { desc = "Redo" }) -- undo with cmd+z
---
 -- JUMP to BOL/EOL
 keymap.set("n", "gh", "^", { desc = "Jump beginning of line" })
 keymap.set("n", "gl", "$", { desc = "Jump end of line" })
---
 -- CLEAR SEARCH HIGHLIGHTS
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("v", "<", "<gv", { desc = "Indent left and reslect" })
@@ -85,7 +82,7 @@ end, { desc = "Lazygit (root dir)" })
 -- VSCODE Like -------------------------------------------------------------------------------
 -- VSpaceCode-ish KEYMAPS
 keymap.set("n", "<leader>fs", "<cmd>w<CR>", { noremap = true, desc = "Save file" })
--- keymap.set("n", "<leader>o", "<leader>ff", { noremap = true, desc = "Find a file" })
+-- keymap.set("n", "<leader>", "<leader>ff", { noremap = true, desc = "Open file" })
 keymap.set("n", "<ENTER>", "za", { desc = "Code Folding" })
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
@@ -100,9 +97,9 @@ keymap.set({ "n", "v" }, "<leader>bM", "<cmd>BufferLineCloseOthers<cr>", { desc 
 -- keymap.set("n", "<S>s", "gsd", { desc = "surrounds" })
 
 -- LAUNCH TERMINAL
--- keymap.set({ "n", "t" }, "<C-`>", function()
---   Util.terminal(nil, { border = "none" })
--- end, { desc = "Toggle terminal" })
+keymap.set({ "n", "t" }, "<C-`>", function()
+  Util.terminal(nil, { border = "none" })
+end, { desc = "Toggle terminal" })
 
 -- LINE BUBBLING - Move lines up/down
 keymap.set("n", "<A-down>", ":m .+1<CR>==", { desc = "Move line down" })
