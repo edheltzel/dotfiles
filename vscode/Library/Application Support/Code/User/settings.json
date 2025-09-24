@@ -139,8 +139,8 @@
 	"workbench.activityBar.location": "bottom",
 	"workbench.preferredDarkColorTheme": "Eldritch",
 	"workbench.preferredLightColorTheme": "Catppuccin Latte",
-	"window.autoDetectColorScheme": true,
-	// "workbench.colorTheme": "Eldritch",
+	"window.autoDetectColorScheme": false,
+	"workbench.colorTheme": "Eldritch",
 	"workbench.colorCustomizations": {
 		"[Eldritch]": {
 			"cursorColumnColor": "#37f49910",

@@ -57,7 +57,7 @@ const rules: KarabinerRules[] = [
     toButton: "button1",
     modifiers: ["left_alt"],
     description: "Mouse Button 3 => Button 1 + Left Alt (Zen browser Glance)",
-    bundleIdentifiers: [BROWSER_BUNDLES.ZEN]
+    bundleIdentifiers: [BROWSER_BUNDLES.ZEN],
   }),
   // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
@@ -70,7 +70,9 @@ const rules: KarabinerRules[] = [
       equal_sign: open("'raycast://extensions/doist/todoist/create-task'"),
       home: open("'raycast://extensions/doist/todoist/home'"),
       // QMK Macros
-      0: open("'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"),
+      0: open(
+        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
+      ),
       t: open("raycast://script-commands/run-topgrade"), // M1
       d: open("raycast://script-commands/edit-dotfiles"), // M2
       n: open("'raycast://customWindowManagementCommand?&name=1-FieldNotes'"), // M3
@@ -81,6 +83,7 @@ const rules: KarabinerRules[] = [
     a: {
       0: app("Passwords"),
       3: app("Autodesk Fusion"),
+      equal_sign: app("Todoist"),
       d: app("Adobe InDesign 2025"),
       f: app("Figma"),
       i: app("Adobe Illustrator"),
@@ -90,31 +93,39 @@ const rules: KarabinerRules[] = [
       e: app("ElegooSlicer"),
       o: app("OrcaSlicer"),
       s: app("Shapr3D"),
-      t: app("Todoist"),
       x: app("xTool Creative Space"),
       l: app("Toggl Track"),
       n: app("Invoice Ninja"),
-      k: app("kitty"), // Terminal - 2
-      w: app("WezTerm"), // Terminal - 3
     },
     // Hyper + w (web) shortcuts
     w: {
-      s: app("Safari"),
       c: app("Chromium"),
       g: app("Google Chrome"),
+      f: app("Firefox"),
+      p: app("Safari Technology Preview"),
+      s: app("Safari"),
       v: app("Vivaldi"),
       z: app("Zen"),
-      p: app("Safari Technology Preview"),
+      k: app("kitty"), // Terminal - 1
+      t: app("Warp"), // Terminal - 2
+      r: app("WezTerm"), // Terminal - 3
+      e: app("Zed"),
     },
     // Hyper + d (directory) shortcuts
     d: {
       y: open("~/Documents/3D-CAD"),
-      u: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",),
+      u: open(
+        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+      ),
       i: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
       h: open("~/"),
-      j: open("'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",),
+      j: open(
+        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
+      ),
+      c: open("~/Developer/"),
+      s: open("~/Sites/"),
     },
     // Hyper + m (Microsoft) shortcuts
     m: {
@@ -130,13 +141,13 @@ const rules: KarabinerRules[] = [
     right_command: {
       key_code: "delete_or_backspace",
       modifiers: ["right_alt"],
-      description: "Delete Last Word"
+      description: "Delete Last Word",
     },
     right_control: {
       key_code: "spacebar",
       modifiers: ["right_command"],
       description: "Trigger Raycast",
-    }
+    },
     // Add more modifier tap rules here as needed
   }),
   // Double-tap rules - define multiple keys with double-tap actions
@@ -144,10 +155,15 @@ const rules: KarabinerRules[] = [
     // Double-tap Tab => Homerow trigger
     home: {
       key_code: "spacebar",
-      modifiers: ["right_command", "right_option", "right_shift", "right_control"],
+      modifiers: [
+        "right_command",
+        "right_option",
+        "right_shift",
+        "right_control",
+      ],
       description: "Trigger Homerow",
-      delayMs: 250
-    }
+      delayMs: 250,
+    },
     // Add more double-tap rules here as needed
   }),
 ];
@@ -164,7 +180,7 @@ fs.writeFileSync(
         {
           name: "Default",
           virtual_hid_keyboard: {
-            keyboard_type_v2: "ansi"
+            keyboard_type_v2: "ansi",
           },
           devices: [
             {
