@@ -14,18 +14,19 @@ set -gx EZA_CONFIG_DIR $HOME/.config/eza
 # cargo
 set -gx CARGO_TARGET_DIR /var/folders/88/3h9cyc4979d2l6p7xkn79yqr0000gn/T/cargo-installx9AWBr
 
-# Opan MAN pages in Neovim
+# Open MAN pages in Neovim
 set -gx MANPAGER "nvim +Man!"
 
-# Default Terminal use kitty, wezterm, ghostty, etc.
+# Default Terminal use kitty, warp, wezterm, ghostty, etc.
 set -gx TERMINAL kitty
 
 string match -q "$TERM_PROGRAM" nvim
 and . (nvim --locate-shell-integration-path fish)
 
-# Default Editor use code, nvim, etc.
+# Default Editor use zed, code, nvim, etc.
 # set -gx EDITOR code
-set -gx EDITOR nvim
+# set -gx EDITOR nvim
+set -gx EDITOR zed
 
 # Volumes
 set -gx VOL xxx
