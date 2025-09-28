@@ -3,6 +3,9 @@
 	{
 		"context": "Workspace",
 		"bindings": {
+			"cmd-k cmd-x": "zed::Extensions",
+			"cmd-k cmd-g": "git_panel::ToggleFocus",
+			"cmd-k cmd-e": "project_panel::ToggleFocus",
 			"ctrl-cmd-home": "git::Push"
 		}
 	},
@@ -16,6 +19,12 @@
 		}
 	},
 	// Git
+	{
+		"context": "GitPanel",
+		"bindings": {
+			"q": "git_panel::Close"
+		}
+	},
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
@@ -48,9 +57,7 @@
 			"ctrl-h": "workspace::ActivatePaneLeft",
 			"ctrl-l": "workspace::ActivatePaneRight",
 			"ctrl-k": "workspace::ActivatePaneUp",
-			"ctrl-j": "workspace::ActivatePaneDown",
-			"cmd-k cmd-x": "zed::Extensions",
-			"cmd-k cmd-g": "git_panel::ToggleFocus"
+			"ctrl-j": "workspace::ActivatePaneDown"
 		}
 	},
 ]
