@@ -1,0 +1,50 @@
+[
+	// Terminal
+	{
+		"context": "Terminal",
+		"bindings": {
+			"cmd-ctrl-=": "pane::CloseActiveItem",
+			"cmd-shift-d": "pane::SplitUp",
+			"cmd-d": "pane::SplitLeft"
+		}
+	},
+	// Git
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space f s": "workspace::Save",
+			"space f shift-s": "workspace::SaveAll",
+			"ctrl-cmd-home": "git::Push",
+			"space g g": [
+				"task::Spawn",
+				{
+					"task_name": "LazyGit",
+					"reveal_target": "center"
+				}
+			]
+		}
+	},
+	// Buffer navigation
+	{
+		"context": "vim_mode == normal || vim_mode == visual",
+		"bindings": {
+			"g h": "editor::MoveToBeginningOfLine",
+			"g l": "editor::MoveToEndOfLine",
+			"s": "vim::PushSneak",
+			"S": "vim::PushSneakBackward",
+		}
+	},
+	// Window's navigation
+	{
+		"context": "Dock || Terminal || Editor",
+		"bindings": {
+			// Window's motions
+			"ctrl-h": "workspace::ActivatePaneLeft",
+			"ctrl-l": "workspace::ActivatePaneRight",
+			"ctrl-k": "workspace::ActivatePaneUp",
+			"ctrl-j": "workspace::ActivatePaneDown",
+			"cmd-k cmd-x": "zed::Extensions",
+			"cmd-k cmd-g": "git_panel::ToggleFocus"
+		}
+	},
+]
