@@ -1,4 +1,11 @@
 [
+	// Workspace
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-cmd-home": "git::Push"
+		}
+	},
 	// Terminal
 	{
 		"context": "Terminal",
@@ -14,7 +21,6 @@
 		"bindings": {
 			"space f s": "workspace::Save",
 			"space f shift-s": "workspace::SaveAll",
-			"ctrl-cmd-home": "git::Push",
 			"space g g": [
 				"task::Spawn",
 				{
