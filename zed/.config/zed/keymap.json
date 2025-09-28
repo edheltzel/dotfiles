@@ -20,12 +20,6 @@
 	},
 	// Git
 	{
-		"context": "GitPanel",
-		"bindings": {
-			"q": "git_panel::Close"
-		}
-	},
-	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
 			"space f s": "workspace::Save",
