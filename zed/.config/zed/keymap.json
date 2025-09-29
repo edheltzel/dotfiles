@@ -6,7 +6,8 @@
 			"cmd-k cmd-x": "zed::Extensions",
 			"cmd-k cmd-g": "git_panel::ToggleFocus",
 			"cmd-k cmd-e": "project_panel::ToggleFocus",
-			"ctrl-cmd-home": "git::Push"
+			"ctrl-cmd-home": "git::Push",
+			"ctrl-alt-p": "workspace::ToggleZoom"
 		}
 	},
 	// Terminal
