@@ -24,6 +24,7 @@
 		"bindings": {
 			"space f s": "workspace::Save",
 			"space f shift-s": "workspace::SaveAll",
+			"space b b": "tab_switcher::Toggle",
 			"space g g": [
 				"task::Spawn",
 				{
