@@ -709,10 +709,6 @@
     "command": "projectManager.listProjectsNewWindow"
   },
   {
-    "key": "ctrl+cmd+r",
-    "command": "workbench.action.restartExtensionHost"
-  },
-  {
     "key": "ctrl+alt+cmd+i",
     "command": "editor.emmet.action.wrapWithAbbreviation"
   },
@@ -741,4 +737,16 @@
     "key": "ctrl+cmd+left",
     "command": "-workbench.action.moveEditorToPreviousGroup"
   },
+  {
+    "key": "cmd+escape",
+    "command": "claude-vscode.sidebar.open"
+  },
+  {
+    "key": "cmd+escape",
+    "command": "-claude-vscode.editor.open"
+  },
+  {
+    "key": "alt+cmd+p",
+    "command": "workbench.action.showAllEditors"
+  }
 ]

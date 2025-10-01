@@ -405,19 +405,34 @@
 	"vspacecode.bindingOverrides": [
 		{
 			"command": "workbench.action.quickOpen",
-			"icon": "file",
-			"keys": "o",
+			"icon": "robot",
+			"keys": "f.f",
 			"name": "Go To File...",
 			"position": 1,
 			"type": "command"
 		},
 		{
-			"command": "workbench.action.quickOpen",
-			"icon": "file",
-			"keys": "f.f",
-			"name": "Go To File...",
-			"position": 1,
-			"type": "command"
+			"keys": "a",
+			"name": "AI Agents...",
+			"type": "bindings",
+			"icon": "chat-sparkle",
+			"position": 2,
+			"bindings": [
+				{
+					"key": "c",
+					"name": "Claude Code",
+					"icon": "robot",
+					"type": "command",
+					"command": "claude-vscode.sidebar.open",
+				},
+				{
+					"key": "k",
+					"name": "Cline",
+					"icon": "robot",
+					"type": "command",
+					"command": "workbench.view.extension.claude-dev-ActivityBar",
+				}
+			]
 		},
 		{
 			"command": "workbench.action.showAllEditorsByMostRecentlyUsed",
@@ -487,10 +502,6 @@
 			"name": "Toggle Secondary Side Bar Visibility",
 			"position": 1,
 			"type": "command"
-		},
-		{
-			"keys": "f.t",
-			"position": "-1"
 		},
 		{
 			"command": "workbench.view.explorer",
