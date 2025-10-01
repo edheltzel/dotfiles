@@ -100,12 +100,12 @@ const rules: KarabinerRules[] = [
 		},
 		// Hyper + e (editor) shortcuts
 		e: {
-			//v: app("Visual Studio Code"), // set through Raycast hyper+c (c for code)
-			//y: app("Zed"), // set through Raycast hyper+r (r for write)
-			m: app("Typora"),
+			//y: app("Visual Studio Code"), // set through Raycast hyper+c (c for code)
+			//h: app("Zed"), // set through Raycast hyper+r (r for write)
 			k: app("kitty"), // Terminal - 1
 			l: app("Warp"), // Terminal - 2
 			j: app("WezTerm"), // Terminal - 3
+			m: app("Typora"),
 		},
 		// Hyper + w (web) shortcuts
 		w: {
