@@ -1,11 +1,6 @@
 # Ultra-minimal Fish config for maximum speed
 # Only load absolute essentials on startup
 
-# Essential variables and paths
-set -gx EDITOR nvim
-set -gx TERMINAL kitty
-set -gx WARP_THEME_DIR "$HOME/.warp/themes"
-
 # Essential paths
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
