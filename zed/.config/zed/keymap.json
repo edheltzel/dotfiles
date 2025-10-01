@@ -19,13 +19,24 @@
 			"cmd-d": "pane::SplitLeft"
 		}
 	},
-	// Git
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
 			"space f s": "workspace::Save",
 			"space f shift-s": "workspace::SaveAll",
-			"space b b": "tab_switcher::Toggle",
+			"space b b": "tab_switcher::ToggleAll",
+			"space b o": "pane::CloseAllItems",
+			"space b d": "pane::CloseActiveItem",
+			"space b h": "pane::SplitAndMoveRight",
+			"space b j": "pane::SplitAndMoveDown",
+			"space b k": "pane::SplitAndMoveUp",
+			"space b l": "pane::SplitAndMoveLeft"
+		}
+	},
+	// Git
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
 			"space g g": [
 				"task::Spawn",
 				{
@@ -42,7 +53,7 @@
 			"g h": "editor::MoveToBeginningOfLine",
 			"g l": "editor::MoveToEndOfLine",
 			"s": "vim::PushSneak",
-			"S": "vim::PushSneakBackward",
+			"S": "vim::PushSneakBackward"
 		}
 	},
 	// Window's navigation
@@ -56,16 +67,16 @@
 			"ctrl-j": "workspace::ActivatePaneDown"
 		}
 	},
- {
-   "context": "Workspace",
-   "bindings": {
-     "alt-cmd-b": "workspace::ToggleLeftDock"
-   }
- },
- {
-   "context": "Workspace",
-   "bindings": {
-     "cmd-b": "workspace::ToggleRightDock"
-   }
- }
+	{
+		"context": "Workspace",
+		"bindings": {
+			"alt-cmd-b": "workspace::ToggleLeftDock"
+		}
+	},
+	{
+		"context": "Workspace",
+		"bindings": {
+			"cmd-b": "workspace::ToggleRightDock"
+		}
+	}
 ]
