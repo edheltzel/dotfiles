@@ -1,19 +1,19 @@
 // cSpell: disable
 import * as fs from "fs";
 import {
-	KarabinerRules,
-	createHyperNavigationRule,
-	createMouseNavigationRules,
-	createHyperKeyRule,
-	createModifierTapRule,
-	createModifierTapRules,
+	BROWSER_BUNDLES,
 	createDoubleTapRule,
 	createDoubleTapRules,
+	createHyperKeyRule,
+	createHyperNavigationRule,
+	createModifierTapRule,
+	createModifierTapRules,
 	createMouseButtonRule,
+	createMouseNavigationRules,
+	type KarabinerRules,
 	MouseButtonAction,
-	BROWSER_BUNDLES,
 } from "./types";
-import { createHyperSubLayers, app, open, shell } from "./utils";
+import { app, createHyperSubLayers, open, shell } from "./utils";
 
 // Array of Karabiner configuration rules
 const rules: KarabinerRules[] = [
@@ -92,10 +92,20 @@ const rules: KarabinerRules[] = [
 			b: app("BambuStudio"),
 			e: app("ElegooSlicer"),
 			o: app("OrcaSlicer"),
+			r: app("Reminders"),
 			s: app("Shapr3D"),
 			x: app("xTool Creative Space"),
 			l: app("Toggl Track"),
 			n: app("Invoice Ninja"),
+		},
+		// Hyper + e (editor) shortcuts
+		e: {
+			//v: app("Visual Studio Code"), // set through Raycast hyper+c (c for code)
+			//y: app("Zed"), // set through Raycast hyper+r (r for write)
+			m: app("Typora"),
+			k: app("kitty"), // Terminal - 1
+			l: app("Warp"), // Terminal - 2
+			j: app("WezTerm"), // Terminal - 3
 		},
 		// Hyper + w (web) shortcuts
 		w: {
@@ -106,11 +116,6 @@ const rules: KarabinerRules[] = [
 			s: app("Safari"),
 			v: app("Vivaldi"),
 			y: app("Zen"),
-			k: app("kitty"), // Terminal - 1
-			t: app("Warp"), // Terminal - 2
-			r: app("WezTerm"), // Terminal - 3
-			// e: app("Visual Studio Code"), // hyper+c set through Raycast
-			// z: app("Zed"), // hyper+z set through Raycast
 		},
 		// Hyper + d (directory) shortcuts
 		d: {

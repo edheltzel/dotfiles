@@ -1030,6 +1030,33 @@
               {
                 "to": [
                   {
+                    "shell_command": "open -a 'Reminders.app'"
+                  }
+                ],
+                "description": "Open -a 'Reminders.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open -a 'Shapr3D.app'"
                   }
                 ],
@@ -1131,6 +1158,161 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key sublayer \"e\"",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_e",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "in_sublayer",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_e",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "in_sublayer",
+                      "value": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Typora.app'"
+                  }
+                ],
+                "description": "Open -a 'Typora.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_e",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'kitty.app'"
+                  }
+                ],
+                "description": "Open -a 'kitty.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_e",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Warp.app'"
+                  }
+                ],
+                "description": "Open -a 'Warp.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_e",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'WezTerm.app'"
+                  }
+                ],
+                "description": "Open -a 'WezTerm.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_e",
                     "value": 1
                   }
                 ]
@@ -1353,115 +1535,7 @@
                 "description": "Open -a 'Zen.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "z",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'kitty.app'"
-                  }
-                ],
-                "description": "Open -a 'kitty.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Warp.app'"
-                  }
-                ],
-                "description": "Open -a 'Warp.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "t",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'WezTerm.app'"
-                  }
-                ],
-                "description": "Open -a 'WezTerm.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "r",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Zed.app'"
-                  }
-                ],
-                "description": "Open -a 'Zed.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "e",
+                  "key_code": "y",
                   "modifiers": {
                     "mandatory": [
                       "right_control",

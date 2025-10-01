@@ -56,4 +56,16 @@
 			"ctrl-j": "workspace::ActivatePaneDown"
 		}
 	},
+ {
+   "context": "Workspace",
+   "bindings": {
+     "alt-cmd-b": "workspace::ToggleLeftDock"
+   }
+ },
+ {
+   "context": "Workspace",
+   "bindings": {
+     "cmd-b": "workspace::ToggleRightDock"
+   }
+ }
 ]
