@@ -746,7 +746,7 @@
     "command": "-claude-vscode.editor.open"
   },
   {
-    "key": "alt+cmd+p",
+    "key": "ctrl+alt+p",
     "command": "workbench.action.showAllEditors"
   }
 ]
