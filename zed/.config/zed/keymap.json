@@ -53,7 +53,8 @@
 			"g h": "editor::MoveToBeginningOfLine",
 			"g l": "editor::MoveToEndOfLine",
 			"s": "vim::PushSneak",
-			"S": "vim::PushSneakBackward"
+			"S": "vim::PushSneakBackward",
+			"cmd-shift-d": "editor::DuplicateLineDown"
 		}
 	},
 	// Window's navigation
