@@ -1,4 +1,4 @@
-#Usq##############################################################
+# Usq##############################################################
 # cspell: disable
 # ~/.Brewfile - Software Installs for MacOS                   #
 #                                                             #
@@ -20,13 +20,13 @@
 cask_args appdir: '/Applications', require_sha: true
 
 # Taps
-tap 'buo/cask-upgrade' 					# Upgrade casks
+tap 'buo/cask-upgrade'	# Upgrade casks
 tap 'eddieantonio/eddieantonio' # Eddie Antonio's Homebrew Tap
-tap 'github/gh'									# Interact with GitHub PRs, issues, repos
+tap 'github/gh'	# Interact with GitHub PRs, issues, repos
 tap 'kyoh86/tap' 								# for 'sd' - RegEx find and replace (better sed) - Rust
 tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
-tap 'sass/sass' 								# Sass
-tap 'teamookla/speedtest'   		# Command line speed test utility
+tap 'sass/sass'	# Sass
+tap 'teamookla/speedtest'	# Command line speed test utility
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
 tap 'FelixKratz/formulae'       # A tap for Janky Borders see brew borders
 
@@ -35,7 +35,7 @@ tap 'FelixKratz/formulae'       # A tap for Janky Borders see brew borders
 #############################################################
 brew 'fish'                                 # My Default Shell
 brew 'starship'                             # Cross-shell prompt - Rust
-#brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
+# brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
 
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
@@ -74,8 +74,8 @@ brew 'ripgrep'              # Searching within files (better grep) - Rust
 brew 'rsync'                # Fast incremental file transfer
 brew 'sd'                   # RegEx find and replace (better sed) - Rust
 brew 'sevenzip'             # 7-Zip file archiver
-brew 'xenso'                  # Terminal CSV Processing - Rust
-brew 'zoxide'               # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
+brew 'xenso' # Terminal CSV Processing - Rust
+brew 'zoxide' # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
 # CLI Image Processing and Compression
 brew 'ffmpegthumbnailer'    # Create thumbnails from videos
@@ -102,11 +102,11 @@ brew 'kondo'        # Clean up old files and directories - Rust
 brew 'portal'       # file transfer utility - Go
 
 # CLI Development Suits
-brew 'lazydocker'   # Full Docker management app - Go
-brew 'lazygit'        # TUI for git - Go
+brew 'lazydocker' # Full Docker management app - Go
+brew 'lazygit' # TUI for git - Go
 
 # CLI Docs and Cheatsheets
-brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
+brew 'tealdeer' # Read cheat sheets (better tldr) - Rust
 
 # CLI Misc
 brew 'figlet'        # Output text as big ASCII art text
@@ -115,7 +115,7 @@ brew 'fortune'       # Print a random, hopefully interesting, adage
 brew 'cowsay'        # Print a cow with a message
 
 #############################################################
-#C/Phyton 2. Software / Web Development                             #
+# C/Phyton 2. Software / Web Development                             #
 #############################################################
 
 # Development Langs, Compilers, Package Managers and SDKs
@@ -228,7 +228,7 @@ cask 'shottr'               # Screenshot and recorder app
 cask 'obs'                  # Screen recorder
 cask 'capcut'               # Video Editing
 # Communication and Chat
-cask 'discord'              # Chat app
+cask 'discord' # Chat app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
@@ -237,34 +237,34 @@ cask 'ledger-live'          # Crypto hardware wallet manager
 cask 'brainfm'              # BrainFM - Music streaming
 
 # Utility Applications
-cask 'displaylink'               # DisplayLink drivers
-brew 'm-cli'                     # All in one MacOS management CLI app: m help
-cask 'onyx'                      # System maintenance
-cask 'transnomino'               # A batch rename utility
-brew 'shortcat'                  # vim motions for MacOS
-cask 'mouseless'                 # Mouseless app for MacOS
-cask 'openinterminal'            # Finder button, opens directory in terminal
-cask 'itsycal'                   # Calendar in menubar
-brew 'stats'                     # System stats in menubar
-cask 'raycast', args: { require_sha: false }  # Spotlight/Alfred alternative
+brew 'm-cli'                       # All in one MacOS management CLI app: m help
+cask 'displaylink'                 # DisplayLink drivers
+cask 'onyx'                        # System maintenance
+cask 'transnomino'                 # A batch rename utility
+brew 'shortcat'                    # vim motions for MacOS
+cask 'mouseless'                   # Mouseless app for MacOS
+cask 'openinterminal'              # Finder button, opens directory in terminal
+cask 'itsycal'                     # Calendar in menubar
+# brew 'stats'                     # System stats in menubar
+cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 # cask 'typinator'                 # Text expander - macOS only
-cask 'keka'                      # File archiver and extractor
-cask 'homerow'                   # keyboaard shortcuts for every button in macOS
-cask 'kindavim'                  # Vim motions everywhere
+cask 'keka'                        # File archiver and extractor
+cask 'homerow'                     # keyboaard shortcuts for every button in macOS
+# cask 'kindavim'                  # Vim motions everywhere
 
 # Keyboard+Mouse Hacks
-brew 'qmk/qmk/qmk'               # Keyboard firmware
-cask 'via'                       # Keyboard configuration desktop client
-cask 'vial'                      # Keyboard configuration desktop client
-cask 'karabiner-elements'        # Keyboard customization tool
+brew 'qmk/qmk/qmk'                 # Keyboard firmware
+cask 'via'                         # Keyboard configuration desktop client
+cask 'vial'                        # Keyboard configuration desktop client
+cask 'karabiner-elements'          # Keyboard customization tool
 
 # Menu Bar Hacks
-# brew 'sketchybar'                # status bar replacement for MacOS - paired with Aerospace
-brew 'jordanbaird-ice'            # Ice bar - Using Sketchybar currently
+# brew 'sketchybar'                 # status bar replacement for MacOS - paired with Aerospace
+# brew 'jordanbaird-ice'            # Ice bar - Using Sketchybar currently
+cask 'bartender'                    # Menu bar replacement for MacOS
 
-# Window Management & Tiling
 cask 'alt-tab'                      # A Windows like alt-tab
-
+# Window Management & Tiling
 cask 'nikitabobko/tap/aerospace'    # Window Management
 brew 'borders'                      # A window borders manager
 
@@ -316,7 +316,7 @@ brew 'charmbracelet/tap/crush'
 brew 'gemini-cli'
 
 # Terminal emulators
-cask 'warp'                           # Rust 
+cask 'warp'                           # Rust
 cask 'ghostty'                        # Zig
 cask 'kitty'                          # Python+C
 cask 'wezterm'                        # Rust
@@ -337,15 +337,15 @@ cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac App Store Installs
-mas 'Shapr3d', id: 1091675654
-mas 'ColorSlurp', id: 1287239339
-mas 'Amphetamine', id: 937984704
-mas 'Icon Slate', id: 439697913
-mas 'Invoice Ninja V5', id: 1503970375
-mas 'Just Focus', id: 1142151959
-mas 'Gifski', id: 1351639930
-mas 'Qi FM', id: 147969619
-mas 'ColorNoise', id: 1640045375
-mas 'Todoist: To-Do List & Tasks', id: 585829637
-mas 'Toggl Track: Hours & Time Log', id: 1291898086
-#mas 'Xcode', id: 497799835
+mas 'Shapr3d', id: 1_091_675_654
+mas 'ColorSlurp', id: 1_287_239_339
+mas 'Amphetamine', id: 937_984_704
+mas 'Icon Slate', id: 439_697_913
+mas 'Invoice Ninja V5', id: 1_503_970_375
+mas 'Just Focus', id: 1_142_151_959
+mas 'Gifski', id: 1_351_639_930
+mas 'Qi FM', id: 147_969_619
+mas 'ColorNoise', id: 1_640_045_375
+mas 'Todoist: To-Do List & Tasks', id: 585_829_637
+mas 'Toggl Track: Hours & Time Log', id: 1_291_898_086
+# mas 'Xcode', id: 497799835
