@@ -7,7 +7,17 @@
 			"cmd-k cmd-g": "git_panel::ToggleFocus",
 			"cmd-k cmd-e": "project_panel::ToggleFocus",
 			"ctrl-cmd-home": "git::Push",
-			"ctrl-alt-p": "workspace::ToggleZoom"
+			"ctrl-alt-p": "workspace::ToggleZoom",
+			"alt-home": "project_panel::CollapseAllEntries",
+			"alt-cmd-b": "workspace::ToggleLeftDock",
+			"cmd-b": "workspace::ToggleRightDock",
+		}
+	},
+	//Project Panel
+	{
+		"context": "ProjectPanel",
+		"bindings": {
+			"r": "project_panel::Rename"
 		}
 	},
 	// Terminal
@@ -17,20 +27,6 @@
 			"cmd-ctrl-=": "pane::CloseActiveItem",
 			"cmd-shift-d": "pane::SplitUp",
 			"cmd-d": "pane::SplitLeft"
-		}
-	},
-	{
-		"context": "Editor && VimControl && !VimWaiting && !menu",
-		"bindings": {
-			"space f s": "workspace::Save",
-			"space f shift-s": "workspace::SaveAll",
-			"space b b": "tab_switcher::ToggleAll",
-			"space b o": "pane::CloseAllItems",
-			"space b d": "pane::CloseActiveItem",
-			"space b h": "pane::SplitAndMoveRight",
-			"space b j": "pane::SplitAndMoveDown",
-			"space b k": "pane::SplitAndMoveUp",
-			"space b l": "pane::SplitAndMoveLeft"
 		}
 	},
 	// Git
@@ -46,6 +42,21 @@
 			]
 		}
 	},
+	// Editor + Vim
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space f s": "workspace::Save",
+			"space f shift-s": "workspace::SaveAll",
+			"space b b": "tab_switcher::ToggleAll",
+			"space b o": "pane::CloseAllItems",
+			"space b d": "pane::CloseActiveItem",
+			"space b h": "pane::SplitAndMoveRight",
+			"space b j": "pane::SplitAndMoveDown",
+			"space b k": "pane::SplitAndMoveUp",
+			"space b l": "pane::SplitAndMoveLeft",
+		}
+	},
 	// Buffer navigation
 	{
 		"context": "vim_mode == normal || vim_mode == visual",
@@ -57,27 +68,14 @@
 			"cmd-shift-d": "editor::DuplicateLineDown"
 		}
 	},
-	// Window's navigation
+	// Window navigation
 	{
 		"context": "Dock || Terminal || Editor",
 		"bindings": {
-			// Window's motions
 			"ctrl-h": "workspace::ActivatePaneLeft",
 			"ctrl-l": "workspace::ActivatePaneRight",
 			"ctrl-k": "workspace::ActivatePaneUp",
 			"ctrl-j": "workspace::ActivatePaneDown"
-		}
-	},
-	{
-		"context": "Workspace",
-		"bindings": {
-			"alt-cmd-b": "workspace::ToggleLeftDock"
-		}
-	},
-	{
-		"context": "Workspace",
-		"bindings": {
-			"cmd-b": "workspace::ToggleRightDock"
 		}
 	}
 ]
