@@ -10,8 +10,8 @@
 # @raycast.packageName Developer Utils
 
 # Documentation:
-# @raycast.description Open Dotfiles in a new VSCdoe window
+# @raycast.description Open Dotfiles in a new Zed window
 # @raycast.author edheltzel
 # @raycast.authorURL https://raycast.com/edheltzel
 
-code -n ~/.dotfiles
+zed -n ~/.dotfiles
