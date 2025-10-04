@@ -705,7 +705,7 @@
     "when": "editorFocus"
   },
   {
-    "key": "alt+cmd+n",
+    "key": "alt+cmd+o",
     "command": "projectManager.listProjectsNewWindow"
   },
   {
