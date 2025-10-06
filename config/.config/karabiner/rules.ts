@@ -79,6 +79,15 @@ const rules: KarabinerRules[] = [
 			p: open("raycast://extensions/jomifepe/bitwarden/search"), // M7
 			o: open("raycast://extensions/jomifepe/bitwarden/authenticator"), // M8
 		},
+		// Hyper + left_alt shortcuts
+		left_alt: {
+			// v: app("Visual Studio Code"), // hyper+c (c for code) via Raycast
+			// z: app("Zed"), // hyper+e (e for editor) via Raycast
+			k: app("kitty"), // primary
+			w: app("Warp"), // secondary
+			t: app("WezTerm"), // tertiary
+			m: app("Typora"), //markdown editor
+		},
 		// Hyper + a (app) shortcuts
 		a: {
 			0: app("Passwords"),
@@ -97,15 +106,6 @@ const rules: KarabinerRules[] = [
 			x: app("xTool Creative Space"),
 			l: app("Toggl Track"),
 			n: app("Invoice Ninja"),
-		},
-		// Hyper + e (editor) shortcuts
-		e: {
-			//y: app("Visual Studio Code"), // set through Raycast hyper+c (c for code)
-			//h: app("Zed"), // set through Raycast hyper+r (r for write)
-			k: app("kitty"), // Terminal - 1
-			l: app("Warp"), // Terminal - 2
-			j: app("WezTerm"), // Terminal - 3
-			m: app("Typora"),
 		},
 		// Hyper + w (web) shortcuts
 		w: {
@@ -158,7 +158,7 @@ const rules: KarabinerRules[] = [
 	}),
 	// Double-tap rules - define multiple keys with double-tap actions
 	...createDoubleTapRules({
-		// Double-tap Tab => Homerow trigger
+		// Double-tap Tab => triggers Homerow app
 		home: {
 			key_code: "spacebar",
 			modifiers: [

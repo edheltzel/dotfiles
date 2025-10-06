@@ -476,10 +476,10 @@ export function createDoubleTapRules(
 
 export type KeyCode =
   | "caps_lock"
+  | "left_command"
   | "left_control"
   | "left_shift"
   | "left_option"
-  | "left_command"
   | "right_control"
   | "right_shift"
   | "right_option"
