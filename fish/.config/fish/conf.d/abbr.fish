@@ -13,12 +13,14 @@ if status is-interactive
     # Editors & Terminals
     abbr --add ee 'e -r .'
     abbr --add en 'e -n .'
+    abbr --add vim nvim
+    abbr --add wez wezterm
+    abbr --add kit kitten
     abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
-    abbr --add vim nvim
-    abbr --add wez wezterm
-    abbr --add ccu 'bunx ccusage'
+    abbr --add ze zed
+    abbr --add zz 'zed -n .'
 
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
@@ -66,6 +68,7 @@ if status is-interactive
     abbr --add unzip ouch decompress
     abbr --add lzip ouch list
     # AI Agents + Models
+    abbr --add ccu 'bunx ccusage'
     abbr --add cc claude
     abbr --add tm task-master
     abbr --add cr crush

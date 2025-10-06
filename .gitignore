@@ -47,3 +47,6 @@ private/ssh/
 .gitsecret/keys/random_seed
 !*.secret
 
+
+.gemini/
+gha-creds-*.json
