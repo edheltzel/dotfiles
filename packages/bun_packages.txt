@@ -9,6 +9,7 @@ easy-sharing
 intelephense
 lighthouse
 neovim
+task-master-ai
 typescript
 typescript-language-server
 wrangler

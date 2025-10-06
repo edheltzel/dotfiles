@@ -26,7 +26,6 @@ if status is-interactive
     abbr --add wp '~/.wallpapers/'
     abbr --add wall '~/.wallpapers/'
     abbr --add lg lazygit
-    abbr --add gg lazygit
     abbr --add dls '~/Downloads/'
     abbr --add eva 'eval ssh-agent -s; and ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
     abbr --add gems 'gem list'
@@ -66,4 +65,11 @@ if status is-interactive
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress
     abbr --add lzip ouch list
-end
+    # AI Agents + Models
+    abbr --add cc claude
+    abbr --add tm task-master
+    abbr --add cr crush
+    abbr --add gg gemini
+    abbr --add ol ollama
+    abbr --add llm 'cd ~/.ollama/models'
+  end

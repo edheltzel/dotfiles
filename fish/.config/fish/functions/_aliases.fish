@@ -1,7 +1,3 @@
-## AI ##
-alias cc claude # Claude Code
-alias kk claude # Claude Code
-
 # Colorize grep output (good for log files) - #cspell:disable
 alias grep 'grep --color=auto'
 alias egrep 'egrep --color=auto'
@@ -45,15 +41,10 @@ alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
-alias llm 'cd ~/.ollama/models'
-alias ol ollama
-
-# Open dotfiles repo in current Default Editor (ie. Neovim/VSCode)
-alias cuts 'eval $EDITOR ~/.dotfiles'
-alias edd 'eval $EDITOR  ~/.dotfiles'
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
+alias cuts 'eval $EDITOR ~/.dotfiles'
 alias o open
 alias oo 'open .'
 alias oa 'open -a'
