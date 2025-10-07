@@ -10,7 +10,7 @@
 			"ctrl-alt-p": "workspace::ToggleZoom",
 			"alt-home": "project_panel::CollapseAllEntries",
 			"alt-cmd-b": "workspace::ToggleLeftDock",
-			"cmd-b": "workspace::ToggleRightDock",
+			"cmd-b": "workspace::ToggleRightDock"
 		}
 	},
 	//Project Panel

@@ -1,7 +1,6 @@
 @antfu/ni
 @anthropic-ai/claude-code
 @bitwarden/cli
-@charmland/crush
 @google/gemini-cli
 @vscode/vsce
 cspell

@@ -25,6 +25,7 @@ if status is-interactive
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
+    abbr --add lh 'lighthouse --output=html --output-path ~/Developer/Lighthouse-Audits/ https://'
     abbr --add wp '~/.wallpapers/'
     abbr --add wall '~/.wallpapers/'
     abbr --add lg lazygit
@@ -71,7 +72,6 @@ if status is-interactive
     abbr --add ccu 'bunx ccusage'
     abbr --add cc claude
     abbr --add tm task-master
-    abbr --add cr crush
     abbr --add gg gemini
     abbr --add ol ollama
     abbr --add llm 'cd ~/.ollama/models'

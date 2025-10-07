@@ -311,8 +311,7 @@ cask 'chatgpt'                        # AI chat
 cask 'claude'                         # AI chat
 cask 'block-goose'                    # On Machine AI Agent
 
-brew 'opencode-ai/tap/opencode'       # Opensource equivalent of Claude Code
-brew 'charmbracelet/tap/crush'
+brew 'opencode'       # Opensource equivalent of Claude Code
 brew 'gemini-cli'
 
 # Terminal emulators
