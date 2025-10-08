@@ -1,4 +1,4 @@
-# commented out on prupose
+# commented out on purpose
 # # fnm
 # set PATH "/Users/ed/Library/Application Support/fnm" $PATH
 
