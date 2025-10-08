@@ -10,6 +10,7 @@ if status is-interactive
     abbr --add cw center_window
     abbr --add cat 'bat -pp'
     # abbr --add cls '$DROPBOX/Clients'
+    
     # Editors & Terminals
     abbr --add ee 'e -r .'
     abbr --add en 'e -n .'
@@ -27,7 +28,6 @@ if status is-interactive
     abbr --add local '~/.local/'
     abbr --add lh 'lighthouse --output=html --output-path ~/Developer/Lighthouse-Audits/ https://'
     abbr --add wp '~/.wallpapers/'
-    abbr --add wall '~/.wallpapers/'
     abbr --add lg lazygit
     abbr --add dls '~/Downloads/'
     abbr --add eva 'eval ssh-agent -s; and ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
@@ -71,6 +71,8 @@ if status is-interactive
     # AI Agents + Models
     abbr --add ccu 'bunx ccusage'
     abbr --add cc claude
+    abbr --add oc opencode
+    abbr --add osp openspec
     abbr --add tm task-master
     abbr --add gg gemini
     abbr --add ol ollama

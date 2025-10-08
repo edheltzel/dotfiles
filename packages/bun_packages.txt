@@ -3,6 +3,7 @@
 @bitwarden/cli
 @google/gemini-cli
 @vscode/vsce
+@fission-ai/openspec@latest
 opencode-ai
 cspell
 easy-sharing
