@@ -251,6 +251,7 @@ cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archiver and extractor
 cask 'homerow'                     # keyboaard shortcuts for every button in macOS
 # cask 'kindavim'                  # Vim motions everywhere
+cask 'superwhisper' # AI dictation app
 
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
@@ -311,7 +312,7 @@ cask 'chatgpt'                        # AI chat
 cask 'claude'                         # AI chat
 cask 'block-goose'                    # On Machine AI Agent
 
-brew 'opencode'       # Opensource equivalent of Claude Code
+brew 'opencode' # Opensource equivalent of Claude Code
 brew 'gemini-cli'
 
 # Terminal emulators
