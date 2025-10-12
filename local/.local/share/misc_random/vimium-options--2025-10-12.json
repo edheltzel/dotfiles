@@ -29,6 +29,14 @@
     {
       "passKeys": "",
       "pattern": "https://github.dev/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://kittl.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://www.canva.com/*"
     }
   ]
 }
