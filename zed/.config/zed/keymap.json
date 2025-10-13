@@ -42,6 +42,18 @@
 			]
 		}
 	},
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space d d": [
+				"task::Spawn",
+				{
+					"task_name": "Droid",
+					"reveal_target": "center"
+				}
+			]
+		}
+	},
 	// Editor + Vim
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
