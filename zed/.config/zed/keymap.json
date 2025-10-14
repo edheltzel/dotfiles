@@ -13,9 +13,34 @@
 			"cmd-b": "workspace::ToggleRightDock"
 		}
 	},
+	// Tab Navigation - Macos
+	{
+		"context": "Workspace",
+		"bindings": {
+			"cmd-1": ["pane::ActivateItem", 0],
+			"cmd-2": ["pane::ActivateItem", 1],
+			"cmd-3": ["pane::ActivateItem", 2],
+			"cmd-4": ["pane::ActivateItem", 3],
+			"cmd-5": ["pane::ActivateItem", 4],
+			"cmd-6": ["pane::ActivateItem", 5],
+			"cmd-7": ["pane::ActivateItem", 6],
+			"cmd-8": ["pane::ActivateItem", 7],
+			"cmd-9": ["pane::ActivateItem", 8]
+		}
+	},
+	// Window navigation
+	{
+		"context": "Dock || Terminal || Editor",
+		"bindings": {
+			"ctrl-h": "workspace::ActivatePaneLeft",
+			"ctrl-l": "workspace::ActivatePaneRight",
+			"ctrl-k": "workspace::ActivatePaneUp",
+			"ctrl-j": "workspace::ActivatePaneDown"
+		}
+	},
 	//Project Panel
 	{
-		"context": "ProjectPanel",
+		"context": "ProjectPanel && !editing",
 		"bindings": {
 			"r": "project_panel::Rename"
 		}
@@ -45,10 +70,22 @@
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
-			"space d d": [
+			"space g d": [
 				"task::Spawn",
 				{
 					"task_name": "Droid",
+					"reveal_target": "center"
+				}
+			]
+		}
+	},
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space g c": [
+				"task::Spawn",
+				{
+					"task_name": "Claude Code",
 					"reveal_target": "center"
 				}
 			]
@@ -63,13 +100,13 @@
 			"space b b": "tab_switcher::ToggleAll",
 			"space b o": "pane::CloseAllItems",
 			"space b d": "pane::CloseActiveItem",
-			"space b h": "pane::SplitAndMoveRight",
+			"space b h": "pane::SplitAndMoveLeft",
 			"space b j": "pane::SplitAndMoveDown",
 			"space b k": "pane::SplitAndMoveUp",
-			"space b l": "pane::SplitAndMoveLeft",
+			"space b l": "pane::SplitAndMoveRight"
 		}
 	},
-	// Buffer navigation
+	// Vim Buffer Navigation
 	{
 		"context": "vim_mode == normal || vim_mode == visual",
 		"bindings": {
@@ -78,16 +115,6 @@
 			"s": "vim::PushSneak",
 			"S": "vim::PushSneakBackward",
 			"cmd-shift-d": "editor::DuplicateLineDown"
-		}
-	},
-	// Window navigation
-	{
-		"context": "Dock || Terminal || Editor",
-		"bindings": {
-			"ctrl-h": "workspace::ActivatePaneLeft",
-			"ctrl-l": "workspace::ActivatePaneRight",
-			"ctrl-k": "workspace::ActivatePaneUp",
-			"ctrl-j": "workspace::ActivatePaneDown"
 		}
 	}
 ]
