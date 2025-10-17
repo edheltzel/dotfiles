@@ -130,8 +130,11 @@ const rules: KarabinerRules[] = [
 			j: open(
 				"'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
 			),
-			c: open("~/Developer/"),
-			s: open("~/Sites/"),
+			k: open("~/Developer/"),
+			l: open("~/Sites/"),
+			semicolon: open(
+				"'/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
+			),
 		},
 		// Hyper + m (Microsoft) shortcuts
 		m: {

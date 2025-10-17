@@ -116,5 +116,11 @@
 			"S": "vim::PushSneakBackward",
 			"cmd-shift-d": "editor::DuplicateLineDown"
 		}
-	}
+	},
+ {
+   "context": "Workspace",
+   "bindings": {
+     "alt-`": "workspace::NewCenterTerminal"
+   }
+ }
 ]

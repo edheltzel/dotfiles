@@ -1798,7 +1798,7 @@
                 "description": "Open ~/Developer/",
                 "type": "basic",
                 "from": {
-                  "key_code": "c",
+                  "key_code": "k",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1825,7 +1825,34 @@
                 "description": "Open ~/Sites/",
                 "type": "basic",
                 "from": {
-                  "key_code": "s",
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_d",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open '/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'"
+                  }
+                ],
+                "description": "Open '/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
+                "type": "basic",
+                "from": {
+                  "key_code": "semicolon",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
