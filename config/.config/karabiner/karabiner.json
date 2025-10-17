@@ -2053,31 +2053,6 @@
             ]
           },
           {
-            "description": "Trigger Raycast",
-            "manipulators": [
-              {
-                "description": "right_control => spacebar + right_command",
-                "from": {
-                  "key_code": "right_control"
-                },
-                "to": [
-                  {
-                    "key_code": "right_control"
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": [
-                      "right_command"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
             "description": "Trigger Homerow",
             "manipulators": [
               {
@@ -2104,6 +2079,41 @@
                         "right_option",
                         "right_shift",
                         "right_control"
+                      ]
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 250
+                },
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Trigger VoiceInk",
+            "manipulators": [
+              {
+                "description": "Double Tap right_control => f7 + right_command",
+                "from": {
+                  "key_code": "right_control",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "key_code": "right_control"
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "key_code": "f7",
+                      "modifiers": [
+                        "right_command"
                       ]
                     }
                   ]

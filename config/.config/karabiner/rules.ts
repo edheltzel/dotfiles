@@ -152,14 +152,14 @@ const rules: KarabinerRules[] = [
 			modifiers: ["right_alt"],
 			description: "Delete Last Word",
 		},
-		right_control: {
-			key_code: "spacebar",
-			modifiers: ["right_command"],
-			description: "Trigger Raycast",
-		},
+		// right_control: {
+		// 	key_code: "spacebar",
+		// 	modifiers: ["right_command"],
+		// 	description: "Trigger Raycast",
+		//  },
 		// Add more modifier tap rules here as needed
 	}),
-	// Double-tap rules - define multiple keys with double-tap actions
+	//  Double-tap rules - define multiple keys with double-tap actions
 	...createDoubleTapRules({
 		// Double-tap Tab => triggers Homerow app
 		home: {
@@ -171,6 +171,14 @@ const rules: KarabinerRules[] = [
 				"right_control",
 			],
 			description: "Trigger Homerow",
+			delayMs: 250,
+		},
+		right_control: {
+			key_code: "f7",
+			modifiers: [
+				"right_command",
+			],
+			description: "Trigger VoiceInk",
 			delayMs: 250,
 		},
 		// Add more double-tap rules here as needed
