@@ -551,10 +551,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://script-commands/run-topgrade"
+                    "shell_command": "open 'raycast://script-commands/run-topgrade'"
                   }
                 ],
-                "description": "Open raycast://script-commands/run-topgrade",
+                "description": "Open 'raycast://script-commands/run-topgrade'",
                 "type": "basic",
                 "from": {
                   "key_code": "t",
@@ -578,10 +578,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://script-commands/edit-dotfiles"
+                    "shell_command": "open 'raycast://script-commands/edit-dotfiles'"
                   }
                 ],
-                "description": "Open raycast://script-commands/edit-dotfiles",
+                "description": "Open 'raycast://script-commands/edit-dotfiles'",
                 "type": "basic",
                 "from": {
                   "key_code": "d",
@@ -632,10 +632,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/jomifepe/bitwarden/search"
+                    "shell_command": "open 'raycast://extensions/jomifepe/bitwarden/search'"
                   }
                 ],
-                "description": "Open raycast://extensions/jomifepe/bitwarden/search",
+                "description": "Open 'raycast://extensions/jomifepe/bitwarden/search'",
                 "type": "basic",
                 "from": {
                   "key_code": "p",
@@ -659,10 +659,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/jomifepe/bitwarden/authenticator"
+                    "shell_command": "open 'raycast://extensions/jomifepe/bitwarden/authenticator'"
                   }
                 ],
-                "description": "Open raycast://extensions/jomifepe/bitwarden/authenticator",
+                "description": "Open 'raycast://extensions/jomifepe/bitwarden/authenticator'",
                 "type": "basic",
                 "from": {
                   "key_code": "o",
@@ -2053,10 +2053,10 @@
             ]
           },
           {
-            "description": "Trigger Homerow",
+            "description": "Trigger VoiceInk",
             "manipulators": [
               {
-                "description": "Double Tap home => spacebar + right_command+right_option+right_shift+right_control",
+                "description": "Double Tap home => f9 + right_command",
                 "from": {
                   "key_code": "home",
                   "modifiers": {
@@ -2073,45 +2073,7 @@
                   ],
                   "to_if_canceled": [
                     {
-                      "key_code": "spacebar",
-                      "modifiers": [
-                        "right_command",
-                        "right_option",
-                        "right_shift",
-                        "right_control"
-                      ]
-                    }
-                  ]
-                },
-                "parameters": {
-                  "basic.to_delayed_action_delay_milliseconds": 250
-                },
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Trigger VoiceInk",
-            "manipulators": [
-              {
-                "description": "Double Tap right_control => f7 + right_command",
-                "from": {
-                  "key_code": "right_control",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to_delayed_action": {
-                  "to_if_invoked": [
-                    {
-                      "key_code": "right_control"
-                    }
-                  ],
-                  "to_if_canceled": [
-                    {
-                      "key_code": "f7",
+                      "key_code": "f9",
                       "modifiers": [
                         "right_command"
                       ]
