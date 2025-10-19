@@ -79,7 +79,7 @@ map("n", "mm", "gcc", { desc = "Toggle comment", remap = true })
 map("v", "mm", "gc", { desc = "Toggle comment", remap = true })
 
 -- Terminal
-map("n", "tt", function()
+map("n", "<leader>tt", function()
   local height = math.floor(vim.o.lines / 2)
   cmd("belowright split | resize " .. height .. " | terminal")
 end, { noremap = true, silent = true })
