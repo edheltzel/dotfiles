@@ -140,7 +140,7 @@
 	"workbench.preferredDarkColorTheme": "Eldritch",
 	"workbench.preferredLightColorTheme": "Catppuccin Latte",
 	"window.autoDetectColorScheme": false,
-	"workbench.colorTheme": "Eldritch",
+	"workbench.colorTheme": "Rosé Pine",
 	"workbench.colorCustomizations": {
 		"[Eldritch]": {
 			"cursorColumnColor": "#37f49910",
@@ -154,6 +154,10 @@
 			"sideBar.foreground": "#6c6f85",
 			"editorIndentGuide.activeBackground1": "#4c4f69"
 		},
+		"[Rosé Pine]": {
+			"editorCursor.foreground": "#ea9a97",
+			"editor.selectionBackground": "#ea9a972d",
+		}
 	},
 	"workbench.editor.pinnedTabSizing": "shrink",
 	"workbench.editor.showIcons": false,
