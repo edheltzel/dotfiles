@@ -138,7 +138,7 @@
 	"editor.wordWrapColumn": 100,
 	"workbench.activityBar.location": "bottom",
 	"workbench.preferredDarkColorTheme": "Eldritch",
-	"workbench.preferredLightColorTheme": "Catppuccin Latte",
+	"workbench.preferredLightColorTheme": "Rosé Pine Dawn",
 	"window.autoDetectColorScheme": false,
 	"workbench.colorTheme": "Rosé Pine",
 	"workbench.colorCustomizations": {
@@ -149,14 +149,12 @@
 			"editorStickyScroll.background": "#0F1013",
 			"sideBar.foreground": "#767EA7",
 		},
-		"[Catppuccin Latte]": {
-			"editorStickyScroll.background": "#e6e9ef",
-			"sideBar.foreground": "#6c6f85",
-			"editorIndentGuide.activeBackground1": "#4c4f69"
-		},
 		"[Rosé Pine]": {
 			"editorCursor.foreground": "#ea9a97",
 			"editor.selectionBackground": "#ea9a972d",
+			"editorGroup.border": "#21202e",
+			"editorGroupHeader.border": "#21202e",
+			"breadcrumb.foreground": "#575279",
 		}
 	},
 	"workbench.editor.pinnedTabSizing": "shrink",
