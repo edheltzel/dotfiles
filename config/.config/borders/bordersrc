@@ -12,9 +12,9 @@
 # 0xfff16c75 = #f16c75
 # 0xfff1fc79 = #f1fc79
 ## Rose Pine colors
-# 0xffc4a7e7 = #c4a7e7
-# 0xff2a283e = #2a283e
-# 0xff3B446A = #3B44A6
+# 0xff575279 = #575279
+# 0xff3E8FB0 = #3e8fb0
+# 0xffEA9A97 = #ea9a97
 #
 ################################
 #
@@ -28,8 +28,8 @@
 options=(
   style=round
   width=5.0
-  inactive_color=0xff212337
-  active_color=0xffc4a7e7
+  inactive_color=0xff575279
+  active_color=0xffEA9A97
 )
 
 borders "${options[@]}"
