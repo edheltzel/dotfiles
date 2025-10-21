@@ -15,6 +15,10 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
+--
+-- Color Scheme - see: https://wezfurlong.org/wezmerm/colorschemes/index.html
+-- see ./colors/eldritch.toml
+config.color_scheme = "Eldritch"
 
 -- Settings
 config.default_prog = { fish_path, "-l" }
@@ -32,10 +36,6 @@ config.hide_mouse_cursor_when_typing = true
 config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
-
--- Color Scheme - see: https://wezfurlong.org/wezmerm/colorschemes/index.html
--- see ./colors/eldritch.toml
-config.color_scheme = "Eldritch"
 
 -- Nerdfonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
