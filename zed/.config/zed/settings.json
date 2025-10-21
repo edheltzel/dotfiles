@@ -170,6 +170,12 @@
       "model": "gemini-2.5-flash"
     }
   },
+  "agent_servers": {
+    "OpenCode":{
+    "command": "opencode",
+    "args": [ "acp" ]
+    }
+  },
   "features": {
     "edit_prediction_provider": "supermaven"
   },

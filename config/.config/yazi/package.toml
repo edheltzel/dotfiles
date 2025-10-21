@@ -5,8 +5,8 @@ hash = "cdb1a69bed63211c75b72521bbab875d"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "2d73b79"
-hash = "d4c41d713b325710a9dd5ae86c3f8a5f"
+rev = "f9ae9f2"
+hash = "5dda92e60fca4f206874ee187b3dfb67"
 
 [[flavor.deps]]
 use = "jamylak/rose-pine"
