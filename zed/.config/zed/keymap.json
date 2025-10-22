@@ -11,6 +11,7 @@
 			"alt-home": "project_panel::CollapseAllEntries",
 			"alt-cmd-b": "workspace::ToggleLeftDock",
 			"cmd-b": "workspace::ToggleRightDock",
+			// Tabs/Buffers
 			"cmd-1": ["pane::ActivateItem", 0],
 			"cmd-2": ["pane::ActivateItem", 1],
 			"cmd-3": ["pane::ActivateItem", 2],
@@ -20,6 +21,7 @@
 			"cmd-7": ["pane::ActivateItem", 6],
 			"cmd-8": ["pane::ActivateItem", 7],
 			"cmd-9": ["pane::ActivateItem", 8]
+			// AI
 		}
 	},
 	// Window navigation
@@ -48,7 +50,7 @@
 			"cmd-d": "pane::SplitLeft"
 		}
 	},
-	// Git
+	// Tasks
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
@@ -100,7 +102,9 @@
 			"space b h": "pane::SplitAndMoveLeft",
 			"space b j": "pane::SplitAndMoveDown",
 			"space b k": "pane::SplitAndMoveUp",
-			"space b l": "pane::SplitAndMoveRight"
+			"space b l": "pane::SplitAndMoveRight",
+			"space ": ["agent::NewExternalAgentThread", { "agent": "claude_code" }]
+
 		}
 	},
 	// Vim Buffer Navigation
