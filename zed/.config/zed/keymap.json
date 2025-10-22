@@ -58,31 +58,33 @@
 					"task_name": "LazyGit",
 					"reveal_target": "center"
 				}
-			]
-		}
-	},
-	{
-		"context": "Editor && VimControl && !VimWaiting && !menu",
-		"bindings": {
+			],
 			"space a d": [
 				"task::Spawn",
 				{
 					"task_name": "Droid",
 					"reveal_target": "center"
 				}
-			]
-		}
-	},
-	{
-		"context": "Editor && VimControl && !VimWaiting && !menu",
-		"bindings": {
+			],
 			"space a c": [
 				"task::Spawn",
 				{
 					"task_name": "Claude Code",
 					"reveal_target": "center"
 				}
+			],
+			"space a o": [
+				"task::Spawn",
+				{
+					"task_name": "Opencode",
+					"reveal_target": "center"
+				}
 			]
+		}
+	},
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
 		}
 	},
 	// Editor + Vim
