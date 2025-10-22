@@ -3,6 +3,7 @@
 	"name": "Eldritch",
 	"author": "Ed Heltzel <ed@rainyday.media>",
 	"description": "WIP",
+	// TODO: update color pallet
 	"themes": [
 		{
 			"name": "Eldritch",

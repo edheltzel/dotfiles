@@ -112,8 +112,13 @@
 		"toggle_relative_line_numbers": true,
 		"use_system_clipboard": "on_yank"
 	},
-	"hover_popover_delay": 1000,
+	"hover_popover_delay": 2000,
+	"features": {
+		"edit_prediction_provider": "supermaven"
+	},
+	"show_edit_predictions": true,
 	"edit_predictions": {
+		"mode": "subtle",
 		"disabled_globs": [
 			"**/.git",
 			"**/.svn",
@@ -135,8 +140,7 @@
 			"**/.ropeproject",
 			"**/.pytest_cache",
 			"**/.ruff_cache"
-		],
-		"mode": "eager"
+		]
 	},
 	"agent": {
 		"dock": "left",
@@ -167,10 +171,6 @@
 			"args": ["acp"]
 		}
 	},
-	"features": {
-		// "edit_prediction_provider": "supermaven"
-	},
-	"show_edit_predictions": true,
 	"collaboration_panel": {
 		"button": false
 	},

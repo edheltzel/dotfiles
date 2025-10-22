@@ -46,8 +46,8 @@
 		"context": "Terminal",
 		"bindings": {
 			"cmd-ctrl-=": "pane::CloseActiveItem",
-			"cmd-shift-d": "pane::SplitUp",
-			"cmd-d": "pane::SplitLeft"
+			"cmd-shift-d": "pane::SplitRight",
+			"cmd-d": "pane::SplitDown"
 		}
 	},
 	// Tasks
@@ -86,8 +86,7 @@
 	},
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
-		"bindings": {
-		}
+		"bindings": {}
 	},
 	// Editor + Vim
 	{
@@ -103,8 +102,11 @@
 			"space b j": "pane::SplitAndMoveDown",
 			"space b k": "pane::SplitAndMoveUp",
 			"space b l": "pane::SplitAndMoveRight",
-			"space ": ["agent::NewExternalAgentThread", { "agent": "claude_code" }]
-
+			"space c c": [
+				"agent::NewExternalAgentThread",
+				{ "agent": "claude_code" }
+			],
+			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }]
 		}
 	},
 	// Vim Buffer Navigation
@@ -118,10 +120,10 @@
 			"cmd-shift-d": "editor::DuplicateLineDown"
 		}
 	},
- {
-   "context": "Workspace",
-   "bindings": {
-     "alt-`": "workspace::NewCenterTerminal"
-   }
- }
+	{
+		"context": "Workspace",
+		"bindings": {
+			"alt-`": "workspace::NewCenterTerminal"
+		}
+	}
 ]
