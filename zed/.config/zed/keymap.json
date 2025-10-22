@@ -70,7 +70,7 @@
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
-			"space g d": [
+			"space a d": [
 				"task::Spawn",
 				{
 					"task_name": "Droid",
@@ -82,7 +82,7 @@
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
-			"space g c": [
+			"space a c": [
 				"task::Spawn",
 				{
 					"task_name": "Claude Code",
@@ -95,6 +95,7 @@
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
+			"space f f": "file_finder::Toggle",
 			"space f s": "workspace::Save",
 			"space f shift-s": "workspace::SaveAll",
 			"space b b": "tab_switcher::ToggleAll",
