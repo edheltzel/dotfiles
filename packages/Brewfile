@@ -218,7 +218,6 @@ cask 'orcaslicer'           # 3D Slicer
 
 # Media
 cask 'boom'                 # Audio enhancer
-cask 'iina'                 # Media player
 cask 'kap'                  # Screen recorder
 cask 'keycastr'             # Display keystrokes
 brew 'pandoc'               # Universal file converter

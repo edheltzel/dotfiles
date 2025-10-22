@@ -487,14 +487,14 @@
 			"telemetry.telemetryLevel": "crash",
 			"type": "command"
 		},
-		// {
-		// 	"command": "file-browser.open",
-		// 	"icon": "file",
-		// 	"keys": "f.F",
-		// 	"name": "Open File/Folder...",
-		// 	"position": 2,
-		// 	"type": "command"
-		// },
+		{
+			"command": "opensshremotes.openEmptyWindow",
+			"icon": "file",
+			"keys": "f.h",
+			"name": "Open SSH Host...",
+			"position": 2,
+			"type": "command"
+		},
 		{
 			"command": "workbench.action.closeAllEditors",
 			"icon": "clear-all",
@@ -551,4 +551,5 @@
 	"workbench.editor.highlightModifiedTabs": true,
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": false,
+	"claude-code.useTerminal": true,
 }

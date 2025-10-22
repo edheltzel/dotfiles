@@ -10,13 +10,7 @@
 			"ctrl-alt-p": "workspace::ToggleZoom",
 			"alt-home": "project_panel::CollapseAllEntries",
 			"alt-cmd-b": "workspace::ToggleLeftDock",
-			"cmd-b": "workspace::ToggleRightDock"
-		}
-	},
-	// Tab Navigation - Macos
-	{
-		"context": "Workspace",
-		"bindings": {
+			"cmd-b": "workspace::ToggleRightDock",
 			"cmd-1": ["pane::ActivateItem", 0],
 			"cmd-2": ["pane::ActivateItem", 1],
 			"cmd-3": ["pane::ActivateItem", 2],
