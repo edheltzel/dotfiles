@@ -140,7 +140,7 @@
 	"workbench.preferredDarkColorTheme": "Eldritch",
 	"workbench.preferredLightColorTheme": "Rosé Pine Dawn",
 	"window.autoDetectColorScheme": false,
-	"workbench.colorTheme": "Rosé Pine",
+	"workbench.colorTheme": "Eldritch",
 	"workbench.colorCustomizations": {
 		"[Eldritch]": {
 			"cursorColumnColor": "#37f49910",
@@ -428,12 +428,26 @@
 					"command": "claude-vscode.sidebar.open",
 				},
 				{
+					"key": "d",
+					"name": "Droid",
+					"icon": "robot",
+					"type": "command",
+					"command": "factory-vscode-extension.openFactory",
+				},
+				{
 					"key": "k",
 					"name": "Cline",
 					"icon": "robot",
 					"type": "command",
 					"command": "workbench.view.extension.claude-dev-ActivityBar",
-				}
+				},
+				{
+					"key": "o",
+					"name": "Opencode",
+					"icon": "robot",
+					"type": "command",
+					"command": "opencode.openNewTerminal",
+				},
 			]
 		},
 		{
@@ -522,9 +536,6 @@
 			"type": "command"
 		},
 	],
-	"workbench.layoutControl.enabled": false,
-	"window.commandCenter": false,
-	"workbench.editor.editorActionsLocation": "hidden",
 	"superdesign.aiModelProvider": "openrouter",
 	"superdesign.aiModel": "google/gemini-2.5-pro",
 	"projectManager.git.maxDepthRecursion": 6,
@@ -538,4 +549,6 @@
 	"projectManager.hg.maxDepthRecursion": 6,
 	"workbench.panel.showLabels": false,
 	"workbench.editor.highlightModifiedTabs": true,
+	"window.commandCenter": false,
+	"workbench.layoutControl.enabled": false,
 }
