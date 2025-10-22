@@ -17,19 +17,12 @@
 # 0xffEA9A97 = #ea9a97
 #
 ################################
-#
-# Light mode use:
-  # inactive_color=0xff212337
-  # active_color=0xffebfafa
-# Dark mode use:
-  # active_color=0xffa48cf2
-  # inactive_color=0xff3B446A
 
 options=(
   style=round
   width=5.0
-  inactive_color=0xff575279
-  active_color=0xffEA9A97
+  inactive_color=0xff323449
+  active_color=0xffa48cf2
 )
 
 borders "${options[@]}"
