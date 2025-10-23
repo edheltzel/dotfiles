@@ -54,8 +54,11 @@ unstow: ## Remove individual packages w/Stow
 	@echo "${pkg} was removed"
 
 .PHONY: update up
-update:
+update: ## Update all dotfiles packages
 	@for pkg in $(STOW_PACKAGES); do \
+		if [ "$$pkg" = "fish" ]; then \
+			rm -f ~/.config/fish/conf.d/brew.fish ~/.config/fish/conf.d/fish-ssh-agent.fish; \
+		fi; \
 		stow --restow $$pkg; \
 	done
 	@echo "$(GREEN)Dotfiles updated successfully$(CLR) - run $(YELLOW)reload$(CLR) to apply changes to Fish"
