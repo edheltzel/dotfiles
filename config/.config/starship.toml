@@ -1,7 +1,7 @@
 format = "$all"
 # right_format = "$cmd_duration"
 
-command_timeout = 2000
+command_timeout = 500
 
 [battery]
 disabled = true
