@@ -34,7 +34,7 @@ preset = 'qwerty'
 # M4=LCAG alt-ctrl-cmd
 
 [mode.main.binding]
-## Moves/Floating/Workspaces - M3
+## Resizing/Focus/Jumps - M3
 alt-ctrl-tab = 'workspace-back-and-forth' ## Cycle last 2 workspaces
 alt-ctrl-minus = 'resize smart -50'
 alt-ctrl-equal = 'resize smart +50'
@@ -53,7 +53,7 @@ alt-ctrl-3 = 'workspace chat'     # 3 -> chat
 alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 
 ## Layouts/Move - M4
-alt-ctrl-cmd-period = 'layout tiles horizontal vertical'
+alt-ctrl-cmd-period = 'layout tiles horizontal vertical' # think columns or rows
 alt-ctrl-cmd-comma = 'layout accordion horizontal vertical'
 alt-ctrl-cmd-f = 'layout floating'                          # to undo see service mode
 alt-ctrl-cmd-h = 'move left'
@@ -89,11 +89,11 @@ alt-shift-l = ['join-with right', 'mode main']
 
 ######### DEDICATED APP WORKSPACES ##########
 [[on-window-detected]] # HQ Workspace - macos Desktop 1 (alt-ctrl-0)
-if.app-name-regex-substring = 'Zen|Brave Browser Beta|Safari|Google Chrome|Vivaldi'
+if.app-name-regex-substring = 'Zen|Brave|Safari|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace - macos Desktop 2 (alt-ctrl-1)
-if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Ghostty|Zed|Kiro|Warp*'
+if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace - macos Desktop 3 (alt-ctrl-2)
@@ -105,7 +105,7 @@ if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp'
 run = "move-node-to-workspace chat"
 
 [[on-window-detected]] # Overflow Workspace - macos Desktop 5 (alt-ctrl-4)
-if.app-name-regex-substring = 'Notes|Reminders'
+if.app-name-regex-substring = 'Notes|Reminders|Todoist|Obsidian'
 run = "move-node-to-workspace overflow"
 
 # Floating Windows
