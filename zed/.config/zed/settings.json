@@ -54,28 +54,34 @@
 		"html": ["*.svg"]
 	},
 	"ssh_connections": [
-		{
-			"host": "rdm2",
-			"args": [],
-			"projects": [
-				{
-					"paths": [
-						"/home/phoenix_sysadmin/webapps/phoenix-ehiYVERG-staging/wp-content/themes/phoenix/./"
-					]
-				}
-			]
-		},
-		{
-			"host": "peptide",
-			"args": [],
-			"projects": []
-		},
-		{
-			"host": "n8n",
-			"args": [],
-			"projects": []
-		}
-	],
+    {
+      "host": "rdm2",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/phoenix_sysadmin/webapps/phoenix-ehiYVERG-staging/wp-content/themes/phoenix/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "peptide",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/pwsysadmin/webapps/peptideware/wp-content/themes/peptideware/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "n8n",
+      "args": [],
+      "projects": []
+    }
+  ],
 	"telemetry": {
 		"diagnostics": false,
 		"metrics": false
