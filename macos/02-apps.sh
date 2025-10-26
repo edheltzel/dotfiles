@@ -276,3 +276,10 @@ defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
+
+###############################################################################
+# Aerospace - Window Tiling Manger                                       #
+###############################################################################
+
+# click and drag anywhere on the window by holding ctrl+cmd+mouse click
+defaults write -g NSWindowShouldDragOnGesture -bool true
