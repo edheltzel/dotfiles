@@ -1,6 +1,8 @@
 # cSpell: disable
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
-after-startup-command = ['exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff3B446A width=5.0']
+after-startup-command = [
+  'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff3B446A width=5.0',
+]
 
 start-at-login = false
 
@@ -49,11 +51,11 @@ alt-ctrl-l = 'focus right'
 alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
 alt-ctrl-1 = 'workspace code'     # 1 -> dev/brwosers apps
 alt-ctrl-2 = 'workspace design'   # 2 -> design/work apps
-alt-ctrl-3 = 'workspace chat'     # 3 -> chat
+alt-ctrl-3 = 'workspace comms'    # 3 -> comms
 alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 
 ## Layouts/Move - M4
-alt-ctrl-cmd-period = 'layout tiles horizontal vertical' # think columns or rows
+alt-ctrl-cmd-period = 'layout tiles horizontal vertical'    # think columns or rows
 alt-ctrl-cmd-comma = 'layout accordion horizontal vertical'
 alt-ctrl-cmd-f = 'layout floating'                          # to undo see service mode
 alt-ctrl-cmd-h = 'move left'
@@ -64,14 +66,8 @@ alt-ctrl-cmd-l = 'move right'
 alt-ctrl-cmd-0 = 'move-node-to-workspace hq --focus-follows-window'
 alt-ctrl-cmd-1 = 'move-node-to-workspace code --focus-follows-window'
 alt-ctrl-cmd-2 = 'move-node-to-workspace design --focus-follows-window'
-alt-ctrl-cmd-3 = 'move-node-to-workspace chat --focus-follows-window'
+alt-ctrl-cmd-3 = 'move-node-to-workspace comms --focus-follows-window'
 alt-ctrl-cmd-4 = 'move-node-to-workspace overflow --focus-follows-window'
-
-## TODO: test this out and see if we can drop Karabiner Elements
-## Open/focus apps using keybinds
-## See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-# cmd-alt-ctrl-shift-b = 'exec-and-forget open -a "Claude.app"'
-# cmd-alt-ctrl-shift-f = 'exec-and-forget open -a "Finder"'
 
 ## Service Mode - M2
 alt-ctrl-enter = ['mode service']
@@ -89,7 +85,7 @@ alt-shift-l = ['join-with right', 'mode main']
 
 ######### DEDICATED APP WORKSPACES ##########
 [[on-window-detected]] # HQ Workspace - macos Desktop 1 (alt-ctrl-0)
-if.app-name-regex-substring = 'Zen|Brave|Safari|Google Chrome|Vivaldi'
+if.app-name-regex-substring = 'Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace - macos Desktop 2 (alt-ctrl-1)
@@ -100,12 +96,12 @@ run = "move-node-to-workspace code"
 if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape"
 run = "move-node-to-workspace design"
 
-[[on-window-detected]] # Chat Workspace - macos Desktop 4 (alt-ctrl-3)
-if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp'
-run = "move-node-to-workspace chat"
+[[on-window-detected]] # Comms Workspace - macos Desktop 4 (alt-ctrl-3)
+if.app-name-regex-substring = 'Messages|Microsoft Teams|Notion*|Slack|Discord|WhatsApp'
+run = "move-node-to-workspace comms"
 
 [[on-window-detected]] # Overflow Workspace - macos Desktop 5 (alt-ctrl-4)
-if.app-name-regex-substring = 'Notes|Reminders|Todoist|Obsidian'
+if.app-name-regex-substring = 'Notes|Reminders|Todoist|Obsidian|Notion'
 run = "move-node-to-workspace overflow"
 
 # Floating Windows
