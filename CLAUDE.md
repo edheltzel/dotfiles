@@ -2,204 +2,265 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Overview
+## Repository Overview
 
-This is a macOS dotfiles repository using GNU Stow for symlink management and Fish shell as the primary shell. The setup is highly customized for a developer workflow with extensive keyboard-driven automation via Karabiner Elements, Raycast, and QMK/VIA firmware.
+This is a Fish shell-based macOS dotfiles repository (v3) using **GNU Stow** for symlink management. The repository follows a modular, package-based architecture where each major configuration area is a separate stow package.
 
-## Architecture
+**Key Philosophy:**
+- Non-invasive symlink-based configuration management
+- XDG Base Directory compliance to keep `~` clean
+- Multi-editor strategy (Neovim primary, Zed secondary, VSCode tertiary)
+- Performance-optimized shell with lazy-loading patterns
+- Machine-independent design with local overrides
 
-### Package Management with GNU Stow
+## Essential Commands
 
-The repository uses GNU Stow to create symlinks from package directories to `$HOME`. Each top-level directory (except `scripts/`, `packages/`, `macos/`, `duti/`, `private/`) is a "stow package":
-
-- **dots/** - Miscellaneous dotfiles stored in `$HOME`
-- **git/** - Git configuration (includes `.gitconfig` that sources `.gitconfig.local`)
-- **fish/** - Fish shell configuration following XDG Base Directory spec
-- **nvim/** - Neovim configuration (LazyVim-based, called "NEO.ED")
-- **config/** - XDG config files for various applications (karabiner, raycast, starship, topgrade, yazi, etc.)
-- **vscode/** - VS Code configurations (keybindings, settings)
-- **zed/** - Zed editor configuration
-- **local/** - User-specific data in `~/.local/`
-
-### Key Configuration Locations
-
-- Fish shell config: `fish/.config/fish/config.fish`
-- Fish abbreviations: `fish/.config/fish/conf.d/abbr.fish`
-- Fish functions: `fish/.config/fish/functions/`
-- Fish paths/exports: `fish/.config/fish/conf.d/paths.fish`
-- Karabiner Elements: `config/.config/karabiner/` (complex Hyper key setup)
-- Topgrade config: `config/.config/topgrade.toml`
-
-### Fish Shell Structure
-
-- **conf.d/** - Auto-loaded configuration files:
-  - `abbr.fish` - Shell abbreviations
-  - `brew.fish`, `fnm.fish` - Tool integrations
-  - `paths.fish` - XDG Base Directory and PATH configuration
-  - `variables.fish`, `exports.fish` - Environment variables
-- **functions/** - Custom functions loaded on-demand
-- **fish_plugins** - Fisher plugin manager manifest (13 plugins including fzf.fish, gitnow, pisces, etc.)
-
-### Installation Scripts
-
-- **bootstrap.sh** - Single-line remote install script (clones repo, runs install.sh)
-- **install.sh** - Main provisioning script that orchestrates the setup
-- **scripts/functions.sh** - Helper functions for installation scripts
-- **packages/packages.sh** - Installs from Brewfile and package manager `.txt` files
-- **duti/duti.sh** - Sets default applications for file types
-- **macos/macos.sh** - macOS preferences (WIP, changes with each macOS version)
-- **git/git.sh** - Provisions `.gitconfig.local` for SSH signing
-
-## Common Commands
-
-### Stow Management (via Makefile)
+### Installation & Setup
 
 ```bash
-make help           # Show available commands
-make install        # Full bootstrap (new machine setup)
-make run            # Symlink all stow packages
-make stow pkg=nvim  # Symlink specific package
-make unstow pkg=nvim # Remove specific package symlinks
-make update         # Restow all packages (sync changes)
-make delete         # Remove all stowed symlinks
-```
+# Fresh machine setup (runs install.sh)
+make install
 
-### Alternative: Direct Stow Usage
+# Symlink all dotfiles packages
+make run
 
-```bash
-stow nvim                # Stow specific package
-stow --restow nvim       # Restow (sync) package
-stow -D nvim            # Unstow (remove) package
+# Add/remove individual packages
+make stow pkg=nvim
+make unstow pkg=nvim
+
+# Update all symlinked packages (restows + cleans dead symlinks)
+make update  # or make up
+
+# Remove all symlinks
+make delete
 ```
 
 ### Package Management
 
 ```bash
-upp                      # Alias for topgrade (updates all packages)
-brew bundle --file packages/Brewfile  # Install/update Brew packages
-```
+# Update ALL packages and dependencies
+upp  # alias for topgrade (updates Homebrew, Node, Rust, etc.)
 
-### Fish Shell
-
-```bash
-reload                   # Reload fish configuration
-fisher update            # Update fish plugins
+# Package listing commands
+brews          # List Homebrew packages
+casks          # List Homebrew casks
+npms           # List global npm packages
+cargos         # List Cargo packages
+gems           # List Ruby gems
 ```
 
 ### Development Workflow
 
-- **Node.js**: Uses `fnm` (Fast Node Manager) for version switching
-  - Supports both `.nvmrc` and `.node-version` files
-  - Auto-switches on `cd` with `fnm env --use-on-cd | source`
-- **Primary editors**: Neovim (NEO.ED based on LazyVim), VS Code (secondary)
-- **Git signing**: SSH commit signing (preferred) over GPG
-  - Config in `.gitconfig.local` (not tracked, generated by `git/git.sh`)
+```bash
+# Node version management (FNM)
+fnm use                    # Switch to .node-version or .nvmrc
+fnm env --use-on-cd | source  # Enable auto-switching
 
-### Useful Fish Abbreviations
+# Git shortcuts (extensive aliases in .gitconfig)
+git cm "message"           # Signed commit
+git cma "message"          # Add all + signed commit
+git addi                   # Interactive add with fzf
+git logs                   # Pretty git log graph
 
-- `upp` - Update all packages via topgrade
-- `lg`/`gg` - Launch lazygit
-- `vim` - Alias to nvim
-- `co`/`con`/`coo` - VS Code shortcuts
-- `sp` - Speedtest
-- `eva` - Start SSH agent and add key
-- `killws` - Kill WindowServer (fixes macOS RAM leak)
-- `flashEthernet` - Flush ethernet backhaul
+# Editors
+nvim                       # Primary editor (LazyVim-based NEO.ED)
+zed -n .                   # Zed in new window (alias: zz)
+code -r .                  # VSCode reuse window (alias: coo)
 
-## Special Notes
-
-### Keyboard Customization
-
-The setup uses a **Hyper Key** mapped to `right_cmd` + `right_shift` + `right_option` + `right_control` (right-side modifiers only). Complex chording configurations are in `config/.config/karabiner/`.
-
-Example: `hyper + left_alt + d` opens dotfiles in default editor.
-
-### XDG Base Directory Compliance
-
-Fish configuration follows XDG Base Directory specification. Edit `fish/.config/fish/conf.d/paths.fish` to modify XDG variables.
-
-### Stow Packages List
-
-When modifying the Makefile or stow operations, the current packages are:
-```makefile
-STOW_PACKAGES := dots git fish nvim config vscode zed local
+# Shell
+reload                     # Reload Fish configuration
 ```
+
+## Stow Packages Architecture
+
+The repository uses these stow packages (defined in `Makefile:1`):
+
+- **dots** - Misc dotfiles in `$HOME` (`.npmrc`, `.curlrc`, etc.)
+- **git** - Git configuration with SSH signing
+- **fish** - Fish shell config (XDG-compliant structure)
+- **config** - 27+ application configs (yazi, raycast, aerospace, etc.)
+- **karabiner** - Complex keyboard customization (Hyper key chording)
+- **nvim** - LazyVim customizations (NEO.ED)
+- **vscode** - VSCode settings, keybindings, custom CSS
+- **zed** - Zed editor config with Vim mode + AI integration
+- **local** - User-specific non-config data
+
+## Code Architecture
+
+### Fish Shell Structure (`fish/.config/fish/`)
+
+**Performance Pattern:** Minimal `config.fish` with lazy-loading
+
+- `config.fish` - Ultra-minimal for fast startup
+- `conf.d/` - Auto-loaded modular configs:
+  - `abbr.fish` - Abbreviations/aliases (loaded interactively)
+  - `paths.fish` - XDG Base Directory paths
+  - `exports.fish` - Environment variables
+  - `fnm.fish` - FNM (Node) lazy-loaded on first use
+  - `brew.fish` - Homebrew integration
+- `functions/` - 26 custom functions
+- `completions/` - Custom completions
+- `themes/` - Color themes
+
+**Important:** FNM and Zoxide use lazy-loading to optimize shell startup speed.
+
+### Neovim Configuration (`nvim/.config/nvim/`)
+
+**Framework:** LazyVim with extensive customizations (NEO.ED)
+
+- `init.lua` - Bootstrap (loads `config.lazy`)
+- `lua/config/lazy.lua` - Lazy.nvim package manager
+- `lua/config/keymaps.lua` - Custom keybindings (matches Zed where possible)
+- `lua/plugins/` - Plugin specifications:
+  - `colorscheme.lua` - Theme config (Eldritch)
+  - `lualine.lua` - Custom statusline
+  - `snacks.lua` - UI enhancements
+  - `supermaven.lua` - AI code completion
+  - `themes/` - Color schemes (Eldritch, Neoed)
+  - `languages/` - LSP configs per language
+- `lazy-lock.json` - Dependency lock file
+
+**Editor Priority:** Neovim is default git editor (`.gitconfig:3`)
 
 ### Git Configuration
 
-- `.gitconfig` includes `.gitconfig.local` for user-specific settings
-- SSH signing is configured (see `git/git.sh` for setup)
-- GPG support available but SSH preferred
+**SSH Signing (not GPG):**
+- Uses SSH keys for commit/tag signing
+- Machine-specific config in `.gitconfig.local` (not tracked)
+- Per-machine allowed signers file
+- Setup script: `git/git.sh` provisions local config
 
-### macOS-Specific
+**Key Aliases:**
+- `git cm "msg"` - Signed commit with message
+- `git cma "msg"` - Add all + signed commit
+- `git addi` - Interactive add with fzf selection
+- `git logs` - Pretty graph log
+- Delta pager for diff viewing
 
-- Uses Stage Manager + Raycast + Alt-Tab for window management (formerly Aerospace)
-- Ice Bar for menu bar customization (formerly Sketchybar)
-- Duti for default file type associations
-- Wallpapers stored at `~/.wallpapers/` (separate repo)
+### Installation Scripts
 
-## Troubleshooting
+**Flow:** `bootstrap.sh` → `install.sh` → individual scripts
 
-### Fisher Plugin Manager
+1. **install.sh** - Main orchestrator:
+   - Installs Xcode CLI tools, Homebrew, Git
+   - Sources `scripts/functions.sh` for helpers
+   - Runs `packages/packages.sh` for all package managers
+   - Stows all packages
+   - Runs `duti/duti.sh` (file associations)
+   - Runs `macos/macos.sh` (system preferences)
+   - Runs `git/git.sh` (git setup)
 
-If Fisher breaks, reinstall:
+2. **packages/packages.sh** - Multi-package manager:
+   - Homebrew (`Brewfile` - 80+ CLI tools, 50+ casks)
+   - FNM (Node) - installs LTS + `node_packages.txt`
+   - pipx (Python) - `pipx_packages.txt`
+   - rbenv (Ruby) - `ruby_packages.txt`
+   - rustup (Rust) - `rust_packages.txt`
+   - Bun - `bun_packages.txt`
+
+### Application Configs (`config/.config/`)
+
+27 applications configured:
+- **Terminal:** alacritty, kitty, ghostty, wezterm
+- **Multiplexers:** tmux, zellij
+- **Window Manager:** aerospace (Stage Manager + Raycast)
+- **File Manager:** yazi (custom keybindings)
+- **Git UI:** lazygit
+- **Monitoring:** btop, fastfetch
+- **Launcher:** raycast (extensive scripts)
+- **Prompt:** starship
+- **Updater:** topgrade (unified package updater)
+
+## Important Development Patterns
+
+### Machine-Specific Configuration
+
+Git config includes machine-specific overrides:
+```bash
+# .gitconfig includes .gitconfig.local (not tracked)
+# Per-machine files: gitconfig-bigmac.local, gitconfig-macdaddy.local
+```
+
+After cloning on new machine, run `git/git.sh` to provision `.gitconfig.local`.
+
+### XDG Base Directory Compliance
+
+All paths configured in `fish/.config/fish/conf.d/paths.fish`:
+- Config: `~/.config/`
+- Data: `~/.local/share/`
+- Cache: `~/.cache/`
+- Local: `~/.local/`
+
+### Adding New Configuration
+
+1. Add files to appropriate stow package directory
+2. Run `make stow pkg=<packagename>`
+3. Test the configuration
+4. Commit to git
+5. Run `make update` to restow all packages
+
+### Troubleshooting Common Issues
+
+**SSH Agent Not Persistent:**
+```bash
+eva  # Alias for: eval ssh-agent -s; and ssh-add --apple-use-keychain
+```
+
+**Node Version Issues:**
+```bash
+fnm env --use-on-cd | source  # Enable auto-switching
+npm install --global $(cat packages/node_packages.txt)
+```
+
+**Fish Plugin Manager (Fisher) Issues:**
 ```bash
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
-### SSH Agent Issues
-
-If SSH agent doesn't persist across restarts:
+**Cargo/Rust Update Failures:**
 ```bash
-eval ssh-agent -s; and ssh-add --apple-use-keychain
+brew uninstall rustup-init
+brew reinstall rust
+cargo install cargo-update --force
+topgrade --only cargo
 ```
 
-Uses `danhper/fish-ssh-agent` plugin to manage persistence.
-
-### FNM/Node Setup
-
+**Stow Conflicts:**
 ```bash
-brew install fnm
-fnm env --use-on-cd | source  # Enable auto-switching
-npm install --global $(cat packages/node_packages.txt)  # Install global npm packages
+make delete  # Remove all symlinks
+make run     # Recreate all symlinks
 ```
 
-### Rust/Cargo Update Issues
+## Key Files to Know
 
-If cargo fails during topgrade:
-```bash
-brew uninstall rustup-init && brew reinstall rust && cargo uninstall cargo && cargo install cargo-update --force && topgrade --only cargo
-```
+- `Makefile` - Primary interface for all dotfile operations
+- `install.sh` - Main installation orchestrator
+- `packages/Brewfile` - All Homebrew packages/casks/fonts
+- `fish/.config/fish/conf.d/abbr.fish` - Shell aliases/abbreviations
+- `git/.gitconfig` - Git aliases and configuration
+- `nvim/.config/nvim/lua/config/keymaps.lua` - Neovim keybindings
+- `config/.config/topgrade.toml` - Update manager config
+- `.stow-local-ignore` - Files Stow should skip
 
-### WindowServer RAM Leak
+## Security Notes
 
-Known macOS bug with multiple external monitors:
-```bash
-killws  # Logs you out and restarts WindowServer
-```
+- SSH signing enabled by default (commits & tags)
+- GPG support available but SSH preferred
+- Private directory (`private/`) intentionally empty for sensitive data
+- SSH keys managed via macOS keychain
+- Gatekeeper management in `macos/03-security.sh`
+- LuLu firewall installed via Brewfile
 
-## Repository Structure
+## Version History
 
-```
-.
-├── Makefile              # Stow package management
-├── bootstrap.sh          # Remote install script
-├── install.sh            # Main provisioning script
-├── packages/
-│   ├── Brewfile          # Homebrew packages (primary source)
-│   ├── packages.sh       # Package installation orchestrator
-│   └── *.txt             # Package lists for various managers
-├── scripts/
-│   └── functions.sh      # Helper functions for scripts
-├── macos/                # macOS preferences (WIP)
-├── duti/                 # Default file type associations
-├── private/              # Private configs (empty by design)
-├── dots/                 # Stow: misc dotfiles
-├── git/                  # Stow: git config
-├── fish/                 # Stow: fish shell
-├── nvim/                 # Stow: neovim (LazyVim)
-├── config/               # Stow: XDG configs
-├── vscode/               # Stow: VS Code
-├── zed/                  # Stow: Zed editor
-└── local/                # Stow: ~/.local data
-```
+- **v3** (current) - Fish shell + GNU Stow
+- **v2** - Fish shell + custom scripts
+- **v1** - oh-my-zsh
+
+## Current State (Git Status)
+
+Multiple staged deletions from old nvim.exosyphon config cleanup. Modified files show recent work on:
+- Neovim config updates (keymaps, lazy.lua, colorscheme)
+- Lualine theme customization
+- Snacks.lua reorganization
+- New Eldritch theme integration
