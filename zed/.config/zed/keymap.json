@@ -21,7 +21,6 @@
 			"cmd-7": ["pane::ActivateItem", 6],
 			"cmd-8": ["pane::ActivateItem", 7],
 			"cmd-9": ["pane::ActivateItem", 8]
-			// AI
 		}
 	},
 	// Window navigation
@@ -50,7 +49,7 @@
 			"cmd-d": "pane::SplitDown"
 		}
 	},
-	// Tasks
+	// Tasks + Spawn AI agents
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
@@ -84,32 +83,31 @@
 			]
 		}
 	},
-	{
-		"context": "Editor && VimControl && !VimWaiting && !menu",
-		"bindings": {}
-	},
 	// Editor + Vim
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
+			"space space": "file_finder::Toggle",
 			"space f f": "file_finder::Toggle",
 			"space f s": "workspace::Save",
 			"space f shift-s": "workspace::SaveAll",
+			"space f b": "tab_switcher::ToggleAll",
 			"space b b": "tab_switcher::ToggleAll",
-			"space b o": "pane::CloseAllItems",
+			"space ,": "tab_switcher::ToggleAll",
+			"space b a": "pane::CloseAllItems",
+			"space b o": "pane::CloseOtherItems",
 			"space b d": "pane::CloseActiveItem",
 			"space b h": "pane::SplitAndMoveLeft",
 			"space b j": "pane::SplitAndMoveDown",
 			"space b k": "pane::SplitAndMoveUp",
 			"space b l": "pane::SplitAndMoveRight",
-			"space c c": [
-				"agent::NewExternalAgentThread",
-				{ "agent": "claude_code" }
-			],
-			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }]
+			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
+			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
+			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent"}]
+
 		}
 	},
-	// Vim Buffer Navigation
+	// Vim Cursor Navigation
 	{
 		"context": "vim_mode == normal || vim_mode == visual",
 		"bindings": {
