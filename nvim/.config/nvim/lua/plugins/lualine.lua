@@ -49,13 +49,11 @@ return {
 
     vim.o.laststatus = vim.g.lualine_laststatus
 
-    -- Import custom neoEd theme
     local neoEd = require("plugins.themes.lualine.neoed").setup()
 
     local opts = {
       options = {
-        --- @usage 'neoEd' | 'eldeitch' | 'rose-pine' | 'rose-pine-alt'
-        theme = "neoEd",
+        theme = "eldritch",
         component_separators = "",
         section_separators = "",
         globalstatus = vim.o.laststatus == 1,
