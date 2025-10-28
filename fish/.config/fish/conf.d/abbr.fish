@@ -10,7 +10,7 @@ if status is-interactive
     abbr --add cw center_window
     abbr --add cat 'bat -pp'
     # abbr --add cls '$DROPBOX/Clients'
-    
+
     # Editors & Terminals
     abbr --add ee 'e -r .'
     abbr --add en 'e -n .'
@@ -71,10 +71,10 @@ if status is-interactive
     # AI Agents + Models
     abbr --add ccu 'bunx ccusage'
     abbr --add cc claude
+    abbr --add os openspec
     abbr --add oc opencode
-    abbr --add osp openspec
     abbr --add tm task-master
     abbr --add gg gemini
     abbr --add ol ollama
     abbr --add llm 'cd ~/.ollama/models'
-  end
+end
