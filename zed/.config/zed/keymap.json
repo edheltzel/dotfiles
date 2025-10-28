@@ -103,7 +103,8 @@
 			"space b l": "pane::SplitAndMoveRight",
 			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
-			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent"}]
+			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent"}],
+			"cmd shift l": "editor::SelectAllMatches"
 
 		}
 	},

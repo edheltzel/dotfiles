@@ -23,6 +23,9 @@
 	"[typescript][typescriptreact]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
+	"[svg]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	// Extensions Settings
 	// "accessibility.dimUnfocused.enabled": true,
 	// "accessibility.dimUnfocused.opacity": 0.6,
