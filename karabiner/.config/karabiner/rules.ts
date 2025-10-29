@@ -108,7 +108,6 @@ const rules: KarabinerRules[] = [
 			p: app("Adobe Photoshop 2025"),
 			// p: app("Affinity Photo 2"),
 			b: app("BambuStudio"),
-			e: app("ElegooSlicer"),
 			o: app("OrcaSlicer"),
 			r: app("Reminders"),
 			s: app("Shapr3D"),

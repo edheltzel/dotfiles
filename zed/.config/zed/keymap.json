@@ -108,7 +108,7 @@
 
 		}
 	},
-	// Vim Cursor Navigation
+	// Vim Motions
 	{
 		"context": "vim_mode == normal || vim_mode == visual",
 		"bindings": {
@@ -124,5 +124,14 @@
 		"bindings": {
 			"alt-`": "workspace::NewCenterTerminal"
 		}
+	},
+	{
+	  "context": "VimControl && !menu && vim_mode != operator",
+	  "bindings": {
+	    "w": "vim::NextSubwordStart",
+	    "b": "vim::PreviousSubwordStart",
+	    "e": "vim::NextSubwordEnd",
+	    "g e": "vim::PreviousSubwordEnd"
+	  }
 	}
 ]
