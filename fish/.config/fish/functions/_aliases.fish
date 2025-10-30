@@ -72,8 +72,8 @@ alias httpdump "sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 alias whois "grc whois" # colorized whois
 
 # SSH and localhost
-alias hostfile 'eval sudo $EDITOR /etc/hosts'
-alias editssh 'eval $EDITOR ~/.ssh'
+alias hostfile 'eval sudo nvim /etc/hosts'
+alias editssh 'eval nvim ~/.ssh'
 
 # Docker aliases
 alias dk docker
