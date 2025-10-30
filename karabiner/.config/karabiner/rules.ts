@@ -87,6 +87,7 @@ const rules: KarabinerRules[] = [
 			w: app("Warp"), // secondary
 			t: app("WezTerm"), // tertiary
 			m: app("Typora"), //markdown editor
+			n: app("Obsidian"),
 			b: app("Brave Browser"),
 			g: app("Google Chrome"),
 			f: app("Firefox"),
