@@ -8,7 +8,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-	"context_servers": {
+	"hover_popover_enabled": true,
+ "context_servers": {
   "mcp-server-nextjs": {
    "source": "extension",
    "enabled": true,
@@ -137,7 +138,7 @@
 		"toggle_relative_line_numbers": true,
 		"use_system_clipboard": "on_yank"
 	},
-	"hover_popover_delay": 2000,
+	"hover_popover_delay": 15000,
 	"features": {
 		"edit_prediction_provider": "supermaven"
 	},
