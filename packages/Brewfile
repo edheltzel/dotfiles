@@ -200,6 +200,7 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 
 # Creativity
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
+cask 'affinity'             # Affinity.studio
 cask 'affinity-designer'    # Illustrator replacement
 cask 'affinity-publisher'   # InDesign replacement
 cask 'affinity-photo'       # Photoshop replacement
@@ -251,7 +252,7 @@ cask 'keka'                        # File archiver and extractor
 cask 'homerow'                     # keyboaard shortcuts for every button in macOS
 cask 'superwhisper' # AI dictation app
 # brew 'stats'                     # System stats in menubar
- 
+
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
 cask 'via'                         # Keyboard configuration desktop client
@@ -261,7 +262,7 @@ cask 'karabiner-elements'          # Keyboard customization tool
 # Menu Bar Hacks
 # brew 'sketchybar'                 # status bar replacement for MacOS - paired with Aerospace
 # cask 'bartender'                    # Menu bar replacement for MacOS - paid for this, waste of money
-brew 'jordanbaird-ice'             # Ice bar - Using Sketchybar currently 
+brew 'jordanbaird-ice' # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
 cask 'nikitabobko/tap/aerospace'    # Window Management
@@ -272,7 +273,7 @@ cask 'choosy'                    # Choose which browser to open links in - Defau
 cask 'chromium'                  # For tests
 cask 'firefox'                   # For tests
 cask 'vivaldi'                   # Chromium - daily driver
-cask 'zen'                       # Gecko 
+cask 'zen'                       # Gecko
 cask 'safari-preview'            # For tests
 cask 'vladdoster/formulae/vimari' # Safari extension for Vim motions
 

@@ -11,6 +11,8 @@
 			"alt-home": "project_panel::CollapseAllEntries",
 			"alt-cmd-b": "workspace::ToggleLeftDock",
 			"cmd-b": "workspace::ToggleRightDock",
+			"space q q": "workspace::CloseWindow",
+			"alt-`": "workspace::NewCenterTerminal",
 			// Tabs/Buffers
 			"cmd-1": ["pane::ActivateItem", 0],
 			"cmd-2": ["pane::ActivateItem", 1],
@@ -117,12 +119,6 @@
 			"s": "vim::PushSneak",
 			"S": "vim::PushSneakBackward",
 			"cmd-shift-d": "editor::DuplicateLineDown"
-		}
-	},
-	{
-		"context": "Workspace",
-		"bindings": {
-			"alt-`": "workspace::NewCenterTerminal"
 		}
 	},
 	{
