@@ -81,7 +81,7 @@ const rules: KarabinerRules[] = [
 		},
 		// Hyper + left_alt shortcuts
 		left_alt: {
-			// c: app("Visual Studio Code"), // hyper+c (c for code) via Raycast
+			e: app("Visual Studio Code"),
 			// e: app("Zed"), // hyper+e (e for editor) via Raycast
 			k: app("kitty"), // primary
 			w: app("Warp"), // secondary
@@ -100,22 +100,22 @@ const rules: KarabinerRules[] = [
 		a: {
 			0: app("Passwords"),
 			3: app("Autodesk Fusion"),
+			b: app("BambuStudio"),
 			d: app("Adobe InDesign 2025"),
 			// d: app("Affinity Publisher 2"),
 			f: app("Figma"),
 			i: app("Adobe Illustrator"),
 			// i: app("Affinity Designer 2"),
+			l: app("Affinity"),
 			m: app("Messages"),
+			n: app("Invoice Ninja"),
+			o: app("OrcaSlicer"),
 			p: app("Adobe Photoshop 2025"),
 			// p: app("Affinity Photo 2"),
-			b: app("BambuStudio"),
-			o: app("OrcaSlicer"),
 			r: app("Reminders"),
 			s: app("Shapr3D"),
 			t: app("Todoist"),
 			x: app("xTool Studio"),
-			l: app("Toggl Track"),
-			n: app("Invoice Ninja"),
 		},
 		// Hyper + d (directory) shortcuts
 		d: {

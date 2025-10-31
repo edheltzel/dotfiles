@@ -21,7 +21,7 @@
 options=(
   style=round
   width=5.0
-  inactive_color=0xff323449
+  inactive_color=0x00000000
   active_color=0xffa48cf2
 )
 

@@ -15,6 +15,7 @@
     "start": "nodemon --exec bun run build -e ts",
     "build": "tsx rules.ts",
     "upgrade": "bunx npm-check-updates -ui",
-    "purge": "./.scrub.sh purge"
+    "purge": "./.scrub.sh purge",
+    "clean": "rm -rf node_modules"
   }
 }
