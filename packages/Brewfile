@@ -303,16 +303,17 @@ cask 'visual-studio-code'             # Code editor - Default
 cask 'obsidian'                       # PKM editor
 
 # RAG+CAG LLM
-# cask 'repo-prompt'                    # Repo prompt for LLMs
-cask 'ollama'                         # Local LLMs
-brew 'ollama'
-cask 'granola'                        # AI meeting transcriber
+cask 'block-goose'                    # On Machine AI Agent
 cask 'chatgpt'                        # AI chat
 cask 'claude'                         # AI chat
-cask 'block-goose'                    # On Machine AI Agent
+cask 'ollama'                         # Local LLMs
+brew 'ollama'
 
-brew 'opencode' # Opensource equivalent of Claude Code
-brew 'gemini-cli'
+# Agentic Coding Tools - CLI based
+
+brew 'claude-code'
+brew 'gemini-cli'                        
+brew 'opencode'                       # Open source
 
 # Terminal emulators
 cask 'warp'                           # Rust
