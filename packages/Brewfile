@@ -312,7 +312,7 @@ brew 'ollama'
 # Agentic Coding Tools - CLI based
 
 brew 'claude-code'
-brew 'gemini-cli'                        
+brew 'gemini-cli'
 brew 'opencode'                       # Open source
 
 # Terminal emulators
