@@ -44,11 +44,11 @@ config.font = wezterm.font_with_fallback({
 })
 -- Window Config
 config.max_fps = 240
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.95
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt" -- AlwaysPrompt | NeverPrompt
 config.macos_window_background_blur = 25
-config.window_background_image = "~/.wallpapers/wallpapers/getShitDone--dark.jpg"
+-- config.window_background_image = "~/.wallpapers/wallpapers/getShitDone--dark.jpg"
 
 config.scrollback_lines = 10000
 config.default_workspace = wezterm.nerdfonts.cod_rocket
