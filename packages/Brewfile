@@ -319,7 +319,7 @@ brew 'opencode'                       # Open source
 cask 'warp'                           # Rust
 cask 'ghostty'                        # Zig
 cask 'kitty'                          # Python+C
-cask 'wezterm'                        # Rust
+cask 'wezterm@nightly'                # Rust
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
