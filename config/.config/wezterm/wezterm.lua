@@ -30,7 +30,7 @@ config.default_cursor_style = "BlinkingBar"
 config.hide_mouse_cursor_when_typing = true
 
 -- Audio
--- config.audible_bell = "SystemBeep"
+config.audible_bell = "SystemBeep"
 
 -- Load leader (super+k), maps and tables - see keymaps.lua
 config.leader = keymaps.leader
