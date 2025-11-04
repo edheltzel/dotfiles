@@ -1,7 +1,7 @@
 // Zed settings
 //
 // cSpell:disable
-// For information on how to configure Zed, see the Zed
+// For infrmation on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
@@ -9,26 +9,26 @@
 // command palette
 {
 	"hover_popover_enabled": true,
- "context_servers": {
-  "mcp-server-nextjs": {
-   "source": "extension",
-   "enabled": true,
-   "settings": {}
-  },
-  "mcp-server-context7": {
-   "source": "extension",
-   "enabled": false,
-   "settings": {}
-  },
-  "mcp-server-github": {
-   "source": "extension",
-   "enabled": false,
-   "settings": {
-    "github_personal_access_token": "GITHUB_PERSONAL_ACCESS_TOKEN"
-   }
-  }
- },
- "project_panel": {
+	"context_servers": {
+		"mcp-server-nextjs": {
+			"source": "extension",
+			"enabled": true,
+			"settings": {}
+		},
+		"mcp-server-context7": {
+			"source": "extension",
+			"enabled": false,
+			"settings": {}
+		},
+		"mcp-server-github": {
+			"source": "extension",
+			"enabled": false,
+			"settings": {
+				"github_personal_access_token": "GITHUB_PERSONAL_ACCESS_TOKEN"
+			}
+		}
+	},
+	"project_panel": {
 		"dock": "right",
 		"scrollbar": {
 			"show": "never"
@@ -74,34 +74,32 @@
 		"html": ["*.svg"]
 	},
 	"ssh_connections": [
-    {
-      "host": "rdm2",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/phoenix_sysadmin/webapps/phoenix-ehiYVERG-staging/wp-content/themes/phoenix/./"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "peptide",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/pwsysadmin/webapps/peptideware/wp-content/themes/peptideware/./"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "n8n",
-      "args": [],
-      "projects": []
-    }
-  ],
+		{
+			"host": "rdm2",
+			"args": [],
+			"projects": [
+				{
+					"paths": [
+						"/home/phoenix_sysadmin/webapps/phoenix-ehiYVERG-staging/wp-content/themes/phoenix/./"
+					]
+				}
+			]
+		},
+		{
+			"host": "peptide",
+			"args": [],
+			"projects": [
+				{
+					"paths": ["/home/pwsysadmin/webapps/peptideware/wp-content/themes/peptideware/./"]
+				}
+			]
+		},
+		{
+			"host": "n8n",
+			"args": [],
+			"projects": []
+		}
+	],
 	"telemetry": {
 		"diagnostics": false,
 		"metrics": false
@@ -228,14 +226,20 @@
 		"git_status": true
 	},
 	"languages": {
+		"Python": {
+			"language_servers": ["pyright", "ruff", "codebook"],
+			"format_on_save": "on"
+		},
 		"JavaScript": {
 			"formatter": {
 				"language_server": {
 					"name": "biome"
 				}
-			}
+			},
+			"format_on_save": "on"
 		},
 		"TypeScript": {
+			"format_on_save": "on",
 			"formatter": {
 				"language_server": {
 					"name": "biome"
@@ -243,6 +247,7 @@
 			}
 		},
 		"TSX": {
+			"format_on_save": "on",
 			"formatter": {
 				"language_server": {
 					"name": "biome"
@@ -250,20 +255,13 @@
 			}
 		},
 		"JSON": {
-			"formatter": {
-				"language_server": {
-					"name": "biome"
-				}
-			}
+			"format_on_save": "on"
 		},
 		"JSONC": {
-			"formatter": {
-				"language_server": {
-					"name": "biome"
-				}
-			}
+			"format_on_save": "on"
 		},
 		"CSS": {
+			"format_on_save": "on",
 			"formatter": {
 				"language_server": {
 					"name": "biome"
@@ -271,6 +269,7 @@
 			}
 		},
 		"GraphQL": {
+			"format_on_save": "on",
 			"formatter": {
 				"language_server": {
 					"name": "biome"
