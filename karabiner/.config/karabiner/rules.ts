@@ -81,8 +81,8 @@ const rules: KarabinerRules[] = [
     },
     // Hyper + left_alt shortcuts
     left_alt: {
-      e: app("Visual Studio Code"),
-      // e: app("Zed"), // hyper+e (e for editor) via Raycast
+      c: app("Visual Studio Code"),
+      e: app("Zed"),
       k: app("kitty"),
       w: app("Warp"),
       t: app("WezTerm"),
@@ -176,6 +176,12 @@ const rules: KarabinerRules[] = [
     // },
     home: {
       key_code: "f9",
+      modifiers: ["right_command"],
+      description: "Trigger VoiceInk",
+      delayMs: 250,
+    },
+    page_down: {
+      key_code: "f8",
       modifiers: ["right_command"],
       description: "Trigger VoiceInk",
       delayMs: 250,

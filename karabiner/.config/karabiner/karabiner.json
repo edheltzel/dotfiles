@@ -739,6 +739,33 @@
                 "description": "Open -a 'Visual Studio Code.app'",
                 "type": "basic",
                 "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_alt",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Zed.app'"
+                  }
+                ],
+                "description": "Open -a 'Zed.app'",
+                "type": "basic",
+                "from": {
                   "key_code": "e",
                   "modifiers": {
                     "mandatory": [
@@ -2081,6 +2108,41 @@
                   "to_if_canceled": [
                     {
                       "key_code": "f9",
+                      "modifiers": [
+                        "right_command"
+                      ]
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 250
+                },
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Trigger VoiceInk",
+            "manipulators": [
+              {
+                "description": "Double Tap page_down => f8 + right_command",
+                "from": {
+                  "key_code": "page_down",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "key_code": "page_down"
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "key_code": "f8",
                       "modifiers": [
                         "right_command"
                       ]
