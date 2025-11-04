@@ -16,7 +16,21 @@ dictionaries = ["en_us", "en_gb"]
 # Custom allowlist of words to ignore (case-insensitive)
 # Codebook will add words here when you select "Add to dictionary"
 # Default: []
-words = ["codebook", "rustc", "heltzel"]
+words = [
+  "codebook",
+  "rustc",
+  "heltzel",
+  "astro",
+  "esc",
+  "heltzel",
+  "homebrew",
+  "karabiner",
+  "keymap",
+  "keymaps",
+  "lualine",
+  "noremap",
+  "nvim",
+]
 
 # Words that should always be flagged as incorrect
 # Default: []
