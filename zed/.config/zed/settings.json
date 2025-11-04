@@ -10,23 +10,7 @@
 {
 	"hover_popover_enabled": true,
 	"context_servers": {
-		"mcp-server-nextjs": {
-			"source": "extension",
-			"enabled": true,
-			"settings": {}
-		},
-		"mcp-server-context7": {
-			"source": "extension",
-			"enabled": false,
-			"settings": {}
-		},
-		"mcp-server-github": {
-			"source": "extension",
-			"enabled": false,
-			"settings": {
-				"github_personal_access_token": "GITHUB_PERSONAL_ACCESS_TOKEN"
-			}
-		}
+		
 	},
 	"project_panel": {
 		"dock": "right",

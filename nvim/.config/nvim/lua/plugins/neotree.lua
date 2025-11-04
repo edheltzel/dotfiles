@@ -1,5 +1,6 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  enabled = false,
   opts = {
     window = {
       position = "right",
@@ -10,7 +11,7 @@ return {
     },
     filesystem = {
       filtered_items = {
-        visiable = true,
+        visible = true,
         hide_hidden = false,
         hide_dotfiles = false,
         hide_gitignored = false,

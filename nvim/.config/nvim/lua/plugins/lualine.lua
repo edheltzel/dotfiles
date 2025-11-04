@@ -29,7 +29,7 @@ return {
       return str
     end
 
-    -- fill space bweteen left-most components and middle of terminal
+    -- fill space between left-most components and middle of terminal
     local function fill_space()
       local used_space = 0
       for _, width in pairs(component_widths) do

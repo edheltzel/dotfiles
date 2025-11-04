@@ -105,9 +105,8 @@
 			"space b l": "pane::SplitAndMoveRight",
 			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
-			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent"}],
+			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
 			"cmd shift l": "editor::SelectAllMatches"
-
 		}
 	},
 	// Vim Motions
@@ -122,12 +121,12 @@
 		}
 	},
 	{
-	  "context": "VimControl && !menu && vim_mode != operator",
-	  "bindings": {
-	    "w": "vim::NextSubwordStart",
-	    "b": "vim::PreviousSubwordStart",
-	    "e": "vim::NextSubwordEnd",
-	    "g e": "vim::PreviousSubwordEnd"
-	  }
+		"context": "VimControl && !menu && vim_mode != operator",
+		"bindings": {
+			"w": "vim::NextSubwordStart",
+			"b": "vim::PreviousSubwordStart",
+			"e": "vim::NextSubwordEnd",
+			"g e": "vim::PreviousSubwordEnd"
+		}
 	}
 ]

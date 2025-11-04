@@ -1,5 +1,4 @@
-# Usq##############################################################
-# cspell: disable
+# ##############################################################
 # ~/.Brewfile - Software Installs for MacOS                   #
 #                                                             #
 # List of packages to be installed / updated via Homebrew     #
@@ -251,6 +250,7 @@ cask 'typinator'                   # Text expander - macOS only
 cask 'keka'                        # File archiver and extractor
 cask 'homerow'                     # keyboaard shortcuts for every button in macOS
 cask 'superwhisper' # AI dictation app
+cask ''
 # brew 'stats'                     # System stats in menubar
 
 # Keyboard+Mouse Hacks
