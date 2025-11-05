@@ -5,18 +5,16 @@ local mux = wezterm.mux
 
 local keys = {}
 
--- see ./keymaps.lua
+-- SEE ./keymaps.lua
 local keymaps = require("keymaps")
 
 local fish_path = "/opt/homebrew/bin/fish"
 
 local config = {}
--- Use config builder object if possible
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
---
--- Color Scheme - see: https://wezfurlong.org/wezmerm/colorschemes/index.html
+-- Color Scheme: -- see: https://wezfurlong.org/wezmerm/colorschemes/index.html
 -- see ./colors/eldritch.toml
 config.color_scheme = "Eldritch"
 
@@ -39,9 +37,10 @@ config.key_tables = keymaps.key_tables
 
 -- Nerd fonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Lilex", weight = "Regular", scale = 1.5 },
-  { family = "CommitMono", weight = "Regular", scale = 1.5 },
+  { family = "Lilex Nerd Font Mono", weight = "Regular", scale = 1.7 },
+  { family = "Lilex Nerd Font Mono", weight = "Regular", scale = 1.7 },
 })
+
 -- Window Config
 config.max_fps = 240
 -- config.window_background_opacity = 1
