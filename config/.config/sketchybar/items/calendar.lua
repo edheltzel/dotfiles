@@ -1,10 +1,10 @@
 local settings = require("settings")
-local colors = require("colors")
+local colors = require("config.config.wezterm.colors.rose-pine")
 
 -- Padding item required because of bracket
 sbar.add("item", {
   position = "right",
-  width = settings.group_paddings
+  width = settings.group_paddings,
 })
 
 local cal = sbar.add("item", {
@@ -12,8 +12,8 @@ local cal = sbar.add("item", {
     color = colors.white,
     padding_left = 8,
     font = {
-      size = 22.0
-    }
+      size = 22.0,
+    },
   },
   label = {
     color = colors.white,
@@ -21,8 +21,8 @@ local cal = sbar.add("item", {
     width = 95,
     align = "right",
     font = {
-      family = settings.icons
-    }
+      family = settings.icons,
+    },
   },
   position = "right",
   update_freq = 30,
@@ -31,8 +31,8 @@ local cal = sbar.add("item", {
   background = {
     color = colors.bg2,
     border_color = colors.rainbow[#colors.rainbow],
-    border_width = 1
-  }
+    border_width = 1,
+  },
 })
 
 -- Double border for calendar using a single item bracket
@@ -47,13 +47,13 @@ local cal = sbar.add("item", {
 -- Padding item required because of bracket
 sbar.add("item", {
   position = "right",
-  width = settings.group_paddings
+  width = settings.group_paddings,
 })
 
 cal:subscribe({ "mouse.clicked", "forced", "routine", "system_woke" }, function(env)
   cal:set({
     icon = "",
-    label = os.date("%m/%d %I:%M%p")
+    label = os.date("%m/%d %I:%M%p"),
   })
 
   if env.SENDER == "mouse.clicked" then
