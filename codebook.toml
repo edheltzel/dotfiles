@@ -1,5 +1,1 @@
-words = [
-    "deno",
-    "janky",
-    "wezterm",
-]
+words = ["deno", "janky", "ripgrep", "wezterm", "Heltzel"]
