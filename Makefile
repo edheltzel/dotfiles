@@ -1,4 +1,4 @@
-STOW_PACKAGES := dots git fish config karabiner nvim vscode zed local
+STOW_PACKAGES := dots git fish config karabiner vscode zed local
 YELLOW := \033[33m
 GREEN := \033[32m
 WHITE := \033[37m
