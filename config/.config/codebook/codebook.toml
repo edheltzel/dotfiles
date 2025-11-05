@@ -13,6 +13,7 @@ words = [
     "keymap",
     "keymaps",
     "lazygit",
+    "lilex",
     "lualine",
     "noremap",
     "nvim",
