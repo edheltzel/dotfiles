@@ -11,6 +11,7 @@
 local set = vim.keymap.set
 -- local del = vim.keymap.del
 local opts = { noremap = true, silent = true }
+local wk = require("which-key")
 local Util = require("lazyvim.util")
 
 local set_keymap = vim.api.nvim_set_keymap
@@ -40,10 +41,11 @@ set("i", "jk", "<Esc>", { desc = "Exit INSERT mode with jk" }) -- ESCAPE INSERT 
 set("i", "jj", "<Esc>", { desc = "Exit INSERT mode with jj" }) -- ESCAPE INSERT MODE
 set("t", "<Esc>", "<C-\\><C-n>") -- ESCAPE TERMINAL MODE
 
-set("v", "<D-C-Up>", "y`>p`<", { silent = true })
-set("n", "<D-C-Up>", "Vy`>p`<", { silent = true })
-set("v", "<D-C-Down>", "y`<kp`>", { silent = true })
-set("n", "<D-C-Down>", "Vy`<p`>", { silent = true })
+-- duplicate lines up/down
+set("v", "<A-C-Up>", "y`>p`<", { silent = true })
+set("n", "<A-C-Up>", "Vy`>p`<", { silent = true })
+set("v", "<A-C-Down>", "y`<kp`>", { silent = true })
+set("n", "<A-C-Down>", "Vy`<p`>", { silent = true })
 
 -- JUMP to BOL/EOL
 set("n", "gh", "^", { desc = "Jump beginning of line" })
@@ -66,26 +68,27 @@ set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 set("v", "<A-up>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
+-- fixes search/replace keybinding
+set("n", "<leader>sr", ":GrugFar<CR>", { desc = "Open GrugFar" })
+
 -- VSpaceCode-ish -------------------------------------------------------------------------------
 ---- save file
 set("n", "<leader>fs", ":w<CR>", {})
 ---
 ---- flash
+wk.add({ { "<leader>j", group = "Flash Jumps", icon = "⚡" } })
 set({ "n", "x", "o" }, "<leader>jj", function()
   require("flash").jump()
 end, { desc = "Jump to character" })
 ---
 ---- code folding
 set("n", "<ENTER>", "za", { desc = "Code Folding" })
----- tabs
-set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close active tab" })
-set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+
 ---- terminal
 set({ "n", "t" }, "<C-`>", function()
   Util.terminal(nil, { border = "none" })
 end, { desc = "Toggle terminal" })
+
 -- Move around splits
 set("n", "<leader>wj", "<C-w>j", { desc = "switch window right" })
 set("n", "<leader>wk", "<C-w>k", { desc = "switch window up" })
@@ -97,7 +100,7 @@ set("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 set("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 set("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 
--- BORDERLESS LAZYGIT
+---- BORDERLESS LAZYGIT
 set("n", "<leader>gg", function()
   Snacks.lazygit({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })
 end, { desc = "Lazygit (root dir)" })

@@ -1,64 +1,32 @@
-# List of dictionaries to use for spell checking
-# Default: ["en_us"]
-# Available dictionaries:
-#  - English: "en_us", "en_gb"
-#  - German: "de", "de_at", "de_ch"
-#  - Dutch: "nl_nl"
-#  - Spanish: "es"
-#  - French: "fr"
-#  - Italian: "it"
-#  - Portuguese (Brazil): "pt_br"
-#  - Russian: "ru"
-#  - Swedish: "sv"
-#  - Danish: "da"
-dictionaries = ["en_us", "en_gb"]
-
-# Custom allowlist of words to ignore (case-insensitive)
-# Codebook will add words here when you select "Add to dictionary"
-# Default: []
+dictionaries = [
+    "en_us",
+    "en_gb",
+]
 words = [
-  "codebook",
-  "rustc",
-  "heltzel",
-  "astro",
-  "esc",
-  "heltzel",
-  "homebrew",
-  "karabiner",
-  "keymap",
-  "keymaps",
-  "lualine",
-  "noremap",
-  "nvim",
+    "astro",
+    "borderless",
+    "codebook",
+    "esc",
+    "heltzel",
+    "homebrew",
+    "karabiner",
+    "keymap",
+    "keymaps",
+    "lazygit",
+    "lualine",
+    "noremap",
+    "nvim",
+    "rustc",
 ]
-
-# Words that should always be flagged as incorrect
-# Default: []
-flag_words = []
-
-# List of glob patterns for paths to ignore when spell checking
-# Default: []
-ignore_paths = ["target/**/*", "**/*.json", ".git/**/*", "node_modules/**/*"]
-
-# List of regex patterns to ignore when spell checking
-# Patterns are matched against each line of text, not individual words
-# Useful for domain-specific strings or patterns
-# Note: Backslashes must be escaped in TOML (use \\ instead of \)
-# Default: []
+ignore_paths = [
+    "target/**/*",
+    "**/*.json",
+    ".git/**/*",
+    "node_modules/**/*",
+]
 ignore_patterns = [
-  "\\b[ATCG]+\\b",        # DNA sequences
-  "\\d{3}-\\d{2}-\\d{4}", # Social Security Number format
-  "^[A-Z]{2,}$",          # All caps words like "HTML", "CSS"
-  "https?://[^\\s]+",     # URLs
+    '\b[ATCG]+\b',
+    '\d{3}-\d{2}-\d{4}',
+    "^[A-Z]{2,}$",
+    'https?://[^\s]+',
 ]
-
-# Minimum word length to check (words shorter than this are ignored)
-# Default: 3
-# Set to 0 to check all words including single letters
-# Set to 2 to check words with 2 or more characters
-min_word_length = 3
-
-# Whether to use global configuration (project config only)
-# Set to false to completely ignore global settings
-# Default: true
-use_global = true
