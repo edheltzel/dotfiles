@@ -23,7 +23,6 @@ local keys = {
   -- resize window/pane/splits interactively with cmd+k r
   { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
   { key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
-  { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
   { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
   { key = "n", mods = "LEADER", action = act.ShowTabNavigator },
   {
@@ -43,6 +42,10 @@ local keys = {
     }),
   },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
+  -- workspace switcher
+  { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
+  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1) },
+  { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1) },
   ---- END LEADER KEY
 
   -- Natural Editing
