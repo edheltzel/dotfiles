@@ -3,23 +3,13 @@ local act = wezterm.action
 
 -- Define the leader key -> ⌘+k
 local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1500 }
-
--- Define key mappings
 local keys = {
-  { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
+  ---- START LEADER KEY
+  -- copy mode with cmd+k c
+  { key = "c", mods = "LEADER", action = act.ActivateCopyMode }, -- copy mode
+  -- command palette with cmd+k space
   { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },
-
-  -- Natural Editing
-  { key = "Backspace", mods = "CMD", action = wezterm.action.SendString("\x15") }, -- Ctrl+U
-  { key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
-  { key = "h", mods = "CMD|CTRL", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
-  { key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
-  { key = "l", mods = "CMD|CTRL", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
-  --[[
-   This clears the screen without clearning the scrollback but make sure to
-   add a MacOS keyboard short for Wezterm to change the Clear scrollback to something
-   else. I use `ctrl+shift+k` for this. This is a workaround
-  --]]
+  -- clear the screen with cmd+k k
   {
     key = "k",
     mods = "LEADER",
@@ -28,40 +18,13 @@ local keys = {
       wezterm.action.SendKey({ key = "L", mods = "CTRL" }),
     }),
   },
-  { key = "=", mods = "CMD|CTRL", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
-  { key = "f", mods = "CMD|CTRL", action = wezterm.action.ToggleFullScreen },
-  --
-  -- Pane keybindings
-  { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "h", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Prev") },
-  { key = "l", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Next") },
-  { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
-  { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
-  { key = "w", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
-  --
-  --maximize pane ↓
+  --maximize pane with cmd+k z
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
+  -- resize window/pane/splits interactively with cmd+k r
   { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
-  --
-  -- resize window/pane/splits
-  {
-    key = "LeftArrow",
-    mods = "SUPER|CTRL",
-    action = act.AdjustPaneSize({ "Left", 5 }),
-  },
-  { key = "DownArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Down", 5 }) },
-  { key = "UpArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Up", 5 }) },
-  {
-    key = "RightArrow",
-    mods = "SUPER|CTRL",
-    action = act.AdjustPaneSize({ "Right", 5 }),
-  },
-  --
-  -- Tab keybindings
+  { key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
+  { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
   { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
-  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
   { key = "n", mods = "LEADER", action = act.ShowTabNavigator },
   {
     key = "e",
@@ -80,11 +43,48 @@ local keys = {
     }),
   },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
+  ---- END LEADER KEY
+
+  -- Natural Editing
+  { key = "Backspace", mods = "CMD", action = wezterm.action.SendString("\x15") }, -- Ctrl+U
+  { key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
+  { key = "h", mods = "CMD|CTRL", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
+  { key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
+  { key = "l", mods = "CMD|CTRL", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
+
+  -- close the current pane/tab/window
+  { key = "=", mods = "CMD|CTRL", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
+  { key = "f", mods = "CMD|CTRL", action = wezterm.action.ToggleFullScreen },
+
+  -- Pane keybindings
+  { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+  { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+  { key = "h", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Prev") },
+  { key = "l", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Next") },
+  { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
+  { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
+  --
+  -- resize window/pane/splits
+  {
+    key = "LeftArrow",
+    mods = "SUPER|CTRL",
+    action = act.AdjustPaneSize({ "Left", 5 }),
+  },
+  { key = "DownArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Down", 5 }) },
+  { key = "UpArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Up", 5 }) },
+  {
+    key = "RightArrow",
+    mods = "SUPER|CTRL",
+    action = act.AdjustPaneSize({ "Right", 5 }),
+  },
+  --
+  -- Tab keybindings
+  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
+  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
+
   { key = "[", mods = "SUPER|CTRL", action = act.MoveTabRelative(-1) },
   { key = "]", mods = "SUPER|CTRL", action = act.MoveTabRelative(1) },
 
-  -- Workspace
-  { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
   -- Reload config
   {
     key = ",",
