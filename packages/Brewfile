@@ -296,28 +296,28 @@ cask 'cyberduck'                      # Mount remote storage locations
 cask 'dbngin'                         # Local MySQL database management
 cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'local'                          # Local WordPress development
+cask 'obsidian'                       # PKM editor
 cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
-cask 'visual-studio-code'             # Code editor - Default
-cask 'obsidian'                       # PKM editor
+cask 'visual-studio-code'             # Code editor
+cask 'zed'                            # Code editor
 
 # RAG+CAG LLM
 cask 'block-goose'                    # On Machine AI Agent
-cask 'chatgpt'                        # AI chat
-cask 'claude'                         # AI chat
-cask 'ollama'                         # Local LLMs
-brew 'ollama'
+cask 'chatgpt'                        # Desktop client AI chat
+cask 'claude'                         # Desktop client AI chat
+
+brew 'ollama'                         # Local LLMs
+cask 'ollama'
 
 # Agentic Coding Tools - CLI based
-
 brew 'claude-code'
 brew 'gemini-cli'
 brew 'opencode'                       # Open source
 
 # Terminal emulators
 cask 'warp'                           # Rust
-cask 'ghostty'                        # Zig
 cask 'kitty'                          # Python+C
 cask 'wezterm@nightly'                # Rust
 
@@ -339,13 +339,13 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 # Mac App Store Installs
 mas 'Shapr3d', id: 1_091_675_654
 mas 'ColorSlurp', id: 1_287_239_339
-mas 'Amphetamine', id: 937_984_704
+# mas 'Amphetamine', id: 937_984_704
 mas 'Icon Slate', id: 439_697_913
 mas 'Invoice Ninja V5', id: 1_503_970_375
 mas 'Just Focus', id: 1_142_151_959
 mas 'Gifski', id: 1_351_639_930
-mas 'Qi FM', id: 147_969_619
-mas 'ColorNoise', id: 1_640_045_375
+# mas 'Qi FM', id: 147_969_619
+# mas 'ColorNoise', id: 1_640_045_375
 mas 'Todoist: To-Do List & Tasks', id: 585_829_637
-mas 'Toggl Track: Hours & Time Log', id: 1_291_898_086
+# mas 'Toggl Track: Hours & Time Log', id: 1_291_898_086
 # mas 'Xcode', id: 497799835
