@@ -1,10 +1,9 @@
 <h1 id="to-the-top">Mr EdHeltzel's Dotfiles</h1>
 
-### My setup for 🐠 Fish shell on  macOS - `v3`
+### My setup for 🐠 Fish shell on  MacOS - `v3`
 
 ![image](./local/.local/__repoImages/workspace-setup.png)
-
-Here, you'll find my dotfiles configuration for [fish shell][fishshell] on macOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment.
+Here, you'll find my dotfiles configuration for [fish shell][fishshell] on MacOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment.
 
 > [!WARNING]
 > Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
@@ -153,7 +152,7 @@ There are two options for managing packages with GNU Stow:
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
-  - A customized verions of [LazyVim](lazyVim) I call **NEO.ED**. (Primary Editor)
+  - **NEO.ED** - My customized Neovim config powered by [LazyVim](https://www.lazyvim.org/) now lives in its own repository: [github.com/edheltzel/neoed](https://github.com/edheltzel/neoed) (Primary Editor)
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
 - editors(editors/)
@@ -313,7 +312,7 @@ topgrade --only cargo
 </details>
 <details>
   <summary>SSH Agent</summary>
-  In the even when restarting macOS, the SSH agent will not be running, even though it is configured to run on login. A result of this is that Git will keep asking for your SSH Passphrase, to resolve this you will need to execute the following:
+  In the even when restarting MacOS, the SSH agent will not be running, even though it is configured to run on login. A result of this is that Git will keep asking for your SSH Passphrase, to resolve this you will need to execute the following:
 
 ```shell
 eval ssh-agent -s;
@@ -346,14 +345,14 @@ I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.
 To resolve this just run the following command in the terminal:
 
 ```shell
-launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
+luanchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
 ```
 
-This `luanchctl` will reenable media key, which in turn will control Spotify 🙂
+This `luanchctl` will re-enable media key, which in turn will control Spotify 🙂
 
 </details>
 <details>
-  <summary>Ethernet Backhaul</summary>
+  <summary>Ethernet backhaul</summary>
   Run the `flashEthernet` function to "flush" the Ethernet backhaul.
 
 ```shell
@@ -372,7 +371,8 @@ speedtest
 - [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
 - [x] update make unstow to include only the available stow package or all
-- [x] add customizations to lazyvim
+- [x] add customizations to LazyVim
+  - [x] move neovim config to its own repo
 - [x] Add vscode settings and symlink to dotfiles
 - [x] Add XDG Base Directory support
 - [x] update README

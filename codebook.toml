@@ -1,1 +1,9 @@
-words = ["deno", "janky", "ripgrep", "wezterm", "Heltzel"]
+words = [
+    "deno",
+    "heltzel",
+    "janky",
+    "killws",
+    "luanchctl",
+    "ripgrep",
+    "wezterm",
+]
