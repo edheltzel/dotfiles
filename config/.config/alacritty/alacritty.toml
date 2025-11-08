@@ -21,7 +21,7 @@ history = 25000
 [font]
 size = 16
 offset = { x = 1, y = 1 }
-normal = { family = "Lilex Nerd Font", style = "Regular" }
+normal = { family = "Iosevka Term", style = "Regular" }
 bold.style = "Regular"
 italic.style = "Italic"
 
