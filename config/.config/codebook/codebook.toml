@@ -6,6 +6,10 @@ words = [
     "astro",
     "borderless",
     "codebook",
+    "codeium",
+    "cterm",
+    "cursorcolumn",
+    "cursorline",
     "esc",
     "heltzel",
     "homebrew",
@@ -18,6 +22,10 @@ words = [
     "noremap",
     "nvim",
     "rustc",
+    "spelllang",
+    "swapfile",
+    "undodir",
+    "undofile",
 ]
 ignore_paths = [
     "target/**/*",
