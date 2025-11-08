@@ -32,7 +32,7 @@
 	"git_panel": {
 		"dock": "right"
 	},
-	"ui_font_size": 17.0,
+	"ui_font_size": 18.0,
 	"search": {
 		"include_ignored": true
 	},
@@ -107,9 +107,9 @@
 	"buffer_font_features": {
 		"calt": true
 	},
-	"buffer_font_size": 19,
-	"buffer_font_family": "Lilex Nerd Font Mono",
-	"ui_font_family": "Lilex Nerd Font Mono",
+	"buffer_font_size": 20.0,
+	"buffer_font_family": "Iosevka Term",
+	"ui_font_family": "Iosevka Term",
 	"ui_font_fallbacks": ["FiraCode Nerd Font Mono", "Cascadia Mono NF"],
 	"ui_font_features": {
 		"calt": true

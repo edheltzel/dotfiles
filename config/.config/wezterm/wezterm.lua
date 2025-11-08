@@ -35,10 +35,10 @@ config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
--- Nerd fonts are baked into Wezterm
 config.font = wezterm.font_with_fallback({
-  { family = "Lilex Nerd Font Mono", weight = "Regular", scale = 1.7 },
-  { family = "Lilex Nerd Font Mono", weight = "Regular", scale = 1.7 },
+  -- Nerd fonts are baked into Wezterm
+  { family = "Iosevka Term", weight = 400, scale = 1.74 },
+  { family = "Lilex", weight = 400, scale = 1.7 },
 })
 
 -- Window Config

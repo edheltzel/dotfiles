@@ -283,13 +283,15 @@ cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 cask 'sf-symbols'
 brew 'font-sf-pro'
 
-cask 'font-inter'                     # Design font
 cask 'font-geist'                     # Design font
+cask 'font-inter'                     # Design font
+cask 'font-space-grotesk'             # Design Font 
+cask 'font-iosevka'                   # Design Font
 cask 'font-lilex'                     # Design font
-cask 'font-lilex-nerd-font'           # Dev/Terminal Font - Primary
-cask 'font-commit-mono'               # Design font
-cask 'font-commit-mono-nerd-font'     # Dev/Terminal Font - Tertiary
-cask 'font-fira-code-nerd-font'       # Dev Font - Quaternary (4th)
+
+cask 'font-iosevka-nerd-font'         # Dev/Terminal Font
+cask 'font-lilex-nerd-font'           # Dev/Terminal Font
+cask 'font-fira-code-nerd-font'       # Dev/Terminal Font
 
 # Development Apps
 cask 'cyberduck'                      # Mount remote storage locations
