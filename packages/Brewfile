@@ -313,7 +313,7 @@ cask 'claude'                         # Desktop client AI chat
 brew 'ollama'                         # Local LLMs
 cask 'ollama'
 
-# Agentic Coding Tools - CLI based
+# AI Agent Coding Tools - CLI based
 brew 'claude-code'
 brew 'gemini-cli'
 brew 'opencode'                       # Open source
