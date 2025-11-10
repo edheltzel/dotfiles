@@ -24,6 +24,7 @@ words = [
     "lualine",
     "noremap",
     "nvim",
+    "qmk",
     "ripgrep",
     "rustc",
     "spelllang",
