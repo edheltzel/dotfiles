@@ -20,9 +20,9 @@ disabled = false
 
 ## start prompt ##
 [directory]
-format = "[󱐋](#7DCFFF)[$path]($style)[$read_only]($read_only_style) "
+format = "[⚡︎](#7DCFFF)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
-truncation_symbol = "…/"
+truncation_symbol = "󰿟"
 
 [git_branch]
 style = "#F141A8"
