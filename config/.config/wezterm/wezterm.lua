@@ -35,7 +35,7 @@ config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
 config.font = wezterm.font_with_fallback({
-  -- Nerd fonts are baked into Wezterm
+  --> Nerd fonts are baked into Wezterm
   {
     family = "Iosevka Nerd Font Mono",
     weight = 400,

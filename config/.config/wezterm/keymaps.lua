@@ -44,6 +44,11 @@ local keys = {
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   -- workspace switcher
   { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
+  -- debug overlay with cmd+k d
+  { key = "d", mods = "LEADER", action = act.ShowDebugOverlay },
+  -- split panes with cmd+k | (vertical) and cmd+k - (horizontal)
+  { key = "-", mods = "LEADER|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+  { key = "\\", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
   { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1) },
   { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1) },
   ---- END LEADER KEY
@@ -60,10 +65,8 @@ local keys = {
   { key = "f", mods = "CMD|CTRL", action = wezterm.action.ToggleFullScreen },
 
   -- Pane keybindings
-  { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "h", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Prev") },
-  { key = "l", mods = "SUPER|ALT|CTRL", action = act.ActivatePaneDirection("Next") },
+  -- { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+  -- { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
   --
@@ -93,6 +96,18 @@ local keys = {
     key = ",",
     mods = "SUPER|CTRL",
     action = wezterm.action.ReloadConfiguration,
+  },
+
+  -- Disable CTRL+SHIFT+L and CTRL+SHIFT+U to allow pass-through to Neovim
+  {
+    key = "L",
+    mods = "CTRL|SHIFT",
+    action = act.DisableDefaultAssignment,
+  },
+  {
+    key = "U",
+    mods = "CTRL|SHIFT",
+    action = act.DisableDefaultAssignment,
   },
 }
 
