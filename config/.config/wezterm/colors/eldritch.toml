@@ -1,76 +1,79 @@
 # Eldritch theme
+# https://github.com/eldritch-theme/eldritch
+# darker #171928
+# alt purple #7081D0
 [colors]
 ansi = [
   '#212337',
-  '#f16c75',
-  '#37f499',
-  '#f7c67f',
-  '#a48cf2',
-  '#f265b5',
-  '#04d1f9',
-  '#ebfafa',
+  '#F16C75',
+  '#37F499',
+  '#F7F67F',
+  '#A48CF2',
+  '#F265B5',
+  '#04D1F9',
+  '#EBFAFA',
 ]
-background = '#212337'
+background = '#171928'
 brights = [
-  '#323449',
-  '#f9515d',
-  '#37f499',
-  '#e9f941',
-  '#9071f4',
-  '#f265b5',
-  '#66e4fd',
+  '#212337',
+  '#F9515D',
+  '#37F499',
+  '#E9F941',
+  '#9071F4',
+  '#F265B5',
+  '#66E4FD',
   '#FFFFFF',
 ]
-compose_cursor = '#f7c67f'
-cursor_bg = '#37f499'
-cursor_border = '#04d1f9'
-cursor_fg = '#212337'
-foreground = '#ebfafa'
-scrollbar_thumb = '#37f499'
+compose_cursor = '#F7F67F'
+cursor_bg = '#37F499'
+cursor_border = '#04D1F9'
+cursor_fg = '#171928'
+foreground = '#EBFAFA'
+scrollbar_thumb = '#37F499'
 selection_bg = 'rgba(26.666668% 27.843138% 35.294117% 75%)'
 selection_fg = 'rgba(0% 0% 0% 0%)'
-split = '#a48cf2'
+split = '#7081D0'
 
 [colors.indexed]
 
 [colors.tab_bar]
-background = '#212337'
+background = '#171928'
 
 [colors.tab_bar.active_tab]
-bg_color = '#37f499'
-fg_color = '#212337'
+bg_color = '#37F499'
+fg_color = '#171928'
 intensity = 'Normal'
 italic = false
 strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.inactive_tab]
-bg_color = '#212337'
-fg_color = '#04d1f9'
+bg_color = '#171928'
+fg_color = '#04D1F9'
 intensity = 'Normal'
 italic = false
 strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.inactive_tab_hover]
-bg_color = '#37f499'
-fg_color = '#212337'
+bg_color = '#37F499'
+fg_color = '#171928'
 intensity = 'Normal'
 italic = true
 strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.new_tab]
-bg_color = '#212337'
-fg_color = '#ebfafa'
+bg_color = '#171928'
+fg_color = '#EBFAFA'
 intensity = 'Normal'
 italic = false
 strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.new_tab_hover]
-bg_color = '#37f499'
-fg_color = '#ebfafa'
+bg_color = '#37F499'
+fg_color = '#EBFAFA'
 intensity = 'Normal'
 italic = true
 strikethrough = false
