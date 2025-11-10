@@ -13,6 +13,7 @@ words = [
     "cursorline",
     "deno",
     "esc",
+    "figma",
     "heltzel",
     "homebrew",
     "karabiner",
@@ -22,6 +23,7 @@ words = [
     "lazyvim",
     "lilex",
     "lualine",
+    "neovim",
     "noremap",
     "nvim",
     "qmk",
@@ -32,6 +34,7 @@ words = [
     "swapfile",
     "undodir",
     "undofile",
+    "wez",
     "wezterm",
     "yazi",
 ]
