@@ -14,8 +14,7 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
--- Color Scheme: -- see: https://wezfurlong.org/wezmerm/colorschemes/index.html
--- see ./colors/eldritch.toml
+---- SEE ./colors/eldritch.toml
 config.color_scheme = "Eldritch"
 
 -- Settings
@@ -37,8 +36,8 @@ config.key_tables = keymaps.key_tables
 
 config.font = wezterm.font_with_fallback({
   -- Nerd fonts are baked into Wezterm
-  { family = "Iosevka Term", weight = 400, scale = 1.74 },
-  { family = "Lilex", weight = 400, scale = 1.7 },
+  { family = "Iosevka Nerd Font Mono", weight = 400, scale = 1.74 },
+  { family = "Lilex Nerd Font Mono", weight = 400, scale = 1.7 },
 })
 
 -- Window Config
@@ -75,11 +74,11 @@ wezterm.on("update-status", function(window, pane)
   -- Utilize this to display LDR or current key table name
   if window:active_key_table() then
     stat = window:active_key_table()
-    stat_color = "#BB9AF7"
+    stat_color = "#A48CF2"
   end
   if window:leader_is_active() then
     stat = wezterm.nerdfonts.md_lightning_bolt .. wezterm.nerdfonts.md_lightning_bolt
-    stat_color = "#7DCFFF"
+    stat_color = "#04D1F9"
   end
 
   local basename = function(s)
