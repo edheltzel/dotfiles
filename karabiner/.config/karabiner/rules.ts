@@ -61,8 +61,6 @@ const rules: KarabinerRules[] = [
   }),
   // Cording the Hyper Key with other modifiers
   ...createHyperSubLayers({
-    //---  Hyper + left_alt shortcuts
-    // left_alt: {},
     //---  Hyper + left_command shortcuts
     left_command: {
       comma: app("System Settings"),
@@ -77,16 +75,21 @@ const rules: KarabinerRules[] = [
       d: open("'raycast://script-commands/edit-dotfiles'"), // M2
       p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M7
       o: open("'raycast://extensions/jomifepe/bitwarden/authenticator'"), // M8
+      // Raycast Window Management
+      m: open("'raycast://extensions/raycast/window-management/maximize'"),
+      n: app("Notes"),
+
     },
     // Hyper + left_alt shortcuts
     left_alt: {
+      i: app("Invoice Ninja"),
       c: app("Visual Studio Code"),
       e: app("Zed"),
       k: app("kitty"),
       w: app("Warp"),
       t: app("WezTerm"),
-      m: app("Typora"),
       n: app("Obsidian"),
+      m: app("Typora"),
       b: app("Brave Browser"),
       g: app("Google Chrome"),
       f: app("Firefox"),
@@ -102,14 +105,12 @@ const rules: KarabinerRules[] = [
       b: app("BambuStudio"),
       d: app("Affinity"),
       f: app("Figma"),
-      // i: app("Adobe Illustrator"),
-      // i: app("Affinity Designer 2"),
+      i: app("Adobe Illustrator"),
       l: app("Affinity"),
+      n: app("Obsidian"),
       m: app("Messages"),
-      n: app("Invoice Ninja"),
       o: app("OrcaSlicer"),
       p: app("Adobe Photoshop 2025"),
-      // p: app("Affinity Photo 2"),
       r: app("Reminders"),
       s: app("Shapr3D"),
       t: app("Todoist"),
