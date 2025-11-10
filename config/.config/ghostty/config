@@ -11,7 +11,7 @@ config-file = "colors/eldritch"
 
 
 font-size = 18
-font-family = "Iosevka Term"
+font-family = "Lilex Nerd Font Mono"
 
 quick-terminal-position = "left"
 quick-terminal-animation-duration = 0
@@ -27,7 +27,7 @@ window-colorspace = "display-p3"
 window-inherit-font-size = false
 window-padding-x = 10
 window-save-state = always
-window-title-font-family = "Iosevka Termo"
+window-title-font-family = "Lilex Nerd Font Mono"
 
 mouse-hide-while-typing = true
 macos-non-native-fullscreen = true
