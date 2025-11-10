@@ -37,16 +37,19 @@ config.key_tables = keymaps.key_tables
 config.font = wezterm.font_with_fallback({
   --> Nerd fonts are baked into Wezterm
   {
-    family = "Iosevka Nerd Font Mono",
-    weight = 400,
-    scale = 1.74,
-    harfbuzz_features = { "calt=1", "clig=1", "liga=1" },
-  },
-  {
     family = "Lilex Nerd Font Mono",
     weight = 400,
     scale = 1.7,
-    harfbuzz_features = { "calt=1", "clig=1", "liga=1" },
+  },
+  {
+    family = "FiraCode Nerd Font Mono",
+    weight = 400,
+    scale = 1.7,
+  },
+  {
+    family = "JetBrainsMono Nerd Font Mono",
+    weight = 400,
+    scale = 1.7,
   },
 })
 -- Window Config
