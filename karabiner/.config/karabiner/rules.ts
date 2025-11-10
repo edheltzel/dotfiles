@@ -75,7 +75,6 @@ const rules: KarabinerRules[] = [
       ),
       t: open("'raycast://script-commands/run-topgrade'"), // M1
       d: open("'raycast://script-commands/edit-dotfiles'"), // M2
-      n: open("'raycast://customWindowManagementCommand?&name=1-FieldNotes'"), // M3
       p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M7
       o: open("'raycast://extensions/jomifepe/bitwarden/authenticator'"), // M8
     },
@@ -101,10 +100,9 @@ const rules: KarabinerRules[] = [
       0: app("Passwords"),
       3: app("Autodesk Fusion"),
       b: app("BambuStudio"),
-      d: app("Adobe InDesign 2025"),
-      // d: app("Affinity Publisher 2"),
+      d: app("Affinity"),
       f: app("Figma"),
-      i: app("Adobe Illustrator"),
+      // i: app("Adobe Illustrator"),
       // i: app("Affinity Designer 2"),
       l: app("Affinity"),
       m: app("Messages"),
