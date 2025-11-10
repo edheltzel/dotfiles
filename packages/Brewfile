@@ -133,15 +133,15 @@ brew 'php'                    # PHP
 brew 'postgresql@14'          # PostgreSQL database engine
 brew 'python'                 # Python 2
 brew 'python3'                # Python 3
-brew 'pipx'                   # Python - i dont use python
+brew 'pipx'                   # Python - i dont use python very often
 brew 'rbenv'                  # Ruby version manager
 brew 'redis'                  # Redis database engine
 brew 'ruby-build'             # Ruby build plugin for rbenv
 brew 'richgo'                 # Go test output formatter/opt/homebrew/bin/fish
 brew 'rust'                   # Rust language
 brew 'rustup-init'            # Rust version manager
-brew 'sass/sass/migrator'     # Sass mignration tool
-brew 'sass/sass/sass'         # Sass CSS preprocessor
+brew 'sass/sass/migrator'     # Sass migration tool
+brew 'sass/sass/sass'         # Sass CSS pre-processor
 brew 'sqlite'                 # SQLite database engine
 brew 'tdewolff/tap/minify'    # Minify HTML, CSS, JS, JSON, SVG, XML
 brew 'zig'                    # Zig language
@@ -155,6 +155,8 @@ brew 'container'          # Container CLI by Apple
 brew 'doctl'              # DigitalOcean CLI
 brew 's3cmd'              # S3 command line tool
 brew 'monolith'           # Save web pages as single files - Rust
+brew 'ghostscript'
+brew 'tectonic'
 
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
@@ -249,8 +251,8 @@ cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'typinator'                   # Text expander - macOS only
 cask 'keka'                        # File archiver and extractor
 cask 'homerow'                     # keyboaard shortcuts for every button in macOS
-cask 'superwhisper' # AI dictation app
-cask ''
+#cask 'superwhisper'                # AI dictation app
+
 # brew 'stats'                     # System stats in menubar
 
 # Keyboard+Mouse Hacks

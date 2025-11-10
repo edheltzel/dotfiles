@@ -1,9 +1,10 @@
 @antfu/ni
 @anthropic-ai/claude-code
 @bitwarden/cli
-@google/gemini-cli
-@vscode/vsce
 @fission-ai/openspec@latest
+@google/gemini-cli
+@mermaid-js/mermaid-cli
+@vscode/vsce
 opencode-ai
 cspell
 easy-sharing
