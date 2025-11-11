@@ -1,9 +1,11 @@
-function cd --description 'list all files after cd into a direcotry'
-    if test (count $argv) -gt 0
-        # open yazi with cd into a directory
-        builtin cd "$argv"; and yazi
+function cd --description 'list files in the current directory after changing to it'
+    if count $argv >/dev/null
+        # prevents recurse infinitely by using built-in cd
+        builtin cd "$argv"; and eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize --group-directories-first
+        # builtin cd "$argv"; and yazi
     else
-        # No arguments - go to home directory
-        builtin cd ~; and yazi
+        # builtin cd ~; and eza -lagh --icons --group-directories-first
+        builtin cd ~; and eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize --group-directories-first
+        # builtin cd "$argv"; and yazi
     end
 end
