@@ -30,8 +30,8 @@ ueberzug_offset = [0, 0, 0, 0]
 [opener]
 edit = [
   { run = '${EDITOR:-vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
-  { run = 'code %*', orphan = true, desc = "code", for = "windows" },
-  { run = 'code -w %*', block = true, desc = "code (block)", for = "windows" },
+  { run = 'zed %*', orphan = true, desc = "code", for = "windows" },
+  { run = 'zed -w %*', block = true, desc = "code (block)", for = "windows" },
 ]
 open = [
   { run = 'xdg-open "$1"', desc = "Open", for = "linux" },
@@ -248,4 +248,3 @@ sort_by = "none"
 sort_sensitive = false
 sort_reverse = false
 sort_translit = false
-

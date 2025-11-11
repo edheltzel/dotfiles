@@ -10,6 +10,7 @@
 			"ctrl-alt-p": "workspace::ToggleZoom",
 			"alt-home": "project_panel::CollapseAllEntries",
 			"alt-cmd-b": "workspace::ToggleLeftDock",
+			"alt-b": "workspace::ToggleLeftDock",
 			"cmd-b": "workspace::ToggleRightDock",
 			"space q q": "workspace::CloseWindow",
 			"alt-`": "workspace::NewCenterTerminal",
@@ -76,6 +77,13 @@
 					"reveal_target": "center"
 				}
 			],
+			"space a c d": [
+				"task::Spawn",
+				{
+					"task_name": "Claude Danger",
+					"reveal_target": "center"
+				}
+			],
 			"space a o": [
 				"task::Spawn",
 				{
@@ -117,7 +125,8 @@
 			"g l": "editor::MoveToEndOfLine",
 			"s": "vim::PushSneak",
 			"S": "vim::PushSneakBackward",
-			"cmd-shift-d": "editor::DuplicateLineDown"
+			"cmd-shift-d": "editor::DuplicateLineDown",
+			"ctrl-alt-d": "editor::DuplicateLineDown"
 		}
 	},
 	{

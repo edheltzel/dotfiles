@@ -2,7 +2,7 @@
 # Only load absolute essentials on startup
 
 # Essential variables and paths
-set -gx EDITOR nvim
+set -gx EDITOR zed
 set -gx TERMINAL kitty
 set -gx WARP_THEME_DIR "$HOME/.warp/themes"
 

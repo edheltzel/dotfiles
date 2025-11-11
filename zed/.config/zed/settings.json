@@ -29,7 +29,7 @@
 	"git_panel": {
 		"dock": "right"
 	},
-	"ui_font_size": 18.0,
+	"ui_font_size": 20.0,
 	"search": {
 		"include_ignored": true
 	},
@@ -125,9 +125,6 @@
 		"highlight_on_yank_duration": 250
 	},
 	"hover_popover_delay": 15000,
-	"features": {
-		"edit_prediction_provider": "supermaven"
-	},
 	"show_edit_predictions": true,
 	"edit_predictions": {
 		"mode": "subtle",
@@ -165,16 +162,16 @@
 			"model": "claude-sonnet-4.5"
 		},
 		"inline_assistant_model": {
-			"provider": "anthropic",
-			"model": "claude-sonnet-4.5"
+			"provider": "zed.dev",
+			"model": "grok-code-fast-1"
 		},
 		"commit_message_model": {
-			"provider": "google",
-			"model": "gemini-2.5-flash"
+			"provider": "zed.dev",
+			"model": "grok-code-fast-1"
 		},
 		"thread_summary_model": {
-			"provider": "google",
-			"model": "gemini-2.5-flash"
+			"provider": "zed.dev",
+			"model": "grok-code-fast-1"
 		}
 	},
 	"agent_servers": {
@@ -182,6 +179,10 @@
 			"command": "opencode",
 			"args": ["acp"]
 		}
+	},
+	"features": {
+		// "edit_prediction_provider": "supermaven"
+		"edit_prediction_provider": "zed"
 	},
 	"collaboration_panel": {
 		"button": false
@@ -280,16 +281,16 @@
 		}
 	},
 	"terminal": {
-		"font_weight": 500.0,
 		"env": {
-			"GIT_EDITOR_CONTEXT": "code"
+			"GIT_EDITOR_CONTEXT": "zed"
 		},
 		"blinking": "on",
 		"button": false,
 		"cursor_shape": "bar",
 		"copy_on_select": true,
-		"font_size": 19.0,
 		"font_family": "VictorMono Nerd Font Mono",
+		"font_size": 20.0,
+		"font_weight": 500.0,
 		"default_height": 500
 	}
 }
