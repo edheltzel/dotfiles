@@ -3,20 +3,19 @@
 	"name": "Eldritch",
 	"author": "Ed Heltzel <ed@rainyday.media>",
 	"description": "WIP",
-	// TODO: update color pallet
 	"themes": [
 		{
 			"name": "Eldritch",
 			"appearance": "dark",
 			"style": {
 				"accents": [
-					"#cbb0f766",
-					"#b9c3fc66",
-					"#86caee66",
-					"#aee1b266",
-					"#f0e0bd66",
-					"#f1ba9d66",
-					"#eb9ab766"
+					"#a48cf266",
+					"#7081d066",
+					"#04d1f966",
+					"#37f49966",
+					"#f1fc7966",
+					"#f7c67f66",
+					"#f265b566"
 				],
 				"background.appearance": "opaque",
 				"border": "#313244",

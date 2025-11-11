@@ -310,8 +310,8 @@ cask 'block-goose'                    # On Machine AI Agent
 cask 'chatgpt'                        # Desktop client AI chat
 cask 'claude'                         # Desktop client AI chat
 
-brew 'ollama'                         # Local LLMs
-cask 'ollama'
+# brew 'ollama'                         # Local LLMs
+# cask 'ollama'
 
 # AI Agent Coding Tools - CLI based
 brew 'claude-code'
