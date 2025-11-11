@@ -20,11 +20,15 @@ local keys = {
   },
   --maximize pane with cmd+k z
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
+  -- split panes with cmd+k | (vertical) and cmd+k - (horizontal)
+  { key = "-", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+  { key = "\\", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
   -- resize window/pane/splits interactively with cmd+k r
   { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
   { key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
   { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "n", mods = "LEADER", action = act.ShowTabNavigator },
+  { key = "T", mods = "LEADER", action = act.ShowTabNavigator },
+  { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   {
     key = "e",
     mods = "LEADER",
@@ -41,16 +45,49 @@ local keys = {
       end),
     }),
   },
-  { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
-  -- workspace switcher
-  { key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
-  -- debug overlay with cmd+k d
-  { key = "d", mods = "LEADER", action = act.ShowDebugOverlay },
-  -- split panes with cmd+k | (vertical) and cmd+k - (horizontal)
-  { key = "-", mods = "LEADER|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "\\", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+  -- Workspace Multiplexing switcher
+  {
+    key = "W",
+    mods = "LEADER",
+    action = act.PromptInputLine({
+      description = wezterm.format({
+        { Attribute = { Intensity = "Bold" } },
+        { Foreground = { AnsiColor = "Fuchsia" } },
+        { Text = "Create A Workspace..." },
+      }),
+      action = wezterm.action_callback(function(window, pane, line)
+        if line then
+          window:perform_action(
+            act.SwitchToWorkspace({
+              name = line,
+            }),
+            pane
+          )
+        end
+      end),
+    }),
+  },
+  {
+    key = "$",
+    mods = "LEADER",
+    action = act.PromptInputLine({
+      description = "Set Workspace Title...",
+      action = wezterm.action_callback(function(win, pane, line)
+        if line then
+          wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
+        end
+      end),
+    }),
+  },
+  {
+    key = "w",
+    mods = "LEADER",
+    action = act.ShowLauncherArgs({ title = "Workspaces", flags = "FUZZY|WORKSPACES" }),
+  },
   { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1) },
   { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1) },
+  -- debug overlay with cmd+k d
+  { key = "d", mods = "LEADER", action = act.ShowDebugOverlay },
   ---- END LEADER KEY
 
   -- Natural Editing
