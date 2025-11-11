@@ -290,7 +290,8 @@ cask 'font-space-grotesk'             # Design Font
 
 cask 'font-lilex-nerd-font'           # Dev/Terminal Font
 cask 'font-fira-code-nerd-font'       # Dev/Terminal Font
-cask 'font-jetbrains-mono-nerd-font'           # Dev/Terminal Font
+cask 'font-jetbrains-mono-nerd-font'  # Dev/Terminal Font
+cask 'font-victor-mono-nerd-font'     # Dev/Terminal Font
 
 # Development Apps
 cask 'cyberduck'                      # Mount remote storage locations
