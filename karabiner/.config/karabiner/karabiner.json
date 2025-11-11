@@ -2176,6 +2176,41 @@
             ]
           },
           {
+            "description": "Trigger ColorSlurp Picker",
+            "manipulators": [
+              {
+                "description": "Double Tap page_up => f13 + right_command",
+                "from": {
+                  "key_code": "page_up",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "key_code": "page_up"
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "key_code": "f13",
+                      "modifiers": [
+                        "right_command"
+                      ]
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 250
+                },
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Trigger VoiceInk",
             "manipulators": [
               {

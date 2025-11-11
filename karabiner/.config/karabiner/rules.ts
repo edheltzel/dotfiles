@@ -162,21 +162,16 @@ const rules: KarabinerRules[] = [
   //  Double-tap rules - define multiple keys with double-tap actions
   ...createDoubleTapRules({
     // Double-tap Tab => triggers Homerow app
-    // home: {
-    // 	key_code: "spacebar",
-    // 	modifiers: [
-    // 		"right_command",
-    // 		"right_option",
-    // 		"right_shift",
-    // 		"right_control",
-    // 	],
-    // 	description: "Trigger Homerow",
-    // 	delayMs: 250,
-    // },
     home: {
       key_code: "f9",
       modifiers: ["right_command"],
       description: "Trigger VoiceInk",
+      delayMs: 250,
+    },
+    page_up: {
+      key_code: "f13",
+      modifiers: ["right_command"],
+      description: "Trigger ColorSlurp Picker",
       delayMs: 250,
     },
     page_down: {

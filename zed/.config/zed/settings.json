@@ -1,288 +1,295 @@
 // Zed settings
 //
-// cSpell:disable
-// For infrmation on how to configure Zed, see the Zed
+// For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "hover_popover_enabled": true,
-  "context_servers": {},
-  "project_panel": {
-    "dock": "right",
-    "scrollbar": {
-      "show": "never"
-    }
-  },
-  "title_bar": {
-    "show_branch_icon": true
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "git": {
-    "blame": {
-      "show_avatar": true
-    }
-  },
-  "git_panel": {
-    "dock": "right"
-  },
-  "ui_font_size": 18.0,
-  "search": {
-    "include_ignored": true
-  },
-  "minimap": {
-    "show": "never"
-  },
-  "cursor_blink": true,
-  "use_system_path_prompts": false,
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 15000
-    }
-  },
-  "auto_indent_on_paste": true,
-  "linked_edits": true,
-  "use_on_type_format": true,
-  "ensure_final_newline_on_save": true,
-  "soft_wrap": "editor_width",
-  "file_types": {
-    "c": ["*.h"],
-    "plaintext": ["_redirects"],
-    // "nunjucks": ["*.webc"],
-    "html": ["*.svg"]
-  },
-  "ssh_connections": [
-    {
-      "host": "rdm2",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/phoenix_sysadmin/webapps/phoenix-ehiYVERG-staging/wp-content/themes/phoenix/./"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "peptide",
-      "args": [],
-      "projects": [
-        {
-          "paths": ["/home/pwsysadmin/webapps/peptideware/wp-content/themes/peptideware/./"]
-        }
-      ]
-    },
-    {
-      "host": "n8n",
-      "args": [],
-      "projects": []
-    }
-  ],
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "theme": {
-    "mode": "dark",
-    "light": "Rosé Pine Dawn",
-    "dark": "Eldritch"
-  },
-  "icon_theme": "Catppuccin Latte",
-  "experimental.theme_overrides": {
-    "players": [
-      {
-        "cursor": "#ea9a97ff",
-        "background": "#ea9a97ff",
-        "selection": "#ea9a972d"
-      }
-    ]
-  },
-  "base_keymap": "VSCode",
-  "buffer_font_features": {
-    "calt": true
-  },
-  "buffer_font_size": 20.0,
-  "buffer_font_family": "Iosevka Term",
-  "ui_font_family": "Iosevka Term",
-  "ui_font_fallbacks": ["FiraCode Nerd Font Mono", "Cascadia Mono NF"],
-  "ui_font_features": {
-    "calt": true
-  },
-  "unnecessary_code_fade": 0.5,
-  "vim_mode": true,
-  "vim": {
-    "toggle_relative_line_numbers": true,
-    "use_system_clipboard": "on_yank"
-  },
-  "hover_popover_delay": 15000,
-  "features": {
-    "edit_prediction_provider": "supermaven"
-  },
-  "show_edit_predictions": true,
-  "edit_predictions": {
-    "mode": "subtle",
-    "disabled_globs": [
-      "**/.git",
-      "**/.svn",
-      "**/.hg",
-      "**/CVS",
-      "**/.DS_Store",
-      "**/Thumbs.db",
-      "**/.classpath",
-      "**/.settings",
-      "**/.vscode",
-      "**/.idea",
-      "**/node_modules",
-      "**/.serverless",
-      "**/build",
-      "**/dist",
-      "**/coverage",
-      "**/.venv",
-      "**/__pycache__",
-      "**/.ropeproject",
-      "**/.pytest_cache",
-      "**/.ruff_cache"
-    ]
-  },
-  "agent": {
-    "dock": "left",
-    "default_width": 800,
-    "always_allow_tool_actions": true,
-    "play_sound_when_agent_done": true,
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4.5"
-    },
-    "inline_assistant_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4.5"
-    },
-    "commit_message_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    },
-    "thread_summary_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    }
-  },
-  "agent_servers": {
-    "OpenCode": {
-      "command": "opencode",
-      "args": ["acp"]
-    }
-  },
-  "collaboration_panel": {
-    "button": false
-  },
-  "auto_signature_help": true,
-  "preferred_line_length": 100,
-  "tab_size": 2,
-  "hard_tabs": true,
-  "lsp_document_colors": "background",
-  "indent_guides": {
-    "coloring": "indent_aware"
-  },
-  "message_editor": {
-    "auto_replace_emoji_shortcode": false
-  },
-  "notification_panel": {
-    "button": false
-  },
-  "show_call_status_icon": false,
-  "scrollbar": {
-    "show": "auto"
-  },
-  "tab_bar": {
-    "show_tab_bar_buttons": false,
-    "show": true,
-    "show_nav_history_buttons": false
-  },
-  "tabs": {
-    "file_icons": false,
-    "git_status": true
-  },
-  "languages": {
-    "Python": {
-      "language_servers": ["pyright", "ruff", "codebook"],
-      "format_on_save": "on"
-    },
-    "JavaScript": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      },
-      "format_on_save": "on"
-    },
-    "TypeScript": {
-      "format_on_save": "on",
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "TSX": {
-      "format_on_save": "on",
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "JSON": {
-      "format_on_save": "on"
-    },
-    "JSONC": {
-      "format_on_save": "on"
-    },
-    "CSS": {
-      "format_on_save": "on",
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "GraphQL": {
-      "format_on_save": "on",
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "PHP": {
-      "enable_language_server": true,
-      "tab_size": 4,
-      "format_on_save": "on",
-      "formatter": "language_server",
-      "show_completions_on_input": true
-    }
-  },
-  "lsp": {
-    "biome": {
-      "settings": {
-        "require_config_file": true
-      }
-    }
-  },
-  "terminal": {
-    "cursor_shape": "bar",
-    "env": {
-      "GIT_EDITOR_CONTEXT": "code"
-    },
-    "copy_on_select": true,
-    "button": false,
-    "blinking": "on",
-    "font_size": 19.0,
-    "font_family": "Iosevka Termo",
-    "default_height": 500
-  }
+	"hover_popover_enabled": true,
+	"context_servers": {},
+	"project_panel": {
+		"dock": "right",
+		"scrollbar": {
+			"show": "never"
+		}
+	},
+	"title_bar": {
+		"show_branch_icon": true
+	},
+	"outline_panel": {
+		"dock": "right"
+	},
+	"git": {
+		"blame": {
+			"show_avatar": true
+		}
+	},
+	"git_panel": {
+		"dock": "right"
+	},
+	"ui_font_size": 18.0,
+	"search": {
+		"include_ignored": true
+	},
+	"minimap": {
+		"show": "never"
+	},
+	"cursor_blink": true,
+	"use_system_path_prompts": false,
+	"autosave": {
+		"after_delay": {
+			"milliseconds": 15000
+		}
+	},
+	"auto_indent_on_paste": true,
+	"linked_edits": true,
+	"use_on_type_format": true,
+	"ensure_final_newline_on_save": true,
+	"soft_wrap": "editor_width",
+	"file_types": {
+		"c": ["*.h"],
+		"plaintext": ["_redirects"],
+		// "nunjucks": ["*.webc"],
+		"html": ["*.svg"]
+	},
+	"ssh_connections": [
+		{
+			"host": "rdm2",
+			"args": [],
+			"projects": [
+				{
+					"paths": [
+						"/home/phoenix_sysadmin/webapps/phoenix-ehiYVERG-staging/wp-content/themes/phoenix/./"
+					]
+				}
+			]
+		},
+		{
+			"host": "peptide",
+			"args": [],
+			"projects": [
+				{
+					"paths": ["/home/pwsysadmin/webapps/peptideware/wp-content/themes/peptideware/./"]
+				}
+			]
+		},
+		{
+			"host": "n8n",
+			"args": [],
+			"projects": []
+		}
+	],
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"theme": {
+		"mode": "dark",
+		"light": "Rosé Pine Dawn",
+		"dark": "Eldritch (Blur) [Heavy]"
+	},
+	"icon_theme": "Catppuccin Latte",
+	"experimental.theme_overrides": {
+		"players": [
+			{
+				"cursor": "#ea9a97ff",
+				"background": "#ea9a97ff",
+				"selection": "#ea9a972d"
+			}
+		]
+	},
+	"base_keymap": "VSCode",
+	"buffer_font_features": {
+		"calt": true
+	},
+	"buffer_font_size": 20.0,
+	"buffer_font_family": "VictorMono Nerd Font Mono",
+	"buffer_font_weight": 400,
+	"ui_font_family": "VictorMono Nerd Font Mono",
+	"ui_font_fallbacks": [
+		"Lilex Nerd Font Mono",
+		"FiraCode Nerd Font Mono",
+		"JetBrainsMono Nerd Font Mono"
+	],
+	"ui_font_features": {
+		"calt": true
+	},
+	"unnecessary_code_fade": 0.5,
+	"vim_mode": true,
+	"vim": {
+		"toggle_relative_line_numbers": true,
+		"use_smartcase_find": true,
+		"use_system_clipboard": "on_yank",
+		"highlight_on_yank_duration": 250
+	},
+	"hover_popover_delay": 15000,
+	"features": {
+		"edit_prediction_provider": "supermaven"
+	},
+	"show_edit_predictions": true,
+	"edit_predictions": {
+		"mode": "subtle",
+		"disabled_globs": [
+			"**/.git",
+			"**/.svn",
+			"**/.hg",
+			"**/CVS",
+			"**/.DS_Store",
+			"**/Thumbs.db",
+			"**/.classpath",
+			"**/.settings",
+			"**/.vscode",
+			"**/.idea",
+			"**/node_modules",
+			"**/.serverless",
+			"**/build",
+			"**/dist",
+			"**/coverage",
+			"**/.venv",
+			"**/__pycache__",
+			"**/.ropeproject",
+			"**/.pytest_cache",
+			"**/.ruff_cache"
+		]
+	},
+	"agent": {
+		"dock": "left",
+		"default_width": 800,
+		"always_allow_tool_actions": true,
+		"play_sound_when_agent_done": true,
+		"default_profile": "ask",
+		"default_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4.5"
+		},
+		"inline_assistant_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4.5"
+		},
+		"commit_message_model": {
+			"provider": "google",
+			"model": "gemini-2.5-flash"
+		},
+		"thread_summary_model": {
+			"provider": "google",
+			"model": "gemini-2.5-flash"
+		}
+	},
+	"agent_servers": {
+		"OpenCode": {
+			"command": "opencode",
+			"args": ["acp"]
+		}
+	},
+	"collaboration_panel": {
+		"button": false
+	},
+	"auto_signature_help": true,
+	"preferred_line_length": 100,
+	"tab_size": 2,
+	"hard_tabs": true,
+	"lsp_document_colors": "background",
+	"indent_guides": {
+		"coloring": "indent_aware"
+	},
+	"message_editor": {
+		"auto_replace_emoji_shortcode": false
+	},
+	"notification_panel": {
+		"button": false
+	},
+	"show_call_status_icon": false,
+	"scrollbar": {
+		"show": "auto"
+	},
+	"tab_bar": {
+		"show_tab_bar_buttons": false,
+		"show": true,
+		"show_nav_history_buttons": false
+	},
+	"tabs": {
+		"file_icons": false,
+		"git_status": true
+	},
+	"languages": {
+		"Python": {
+			"language_servers": ["pyright", "ruff", "codebook"],
+			"format_on_save": "on"
+		},
+		"JavaScript": {
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			},
+			"format_on_save": "on"
+		},
+		"TypeScript": {
+			"format_on_save": "on",
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			}
+		},
+		"TSX": {
+			"format_on_save": "on",
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			}
+		},
+		"JSON": {
+			"format_on_save": "on"
+		},
+		"JSONC": {
+			"format_on_save": "on"
+		},
+		"CSS": {
+			"format_on_save": "on",
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			}
+		},
+		"GraphQL": {
+			"format_on_save": "on",
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			}
+		},
+		"PHP": {
+			"enable_language_server": true,
+			"tab_size": 4,
+			"format_on_save": "on",
+			"formatter": "language_server",
+			"show_completions_on_input": true
+		}
+	},
+	"lsp": {
+		"biome": {
+			"settings": {
+				"require_config_file": true
+			}
+		}
+	},
+	"terminal": {
+		"font_weight": 500.0,
+		"env": {
+			"GIT_EDITOR_CONTEXT": "code"
+		},
+		"blinking": "on",
+		"button": false,
+		"cursor_shape": "bar",
+		"copy_on_select": true,
+		"font_size": 19.0,
+		"font_family": "VictorMono Nerd Font Mono",
+		"default_height": 500
+	}
 }
