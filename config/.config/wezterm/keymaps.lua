@@ -27,8 +27,8 @@ local keys = {
   { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
   { key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
   -- create new tab
-  { key = "T", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "t", mods = "LEADER", action = act.ShowTabNavigator },
+  { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+  { key = "T", mods = "LEADER", action = act.ShowTabNavigator },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   {
     key = "e",
