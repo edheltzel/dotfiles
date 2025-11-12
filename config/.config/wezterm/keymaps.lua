@@ -48,7 +48,7 @@ local keys = {
   },
   -- Workspace Multiplexing switcher
   {
-    key = "W",
+    key = "S",
     mods = "LEADER",
     action = act.PromptInputLine({
       description = wezterm.format({
@@ -81,7 +81,7 @@ local keys = {
     }),
   },
   {
-    key = "w",
+    key = "s",
     mods = "LEADER",
     action = act.ShowLauncherArgs({ title = "Workspaces", flags = "FUZZY|WORKSPACES" }),
   },
@@ -102,10 +102,6 @@ local keys = {
   { key = "=", mods = "CMD|CTRL", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
   { key = "f", mods = "CMD|CTRL", action = wezterm.action.ToggleFullScreen },
 
-  -- Pane keybindings
-  { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
-  { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
-
   -- resize window/pane/splits
   {
     key = "LeftArrow",
@@ -120,12 +116,14 @@ local keys = {
     action = act.AdjustPaneSize({ "Right", 6 }),
   },
   --
-  -- Tab keybindings
+  -- Tabs/Panes keybindings
   { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0) },
   { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2) },
+  { key = "[", mods = "SUPER|ALT", action = act.ActivateWindowRelative(1) },
+  { key = "]", mods = "SUPER|ALT", action = act.ActivateWindowRelative(-1) },
 
-  { key = "[", mods = "SUPER|CTRL", action = act.MoveTabRelative(0) },
-  { key = "]", mods = "SUPER|CTRL", action = act.MoveTabRelative(2) },
+  { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
+  { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
 
   -- Reload config
   {
