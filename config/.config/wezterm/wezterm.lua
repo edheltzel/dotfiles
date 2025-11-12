@@ -102,16 +102,16 @@ wezterm.on("update-status", function(window, pane)
   end
 
   -- Current working directory
-  local cwd = pane:get_current_working_dir()
-  if cwd then
-    if type(cwd) == "userdata" then
-      cwd = basename(cwd.file_path)
-    else
-      cwd = basename(cwd)
-    end
-  else
-    cwd = ""
-  end
+  -- local cwd = pane:get_current_working_dir()
+  -- if cwd then
+  --   if type(cwd) == "userdata" then
+  --     cwd = basename(cwd.file_path)
+  --   else
+  --     cwd = basename(cwd)
+  --   end
+  -- else
+  --   cwd = ""
+  -- end
 
   -- Current command
   local cmd = pane:get_foreground_process_name()

@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 -- Define the leader key -> ⌘+k
-local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1500 }
+local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1502 }
 local keys = {
   ---- START LEADER KEY
   -- copy mode with cmd+k c
@@ -18,16 +18,17 @@ local keys = {
       wezterm.action.SendKey({ key = "L", mods = "CTRL" }),
     }),
   },
-  --maximize pane with cmd+k z
+  --maximize pane w/ cmd+k z
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
-  -- split panes with cmd+k | (vertical) and cmd+k - (horizontal)
+  -- split panes w/ cmd+k | (vertical) and cmd+k - (horizontal)
   { key = "-", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
   { key = "\\", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  -- resize window/pane/splits interactively with cmd+k r
+  -- resize pane w/ cmd+k r -> use h,j,k,l to resize
   { key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
   { key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
-  { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "T", mods = "LEADER", action = act.ShowTabNavigator },
+  -- create new tab
+  { key = "T", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+  { key = "t", mods = "LEADER", action = act.ShowTabNavigator },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   {
     key = "e",
@@ -84,18 +85,18 @@ local keys = {
     mods = "LEADER",
     action = act.ShowLauncherArgs({ title = "Workspaces", flags = "FUZZY|WORKSPACES" }),
   },
-  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1) },
-  { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1) },
+  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(2) },
+  { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(0) },
   -- debug overlay with cmd+k d
   { key = "d", mods = "LEADER", action = act.ShowDebugOverlay },
   ---- END LEADER KEY
 
   -- Natural Editing
-  { key = "Backspace", mods = "CMD", action = wezterm.action.SendString("\x15") }, -- Ctrl+U
-  { key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
-  { key = "h", mods = "CMD|CTRL", action = wezterm.action.SendString("\x01") }, -- Ctrl+A
-  { key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
-  { key = "l", mods = "CMD|CTRL", action = wezterm.action.SendString("\x05") }, -- Ctrl+E
+  { key = "Backspace", mods = "CMD", action = wezterm.action.SendString("\x16") }, -- Ctrl+U
+  { key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("\x02") }, -- Ctrl+A
+  { key = "h", mods = "CMD|CTRL", action = wezterm.action.SendString("\x02") }, -- Ctrl+A
+  { key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("\x06") }, -- Ctrl+E
+  { key = "l", mods = "CMD|CTRL", action = wezterm.action.SendString("\x06") }, -- Ctrl+E
 
   -- close the current pane/tab/window
   { key = "=", mods = "CMD|CTRL", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
@@ -111,22 +112,22 @@ local keys = {
   {
     key = "LeftArrow",
     mods = "SUPER|CTRL",
-    action = act.AdjustPaneSize({ "Left", 5 }),
+    action = act.AdjustPaneSize({ "Left", 6 }),
   },
-  { key = "DownArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Down", 5 }) },
-  { key = "UpArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Up", 5 }) },
+  { key = "DownArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Down", 6 }) },
+  { key = "UpArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Up", 6 }) },
   {
     key = "RightArrow",
     mods = "SUPER|CTRL",
-    action = act.AdjustPaneSize({ "Right", 5 }),
+    action = act.AdjustPaneSize({ "Right", 6 }),
   },
   --
   -- Tab keybindings
-  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
-  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
+  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0) },
+  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2) },
 
-  { key = "[", mods = "SUPER|CTRL", action = act.MoveTabRelative(-1) },
-  { key = "]", mods = "SUPER|CTRL", action = act.MoveTabRelative(1) },
+  { key = "[", mods = "SUPER|CTRL", action = act.MoveTabRelative(0) },
+  { key = "]", mods = "SUPER|CTRL", action = act.MoveTabRelative(2) },
 
   -- Reload config
   {
