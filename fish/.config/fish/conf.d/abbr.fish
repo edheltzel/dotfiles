@@ -12,9 +12,6 @@ if status is-interactive
     # abbr --add cls '$DROPBOX/Clients'
 
     # Editors & Terminals
-    abbr --add ee 'e -r .'
-    abbr --add en 'e -n .'
-    abbr --add vim nvim
     abbr --add wez wezterm
     abbr --add kit kitten
     abbr --add co code
@@ -22,6 +19,9 @@ if status is-interactive
     abbr --add coo 'code -r .'
     abbr --add ze zed
     abbr --add zz 'zed -n .'
+    abbr --add nv nvim
+    abbr --add nvv 'nvim .'
+    abbr --add vim nvim
 
     abbr --add cargos 'cargo install --list'
     abbr --add config '~/.config/'

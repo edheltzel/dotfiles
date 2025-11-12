@@ -103,11 +103,9 @@ local keys = {
   { key = "f", mods = "CMD|CTRL", action = wezterm.action.ToggleFullScreen },
 
   -- Pane keybindings
-  -- { key = "d", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  -- { key = "d", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
-  --
+
   -- resize window/pane/splits
   {
     key = "LeftArrow",
