@@ -82,6 +82,41 @@ config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
 
+-- Custom tab titles: show CWD for inactive tabs, process name for active tab
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+  local pane = tab:active_pane()
+  local title = ""
+
+  if tab.is_active then
+    -- Show process name for active tab
+    local cmd = pane:get_foreground_process_name()
+    if cmd and cmd ~= "" then
+      title = basename(cmd)
+    else
+      title = "Terminal"
+    end
+  else
+    -- Show current working directory for inactive tabs
+    local cwd = pane:get_current_working_dir()
+    if cwd then
+      if type(cwd) == "userdata" then
+        title = basename(cwd.file_path)
+      else
+        title = basename(cwd)
+      end
+    else
+      title = "~"
+    end
+  end
+
+  -- Truncate if too long
+  if #title > max_width - 2 then
+    title = string.sub(title, 1, max_width - 5) .. "..."
+  end
+
+  return title
+end)
+
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
   local stat = window:active_workspace()
