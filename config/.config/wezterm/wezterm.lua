@@ -41,21 +41,6 @@ config.font = wezterm.font_with_fallback({
     weight = 500,
     scale = 1.7,
   },
-  {
-    family = "Lilex Nerd Font Mono",
-    weight = 400,
-    scale = 1.7,
-  },
-  {
-    family = "FiraCode Nerd Font Mono",
-    weight = 400,
-    scale = 1.7,
-  },
-  {
-    family = "JetBrainsMono Nerd Font Mono",
-    weight = 400,
-    scale = 1.7,
-  },
 })
 -- Window Config
 config.max_fps = 240

@@ -24,6 +24,7 @@ words = [
     "lilex",
     "lualine",
     "neovim",
+    "njk",
     "noremap",
     "nvim",
     "qmk",
