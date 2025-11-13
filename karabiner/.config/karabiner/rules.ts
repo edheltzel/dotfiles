@@ -67,17 +67,15 @@ const rules: KarabinerRules[] = [
       hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       equal_sign: open("'raycast://extensions/doist/todoist/create-task'"),
       home: open("'raycast://extensions/doist/todoist/home'"),
+      n: app("Notes"),
       // QMK Macros
       0: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
       t: open("'raycast://script-commands/run-topgrade'"), // M1
       d: open("'raycast://script-commands/edit-dotfiles'"), // M2
-      p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M7
-      o: open("'raycast://extensions/jomifepe/bitwarden/authenticator'"), // M8
-      // Raycast Window Management
-      m: open("'raycast://extensions/raycast/window-management/maximize'"),
-      n: app("Notes"),
+      p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M3
+      o: open("'raycast://extensions/jomifepe/bitwarden/authenticator'"), // M4
 
     },
     // Hyper + left_alt shortcuts
