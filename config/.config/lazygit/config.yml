@@ -32,29 +32,29 @@ gui:
     #   - "#ebfafa"
     #
     # ROSE PINE THEME
-    activeBorderColor:
-      - "#9893a5"
-      - bold
-    inactiveBorderColor:
-      - "#524f67"
-    searchingActiveBorderColor:
-      - "#ebbcba"
-      - bold
-    optionsTextColor:
-      - blue
-    selectedLineBgColor:
-      - "#524f67"
-    inactiveViewSelectedLineBgColor:
-      - bold
-    cherryPickedCommitFgColor:
-      - "#c4a7e7"
-    cherryPickedCommitBgColor:
-      - cyan
-    markedBaseCommitFgColor:
-      - blue
-    markedBaseCommitBgColor:
-      - "#f6c177"
-    unstagedChangesColor:
-      - "#eb6f92"
-    defaultFgColor:
-      - "#e0def4"
+    # activeBorderColor:
+    #   - "#9893a5"
+    #   - bold
+    # inactiveBorderColor:
+    #   - "#524f67"
+    # searchingActiveBorderColor:
+    #   - "#ebbcba"
+    #   - bold
+    # optionsTextColor:
+    #   - blue
+    # selectedLineBgColor:
+    #   - "#524f67"
+    # inactiveViewSelectedLineBgColor:
+    #   - bold
+    # cherryPickedCommitFgColor:
+    #   - "#c4a7e7"
+    # cherryPickedCommitBgColor:
+    #   - cyan
+    # markedBaseCommitFgColor:
+    #   - blue
+    # markedBaseCommitBgColor:
+    #   - "#f6c177"
+    # unstagedChangesColor:
+    #   - "#eb6f92"
+    # defaultFgColor:
+    #   - "#e0def4"
