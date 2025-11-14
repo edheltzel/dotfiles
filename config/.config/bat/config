@@ -5,7 +5,7 @@
 # Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
 # for a list of all available themes
 # Dark theme
---theme="rose-pine"
+--theme="eldritch"
 # --theme="OneHalfLight"
 # Light theme
 # --theme="OneHalfLight"
