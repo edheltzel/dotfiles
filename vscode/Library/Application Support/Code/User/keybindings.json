@@ -269,7 +269,7 @@
   {
     "title": "Duplicate Lines Down Action",
     "command": "editor.action.copyLinesDownAction",
-    "key": "cmd-shift-d",
+    "key": "ctrl+alt+d",
     "when": "editorTextFocus && !editorReadonly"
   },
   {

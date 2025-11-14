@@ -66,7 +66,7 @@
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "always"
+    "source.fixAll.biome": "explicit"
   },
   "editor.cursorSmoothCaretAnimation": "on",
   // "editor.cursorSurroundingLines": 99,
@@ -144,8 +144,11 @@
   "workbench.preferredDarkColorTheme": "Eldritch",
   "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
   "window.autoDetectColorScheme": false,
-  "workbench.colorTheme": "Eldritch",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "workbench.colorCustomizations": {
+    "[Tokyo Night]": {
+      "cursorColumnColor": "#1e202e",
+    },
     "[Eldritch]": {
       "cursorColumnColor": "#37f49910",
       "editor.background": "#18192B",
@@ -159,6 +162,48 @@
       "editorGroup.border": "#21202e",
       "editorGroupHeader.border": "#21202e",
       "breadcrumb.foreground": "#575279",
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "comment keyword.codetag.notation",
+            "comment.block.documentation keyword",
+            "comment.block.documentation storage.type.class"
+          ],
+          "settings": {
+            "foreground": "#bb9af7"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation entity.name.type.instance"
+          ],
+          "settings": {
+            "foreground": "#73daca",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation entity.name.type punctuation.definition.bracket"
+          ],
+          "settings": {
+            "foreground": "#bb9af7"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation variable"
+          ],
+          "settings": {
+            "foreground": "#e0af68",
+            "fontStyle": "italic"
+          }
+        }
+      ]
     }
   },
   "workbench.editor.pinnedTabSizing": "shrink",
@@ -472,7 +517,8 @@
     {
       "command": "workbench.action.toggleSidebarVisibility",
       "icon": "symbol-tree",
-      "keys": "e.e",
+      "keys": "E",
+      // "keys": "e.e",
       "name": "Toggle Sidebar",
       "type": "command"
     },
@@ -555,4 +601,5 @@
   "workbench.editor.highlightModifiedTabs": true,
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
+  "Lua.codeLens.enable": true,
 }

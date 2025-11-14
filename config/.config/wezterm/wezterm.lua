@@ -15,7 +15,8 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 ---- SEE ./colors/eldritch.toml
-config.color_scheme = "Eldritch"
+-- config.color_scheme = "Eldritch"
+config.color_scheme = "tokyonight_storm"
 
 -- Settings
 config.default_prog = { fish_path, "-l" }
@@ -39,6 +40,11 @@ config.font = wezterm.font_with_fallback({
   {
     family = "VictorMono Nerd Font Mono",
     weight = 500,
+    scale = 1.7,
+  },
+  {
+    family = "FiraCode Nerd Font Mono",
+    weight = 400,
     scale = 1.7,
   },
 })
