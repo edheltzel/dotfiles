@@ -222,7 +222,6 @@ cask 'orcaslicer'           # 3D Slicer
 # Media
 cask 'boom'                 # Audio enhancer
 cask 'kap'                  # Screen recorder
-cask 'keycastr'             # Display keystrokes
 brew 'pandoc'               # Universal file converter
 cask 'vlc'                  # Media player
 brew 'webp'                 # WebP image format
@@ -242,6 +241,8 @@ cask 'brainfm'              # BrainFM - Music streaming
 cask 'alt-tab'                     # Replace for cmd+tab more Windows like alt-tab
 brew 'm-cli'                       # All in one MacOS management CLI app: m help
 cask 'displaylink'                 # DisplayLink drivers
+cask 'betterdisplay'               # Display settings
+cask 'keycastr'                    # Display keystrokes
 cask 'onyx'                        # System maintenance
 cask 'transnomino'                 # A batch rename utility
 brew 'shortcat'                    # vim motions for MacOS
