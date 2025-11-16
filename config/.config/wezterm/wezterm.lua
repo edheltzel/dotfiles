@@ -29,11 +29,13 @@ config.hide_mouse_cursor_when_typing = true
 -- Audio
 config.audible_bell = "SystemBeep"
 
+-- keyboard stuff
 -- Load leader (super+k), maps and tables - see keymaps.lua
 config.leader = keymaps.leader
 config.keys = keymaps.keys
 config.key_tables = keymaps.key_tables
 
+-- Fonts
 config.font = wezterm.font_with_fallback({
   --> Nerd fonts are baked into Wezterm
   {
