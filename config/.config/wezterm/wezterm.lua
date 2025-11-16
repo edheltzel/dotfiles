@@ -1,10 +1,5 @@
 local wezterm = require("wezterm")
 
-local act = wezterm.action
-local mux = wezterm.mux
-
-local keys = {}
-
 -- SEE ./keymaps.lua
 local keymaps = require("keymaps")
 
@@ -14,9 +9,9 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
----- SEE ./colors/eldritch.toml
+-- Color scheme
 -- config.color_scheme = "Eldritch"
-config.color_scheme = "tokyonight_storm"
+config.color_scheme = "tokyonight_night"
 
 -- Settings
 config.default_prog = { fish_path, "-l" }
