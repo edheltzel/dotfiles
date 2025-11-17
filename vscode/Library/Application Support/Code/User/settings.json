@@ -144,7 +144,7 @@
   "workbench.preferredDarkColorTheme": "Eldritch",
   "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
   "window.autoDetectColorScheme": false,
-  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.colorTheme": "Rosé Pine",
   "workbench.colorCustomizations": {
     "[Tokyo Night]": {
       "cursorColumnColor": "#1e202e",

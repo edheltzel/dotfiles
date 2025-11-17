@@ -88,7 +88,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Rosé Pine Dawn",
-		"dark": "Tokyo Night Storm"
+		"dark": "Rosé Pine"
 	},
 	"icon_theme": "Catppuccin Latte",
 	"experimental.theme_overrides": {
