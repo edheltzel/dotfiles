@@ -10,6 +10,17 @@ config.default_prog = { fish_path, "-l" }
 -- -----------------------------------------------------------------------------
 -- Workspace Multiplexing
 -- -----------------------------------------------------------------------------
+local session_manager = require("wezterm-session-manager/session-manager")
+wezterm.on("save_session", function(window)
+  session_manager.save_state(window)
+end)
+wezterm.on("load_session", function(window)
+  session_manager.load_state(window)
+end)
+wezterm.on("restore_session", function(window)
+  session_manager.restore_state(window)
+end)
+
 config.unix_domains = {
   { name = "core" },
 }
@@ -115,6 +126,18 @@ wezterm.on("update-status", function(window, pane)
 
   local basename = function(s)
     return string.gsub(s, "(.*[/\\])(.*)", "%2")
+  end
+
+  -- Current working directory
+  local cwd = pane:get_current_working_dir()
+  if cwd then
+    if type(cwd) == "userdata" then
+      cwd = basename(cwd.file_path)
+    else
+      cwd = basename(cwd)
+    end
+  else
+    cwd = ""
   end
 
   -- Current command

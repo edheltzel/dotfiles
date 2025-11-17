@@ -71,6 +71,7 @@ if status is-interactive
     # AI Agents + Models
     abbr --add ccu 'bunx ccusage'
     abbr --add cc claude
+    abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add os openspec
     abbr --add oc opencode
     abbr --add tm task-master

@@ -12,4 +12,4 @@ source ~/.config/fish/functions/_backup_restore.fish
 # Terminal integration
 source ~/.config/fish/utils/iterm2_shell_integration.fish
 
-zoxide init fish | source
+# Zoxide lazy-loaded via z/zi functions for performance

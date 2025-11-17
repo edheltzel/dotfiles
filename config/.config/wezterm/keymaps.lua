@@ -68,7 +68,9 @@ local keys = {
       end),
     }),
   },
-  -- Workspace Multiplexing switcher
+  --- ---------------------------------------------------------------------------
+  -- Workspace and Multiplexing
+  --- ---------------------------------------------------------------------------
   {
     key = "a",
     mods = "LEADER",
@@ -79,23 +81,24 @@ local keys = {
   {
     key = "d",
     mods = "LEADER",
-    action = act.DetachDomain({ DomainName = "unix" }),
+    action = act.DetachDomain({ DomainName = "core" }),
     desc = "Detach from Core session",
   },
-  -- remote mux
   {
     mods = "LEADER",
-    key = "R",
-    action = act.AttachDomain("rdm2"),
-    desc = "Attach to Core session",
+    key = "$",
+    action = act({ EmitEvent = "save_session" }),
   },
   {
-    key = "X",
     mods = "LEADER",
-    action = act.DetachDomain({ DomainName = "rdm2" }),
-    desc = "Detach from Core session",
+    key = "L",
+    action = act({ EmitEvent = "load_session" }),
   },
-
+  {
+    key = "#",
+    mods = "LEADER",
+    action = act({ EmitEvent = "restore_session" }),
+  },
   {
     key = "S",
     mods = "LEADER",
@@ -125,7 +128,7 @@ local keys = {
     desc = "Switch Workspace",
   },
   {
-    key = "$",
+    key = "E",
     mods = "LEADER",
     action = act.PromptInputLine({
       description = "Set Workspace Title...",
@@ -160,13 +163,13 @@ local keys = {
   -- },
 
   -- Tabs/Panes keybindings
-  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0) },
-  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2) },
-  { key = "[", mods = "SUPER|ALT", action = act.ActivateWindowRelative(1) },
-  { key = "]", mods = "SUPER|ALT", action = act.ActivateWindowRelative(-1) },
+  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0), desc = "Previous Tab" },
+  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2), desc = "Next Tab" },
+  { key = "[", mods = "SUPER|ALT", action = act.ActivateWindowRelative(1), desc = "Previous Window" },
+  { key = "]", mods = "SUPER|ALT", action = act.ActivateWindowRelative(-1), desc = "Next Window" },
 
-  { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next") },
-  { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev") },
+  { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
+  { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
 
   -- Reload config
   {
