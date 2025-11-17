@@ -253,7 +253,6 @@ cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'typinator'                   # Text expander - macOS only
 cask 'keka'                        # File archiver and extractor
 cask 'homerow'                     # keyboaard shortcuts for every button in macOS
-#cask 'superwhisper'                # AI dictation app
 
 # brew 'stats'                     # System stats in menubar
 
@@ -319,6 +318,7 @@ cask 'claude'                         # Desktop client AI chat
 brew 'claude-code'
 brew 'gemini-cli'
 brew 'opencode'                       # Open source
+#cask 'superwhisper'                # AI dictation app
 
 # Terminal emulators
 cask 'warp'                           # Rust
