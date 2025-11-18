@@ -99,11 +99,13 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
    - [Generate a new ssh keys][GENSSHKEY]
    - `eval "$(ssh-agent -s)" && ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
-3. Clone repo
-   - `git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
+3. Clone repo with submodules
+   - `git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
+   - Or if already cloned: `cd ~/.dotfiles && git submodule update --init --recursive`
 4. Use the [`Makefile`](makefile) for the rest of the setup
    - `cd ~/.dotfiles && make install`
    - Alternatively, run install script `cd ~/.dotfiles && ./install.sh`
+   - **Note:** The install script automatically initializes git submodules
 5. After the setup is complete, run `upp` to execute topgrade and update everything.
    - `upp` is an alias for `topgrade` which is Update Packages _(this is what I say to myself)_.
    - The `topgrade.toml` includes `[post_commands]` for additional Brew and Node updates.
@@ -152,11 +154,16 @@ There are two options for managing packages with GNU Stow:
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
-  - **NEO.ED** - My customized Neovim config powered by [LazyVim](https://www.lazyvim.org/) now lives in its own repository: [github.com/edheltzel/neoed](https://github.com/edheltzel/neoed) (Primary Editor)
+  - **NEO.ED** - My customized Neovim config powered by [LazyVim](https://www.lazyvim.org/) managed as a **git submodule**: [github.com/edheltzel/neoed](https://github.com/edheltzel/neoed) (Primary Editor)
+  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/nvim/.config/nvim/`
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
-- editors(editors/)
-  - VSCode configurations, ie: keybindings, settings, and custom stuff.(Secondary Editor)
+- karabiner (karabiner/)
+  - Complex keyboard customizations with Hyper key chording
+- vscode (vscode/)
+  - VSCode configurations, ie: keybindings, settings, and custom stuff (Tertiary Editor)
+- zed (zed/)
+  - Zed editor config with Vim mode + AI integration (Secondary Editor)
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries and misc items that mean nothing, etc.
 
@@ -322,6 +329,38 @@ and ssh-add --apple-use-keychain
 <small>What this does: Starts the SSH agent and adds the SSH key to the keychain.</small>
 
 Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-agent) to manage the SSH agent, we only have to run this once.
+
+</details>
+<details>
+  <summary>Git Submodules</summary>
+
+This repo uses git submodules for managing the Neovim configuration. If you encounter issues with submodules:
+
+**Initialize/Update Submodules:**
+```shell
+cd ~/.dotfiles
+git submodule update --init --recursive
+```
+
+**Update Nvim Config to Latest:**
+```shell
+cd ~/.dotfiles/nvim/.config/nvim
+git pull origin master
+cd ~/.dotfiles
+git add nvim/.config/nvim
+git commit -m "Update neoed submodule"
+```
+
+**Clone with Submodules:**
+```shell
+git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles
+```
+
+**If Submodule is Empty:**
+```shell
+git submodule deinit -f nvim/.config/nvim
+git submodule update --init --recursive
+```
 
 </details>
 <h4 id="troubleshoot-macos">MacOS<a href="#to-the-top">↑</a></h4>
