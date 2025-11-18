@@ -551,6 +551,33 @@
               {
                 "to": [
                   {
+                    "shell_command": "open -a 'Notes.app'"
+                  }
+                ],
+                "description": "Open -a 'Notes.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_control",
+                      "right_command",
+                      "right_option",
+                      "right_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_left_command",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open 'raycast://script-commands/run-topgrade'"
                   }
                 ],
@@ -639,60 +666,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "o",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/raycast/window-management/maximize'"
-                  }
-                ],
-                "description": "Open 'raycast://extensions/raycast/window-management/maximize'",
-                "type": "basic",
-                "from": {
-                  "key_code": "m",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Notes.app'"
-                  }
-                ],
-                "description": "Open -a 'Notes.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "n",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -2141,10 +2114,10 @@
             ]
           },
           {
-            "description": "Trigger VoiceInk",
+            "description": "Trigger SuperWhisper",
             "manipulators": [
               {
-                "description": "Double Tap home => f9 + right_command",
+                "description": "Double Tap home => f8 + right_command",
                 "from": {
                   "key_code": "home",
                   "modifiers": {
@@ -2161,7 +2134,7 @@
                   ],
                   "to_if_canceled": [
                     {
-                      "key_code": "f9",
+                      "key_code": "f8",
                       "modifiers": [
                         "right_command"
                       ]
@@ -2197,41 +2170,6 @@
                   "to_if_canceled": [
                     {
                       "key_code": "f13",
-                      "modifiers": [
-                        "right_command"
-                      ]
-                    }
-                  ]
-                },
-                "parameters": {
-                  "basic.to_delayed_action_delay_milliseconds": 250
-                },
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Trigger VoiceInk",
-            "manipulators": [
-              {
-                "description": "Double Tap page_down => f8 + right_command",
-                "from": {
-                  "key_code": "page_down",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to_delayed_action": {
-                  "to_if_invoked": [
-                    {
-                      "key_code": "page_down"
-                    }
-                  ],
-                  "to_if_canceled": [
-                    {
-                      "key_code": "f8",
                       "modifiers": [
                         "right_command"
                       ]
