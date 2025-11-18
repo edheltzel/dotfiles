@@ -161,7 +161,12 @@ local keys = {
   --   mods = "SUPER|CTRL",
   --   action = act.AdjustPaneSize({ "Right", 6 }),
   -- },
-
+  {
+    key = "T",
+    mods = "LEADER",
+    action = act.ShowTabNavigator,
+    desc = "Tab Navigator",
+  },
   -- Tabs/Panes keybindings
   { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0), desc = "Previous Tab" },
   { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2), desc = "Next Tab" },

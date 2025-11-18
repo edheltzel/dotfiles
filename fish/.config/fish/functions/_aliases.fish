@@ -41,7 +41,7 @@ alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
-alias neoed 'cd ~/Developer/nvim/.config/nvim'
+alias neoed 'cd ~/.dotfiles/nvim/.config/nvim'
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
