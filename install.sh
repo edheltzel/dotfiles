@@ -11,6 +11,9 @@ set -e
 install_xcode
 install_git
 
+# Initialize and update git submodules
+git submodule update --init --recursive
+
 # Create the ~/Developer directory if it does not exist
 if [ ! -d "$PROJECTS_DIR" ]; then
   mkdir -p "$PROJECTS_DIR"
@@ -50,7 +53,7 @@ mainInstall() {
     source ./packages/packages.sh
 
     # Install Stow packages
-    declare -a stow_dirs=("dots" "git" "fish" "nvim" "config" "local" "warp")
+    declare -a stow_dirs=("dots" "git" "fish" "config" "karabiner" "nvim" "vscode" "zed" "local")
     for dir in "${stow_dirs[@]}"; do
       stow "$dir"
     done
