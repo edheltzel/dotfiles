@@ -32,14 +32,13 @@ config.font = wezterm.font_with_fallback({
   {
     family = "VictorMono Nerd Font Mono",
     weight = 500,
-    scale = 1.7,
   },
   {
     family = "FiraCode Nerd Font Mono",
     weight = 400,
-    scale = 1.7,
   },
 })
+config.font_size = 20.0
 config.color_scheme = "Eldritch"
 local colorRed = "#F7768E"
 local colorPurple = "#A48CF2"
