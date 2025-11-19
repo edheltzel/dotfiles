@@ -81,7 +81,8 @@ const rules: KarabinerRules[] = [
     // Hyper + left_alt shortcuts
     left_alt: {
       i: app("Invoice Ninja"),
-      c: app("Visual Studio Code"),
+      c: app("Antigravity"),
+      r: app("Visual Studio Code"),
       e: app("Zed"),
       k: app("kitty"),
       w: app("Warp"),
@@ -197,6 +198,15 @@ fs.writeFileSync(
                 is_keyboard: true,
                 product_id: 480,
                 vendor_id: 13364,
+              },
+              manipulate_caps_lock_led: false,
+            },
+            {
+              identifiers: {
+                // Dygma Defy keyboard
+                is_keyboard: true,
+                product_id: 18,
+                vendor_id: 13807,
               },
               manipulate_caps_lock_led: false,
             },
