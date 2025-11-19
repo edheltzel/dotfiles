@@ -50,3 +50,6 @@ if status is-interactive
         starship init fish | source
     end
 end
+
+# Added by Antigravity
+fish_add_path /Users/ed/.antigravity/antigravity/bin
