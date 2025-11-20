@@ -2,8 +2,11 @@
   "[css][scss][less]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
+  "[django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks]": {
     "editor.defaultFormatter": "monosans.djlint"
+  },
+  "[php][html][twig]": {
+    "editor.defaultFormatter": "christian-kohler.path-intellisense"
   },
   "[javascript][javascriptreact][vue]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -354,7 +357,83 @@
   "vim.highlightedyank.color": "#f265b530",
   "vim.highlightedyank.enable": true,
   "vim.textwidth": 100,
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
     {
       "args": {
         "after": [
@@ -406,9 +485,17 @@
       ]
     }
   ],
-  "vim.smartRelativeLine": true,
-  "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
     {
       "before": [
         "<space>"

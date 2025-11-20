@@ -79,6 +79,11 @@
 			"host": "n8n",
 			"args": [],
 			"projects": []
+		},
+		{
+			"host": "pfe",
+			"args": [],
+			"projects": []
 		}
 	],
 	"telemetry": {
@@ -88,7 +93,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Rosé Pine Dawn",
-		"dark": "Rosé Pine"
+		"dark": "Tokyo Night"
 	},
 	"icon_theme": "Catppuccin Latte",
 	"experimental.theme_overrides": {
@@ -158,12 +163,12 @@
 		"play_sound_when_agent_done": true,
 		"default_profile": "ask",
 		"default_model": {
-			"provider": "anthropic",
-			"model": "claude-sonnet-4.5"
+			"provider": "zed.dev",
+			"model": "grok-code-fast-1"
 		},
 		"inline_assistant_model": {
 			"provider": "zed.dev",
-			"model": "grok-code-fast-1"
+			"model": "claude-sonnet-4-5"
 		},
 		"commit_message_model": {
 			"provider": "zed.dev",
