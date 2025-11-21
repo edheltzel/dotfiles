@@ -434,10 +434,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"
+                    "shell_command": "open -a 'Bazecor.app'"
                   }
                 ],
-                "description": "Open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
+                "description": "Open -a 'Bazecor.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "0",
@@ -751,10 +751,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Bazecor.app'"
+                    "shell_command": "open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"
                   }
                 ],
-                "description": "Open -a 'Bazecor.app'",
+                "description": "Open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
                 "type": "basic",
                 "from": {
                   "key_code": "0",
@@ -805,67 +805,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Antigravity.app'"
+                    "shell_command": "open -a 'Claude.app'"
                   }
                 ],
-                "description": "Open -a 'Antigravity.app'",
+                "description": "Open -a 'Claude.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "c",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Visual Studio Code.app'"
-                  }
-                ],
-                "description": "Open -a 'Visual Studio Code.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "r",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Zed.app'"
-                  }
-                ],
-                "description": "Open -a 'Zed.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "e",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -893,33 +839,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "k",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Warp.app'"
-                  }
-                ],
-                "description": "Open -a 'Warp.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "w",
                   "modifiers": {
                     "mandatory": [
                       "right_control",
@@ -1001,195 +920,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "m",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Brave Browser.app'"
-                  }
-                ],
-                "description": "Open -a 'Brave Browser.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "b",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Google Chrome.app'"
-                  }
-                ],
-                "description": "Open -a 'Google Chrome.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "g",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Firefox.app'"
-                  }
-                ],
-                "description": "Open -a 'Firefox.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "f",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Safari Technology Preview.app'"
-                  }
-                ],
-                "description": "Open -a 'Safari Technology Preview.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "p",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Safari.app'"
-                  }
-                ],
-                "description": "Open -a 'Safari.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "s",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Vivaldi.app'"
-                  }
-                ],
-                "description": "Open -a 'Vivaldi.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "v",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_alt",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Zen.app'"
-                  }
-                ],
-                "description": "Open -a 'Zen.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "z",
                   "modifiers": {
                     "mandatory": [
                       "right_control",

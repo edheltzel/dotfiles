@@ -69,9 +69,7 @@ const rules: KarabinerRules[] = [
       home: open("'raycast://extensions/doist/todoist/home'"),
       n: app("Notes"),
       // QMK Macros
-      0: open(
-        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
-      ),
+      0: app("Bazecor"),
       t: open("'raycast://script-commands/run-topgrade'"), // M1
       d: open("'raycast://script-commands/edit-dotfiles'"), // M2
       p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M3
@@ -80,23 +78,16 @@ const rules: KarabinerRules[] = [
     },
     // Hyper + left_alt shortcuts
     left_alt: {
-      0: app("Bazecor"),
+      0: open(
+        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
+      ),
       i: app("Invoice Ninja"),
-      c: app("Antigravity"),
-      r: app("Visual Studio Code"),
-      e: app("Zed"),
+      c: app("Claude"),
       k: app("kitty"),
-      w: app("Warp"),
       t: app("WezTerm"),
       n: app("Obsidian"),
       m: app("Typora"),
-      b: app("Brave Browser"),
-      g: app("Google Chrome"),
-      f: app("Firefox"),
-      p: app("Safari Technology Preview"),
-      s: app("Safari"),
-      v: app("Vivaldi"),
-      z: app("Zen"),
+
     },
     // Hyper + a (app) shortcuts
     a: {
