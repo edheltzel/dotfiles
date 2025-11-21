@@ -80,6 +80,7 @@ const rules: KarabinerRules[] = [
     },
     // Hyper + left_alt shortcuts
     left_alt: {
+      0: app("Bazecor"),
       i: app("Invoice Ninja"),
       c: app("Antigravity"),
       r: app("Visual Studio Code"),
@@ -209,6 +210,7 @@ fs.writeFileSync(
                 vendor_id: 13807,
               },
               manipulate_caps_lock_led: false,
+              treat_as_built_in_keyboard: true,
             },
             {
               identifiers: {
@@ -216,6 +218,16 @@ fs.writeFileSync(
                 is_pointing_device: true,
                 product_id: 64160,
                 vendor_id: 9639,
+              },
+              ignore: false,
+            },
+            {
+              identifiers: {
+                // Dygma Defy keyboard + pointing device (trackball)
+                is_keyboard: true,
+                is_pointing_device: true,
+                product_id: 18,
+                vendor_id: 13807,
               },
               ignore: false,
             },
