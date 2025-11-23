@@ -101,7 +101,7 @@ const rules: KarabinerRules[] = [
       n: app("Obsidian"),
       m: app("Messages"),
       o: app("OrcaSlicer"),
-      p: app("Adobe Photoshop 2025"),
+      p: app("Adobe Photoshop 2026"),
       r: app("Reminders"),
       s: app("Shapr3D"),
       t: app("Todoist"),

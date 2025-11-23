@@ -1257,10 +1257,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Adobe Photoshop 2025.app'"
+                    "shell_command": "open -a 'Adobe Photoshop 2026.app'"
                   }
                 ],
-                "description": "Open -a 'Adobe Photoshop 2025.app'",
+                "description": "Open -a 'Adobe Photoshop 2026.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "p",
