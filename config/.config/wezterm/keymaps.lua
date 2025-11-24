@@ -170,8 +170,8 @@ local keys = {
   -- Tabs/Panes keybindings
   { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0), desc = "Previous Tab" },
   { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2), desc = "Next Tab" },
-  { key = "[", mods = "SUPER|ALT", action = act.ActivateWindowRelative(1), desc = "Previous Window" },
-  { key = "]", mods = "SUPER|ALT", action = act.ActivateWindowRelative(-1), desc = "Next Window" },
+  { key = "[", mods = "SUPER|CTRL|ALT", action = act.ActivateWindowRelative(1), desc = "Previous Window" },
+  { key = "]", mods = "SUPER|CTRL|ALT", action = act.ActivateWindowRelative(-1), desc = "Next Window" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },

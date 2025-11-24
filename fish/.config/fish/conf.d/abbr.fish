@@ -59,12 +59,13 @@ if status is-interactive
     abbr --add omp oh-my-posh
     abbr --add newcode 'npx --package yo --package generator-code -- yo code'
     abbr --add confi confetti
-    abbr --add tmux zellij
+    abbr --add ax 'tmux at -t base'
     abbr --add amux 'tmux at -t base'
+    abbr --add nx 'tmux new -s "base"'
+    abbr --add kx 'tmux kill-session -t'
     abbr --add tkill 'tmux kill-session -t'
     abbr --add nmux 'tmux new -s "base"'
     abbr --add yy yazi
-    abbr --add yz yazi
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress
     abbr --add lzip ouch list
