@@ -8,6 +8,12 @@
           "value" : "/Applications/BambuStudio.app"
         },
         {
+          "key" : "c",
+          "label" : "🤖",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
+        },
+        {
           "actions" : [
             {
               "key" : "0",
@@ -18,11 +24,6 @@
               "key" : "a",
               "type" : "application",
               "value" : "/Applications/Affinity.app"
-            },
-            {
-              "key" : "c",
-              "type" : "application",
-              "value" : "/Applications/Claude.app"
             },
             {
               "key" : "f",
@@ -41,7 +42,7 @@
             }
           ],
           "key" : "d",
-          "label" : "Design Apps",
+          "label" : "🖌️Design Apps",
           "type" : "group"
         },
         {
@@ -264,11 +265,16 @@
           "label" : "Neovim",
           "type" : "command",
           "value" : "open -na WezTerm --args start -- nvim"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/WezTerm.app"
         }
       ],
-      "iconPath" : "apple.terminal.on.rectangle",
+      "iconPath" : "apple.terminal",
       "key" : "e",
-      "label" : "Text Editors",
+      "label" : "Editors",
       "type" : "group"
     },
     {
