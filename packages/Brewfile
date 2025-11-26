@@ -261,6 +261,7 @@ brew 'qmk/qmk/qmk'                 # Keyboard firmware
 cask 'via'                         # Keyboard configuration desktop client
 cask 'vial'                        # Keyboard configuration desktop client
 cask 'karabiner-elements'          # Keyboard customization tool
+cask 'leader-key'
 
 # Menu Bar Hacks
 # brew 'sketchybar'                 # status bar replacement for MacOS - paired with Aerospace

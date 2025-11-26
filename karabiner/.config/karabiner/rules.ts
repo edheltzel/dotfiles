@@ -19,9 +19,12 @@ import { app, createHyperSubLayers, open, shell } from "./utils";
 const rules: KarabinerRules[] = [
   // see types.ts to configure Hyper key
   createHyperKeyRule(),
+
+  // ------------------------------------------------------------------------
   // Vim-style navigation with Hyper key
   // Maps h,j,k,l to arrow keys
   // Additional mappings for page navigation (u,i,o,p)
+  // ------------------------------------------------------------------------
   createHyperNavigationRule({
     h: "left_arrow",
     j: "down_arrow",
@@ -33,8 +36,11 @@ const rules: KarabinerRules[] = [
     o: "home",
     p: "end",
   }),
+
+  // ------------------------------------------------------------------------
   // Mouse button configuration for Safari, Vivaldi, and Zen
   // Maps mouse buttons 4 and 5 to back/forward navigation
+  // ------------------------------------------------------------------------
   ...createMouseNavigationRules(
     [
       {
@@ -50,122 +56,98 @@ const rules: KarabinerRules[] = [
     ],
     [BROWSER_BUNDLES.SAFARI, BROWSER_BUNDLES.VIVALDI, BROWSER_BUNDLES.ZEN],
   ),
-  // Type-safe mouse button 3 configuration for Zen browser
-  // Maps button 3 to button 1 + left alt (Glance feature)
-  createMouseButtonRule({
-    fromButton: "button3",
-    toButton: "button1",
-    modifiers: ["left_alt"],
-    description: "Mouse Button 3 => Button 1 + Left Alt (Zen browser Glance)",
-    bundleIdentifiers: [BROWSER_BUNDLES.ZEN],
-  }),
-  // Cording the Hyper Key with other modifiers
+
+  // ------------------------------------------------------------------------
+  // Cording the Hyper Key with other modifiers & keys
+  // ------------------------------------------------------------------------
   ...createHyperSubLayers({
-    //---  Hyper + left_command shortcuts
+
+    // ------------------------------------------------------------------------
+    //      Hyper + left_command
+    // ------------------------------------------------------------------------
     left_command: {
+      8: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       comma: app("System Settings"),
-      hyphen: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       equal_sign: open("'raycast://extensions/doist/todoist/create-task'"),
-      home: open("'raycast://extensions/doist/todoist/home'"),
-      n: app("Notes"),
+      f: open(
+        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
+      ),
       // QMK Macros
-      0: app("Bazecor"),
       t: open("'raycast://script-commands/run-topgrade'"), // M1
       d: open("'raycast://script-commands/edit-dotfiles'"), // M2
       p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M3
       o: open("'raycast://extensions/jomifepe/bitwarden/authenticator'"), // M4
 
     },
-    // Hyper + left_alt shortcuts
-    left_alt: {
-      0: open(
-        "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
-      ),
-      i: app("Invoice Ninja"),
-      c: app("Claude"),
-      k: app("kitty"),
-      t: app("WezTerm"),
-      n: app("Obsidian"),
-      m: app("Typora"),
 
-    },
-    // Hyper + a (app) shortcuts
-    a: {
-      0: app("Passwords"),
-      3: app("Autodesk Fusion"),
-      b: app("BambuStudio"),
-      d: app("Affinity"),
-      f: app("Figma"),
-      i: app("Adobe Illustrator"),
-      l: app("Affinity"),
-      n: app("Obsidian"),
-      m: app("Messages"),
-      o: app("OrcaSlicer"),
-      p: app("Adobe Photoshop 2026"),
-      r: app("Reminders"),
-      s: app("Shapr3D"),
-      t: app("Todoist"),
-      x: app("xTool Studio"),
-    },
-    // Hyper + d (directory) shortcuts
-    d: {
-      y: open("~/Documents/3D-CAD"),
-      u: open(
-        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
-      ),
-      i: open("~/Documents"),
-      o: open("~/Downloads"),
-      p: open("~/Desktop"),
-      h: open("~/"),
-      j: open(
-        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
-      ),
-      k: open("~/Developer/"),
-      l: open("~/Sites/"),
-      semicolon: open(
-        "'/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
-      ),
-    },
-    // Hyper + m (Microsoft) shortcuts
-    m: {
-      w: app("Microsoft Word"),
-      e: app("Microsoft Excel"),
-      p: app("Microsoft PowerPoint"),
-      t: app("Microsoft Teams"),
-      o: app("Microsoft Outlook"),
-    },
+    // ------------------------------------------------------------------------
+    //      Hyper + a (app)
+    // ------------------------------------------------------------------------
+    // a: {
+    //   0: app("Passwords"),
+    //   3: app("Autodesk Fusion"),
+    //   b: app("BambuStudio"),
+    //   d: app("Affinity"),
+    //   f: app("Figma"),
+    //   i: app("Adobe Illustrator"),
+    //   l: app("Affinity"),
+    //   n: app("Obsidian"),
+    //   m: app("Messages"),
+    //   o: app("OrcaSlicer"),
+    //   p: app("Adobe Photoshop 2026"),
+    //   r: app("Reminders"),
+    //   s: app("Shapr3D"),
+    //   t: app("Todoist"),
+    //   x: app("xTool Studio"),
+    // },
+
+    // ------------------------------------------------------------------------
+    //      Hyper + d (directory)
+    // ------------------------------------------------------------------------
+    // d: {
+    //   y: open("~/Documents/3D-CAD"),
+    //   u: open(
+    //     "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+    //   ),
+    //   i: open("~/Documents"),
+    //   o: open("~/Downloads"),
+    //   p: open("~/Desktop"),
+    //   h: open("~/"),
+    //   j: open(
+    //     "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
+    //   ),
+    //   k: open("~/Developer/"),
+    //   l: open("~/Sites/"),
+    //   semicolon: open(
+    //     "'/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
+    //   ),
+    // },
   }),
+
+
+  // ------------------------------------------------------------------------
   // Modifier tap rules - define multiple modifier keys with tap actions
+  // ------------------------------------------------------------------------
   ...createModifierTapRules({
     // Right CMD => alt+backspace when tapped (delete last word)
-    right_command: {
-      key_code: "delete_or_backspace",
-      modifiers: ["right_alt"],
-      description: "Delete Last Word",
-    },
-    // right_control: {
-    // 	key_code: "spacebar",
-    // 	modifiers: ["right_command"],
-    // 	description: "Trigger Raycast",
-    //  },
-    // Add more modifier tap rules here as needed
+    // right_command: {
+    //   key_code: "delete_or_backspace",
+    //   modifiers: ["right_alt"],
+    //   description: "Delete Last Word",
+    // },
   }),
+
+  // ------------------------------------------------------------------------
   //  Double-tap rules - define multiple keys with double-tap actions
+  // ------------------------------------------------------------------------
   ...createDoubleTapRules({
     // Double-tap Tab => triggers Homerow app
-    home: {
-      modifiers: ["right_command"],
-      key_code: "f8",
-      description: "Trigger SuperWhisper",
-      delayMs: 250,
-    },
-    page_up: {
-      key_code: "f13",
-      modifiers: ["right_command"],
-      description: "Trigger ColorSlurp Picker",
-      delayMs: 250,
-    },
-    // Add more double-tap rules here as needed
+    // home: {
+    //   modifiers: ["right_command"],
+    //   key_code: "f8",
+    //   description: "Trigger SuperWhisper",
+    //   delayMs: 250,
+    // },
   }),
 ];
 

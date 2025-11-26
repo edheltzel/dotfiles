@@ -1,0 +1,332 @@
+{
+  "actions" : [
+    {
+      "actions" : [
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/Brave Browser.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Chromium.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Applications/Firefox.app"
+        },
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Google Chrome.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Safari.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/Vivaldi.app"
+        },
+        {
+          "key" : "z",
+          "type" : "application",
+          "value" : "/Applications/Zen.app"
+        }
+      ],
+      "iconPath" : "text.and.command.macwindow",
+      "key" : "b",
+      "label" : "Browsers",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+        },
+        {
+          "key" : "p",
+          "type" : "url",
+          "value" : "raycast://confetti"
+        },
+        {
+          "key" : "c",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/open-camera"
+        }
+      ],
+      "key" : "r",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "apple.terminal.fill",
+          "key" : "v",
+          "label" : "Neovim",
+          "type" : "command",
+          "value" : "open -na WezTerm --args start -- nvim"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/Zed.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Visual Studio Code.app"
+        },
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Applications/Antigravity.app"
+        },
+        {
+          "key" : "k",
+          "type" : "application",
+          "value" : "/Applications/kitty.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Applications/Typora.app"
+        },
+        {
+          "key" : "n",
+          "type" : "application",
+          "value" : "/System/Applications/Notes.app"
+        },
+        {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/Obsidian.app"
+        }
+      ],
+      "iconPath" : "apple.terminal.on.rectangle",
+      "key" : "e",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "actions" : [
+            {
+              "key" : "0",
+              "type" : "application",
+              "value" : "/System/Applications/Passwords.app"
+            },
+            {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/Applications/Affinity.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/Figma.app"
+            },
+            {
+              "key" : "i",
+              "type" : "application",
+              "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
+            },
+            {
+              "key" : "p",
+              "type" : "application",
+              "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
+            },
+            {
+              "key" : "c",
+              "type" : "application",
+              "value" : "/Applications/Claude.app"
+            }
+          ],
+          "key" : "d",
+          "label" : "Design Apps",
+          "type" : "group"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/System/Applications/Messages.app"
+        },
+        {
+          "key" : "r",
+          "type" : "application",
+          "value" : "/System/Applications/Reminders.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/Todoist.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Applications/Invoice Ninja.app"
+        },
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/BambuStudio.app"
+        },
+        {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/OrcaSlicer.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Shapr3D.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+        },
+        {
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Applications/xTool Studio.app"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "w",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Word.app"
+            },
+            {
+              "key" : "e",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Excel.app"
+            },
+            {
+              "key" : "p",
+              "type" : "application",
+              "value" : "/Applications/Microsoft PowerPoint.app"
+            },
+            {
+              "key" : "t",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Teams.app"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Outlook.app"
+            }
+          ],
+          "iconPath" : "window.ceiling.closed",
+          "key" : "w",
+          "label" : "Microsoft",
+          "type" : "group"
+        }
+      ],
+      "iconPath" : "gauge.open.with.lines.needle.67percent.and.arrowtriangle",
+      "key" : "a",
+      "label" : "Apps",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/Bazecor.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/VIA.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Applications/Vial.app"
+        },
+        {
+          "iconPath" : "apple.terminal.on.rectangle",
+          "key" : "r",
+          "label" : "open rule.ts",
+          "type" : "command",
+          "value" : "open -na WezTerm --args start --cwd ~/.dotfiles/karabiner/.config/karabiner/rules.ts -- nvim "
+        },
+        {
+          "key" : "k",
+          "label" : "Keychron",
+          "type" : "url",
+          "value" : "https://launcher.keychron.com/#/keymap"
+        }
+      ],
+      "iconPath" : "keyboard",
+      "key" : "k",
+      "label" : "keebs",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "view.3d",
+          "key" : "y",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents/3D-CAD"
+        },
+        {
+          "iconPath" : "person.2",
+          "key" : "u",
+          "type" : "folder",
+          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
+        },
+        {
+          "key" : "i",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents"
+        },
+        {
+          "key" : "o",
+          "type" : "folder",
+          "value" : "/Users/ed/Downloads"
+        },
+        {
+          "key" : "p",
+          "type" : "folder",
+          "value" : "/Users/ed/Desktop"
+        },
+        {
+          "key" : "h",
+          "type" : "folder",
+          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
+        },
+        {
+          "key" : "j",
+          "type" : "folder",
+          "value" : "/Users/ed/Developer"
+        },
+        {
+          "key" : "k",
+          "type" : "folder",
+          "value" : "/Users/ed/Sites"
+        },
+        {
+          "key" : ";",
+          "type" : "folder",
+          "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
+        }
+      ],
+      "iconPath" : "folder",
+      "key" : "d",
+      "label" : "Directories",
+      "type" : "group"
+    }
+  ],
+  "type" : "group"
+}
