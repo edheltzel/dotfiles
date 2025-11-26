@@ -72,7 +72,7 @@ const rules: KarabinerRules[] = [
       f: open(
         "'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
       ),
-      // QMK Macros
+      // Macros
       t: open("'raycast://script-commands/run-topgrade'"), // M1
       d: open("'raycast://script-commands/edit-dotfiles'"), // M2
       p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M3
