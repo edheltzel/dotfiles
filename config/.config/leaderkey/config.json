@@ -83,34 +83,44 @@
         {
           "actions" : [
             {
-              "key" : "e",
+              "key" : "b",
               "type" : "application",
-              "value" : "/Applications/Microsoft Excel.app"
+              "value" : "/Applications/Brave Browser.app"
             },
             {
-              "key" : "o",
+              "key" : "c",
               "type" : "application",
-              "value" : "/Applications/Microsoft Outlook.app"
+              "value" : "/Applications/Chromium.app"
             },
             {
-              "key" : "p",
+              "key" : "f",
               "type" : "application",
-              "value" : "/Applications/Microsoft PowerPoint.app"
+              "value" : "/Applications/Firefox.app"
             },
             {
-              "key" : "t",
+              "key" : "g",
               "type" : "application",
-              "value" : "/Applications/Microsoft Teams.app"
+              "value" : "/Applications/Google Chrome.app"
             },
             {
-              "key" : "w",
+              "key" : "s",
               "type" : "application",
-              "value" : "/Applications/Microsoft Word.app"
+              "value" : "/Applications/Safari.app"
+            },
+            {
+              "key" : "v",
+              "type" : "application",
+              "value" : "/Applications/Vivaldi.app"
+            },
+            {
+              "key" : "y",
+              "type" : "application",
+              "value" : "/Applications/Zen.app"
             }
           ],
-          "iconPath" : "window.ceiling.closed",
+          "iconPath" : "text.and.command.macwindow",
           "key" : "w",
-          "label" : "Microsoft",
+          "label" : "Browsers",
           "type" : "group"
         },
         {
@@ -127,70 +137,27 @@
     {
       "actions" : [
         {
-          "key" : "b",
-          "type" : "application",
-          "value" : "/Applications/Brave Browser.app"
-        },
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Chromium.app"
-        },
-        {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Applications/Firefox.app"
-        },
-        {
-          "key" : "g",
-          "type" : "application",
-          "value" : "/Applications/Google Chrome.app"
-        },
-        {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Safari.app"
-        },
-        {
-          "key" : "v",
-          "type" : "application",
-          "value" : "/Applications/Vivaldi.app"
-        },
-        {
-          "key" : "z",
-          "type" : "application",
-          "value" : "/Applications/Zen.app"
-        }
-      ],
-      "iconPath" : "text.and.command.macwindow",
-      "key" : "b",
-      "label" : "Browsers",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : ";",
+          "key" : "i",
           "type" : "folder",
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
-          "key" : "h",
+          "key" : "g",
           "type" : "folder",
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
         },
         {
-          "key" : "i",
+          "key" : "d",
           "type" : "folder",
           "value" : "/Users/ed/Documents"
         },
         {
-          "key" : "j",
+          "key" : "e",
           "type" : "folder",
           "value" : "/Users/ed/Developer"
         },
         {
-          "key" : "k",
+          "key" : "s",
           "type" : "folder",
           "value" : "/Users/ed/Sites"
         },
@@ -206,7 +173,7 @@
         },
         {
           "iconPath" : "person.2",
-          "key" : "u",
+          "key" : "c",
           "type" : "folder",
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
         },
@@ -300,7 +267,7 @@
           "key" : "r",
           "label" : "open rule.ts",
           "type" : "command",
-          "value" : "open -na WezTerm --args start --cwd ~/.dotfiles/karabiner/.config/karabiner/rules.ts -- nvim "
+          "value" : "open -na WezTerm --args start --cwd ~/.dotfiles/karabiner/.config/karabiner -- nvim rules.ts\n"
         },
         {
           "key" : "v",
@@ -316,43 +283,97 @@
     {
       "actions" : [
         {
-          "key" : "enter",
-          "label" : "🎉",
-          "type" : "url",
-          "value" : "raycast://confetti"
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Excel.app"
         },
         {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Outlook.app"
+        },
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Applications/Microsoft PowerPoint.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Teams.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Word.app"
+        }
+      ],
+      "iconPath" : "window.ceiling.closed",
+      "key" : "m",
+      "label" : "Microsoft",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "checkmark.rectangle.stack.fill",
           "key" : "=",
-          "label" : "☑︎ Todoist",
+          "label" : "Todoist",
           "type" : "url",
           "value" : "raycast://extensions/doist/todoist/create-task"
         },
         {
+          "iconPath" : "face.smiling",
           "key" : "0",
           "type" : "url",
           "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
         },
         {
+          "iconPath" : "character.book.closed.fill",
           "key" : "8",
           "type" : "url",
           "value" : "raycast://extensions/rishabswift/word-search/word-spell"
         },
         {
+          "iconPath" : "party.popper.fill",
+          "key" : "enter",
+          "label" : "Confetti",
+          "type" : "url",
+          "value" : "raycast://confetti"
+        },
+        {
+          "iconPath" : "target",
           "key" : "f",
           "label" : "Focus",
           "type" : "url",
           "value" : "raycast://extensions/raycast/raycast-focus/toggle-focus-session"
         },
         {
+          "iconPath" : "shield.lefthalf.filled",
           "key" : "p",
-          "label" : "Focus",
+          "label" : "Bitwarden",
           "type" : "url",
           "value" : "raycast://extensions/jomifepe/bitwarden/search"
+        },
+        {
+          "iconPath" : "checkmark.shield.fill",
+          "key" : "o",
+          "label" : "Auth",
+          "type" : "url",
+          "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
         }
       ],
       "iconPath" : "sparkles",
       "key" : "r",
       "label" : "Raycast",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+
+      ],
+      "iconPath" : "rectangle.grid.3x3",
+      "key" : "w",
       "type" : "group"
     }
   ],
