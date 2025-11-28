@@ -54,27 +54,12 @@ alt-ctrl-shift-h = 'focus left'
 alt-ctrl-shift-k = 'focus up'
 alt-ctrl-shift-l = 'focus right'
 
-
 [mode.resize.binding]
 minus = 'resize smart -50'
-shift-equal = 'resize smart +50'
+shift-equal = 'resize smart +50' # plus symbol
 equal = 'balance-sizes'
 esc = 'mode main'
-ctrl-c = 'mode main'
 enter = 'mode main'
-
-alt-shift-semicolon = ['mode service']
-[mode.service.binding]
-esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main']
-f = ['layout floating tiling', 'mode main']
-b = ['balance-sizes', 'mode main']
-backspace = ['close-all-windows-but-current', 'mode main']
-
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
 
 ######### DEDICATED APP WORKSPACES ##########
 [[on-window-detected]] # HQ Workspace - macos Desktop 1 (alt-ctrl-0)
