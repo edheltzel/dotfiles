@@ -62,28 +62,31 @@ esc = 'mode main'
 enter = 'mode main'
 
 ######### DEDICATED APP WORKSPACES ##########
-[[on-window-detected]] # HQ Workspace - macos Desktop 1 (alt-ctrl-0)
+[[on-window-detected]] # HQ Workspace
 if.app-name-regex-substring = 'Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
-[[on-window-detected]] # Coding Workspace - macos Desktop 2 (alt-ctrl-1)
-if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*'
+[[on-window-detected]] # Coding Workspace
+if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*|Ghostty|Antigravity'
 run = "move-node-to-workspace code"
 
-[[on-window-detected]] # Designing Workspace - macos Desktop 3 (alt-ctrl-2)
+[[on-window-detected]] # Designing Workspace
 if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape"
 run = "move-node-to-workspace design"
 
-[[on-window-detected]] # Comms Workspace - macos Desktop 4 (alt-ctrl-3)
-if.app-name-regex-substring = 'Messages|Microsoft Teams|Notion*|Slack|Discord|WhatsApp'
+[[on-window-detected]] # Comms Workspace
+if.app-name-regex-substring = 'Messages|Microsoft Teams|Notion*|Slack|Discord|WhatsApp|Claude'
 run = "move-node-to-workspace comms"
 
-[[on-window-detected]] # Overflow Workspace - macos Desktop 5 (alt-ctrl-4)
+[[on-window-detected]] # Overflow Workspace
 if.app-name-regex-substring = 'Notes|Reminders|Todoist|Obsidian|Notion'
 run = "move-node-to-workspace overflow"
 
+[[on-window-detected]] # Overflow Workspace with floating windows
+if.app-name-regex-substring = '.*toggl|Cyberduck'
+run = ['layout floating', 'move-node-to-workspace overflow']
+
 # Floating Windows
-# Toggl and Cyberduck both always open in Overflow but are floating
 [[on-window-detected]]
-if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|.*toggl|Cyberduck|Preview'
+if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka||Preview'
 run = "layout floating"
