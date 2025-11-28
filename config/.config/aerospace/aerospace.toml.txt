@@ -1,11 +1,9 @@
+# cSpell: disable
 # Aerospace docs: https://nikitabobko.github.io/AeroSpace/guide
-##########################################################################
-###### This config is inteneded to be paired with the Leaderkey app ######
-##########################################################################
-config-version = 2
 after-startup-command = [
   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff3B446A width=5.0',
 ]
+
 start-at-login = false
 
 enable-normalization-flatten-containers = true
@@ -13,20 +11,13 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 
 default-root-container-layout = 'accordion' #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
-accordion-padding = 30
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = ['move-mouse window-lazy-center']
 
 automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
-persistent-workspaces = ["hq", "code", "design", "comms", "overflow"]
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUS_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
-]
-on-focus-changed = [
-  'move-mouse window-lazy-center',
-  'exec-and-forget sketchybar --rigger aerospace_focus_change',
-]
-on-mode-changed = ['exec-and-forget sketchybar --rigger aerospace_mode_change']
+
+accordion-padding = 30
 
 [gaps]
 inner.horizontal = 5
@@ -39,31 +30,47 @@ outer.bottom = 5
 [key-mapping]
 preset = 'qwerty'
 
+########## MAIN BINDINGS ##########
+# M2=LSA alt-shift
+# M3=LCA alt-ctrl
+# M4=LCAG alt-ctrl-cmd
+
 [mode.main.binding]
-alt-ctrl-shift-0 = 'workspace hq'       # 0 -> primary workspace
-alt-ctrl-shift-1 = 'workspace code'     # 1 -> dev/brwosers apps
-alt-ctrl-shift-2 = 'workspace design'   # 2 -> design/work apps
-alt-ctrl-shift-3 = 'workspace comms'    # 3 -> comms
-alt-ctrl-shift-4 = 'workspace overflow' # 4 -> overflow
+## Resizing/Focus/Jumps - M3
+alt-ctrl-tab = 'workspace-back-and-forth' ## Cycle last 2 workspaces
+alt-ctrl-minus = 'resize smart -50'
+alt-ctrl-equal = 'resize smart +50'
+alt-ctrl-left = 'resize smart -50'
+alt-ctrl-right = 'resize smart +50'
 
-alt-ctrl-shift-tab = 'workspace-back-and-forth'      ## Cycle last 2 workspaces
-alt-ctrl-shift-leftSquareBracket = 'workspace prev'
-alt-ctrl-shift-rightSquareBracket = 'workspace next'
-alt-ctrl-shift-j = 'focus down'
-alt-ctrl-shift-h = 'focus left'
-alt-ctrl-shift-k = 'focus up'
-alt-ctrl-shift-l = 'focus right'
+alt-ctrl-j = 'focus down'
+alt-ctrl-h = 'focus left'
+alt-ctrl-k = 'focus up'
+alt-ctrl-l = 'focus right'
 
+alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
+alt-ctrl-1 = 'workspace code'     # 1 -> dev/brwosers apps
+alt-ctrl-2 = 'workspace design'   # 2 -> design/work apps
+alt-ctrl-3 = 'workspace comms'    # 3 -> comms
+alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 
-[mode.resize.binding]
-minus = 'resize smart -50'
-shift-equal = 'resize smart +50'
-equal = 'balance-sizes'
-esc = 'mode main'
-ctrl-c = 'mode main'
-enter = 'mode main'
+## Layouts/Move - M4
+alt-ctrl-cmd-period = 'layout tiles horizontal vertical'    # think columns or rows
+alt-ctrl-cmd-comma = 'layout accordion horizontal vertical'
+alt-ctrl-cmd-f = 'layout floating'                          # to undo see service mode
+alt-ctrl-cmd-h = 'move left'
+alt-ctrl-cmd-j = 'move down'
+alt-ctrl-cmd-k = 'move up'
+alt-ctrl-cmd-l = 'move right'
 
-alt-shift-semicolon = ['mode service']
+alt-ctrl-cmd-0 = 'move-node-to-workspace hq --focus-follows-window'
+alt-ctrl-cmd-1 = 'move-node-to-workspace code --focus-follows-window'
+alt-ctrl-cmd-2 = 'move-node-to-workspace design --focus-follows-window'
+alt-ctrl-cmd-3 = 'move-node-to-workspace comms --focus-follows-window'
+alt-ctrl-cmd-4 = 'move-node-to-workspace overflow --focus-follows-window'
+
+## Service Mode - M2
+alt-ctrl-enter = ['mode service']
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main']
