@@ -1,23 +1,15 @@
 // cSpell: disable
 import * as fs from "fs";
 import {
-  BROWSER_BUNDLES,
-  createDoubleTapRule,
-  createDoubleTapRules,
-  createHyperKeyRule,
-  createHyperNavigationRule,
-  createModifierTapRule,
-  createModifierTapRules,
-  createMouseButtonRule,
-  createMouseNavigationRules,
-  type KarabinerRules,
-  MouseButtonAction,
+    BROWSER_BUNDLES,
+    createDoubleTapRules,
+    createHyperKeyRule,
+    createHyperNavigationRule,
+    createModifierTapRules,
+    createMouseNavigationRules,
+    type KarabinerRules
 } from "./types";
-import { app, createHyperSubLayers, open, shell } from "./utils";
-
-// Array of Karabiner configuration rules
-const rules: KarabinerRules[] = [
-  // see types.ts to configure Hyper key
+import { app, createHyperSubLayers, open } from "./utils";
   createHyperKeyRule(),
 
   // ------------------------------------------------------------------------
