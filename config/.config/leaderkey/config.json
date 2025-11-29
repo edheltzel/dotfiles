@@ -207,6 +207,11 @@
           "value" : "/Applications/Zed.app"
         },
         {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
           "key" : "k",
           "type" : "application",
           "value" : "/Applications/kitty.app"
@@ -229,9 +234,14 @@
         {
           "iconPath" : "apple.terminal.fill",
           "key" : "v",
-          "label" : "Neovim",
+          "label" : "Neovim ✨",
           "type" : "command",
           "value" : "open -na WezTerm --args start -- nvim"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/WezTerm.app"
         }
       ],
       "iconPath" : "apple.terminal.fill",

@@ -41,8 +41,8 @@ preset = 'qwerty'
 
 [mode.main.binding]
 alt-ctrl-shift-0 = 'workspace hq'       # 0 -> primary workspace
-alt-ctrl-shift-1 = 'workspace code'     # 1 -> dev/brwosers apps
-alt-ctrl-shift-2 = 'workspace design'   # 2 -> design/work apps
+alt-ctrl-shift-1 = 'workspace code'     # 1 -> dev apps
+alt-ctrl-shift-2 = 'workspace design'   # 2 -> design apps
 alt-ctrl-shift-3 = 'workspace comms'    # 3 -> comms
 alt-ctrl-shift-4 = 'workspace overflow' # 4 -> overflow
 

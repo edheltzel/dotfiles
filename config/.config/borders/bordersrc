@@ -21,8 +21,10 @@
 options=(
   style=round
   width=5.0
+  hidpi=on
   inactive_color=0x00000000
   active_color=0xffa48cf2
+  blacklist="Leader Key"
 )
 
 borders "${options[@]}"
