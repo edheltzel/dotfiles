@@ -11,7 +11,7 @@ start-at-login = false
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-default-root-container-layout = 'accordion' #Possible values: tiles|accordion
+default-root-container-layout = 'tiles'     #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 accordion-padding = 30
 
@@ -67,7 +67,7 @@ if.app-name-regex-substring = 'Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*|Ghostty|Antigravity'
+if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*|Ghostty|Antigravity|Bazecor'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace
@@ -88,5 +88,5 @@ run = ['layout floating', 'move-node-to-workspace overflow']
 
 # Floating Windows
 [[on-window-detected]]
-if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka||Preview'
+if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview'
 run = "layout floating"

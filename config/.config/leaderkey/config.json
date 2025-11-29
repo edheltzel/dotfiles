@@ -56,6 +56,42 @@
           "value" : "/Applications/Invoice Ninja.app"
         },
         {
+          "actions" : [
+            {
+              "key" : "b",
+              "type" : "application",
+              "value" : "/Applications/Bazecor.app"
+            },
+            {
+              "key" : "i",
+              "type" : "application",
+              "value" : "/Applications/Vial.app"
+            },
+            {
+              "key" : "k",
+              "label" : "Keychron",
+              "type" : "url",
+              "value" : "https://launcher.keychron.com/#/keymap"
+            },
+            {
+              "iconPath" : "apple.terminal.on.rectangle",
+              "key" : "r",
+              "label" : "open rule.ts",
+              "type" : "command",
+              "value" : "open -na WezTerm --args start --cwd ~/.dotfiles/karabiner/.config/karabiner -- nvim rules.ts\n"
+            },
+            {
+              "key" : "v",
+              "type" : "application",
+              "value" : "/Applications/VIA.app"
+            }
+          ],
+          "iconPath" : "keyboard.fill",
+          "key" : "k",
+          "label" : "Keeb",
+          "type" : "group"
+        },
+        {
           "key" : "m",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
@@ -252,42 +288,6 @@
     {
       "actions" : [
         {
-          "key" : "b",
-          "type" : "application",
-          "value" : "/Applications/Bazecor.app"
-        },
-        {
-          "key" : "i",
-          "type" : "application",
-          "value" : "/Applications/Vial.app"
-        },
-        {
-          "key" : "k",
-          "label" : "Keychron",
-          "type" : "url",
-          "value" : "https://launcher.keychron.com/#/keymap"
-        },
-        {
-          "iconPath" : "apple.terminal.on.rectangle",
-          "key" : "r",
-          "label" : "open rule.ts",
-          "type" : "command",
-          "value" : "open -na WezTerm --args start --cwd ~/.dotfiles/karabiner/.config/karabiner -- nvim rules.ts\n"
-        },
-        {
-          "key" : "v",
-          "type" : "application",
-          "value" : "/Applications/VIA.app"
-        }
-      ],
-      "iconPath" : "keyboard.fill",
-      "key" : "k",
-      "label" : "Keeb",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
           "key" : "e",
           "type" : "application",
           "value" : "/Applications/Microsoft Excel.app"
@@ -437,6 +437,13 @@
           "value" : "/opt/homebrew/bin/aerospace workspace overflow"
         },
         {
+          "iconPath" : "rectangle.on.rectangle.slash.fill",
+          "key" : "D",
+          "label" : "Close all Windows",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace close-all-windows-but-current"
+        },
+        {
           "actions" : [
             {
               "iconPath" : "inset.filled.lefthalf.rectangle",
@@ -532,6 +539,13 @@
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace overflow --focus-follows-window"
             },
             {
+              "iconPath" : "arrow.down.backward.and.arrow.up.forward.rectangle.fill",
+              "key" : "F",
+              "label" : "Fullscreen",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace fullscreen"
+            },
+            {
               "iconPath" : "inset.filled.lefthalf.righthalf.rectangle",
               "key" : "h",
               "label" : "Left",
@@ -558,33 +572,12 @@
               "label" : "Right",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move right"
-            },
-            {
-              "iconPath" : "arrow.down.backward.and.arrow.up.forward.rectangle.fill",
-              "key" : "F",
-              "label" : "Fullscreen",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace fullscreen"
             }
           ],
           "iconPath" : "appwindow.swipe.rectangle",
           "key" : "m",
           "label" : "Move",
           "type" : "group"
-        },
-        {
-          "iconPath" : "inset.filled.trailinghalf.arrow.trailing.rectangle",
-          "key" : "s",
-          "label" : "Resize",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace mode resize"
-        },
-        {
-          "iconPath" : "rectangle.on.rectangle.slash.fill",
-          "key" : "D",
-          "label" : "Close all Windows",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace close-all-windows-but-current"
         },
         {
           "iconPath" : "arrow.down.forward.and.arrow.up.backward.rectangle.fill",
@@ -599,6 +592,13 @@
           "label" : "Reload Config",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
+          "iconPath" : "inset.filled.trailinghalf.arrow.trailing.rectangle",
+          "key" : "s",
+          "label" : "Resize",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace mode resize"
         }
       ],
       "iconPath" : "rectangle.grid.2x2.fill",
