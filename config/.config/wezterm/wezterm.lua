@@ -13,7 +13,8 @@ config.default_prog = { fish_path, "-l" }
 config.font = wezterm.font_with_fallback({
   {
     family = "VictorMono Nerd Font Mono",
-    weight = 600,
+    weight = 700,
+    -- weight = 500,
   },
   {
     family = "FiraCode Nerd Font Mono",
@@ -27,15 +28,22 @@ local theme = "rose-pine-dawn"
 config.color_scheme = theme
 
 -- Theme-aware accent colors
-local colorRed, colorPurple, colorCyan
-if theme:match("^rose%-pine") then
+local colorRed, colorPurple, colorCyan, colorYellow
+if theme == "rose-pine-dawn" then
+  colorRed = "#b4637a" -- love
+  colorPurple = "#907aa9" -- iris
+  colorCyan = "#56949f" -- foam
+  colorYellow = "#ea9d34" -- gold
+elseif theme:match("^rose%-pine") then
   colorRed = "#eb6f92" -- love
   colorPurple = "#c4a7e7" -- iris
   colorCyan = "#9ccfd8" -- foam
+  colorYellow = "#f6c177" -- gold
 else -- Eldritch
   colorRed = "#F7768E"
   colorPurple = "#A48CF2"
   colorCyan = "#04D1F9"
+  colorYellow = "#E0AF68"
 end
 
 local keymaps = require("keymaps")
@@ -154,7 +162,7 @@ wezterm.on("update-status", function(window, pane)
   window:set_right_status(wezterm.format({
     { Text = wezterm.nerdfonts.md_folder .. "  " .. cwd },
     { Text = " ⋮ " },
-    { Foreground = { Color = "#e0af68" } },
+    { Foreground = { Color = colorCyan } },
     { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd },
     "ResetAttributes",
     { Text = " ⋮ " },
