@@ -8,30 +8,12 @@ end
 config.default_prog = { fish_path, "-l" }
 
 -- -----------------------------------------------------------------------------
--- Workspace Multiplexing
--- -----------------------------------------------------------------------------
-local session_manager = require("wezterm-session-manager/session-manager")
-wezterm.on("save_session", function(window)
-  session_manager.save_state(window)
-end)
-wezterm.on("load_session", function(window)
-  session_manager.load_state(window)
-end)
-wezterm.on("restore_session", function(window)
-  session_manager.restore_state(window)
-end)
-
-config.unix_domains = {
-  { name = "core" },
-}
-
--- -----------------------------------------------------------------------------
 -- General Config
 -- -----------------------------------------------------------------------------
 config.font = wezterm.font_with_fallback({
   {
     family = "VictorMono Nerd Font Mono",
-    weight = 500,
+    weight = 600,
   },
   {
     family = "FiraCode Nerd Font Mono",
@@ -39,10 +21,22 @@ config.font = wezterm.font_with_fallback({
   },
 })
 config.font_size = 20.0
-config.color_scheme = "Eldritch"
-local colorRed = "#F7768E"
-local colorPurple = "#A48CF2"
-local colorCyan = "#04D1F9"
+
+-- Theme selection: "Eldritch", "rose-pine", "rose-pine-moon", "rose-pine-dawn"
+local theme = "rose-pine-dawn"
+config.color_scheme = theme
+
+-- Theme-aware accent colors
+local colorRed, colorPurple, colorCyan
+if theme:match("^rose%-pine") then
+  colorRed = "#eb6f92" -- love
+  colorPurple = "#c4a7e7" -- iris
+  colorCyan = "#9ccfd8" -- foam
+else -- Eldritch
+  colorRed = "#F7768E"
+  colorPurple = "#A48CF2"
+  colorCyan = "#04D1F9"
+end
 
 local keymaps = require("keymaps")
 config.leader = keymaps.leader
