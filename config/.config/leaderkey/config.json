@@ -112,6 +112,44 @@
           "value" : "/Applications/Shapr3D.app"
         },
         {
+          "actions" : [
+            {
+              "key" : "b",
+              "type" : "application",
+              "value" : "/Applications/Brave Browser.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/Firefox.app"
+            },
+            {
+              "key" : "g",
+              "type" : "application",
+              "value" : "/Applications/Google Chrome.app"
+            },
+            {
+              "key" : "s",
+              "type" : "application",
+              "value" : "/Applications/Safari.app"
+            },
+            {
+              "key" : "v",
+              "type" : "application",
+              "value" : "/Applications/Vivaldi.app"
+            },
+            {
+              "key" : "y",
+              "type" : "application",
+              "value" : "/Applications/Zen.app"
+            }
+          ],
+          "iconPath" : "safari.fill",
+          "key" : "w",
+          "label" : "Browsers",
+          "type" : "group"
+        },
+        {
           "key" : "x",
           "type" : "application",
           "value" : "/Applications/xTool Studio.app"
@@ -120,49 +158,6 @@
       "iconPath" : "apple.logo",
       "key" : "a",
       "label" : "Apps",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "b",
-          "type" : "application",
-          "value" : "/Applications/Brave Browser.app"
-        },
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Chromium.app"
-        },
-        {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Applications/Firefox.app"
-        },
-        {
-          "key" : "g",
-          "type" : "application",
-          "value" : "/Applications/Google Chrome.app"
-        },
-        {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Safari.app"
-        },
-        {
-          "key" : "v",
-          "type" : "application",
-          "value" : "/Applications/Vivaldi.app"
-        },
-        {
-          "key" : "y",
-          "type" : "application",
-          "value" : "/Applications/Zen.app"
-        }
-      ],
-      "iconPath" : "safari.fill",
-      "key" : "b",
-      "label" : "Browsers",
       "type" : "group"
     },
     {
