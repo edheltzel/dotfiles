@@ -112,6 +112,11 @@
           "value" : "/Applications/Shapr3D.app"
         },
         {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/Todoist.app"
+        },
+        {
           "actions" : [
             {
               "key" : "b",
@@ -163,25 +168,15 @@
     {
       "actions" : [
         {
-          "iconPath" : "person.2",
-          "key" : "c",
+          "iconPath" : "view.3d",
+          "key" : "y",
           "type" : "folder",
-          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
+          "value" : "/Users/ed/Documents/3D-CAD"
         },
         {
-          "key" : "d",
+          "key" : "u",
           "type" : "folder",
           "value" : "/Users/ed/Documents"
-        },
-        {
-          "key" : "e",
-          "type" : "folder",
-          "value" : "/Users/ed/Developer"
-        },
-        {
-          "key" : "g",
-          "type" : "folder",
-          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
         },
         {
           "key" : "i",
@@ -199,20 +194,25 @@
           "value" : "/Users/ed/Desktop"
         },
         {
-          "key" : "s",
+          "key" : "h",
+          "type" : "folder",
+          "value" : "/Users/ed/Developer"
+        },
+        {
+          "iconPath" : "person.2",
+          "key" : "j",
+          "type" : "folder",
+          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
+        },
+        {
+          "key" : "k",
           "type" : "folder",
           "value" : "/Users/ed/Sites"
         },
         {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Todoist.app"
-        },
-        {
-          "iconPath" : "view.3d",
-          "key" : "y",
+          "key" : "l",
           "type" : "folder",
-          "value" : "/Users/ed/Documents/3D-CAD"
+          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
         }
       ],
       "iconPath" : "folder.fill",

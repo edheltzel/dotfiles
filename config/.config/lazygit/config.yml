@@ -30,7 +30,7 @@ gui:
     #   - "#f16c75"
     # defaultFgColor:
     #   - "#ebfafa"
-    #
+
     # ROSE PINE THEME
     # activeBorderColor:
     #   - "#ebbcba"
@@ -60,57 +60,57 @@ gui:
     #   - "#e0def4"
     #
     # ROSE PINE MOON THEME
-    # activeBorderColor:
-    #   - "#ea9a97"
-    #   - bold
-    # inactiveBorderColor:
-    #   - "#6e6a86"
-    # searchingActiveBorderColor:
-    #   - "#ea9a97"
-    #   - bold
-    # optionsTextColor:
-    #   - "#9ccfd8"
-    # selectedLineBgColor:
-    #   - "#393552"
-    # inactiveViewSelectedLineBgColor:
-    #   - bold
-    # cherryPickedCommitFgColor:
-    #   - "#c4a7e7"
-    # cherryPickedCommitBgColor:
-    #   - "#3e8fb0"
-    # markedBaseCommitFgColor:
-    #   - "#3e8fb0"
-    # markedBaseCommitBgColor:
-    #   - "#f6c177"
-    # unstagedChangesColor:
-    #   - "#eb6f92"
-    # defaultFgColor:
-    #   - "#e0def4"
-    #
-    # ROSE PINE DAWN THEME
     activeBorderColor:
-      - "#d7827e"
+      - "#ea9a97"
       - bold
     inactiveBorderColor:
-      - "#9893a5"
+      - "#6e6a86"
     searchingActiveBorderColor:
-      - "#d7827e"
+      - "#ea9a97"
       - bold
     optionsTextColor:
-      - "#56949f"
+      - "#9ccfd8"
     selectedLineBgColor:
-      - "#f2e9e1"
+      - "#393552"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#907aa9"
+      - "#c4a7e7"
     cherryPickedCommitBgColor:
-      - "#286983"
+      - "#3e8fb0"
     markedBaseCommitFgColor:
-      - "#286983"
+      - "#3e8fb0"
     markedBaseCommitBgColor:
-      - "#ea9d34"
+      - "#f6c177"
     unstagedChangesColor:
-      - "#b4637a"
+      - "#eb6f92"
     defaultFgColor:
-      - "#575279"
+      - "#e0def4"
+
+    # ROSE PINE DAWN THEME
+    # activeBorderColor:
+    #   - "#d7827e"
+    #   - bold
+    # inactiveBorderColor:
+    #   - "#9893a5"
+    # searchingActiveBorderColor:
+    #   - "#d7827e"
+    #   - bold
+    # optionsTextColor:
+    #   - "#56949f"
+    # selectedLineBgColor:
+    #   - "#f2e9e1"
+    # inactiveViewSelectedLineBgColor:
+    #   - bold
+    # cherryPickedCommitFgColor:
+    #   - "#907aa9"
+    # cherryPickedCommitBgColor:
+    #   - "#286983"
+    # markedBaseCommitFgColor:
+    #   - "#286983"
+    # markedBaseCommitBgColor:
+    #   - "#ea9d34"
+    # unstagedChangesColor:
+    #   - "#b4637a"
+    # defaultFgColor:
+    #   - "#575279"

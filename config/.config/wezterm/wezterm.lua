@@ -13,8 +13,7 @@ config.default_prog = { fish_path, "-l" }
 config.font = wezterm.font_with_fallback({
   {
     family = "VictorMono Nerd Font Mono",
-    weight = 700,
-    -- weight = 500,
+    weight = 500,
   },
   {
     family = "FiraCode Nerd Font Mono",
@@ -24,7 +23,7 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 20.0
 
 -- Theme selection: "Eldritch", "rose-pine", "rose-pine-moon", "rose-pine-dawn"
-local theme = "rose-pine-dawn"
+local theme = "rose-pine-moon"
 config.color_scheme = theme
 
 -- Theme-aware accent colors
