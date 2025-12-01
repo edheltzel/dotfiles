@@ -72,34 +72,6 @@ local keys = {
   -- Workspace and Multiplexing
   --- ---------------------------------------------------------------------------
   {
-    key = "a",
-    mods = "LEADER",
-    action = act.AttachDomain("core"),
-    desc = "Attach to Core session",
-  },
-
-  {
-    key = "d",
-    mods = "LEADER",
-    action = act.DetachDomain({ DomainName = "core" }),
-    desc = "Detach from Core session",
-  },
-  {
-    mods = "LEADER",
-    key = "$",
-    action = act({ EmitEvent = "save_session" }),
-  },
-  {
-    mods = "LEADER",
-    key = "L",
-    action = act({ EmitEvent = "load_session" }),
-  },
-  {
-    key = "#",
-    mods = "LEADER",
-    action = act({ EmitEvent = "restore_session" }),
-  },
-  {
     key = "S",
     mods = "LEADER",
     action = act.PromptInputLine({
@@ -140,8 +112,8 @@ local keys = {
     }),
     desc = "Rename Workspace",
   },
-  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(2), desc = "Next Workspace" },
-  { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(0), desc = "Previous Workspace" },
+  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
+  { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY
 
