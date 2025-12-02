@@ -6,12 +6,13 @@ alpha-blending = linear-corrected
 background-opacity = 0.95
 background-blur-radius = 50
 
-# theme = rose-pine
-config-file = "colors/eldritch"
+theme = Rose Pine Moon
+# config-file = "colors/eldritch"
 
 
 font-size = 18
 font-family = "Lilex Nerd Font Mono"
+
 
 quick-terminal-position = "left"
 quick-terminal-animation-duration = 0
@@ -33,8 +34,40 @@ mouse-hide-while-typing = true
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
 macos-titlebar-style = tabs
-macos-titlebar-proxy-icon = visible
+macos-titlebar-proxy-icon = hidden
+macos-window-buttons = hidden
+macos-icon =  retro
 
+# custom keybinding
 keybind = global:cmd+control+alt+t=toggle_quick_terminal
+
 keybind = super+ctrl+,=reload_config
 keybind = super+ctrl+equal=close_surface
+keybind = super+ctrl+h=resize_split:left,10
+keybind = super+ctrl+j=resize_split:down,10
+keybind = super+ctrl+k=resize_split:up,10
+keybind = super+ctrl+l=resize_split:right,10
+
+# Leader key (cmd+k) sequences
+keybind = super+k>p=toggle_command_palette
+#splits
+keybind = super+k>backslash=new_split:right
+keybind = super+k>minus=new_split:down
+keybind = super+k>h=goto_split:left
+keybind = super+k>j=goto_split:bottom
+keybind = super+k>k=goto_split:top
+keybind = super+k>l=goto_split:right
+keybind = super+k>z=toggle_split_zoom #like focus/zen mode
+keybind = super+k>equal=equalize_splits
+#tabs
+keybind = super+k>t=new_tab
+keybind = super+k>x=close_surface
+keybind = super+k>e=prompt_surface_title
+keybind = super+k>1=goto_tab:1
+keybind = super+k>2=goto_tab:2
+keybind = super+k>3=goto_tab:3
+keybind = super+k>4=goto_tab:4
+keybind = super+k>5=goto_tab:5
+keybind = super+k>6=goto_tab:6
+keybind = super+k>7=goto_tab:7
+keybind = super+k>8=goto_tab:8
