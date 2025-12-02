@@ -12,9 +12,8 @@ theme = Rose Pine Moon
 font-size = 18
 font-family = "Lilex Nerd Font Mono"
 
-
 quick-terminal-position = "left"
-quick-terminal-size = 900px
+  quick-terminal-size = 900px
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = false
 
@@ -39,14 +38,17 @@ macos-window-buttons = hidden
 macos-icon =  retro
 
 # Custom keybinding
-keybind = global:cmd+control+alt+t=toggle_quick_terminal
+keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
 
 keybind = super+ctrl+,=reload_config
 keybind = super+ctrl+equal=close_surface
-keybind = super+ctrl+h=resize_split:left,10
-keybind = super+ctrl+j=resize_split:down,10
-keybind = super+ctrl+k=resize_split:up,10
-keybind = super+ctrl+l=resize_split:right,10
+
+keybind = super+ctrl+alt+h=resize_split:left,10
+keybind = super+ctrl+alt+j=resize_split:down,10
+keybind = super+ctrl+alt+k=resize_split:up,10
+keybind = super+ctrl+alt+l=resize_split:right,10
+keybind = super+ctrl+alt+[=move_tab:-1
+keybind = super+ctrl+alt+]=move_tab:1
 
 # Leader key (cmd+k) sequences
 keybind = super+k>p=toggle_command_palette
