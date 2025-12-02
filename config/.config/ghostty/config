@@ -14,6 +14,7 @@ font-family = "Lilex Nerd Font Mono"
 
 
 quick-terminal-position = "left"
+quick-terminal-size = 900px
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = false
 
@@ -56,7 +57,7 @@ keybind = super+k>h=goto_split:left
 keybind = super+k>j=goto_split:bottom
 keybind = super+k>k=goto_split:top
 keybind = super+k>l=goto_split:right
-keybind = super+k>z=toggle_split_zoom #like focus/zen mode
+keybind = super+k>z=toggle_split_zoom
 keybind = super+k>equal=equalize_splits
 #tabs
 keybind = super+k>t=new_tab
