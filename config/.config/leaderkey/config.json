@@ -3,9 +3,75 @@
     {
       "actions" : [
         {
+          "actions" : [
+            {
+              "key" : "b",
+              "type" : "application",
+              "value" : "/Applications/BambuStudio.app"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/OrcaSlicer.app"
+            },
+            {
+              "key" : "s",
+              "type" : "application",
+              "value" : "/Applications/Shapr3D.app"
+            },
+            {
+              "key" : "x",
+              "type" : "application",
+              "value" : "/Applications/xTool Studio.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+            }
+          ],
+          "iconPath" : "view.3d",
+          "key" : "3",
+          "label" : "3D Apps",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "b",
+              "type" : "application",
+              "value" : "/Applications/Brave Browser.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/Firefox.app"
+            },
+            {
+              "key" : "g",
+              "type" : "application",
+              "value" : "/Applications/Google Chrome.app"
+            },
+            {
+              "key" : "s",
+              "type" : "application",
+              "value" : "/Applications/Safari.app"
+            },
+            {
+              "key" : "v",
+              "type" : "application",
+              "value" : "/Applications/Vivaldi.app"
+            },
+            {
+              "key" : "y",
+              "type" : "application",
+              "value" : "/Applications/Zen.app"
+            }
+          ],
+          "iconPath" : "safari.fill",
           "key" : "b",
-          "type" : "application",
-          "value" : "/Applications/BambuStudio.app"
+          "label" : "Browsers",
+          "type" : "group"
         },
         {
           "key" : "c",
@@ -46,9 +112,87 @@
           "type" : "group"
         },
         {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+          "actions" : [
+            {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/Applications/Antigravity.app"
+            },
+            {
+              "key" : "c",
+              "type" : "application",
+              "value" : "/Applications/Visual Studio Code.app"
+            },
+            {
+              "key" : "e",
+              "type" : "application",
+              "value" : "/Applications/Zed.app"
+            },
+            {
+              "key" : "g",
+              "type" : "application",
+              "value" : "/Applications/Ghostty.app"
+            },
+            {
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/kitty.app"
+            },
+            {
+              "key" : "m",
+              "type" : "application",
+              "value" : "/Applications/Typora.app"
+            },
+            {
+              "key" : "n",
+              "type" : "application",
+              "value" : "/System/Applications/Notes.app"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/Obsidian.app"
+            },
+            {
+              "iconPath" : "apple.terminal.fill",
+              "key" : "v",
+              "label" : "Neovim ✨",
+              "type" : "command",
+              "value" : "open -na WezTerm --args start -- nvim"
+            },
+            {
+              "key" : "w",
+              "type" : "application",
+              "value" : "/Applications/WezTerm.app"
+            }
+          ],
+          "iconPath" : "apple.terminal.on.rectangle",
+          "key" : "e",
+          "label" : "Editors",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "g",
+              "type" : "application",
+              "value" : "/Applications/Ghostty.app"
+            },
+            {
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/kitty.app"
+            },
+            {
+              "key" : "w",
+              "type" : "application",
+              "value" : "/Applications/WezTerm.app"
+            }
+          ],
+          "iconPath" : "apple.terminal.on.rectangle.fill",
+          "key" : "t",
+          "label" : "Editors",
+          "type" : "group"
         },
         {
           "key" : "i",
@@ -97,67 +241,14 @@
           "value" : "/System/Applications/Messages.app"
         },
         {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/OrcaSlicer.app"
-        },
-        {
-          "key" : "r",
+          "key" : "R",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
         },
         {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Shapr3D.app"
-        },
-        {
-          "key" : "t",
+          "key" : "T",
           "type" : "application",
           "value" : "/Applications/Todoist.app"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "b",
-              "type" : "application",
-              "value" : "/Applications/Brave Browser.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/Firefox.app"
-            },
-            {
-              "key" : "g",
-              "type" : "application",
-              "value" : "/Applications/Google Chrome.app"
-            },
-            {
-              "key" : "s",
-              "type" : "application",
-              "value" : "/Applications/Safari.app"
-            },
-            {
-              "key" : "v",
-              "type" : "application",
-              "value" : "/Applications/Vivaldi.app"
-            },
-            {
-              "key" : "y",
-              "type" : "application",
-              "value" : "/Applications/Zen.app"
-            }
-          ],
-          "iconPath" : "safari.fill",
-          "key" : "w",
-          "label" : "Browsers",
-          "type" : "group"
-        },
-        {
-          "key" : "x",
-          "type" : "application",
-          "value" : "/Applications/xTool Studio.app"
         }
       ],
       "iconPath" : "apple.logo",
@@ -223,66 +314,6 @@
     {
       "actions" : [
         {
-          "key" : "a",
-          "type" : "application",
-          "value" : "/Applications/Antigravity.app"
-        },
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Visual Studio Code.app"
-        },
-        {
-          "key" : "e",
-          "type" : "application",
-          "value" : "/Applications/Zed.app"
-        },
-        {
-          "key" : "g",
-          "type" : "application",
-          "value" : "/Applications/Ghostty.app"
-        },
-        {
-          "key" : "k",
-          "type" : "application",
-          "value" : "/Applications/kitty.app"
-        },
-        {
-          "key" : "m",
-          "type" : "application",
-          "value" : "/Applications/Typora.app"
-        },
-        {
-          "key" : "n",
-          "type" : "application",
-          "value" : "/System/Applications/Notes.app"
-        },
-        {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/Obsidian.app"
-        },
-        {
-          "iconPath" : "apple.terminal.fill",
-          "key" : "v",
-          "label" : "Neovim ✨",
-          "type" : "command",
-          "value" : "open -na WezTerm --args start -- nvim"
-        },
-        {
-          "key" : "w",
-          "type" : "application",
-          "value" : "/Applications/WezTerm.app"
-        }
-      ],
-      "iconPath" : "apple.terminal.fill",
-      "key" : "e",
-      "label" : "Editors",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
           "key" : "e",
           "type" : "application",
           "value" : "/Applications/Microsoft Excel.app"
@@ -325,12 +356,14 @@
         {
           "iconPath" : "face.smiling",
           "key" : "0",
+          "label" : "Emojis",
           "type" : "url",
           "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
         },
         {
           "iconPath" : "character.book.closed.fill",
           "key" : "8",
+          "label" : "Spell Check",
           "type" : "url",
           "value" : "raycast://extensions/rishabswift/word-search/word-spell"
         },
@@ -340,6 +373,13 @@
           "label" : "Confetti",
           "type" : "url",
           "value" : "raycast://confetti"
+        },
+        {
+          "iconPath" : "button.programmable.square.fill",
+          "key" : "d",
+          "label" : "Edit Dotfiles",
+          "type" : "url",
+          "value" : "raycast://script-commands/edit-dotfiles"
         },
         {
           "iconPath" : "target",
@@ -361,6 +401,13 @@
           "label" : "Bitwarden",
           "type" : "url",
           "value" : "raycast://extensions/jomifepe/bitwarden/search"
+        },
+        {
+          "iconPath" : "arrow.up.and.down.and.sparkles",
+          "key" : "t",
+          "label" : "Run Topgrade",
+          "type" : "url",
+          "value" : "raycast://script-commands/run-topgrade"
         }
       ],
       "iconPath" : "sparkles",
