@@ -1,9 +1,8 @@
-# custom-shader = ./crt-shader.ghsl
 initial-window = false
 
 alpha-blending = linear-corrected
 
-background-opacity = 0.95
+background-opacity = 1
 background-blur-radius = 50
 
 theme = Rose Pine Moon
@@ -38,7 +37,7 @@ macos-titlebar-proxy-icon = hidden
 macos-window-buttons = hidden
 macos-icon =  retro
 
-# custom keybinding
+# Custom keybinding
 keybind = global:cmd+control+alt+t=toggle_quick_terminal
 
 keybind = super+ctrl+,=reload_config
