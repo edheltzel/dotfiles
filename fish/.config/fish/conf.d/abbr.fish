@@ -71,7 +71,7 @@ if status is-interactive
     abbr --add lzip ouch list
     # AI Agents + Models
     abbr --add ccu 'bunx ccusage'
-    abbr --add cc claude
+    abbr --add cc 'claude --dangerously-skip-permissions'
     abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add os openspec
     abbr --add oc opencode
