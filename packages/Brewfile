@@ -310,15 +310,10 @@ cask 'zed'                            # Code editor - Rust
 # RAG+CAG LLM
 # cask 'block-goose'                    # On Machine AI Agent
 # cask 'chatgpt'                        # Desktop client AI chat
-cask 'claude'                         # Desktop client AI chat
-
 # brew 'ollama'                         # Local LLMs
 # cask 'ollama'
 
-# AI Agent Coding Tools - CLI based
-brew 'claude-code'
-brew 'gemini-cli'
-brew 'opencode'                       # Open source
+cask 'claude'                         # Desktop client AI chat
 cask 'superwhisper'                   # AI dictation app
 
 # Terminal emulators
