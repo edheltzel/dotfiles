@@ -52,13 +52,10 @@ keybind = super+ctrl+alt+]=move_tab:1
 
 # Leader key (cmd+k) sequences
 keybind = super+k>p=toggle_command_palette
+keybind = super+k>k=clear_screen
 #splits
 keybind = super+k>backslash=new_split:right
 keybind = super+k>minus=new_split:down
-keybind = super+k>h=goto_split:left
-keybind = super+k>j=goto_split:bottom
-keybind = super+k>k=goto_split:top
-keybind = super+k>l=goto_split:right
 keybind = super+k>z=toggle_split_zoom
 keybind = super+k>equal=equalize_splits
 #tabs
