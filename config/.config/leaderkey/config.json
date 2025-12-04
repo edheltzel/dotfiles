@@ -10,6 +10,11 @@
               "value" : "/Applications/BambuStudio.app"
             },
             {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+            },
+            {
               "key" : "o",
               "type" : "application",
               "value" : "/Applications/OrcaSlicer.app"
@@ -23,11 +28,6 @@
               "key" : "x",
               "type" : "application",
               "value" : "/Applications/xTool Studio.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
             }
           ],
           "iconPath" : "view.3d",
@@ -172,27 +172,9 @@
           "type" : "group"
         },
         {
-          "actions" : [
-            {
-              "key" : "g",
-              "type" : "application",
-              "value" : "/Applications/Ghostty.app"
-            },
-            {
-              "key" : "k",
-              "type" : "application",
-              "value" : "/Applications/kitty.app"
-            },
-            {
-              "key" : "w",
-              "type" : "application",
-              "value" : "/Applications/WezTerm.app"
-            }
-          ],
-          "iconPath" : "apple.terminal.on.rectangle.fill",
-          "key" : "t",
-          "label" : "Editors",
-          "type" : "group"
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
         },
         {
           "key" : "i",
@@ -236,22 +218,65 @@
           "type" : "group"
         },
         {
+          "actions" : [
+            {
+              "key" : "e",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Excel.app"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Outlook.app"
+            },
+            {
+              "key" : "p",
+              "type" : "application",
+              "value" : "/Applications/Microsoft PowerPoint.app"
+            },
+            {
+              "key" : "t",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Teams.app"
+            },
+            {
+              "key" : "w",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Word.app"
+            }
+          ],
+          "iconPath" : "window.ceiling.closed",
+          "key" : "M",
+          "label" : "Microsoft",
+          "type" : "group"
+        },
+        {
           "key" : "m",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
         },
         {
-          "key" : "R",
+          "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
         },
         {
-          "key" : "T",
+          "key" : "s",
+          "type" : "application",
+          "value" : "/System/Applications/System Settings.app"
+        },
+        {
+          "key" : "t",
           "type" : "application",
           "value" : "/Applications/Todoist.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/WezTerm.app"
         }
       ],
-      "iconPath" : "apple.logo",
+      "iconPath" : "/System/Applications/App Store.app",
       "key" : "a",
       "label" : "Apps",
       "type" : "group"
@@ -259,35 +284,14 @@
     {
       "actions" : [
         {
-          "iconPath" : "view.3d",
-          "key" : "y",
+          "key" : "h",
           "type" : "folder",
-          "value" : "/Users/ed/Documents/3D-CAD"
-        },
-        {
-          "key" : "u",
-          "type" : "folder",
-          "value" : "/Users/ed/Documents"
+          "value" : "/Users/ed/Developer"
         },
         {
           "key" : "i",
           "type" : "folder",
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
-        },
-        {
-          "key" : "o",
-          "type" : "folder",
-          "value" : "/Users/ed/Downloads"
-        },
-        {
-          "key" : "p",
-          "type" : "folder",
-          "value" : "/Users/ed/Desktop"
-        },
-        {
-          "key" : "h",
-          "type" : "folder",
-          "value" : "/Users/ed/Developer"
         },
         {
           "iconPath" : "person.2",
@@ -304,44 +308,32 @@
           "key" : "l",
           "type" : "folder",
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
-        }
-      ],
-      "iconPath" : "folder.fill",
-      "key" : "d",
-      "label" : "Directories",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "e",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Excel.app"
         },
         {
           "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Outlook.app"
+          "type" : "folder",
+          "value" : "/Users/ed/Downloads"
         },
         {
           "key" : "p",
-          "type" : "application",
-          "value" : "/Applications/Microsoft PowerPoint.app"
+          "type" : "folder",
+          "value" : "/Users/ed/Desktop"
         },
         {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Teams.app"
+          "key" : "u",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents"
         },
         {
-          "key" : "w",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Word.app"
+          "iconPath" : "view.3d",
+          "key" : "y",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents/3D-CAD"
         }
       ],
-      "iconPath" : "window.ceiling.closed",
-      "key" : "m",
-      "label" : "Microsoft",
+      "iconPath" : "/System/Library/CoreServices/Finder.app",
+      "key" : "d",
+      "label" : "Directories",
       "type" : "group"
     },
     {
@@ -368,18 +360,18 @@
           "value" : "raycast://extensions/rishabswift/word-search/word-spell"
         },
         {
-          "iconPath" : "party.popper.fill",
-          "key" : "enter",
-          "label" : "Confetti",
-          "type" : "url",
-          "value" : "raycast://confetti"
-        },
-        {
           "iconPath" : "button.programmable.square.fill",
           "key" : "d",
           "label" : "Edit Dotfiles",
           "type" : "url",
           "value" : "raycast://script-commands/edit-dotfiles"
+        },
+        {
+          "iconPath" : "party.popper.fill",
+          "key" : "enter",
+          "label" : "Confetti",
+          "type" : "url",
+          "value" : "raycast://confetti"
         },
         {
           "iconPath" : "target",
@@ -410,7 +402,7 @@
           "value" : "raycast://script-commands/run-topgrade"
         }
       ],
-      "iconPath" : "sparkles",
+      "iconPath" : "/Applications/Raycast.app",
       "key" : "r",
       "label" : "Raycast",
       "type" : "group"
@@ -437,7 +429,7 @@
         }
       ],
       "iconPath" : "touchid",
-      "key" : "t",
+      "key" : "T",
       "label" : "Touch Typing",
       "type" : "group"
     },
@@ -643,7 +635,7 @@
           "value" : "/opt/homebrew/bin/aerospace mode resize"
         }
       ],
-      "iconPath" : "rectangle.grid.2x2.fill",
+      "iconPath" : "/Applications/AeroSpace.app",
       "key" : "w",
       "label" : "Aerospace",
       "type" : "group"
