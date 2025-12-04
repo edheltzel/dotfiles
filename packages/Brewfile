@@ -305,11 +305,11 @@ cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor
-cask 'zed'                            # Code editor
+cask 'zed'                            # Code editor - Rust
 
 # RAG+CAG LLM
-cask 'block-goose'                    # On Machine AI Agent
-cask 'chatgpt'                        # Desktop client AI chat
+# cask 'block-goose'                    # On Machine AI Agent
+# cask 'chatgpt'                        # Desktop client AI chat
 cask 'claude'                         # Desktop client AI chat
 
 # brew 'ollama'                         # Local LLMs
@@ -319,12 +319,13 @@ cask 'claude'                         # Desktop client AI chat
 brew 'claude-code'
 brew 'gemini-cli'
 brew 'opencode'                       # Open source
-#cask 'superwhisper'                # AI dictation app
+cask 'superwhisper'                   # AI dictation app
 
 # Terminal emulators
 cask 'warp'                           # Rust
 cask 'kitty'                          # Python+C
 cask 'wezterm@nightly'                # Rust
+cask 'ghostty'                        # Zig
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
