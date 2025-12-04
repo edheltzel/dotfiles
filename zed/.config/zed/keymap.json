@@ -9,7 +9,7 @@
 			"ctrl-cmd-home": "git::Push",
 			"ctrl-alt-p": "workspace::ToggleZoom",
 			"alt-home": "project_panel::CollapseAllEntries",
-			"alt-cmd-b": "workspace::ToggleLeftDock",
+			"ctrl-alt-cmd-b": "workspace::ToggleLeftDock",
 			"alt-b": "workspace::ToggleLeftDock",
 			"cmd-b": "workspace::ToggleRightDock",
 			"space q q": "workspace::CloseWindow",
@@ -40,7 +40,8 @@
 	{
 		"context": "ProjectPanel && !editing",
 		"bindings": {
-			"r": "project_panel::Rename"
+			"r": "project_panel::Rename",
+			"a": "project_panel::NewFile"
 		}
 	},
 	// Terminal
@@ -64,6 +65,13 @@
 				}
 			],
 			"space a d": [
+				"task::Spawn",
+				{
+					"task_name": "Claude Danger",
+					"reveal_target": "center"
+				}
+			],
+			"ctrl-alt-shift-c": [
 				"task::Spawn",
 				{
 					"task_name": "Claude Danger",
@@ -107,6 +115,7 @@
 			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
 			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
+			"cmd-k": "command_palette::Toggle",
 			"cmd shift l": "editor::SelectAllMatches"
 		}
 	},
@@ -119,7 +128,9 @@
 			"s": "vim::PushSneak",
 			"S": "vim::PushSneakBackward",
 			"cmd-shift-d": "editor::DuplicateLineDown",
-			"ctrl-alt-d": "editor::DuplicateLineDown"
+			"ctrl-alt-d": "editor::DuplicateLineDown",
+			"alt-k": "editor::MoveLineUp",
+			"alt-j": "editor::MoveLineDown"
 		}
 	},
 	{
