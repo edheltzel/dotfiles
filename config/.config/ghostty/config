@@ -1,22 +1,21 @@
 initial-window = false
 
+quick-terminal-position = "left"
+quick-terminal-size = 50% 
+quick-terminal-animation-duration = 0
+quick-terminal-autohide = false
+
 alpha-blending = linear-corrected
+
+config-file = "colors/eldritch"
 
 background-opacity = 1
 background-blur-radius = 50
 
-# theme = Rose Pine Moon
-config-file = "colors/eldritch"
 
-font-size = 18
-font-family = "Lilex Nerd Font Mono"
-
-quick-terminal-position = "left"
-  quick-terminal-size = 900px
-quick-terminal-animation-duration = 0
-quick-terminal-autohide = false
 
 copy-on-select = clipboard
+
 clipboard-read = allow
 clipboard-write = allow
 
@@ -28,13 +27,17 @@ window-padding-x = 10
 window-save-state = always
 window-title-font-family = "Lilex Nerd Font Mono"
 
-mouse-hide-while-typing = true
+font-size = 18
+font-family = "Lilex Nerd Font Mono"
+
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
 macos-titlebar-style = tabs
 macos-titlebar-proxy-icon = hidden
 macos-window-buttons = hidden
 macos-icon =  retro
+
+mouse-hide-while-typing = true
 
 # Custom keybinding
 keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
@@ -52,6 +55,8 @@ keybind = super+ctrl+alt+]=move_tab:1
 # Leader key (cmd+k) sequences
 keybind = super+k>p=toggle_command_palette
 keybind = super+k>k=clear_screen
+keybind = super+k>n=new_window
+keybind = super+k>x=close_surface
 #splits
 keybind = super+k>backslash=new_split:right
 keybind = super+k>minus=new_split:down
@@ -59,7 +64,6 @@ keybind = super+k>z=toggle_split_zoom
 keybind = super+k>equal=equalize_splits
 #tabs
 keybind = super+k>t=new_tab
-keybind = super+k>x=close_surface
 keybind = super+k>e=prompt_surface_title
 keybind = super+k>1=goto_tab:1
 keybind = super+k>2=goto_tab:2
