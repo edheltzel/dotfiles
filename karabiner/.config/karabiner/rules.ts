@@ -63,7 +63,7 @@ import {
     // ------------------------------------------------------------------------
     //      Hyper + a (app)
     // ------------------------------------------------------------------------
-    a: {
+    a: 
       0: app("Passwords"),
       3: app("Autodesk Fusion"),
       b: app("BambuStudio"),
@@ -78,13 +78,12 @@ import {
       r: app("Reminders"),
       s: app("Shapr3D"),
       t: app("Todoist"),
-      x: app("xTool Studio"),
-    },
+      x: app("xTool Studio"),,
 
     // ------------------------------------------------------------------------
     //      Hyper + d (directory)
     // ------------------------------------------------------------------------
-    d: {
+    d: 
       y: open("~/Documents/3D-CAD"),
       u: open(
         "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
@@ -100,8 +99,7 @@ import {
       l: open("~/Sites/"),
       semicolon: open(
         "'/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
-      ),
-    },
+      ),,
   }),
 
 
@@ -109,25 +107,19 @@ import {
   // Modifier tap rules - define multiple modifier keys with tap actions
   // ------------------------------------------------------------------------
   ...createModifierTapRules({
-    // Right CMD => alt+backspace when tapped (delete last word)
-    right_command: {
       key_code: "delete_or_backspace",
       modifiers: ["right_alt"],
-      description: "Delete Last Word",
-    },
+      description: "Delete Last Word",,
   }),
 
   // ------------------------------------------------------------------------
   //  Double-tap rules - define multiple keys with double-tap actions
   // ------------------------------------------------------------------------
   ...createDoubleTapRules({
-    // Double-tap Tab => triggers Homerow app
-    home: {
       modifiers: ["right_command"],
       key_code: "f8",
       description: "Trigger SuperWhisper",
-      delayMs: 250,
-    },
+      delayMs: 250,,
   }),
 ];
 
