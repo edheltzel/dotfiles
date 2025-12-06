@@ -1,196 +1,196 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "var": {
-    "lightning": "⚡",
-    "lightningColor": "#7DCFFF"
-  },
-  "transient_prompt": {
-    "template": "❯ ",
-    "foreground": "green",
-    "background": "transparent"
-  },
-  "blocks": [
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "properties": {
-            "cache_duration": "none",
-            "folder_icon": "\u2026",
-            "hide_root_location": true,
-            "style": "agnoster_short"
-          },
-          "template": "<{{ .Var.lightningColor }}>{{ .Var.lightning }}</>{{ .Path }} ",
-          "foreground": "cyan",
-          "type": "path",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "branch_icon": "\uf418 ",
-            "cache_duration": "none",
-            "fetch_e_count": true,
-            "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": true
-          },
-          "template": "<#7ea2b4>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152>\uf448 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf420 {{ .StashCount }}{{ end }} ",
-          "foreground": "#F141A8",
-          "type": "git",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\uf270 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-          "foreground": "#FFA400",
-          "type": "aws",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "{{if .Version}} \udb80\udfd7 {{.Version}} {{end}}",
-          "foreground": "#FF7A14",
-          "type": "project",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\udb84\udf62 {{ .Full }} ",
-          "foreground": "darkGray",
-          "type": "deno",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\udb80\udf99 {{ .Full }} ",
-          "foreground": "green",
-          "type": "node",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\ue71e {{ .Full }} ",
-          "foreground": "#C00C00",
-          "type": "npm",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\udb84\uddda {{ .Full }} ",
-          "foreground": "#F9AD06",
-          "type": "pnpm",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "fetch_version": true
-          },
-          "template": "\ue28d  {{ .Full }} ",
-          "foreground": "#CCBEA7",
-          "type": "bun",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\uf1a0 {{.Full}} ",
-          "foreground": "#7FD5EA",
-          "type": "go",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\ue620 {{.Full}} ",
-          "foreground": "blue",
-          "type": "lua",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\ue608 {{.Full}} ",
-          "foreground": "#4063DB",
-          "type": "php",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\ue606 {{.Full}} ",
-          "foreground": "#906CFF",
-          "type": "python",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\udb83\udd2d {{.Full}} ",
-          "foreground": "#CF043D",
-          "type": "ruby",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\ue68b {{.Full}} ",
-          "foreground": "#99908A",
-          "type": "rust",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "style": "roundrock",
-            "threshold": 0
-          },
-          "template": "<#CFC9C2>\udb81\udd1b</> {{ .FormattedMs }} ",
-          "foreground": "#CFC9C2",
-          "type": "executiontime",
-          "style": "plain"
-        }
-      ],
-      "newline": true
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "❯ ",
-          "type": "text",
-          "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#F7768E{{ end }}",
-            "{{ if eq .Code 0}}#9ECE6A{{ end }}"
-          ]
-        }
-      ],
-      "newline": true
-    }
-  ],
-  "version": 3
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"var": {
+		"lightning": "⚡",
+		"lightningColor": "#7DCFFF"
+	},
+	"transient_prompt": {
+		"template": "❯ ",
+		"foreground": "green",
+		"background": "transparent"
+	},
+	"blocks": [
+		{
+			"type": "prompt",
+			"alignment": "left",
+			"segments": [
+				{
+					"properties": {
+						"cache_duration": "none",
+						"folder_icon": "\u2026",
+						"hide_root_location": true,
+						"style": "agnoster_short"
+					},
+					"template": "<{{ .Var.lightningColor }}>{{ .Var.lightning }}</>{{ .Path }} ",
+					"foreground": "cyan",
+					"type": "path",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"branch_icon": "\uf418 ",
+						"cache_duration": "none",
+						"fetch_e_count": true,
+						"fetch_stash_count": true,
+						"fetch_status": true,
+						"fetch_upstream_icon": true
+					},
+					"template": "<#7ea2b4>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#CF9152>\uf448 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf420 {{ .StashCount }}{{ end }} ",
+					"foreground": "#F141A8",
+					"type": "git",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\uf270 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+					"foreground": "#FFA400",
+					"type": "aws",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "{{if .Version}} \udb80\udfd7 {{.Version}} {{end}}",
+					"foreground": "#FF7A14",
+					"type": "project",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\udb84\udf62 {{ .Full }} ",
+					"foreground": "darkGray",
+					"type": "deno",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\udb80\udf99 {{ .Full }} ",
+					"foreground": "green",
+					"type": "node",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\ue71e {{ .Full }} ",
+					"foreground": "#C00C00",
+					"type": "npm",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\udb84\uddda {{ .Full }} ",
+					"foreground": "#F9AD06",
+					"type": "pnpm",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none",
+						"fetch_version": true
+					},
+					"template": "\ue28d  {{ .Full }} ",
+					"foreground": "#CCBEA7",
+					"type": "bun",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\uf1a0 {{.Full}} ",
+					"foreground": "#7FD5EA",
+					"type": "go",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\ue620 {{.Full}} ",
+					"foreground": "blue",
+					"type": "lua",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\ue608 {{.Full}} ",
+					"foreground": "#4063DB",
+					"type": "php",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\ue606 {{.Full}} ",
+					"foreground": "#906CFF",
+					"type": "python",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\udb83\udd2d {{.Full}} ",
+					"foreground": "#CF043D",
+					"type": "ruby",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "\ue68b {{.Full}} ",
+					"foreground": "#99908A",
+					"type": "rust",
+					"style": "plain"
+				},
+				{
+					"properties": {
+						"cache_duration": "none",
+						"style": "roundrock",
+						"threshold": 0
+					},
+					"template": "<#CFC9C2>\udb81\udd1b</> {{ .FormattedMs }} ",
+					"foreground": "#CFC9C2",
+					"type": "executiontime",
+					"style": "plain"
+				}
+			],
+			"newline": true
+		},
+		{
+			"type": "prompt",
+			"alignment": "left",
+			"segments": [
+				{
+					"properties": {
+						"cache_duration": "none"
+					},
+					"template": "❯ ",
+					"type": "text",
+					"style": "plain",
+					"foreground_templates": [
+						"{{ if gt .Code 0 }}#F7768E{{ end }}",
+						"{{ if eq .Code 0}}#9ECE6A{{ end }}"
+					]
+				}
+			],
+			"newline": true
+		}
+	],
+	"version": 3
 }

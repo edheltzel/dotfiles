@@ -1,116 +1,117 @@
+---
 # cSpell: disable
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 # this is the default config.
 gui:
   theme:
     # ELDRITCH THEME
-    # activeBorderColor:
-    #   - "#37f499"
-    #   - bold
-    # inactiveBorderColor:
-    #   - "#747BA2"
-    # searchingActiveBorderColor:
-    #   - "#f265b5"
-    #   - bold
-    # optionsTextColor:
-    #   - blue
-    # selectedLineBgColor:
-    #   - "#323449"
-    # inactiveViewSelectedLineBgColor:
-    #   - bold
-    # cherryPickedCommitFgColor:
-    #   - "#a48cf2"
-    # cherryPickedCommitBgColor:
-    #   - cyan
-    # markedBaseCommitFgColor:
-    #   - blue
-    # markedBaseCommitBgColor:
-    #   - "#f1fc79"
-    # unstagedChangesColor:
-    #   - "#f16c75"
-    # defaultFgColor:
-    #   - "#ebfafa"
-
-    # ROSE PINE THEME
-    # activeBorderColor:
-    #   - "#ebbcba"
-    #   - bold
-    # inactiveBorderColor:
-    #   - "#6e6a86"
-    # searchingActiveBorderColor:
-    #   - "#ebbcba"
-    #   - bold
-    # optionsTextColor:
-    #   - "#9ccfd8"
-    # selectedLineBgColor:
-    #   - "#26233a"
-    # inactiveViewSelectedLineBgColor:
-    #   - bold
-    # cherryPickedCommitFgColor:
-    #   - "#c4a7e7"
-    # cherryPickedCommitBgColor:
-    #   - "#31748f"
-    # markedBaseCommitFgColor:
-    #   - "#31748f"
-    # markedBaseCommitBgColor:
-    #   - "#f6c177"
-    # unstagedChangesColor:
-    #   - "#eb6f92"
-    # defaultFgColor:
-    #   - "#e0def4"
-    #
-    # ROSE PINE MOON THEME
     activeBorderColor:
-      - "#ea9a97"
+      - "#37f499"
       - bold
     inactiveBorderColor:
-      - "#6e6a86"
+      - "#747BA2"
     searchingActiveBorderColor:
-      - "#ea9a97"
+      - "#f265b5"
       - bold
     optionsTextColor:
-      - "#9ccfd8"
+      - blue
     selectedLineBgColor:
-      - "#393552"
+      - "#323449"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#c4a7e7"
+      - "#a48cf2"
     cherryPickedCommitBgColor:
-      - "#3e8fb0"
+      - cyan
     markedBaseCommitFgColor:
-      - "#3e8fb0"
+      - blue
     markedBaseCommitBgColor:
-      - "#f6c177"
+      - "#f1fc79"
     unstagedChangesColor:
-      - "#eb6f92"
+      - "#f16c75"
     defaultFgColor:
-      - "#e0def4"
+      - "#ebfafa"
 
-    # ROSE PINE DAWN THEME
-    # activeBorderColor:
-    #   - "#d7827e"
-    #   - bold
-    # inactiveBorderColor:
-    #   - "#9893a5"
-    # searchingActiveBorderColor:
-    #   - "#d7827e"
-    #   - bold
-    # optionsTextColor:
-    #   - "#56949f"
-    # selectedLineBgColor:
-    #   - "#f2e9e1"
-    # inactiveViewSelectedLineBgColor:
-    #   - bold
-    # cherryPickedCommitFgColor:
-    #   - "#907aa9"
-    # cherryPickedCommitBgColor:
-    #   - "#286983"
-    # markedBaseCommitFgColor:
-    #   - "#286983"
-    # markedBaseCommitBgColor:
-    #   - "#ea9d34"
-    # unstagedChangesColor:
-    #   - "#b4637a"
-    # defaultFgColor:
-    #   - "#575279"
+# ROSE PINE THEME
+# activeBorderColor:
+#   - "#ebbcba"
+#   - bold
+# inactiveBorderColor:
+#   - "#6e6a86"
+# searchingActiveBorderColor:
+#   - "#ebbcba"
+#   - bold
+# optionsTextColor:
+#   - "#9ccfd8"
+# selectedLineBgColor:
+#   - "#26233a"
+# inactiveViewSelectedLineBgColor:
+#   - bold
+# cherryPickedCommitFgColor:
+#   - "#c4a7e7"
+# cherryPickedCommitBgColor:
+#   - "#31748f"
+# markedBaseCommitFgColor:
+#   - "#31748f"
+# markedBaseCommitBgColor:
+#   - "#f6c177"
+# unstagedChangesColor:
+#   - "#eb6f92"
+# defaultFgColor:
+#   - "#e0def4"
+#
+# ROSE PINE MOON THEME
+# activeBorderColor:
+#   - "#ea9a97"
+#   - bold
+# inactiveBorderColor:
+#   - "#6e6a86"
+# searchingActiveBorderColor:
+#   - "#ea9a97"
+#   - bold
+# optionsTextColor:
+#   - "#9ccfd8"
+# selectedLineBgColor:
+#   - "#393552"
+# inactiveViewSelectedLineBgColor:
+#   - bold
+# cherryPickedCommitFgColor:
+#   - "#c4a7e7"
+# cherryPickedCommitBgColor:
+#   - "#3e8fb0"
+# markedBaseCommitFgColor:
+#   - "#3e8fb0"
+# markedBaseCommitBgColor:
+#   - "#f6c177"
+# unstagedChangesColor:
+#   - "#eb6f92"
+# defaultFgColor:
+#   - "#e0def4"
+
+# ROSE PINE DAWN THEME
+# activeBorderColor:
+#   - "#d7827e"
+#   - bold
+# inactiveBorderColor:
+#   - "#9893a5"
+# searchingActiveBorderColor:
+#   - "#d7827e"
+#   - bold
+# optionsTextColor:
+#   - "#56949f"
+# selectedLineBgColor:
+#   - "#f2e9e1"
+# inactiveViewSelectedLineBgColor:
+#   - bold
+# cherryPickedCommitFgColor:
+#   - "#907aa9"
+# cherryPickedCommitBgColor:
+#   - "#286983"
+# markedBaseCommitFgColor:
+#   - "#286983"
+# markedBaseCommitBgColor:
+#   - "#ea9d34"
+# unstagedChangesColor:
+#   - "#b4637a"
+# defaultFgColor:
+#   - "#575279"

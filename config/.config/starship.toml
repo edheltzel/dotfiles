@@ -1,5 +1,5 @@
 # Theme selection: "eldritch", "rose-pine", "rose-pine-moon", "rose-pine-dawn"
-palette = "rose-pine-moon"
+palette = "eldritch"
 
 format = "$all"
 # right_format = "$cmd_duration"

@@ -5,9 +5,8 @@ alpha-blending = linear-corrected
 background-opacity = 1
 background-blur-radius = 50
 
-theme = Rose Pine Moon
-# config-file = "colors/eldritch"
-
+# theme = Rose Pine Moon
+config-file = "colors/eldritch"
 
 font-size = 18
 font-family = "Lilex Nerd Font Mono"
@@ -21,7 +20,7 @@ copy-on-select = clipboard
 clipboard-read = allow
 clipboard-write = allow
 
-scrollback-limit = 1000000000
+scrollback-limit = 50000
 
 window-colorspace = "display-p3"
 window-inherit-font-size = false
@@ -40,8 +39,8 @@ macos-icon =  retro
 # Custom keybinding
 keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
 
-keybind = super+ctrl+,=reload_config
-keybind = super+ctrl+equal=close_surface
+keybind = super+ctrl+alt+,=reload_config
+keybind = super+ctrl+alt+equal=close_surface
 
 keybind = super+ctrl+alt+h=resize_split:left,10
 keybind = super+ctrl+alt+j=resize_split:down,10
