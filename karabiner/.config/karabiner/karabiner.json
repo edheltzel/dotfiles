@@ -1,656 +1,646 @@
 {
-  "global": {
-    "show_in_menu_bar": false
-  },
-  "profiles": [
-    {
-      "name": "Default",
-      "virtual_hid_keyboard": {
-        "keyboard_type_v2": "ansi"
-      },
-      "devices": [
-        {
-          "identifiers": {
-            "is_keyboard": true,
-            "product_id": 480,
-            "vendor_id": 13364
-          },
-          "manipulate_caps_lock_led": false
-        },
-        {
-          "identifiers": {
-            "is_keyboard": true,
-            "product_id": 18,
-            "vendor_id": 13807
-          },
-          "manipulate_caps_lock_led": false,
-          "treat_as_built_in_keyboard": true
-        },
-        {
-          "identifiers": {
-            "is_pointing_device": true,
-            "product_id": 64160,
-            "vendor_id": 9639
-          },
-          "ignore": false
-        },
-        {
-          "identifiers": {
-            "is_keyboard": true,
-            "is_pointing_device": true,
-            "product_id": 18,
-            "vendor_id": 13807
-          },
-          "ignore": false
-        }
-      ],
-      "complex_modifications": {
-        "rules": [
-          {
-            "description": "Hyper Key (⌃⌥⇧⌘)",
-            "manipulators": [
-              {
-                "description": "Caps Lock -> Hyper Key",
-                "from": {
-                  "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "right_shift",
-                    "modifiers": [
-                      "right_control",
-                      "right_command",
-                      "right_option"
-                    ]
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "escape"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Hyper Navigation",
-            "manipulators": [
-              {
-                "description": "h = left_arrow",
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_arrow"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "j = down_arrow",
-                "from": {
-                  "key_code": "j",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "down_arrow"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "k = up_arrow",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "up_arrow"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "l = right_arrow",
-                "from": {
-                  "key_code": "l",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "right_arrow"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "u = page_up",
-                "from": {
-                  "key_code": "u",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "page_up"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "i = page_down",
-                "from": {
-                  "key_code": "i",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "page_down"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "o = home",
-                "from": {
-                  "key_code": "o",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "home"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "p = end",
-                "from": {
-                  "key_code": "p",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "end"
-                  }
-                ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "variable_unless",
-                    "name": "in_sublayer",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Mouse 4 => Back",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": [
-                      "^com\\.apple\\.Safari$",
-                      "^com\\.vivaldi\\.Vivaldi$",
-                      "^app\\.zen-browser\\.zen$"
-                    ],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "pointing_button": "button4"
-                },
-                "to": [
-                  {
-                    "key_code": "left_arrow",
-                    "modifiers": [
-                      "left_command"
-                    ],
-                    "repeat": false
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Mouse 5 => Forward",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": [
-                      "^com\\.apple\\.Safari$",
-                      "^com\\.vivaldi\\.Vivaldi$",
-                      "^app\\.zen-browser\\.zen$"
-                    ],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "pointing_button": "button5"
-                },
-                "to": [
-                  {
-                    "key_code": "right_arrow",
-                    "modifiers": [
-                      "left_command"
-                    ],
-                    "repeat": false
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Mouse Button 3 => Button 1 + Left Alt (Zen browser Glance)",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "pointing_button": "button3"
-                },
-                "to": [
-                  {
-                    "pointing_button": "button1",
-                    "modifiers": [
-                      "left_alt"
-                    ]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "^app\\.zen-browser\\.zen$"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key sublayer \"left_command\"",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "left_command",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_sublayer_left_command",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
-                      "value": 1
-                    }
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_sublayer_left_command",
-                      "value": 0
-                    }
-                  },
-                  {
-                    "set_variable": {
-                      "name": "in_sublayer",
-                      "value": 0
-                    }
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/rishabswift/word-search/word-spell'"
-                  }
-                ],
-                "description": "Open 'raycast://extensions/rishabswift/word-search/word-spell'",
-                "type": "basic",
-                "from": {
-                  "key_code": "8",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'System Settings.app'"
-                  }
-                ],
-                "description": "Open -a 'System Settings.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "comma",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/doist/todoist/create-task'"
-                  }
-                ],
-                "description": "Open 'raycast://extensions/doist/todoist/create-task'",
-                "type": "basic",
-                "from": {
-                  "key_code": "equal_sign",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"
-                  }
-                ],
-                "description": "Open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
-                "type": "basic",
-                "from": {
-                  "key_code": "f",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://script-commands/run-topgrade'"
-                  }
-                ],
-                "description": "Open 'raycast://script-commands/run-topgrade'",
-                "type": "basic",
-                "from": {
-                  "key_code": "t",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://script-commands/edit-dotfiles'"
-                  }
-                ],
-                "description": "Open 'raycast://script-commands/edit-dotfiles'",
-                "type": "basic",
-                "from": {
-                  "key_code": "d",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/jomifepe/bitwarden/search'"
-                  }
-                ],
-                "description": "Open 'raycast://extensions/jomifepe/bitwarden/search'",
-                "type": "basic",
-                "from": {
-                  "key_code": "p",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open 'raycast://extensions/jomifepe/bitwarden/authenticator'"
-                  }
-                ],
-                "description": "Open 'raycast://extensions/jomifepe/bitwarden/authenticator'",
-                "type": "basic",
-                "from": {
-                  "key_code": "o",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_control",
-                      "right_command",
-                      "right_option",
-                      "right_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_left_command",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
+	"global": {
+		"show_in_menu_bar": false
+	},
+	"profiles": [
+		{
+			"name": "Default",
+			"virtual_hid_keyboard": {
+				"keyboard_type_v2": "ansi"
+			},
+			"devices": [
+				{
+					"identifiers": {
+						"is_keyboard": true,
+						"product_id": 480,
+						"vendor_id": 13364
+					},
+					"manipulate_caps_lock_led": false
+				},
+				{
+					"identifiers": {
+						"is_keyboard": true,
+						"product_id": 18,
+						"vendor_id": 13807
+					},
+					"manipulate_caps_lock_led": false,
+					"treat_as_built_in_keyboard": true
+				},
+				{
+					"identifiers": {
+						"is_pointing_device": true,
+						"product_id": 64160,
+						"vendor_id": 9639
+					},
+					"ignore": false
+				},
+				{
+					"identifiers": {
+						"is_keyboard": true,
+						"is_pointing_device": true,
+						"product_id": 18,
+						"vendor_id": 13807
+					},
+					"ignore": false
+				}
+			],
+			"complex_modifications": {
+				"rules": [
+					{
+						"description": "Hyper Key (⌃⌥⇧⌘)",
+						"manipulators": [
+							{
+								"description": "Caps Lock -> Hyper Key",
+								"from": {
+									"key_code": "caps_lock",
+									"modifiers": {
+										"optional": ["any"]
+									}
+								},
+								"to": [
+									{
+										"key_code": "right_shift",
+										"modifiers": [
+											"right_control",
+											"right_command",
+											"right_option"
+										]
+									}
+								],
+								"to_if_alone": [
+									{
+										"key_code": "escape"
+									}
+								],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Hyper Navigation",
+						"manipulators": [
+							{
+								"description": "h = left_arrow",
+								"from": {
+									"key_code": "h",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "left_arrow"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							},
+							{
+								"description": "j = down_arrow",
+								"from": {
+									"key_code": "j",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "down_arrow"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							},
+							{
+								"description": "k = up_arrow",
+								"from": {
+									"key_code": "k",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "up_arrow"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							},
+							{
+								"description": "l = right_arrow",
+								"from": {
+									"key_code": "l",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "right_arrow"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							},
+							{
+								"description": "u = page_up",
+								"from": {
+									"key_code": "u",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "page_up"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							},
+							{
+								"description": "i = page_down",
+								"from": {
+									"key_code": "i",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "page_down"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							},
+							{
+								"description": "o = home",
+								"from": {
+									"key_code": "o",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "home"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							},
+							{
+								"description": "p = end",
+								"from": {
+									"key_code": "p",
+									"modifiers": {
+										"mandatory": [
+											"right_command",
+											"right_control",
+											"right_shift",
+											"right_option"
+										]
+									}
+								},
+								"to": [
+									{
+										"key_code": "end"
+									}
+								],
+								"type": "basic",
+								"conditions": [
+									{
+										"type": "variable_unless",
+										"name": "in_sublayer",
+										"value": 1
+									}
+								]
+							}
+						]
+					},
+					{
+						"description": "Mouse 4 => Back",
+						"manipulators": [
+							{
+								"conditions": [
+									{
+										"bundle_identifiers": [
+											"^com\\.apple\\.Safari$",
+											"^com\\.vivaldi\\.Vivaldi$",
+											"^app\\.zen-browser\\.zen$"
+										],
+										"type": "frontmost_application_if"
+									}
+								],
+								"from": {
+									"pointing_button": "button4"
+								},
+								"to": [
+									{
+										"key_code": "left_arrow",
+										"modifiers": ["left_command"],
+										"repeat": false
+									}
+								],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Mouse 5 => Forward",
+						"manipulators": [
+							{
+								"conditions": [
+									{
+										"bundle_identifiers": [
+											"^com\\.apple\\.Safari$",
+											"^com\\.vivaldi\\.Vivaldi$",
+											"^app\\.zen-browser\\.zen$"
+										],
+										"type": "frontmost_application_if"
+									}
+								],
+								"from": {
+									"pointing_button": "button5"
+								},
+								"to": [
+									{
+										"key_code": "right_arrow",
+										"modifiers": ["left_command"],
+										"repeat": false
+									}
+								],
+								"type": "basic"
+							}
+						]
+					},
+					{
+						"description": "Mouse Button 3 => Button 1 + Left Alt (Zen browser Glance)",
+						"manipulators": [
+							{
+								"type": "basic",
+								"from": {
+									"pointing_button": "button3"
+								},
+								"to": [
+									{
+										"pointing_button": "button1",
+										"modifiers": ["left_alt"]
+									}
+								],
+								"conditions": [
+									{
+										"type": "frontmost_application_if",
+										"bundle_identifiers": ["^app\\.zen-browser\\.zen$"]
+									}
+								]
+							}
+						]
+					},
+					{
+						"description": "Hyper Key sublayer \"left_command\"",
+						"manipulators": [
+							{
+								"type": "basic",
+								"from": {
+									"key_code": "left_command",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"to": [
+									{
+										"set_variable": {
+											"name": "hyper_sublayer_left_command",
+											"value": 1
+										}
+									},
+									{
+										"set_variable": {
+											"name": "in_sublayer",
+											"value": 1
+										}
+									}
+								],
+								"to_after_key_up": [
+									{
+										"set_variable": {
+											"name": "hyper_sublayer_left_command",
+											"value": 0
+										}
+									},
+									{
+										"set_variable": {
+											"name": "in_sublayer",
+											"value": 0
+										}
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open 'raycast://extensions/rishabswift/word-search/word-spell'"
+									}
+								],
+								"description": "Open 'raycast://extensions/rishabswift/word-search/word-spell'",
+								"type": "basic",
+								"from": {
+									"key_code": "8",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open -a 'System Settings.app'"
+									}
+								],
+								"description": "Open -a 'System Settings.app'",
+								"type": "basic",
+								"from": {
+									"key_code": "comma",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open 'raycast://extensions/doist/todoist/create-task'"
+									}
+								],
+								"description": "Open 'raycast://extensions/doist/todoist/create-task'",
+								"type": "basic",
+								"from": {
+									"key_code": "equal_sign",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'"
+									}
+								],
+								"description": "Open 'raycast://extensions/raycast/raycast-focus/toggle-focus-session'",
+								"type": "basic",
+								"from": {
+									"key_code": "f",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open 'raycast://script-commands/run-topgrade'"
+									}
+								],
+								"description": "Open 'raycast://script-commands/run-topgrade'",
+								"type": "basic",
+								"from": {
+									"key_code": "t",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open 'raycast://script-commands/edit-dotfiles'"
+									}
+								],
+								"description": "Open 'raycast://script-commands/edit-dotfiles'",
+								"type": "basic",
+								"from": {
+									"key_code": "d",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open 'raycast://extensions/jomifepe/bitwarden/search'"
+									}
+								],
+								"description": "Open 'raycast://extensions/jomifepe/bitwarden/search'",
+								"type": "basic",
+								"from": {
+									"key_code": "p",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							},
+							{
+								"to": [
+									{
+										"shell_command": "open 'raycast://extensions/jomifepe/bitwarden/authenticator'"
+									}
+								],
+								"description": "Open 'raycast://extensions/jomifepe/bitwarden/authenticator'",
+								"type": "basic",
+								"from": {
+									"key_code": "o",
+									"modifiers": {
+										"mandatory": [
+											"right_control",
+											"right_command",
+											"right_option",
+											"right_shift"
+										]
+									}
+								},
+								"conditions": [
+									{
+										"type": "variable_if",
+										"name": "hyper_sublayer_left_command",
+										"value": 1
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	]
 }

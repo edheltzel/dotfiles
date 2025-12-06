@@ -1,21 +1,21 @@
 {
-  "name": "karabiner",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Ed Heltzel <ed@rainyday.media> -> originally by Max Stoiber <contact@mxstbr.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^24.10.1",
-    "nodemon": "^3.1.11",
-    "npm-check-updates": "^19.1.2",
-    "prettier": "^3.6.2",
-    "tsx": "^4.20.6"
-  },
-  "scripts": {
-    "start": "nodemon --exec bun run build -e ts",
-    "build": "tsx rules.ts",
-    "upgrade": "bunx npm-check-updates -ui",
-    "purge": "./.scrub.sh purge",
-    "clean": "rm -rf node_modules"
-  }
+	"name": "karabiner",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Ed Heltzel <ed@rainyday.media> -> originally by Max Stoiber <contact@mxstbr.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"nodemon": "^3.1.11",
+		"npm-check-updates": "^19.1.2",
+		"prettier": "^3.6.2",
+		"tsx": "^4.20.6"
+	},
+	"scripts": {
+		"start": "nodemon --exec bun run build -e ts",
+		"build": "tsx rules.ts",
+		"upgrade": "bunx npm-check-updates -ui",
+		"purge": "./.scrub.sh purge",
+		"clean": "rm -rf node_modules"
+	}
 }

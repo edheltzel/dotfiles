@@ -1,15 +1,10 @@
 // cSpell: disable
-import * as fs from "fs";
+import * as fs from "node:fs";
 import {
-    BROWSER_BUNDLES,
-    createDoubleTapRules,
     createHyperKeyRule,
     createHyperNavigationRule,
-    createModifierTapRules,
-    createMouseNavigationRules,
-    type KarabinerRules
 } from "./types";
-import { app, createHyperSubLayers, open } from "./utils";
+
   createHyperKeyRule(),
 
   // ------------------------------------------------------------------------
@@ -53,11 +48,6 @@ import { app, createHyperSubLayers, open } from "./utils";
   // Cording the Hyper Key with other modifiers & keys
   // ------------------------------------------------------------------------
   ...createHyperSubLayers({
-
-    // ------------------------------------------------------------------------
-    //      Hyper + left_command
-    // ------------------------------------------------------------------------
-    left_command: {
       8: open("'raycast://extensions/rishabswift/word-search/word-spell'"),
       comma: app("System Settings"),
       equal_sign: open("'raycast://extensions/doist/todoist/create-task'"),
@@ -68,52 +58,50 @@ import { app, createHyperSubLayers, open } from "./utils";
       t: open("'raycast://script-commands/run-topgrade'"), // M1
       d: open("'raycast://script-commands/edit-dotfiles'"), // M2
       p: open("'raycast://extensions/jomifepe/bitwarden/search'"), // M3
-      o: open("'raycast://extensions/jomifepe/bitwarden/authenticator'"), // M4
-
-    },
+      o: open("'raycast://extensions/jomifepe/bitwarden/authenticator'"), // M4,
 
     // ------------------------------------------------------------------------
     //      Hyper + a (app)
     // ------------------------------------------------------------------------
-    // a: {
-    //   0: app("Passwords"),
-    //   3: app("Autodesk Fusion"),
-    //   b: app("BambuStudio"),
-    //   d: app("Affinity"),
-    //   f: app("Figma"),
-    //   i: app("Adobe Illustrator"),
-    //   l: app("Affinity"),
-    //   n: app("Obsidian"),
-    //   m: app("Messages"),
-    //   o: app("OrcaSlicer"),
-    //   p: app("Adobe Photoshop 2026"),
-    //   r: app("Reminders"),
-    //   s: app("Shapr3D"),
-    //   t: app("Todoist"),
-    //   x: app("xTool Studio"),
-    // },
+    a: {
+      0: app("Passwords"),
+      3: app("Autodesk Fusion"),
+      b: app("BambuStudio"),
+      d: app("Affinity"),
+      f: app("Figma"),
+      i: app("Adobe Illustrator"),
+      l: app("Affinity"),
+      n: app("Obsidian"),
+      m: app("Messages"),
+      o: app("OrcaSlicer"),
+      p: app("Adobe Photoshop 2026"),
+      r: app("Reminders"),
+      s: app("Shapr3D"),
+      t: app("Todoist"),
+      x: app("xTool Studio"),
+    },
 
     // ------------------------------------------------------------------------
     //      Hyper + d (directory)
     // ------------------------------------------------------------------------
-    // d: {
-    //   y: open("~/Documents/3D-CAD"),
-    //   u: open(
-    //     "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
-    //   ),
-    //   i: open("~/Documents"),
-    //   o: open("~/Downloads"),
-    //   p: open("~/Desktop"),
-    //   h: open("~/"),
-    //   j: open(
-    //     "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
-    //   ),
-    //   k: open("~/Developer/"),
-    //   l: open("~/Sites/"),
-    //   semicolon: open(
-    //     "'/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
-    //   ),
-    // },
+    d: {
+      y: open("~/Documents/3D-CAD"),
+      u: open(
+        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+      ),
+      i: open("~/Documents"),
+      o: open("~/Downloads"),
+      p: open("~/Desktop"),
+      h: open("~/"),
+      j: open(
+        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
+      ),
+      k: open("~/Developer/"),
+      l: open("~/Sites/"),
+      semicolon: open(
+        "'/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
+      ),
+    },
   }),
 
 
@@ -122,11 +110,11 @@ import { app, createHyperSubLayers, open } from "./utils";
   // ------------------------------------------------------------------------
   ...createModifierTapRules({
     // Right CMD => alt+backspace when tapped (delete last word)
-    // right_command: {
-    //   key_code: "delete_or_backspace",
-    //   modifiers: ["right_alt"],
-    //   description: "Delete Last Word",
-    // },
+    right_command: {
+      key_code: "delete_or_backspace",
+      modifiers: ["right_alt"],
+      description: "Delete Last Word",
+    },
   }),
 
   // ------------------------------------------------------------------------
@@ -134,12 +122,12 @@ import { app, createHyperSubLayers, open } from "./utils";
   // ------------------------------------------------------------------------
   ...createDoubleTapRules({
     // Double-tap Tab => triggers Homerow app
-    // home: {
-    //   modifiers: ["right_command"],
-    //   key_code: "f8",
-    //   description: "Trigger SuperWhisper",
-    //   delayMs: 250,
-    // },
+    home: {
+      modifiers: ["right_command"],
+      key_code: "f8",
+      description: "Trigger SuperWhisper",
+      delayMs: 250,
+    },
   }),
 ];
 
@@ -196,15 +184,15 @@ fs.writeFileSync(
               },
               ignore: false,
             },
-            // {
-            //   identifiers: {
-            //     // Elecom EX-G PRO trackball
-            //     is_pointing_device: true,
-            //     product_id: 304,
-            //     vendor_id: 1390,
-            //   },
-            //   ignore: false,
-            // },
+            {
+              identifiers: {
+                // Elecom EX-G PRO trackball
+                is_pointing_device: true,
+                product_id: 304,
+                vendor_id: 1390,
+              },
+              ignore: false,
+            },
           ],
           complex_modifications: {
             rules,
