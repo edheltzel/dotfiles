@@ -130,7 +130,9 @@
 			"cmd-shift-d": "editor::DuplicateLineDown",
 			"ctrl-alt-d": "editor::DuplicateLineDown",
 			"alt-k": "editor::MoveLineUp",
-			"alt-j": "editor::MoveLineDown"
+			"alt-j": "editor::MoveLineDown",
+			"enter": "editor::Fold",
+			"enter": "editor::UnfoldLines"
 		}
 	},
 	{

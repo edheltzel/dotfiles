@@ -3,54 +3,42 @@
 		"name": "Dots ⊙",
 		"rootPath": "/Users/ed/.dotfiles",
 		"paths": [],
-		"tags": [
-			"OSS"
-		],
+		"tags": ["OSS"],
 		"enabled": true
 	},
 	{
 		"name": "FD Esbuild 🚀",
 		"rootPath": "/Users/ed/Developer/personal/flightdeck_projects/flightdeck-esbuild",
 		"paths": [],
-		"tags": [
-			"Flightdeck"
-		],
+		"tags": ["Flightdeck"],
 		"enabled": true
 	},
 	{
 		"name": "FD Parcel 🚀",
 		"rootPath": "/Users/ed/Developer/personal/flightdeck_projects/flightdeck-parcel",
 		"paths": [],
-		"tags": [
-			"Flightdeck"
-		],
+		"tags": ["Flightdeck"],
 		"enabled": true
 	},
 	{
 		"name": "better-nunjucks 🫣️",
 		"rootPath": "/Users/ed/Developer/personal/vscode_extensions/better-nunjucks",
 		"paths": [],
-		"tags": [
-			"VSCode"
-		],
+		"tags": ["VSCode"],
 		"enabled": true
 	},
 	{
 		"name": "better-solarized ☯️",
 		"rootPath": "/Users/ed/Developer/personal/vscode_extensions/better-solarized",
 		"paths": [],
-		"tags": [
-			"VSCode"
-		],
+		"tags": ["VSCode"],
 		"enabled": true
 	},
 	{
 		"name": "mac",
 		"rootPath": "/Users/ed/Developer/work/mac/mac3",
 		"paths": [],
-		"tags": [
-			"Clients"
-		],
+		"tags": ["Clients"],
 		"enabled": true
 	}
 ]

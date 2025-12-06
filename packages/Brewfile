@@ -260,8 +260,10 @@ cask 'homerow'                     # keyboaard shortcuts for every button in mac
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
 cask 'via'                         # Keyboard configuration desktop client
 cask 'vial'                        # Keyboard configuration desktop client
-cask 'karabiner-elements'          # Keyboard customization tool
-cask 'leader-key'
+cask 'bazecor'                     # Keyboard config for Dygma Defey keyboard
+
+# cask 'karabiner-elements'          # Keyboard customization tool
+cask 'leader-key'                  # Keyboard App launcher
 
 # Menu Bar Hacks
 # brew 'sketchybar'                 # status bar replacement for MacOS - paired with Aerospace
