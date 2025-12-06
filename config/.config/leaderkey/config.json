@@ -218,39 +218,6 @@
           "type" : "group"
         },
         {
-          "actions" : [
-            {
-              "key" : "e",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Excel.app"
-            },
-            {
-              "key" : "o",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Outlook.app"
-            },
-            {
-              "key" : "p",
-              "type" : "application",
-              "value" : "/Applications/Microsoft PowerPoint.app"
-            },
-            {
-              "key" : "t",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Teams.app"
-            },
-            {
-              "key" : "w",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Word.app"
-            }
-          ],
-          "iconPath" : "window.ceiling.closed",
-          "key" : "M",
-          "label" : "Microsoft",
-          "type" : "group"
-        },
-        {
           "key" : "m",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
@@ -261,7 +228,7 @@
           "value" : "/System/Applications/Reminders.app"
         },
         {
-          "key" : "s",
+          "key" : ",",
           "type" : "application",
           "value" : "/System/Applications/System Settings.app"
         },
@@ -429,7 +396,7 @@
         }
       ],
       "iconPath" : "touchid",
-      "key" : "T",
+      "key" : "t",
       "label" : "Touch Typing",
       "type" : "group"
     },
@@ -638,6 +605,39 @@
       "iconPath" : "/Applications/AeroSpace.app",
       "key" : "w",
       "label" : "Aerospace",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Excel.app"
+        },
+        {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Outlook.app"
+        },
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Applications/Microsoft PowerPoint.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Teams.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Word.app"
+        }
+      ],
+      "iconPath" : "window.ceiling.closed",
+      "key" : "m",
+      "label" : "Microsoft",
       "type" : "group"
     }
   ],
