@@ -1,10 +1,4 @@
 {
-  "words": [
-    "Topgrade",
-    "gitnow"
-  ],
-  "userWords": [
-    "keymaps",
-    "Heltzel"
-  ]
+	"words": ["Topgrade", "gitnow"],
+	"userWords": ["keymaps", "Heltzel"]
 }
