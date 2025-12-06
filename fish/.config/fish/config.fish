@@ -7,8 +7,20 @@ fish_add_path /opt/homebrew/sbin
 fish_add_path ~/.local/bin
 fish_add_path /Applications/Warp.app/Contents/MacOS
 
-# Fast prompt
-starship init fish | source
+# Prompt configuration - change this to swap prompts
+# Options: "starship", "oh-my-posh"
+set -g FISH_PROMPT oh-my-posh
+
+function __init_prompt
+    switch $FISH_PROMPT
+        case starship
+            starship init fish | source
+        case oh-my-posh
+            oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
+    end
+end
+
+__init_prompt
 
 # Lazy load everything else only when interactive
 if status is-interactive
@@ -47,7 +59,7 @@ if status is-interactive
     function fish_prompt --on-event fish_prompt
         functions -e fish_prompt
         __load_full_config &
-        starship init fish | source
+        __init_prompt
     end
 end
 
