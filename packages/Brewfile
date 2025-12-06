@@ -34,7 +34,7 @@ tap 'FelixKratz/formulae'       # A tap for Janky Borders see brew borders
 #############################################################
 brew 'fish'                                 # My Default Shell
 brew 'starship'                             # Cross-shell prompt - Rust
-# brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
+brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
 
 # zsh plugins
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh

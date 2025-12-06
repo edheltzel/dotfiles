@@ -168,7 +168,7 @@ The repository uses these stow packages (defined in `Makefile:1`):
 - **Git UI:** lazygit
 - **Monitoring:** btop, fastfetch
 - **Launcher:** raycast (extensive scripts)
-- **Prompt:** starship
+- **Prompt:** Oh My Posh (default) or Starship - configurable via `FISH_PROMPT` in `config.fish`
 - **Updater:** topgrade (unified package updater)
 
 ## Important Development Patterns

@@ -158,6 +158,10 @@ There are two options for managing packages with GNU Stow:
   - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/nvim/.config/nvim/`
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
+  - **Prompt**: Configurable prompt system supporting Oh My Posh (default) or Starship
+    - `starship-ish.omp.json` - Oh My Posh theme (styled like Starship)
+    - `starship.toml` - Starship config (alternative)
+    - Switch prompts by changing `FISH_PROMPT` in `fish/.config/fish/config.fish`
 - karabiner (karabiner/)
   - Complex keyboard customizations with Hyper key chording
 - vscode (vscode/)
