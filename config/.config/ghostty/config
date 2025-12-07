@@ -45,10 +45,10 @@ keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
 keybind = super+ctrl+alt+,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
 
-keybind = super+ctrl+alt+h=resize_split:left,10
-keybind = super+ctrl+alt+j=resize_split:down,10
-keybind = super+ctrl+alt+k=resize_split:up,10
-keybind = super+ctrl+alt+l=resize_split:right,10
+keybind = super+ctrl+alt+h=resize_split:left,50
+keybind = super+ctrl+alt+j=resize_split:down,50
+keybind = super+ctrl+alt+k=resize_split:up,50
+keybind = super+ctrl+alt+l=resize_split:right,50
 keybind = super+ctrl+alt+[=move_tab:-1
 keybind = super+ctrl+alt+]=move_tab:1
 
@@ -57,7 +57,7 @@ keybind = super+k>p=toggle_command_palette
 keybind = super+k>k=clear_screen
 keybind = super+k>n=new_window
 keybind = super+k>x=close_surface
-#splits
+#splits/panes
 keybind = super+k>backslash=new_split:right
 keybind = super+k>minus=new_split:down
 keybind = super+k>z=toggle_split_zoom
