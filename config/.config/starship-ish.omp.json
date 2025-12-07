@@ -5,9 +5,9 @@
 		"lightningColor": "#7DCFFF"
 	},
 	"transient_prompt": {
-		"template": "❯ ",
+		"background": "transparent",
 		"foreground": "green",
-		"background": "transparent"
+		"template": "❯ "
 	},
 	"blocks": [
 		{

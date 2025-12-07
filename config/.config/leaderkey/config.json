@@ -348,20 +348,6 @@
           "value" : "raycast://extensions/raycast/raycast-focus/toggle-focus-session"
         },
         {
-          "iconPath" : "x.circle.fill",
-          "key" : "q",
-          "label" : "Pick App to Quit",
-          "type" : "url",
-          "value" : "raycast://extensions/mackopes/quit-applications/index"
-        },
-        {
-          "iconPath" : "x.circle.fill",
-          "key" : "R",
-          "label" : "Restart",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/restartraycast://extensions/raycast/system/restart"
-        },
-        {
           "iconPath" : "checkmark.shield.fill",
           "key" : "o",
           "label" : "Auth",
@@ -395,6 +381,20 @@
           "label" : "Open Project in Zed",
           "type" : "url",
           "value" : "raycast://extensions/theherk/zoxide-git-projects/find"
+        },
+        {
+          "iconPath" : "x.circle.fill",
+          "key" : "q",
+          "label" : "Pick App to Quit",
+          "type" : "url",
+          "value" : "raycast://extensions/mackopes/quit-applications/index"
+        },
+        {
+          "iconPath" : "x.circle.fill",
+          "key" : "R",
+          "label" : "Restart",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/restartraycast://extensions/raycast/system/restart"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
@@ -666,14 +666,6 @@
       "iconPath" : "window.ceiling.closed",
       "key" : "m",
       "label" : "Microsoft",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-
-      ],
-      "key" : "q",
-      "label" : "Quit & Restart",
       "type" : "group"
     }
   ],
