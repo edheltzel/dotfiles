@@ -3,6 +3,61 @@
     {
       "actions" : [
         {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/Bazecor.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Applications/Vial.app"
+        },
+        {
+          "key" : "k",
+          "label" : "Keychron",
+          "type" : "url",
+          "value" : "https://launcher.keychron.com/#/keymap"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/VIA.app"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "g",
+              "label" : "Typing Gym",
+              "type" : "url",
+              "value" : "https://www.typinggym.com"
+            },
+            {
+              "key" : "m",
+              "label" : "Monkey Type",
+              "type" : "url",
+              "value" : "https://monkeytype.com/"
+            },
+            {
+              "key" : "t",
+              "label" : "Typ.ing",
+              "type" : "url",
+              "value" : "https://typ.ing/"
+            }
+          ],
+          "iconPath" : "touchid",
+          "key" : "t",
+          "label" : "Touch Typing",
+          "type" : "group"
+        }
+      ],
+      "iconPath" : "keyboard.fill",
+      "key" : "k",
+      "label" : "Keeb",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
           "actions" : [
             {
               "key" : "b",
@@ -182,42 +237,6 @@
           "value" : "/Applications/Invoice Ninja.app"
         },
         {
-          "actions" : [
-            {
-              "key" : "b",
-              "type" : "application",
-              "value" : "/Applications/Bazecor.app"
-            },
-            {
-              "key" : "i",
-              "type" : "application",
-              "value" : "/Applications/Vial.app"
-            },
-            {
-              "key" : "k",
-              "label" : "Keychron",
-              "type" : "url",
-              "value" : "https://launcher.keychron.com/#/keymap"
-            },
-            {
-              "iconPath" : "apple.terminal.on.rectangle",
-              "key" : "r",
-              "label" : "open rule.ts",
-              "type" : "command",
-              "value" : "open -na WezTerm --args start --cwd ~/.dotfiles/karabiner/.config/karabiner -- nvim rules.ts\n"
-            },
-            {
-              "key" : "v",
-              "type" : "application",
-              "value" : "/Applications/VIA.app"
-            }
-          ],
-          "iconPath" : "keyboard.fill",
-          "key" : "k",
-          "label" : "Keeb",
-          "type" : "group"
-        },
-        {
           "key" : "m",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
@@ -391,41 +410,15 @@
         },
         {
           "iconPath" : "x.circle.fill",
-          "key" : "R",
+          "key" : "r",
           "label" : "Restart",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/system/restartraycast://extensions/raycast/system/restart"
+          "value" : "raycast://extensions/raycast/system/restart"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
       "key" : "r",
       "label" : "Raycast",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "g",
-          "label" : "Typing Gym",
-          "type" : "url",
-          "value" : "https://www.typinggym.com"
-        },
-        {
-          "key" : "m",
-          "label" : "Monkey Type",
-          "type" : "url",
-          "value" : "https://monkeytype.com/"
-        },
-        {
-          "key" : "t",
-          "label" : "Typ.ing",
-          "type" : "url",
-          "value" : "https://typ.ing/"
-        }
-      ],
-      "iconPath" : "touchid",
-      "key" : "t",
-      "label" : "Touch Typing",
       "type" : "group"
     },
     {
