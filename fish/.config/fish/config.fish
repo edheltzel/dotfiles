@@ -62,6 +62,3 @@ if status is-interactive
         __init_prompt
     end
 end
-
-# Added by Antigravity
-fish_add_path /Users/ed/.antigravity/antigravity/bin

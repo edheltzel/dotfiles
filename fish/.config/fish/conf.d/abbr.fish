@@ -19,6 +19,7 @@ if status is-interactive
     abbr --add coo 'code -r .'
     abbr --add ze zed
     abbr --add zz 'zed -n .'
+    abbr --add nn nvim
     abbr --add nv nvim
     abbr --add nvv 'nvim .'
     abbr --add vim nvim
