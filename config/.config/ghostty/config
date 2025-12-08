@@ -45,6 +45,8 @@ keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
 keybind = super+ctrl+alt+,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
 
+keybind = super+ctrl+alt+bracket_right=goto_split:next
+keybind = super+ctrl+alt+bracket_left=goto_split:previous
 keybind = super+ctrl+alt+backslash=new_split:right
 keybind = super+ctrl+alt+minus=new_split:down
 keybind = super+ctrl+alt+h=resize_split:left,50
