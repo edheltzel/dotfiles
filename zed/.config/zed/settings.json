@@ -8,7 +8,7 @@
 // command palette
 {
 	"colorize_brackets": true,
- "hover_popover_enabled": true,
+	"hover_popover_enabled": true,
 	"context_servers": {},
 	"project_panel": {
 		"dock": "right",
@@ -185,7 +185,7 @@
 	},
 	"agent_servers": {
 		"OpenCode": {
-   "type": "custom",
+			"type": "custom",
 			"command": "opencode",
 			"args": ["acp"]
 		}
@@ -202,6 +202,7 @@
 	"tab_size": 2,
 	"hard_tabs": true,
 	"lsp_document_colors": "background",
+	"vertical_scroll_margin": 99,
 	"indent_guides": {
 		"coloring": "indent_aware"
 	},
