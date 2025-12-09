@@ -136,11 +136,6 @@
         {
           "actions" : [
             {
-              "key" : "0",
-              "type" : "application",
-              "value" : "/System/Applications/Passwords.app"
-            },
-            {
               "key" : "a",
               "type" : "application",
               "value" : "/Applications/Affinity.app"
@@ -257,9 +252,9 @@
           "value" : "/Applications/Todoist.app"
         },
         {
-          "key" : "w",
+          "key" : "0",
           "type" : "application",
-          "value" : "/Applications/WezTerm.app"
+          "value" : "/System/Applications/Passwords.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
