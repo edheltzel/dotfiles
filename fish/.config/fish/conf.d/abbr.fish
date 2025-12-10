@@ -12,6 +12,7 @@ if status is-interactive
     # abbr --add cls '$DROPBOX/Clients'
 
     # Editors & Terminals
+    abbr --add ght ghostty
     abbr --add wez wezterm
     abbr --add kit kitten
     abbr --add co code
@@ -53,8 +54,6 @@ if status is-interactive
     abbr --add link 'ln -s'
     abbr --add symlink 'ln -s'
     abbr --add wrg wrangler
-    abbr --add usebash 'chsh -s $(which bash)'
-    abbr --add usezsh 'chsh -s $(which zsh)'
     abbr --add upp topgrade
     abbr --add psrv 'php -S localhost:8888'
     abbr --add omp oh-my-posh
@@ -76,8 +75,5 @@ if status is-interactive
     abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add os openspec
     abbr --add oc opencode
-    abbr --add tm task-master
     abbr --add gg gemini
-    abbr --add ol ollama
-    abbr --add llm 'cd ~/.ollama/models'
 end

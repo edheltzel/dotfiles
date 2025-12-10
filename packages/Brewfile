@@ -315,6 +315,7 @@ cask 'zed'                            # Code editor - Rust
 # brew 'ollama'                         # Local LLMs
 # cask 'ollama'
 
+brew 'gemini-cli'
 cask 'claude'                         # Desktop client AI chat
 cask 'superwhisper'                   # AI dictation app
 

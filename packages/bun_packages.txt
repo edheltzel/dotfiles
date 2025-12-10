@@ -1,7 +1,5 @@
 @anthropic-ai/claude-code
-@google/gemini-cli
 opencode-ai
-@fission-ai/openspec@latest
 @antfu/ni
 @bitwarden/cli
 @mermaid-js/mermaid-cli
