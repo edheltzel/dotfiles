@@ -12,3 +12,4 @@ neovim
 typescript
 typescript-language-server
 wrangler
+mac-cleaner-cli

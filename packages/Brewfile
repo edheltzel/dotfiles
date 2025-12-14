@@ -303,6 +303,7 @@ cask 'dbngin'                         # Local MySQL database management
 cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'local'                          # Local WordPress development
 cask 'wordpresscom-studio'            # Local WordPress development
+
 cask 'obsidian'                       # PKM editor
 cask 'sequel-ace'                     # MySQL database management
 cask 'tableplus'                      # Database management
