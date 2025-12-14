@@ -19,7 +19,7 @@ copy-on-select = clipboard
 clipboard-read = allow
 clipboard-write = allow
 
-scrollback-limit = 50000
+scrollback-limit = 10000000
 
 window-colorspace = "display-p3"
 window-inherit-font-size = false
