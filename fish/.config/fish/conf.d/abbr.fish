@@ -9,10 +9,12 @@ if status is-interactive
     abbr --add cl clear
     abbr --add cw center_window
     abbr --add cat 'bat -pp'
+    abbr --add cmy 'bunx mac-cleaner-cli'
+    abbr --add clean 'bunx mac-cleaner-cli'
     # abbr --add cls '$DROPBOX/Clients'
 
     # Editors & Terminals
-    abbr --add ght ghostty
+    abbr --add ght wezterm
     abbr --add wez wezterm
     abbr --add kit kitten
     abbr --add co code
