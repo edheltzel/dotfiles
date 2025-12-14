@@ -3,8 +3,6 @@
 
 [misc]
 pre_sudo = false
-
-# Disable specific steps - same options as the command line flag
 disable = [
   "system",
   "vscode",
@@ -12,55 +10,42 @@ disable = [
   "ruby_gems",
   "tlmgr",
   "node",
-  "pnpm"
+  "pnpm",
+  "yarn",
+  "git_repos",
+  "shell",
 ]
 
-# Ignore failures for these steps
-ignore_failures = ["git_repos", "pnpm", "yarn", "bun_packages", "node"]
+ignore_failures = ["bun_packages"]
 
-# Don't ask for confirmations (no default value)
 assume_yes = true
 
-# Do not ask to retry failed steps (default: false)
 no_retry = true
 
-# Cleanup temporary or old files (default: false)
 cleanup = true
 
-# Skip sending a notification at the end of a run (default: false)
 skip_notify = true
 
-######## Commands to run BEFORE anything ########
+# Custom Pre-commands
 # [pre_commands]
-
-######### Commands to run AFTER anything ########
-[post_commands]
-"Brew - Cleanup" = "brew cleanup --prune=all"
-#"Node - Corepack Enable Pnpm" = "corepack enable && echo corepack pnpm: $(tput bold)$(tput setaf 2)enabled$(tput sgr0)"
-#"Node - Corepack Prepare pnpm" = "corepack prepare pnpm@latest --activate"
-#"Node - Pnpm Self Update" = "pnpm update -g --latest"
 
 # Custom commands
 [commands]
-[python]
+"Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
+"LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa"
+"Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa'"
+# TODO: add MasonUpdate command
+
+# Custom Post-commands
+[post_commands]
+"Brew - Cleanup" = "brew cleanup --prune=all"
+
 [composer]
 self_update = true
+
 [brew]
 greedy_cask = true
 autoremove = true
-[linux]
+
 [git]
-# Git repositories that you want to pull and push
 repos = ["~/.config/nvim"]
-[windows]
-# Causes Topgrade to rename itself during the run to allow package managers
-# to upgrade it. Use this only if you installed Topgrade by using a package
-# manager such as Scoop or Cargo
-self_rename = true
-[npm]
-[yarn]
-[vim]
-[firmware]
-[vagrant]
-[flatpak]
-[distrobox]
