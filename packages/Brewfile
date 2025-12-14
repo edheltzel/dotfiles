@@ -203,9 +203,9 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 # Creativity
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity'             # Affinity.studio
-cask 'affinity-designer'    # Illustrator replacement
-cask 'affinity-publisher'   # InDesign replacement
-cask 'affinity-photo'       # Photoshop replacement
+# cask 'affinity-designer'    # Illustrator replacement
+# cask 'affinity-publisher'   # InDesign replacement
+# cask 'affinity-photo'       # Photoshop replacement
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 cask 'principle'            # Prototyping tool

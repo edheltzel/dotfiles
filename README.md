@@ -154,7 +154,15 @@ There are two options for managing packages with GNU Stow:
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
 - nvim (nvim/)
-  - **NEO.ED** - My customized Neovim config powered by [LazyVim](https://www.lazyvim.org/) managed as a **git submodule**: [github.com/edheltzel/neoed](https://github.com/edheltzel/neoed) (Primary Editor)
+  - **[NEO.ED](https://github.com/edheltzel/neoed)** - LazyVim-based Neovim configuration managed as a **git submodule** (Primary Editor)
+  - See [nvim/.config/nvim/README.md](./nvim/.config/nvim/README.md) for full documentation
+  - **Key Features:**
+    - AI Integration: Claude Code, Codeium, Supermaven
+    - Multi-language support: Go, Python, TypeScript, PHP/Laravel, Rust, and more
+    - Eldritch colorscheme with custom lualine statusline
+    - Snacks.nvim for explorer, picker, dashboard, and terminal
+    - Biome-first formatting with Prettier fallback
+  - **Plugin Organization:** `lua/plugins/{ai,coding,editor,formatting,languages,linting,ui,utils}/`
   - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/nvim/.config/nvim/`
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
