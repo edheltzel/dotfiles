@@ -36,6 +36,7 @@ if status is-interactive
     abbr --add nv nvim
     abbr --add nvv 'nvim .'
     abbr --add vim nvim
+    abbr --add v nvim
 
     # Utilities
     abbr --add atm fastfetch
