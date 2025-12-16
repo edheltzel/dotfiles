@@ -12,8 +12,6 @@ config-file = "colors/eldritch"
 background-opacity = 1
 background-blur-radius = 50
 
-
-
 copy-on-select = clipboard
 
 clipboard-read = allow
@@ -21,10 +19,10 @@ clipboard-write = allow
 
 scrollback-limit = 10000000
 
+window-save-state = always
 window-colorspace = "display-p3"
 window-inherit-font-size = false
 window-padding-x = 10
-window-save-state = always
 window-title-font-family = "Lilex Nerd Font Mono"
 
 font-size = 18
@@ -40,21 +38,9 @@ macos-icon =  retro
 mouse-hide-while-typing = true
 
 # Custom keybinding
-keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
-
+# keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
 keybind = super+ctrl+alt+,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
-
-keybind = super+ctrl+alt+backslash=new_split:right
-keybind = super+ctrl+alt+minus=new_split:down
-keybind = super+ctrl+alt+h=resize_split:left,50
-keybind = super+ctrl+alt+j=resize_split:down,50
-keybind = super+ctrl+alt+k=resize_split:up,50
-keybind = super+ctrl+alt+l=resize_split:right,50
-keybind = super+ctrl+alt+z=toggle_split_zoom
-
-keybind = super+ctrl+alt+[=move_tab:-1
-keybind = super+ctrl+alt+]=move_tab:1
 
 # Leader key (cmd+k) sequences
 keybind = super+k>p=toggle_command_palette
@@ -66,6 +52,14 @@ keybind = super+k>backslash=new_split:right
 keybind = super+k>minus=new_split:down
 keybind = super+k>z=toggle_split_zoom
 keybind = super+k>equal=equalize_splits
+#w/o leader key
+keybind = super+ctrl+alt+backslash=new_split:right
+keybind = super+ctrl+alt+minus=new_split:down
+keybind = super+ctrl+alt+h=resize_split:left,50
+keybind = super+ctrl+alt+j=resize_split:down,50
+keybind = super+ctrl+alt+k=resize_split:up,50
+keybind = super+ctrl+alt+l=resize_split:right,50
+keybind = super+ctrl+alt+z=toggle_split_zoom
 #tabs
 keybind = super+k>t=new_tab
 keybind = super+k>e=prompt_surface_title
@@ -77,3 +71,6 @@ keybind = super+k>5=goto_tab:5
 keybind = super+k>6=goto_tab:6
 keybind = super+k>7=goto_tab:7
 keybind = super+k>8=goto_tab:8
+#w/o leader key
+keybind = super+ctrl+alt+[=move_tab:-1
+keybind = super+ctrl+alt+]=move_tab:1
