@@ -32,11 +32,11 @@ if status is-interactive
     abbr --add ze zed
     abbr --add zz 'zed -n .'
     # neovim 
-    abbr --add nn nvim
-    abbr --add nv nvim
-    abbr --add nvv 'nvim .'
     abbr --add vim nvim
+    abbr --add nv nvim
     abbr --add v nvim
+    abbr --add nn 'nvim .'
+    abbr --add vv 'nvim .'
 
     # Utilities
     abbr --add atm fastfetch
