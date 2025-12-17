@@ -274,30 +274,46 @@
     {
       "actions" : [
         {
-          "key" : "h",
-          "type" : "folder",
-          "value" : "/Users/ed/Developer"
-        },
-        {
           "key" : "i",
           "type" : "folder",
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
           "iconPath" : "person.2",
-          "key" : "j",
+          "key" : "c",
           "type" : "folder",
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
         },
         {
-          "key" : "k",
+          "key" : "s",
           "type" : "folder",
           "value" : "/Users/ed/Sites"
         },
         {
-          "key" : "l",
+          "key" : "h",
           "type" : "folder",
-          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
+          "value" : "/Users/ed/Developer"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "g",
+              "type" : "folder",
+              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media"
+            },
+            {
+              "key" : "d",
+              "type" : "folder",
+              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
+            },
+            {
+              "key" : "c",
+              "type" : "folder",
+              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
+            }
+          ],
+          "key" : "g",
+          "type" : "group"
         },
         {
           "key" : "o",
@@ -305,12 +321,12 @@
           "value" : "/Users/ed/Downloads"
         },
         {
-          "key" : "p",
+          "key" : "n",
           "type" : "folder",
           "value" : "/Users/ed/Desktop"
         },
         {
-          "key" : "u",
+          "key" : "d",
           "type" : "folder",
           "value" : "/Users/ed/Documents"
         },
@@ -319,6 +335,11 @@
           "key" : "y",
           "type" : "folder",
           "value" : "/Users/ed/Documents/3D-CAD"
+        },
+        {
+          "key" : "p",
+          "type" : "folder",
+          "value" : "/Users/ed/Pictures"
         }
       ],
       "iconPath" : "/System/Library/CoreServices/Finder.app",
