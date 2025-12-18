@@ -53,7 +53,7 @@ keybind = super+k>l=new_split:right
 keybind = super+k>backslash=new_split:right
 keybind = super+k>minus=new_split:down
 keybind = super+k>j=new_split:down
-keybind = super+k>k=new_split:up
+keybind = super+k>u=new_split:up
 keybind = super+k>z=toggle_split_zoom
 keybind = super+k>equal=equalize_splits
 #w/o leader key
