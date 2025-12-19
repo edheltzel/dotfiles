@@ -7,9 +7,10 @@ quick-terminal-autohide = false
 
 alpha-blending = linear-corrected
 
-config-file = "colors/eldritch"
+#config-file = "colors/eldritch"
+theme = Rose Pine
 
-background-opacity = 0.85
+background-opacity = 0.95
 background-blur-radius = 50
 
 copy-on-select = clipboard

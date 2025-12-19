@@ -4,114 +4,29 @@
 # this is the default config.
 gui:
   theme:
-    # ELDRITCH THEME
     activeBorderColor:
-      - "#37f499"
+      - "#ebbcba"
       - bold
     inactiveBorderColor:
-      - "#747BA2"
+      - "#6e6a86"
     searchingActiveBorderColor:
-      - "#f265b5"
+      - "#ebbcba"
       - bold
     optionsTextColor:
-      - blue
+      - "#9ccfd8"
     selectedLineBgColor:
-      - "#323449"
+      - "#26233a"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#a48cf2"
+      - "#c4a7e7"
     cherryPickedCommitBgColor:
-      - cyan
+      - "#31748f"
     markedBaseCommitFgColor:
-      - blue
+      - "#31748f"
     markedBaseCommitBgColor:
-      - "#f1fc79"
+      - "#f6c177"
     unstagedChangesColor:
-      - "#f16c75"
+      - "#eb6f92"
     defaultFgColor:
-      - "#ebfafa"
-
-# ROSE PINE THEME
-# activeBorderColor:
-#   - "#ebbcba"
-#   - bold
-# inactiveBorderColor:
-#   - "#6e6a86"
-# searchingActiveBorderColor:
-#   - "#ebbcba"
-#   - bold
-# optionsTextColor:
-#   - "#9ccfd8"
-# selectedLineBgColor:
-#   - "#26233a"
-# inactiveViewSelectedLineBgColor:
-#   - bold
-# cherryPickedCommitFgColor:
-#   - "#c4a7e7"
-# cherryPickedCommitBgColor:
-#   - "#31748f"
-# markedBaseCommitFgColor:
-#   - "#31748f"
-# markedBaseCommitBgColor:
-#   - "#f6c177"
-# unstagedChangesColor:
-#   - "#eb6f92"
-# defaultFgColor:
-#   - "#e0def4"
-#
-# ROSE PINE MOON THEME
-# activeBorderColor:
-#   - "#ea9a97"
-#   - bold
-# inactiveBorderColor:
-#   - "#6e6a86"
-# searchingActiveBorderColor:
-#   - "#ea9a97"
-#   - bold
-# optionsTextColor:
-#   - "#9ccfd8"
-# selectedLineBgColor:
-#   - "#393552"
-# inactiveViewSelectedLineBgColor:
-#   - bold
-# cherryPickedCommitFgColor:
-#   - "#c4a7e7"
-# cherryPickedCommitBgColor:
-#   - "#3e8fb0"
-# markedBaseCommitFgColor:
-#   - "#3e8fb0"
-# markedBaseCommitBgColor:
-#   - "#f6c177"
-# unstagedChangesColor:
-#   - "#eb6f92"
-# defaultFgColor:
-#   - "#e0def4"
-
-# ROSE PINE DAWN THEME
-# activeBorderColor:
-#   - "#d7827e"
-#   - bold
-# inactiveBorderColor:
-#   - "#9893a5"
-# searchingActiveBorderColor:
-#   - "#d7827e"
-#   - bold
-# optionsTextColor:
-#   - "#56949f"
-# selectedLineBgColor:
-#   - "#f2e9e1"
-# inactiveViewSelectedLineBgColor:
-#   - bold
-# cherryPickedCommitFgColor:
-#   - "#907aa9"
-# cherryPickedCommitBgColor:
-#   - "#286983"
-# markedBaseCommitFgColor:
-#   - "#286983"
-# markedBaseCommitBgColor:
-#   - "#ea9d34"
-# unstagedChangesColor:
-#   - "#b4637a"
-# defaultFgColor:
-#   - "#575279"
+      - "#e0def4"
