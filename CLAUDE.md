@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Coding Guidelines
+
+**For build commands, code style, conventions, and development standards, see [AGENTS.md](AGENTS.md).**
+
 ## Repository Overview
 
 This is a Fish shell-based macOS dotfiles repository (v3) using **GNU Stow** for symlink management. The repository follows a modular, package-based architecture where each major configuration area is a separate stow package.
