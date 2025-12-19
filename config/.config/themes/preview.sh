@@ -12,6 +12,12 @@ show_colors() {
   local theme="$1"
   
   case "$theme" in
+    aura)
+      echo -e "\033[38;2;162;119;255m████\033[0m Aura"
+      echo ""
+      echo -e "\033[38;2;21;20;27m███\033[0m \033[38;2;237;236;238m███\033[0m \033[38;2;162;119;255m███\033[0m \033[38;2;97;255;202m███\033[0m \033[38;2;130;226;255m███\033[0m \033[38;2;255;103;103m███\033[0m \033[38;2;255;202;133m███\033[0m \033[38;2;246;148;255m███\033[0m"
+      echo -e "bg   fg   purple green cyan  red   orange pink"
+      ;;
     eldritch)
       echo -e "\033[38;2;164;140;242m████\033[0m Eldritch"
       echo ""
@@ -42,6 +48,10 @@ show_colors() {
       echo -e "\033[38;2;34;34;54m███\033[0m \033[38;2;200;211;245m███\033[0m \033[38;2;192;153;255m███\033[0m \033[38;2;195;232;141m███\033[0m \033[38;2;130;170;255m███\033[0m \033[38;2;255;117;127m███\033[0m \033[38;2;255;199;119m███\033[0m \033[38;2;255;150;108m███\033[0m"
       echo -e "bg   fg   purple green blue  red   yellow orange"
       ;;
+    *)
+      echo "Unknown theme: $theme"
+      return 1
+      ;;
   esac
   
   echo ""
@@ -60,9 +70,14 @@ show_support() {
   echo "  ✓ bat"
   echo "  ✓ lazygit"
   echo "  ✓ oh-my-posh"
+  echo "  ✓ opencode"
   
   # Conditional support
   case "$theme" in
+    aura)
+      echo "  ⚡ kitty (eldritch fallback)"
+      echo "  ⚡ btop (eldritch fallback)"
+      ;;
     tokyo-night|tokyo-night-moon)
       echo "  ✗ kitty (not available)"
       echo "  ✗ btop (not available)"
@@ -74,6 +89,9 @@ show_support() {
   esac
   
   case "$theme" in
+    aura)
+      echo "  ⚡ eza (eldritch fallback)"
+      ;;
     tokyo-night-moon)
       echo "  ✗ eza (not available)"
       ;;
@@ -84,6 +102,21 @@ show_support() {
 }
 
 # Main
+if [ -z "$theme" ]; then
+  echo ""
+  echo "No theme specified"
+  echo ""
+  echo "Available themes:"
+  echo "  - aura"
+  echo "  - eldritch"
+  echo "  - rose-pine"
+  echo "  - rose-pine-moon"
+  echo "  - tokyo-night"
+  echo "  - tokyo-night-moon"
+  echo ""
+  exit 0
+fi
+
 echo ""
 show_colors "$theme"
 echo ""
