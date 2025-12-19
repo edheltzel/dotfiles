@@ -123,6 +123,16 @@ get_omp_palette() {
   esac
 }
 
+get_opencode_theme() {
+  case "$1" in
+    eldritch) echo "system" ;;         # No eldritch theme, use system
+    rose-pine) echo "rosepine" ;;
+    rose-pine-moon) echo "rosepine" ;; # OpenCode only has one rosepine variant
+    tokyo-night) echo "tokyonight" ;;
+    tokyo-night-moon) echo "tokyonight" ;; # OpenCode only has one tokyonight variant
+  esac
+}
+
 #------------------------------------------------------------------------------
 # Update Functions
 #------------------------------------------------------------------------------
@@ -261,6 +271,21 @@ update_omp() {
   fi
 }
 
+update_opencode() {
+  local theme="$1"
+  local opencode_theme=$(get_opencode_theme "$theme")
+  local config_file="$HOME/.config/opencode/opencode.jsonc"
+  
+  if [[ ! -f "$config_file" ]]; then
+    warning "opencode → skipped (config not found)"
+    return
+  fi
+  
+  # Use sed to update the theme value in jsonc (handles comments)
+  sed -i '' "s/\"theme\": \"[^\"]*\"/\"theme\": \"$opencode_theme\"/" "$config_file"
+  success "opencode → $opencode_theme"
+}
+
 reload_ghostty() {
   # Try to reload Ghostty config using AppleScript to trigger the keybind
   # Keybind: super+ctrl+alt+, (Cmd+Ctrl+Alt+,)
@@ -336,6 +361,7 @@ apply_theme() {
   update_btop "$theme"
   update_lazygit "$theme"
   update_eza "$theme"
+  update_opencode "$theme"
   
   # Save current theme
   echo "$theme" > "$THEMES_DIR/current"

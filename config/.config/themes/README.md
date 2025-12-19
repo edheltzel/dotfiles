@@ -25,6 +25,9 @@ Unified theme switching system for all applications in dotfiles.
 | lazygit     | ✓        | ✓         | ✓              | ✓           | ✓                |
 | eza         | ✓        | ✓         | ✓              | ✓           | ✗                |
 | oh-my-posh  | ✓        | ✓         | ✓              | ✓           | ✓                |
+| OpenCode    | ✓*       | ✓         | ✓*             | ✓           | ✓*               |
+
+*OpenCode uses `system` theme for Eldritch (no native support), and `rosepine`/`tokyonight` for moon variants (single variant only).
 
 **Note:** Starship is not managed by the theme switcher (use oh-my-posh for automatic theme switching).
 
@@ -83,6 +86,7 @@ After switching themes:
 - **Neovim**: Restart or `:e` to reload
 - **bat/btop/eza/lazygit**: Changes apply on next launch
 - **oh-my-posh**: Restart shell or `exec fish`
+- **OpenCode**: Restart to apply new theme
 
 ## Adding New Themes
 

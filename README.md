@@ -173,7 +173,7 @@ There are two options for managing packages with GNU Stow:
   - **Theme Switcher**: Unified theme switching across multiple applications
     - Run `theme` for interactive fzf picker with preview, or `theme <name>` to switch directly
     - Supported themes: `eldritch`, `rose-pine`, `rose-pine-moon`, `tokyo-night`, `tokyo-night-moon`
-    - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh
+    - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode
     - See [config/.config/themes/README.md](./config/.config/themes/README.md) for details
 - karabiner (karabiner/)
   - Complex keyboard customizations with Hyper key chording
