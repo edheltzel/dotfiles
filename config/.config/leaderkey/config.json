@@ -357,6 +357,13 @@
           "value" : "raycast://extensions/doist/todoist/create-task"
         },
         {
+          "iconPath" : "party.popper.fill",
+          "key" : "enter",
+          "label" : "Confetti",
+          "type" : "url",
+          "value" : "raycast://confetti"
+        },
+        {
           "iconPath" : "face.smiling",
           "key" : "0",
           "label" : "Emojis",
@@ -371,11 +378,33 @@
           "value" : "raycast://extensions/HelloImSteven/sips/convert?context=%7B%22convertTo%22%3A%22WEBP%22%7D"
         },
         {
-          "iconPath" : "character.book.closed.fill",
-          "key" : "8",
-          "label" : "Spell Check",
+          "actions" : [
+            {
+              "iconPath" : "shield.lefthalf.filled",
+              "key" : "p",
+              "label" : "Bitwarden",
+              "type" : "url",
+              "value" : "raycast://extensions/jomifepe/bitwarden/search"
+            },
+            {
+              "iconPath" : "checkmark.shield.fill",
+              "key" : "o",
+              "label" : "Auth",
+              "type" : "url",
+              "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
+            }
+          ],
+          "iconPath" : "bolt.shield.fill",
+          "key" : "b",
+          "label" : "Bitwarden",
+          "type" : "group"
+        },
+        {
+          "iconPath" : "characters.uppercase",
+          "key" : "c",
+          "label" : "Change Case",
           "type" : "url",
-          "value" : "raycast://extensions/rishabswift/word-search/word-spell"
+          "value" : "raycast://extensions/erics118/change-case/change-case"
         },
         {
           "iconPath" : "button.programmable.square.fill",
@@ -385,13 +414,6 @@
           "value" : "raycast://script-commands/edit-dotfiles"
         },
         {
-          "iconPath" : "party.popper.fill",
-          "key" : "enter",
-          "label" : "Confetti",
-          "type" : "url",
-          "value" : "raycast://confetti"
-        },
-        {
           "iconPath" : "target",
           "key" : "f",
           "label" : "Focus",
@@ -399,39 +421,11 @@
           "value" : "raycast://extensions/raycast/raycast-focus/toggle-focus-session"
         },
         {
-          "iconPath" : "checkmark.shield.fill",
-          "key" : "o",
-          "label" : "Auth",
-          "type" : "url",
-          "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
-        },
-        {
-          "iconPath" : "shield.lefthalf.filled",
-          "key" : "p",
-          "label" : "Bitwarden",
-          "type" : "url",
-          "value" : "raycast://extensions/jomifepe/bitwarden/search"
-        },
-        {
-          "iconPath" : "arrow.up.and.down.and.sparkles",
-          "key" : "t",
-          "label" : "Run Topgrade",
-          "type" : "url",
-          "value" : "raycast://script-commands/run-topgrade"
-        },
-        {
-          "iconPath" : "document.badge.plus.fill",
+          "iconPath" : "text.page.badge.magnifyingglass",
           "key" : "n",
           "label" : "Create New Note",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-notes/create-note"
-        },
-        {
-          "iconPath" : "apple.terminal.on.rectangle",
-          "key" : "z",
-          "label" : "Open Project in Zed",
-          "type" : "url",
-          "value" : "raycast://extensions/theherk/zoxide-git-projects/find"
+          "value" : "raycast://extensions/raycast/raycast-notes/search-notes"
         },
         {
           "iconPath" : "x.circle.fill",
@@ -446,6 +440,27 @@
           "label" : "Restart",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/restart"
+        },
+        {
+          "iconPath" : "characters.uppercase",
+          "key" : "s",
+          "label" : "Spell Check",
+          "type" : "url",
+          "value" : "raycast://extensions/rishabswift/word-search/word-spell"
+        },
+        {
+          "iconPath" : "arrow.up.and.down.and.sparkles",
+          "key" : "t",
+          "label" : "Run Topgrade",
+          "type" : "url",
+          "value" : "raycast://script-commands/run-topgrade"
+        },
+        {
+          "iconPath" : "apple.terminal.on.rectangle",
+          "key" : "z",
+          "label" : "Open Project in Zed",
+          "type" : "url",
+          "value" : "raycast://extensions/theherk/zoxide-git-projects/find"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
