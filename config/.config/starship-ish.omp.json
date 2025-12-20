@@ -5,6 +5,29 @@
   },
   "palettes": {
     "list": {
+      "aura": {
+        "blue": "#82E2FF",
+        "branch": "#A277FF",
+        "cyan": "#82E2FF",
+        "error": "#FF6767",
+        "git_added": "#61FFCA",
+        "git_ahead": "#EDECEE",
+        "git_deleted": "#FF6767",
+        "git_modified": "#FFCA85",
+        "git_staged": "#61FFCA",
+        "git_untracked": "#82E2FF",
+        "green": "#61FFCA",
+        "magenta": "#F694FF",
+        "muted": "#6D6D6D",
+        "orange": "#FFCA85",
+        "path": "#82E2FF",
+        "pink": "#F694FF",
+        "purple": "#A277FF",
+        "red": "#FF6767",
+        "success": "#61FFCA",
+        "white": "#EDECEE",
+        "yellow": "#FFCA85"
+      },
       "eldritch": {
         "blue": "#04D1F9",
         "branch": "#F265B5",
