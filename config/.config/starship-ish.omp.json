@@ -1,341 +1,349 @@
 {
-	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-	"var": {
-		"lightning": "⚡"
-	},
-	"palettes": {
-		"list": {
-			"aura": {
-				"blue": "#82E2FF",
-				"branch": "#F694FF",
-				"cyan": "#82E2FF",
-				"error": "#FF6767",
-				"git_added": "#61FFCA",
-				"git_ahead": "#EDECEE",
-				"git_deleted": "#FF6767",
-				"git_modified": "#FFCA85",
-				"git_staged": "#61FFCA",
-				"git_untracked": "#82E2FF",
-				"green": "#61FFCA",
-				"magenta": "#F694FF",
-				"muted": "#6D6D6D",
-				"orange": "#FFCA85",
-				"path": "#82E2FF",
-				"pink": "#F694FF",
-				"purple": "#A277FF",
-				"red": "#FF6767",
-				"success": "#61FFCA",
-				"white": "#EDECEE",
-				"yellow": "#FFCA85"
-			},
-			"eldritch": {
-				"blue": "#04D1F9",
-				"branch": "#F265B5",
-				"cyan": "#04D1F9",
-				"error": "#F16C75",
-				"git_added": "#37F499",
-				"git_ahead": "#EBFAFA",
-				"git_deleted": "#F16C75",
-				"git_modified": "#F1FC79",
-				"git_staged": "#37F499",
-				"git_untracked": "#04D1F9",
-				"green": "#37F499",
-				"magenta": "#A48CF2",
-				"muted": "#7081BE",
-				"orange": "#F7C67F",
-				"path": "#04D1F9",
-				"pink": "#F265B5",
-				"purple": "#A48CF2",
-				"red": "#F16C75",
-				"success": "#37F499",
-				"white": "#EBFAFA",
-				"yellow": "#F1FC79"
-			},
-			"rose-pine": {
-				"blue": "#9CCFD8",
-				"branch": "#D7827E",
-				"cyan": "#9CCFD8",
-				"error": "#EB6F92",
-				"git_added": "#31748F",
-				"git_ahead": "#E0DEF4",
-				"git_deleted": "#EB6F92",
-				"git_modified": "#F6C177",
-				"git_staged": "#31748F",
-				"git_untracked": "#9CCFD8",
-				"green": "#31748F",
-				"magenta": "#C4A7E7",
-				"muted": "#6E6A86",
-				"orange": "#EBBCBA",
-				"path": "#9CCFD8",
-				"pink": "#EB6F92",
-				"purple": "#C4A7E7",
-				"red": "#EB6F92",
-				"success": "#31748F",
-				"white": "#E0DEF4",
-				"yellow": "#F6C177"
-			},
-			"tokyo-night": {
-				"blue": "#7AA2F7",
-				"branch": "#FF4499",
-				"cyan": "#7DCFFF",
-				"error": "#F7768E",
-				"git_added": "#9ECE6A",
-				"git_ahead": "#C0CAF5",
-				"git_deleted": "#F7768E",
-				"git_modified": "#E0AF68",
-				"git_staged": "#9ECE6A",
-				"git_untracked": "#7DCFFF",
-				"green": "#9ECE6A",
-				"magenta": "#BB9AF7",
-				"muted": "#565F89",
-				"orange": "#FF9E64",
-				"path": "#7DCFFF",
-				"pink": "#FF4499",
-				"purple": "#BB9AF7",
-				"red": "#F7768E",
-				"success": "#9ECE6A",
-				"white": "#C0CAF5",
-				"yellow": "#E0AF68"
-			},
-			"rose-pine-moon": {
-				"blue": "#9CCFD8",
-				"branch": "#D7827E",
-				"cyan": "#9CCFD8",
-				"error": "#EB6F92",
-				"git_added": "#3E8FB0",
-				"git_ahead": "#E0DEF4",
-				"git_deleted": "#EB6F92",
-				"git_modified": "#F6C177",
-				"git_staged": "#3E8FB0",
-				"git_untracked": "#9CCFD8",
-				"green": "#3E8FB0",
-				"magenta": "#C4A7E7",
-				"muted": "#6E6A86",
-				"orange": "#EA9A97",
-				"path": "#9CCFD8",
-				"pink": "#EB6F92",
-				"purple": "#C4A7E7",
-				"red": "#EB6F92",
-				"success": "#3E8FB0",
-				"white": "#E0DEF4",
-				"yellow": "#F6C177"
-			},
-			"tokyo-night-moon": {
-				"blue": "#82AAFF",
-				"branch": "#FF7EB9",
-				"cyan": "#86E1FC",
-				"error": "#FF757F",
-				"git_added": "#C3E88D",
-				"git_ahead": "#C8D3F5",
-				"git_deleted": "#FF757F",
-				"git_modified": "#FFC777",
-				"git_staged": "#C3E88D",
-				"git_untracked": "#86E1FC",
-				"green": "#C3E88D",
-				"magenta": "#C099FF",
-				"muted": "#636DA6",
-				"orange": "#FF966C",
-				"path": "#86E1FC",
-				"pink": "#FF7EB9",
-				"purple": "#C099FF",
-				"red": "#FF757F",
-				"success": "#C3E88D",
-				"white": "#C8D3F5",
-				"yellow": "#FFC777"
-			}
-		},
-		"template": "eldritch"
-	},
-	"transient_prompt": {
-		"template": "❯ ",
-		"foreground": "p:success",
-		"background": "transparent"
-	},
-	"blocks": [
-		{
-			"type": "prompt",
-			"alignment": "left",
-			"segments": [
-				{
-					"options": {
-						"cache_duration": "none",
-						"folder_icon": "…",
-						"hide_root_location": true,
-						"style": "agnoster_short"
-					},
-					"template": "<p:blue>{{ .Var.lightning }}</><b>{{ .Path }} </b>",
-					"foreground": "p:purple",
-					"type": "path",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"branch_icon": " ",
-						"cache_duration": "none",
-						"fetch_e_count": true,
-						"fetch_stash_count": true,
-						"fetch_status": true,
-						"fetch_upstream_icon": true
-					},
-					"template": "<p:muted>on</> {{ .HEAD }}{{if .BranchStatus }} <p:git_ahead>{{ .BranchStatus }}</>{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Untracked 0 }} <p:git_untracked>?{{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <p:git_staged></>{{ if gt .Staging.Added 0 }} <p:git_added>+{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Modified 0 }} <p:git_modified>~{{ .Staging.Modified }}</>{{ end }}{{ if gt .Staging.Deleted 0 }} <p:git_deleted>-{{ .Staging.Deleted }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }} <p:purple> {{ .StashCount }}</>{{ end }} ",
-					"foreground": "p:branch",
-					"type": "git",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-					"foreground": "p:orange",
-					"type": "aws",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": "{{if .Version}} 󰏗 {{.Version}} {{end}}",
-					"foreground": "p:orange",
-					"type": "project",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none",
-						"extensions": ["deno.json", "deno.jsonc", "deno.lock"]
-					},
-					"template": "󱍢 {{ .Full }} ",
-					"foreground": "p:muted",
-					"type": "deno",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": "󰎙 {{ .Full }} ",
-					"foreground": "p:green",
-					"type": "node",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none",
-						"extensions": ["package-lock.json"]
-					},
-					"template": " {{ .Full }} ",
-					"foreground": "p:red",
-					"type": "npm",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none",
-						"extensions": ["pnpm-lock.yaml"]
-					},
-					"template": "󱇚 {{ .Full }} ",
-					"foreground": "p:yellow",
-					"type": "pnpm",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none",
-						"fetch_version": true
-					},
-					"template": " {{ .Full }} ",
-					"foreground": "p:white",
-					"type": "bun",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": " {{.Full}} ",
-					"foreground": "p:cyan",
-					"type": "go",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": " {{.Full}} ",
-					"foreground": "p:blue",
-					"type": "lua",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": " {{.Full}} ",
-					"foreground": "p:purple",
-					"type": "php",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": " {{.Full}} ",
-					"foreground": "p:yellow",
-					"type": "python",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": "󰴭 {{.Full}} ",
-					"foreground": "p:red",
-					"type": "ruby",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": " {{.Full}} ",
-					"foreground": "p:orange",
-					"type": "rust",
-					"style": "plain"
-				},
-				{
-					"options": {
-						"cache_duration": "none",
-						"style": "roundrock",
-						"threshold": 0
-					},
-					"template": "<p:muted>󰔛</> {{ .FormattedMs }} ",
-					"foreground": "p:muted",
-					"type": "executiontime",
-					"style": "plain"
-				}
-			],
-			"newline": true
-		},
-		{
-			"type": "prompt",
-			"alignment": "left",
-			"segments": [
-				{
-					"options": {
-						"cache_duration": "none"
-					},
-					"template": "❯ ",
-					"type": "text",
-					"style": "plain",
-					"foreground_templates": [
-						"{{ if gt .Code 0 }}p:error{{ end }}",
-						"{{ if eq .Code 0 }}p:success{{ end }}"
-					]
-				}
-			],
-			"newline": true
-		}
-	],
-	"version": 4
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "var": {
+    "lightning": "⚡"
+  },
+  "palettes": {
+    "list": {
+      "aura": {
+        "blue": "#82E2FF",
+        "branch": "#F694FF",
+        "cyan": "#82E2FF",
+        "error": "#FF6767",
+        "git_added": "#61FFCA",
+        "git_ahead": "#EDECEE",
+        "git_deleted": "#FF6767",
+        "git_modified": "#FFCA85",
+        "git_staged": "#61FFCA",
+        "git_untracked": "#82E2FF",
+        "green": "#61FFCA",
+        "magenta": "#F694FF",
+        "muted": "#6D6D6D",
+        "orange": "#FFCA85",
+        "path": "#82E2FF",
+        "pink": "#F694FF",
+        "purple": "#A277FF",
+        "red": "#FF6767",
+        "success": "#61FFCA",
+        "white": "#EDECEE",
+        "yellow": "#FFCA85"
+      },
+      "eldritch": {
+        "blue": "#04D1F9",
+        "branch": "#F265B5",
+        "cyan": "#04D1F9",
+        "error": "#F16C75",
+        "git_added": "#37F499",
+        "git_ahead": "#EBFAFA",
+        "git_deleted": "#F16C75",
+        "git_modified": "#F1FC79",
+        "git_staged": "#37F499",
+        "git_untracked": "#04D1F9",
+        "green": "#37F499",
+        "magenta": "#A48CF2",
+        "muted": "#7081BE",
+        "orange": "#F7C67F",
+        "path": "#04D1F9",
+        "pink": "#F265B5",
+        "purple": "#A48CF2",
+        "red": "#F16C75",
+        "success": "#37F499",
+        "white": "#EBFAFA",
+        "yellow": "#F1FC79"
+      },
+      "rose-pine": {
+        "blue": "#9CCFD8",
+        "branch": "#D7827E",
+        "cyan": "#9CCFD8",
+        "error": "#EB6F92",
+        "git_added": "#31748F",
+        "git_ahead": "#E0DEF4",
+        "git_deleted": "#EB6F92",
+        "git_modified": "#F6C177",
+        "git_staged": "#31748F",
+        "git_untracked": "#9CCFD8",
+        "green": "#31748F",
+        "magenta": "#C4A7E7",
+        "muted": "#6E6A86",
+        "orange": "#EBBCBA",
+        "path": "#9CCFD8",
+        "pink": "#EB6F92",
+        "purple": "#C4A7E7",
+        "red": "#EB6F92",
+        "success": "#31748F",
+        "white": "#E0DEF4",
+        "yellow": "#F6C177"
+      },
+      "tokyo-night": {
+        "blue": "#7AA2F7",
+        "branch": "#FF4499",
+        "cyan": "#7DCFFF",
+        "error": "#F7768E",
+        "git_added": "#9ECE6A",
+        "git_ahead": "#C0CAF5",
+        "git_deleted": "#F7768E",
+        "git_modified": "#E0AF68",
+        "git_staged": "#9ECE6A",
+        "git_untracked": "#7DCFFF",
+        "green": "#9ECE6A",
+        "magenta": "#BB9AF7",
+        "muted": "#565F89",
+        "orange": "#FF9E64",
+        "path": "#7DCFFF",
+        "pink": "#FF4499",
+        "purple": "#BB9AF7",
+        "red": "#F7768E",
+        "success": "#9ECE6A",
+        "white": "#C0CAF5",
+        "yellow": "#E0AF68"
+      },
+      "rose-pine-moon": {
+        "blue": "#9CCFD8",
+        "branch": "#D7827E",
+        "cyan": "#9CCFD8",
+        "error": "#EB6F92",
+        "git_added": "#3E8FB0",
+        "git_ahead": "#E0DEF4",
+        "git_deleted": "#EB6F92",
+        "git_modified": "#F6C177",
+        "git_staged": "#3E8FB0",
+        "git_untracked": "#9CCFD8",
+        "green": "#3E8FB0",
+        "magenta": "#C4A7E7",
+        "muted": "#6E6A86",
+        "orange": "#EA9A97",
+        "path": "#9CCFD8",
+        "pink": "#EB6F92",
+        "purple": "#C4A7E7",
+        "red": "#EB6F92",
+        "success": "#3E8FB0",
+        "white": "#E0DEF4",
+        "yellow": "#F6C177"
+      },
+      "tokyo-night-moon": {
+        "blue": "#82AAFF",
+        "branch": "#FF7EB9",
+        "cyan": "#86E1FC",
+        "error": "#FF757F",
+        "git_added": "#C3E88D",
+        "git_ahead": "#C8D3F5",
+        "git_deleted": "#FF757F",
+        "git_modified": "#FFC777",
+        "git_staged": "#C3E88D",
+        "git_untracked": "#86E1FC",
+        "green": "#C3E88D",
+        "magenta": "#C099FF",
+        "muted": "#636DA6",
+        "orange": "#FF966C",
+        "path": "#86E1FC",
+        "pink": "#FF7EB9",
+        "purple": "#C099FF",
+        "red": "#FF757F",
+        "success": "#C3E88D",
+        "white": "#C8D3F5",
+        "yellow": "#FFC777"
+      }
+    },
+    "template": "eldritch"
+  },
+  "transient_prompt": {
+    "template": "❯ ",
+    "foreground": "p:success",
+    "background": "transparent"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "options": {
+            "cache_duration": "none",
+            "folder_icon": "…",
+            "hide_root_location": true,
+            "style": "agnoster_short"
+          },
+          "template": "<p:blue>{{ .Var.lightning }}</><b>{{ .Path }} </b>",
+          "foreground": "p:purple",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "branch_icon": " ",
+            "cache_duration": "none",
+            "fetch_e_count": true,
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": "<p:muted>on</> {{ .HEAD }}{{if .BranchStatus }} <p:git_ahead>{{ .BranchStatus }}</>{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Untracked 0 }} <p:git_untracked>?{{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <p:git_staged></>{{ if gt .Staging.Added 0 }} <p:git_added>+{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Modified 0 }} <p:git_modified>~{{ .Staging.Modified }}</>{{ end }}{{ if gt .Staging.Deleted 0 }} <p:git_deleted>-{{ .Staging.Deleted }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }} <p:purple> {{ .StashCount }}</>{{ end }} ",
+          "foreground": "p:branch",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "foreground": "p:orange",
+          "type": "aws",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": "{{if .Version}} 󰏗 {{.Version}} {{end}}",
+          "foreground": "p:orange",
+          "type": "project",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none",
+            "extensions": [
+              "deno.json",
+              "deno.jsonc",
+              "deno.lock"
+            ]
+          },
+          "template": "󱍢 {{ .Full }} ",
+          "foreground": "p:muted",
+          "type": "deno",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": "󰎙 {{ .Full }} ",
+          "foreground": "p:green",
+          "type": "node",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none",
+            "extensions": [
+              "package-lock.json"
+            ]
+          },
+          "template": " {{ .Full }} ",
+          "foreground": "p:red",
+          "type": "npm",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none",
+            "extensions": [
+              "pnpm-lock.yaml"
+            ]
+          },
+          "template": "󱇚 {{ .Full }} ",
+          "foreground": "p:yellow",
+          "type": "pnpm",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none",
+            "fetch_version": true
+          },
+          "template": " {{ .Full }} ",
+          "foreground": "p:white",
+          "type": "bun",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": " {{.Full}} ",
+          "foreground": "p:cyan",
+          "type": "go",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": " {{.Full}} ",
+          "foreground": "p:blue",
+          "type": "lua",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": " {{.Full}} ",
+          "foreground": "p:purple",
+          "type": "php",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": " {{.Full}} ",
+          "foreground": "p:yellow",
+          "type": "python",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": "󰴭 {{.Full}} ",
+          "foreground": "p:red",
+          "type": "ruby",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": " {{.Full}} ",
+          "foreground": "p:orange",
+          "type": "rust",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "cache_duration": "none",
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "template": "<p:muted>󰔛</> {{ .FormattedMs }} ",
+          "foreground": "p:muted",
+          "type": "executiontime",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": "❯ ",
+          "type": "text",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:error{{ end }}",
+            "{{ if eq .Code 0 }}p:success{{ end }}"
+          ]
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 4
 }

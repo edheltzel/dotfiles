@@ -123,7 +123,7 @@ get_omp_palette() {
 get_opencode_theme() {
   case "$1" in
   aura) echo "aura" ;;
-  eldritch) echo "eldritch" ;;
+  eldritch) echo "eldritch-dark" ;; # Custom theme with darker bg
   rose-pine) echo "rosepine" ;;
   rose-pine-moon) echo "rosepine" ;; # OpenCode only has one rosepine variant
   tokyo-night) echo "tokyonight" ;;

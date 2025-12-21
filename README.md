@@ -5,6 +5,8 @@
 ![image](./local/.local/__repoImages/workspace-setup.png)
 Here, you'll find my dotfiles configuration for [fish shell][fishshell] on MacOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment.
 
+**Editor Setup:** [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)) is the primary editor used for all day-to-day development. VS Code and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
+
 > [!WARNING]
 > Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
 
@@ -23,9 +25,9 @@ Table of Contents:
 - [Prerequisites](#prereq)
 - [The Nitty Gritty](#the-nitty-gritty)
 - [MacOS Mods](#macos-mods)
-  - [~~Aerospace Window Manager~~ Stage Manager + Raycast + Alt-Tab](#window-manager)
+  - [~~Aerospace Window Manager~~ Raycast + Alt-Tab](#window-manager)
   - [~~Sketchybar~~ Ice Bar](#status-bar)
-  - [Karabiner Elements](#keyboard-hacks)
+  - [~~Karabiner Elements~~ using Leader Key app](#keyboard-hacks)
 - [Troubleshooting](#troubleshooting)
   - [Dotfiles](#troubleshoot-dotfiles)
   - [MacOS](#troubleshoot-macos)
@@ -95,7 +97,6 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 1. Installing Xcode Command Line Tools
    - `sudo softwardupdate -i -a && xcode-select --install` This will install `git` and `make` if not already installed.
 2. Generate a new SSH key and add to GitHub
-
    - [Generate a new ssh keys][GENSSHKEY]
    - `eval "$(ssh-agent -s)" && ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
@@ -153,8 +154,9 @@ There are two options for managing packages with GNU Stow:
   - git configuration
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
-- nvim (nvim/)
-  - **[NEO.ED](https://github.com/edheltzel/neoed)** - LazyVim-based Neovim configuration managed as a **git submodule** (Primary Editor)
+- **nvim (nvim/) - Primary Editor**
+  - **[NEO.ED](https://github.com/edheltzel/neoed)** - LazyVim-based Neovim configuration managed as a **git submodule**
+  - This is the default editor for day-to-day development work
   - See [nvim/.config/nvim/README.md](./nvim/.config/nvim/README.md) for full documentation
   - **Key Features:**
     - AI Integration: Claude Code, Codeium, Supermaven
@@ -177,10 +179,11 @@ There are two options for managing packages with GNU Stow:
     - See [config/.config/themes/README.md](./config/.config/themes/README.md) for details
 - karabiner (karabiner/)
   - Complex keyboard customizations with Hyper key chording
-- vscode (vscode/)
-  - VSCode configurations, ie: keybindings, settings, and custom stuff (Tertiary Editor)
-- zed (zed/)
-  - Zed editor config with Vim mode + AI integration (Secondary Editor)
+  - I am keeping this in for legacy reasons - I am using [LeaderKey](https://github.com/mikker/LeaderKey)
+- vscode (vscode/) - Legacy
+  - VSCode configurations kept for compatibility/reference; rarely used
+- zed (zed/) - Legacy
+  - Zed editor config maintained for occasional use; not primary workflow
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries and misc items that mean nothing, etc.
 
@@ -220,6 +223,9 @@ My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (no
 ie: `hyper + left_alt + d` launches my Dotfiles repo in my default editor.
 
 See the Readme for more details: [config/.config/karabiner/README.md](./config/.config/karabiner/README.md)
+
+> [!INFO]
+> I have migrated to using LeaderKey and relying on my Dygma Defy with Bazcore
 
 <h2 id="troubleshooting">Troubleshooting <a href="#to-the-top">↑</a></h2>
 <h4 id="troubleshoot-dotfiles">Dotfiles<a href="#to-the-top">↑</a></h4>
@@ -354,12 +360,14 @@ Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-
 This repo uses git submodules for managing the Neovim configuration. If you encounter issues with submodules:
 
 **Initialize/Update Submodules:**
+
 ```shell
 cd ~/.dotfiles
 git submodule update --init --recursive
 ```
 
 **Update Nvim Config to Latest:**
+
 ```shell
 cd ~/.dotfiles/nvim/.config/nvim
 git pull origin master
@@ -369,11 +377,13 @@ git commit -m "Update neoed submodule"
 ```
 
 **Clone with Submodules:**
+
 ```shell
 git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles
 ```
 
 **If Submodule is Empty:**
+
 ```shell
 git submodule deinit -f nvim/.config/nvim
 git submodule update --init --recursive

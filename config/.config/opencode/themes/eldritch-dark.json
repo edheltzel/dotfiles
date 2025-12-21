@@ -1,8 +1,8 @@
 {
 	"$schema": "https://opencode.ai/theme.json",
 	"defs": {
-		"background": "#212337",
-		"currentLine": "#323449",
+		"background": "#171928",
+		"currentLine": "#212337",
 		"bgHighlight": "#292e42",
 		"bgDark": "#171928",
 		"foreground": "#ebfafa",
