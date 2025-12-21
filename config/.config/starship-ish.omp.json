@@ -7,7 +7,7 @@
     "list": {
       "aura": {
         "blue": "#82E2FF",
-        "branch": "#A277FF",
+        "branch": "#F694FF",
         "cyan": "#82E2FF",
         "error": "#FF6767",
         "git_added": "#61FFCA",
@@ -53,7 +53,7 @@
       },
       "rose-pine": {
         "blue": "#9CCFD8",
-        "branch": "#C4A7E7",
+        "branch": "#D7827E",
         "cyan": "#9CCFD8",
         "error": "#EB6F92",
         "git_added": "#31748F",
@@ -76,7 +76,7 @@
       },
       "tokyo-night": {
         "blue": "#7AA2F7",
-        "branch": "#BB9AF7",
+        "branch": "#FF4499",
         "cyan": "#7DCFFF",
         "error": "#F7768E",
         "git_added": "#9ECE6A",
@@ -90,7 +90,7 @@
         "muted": "#565F89",
         "orange": "#FF9E64",
         "path": "#7DCFFF",
-        "pink": "#FF007C",
+        "pink": "#FF4499",
         "purple": "#BB9AF7",
         "red": "#F7768E",
         "success": "#9ECE6A",
@@ -99,7 +99,7 @@
       },
       "rose-pine-moon": {
         "blue": "#9CCFD8",
-        "branch": "#C4A7E7",
+        "branch": "#D7827E",
         "cyan": "#9CCFD8",
         "error": "#EB6F92",
         "git_added": "#3E8FB0",
@@ -122,7 +122,7 @@
       },
       "tokyo-night-moon": {
         "blue": "#82AAFF",
-        "branch": "#C099FF",
+        "branch": "#FF7EB9",
         "cyan": "#86E1FC",
         "error": "#FF757F",
         "git_added": "#C3E88D",
@@ -136,7 +136,7 @@
         "muted": "#636DA6",
         "orange": "#FF966C",
         "path": "#86E1FC",
-        "pink": "#FCA7EA",
+        "pink": "#FF7EB9",
         "purple": "#C099FF",
         "red": "#FF757F",
         "success": "#C3E88D",
@@ -144,7 +144,7 @@
         "yellow": "#FFC777"
       }
     },
-    "template": "eldritch"
+    "template": "aura"
   },
   "transient_prompt": {
     "template": "❯ ",
@@ -164,7 +164,7 @@
             "style": "agnoster_short"
           },
           "template": "<p:blue>{{ .Var.lightning }}</>{{ .Path }} ",
-          "foreground": "p:path",
+          "foreground": "p:purple",
           "type": "path",
           "style": "plain"
         },

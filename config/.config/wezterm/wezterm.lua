@@ -23,7 +23,7 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 18.0
 
 -- Theme selection: "Eldritch", "rose-pine", "rose-pine-moon", "rose-pine-dawn"
-local theme = "Eldritch"
+local theme = "Aura"
 config.color_scheme = theme
 
 -- Theme-aware accent colors
