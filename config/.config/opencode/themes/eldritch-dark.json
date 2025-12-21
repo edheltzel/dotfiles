@@ -27,7 +27,7 @@
 		"success": { "dark": "green" },
 		"info": { "dark": "cyan" },
 		"text": { "dark": "foreground" },
-		"textMuted": { "dark": "comment" },
+		"textMuted": { "dark": "fgDark" },
 		"background": { "dark": "background" },
 		"backgroundPanel": { "dark": "currentLine" },
 		"backgroundElement": { "dark": "bgHighlight" },
