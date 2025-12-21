@@ -15,7 +15,7 @@ Unified theme switching system for all applications in dotfiles.
 ## Supported Applications
 
 | Application | Eldritch | Rose Pine | Rose Pine Moon | Tokyo Night | Tokyo Night Moon |
-|-------------|----------|-----------|----------------|-------------|------------------|
+| ----------- | -------- | --------- | -------------- | ----------- | ---------------- |
 | Ghostty     | ✓        | ✓         | ✓              | ✓           | ✓                |
 | Kitty       | ✓        | ✓         | ✓              | ✗           | ✗                |
 | WezTerm     | ✓        | ✓         | ✓              | ✓           | ✓                |
@@ -25,9 +25,9 @@ Unified theme switching system for all applications in dotfiles.
 | lazygit     | ✓        | ✓         | ✓              | ✓           | ✓                |
 | eza         | ✓        | ✓         | ✓              | ✓           | ✗                |
 | oh-my-posh  | ✓        | ✓         | ✓              | ✓           | ✓                |
-| OpenCode    | ✓*       | ✓         | ✓*             | ✓           | ✓*               |
+| OpenCode    | ✓\*      | ✓         | ✓\*            | ✓           | ✓\*              |
 
-*OpenCode uses `system` theme for Eldritch (no native support), and `rosepine`/`tokyonight` for moon variants (single variant only).
+\*OpenCode uses `system` theme for Eldritch (no native support), and `rosepine`/`tokyonight` for moon variants (single variant only).
 
 **Note:** Starship is not managed by the theme switcher (use oh-my-posh for automatic theme switching).
 
@@ -55,10 +55,10 @@ The interactive picker and `--list` command both show the currently active theme
 ## Files
 
 ```
-themes/
+theme-switcher/
 ├── current                    # Contains current theme name
-├── theme-switch.sh            # Main theme switching script
-├── preview.sh                 # Color preview for fzf
+├── theme-switcher.sh            # Main theme switching script
+├── theme-preview.sh                 # Color preview for fzf
 ├── lazygit/                   # lazygit theme snippets
 │   ├── eldritch.yml
 │   ├── rose-pine.yml
@@ -101,15 +101,18 @@ To add a new theme:
 ## Troubleshooting
 
 **Theme doesn't apply:**
+
 - Check that the theme file exists for that app
 - Verify the config file path in `theme-switch.sh`
 - Check for sed errors in terminal output
 
 **Interactive picker not working:**
+
 - Ensure `fzf` is installed: `brew install fzf`
 - Make sure scripts are executable: `chmod +x theme-switch.sh preview.sh`
 
 **Colors look wrong:**
+
 - Verify terminal supports true color (24-bit)
 - Check terminal's color profile settings
 - Ensure theme files are properly formatted

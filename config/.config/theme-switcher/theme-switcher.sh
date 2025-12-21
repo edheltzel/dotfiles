@@ -4,7 +4,7 @@
 
 set -e
 
-THEMES_DIR="$HOME/.config/themes"
+THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 
@@ -100,22 +100,11 @@ get_bat_theme() {
 
 get_btop_theme() {
   case "$1" in
-  aura) echo "eldritch" ;;     # Use eldritch as fallback
+  aura) echo "eldritch" ;; # Use eldritch as fallback
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "" ;;      # Skip
-  tokyo-night-moon) echo "" ;; # Skip
-  esac
-}
-
-get_eza_theme() {
-  case "$1" in
-  aura) echo "eldritch.yml" ;; # Use eldritch as fallback
-  eldritch) echo "eldritch.yml" ;;
-  rose-pine) echo "rose-pine.yml" ;;
-  rose-pine-moon) echo "rose-pine-moon.yml" ;;
-  tokyo-night) echo "tokyonight.yml" ;;
   tokyo-night-moon) echo "" ;; # Skip
   esac
 }
@@ -176,7 +165,7 @@ update_kitty() {
 
   # Update the include line within the BEGIN_KITTY_THEME block
   sed -i '' "s|^include ./themes/.*\.conf|include ./themes/$kitty_theme|" "$config_file"
-  
+
   if [[ "$theme" == "aura" ]]; then
     success "Kitty → $kitty_theme (eldritch fallback)"
   else
@@ -222,7 +211,7 @@ update_btop() {
   fi
 
   sed -i '' "s/color_theme = \".*\"/color_theme = \"$btop_theme\"/" "$config_file"
-  
+
   if [[ "$theme" == "aura" ]]; then
     success "btop → $btop_theme (eldritch fallback)"
   else
@@ -260,26 +249,6 @@ update_lazygit() {
   success "lazygit → $theme"
 }
 
-update_eza() {
-  local theme="$1"
-  local eza_theme=$(get_eza_theme "$theme")
-  local source_file="$CONFIG/eza/themes/$eza_theme"
-  local dest_file="$CONFIG/eza/theme.yml"
-
-  if [[ -z "$eza_theme" ]] || [[ ! -f "$source_file" ]]; then
-    warning "eza → skipped (theme not available)"
-    return
-  fi
-
-  cp "$source_file" "$dest_file"
-  
-  if [[ "$theme" == "aura" ]]; then
-    success "eza → $eza_theme (eldritch fallback)"
-  else
-    success "eza → $eza_theme"
-  fi
-}
-
 update_omp() {
   local theme="$1"
   local omp_palette=$(get_omp_palette "$theme")
@@ -311,24 +280,10 @@ update_opencode() {
 }
 
 reload_ghostty() {
-  # Try to reload Ghostty config using AppleScript to trigger the keybind
-  # Keybind: super+ctrl+alt+, (Cmd+Ctrl+Alt+,)
-  # Check if Ghostty is running by looking for the process
+  # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
-    osascript <<'EOF' &>/dev/null
-tell application "System Events"
-  set ghosttyRunning to (name of processes) contains "ghostty"
-  if ghosttyRunning then
-    -- Activate Ghostty to ensure it receives the keystroke
-    set frontmost of process "ghostty" to true
-    delay 0.1
-    -- Send reload config keystroke
-    keystroke "," using {command down, control down, option down}
-    delay 0.1
-  end if
-end tell
-EOF
-    info "Ghostty config reload triggered (Cmd+Ctrl+Alt+,)"
+    echo ""
+    info "Ghostty: Press Cmd+Ctrl+Alt+, to reload config"
   fi
 }
 
@@ -384,24 +339,22 @@ apply_theme() {
   update_bat "$theme"
   update_btop "$theme"
   update_lazygit "$theme"
-  update_eza "$theme"
   update_opencode "$theme"
+
+  # Update oh-my-posh (fish function will refresh the prompt)
+  update_omp "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
 
   echo ""
   success "Theme switched to: $theme"
-  echo ""
-
-  # Try to reload Ghostty automatically
+  
+  # Show reload instructions
   reload_ghostty
-
-  # Update oh-my-posh last (prompt updates on next command)
-  update_omp "$theme"
-
+  
   echo ""
-  info "Other apps: Restart/reload to see changes"
+  info "Apps requiring restart: Neovim, WezTerm, Kitty, btop"
 }
 
 # Parse arguments
@@ -453,7 +406,7 @@ case "${1:-}" in
     --border \
     --header="Current: $current_theme" \
     --prompt="Select theme > " \
-    --preview="$THEMES_DIR/preview.sh {1}" \
+    --preview="$THEMES_DIR/theme-preview.sh {1}" \
     --preview-window=right:60% \
     --pointer="●" |
     awk '{print $1}')
