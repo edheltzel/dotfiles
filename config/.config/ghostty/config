@@ -8,7 +8,7 @@ quick-terminal-autohide = false
 alpha-blending = linear-corrected
 
 config-file = "colors/eldritch"
-#theme = aura
+#theme = TokyoNight
 
 background-opacity = 0.95
 background-blur-radius = 50
