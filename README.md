@@ -10,7 +10,7 @@
 
 # E.Dots
 
-> [!NOTES]
+> [!NOTE]
 > EdHeltzel's Dotfiles
 
 ### My personal setup for 🐠 Fish shell on  MacOS - `v3`
