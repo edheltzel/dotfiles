@@ -17,6 +17,9 @@
 
 Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)) - my ADE (ai/agent development environment) of choice, VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
 
+- [NEO.ED - Neovim Config](https://github.com/edheltzel/neoed)
+- [E.Defy - Dygma Defy keyboard](https://github.com/edheltzel/DygmaDefy)
+
 | Screenshots                                                                        | Screenshots                                                                     |
 | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![1-aerospace+sketchbar](local/.local/__repoImages/2026/1-aerospace+sketchbar.png) | ![2-bat](local/.local/__repoImages/2026/2-bat.png)                              |
