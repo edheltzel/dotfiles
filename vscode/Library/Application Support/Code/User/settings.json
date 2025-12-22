@@ -77,9 +77,9 @@
   "editor.cursorSurroundingLinesStyle": "all",
   "editor.cursorWidth": 3,
   "editor.foldingStrategy": "indentation",
-  "editor.fontFamily": "VictorMono Nerd Font Mono",
+  "editor.fontFamily": "Lilex Nerd Font Mono",
   "editor.fontLigatures": true,
-  "editor.fontSize": 20,
+  "editor.fontSize": 19,
   "editor.fontWeight": 500,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -255,8 +255,8 @@
   "terminal.integrated.env.osx": {
     "GIT_EDITOR_CONTEXT": "code"
   },
-  "terminal.integrated.fontFamily": "VictorMono Nerd Font Mono",
-  "terminal.integrated.fontSize": 19,
+  "terminal.integrated.fontFamily": "Lilex Nerd Font Mono",
+  "terminal.integrated.fontSize": 18,
   "terminal.integrated.fontWeightBold": "500",
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.shellIntegration.enabled": true,
@@ -689,4 +689,5 @@
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "Lua.codeLens.enable": true,
+  "claudeCode.preferredLocation": "panel",
 }
