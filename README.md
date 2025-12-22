@@ -1,11 +1,27 @@
-<h1 id="to-the-top">Mr EdHeltzel's Dotfiles</h1>
+# EDotfiles
 
-### My setup for 🐠 Fish shell on  MacOS - `v3`
 
-![image](./local/.local/__repoImages/workspace-setup.png)
-Here, you'll find my dotfiles configuration for [fish shell][fishshell] on MacOS managed using [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment.
+```
+        ███████╗   ██████╗  ██████╗ ████████╗███████╗
+        ██╔════╝   ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝
+        █████╗     ██║  ██║██║   ██║   ██║   ███████╗
+        ██╔══╝     ██║  ██║██║   ██║   ██║   ╚════██║
+        ███████╗██╗██████╔╝╚██████╔╝   ██║   ███████║
+        ╚══════╝╚═╝╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
 
-**Editor Setup:** [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)) is the primary editor used for all day-to-day development. VS Code and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
+```
+
+### My personal setup for 🐠 Fish shell on  MacOS - `v3`
+
+Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)) - my ADE (ai/agent development environment) of choice, VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
+
+| Screenshots                                                                        | Screenshots                                                                     |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![1-aerospace+sketchbar](local/.local/__repoImages/2026/1-aerospace+sketchbar.png) | ![2-bat](local/.local/__repoImages/2026/2-bat.png)                              |
+| ![3-btop](local/.local/__repoImages/2026/3-btop.png)                               | ![4-fastfetch-fish](local/.local/__repoImages/2026/4-fastfetch-fish.png)        |
+| ![5-lazygit](local/.local/__repoImages/2026/5-lazygit.png)                         | ![6-nvim-neoed-picker](local/.local/__repoImages/2026/6-nvim-neoed-picker.jpeg) |
+| ![7-nvim-neoed-dash](local/.local/__repoImages/2026/7-nvim-neoed-dash.png)         | ![8-theme-switcher](local/.local/__repoImages/2026/8-theme-switcher.png)        |
+| ![9-vscode](local/.local/__repoImages/2026/9-vscode.png)                           | ![10-yazi](local/.local/__repoImages/2026/10-yazi.png)                          |
 
 > [!WARNING]
 > Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
