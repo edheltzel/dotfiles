@@ -42,11 +42,4 @@ repos/playground.list
 private/ssh/
 .gitsecret/keys/random_seed
 !*.secret
-
-
-### AI shit ###
-.claude/
-.crush/
-.opencode/
-.gemini/
 gha-creds-*.json
