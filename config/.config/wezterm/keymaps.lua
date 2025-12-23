@@ -18,7 +18,7 @@ local keys = {
   {
     key = "x",
     mods = "LEADER",
-    action = act.CloseCurrentPane({ confirm = true }),
+    action = act.CloseCurrentPane({ confirm = false }),
     desc = "close the current pane/tab/window",
   },
   {
@@ -117,7 +117,7 @@ local keys = {
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY
 
-  { key = "=", mods = "CMD|CTRL", action = act.CloseCurrentPane({ confirm = true }), desc = "Close Terminal" },
+  { key = "=", mods = "CMD|CTRL", action = act.CloseCurrentPane({ confirm = false }), desc = "Close Terminal" },
   { key = "f", mods = "CMD|CTRL", action = act.ToggleFullScreen, desc = "Full Screen" },
 
   -- resize window/pane/splits see :36 cmd+k r -> use h,j,k,l to resize
