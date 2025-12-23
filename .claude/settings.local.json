@@ -1,0 +1,28 @@
+{
+	"permissions": {
+		"allow": [
+			"WebFetch(domain:github.com)",
+			"WebFetch(domain:raw.githubusercontent.com)",
+			"WebSearch",
+			"WebFetch(domain:wezfurlong.org)",
+			"WebFetch(domain:wezterm.org)",
+			"WebFetch(domain:seb.bearblog.dev)",
+			"WebFetch(domain:stackoverflow.com)",
+			"WebFetch(domain:vi.stackexchange.com)",
+			"Bash(lua:*)",
+			"Bash(luac:*)",
+			"Bash(git checkout:*)",
+			"Bash(zoxide init:*)",
+			"Bash(fish:*)",
+			"Bash(make stow:*)",
+			"Bash(readlink:*)",
+			"Bash(git submodule:*)",
+			"Bash(git remote get-url:*)",
+			"Bash(git add:*)",
+			"Bash(git commit -m \"$(cat <<''EOF''\nAdd nvim config as git submodule with stow integration\n\n- Add neoed (NEO.ED) as git submodule at nvim/.config/nvim\n- Create nvim stow package for symlinking to ~/.config/nvim\n- Update Makefile to include nvim in STOW_PACKAGES\n- Add submodule initialization to install.sh\n- Sync install.sh stow_dirs with Makefile packages\n- Remove deprecated ''warp'' from install script\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+			"Bash(git commit:*)"
+		],
+		"deny": [],
+		"ask": []
+	}
+}
