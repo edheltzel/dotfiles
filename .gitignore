@@ -43,3 +43,6 @@ private/ssh/
 .gitsecret/keys/random_seed
 !*.secret
 gha-creds-*.json
+
+### AI Config (root only) ###
+/.claude/
