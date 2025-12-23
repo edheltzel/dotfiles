@@ -171,6 +171,7 @@ There are two options for managing packages with GNU Stow:
 
 - dots (dots/)
   - misc dotfiles that are stored in the $HOME directory
+  - `.claude/` that is stored in the $HOME directory includes skills, agents, commands, etc.
 - git (git/)
   - git configuration
 - fish (fish/)
