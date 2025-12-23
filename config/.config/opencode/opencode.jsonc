@@ -1,0 +1,22 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"theme": "eldritch-dark",
+	"autoupdate": true,
+	"agent": {
+		"plan": {
+			"model": "anthropic/claude-opus-4-5"
+		},
+		"build": {
+			"model": "anthropic/claude-opus-4-5"
+		}
+	},
+	"mcp": {
+		"context7": {
+			"type": "remote",
+			"url": "https://mcp.context7.com/mcp",
+			"headers": {
+				"CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+			}
+		}
+	}
+}

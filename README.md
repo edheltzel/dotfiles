@@ -203,6 +203,11 @@ There are two options for managing packages with GNU Stow:
     - Supported themes: `eldritch`, `rose-pine`, `rose-pine-moon`, `tokyo-night`, `tokyo-night-moon`
     - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode
     - See [config/.config/themes/README.md](./config/.config/themes/README.md) for details
+  - **OpenCode**: AI coding assistant configuration
+    - `opencode.jsonc` - Main config with Claude Opus model, Context7 MCP server, and Eldritch theme
+    - `command/` - Custom slash commands (`/commit`, `/commit-push`) for git workflows
+    - `plugin/audio-feedback.js` - TTS notifications using macOS `say` for permission requests and task completion
+    - `themes/` - Custom Eldritch color themes for OpenCode UI
 - karabiner (karabiner/)
   - Complex keyboard customizations with Hyper key chording
   - I am keeping this in for legacy reasons - I am using [LeaderKey](https://github.com/mikker/LeaderKey)
