@@ -30,10 +30,6 @@ karabiner/automatic_backups/
 ### Raycast Extensions ###
 config/raycast/extensions/
 
-### AI shit ###
-.claude/
-.crush/
-
 ### REPOS ###
 repos/work.list
 repos/playground.list
@@ -48,5 +44,9 @@ private/ssh/
 !*.secret
 
 
+### AI shit ###
+.claude/
+.crush/
+.opencode/
 .gemini/
 gha-creds-*.json
