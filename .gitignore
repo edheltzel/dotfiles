@@ -46,3 +46,8 @@ gha-creds-*.json
 
 ### AI Config (root only) ###
 /.claude/
+
+### OpenCode ###
+ai/.config/opencode/node_modules/
+ai/.config/opencode/package.json
+ai/.config/opencode/bun.lock
