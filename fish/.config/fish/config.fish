@@ -38,16 +38,6 @@ if status is-interactive
         npm $argv
     end
 
-    # Lazy load zoxide  
-    function __lazy_zoxide
-        functions -e __lazy_zoxide z
-        zoxide init fish | source
-    end
-    function z
-        __lazy_zoxide
-        z $argv
-    end
-
     # Load aliases and functions on demand
     function __load_full_config
         functions -e __load_full_config

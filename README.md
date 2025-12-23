@@ -175,6 +175,11 @@ There are two options for managing packages with GNU Stow:
   - git configuration
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
+  - **Lazy-Loading Architecture**: Fish config is optimized for fast shell startup using lazy-loading patterns. Heavy tools are only initialized on first use:
+    - `conf.d/fnm.fish` - Node version manager (fnm) initialized on first `node`/`npm` call
+    - `conf.d/zoxide.fish` - Directory jumper (`z`/`zi` commands) initialized on first use
+    - Pattern: wrapper functions erase themselves and source the real tool init, then call the actual command
+  - See `config.fish` for the main lazy-loading orchestration
 - **nvim (nvim/) - Primary Editor**
   - **[NEO.ED](https://github.com/edheltzel/neoed)** - LazyVim-based Neovim configuration managed as a **git submodule**
   - This is the default editor for day-to-day development work
