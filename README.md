@@ -209,6 +209,7 @@ There are two options for managing packages with GNU Stow:
     - `command/` - Custom slash commands (`/commit`, `/commit-push`) for git workflows
     - `plugin/audio-feedback.js` - TTS notifications using macOS `say` for permission requests and task completion
     - `themes/` - Custom Eldritch color themes for OpenCode UI
+    - **Plugin Dependencies**: Run `cd ~/.config/opencode && bun add @opencode-ai/plugin` to install plugin types (node_modules, package.json, bun.lock are git-ignored)
 - karabiner (karabiner/)
   - Complex keyboard customizations with Hyper key chording
   - I am keeping this in for legacy reasons - I am using [LeaderKey](https://github.com/mikker/LeaderKey)
