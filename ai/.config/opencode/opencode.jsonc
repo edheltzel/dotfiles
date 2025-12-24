@@ -113,6 +113,7 @@
 			"nano *": "allow",
 			"view *": "allow",
 			"vim -R *": "allow",
+			"nvim -c *": "allow",
 
 			". *": "allow",
 			"awk *": "allow",
@@ -129,6 +130,7 @@
 			"fgrep *": "allow",
 			"find *": "allow",
 			"grep *": "allow",
+			"rg *": "allow",
 			"head *": "allow",
 			"less *": "allow",
 			"ll*": "allow",
@@ -150,6 +152,7 @@
 			"tree *": "allow",
 			"uniq *": "allow",
 			"wc *": "allow",
+			"luacheck *": "allow",
 
 			"crontab *": "allow",
 			"file *": "allow",
