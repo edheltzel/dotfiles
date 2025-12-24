@@ -10,6 +10,9 @@ config.default_prog = { fish_path, "-l" }
 -- -----------------------------------------------------------------------------
 -- General Config
 -- -----------------------------------------------------------------------------
+config.enable_kitty_keyboard = true
+config.enable_csi_u_key_encoding = false
+
 config.font = wezterm.font_with_fallback({
   {
     family = "Lilex Nerd Font Mono",
