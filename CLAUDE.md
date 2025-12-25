@@ -11,6 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a Fish shell-based macOS dotfiles repository (v3) using **GNU Stow** for symlink management. The repository follows a modular, package-based architecture where each major configuration area is a separate stow package.
 
 **Key Philosophy:**
+
 - Non-invasive symlink-based configuration management
 - XDG Base Directory compliance to keep `~` clean
 - Multi-editor strategy (Neovim primary, Zed secondary, VSCode tertiary)
@@ -108,7 +109,7 @@ The repository uses these stow packages (defined in `Makefile:1`):
 
 **Important:** FNM and Zoxide use lazy-loading to optimize shell startup speed.
 
-### Neovim Configuration (`nvim/.config/nvim/`)
+### Neovim Configuration (`neoed/.config/nvim/`)
 
 **Framework:** LazyVim with extensive customizations (NEO.ED)
 
@@ -129,12 +130,14 @@ The repository uses these stow packages (defined in `Makefile:1`):
 ### Git Configuration
 
 **SSH Signing (not GPG):**
+
 - Uses SSH keys for commit/tag signing
 - Machine-specific config in `.gitconfig.local` (not tracked)
 - Per-machine allowed signers file
 - Setup script: `git/git.sh` provisions local config
 
 **Key Aliases:**
+
 - `git cm "msg"` - Signed commit with message
 - `git cma "msg"` - Add all + signed commit
 - `git addi` - Interactive add with fzf selection
@@ -165,6 +168,7 @@ The repository uses these stow packages (defined in `Makefile:1`):
 ### Application Configs (`config/.config/`)
 
 27 applications configured:
+
 - **Terminal:** alacritty, kitty, ghostty, wezterm
 - **Multiplexers:** tmux, zellij
 - **Window Manager:** aerospace (Stage Manager + Raycast)
@@ -180,6 +184,7 @@ The repository uses these stow packages (defined in `Makefile:1`):
 ### Machine-Specific Configuration
 
 Git config includes machine-specific overrides:
+
 ```bash
 # .gitconfig includes .gitconfig.local (not tracked)
 # Per-machine files: gitconfig-bigmac.local, gitconfig-macdaddy.local
@@ -190,6 +195,7 @@ After cloning on new machine, run `git/git.sh` to provision `.gitconfig.local`.
 ### XDG Base Directory Compliance
 
 All paths configured in `fish/.config/fish/conf.d/paths.fish`:
+
 - Config: `~/.config/`
 - Data: `~/.local/share/`
 - Cache: `~/.cache/`
@@ -206,22 +212,26 @@ All paths configured in `fish/.config/fish/conf.d/paths.fish`:
 ### Troubleshooting Common Issues
 
 **SSH Agent Not Persistent:**
+
 ```bash
 eva  # Alias for: eval ssh-agent -s; and ssh-add --apple-use-keychain
 ```
 
 **Node Version Issues:**
+
 ```bash
 fnm env --use-on-cd | source  # Enable auto-switching
 npm install --global $(cat packages/node_packages.txt)
 ```
 
 **Fish Plugin Manager (Fisher) Issues:**
+
 ```bash
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
 **Cargo/Rust Update Failures:**
+
 ```bash
 brew uninstall rustup-init
 brew reinstall rust
@@ -230,6 +240,7 @@ topgrade --only cargo
 ```
 
 **Stow Conflicts:**
+
 ```bash
 make delete  # Remove all symlinks
 make run     # Recreate all symlinks
@@ -242,7 +253,7 @@ make run     # Recreate all symlinks
 - `packages/Brewfile` - All Homebrew packages/casks/fonts
 - `fish/.config/fish/conf.d/abbr.fish` - Shell aliases/abbreviations
 - `git/.gitconfig` - Git aliases and configuration
-- `nvim/.config/nvim/lua/config/keymaps.lua` - Neovim keybindings
+- `neoed/.config/nvim/lua/config/keymaps.lua` - Neovim keybindings
 - `config/.config/topgrade.toml` - Update manager config
 - `.stow-local-ignore` - Files Stow should skip
 
@@ -264,6 +275,7 @@ make run     # Recreate all symlinks
 ## Current State (Git Status)
 
 Multiple staged deletions from old nvim.exosyphon config cleanup. Modified files show recent work on:
+
 - Neovim config updates (keymaps, lazy.lua, colorscheme)
 - Lualine theme customization
 - Snacks.lua reorganization

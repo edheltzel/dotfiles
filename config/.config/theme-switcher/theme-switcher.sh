@@ -185,7 +185,7 @@ update_wezterm() {
 update_neovim() {
   local theme="$1"
   local nvim_theme=$(get_neovim_theme "$theme")
-  local config_file="$DOTFILES/nvim/.config/nvim/lua/plugins/ui/colorscheme.lua"
+  local config_file="$DOTFILES/neoed/.config/nvim/lua/plugins/ui/colorscheme.lua"
 
   sed -i '' "s/colorscheme = \".*\"/colorscheme = \"$nvim_theme\"/" "$config_file"
   success "Neovim → $nvim_theme"
@@ -349,10 +349,10 @@ apply_theme() {
 
   echo ""
   success "Theme switched to: $theme"
-  
+
   # Show reload instructions
   reload_ghostty
-  
+
   echo ""
   info "Apps requiring restart: Neovim, WezTerm, Kitty, btop"
 }

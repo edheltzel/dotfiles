@@ -9,7 +9,7 @@
 
 ### Neovim ###
 NetrwTreeListing*
-nvim/.config/nvim/lazy-lock.json
+neoed/.config/nvim/lazy-lock.json
 
 ### LazyVim ###
 tt.*

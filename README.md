@@ -184,7 +184,7 @@ There are two options for managing packages with GNU Stow:
 - **nvim (nvim/) - Primary Editor**
   - **[NEO.ED](https://github.com/edheltzel/neoed)** - LazyVim-based Neovim configuration managed as a **git submodule**
   - This is the default editor for day-to-day development work
-  - See [nvim/.config/nvim/README.md](./nvim/.config/nvim/README.md) for full documentation
+  - See [neoed/.config/nvim/README.md](./neoed/.config/nvim/README.md) for full documentation
   - **Key Features:**
     - AI Integration: Claude Code, Codeium, Supermaven
     - Multi-language support: Go, Python, TypeScript, PHP/Laravel, Rust, and more
@@ -192,7 +192,7 @@ There are two options for managing packages with GNU Stow:
     - Snacks.nvim for explorer, picker, dashboard, and terminal
     - Biome-first formatting with Prettier fallback
   - **Plugin Organization:** `lua/plugins/{ai,coding,editor,formatting,languages,linting,ui,utils}/`
-  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/nvim/.config/nvim/`
+  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neoed/.config/nvim/`
 - config (config/)
   - Configuration files for various applications, instead of adding them to root of the repo.
   - **Prompt**: Configurable prompt system supporting Oh My Posh (default) or Starship
@@ -402,10 +402,10 @@ git submodule update --init --recursive
 **Update Nvim Config to Latest:**
 
 ```shell
-cd ~/.dotfiles/nvim/.config/nvim
+cd ~/.dotfiles/neoed/.config/nvim
 git pull origin master
 cd ~/.dotfiles
-git add nvim/.config/nvim
+git add neoed/.config/nvim
 git commit -m "Update neoed submodule"
 ```
 
@@ -418,7 +418,7 @@ git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotf
 **If Submodule is Empty:**
 
 ```shell
-git submodule deinit -f nvim/.config/nvim
+git submodule deinit -f neoed/.config/nvim
 git submodule update --init --recursive
 ```
 
