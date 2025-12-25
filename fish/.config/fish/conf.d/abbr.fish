@@ -10,6 +10,8 @@ if status is-interactive
     abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add os openspec
     abbr --add oc opencode
+    abbr --add occ 'opencode --continue'
+    abbr --add ocp 'opencode --agent plan'
     abbr --add gg gemini
 
     # Directories
