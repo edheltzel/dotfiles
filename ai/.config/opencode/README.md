@@ -28,6 +28,7 @@ since we use Stow, we need to include the `bun add` in our dotifles repo. This i
 - `agent/` - Custom sub-agents for specialized tasks
 - `command/` - Custom slash commands (`/commit`, `/commit-push`, etc.)
 - `plugin/` - Autoloaded plugins (audio feedback notifications, etc.)
+- `skill/` - Loadable skills (frontend-design, etc.)
 - `themes/` - Custom color themes (Eldritch variants)
 - `tool/` - Custom tools
 

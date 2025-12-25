@@ -20,6 +20,7 @@
 			}
 		}
 	},
+	"plugin": ["opencode-gemini-auth@latest", "@tarquinen/opencode-dcp@latest"],
 	"tools": {
 		"bash": true,
 		"edit": true,
