@@ -381,7 +381,7 @@
           "actions" : [
             {
               "iconPath" : "shield.lefthalf.filled",
-              "key" : "p",
+              "key" : "b",
               "label" : "Bitwarden",
               "type" : "url",
               "value" : "raycast://extensions/jomifepe/bitwarden/search"
@@ -450,7 +450,7 @@
         },
         {
           "iconPath" : "arrow.up.and.down.and.sparkles",
-          "key" : "t",
+          "key" : "u",
           "label" : "Run Topgrade",
           "type" : "url",
           "value" : "raycast://script-commands/run-topgrade"
