@@ -3,9 +3,9 @@
 	{
 		"context": "Workspace",
 		"bindings": {
-			"cmd-k cmd-x": "zed::Extensions",
-			"cmd-k cmd-g": "git_panel::ToggleFocus",
-			"cmd-k cmd-e": "project_panel::ToggleFocus",
+			"ctrl-alt-cmd-x": "zed::Extensions",
+			"ctrl-alt-cmd-g": "git_panel::ToggleFocus",
+			"ctrl-alt-cmd-e": "project_panel::ToggleFocus",
 			"ctrl-cmd-home": "git::Push",
 			"ctrl-alt-p": "workspace::ToggleZoom",
 			"alt-home": "project_panel::CollapseAllEntries",
@@ -23,8 +23,8 @@
 			"cmd-6": ["pane::ActivateItem", 5],
 			"cmd-7": ["pane::ActivateItem", 6],
 			"cmd-8": ["pane::ActivateItem", 7],
-			"cmd-9": ["pane::ActivateItem", 8]
-		}
+			"cmd-9": ["pane::ActivateItem", 8],
+		},
 	},
 	// Window navigation
 	{
@@ -33,16 +33,16 @@
 			"ctrl-h": "workspace::ActivatePaneLeft",
 			"ctrl-l": "workspace::ActivatePaneRight",
 			"ctrl-k": "workspace::ActivatePaneUp",
-			"ctrl-j": "workspace::ActivatePaneDown"
-		}
+			"ctrl-j": "workspace::ActivatePaneDown",
+		},
 	},
 	//Project Panel
 	{
 		"context": "ProjectPanel && !editing",
 		"bindings": {
 			"r": "project_panel::Rename",
-			"a": "project_panel::NewFile"
-		}
+			"a": "project_panel::NewFile",
+		},
 	},
 	// Terminal
 	{
@@ -50,8 +50,8 @@
 		"bindings": {
 			"cmd-ctrl-=": "pane::CloseActiveItem",
 			"cmd-shift-d": "pane::SplitRight",
-			"cmd-d": "pane::SplitDown"
-		}
+			"cmd-d": "pane::SplitDown",
+		},
 	},
 	// Tasks + Spawn AI agents
 	{
@@ -61,38 +61,38 @@
 				"task::Spawn",
 				{
 					"task_name": "LazyGit",
-					"reveal_target": "center"
-				}
+					"reveal_target": "center",
+				},
 			],
 			"space a d": [
 				"task::Spawn",
 				{
 					"task_name": "Claude Danger",
-					"reveal_target": "center"
-				}
+					"reveal_target": "center",
+				},
 			],
 			"ctrl-alt-shift-c": [
 				"task::Spawn",
 				{
 					"task_name": "Claude Danger",
-					"reveal_target": "center"
-				}
+					"reveal_target": "center",
+				},
 			],
 			"space a c": [
 				"task::Spawn",
 				{
 					"task_name": "Claude Code",
-					"reveal_target": "center"
-				}
+					"reveal_target": "center",
+				},
 			],
 			"space a o": [
 				"task::Spawn",
 				{
 					"task_name": "Opencode",
-					"reveal_target": "center"
-				}
-			]
-		}
+					"reveal_target": "center",
+				},
+			],
+		},
 	},
 	// Editor + Vim
 	{
@@ -116,8 +116,8 @@
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
 			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
 			"cmd-k": "command_palette::Toggle",
-			"cmd shift l": "editor::SelectAllMatches"
-		}
+			"cmd shift l": "editor::SelectAllMatches",
+		},
 	},
 	// Vim Motions
 	{
@@ -132,8 +132,8 @@
 			"alt-k": "editor::MoveLineUp",
 			"alt-j": "editor::MoveLineDown",
 			"enter": "editor::Fold",
-			"enter": "editor::UnfoldLines"
-		}
+			"enter": "editor::UnfoldLines",
+		},
 	},
 	{
 		"context": "VimControl && !menu && vim_mode != operator",
@@ -141,7 +141,7 @@
 			"w": "vim::NextSubwordStart",
 			"b": "vim::PreviousSubwordStart",
 			"e": "vim::NextSubwordEnd",
-			"g e": "vim::PreviousSubwordEnd"
-		}
-	}
+			"g e": "vim::PreviousSubwordEnd",
+		},
+	},
 ]
