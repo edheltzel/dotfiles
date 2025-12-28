@@ -241,7 +241,8 @@ Any of the scripts can be run individually at any time to update/reset as needed
 <h2 id="macos-mods">MacOS Mods <a href="#to-the-top">↑</a></h2>
 
 > [!NOTE]
-> For Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.
+> ~~For Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.~~
+> I've move away from using the Keychron Q11 to using a Dygma Defy
 
 <h4 id="window-manager">~~Aerospace Window~~ Native MacOS Stage Manager + Raycast + Alt-Tab <a href="#to-the-top">↑</a></h4>
 <h4 id="status-bar">Ice Bar <a href="#to-the-top">↑</a></h4>
@@ -251,9 +252,12 @@ I only use Ice.app to change the appearance of the native MacOS menu bar.
 
 For most of my keyboard hacking, I'm using a combination of QMK (thru VIA app), with Raycast, but I leverage Karabiner Elements for more complex modifications, like chording the Hyper Key with other modifiers.
 
-My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (notice that it is the right side modifiers only.)
+My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (notice that it is the right side modifiers
+only.) - This is still relevant with the Dygma Defy, I just use the Bazecore software to setup a Hyper key with the LeaderKey app for chording keys and Raycast for non-chorded keys:
 
-ie: `hyper + left_alt + d` launches my Dotfiles repo in my default editor.
+ie:
+non-chorded: `hyper + t` launches Ghostty, my current default terminal - handled by Raycast
+chorded: `hyper + r + d` launches my Dotfiles in my default editor - handled by LeaderKey
 
 See the Readme for more details: [config/.config/karabiner/README.md](./config/.config/karabiner/README.md)
 
