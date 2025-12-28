@@ -3,92 +3,14 @@
     {
       "actions" : [
         {
-          "key" : "b",
+          "key" : ",",
           "type" : "application",
-          "value" : "/Applications/Bazecor.app"
+          "value" : "/System/Applications/System Settings.app"
         },
         {
-          "key" : "i",
+          "key" : "0",
           "type" : "application",
-          "value" : "/Applications/Vial.app"
-        },
-        {
-          "key" : "k",
-          "label" : "Keychron",
-          "type" : "url",
-          "value" : "https://launcher.keychron.com/#/keymap"
-        },
-        {
-          "key" : "v",
-          "type" : "application",
-          "value" : "/Applications/VIA.app"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "g",
-              "label" : "Typing Gym",
-              "type" : "url",
-              "value" : "https://www.typinggym.com"
-            },
-            {
-              "key" : "m",
-              "label" : "Monkey Type",
-              "type" : "url",
-              "value" : "https://monkeytype.com/"
-            },
-            {
-              "key" : "t",
-              "label" : "Typ.ing",
-              "type" : "url",
-              "value" : "https://typ.ing/"
-            }
-          ],
-          "iconPath" : "touchid",
-          "key" : "t",
-          "label" : "Touch Typing",
-          "type" : "group"
-        }
-      ],
-      "iconPath" : "keyboard.fill",
-      "key" : "k",
-      "label" : "Keeb",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "actions" : [
-            {
-              "key" : "b",
-              "type" : "application",
-              "value" : "/Applications/BambuStudio.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
-            },
-            {
-              "key" : "o",
-              "type" : "application",
-              "value" : "/Applications/OrcaSlicer.app"
-            },
-            {
-              "key" : "s",
-              "type" : "application",
-              "value" : "/Applications/Shapr3D.app"
-            },
-            {
-              "key" : "x",
-              "type" : "application",
-              "value" : "/Applications/xTool Studio.app"
-            }
-          ],
-          "iconPath" : "view.3d",
-          "key" : "3",
-          "label" : "3D Apps",
-          "type" : "group"
+          "value" : "/System/Applications/Passwords.app"
         },
         {
           "actions" : [
@@ -217,6 +139,61 @@
           "value" : "/Applications/Invoice Ninja.app"
         },
         {
+          "actions" : [
+            {
+              "key" : "b",
+              "type" : "application",
+              "value" : "/Applications/Bazecor.app"
+            },
+            {
+              "key" : "i",
+              "type" : "application",
+              "value" : "/Applications/Vial.app"
+            },
+            {
+              "key" : "k",
+              "label" : "Keychron",
+              "type" : "url",
+              "value" : "https://launcher.keychron.com/#/keymap"
+            },
+            {
+              "actions" : [
+                {
+                  "key" : "g",
+                  "label" : "Typing Gym",
+                  "type" : "url",
+                  "value" : "https://www.typinggym.com"
+                },
+                {
+                  "key" : "m",
+                  "label" : "Monkey Type",
+                  "type" : "url",
+                  "value" : "https://monkeytype.com/"
+                },
+                {
+                  "key" : "t",
+                  "label" : "Typ.ing",
+                  "type" : "url",
+                  "value" : "https://typ.ing/"
+                }
+              ],
+              "iconPath" : "touchid",
+              "key" : "t",
+              "label" : "Touch Typing",
+              "type" : "group"
+            },
+            {
+              "key" : "v",
+              "type" : "application",
+              "value" : "/Applications/VIA.app"
+            }
+          ],
+          "iconPath" : "keyboard.fill",
+          "key" : "k",
+          "label" : "Keeb",
+          "type" : "group"
+        },
+        {
           "key" : "m",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
@@ -232,14 +209,64 @@
           "value" : "/Applications/Obsidian.app"
         },
         {
+          "actions" : [
+            {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+            },
+            {
+              "key" : "b",
+              "type" : "application",
+              "value" : "/Applications/BambuStudio.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/FreeCAD.app"
+            },
+            {
+              "key" : "m",
+              "type" : "application",
+              "value" : "/Applications/MeshLab2025.07.app"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/OrcaSlicer.app"
+            },
+            {
+              "iconPath" : "cube.fill",
+              "key" : "O",
+              "label" : "Onshape",
+              "type" : "url",
+              "value" : "https://cad.onshape.com/signin"
+            },
+            {
+              "key" : "s",
+              "type" : "application",
+              "value" : "/Applications/Shapr3D.app"
+            },
+            {
+              "key" : "S",
+              "type" : "application",
+              "value" : "/Applications/OpenSCAD-2021.01.app"
+            },
+            {
+              "key" : "x",
+              "type" : "application",
+              "value" : "/Applications/xTool Studio.app"
+            }
+          ],
+          "iconPath" : "view.3d",
+          "key" : "p",
+          "label" : "Print in 3D",
+          "type" : "group"
+        },
+        {
           "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
-        },
-        {
-          "key" : ",",
-          "type" : "application",
-          "value" : "/System/Applications/System Settings.app"
         },
         {
           "key" : "t",
@@ -247,23 +274,32 @@
           "value" : "/Applications/Todoist.app"
         },
         {
-          "key" : "0",
-          "type" : "application",
-          "value" : "/System/Applications/Passwords.app"
-        },
-        {
-          "iconPath" : "questionmark.key.filled",
+          "actions" : [
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "g",
+              "label" : "🤖 Gemini",
+              "type" : "url",
+              "value" : "https://gemini.google.com/app"
+            },
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "a",
+              "label" : "🤖 Ai Studio",
+              "type" : "url",
+              "value" : "https://aistudio.google.com/apps"
+            },
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "n",
+              "label" : "🤖 NotebookLM",
+              "type" : "url",
+              "value" : "https://notebooklm.google.com/"
+            }
+          ],
           "key" : "g",
-          "label" : "🤖 Gemini",
-          "type" : "url",
-          "value" : "https://gemini.google.com/app"
-        },
-        {
-          "iconPath" : "questionmark.key.filled",
-          "key" : "a",
-          "label" : "🤖 Ai Studio",
-          "type" : "url",
-          "value" : "https://aistudio.google.com/apps"
+          "label" : "Google Gemini",
+          "type" : "group"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -274,56 +310,10 @@
     {
       "actions" : [
         {
-          "key" : "i",
-          "type" : "folder",
-          "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
-        },
-        {
           "iconPath" : "person.2",
           "key" : "c",
           "type" : "folder",
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
-        },
-        {
-          "key" : "s",
-          "type" : "folder",
-          "value" : "/Users/ed/Sites"
-        },
-        {
-          "key" : "h",
-          "type" : "folder",
-          "value" : "/Users/ed/Developer"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "g",
-              "type" : "folder",
-              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media"
-            },
-            {
-              "key" : "d",
-              "type" : "folder",
-              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
-            },
-            {
-              "key" : "c",
-              "type" : "folder",
-              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
-            }
-          ],
-          "key" : "g",
-          "type" : "group"
-        },
-        {
-          "key" : "o",
-          "type" : "folder",
-          "value" : "/Users/ed/Downloads"
-        },
-        {
-          "key" : "n",
-          "type" : "folder",
-          "value" : "/Users/ed/Desktop"
         },
         {
           "key" : "d",
@@ -331,15 +321,61 @@
           "value" : "/Users/ed/Documents"
         },
         {
-          "iconPath" : "view.3d",
-          "key" : "y",
+          "actions" : [
+            {
+              "key" : "c",
+              "type" : "folder",
+              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
+            },
+            {
+              "key" : "d",
+              "type" : "folder",
+              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
+            },
+            {
+              "key" : "g",
+              "type" : "folder",
+              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media"
+            }
+          ],
+          "key" : "g",
+          "type" : "group"
+        },
+        {
+          "key" : "h",
           "type" : "folder",
-          "value" : "/Users/ed/Documents/3D-CAD"
+          "value" : "/Users/ed/Developer"
+        },
+        {
+          "key" : "i",
+          "type" : "folder",
+          "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
+        },
+        {
+          "key" : "n",
+          "type" : "folder",
+          "value" : "/Users/ed/Desktop"
+        },
+        {
+          "key" : "o",
+          "type" : "folder",
+          "value" : "/Users/ed/Downloads"
         },
         {
           "key" : "p",
           "type" : "folder",
           "value" : "/Users/ed/Pictures"
+        },
+        {
+          "key" : "s",
+          "type" : "folder",
+          "value" : "/Users/ed/Sites"
+        },
+        {
+          "iconPath" : "view.3d",
+          "key" : "y",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents/3D-CAD"
         }
       ],
       "iconPath" : "/System/Library/CoreServices/Finder.app",
@@ -350,18 +386,154 @@
     {
       "actions" : [
         {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/Bazecor.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Applications/Vial.app"
+        },
+        {
+          "key" : "k",
+          "label" : "Keychron",
+          "type" : "url",
+          "value" : "https://launcher.keychron.com/#/keymap"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "g",
+              "label" : "Typing Gym",
+              "type" : "url",
+              "value" : "https://www.typinggym.com"
+            },
+            {
+              "key" : "m",
+              "label" : "Monkey Type",
+              "type" : "url",
+              "value" : "https://monkeytype.com/"
+            },
+            {
+              "key" : "t",
+              "label" : "Typ.ing",
+              "type" : "url",
+              "value" : "https://typ.ing/"
+            }
+          ],
+          "iconPath" : "touchid",
+          "key" : "t",
+          "label" : "Touch Typing",
+          "type" : "group"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/VIA.app"
+        }
+      ],
+      "iconPath" : "keyboard.fill",
+      "key" : "k",
+      "label" : "Keeb",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Excel.app"
+        },
+        {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Outlook.app"
+        },
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Applications/Microsoft PowerPoint.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Teams.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Word.app"
+        }
+      ],
+      "iconPath" : "window.ceiling.closed",
+      "key" : "m",
+      "label" : "Microsoft",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+        },
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/BambuStudio.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Applications/FreeCAD.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Applications/MeshLab2025.07.app"
+        },
+        {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/OrcaSlicer.app"
+        },
+        {
+          "iconPath" : "cube.fill",
+          "key" : "O",
+          "label" : "Onshape",
+          "type" : "url",
+          "value" : "https://cad.onshape.com/signin"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Shapr3D.app"
+        },
+        {
+          "key" : "S",
+          "type" : "application",
+          "value" : "/Applications/OpenSCAD-2021.01.app"
+        },
+        {
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Applications/xTool Studio.app"
+        }
+      ],
+      "iconPath" : "view.3d",
+      "key" : "p",
+      "label" : "Print in 3D",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
           "iconPath" : "checkmark.rectangle.stack.fill",
           "key" : "=",
           "label" : "Todoist",
           "type" : "url",
           "value" : "raycast://extensions/doist/todoist/create-task"
-        },
-        {
-          "iconPath" : "party.popper.fill",
-          "key" : "enter",
-          "label" : "Confetti",
-          "type" : "url",
-          "value" : "raycast://confetti"
         },
         {
           "iconPath" : "face.smiling",
@@ -412,6 +584,13 @@
           "label" : "Edit Dotfiles",
           "type" : "url",
           "value" : "raycast://script-commands/edit-dotfiles"
+        },
+        {
+          "iconPath" : "party.popper.fill",
+          "key" : "enter",
+          "label" : "Confetti",
+          "type" : "url",
+          "value" : "raycast://confetti"
         },
         {
           "iconPath" : "target",
@@ -466,6 +645,35 @@
       "iconPath" : "/Applications/Raycast.app",
       "key" : "r",
       "label" : "Raycast",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "brain.fill",
+          "key" : "b",
+          "label" : "BrainFM",
+          "type" : "url",
+          "value" : "https://my.brain.fm"
+        },
+        {
+          "iconPath" : "music.note.list",
+          "key" : "m",
+          "label" : "YouTube Music",
+          "type" : "url",
+          "value" : "https://music.youtube.com"
+        },
+        {
+          "iconPath" : "video.fill",
+          "key" : "y",
+          "label" : "YouTube",
+          "type" : "url",
+          "value" : "https://youtube.com"
+        }
+      ],
+      "iconPath" : "airpods.gen3",
+      "key" : "s",
+      "label" : "Sounds (Music)",
       "type" : "group"
     },
     {
@@ -673,68 +881,6 @@
       "iconPath" : "/Applications/AeroSpace.app",
       "key" : "w",
       "label" : "Aerospace",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "e",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Excel.app"
-        },
-        {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Outlook.app"
-        },
-        {
-          "key" : "p",
-          "type" : "application",
-          "value" : "/Applications/Microsoft PowerPoint.app"
-        },
-        {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Teams.app"
-        },
-        {
-          "key" : "w",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Word.app"
-        }
-      ],
-      "iconPath" : "window.ceiling.closed",
-      "key" : "m",
-      "label" : "Microsoft",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "iconPath" : "music.note.list",
-          "key" : "m",
-          "label" : "YouTube Music",
-          "type" : "url",
-          "value" : "https://music.youtube.com"
-        },
-        {
-          "iconPath" : "video.fill",
-          "key" : "y",
-          "label" : "YouTube",
-          "type" : "url",
-          "value" : "https://youtube.com"
-        },
-        {
-          "iconPath" : "brain.fill",
-          "key" : "b",
-          "label" : "BrainFM",
-          "type" : "url",
-          "value" : "https://my.brain.fm"
-        }
-      ],
-      "iconPath" : "airpods.gen3",
-      "key" : "s",
-      "label" : "Music",
       "type" : "group"
     }
   ],
