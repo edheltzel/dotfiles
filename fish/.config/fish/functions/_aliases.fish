@@ -43,6 +43,7 @@ alias sites 'cd ~/Sites'
 alias dots 'cd ~/.dotfiles'
 alias neoed 'cd ~/.dotfiles/neoed/.config/nvim'
 alias neo 'cd ~/.dotfiles/neoed/.config/nvim'
+alias fld 'cd "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱ "'
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
