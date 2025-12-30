@@ -183,6 +183,27 @@
           "style": "plain"
         },
         {
+          "type": "jujutsu",
+          "style": "plain",
+          "foreground": "p:branch",
+          "options": {
+            "cache_duration": "none",
+            "fetch_status": true,
+            "fetch_ahead_counter": true,
+            "ignore_working_copy": true
+          },
+          "template": "<p:muted>on</> 󰘬 {{ .ChangeID }}{{ if .ClosestBookmarks }} <p:muted>@</> {{ .ClosestBookmarks }}{{ if .Ahead }} <p:git_ahead>⇡{{ .Ahead }}</>{{ end }}{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Moved 0 }} <p:purple>>{{ .Working.Moved }}</>{{ end }}{{ end }} "
+        },
+        {
+          "options": {
+            "cache_duration": "none"
+          },
+          "template": " {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "foreground": "p:orange",
+          "type": "aws",
+          "style": "plain"
+        },
+        {
           "options": {
             "cache_duration": "none"
           },
