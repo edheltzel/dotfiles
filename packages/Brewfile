@@ -151,8 +151,8 @@ brew 'zig'                    # Zig language
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
 brew 'httpie'             # Command line HTTP client
-brew 'podman'             # Containers
-brew 'orbstack'           # Docker image viewer
+# brew 'podman'             # Containers
+# brew 'orbstack'           # Docker image viewer
 brew 'container'          # Container CLI by Apple
 brew 'doctl'              # DigitalOcean CLI
 brew 's3cmd'              # S3 command line tool
