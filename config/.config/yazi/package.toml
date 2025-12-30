@@ -4,16 +4,6 @@ rev = "c7289ad"
 hash = "cdb1a69bed63211c75b72521bbab875d"
 
 [[flavor.deps]]
-use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "9276ffa"
-hash = "8d7799e4598ff079fa5ee5c770d9bc08"
-
-[[flavor.deps]]
-use = "jamylak/rose-pine"
-rev = "df10f50"
-hash = "ba1044bd0ba76ba42395bb5136ad34bf"
-
-[[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "5f56364"
-hash = "c0bf69ad2c44005892d586e9693993c6"
+hash = "ea25e1f0f25b0521ef78fd4e9698ff52"
