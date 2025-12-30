@@ -43,6 +43,7 @@ brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 
 # CLI Essentials
 brew 'git'          # Version control
+brew 'jj'           # Jujutsu—a version control system
 brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
