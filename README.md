@@ -210,12 +210,12 @@ There are two options for managing packages with GNU Stow:
     - `plugin/audio-feedback.js` - TTS notifications using macOS `say` for permission requests and task completion
     - `themes/` - Custom Eldritch color themes for OpenCode UI
     - **Plugin Dependencies**: Run `cd ~/.config/opencode && bun add @opencode-ai/plugin` to install plugin types (node_modules, package.json, bun.lock are git-ignored)
-- karabiner (karabiner/)
+- karabiner (config/.config/karabiner/)
   - Complex keyboard customizations with Hyper key chording
   - I am keeping this in for legacy reasons - I am using [LeaderKey](https://github.com/mikker/LeaderKey)
-- vscode (vscode/) - Legacy
-  - VSCode configurations kept for compatibility/reference; rarely used
-- zed (zed/) - Legacy
+- vscode - Legacy (no longer managed)
+  - VSCode configurations stored directly in `~/Library/Application Support/Code/User/`
+- zed (config/.config/zed/) - Legacy
   - Zed editor config maintained for occasional use; not primary workflow
 - local (local/)
   - User-specific data not configuration-related. ie: dictionaries and misc items that mean nothing, etc.

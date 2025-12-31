@@ -53,7 +53,7 @@ mainInstall() {
     source ./packages/packages.sh
 
     # Install Stow packages
-    declare -a stow_dirs=("dots" "git" "fish" "config" "karabiner" "nvim" "vscode" "zed" "local")
+    declare -a stow_dirs=("dots" "git" "fish" "config" "neoed" "local")
     for dir in "${stow_dirs[@]}"; do
       stow "$dir"
     done
