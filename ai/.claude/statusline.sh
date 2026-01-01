@@ -11,8 +11,8 @@ MODEL=$(echo "$INPUT" | jq -r '.model.display_name // "Claude"')
 CWD=$(echo "$INPUT" | jq -r '.workspace.current_dir // .cwd')
 VERSION=$(echo "$INPUT" | jq -r '.version // ""')
 
-# Shorten home directory to ~
-CWD_DISPLAY="${CWD/#$HOME/~}"
+# Show only current directory name with ~.../ prefix
+CWD_DISPLAY="...$(basename "$CWD")"
 
 # Get context usage
 CONTEXT_SIZE=$(echo "$INPUT" | jq -r '.context_window.context_window_size // 0')
