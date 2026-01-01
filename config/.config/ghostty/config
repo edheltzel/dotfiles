@@ -10,7 +10,7 @@ alpha-blending = linear-corrected
 config-file = "colors/eldritch"
 #theme = aura
 
-background-opacity = 0.95
+background-opacity = 0.90
 background-blur-radius = 50
 
 copy-on-select = clipboard
