@@ -3,22 +3,20 @@ alias grep 'grep --color=auto'
 alias egrep 'egrep --color=auto'
 alias fgrep 'fgrep --color=auto'
 
-# Git aliases (no included in gitconfig)
-alias sta state # gitnow
-alias cma commit-all # gitnow
-alias cm commit # gitnow
+# gitnow
+alias sta state
+alias cma commit-all
+alias cm commit
+alias gs state
 
 # Confirm before overwriting
 alias cp 'cp -Ri'
 alias mv 'mv -i'
 alias rm 'rm -i'
 
-# Create/delete directories
+# Utilities 
 alias md 'mkdir -p'
-alias rd 'rmdir -p'
-
-# Topgrade 
-alias tg topgrade
+alias cwd pwd
 
 # Navigation
 alias .. 'cd ..'
@@ -30,13 +28,10 @@ alias l 'eza --long --all --header --git --icons --no-permissions --no-time --no
 alias ll 'eza -lagh --git --icons --group-directories-first'
 alias la 'eza -lagh --git --icons --group-directories-first --sort modified'
 alias cll 'clear; and eza --long --all --header --git --icons --no-permissions --no-time --no-user --no-filesize --group-directories-first'
-
-# Tree view
 alias tree 'eza -Ta --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 alias ltd 'eza -TaD --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 
-# Project shortcuts/aliases
-alias projects 'cd ~/Developer'
+# Shortcuts
 alias dev 'cd ~/Developer'
 alias work 'cd ~/Developer/work'
 alias sites 'cd ~/Sites'
@@ -47,7 +42,6 @@ alias fld 'cd "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNote
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
-alias cuts 'eval $EDITOR ~/.dotfiles'
 alias o open
 alias oo 'open .'
 alias oa 'open -a'
@@ -55,15 +49,9 @@ alias del trash
 alias sdel 'sudo rm -rf'
 
 # Editors and Utilities
-# alias code windsurf
 alias serve miniserve #start a simple http server
 alias du dua
-# alias zip 'ouch compress'
-# alias unzip 'ouch decompress'
-# alias listzip 'ouch list'
-# alias lzip 'ouch list'
 alias wget 'wget -c'
-alias mux tmux
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
