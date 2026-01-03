@@ -4,7 +4,7 @@ description: Quick access to Atlas documentation
 
 # Atlas Documentation
 
-Access PAI system documentation and resources.
+Access Atlas system documentation and resources.
 
 ## Available Documentation
 
@@ -15,7 +15,7 @@ Access PAI system documentation and resources.
 - 🔒 Security: `~/Developer/PAI/SECURITY.md`
 
 **Tools & Templates:**
-- 🛠️ Check PAI State: `~/Developer/PAI/Tools/CheckPAIState.md`
+- 🛠️ Check Atlas State: `~/Developer/PAI/Tools/CheckPAIState.md`
 - 📋 Pack Template: `~/Developer/PAI/Tools/PAIPackTemplate.md`
 - 🎁 Bundle Template: `~/Developer/PAI/Tools/PAIBundleTemplate.md`
 
