@@ -56,9 +56,9 @@ Commands will be symlinked to `~/.claude/commands/` and available in all Claude 
 ### Pack Management (3)
 | Command | Description |
 |---------|-------------|
-| `/atlas-packs` | List available PAI packs for installation |
-| `/atlas-install <pack>` | Install a PAI pack |
-| `/atlas-docs [doc]` | Access PAI documentation |
+| `/atlas-packs` | List available Atlas packs for installation |
+| `/atlas-install <pack>` | Install a Atlas pack |
+| `/atlas-docs [doc]` | Access Atlas documentation |
 
 ### Utilities (2)
 | Command | Description |
