@@ -1,6 +1,6 @@
 # Voice System Mapping
 
-Two voice naming systems exist in the PAI infrastructure. Both need corresponding environment variables in `~/.claude/.env`.
+Two voice naming systems exist in the Atlas infrastructure. Both need corresponding environment variables in `~/.claude/.env`.
 
 ## Overview
 
@@ -44,7 +44,7 @@ ELEVENLABS_VOICE_WRITER=<voice_id>
 
 ---
 
-## PAI Agents Skill Voices (Upstream)
+## Atlas Agents Skill Voices (Upstream)
 
 Used by `AgentFactory.ts` when composing dynamic agents from traits.
 
@@ -79,9 +79,9 @@ ELEVENLABS_VOICE_GRITTY=<voice_id>
 
 ## Suggested Mapping
 
-Map PAI voices to your existing custom voices (same ElevenLabs voice ID, different names):
+Map Atlas voices to your existing custom voices (same ElevenLabs voice ID, different names):
 
-| PAI Voice | Maps To | Rationale |
+| Atlas Voice | Maps To | Rationale |
 |-----------|---------|-----------|
 | `AUTHORITATIVE` | engineer | Wise, measured authority |
 | `PROFESSIONAL` | engineer | Balanced professional |
@@ -121,7 +121,7 @@ ELEVENLABS_VOICE_PENTESTER=<voice_id_8>
 ELEVENLABS_VOICE_WRITER=<voice_id_9>
 
 # ============================================
-# PAI AGENTS SKILL VOICES (Upstream)
+# Atlas AGENTS SKILL VOICES (Upstream)
 # Point these to your existing voices
 # ============================================
 ELEVENLABS_VOICE_AUTHORITATIVE=<voice_id_3>   # same as ENGINEER
@@ -146,7 +146,7 @@ ELEVENLABS_VOICE_GRITTY=<voice_id_8>          # same as PENTESTER
 3. `getVoiceId("engineer")` reads `ELEVENLABS_VOICE_ENGINEER`
 4. Voice server speaks with that voice
 
-### PAI Agents Skill Flow
+### Atlas Agents Skill Flow
 1. `AgentFactory.ts` composes agent with traits: `security, skeptical, adversarial`
 2. Traits map to voice: `Intense`
 3. Template includes voice ID from `ELEVENLABS_VOICE_INTENSE`
