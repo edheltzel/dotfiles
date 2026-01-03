@@ -7,7 +7,7 @@ description: Switch Atlas voice personality
 Switch to a different voice personality based on the task at hand.
 
 **Available voices:**
-- **pai** - Professional, expressive (default)
+- **default** - Professional, expressive (default)
 - **intern** - Enthusiastic, chaotic energy (176 IQ genius)
 - **engineer** - Wise leader, stable (Fortune 10 principal)
 - **architect** - Wise leader, deliberate (PhD-level system designer)
