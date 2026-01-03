@@ -7,7 +7,7 @@ Two voice naming systems exist in the Atlas infrastructure. Both need correspond
 | System | Source | Voice Names |
 |--------|--------|-------------|
 | **Custom Hooks** | `hooks/lib/prosody-enhancer.ts` | engineer, architect, pentester, etc. |
-| **PAI Agents Skill** | `skills/Agents/Data/Traits.yaml` | Authoritative, Intense, Warm, etc. |
+| **Atlas Agents Skill** | `skills/Agents/Data/Traits.yaml` | Authoritative, Intense, Warm, etc. |
 
 Both systems call `ELEVENLABS_VOICE_${NAME}` from environment variables.
 
