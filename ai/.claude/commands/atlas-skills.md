@@ -4,9 +4,9 @@ description: List installed Atlas skills
 
 # Installed Skills
 
-Display all installed PAI skills with their descriptions.
+Display all installed Atlas skills with their descriptions.
 
-!echo "📚 PAI Skills System\n" && \
+!echo "📚 Atlas Skills System\n" && \
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" && \
 (if [ -d ~/.claude/skills ]; then \
   for skill in ~/.claude/skills/*/SKILL.md; do \
