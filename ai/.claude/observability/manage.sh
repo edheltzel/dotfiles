@@ -12,12 +12,33 @@ else
   export PATH="$HOME/.bun/bin:/usr/local/bin:$PATH"
 fi
 
+# Auto-install dependencies if needed
+install_deps() {
+    if [ ! -d "$SCRIPT_DIR/apps/server/node_modules" ]; then
+        echo "📦 Installing server dependencies..."
+        cd "$SCRIPT_DIR/apps/server" && bun install
+    fi
+    if [ ! -d "$SCRIPT_DIR/apps/client/node_modules" ]; then
+        echo "📦 Installing client dependencies..."
+        cd "$SCRIPT_DIR/apps/client" && bun install
+    fi
+}
+
 case "${1:-}" in
+    setup)
+        echo "📦 Setting up observability dashboard..."
+        cd "$SCRIPT_DIR/apps/server" && bun install
+        cd "$SCRIPT_DIR/apps/client" && bun install
+        echo "✅ Setup complete. Run: manage.sh start-detached"
+        ;;
+
     start)
         if lsof -Pi :4000 -sTCP:LISTEN -t >/dev/null 2>&1; then
             echo "Already running. Use: manage.sh restart"
             exit 1
         fi
+
+        install_deps
 
         # Start server
         cd "$SCRIPT_DIR/apps/server"
@@ -85,6 +106,8 @@ case "${1:-}" in
             exit 1
         fi
 
+        install_deps
+
         cd "$SCRIPT_DIR/apps/server"
         nohup bun run dev >/dev/null 2>&1 &
         disown
@@ -107,7 +130,7 @@ case "${1:-}" in
         ;;
 
     *)
-        echo "Usage: manage.sh {start|stop|restart|status|start-detached}"
+        echo "Usage: manage.sh {setup|start|stop|restart|status|start-detached}"
         exit 1
         ;;
 esac

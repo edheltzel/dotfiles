@@ -1,7 +1,10 @@
-# Claude Code Configuration
+# Atlas Configuration for Claude Code
 
-Personal Claude Code configuration with skills and settings.
+My personal and highly customized Claude Code configuration.
 
+Unabashedly, inspired, and cloned from PAI and Always on AI Assistant
+
+> [!info]
 > For OpenCode configuration, see [`~/.config/opencode/README.md`](../.config/opencode/README.md)
 
 ## Structure
