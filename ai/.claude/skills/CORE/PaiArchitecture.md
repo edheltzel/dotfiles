@@ -1,4 +1,4 @@
-# PAI Architecture
+# Atlas Architecture
 
 > Auto-generated tracking file. Run `bun $PAI_DIR/Tools/PaiArchitecture.ts generate` to refresh.
 
