@@ -49,7 +49,7 @@ async function sendVoiceGreeting(): Promise<void> {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         title: 'Atlas',
-        message: 'Atlas, standing by.',
+        message: 'Hello, Ed. Atlas, standing by.',
         voice_enabled: true
       }),
     });
