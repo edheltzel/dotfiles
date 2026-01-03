@@ -1,0 +1,130 @@
+{
+	"env": {
+		"DA": "Atlas",
+		"PAI_DIR": "/Users/ed/.claude",
+		"PAI_SOURCE_APP": "Atlas",
+		"TIME_ZONE": "America/New_York"
+	},
+	"hooks": {
+		"PostToolUse": [
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-all-events.ts --event-type PostToolUse",
+						"type": "command"
+					}
+				],
+				"matcher": "*"
+			}
+		],
+		"PreToolUse": [
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/security-validator.ts",
+						"type": "command"
+					}
+				],
+				"matcher": "Bash"
+			},
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-all-events.ts --event-type PreToolUse",
+						"type": "command"
+					}
+				],
+				"matcher": "*"
+			}
+		],
+		"SessionEnd": [
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-session-summary.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-all-events.ts --event-type SessionEnd",
+						"type": "command"
+					}
+				]
+			}
+		],
+		"SessionStart": [
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/start-voice-server.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/initialize-session.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/load-core-context.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-all-events.ts --event-type SessionStart",
+						"type": "command"
+					}
+				],
+				"matcher": "*"
+			}
+		],
+		"Stop": [
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/stop-hook-voice.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/stop-hook.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-all-events.ts --event-type Stop",
+						"type": "command"
+					}
+				]
+			}
+		],
+		"SubagentStop": [
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/subagent-stop-hook-voice.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/subagent-stop-hook.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-all-events.ts --event-type SubagentStop",
+						"type": "command"
+					}
+				]
+			}
+		],
+		"UserPromptSubmit": [
+			{
+				"hooks": [
+					{
+						"command": "bun run $PAI_DIR/hooks/update-tab-titles.ts",
+						"type": "command"
+					},
+					{
+						"command": "bun run $PAI_DIR/hooks/capture-all-events.ts --event-type UserPromptSubmit",
+						"type": "command"
+					}
+				],
+				"matcher": "*"
+			}
+		]
+	}
+}
+

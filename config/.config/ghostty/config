@@ -87,3 +87,4 @@ keybind = super+ctrl+s=text:\x1b\x13
 keybind = super+ctrl+r=text:\x12
 keybind = super+ctrl+p=text:\x1b\x10
 keybind = super+ctrl+v=text:\x16
+keybind = shift+enter=text:\x1b\r

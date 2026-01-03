@@ -1,0 +1,151 @@
+{
+  "generated": "2026-01-02T23:14:44.535Z",
+  "totalSkills": 7,
+  "alwaysLoadedCount": 1,
+  "deferredCount": 6,
+  "skills": {
+    "core": {
+      "name": "CORE",
+      "path": "CORE/SKILL.md",
+      "fullDescription": "Personal AI Infrastructure core. AUTO-LOADS at session start. USE WHEN any session begins OR user asks about identity, response format, contacts, stack preferences.",
+      "triggers": [
+        "any",
+        "session",
+        "begins",
+        "user",
+        "asks",
+        "about",
+        "identity",
+        "response",
+        "format",
+        "contacts",
+        "stack",
+        "preferences"
+      ],
+      "workflows": [],
+      "tier": "always"
+    },
+    "prompting": {
+      "name": "Prompting",
+      "path": "Prompting/SKILL.md",
+      "fullDescription": "Meta-prompting system for dynamic prompt generation using templates, standards, and patterns. USE WHEN meta-prompting, template generation, prompt optimization, or programmatic prompt composition.",
+      "triggers": [
+        "meta-prompting",
+        "template",
+        "generation",
+        "prompt",
+        "optimization",
+        "programmatic",
+        "composition"
+      ],
+      "workflows": [],
+      "tier": "deferred"
+    },
+    "art": {
+      "name": "Art",
+      "path": "Art/SKILL.md",
+      "fullDescription": "Visual content generation with Excalidraw hand-drawn aesthetic. USE WHEN user wants diagrams, visualizations, comics, or editorial illustrations.",
+      "triggers": [
+        "user",
+        "wants",
+        "diagrams",
+        "visualizations",
+        "comics",
+        "editorial",
+        "illustrations"
+      ],
+      "workflows": [],
+      "tier": "deferred"
+    },
+    "agents": {
+      "name": "Agents",
+      "path": "Agents/SKILL.md",
+      "fullDescription": "Dynamic agent composition and management system. USE WHEN user says create custom agents, spin up custom agents, specialized agents, OR asks for agent personalities, available traits, agent voices. Handles custom agent creation, personality assignment, voice mapping, and parallel agent orchestration.",
+      "triggers": [
+        "user",
+        "says",
+        "create",
+        "custom",
+        "agents",
+        "spin",
+        "specialized",
+        "asks",
+        "for",
+        "agent",
+        "personalities",
+        "available",
+        "traits",
+        "voices"
+      ],
+      "workflows": [],
+      "tier": "deferred"
+    },
+    "creating-claude-skills": {
+      "name": "creating-claude-skills",
+      "path": "creating-claude-skills/SKILL.md",
+      "fullDescription": "Design and create Claude Skills for this Rails event-sourced codebase. Use when you need to capture repeatable workflows, complex multi-step processes, or domain-specific patterns that Claude should handle consistently.",
+      "triggers": [
+        "you",
+        "need",
+        "capture",
+        "repeatable",
+        "workflows",
+        "complex",
+        "multi-step",
+        "processes",
+        "domain-specific",
+        "patterns",
+        "that",
+        "claude",
+        "should",
+        "handle",
+        "consistently"
+      ],
+      "workflows": [],
+      "tier": "deferred"
+    },
+    "converting-claude-subagents": {
+      "name": "converting-claude-subagents",
+      "path": "converting-claude-subagents/SKILL.md",
+      "fullDescription": "Convert Claude Code Subagents to OpenCode Agents format. Use when migrating from Claude Code to OpenCode or when you have existing subagent definitions to port.",
+      "triggers": [
+        "migrating",
+        "from",
+        "claude",
+        "code",
+        "opencode",
+        "when",
+        "you",
+        "have",
+        "existing",
+        "subagent",
+        "definitions",
+        "port"
+      ],
+      "workflows": [],
+      "tier": "deferred"
+    },
+    "converting-slash-commands": {
+      "name": "converting-slash-commands",
+      "path": "converting-slash-commands/SKILL.md",
+      "fullDescription": "Convert Claude Code slash commands to OpenCode commands format. Use when migrating from Claude Code to OpenCode or when you have existing slash command definitions to port.",
+      "triggers": [
+        "migrating",
+        "from",
+        "claude",
+        "code",
+        "opencode",
+        "when",
+        "you",
+        "have",
+        "existing",
+        "slash",
+        "command",
+        "definitions",
+        "port"
+      ],
+      "workflows": [],
+      "tier": "deferred"
+    }
+  }
+}

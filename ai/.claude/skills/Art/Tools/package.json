@@ -1,0 +1,15 @@
+{
+  "name": "tools",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@google/genai": "^1.34.0",
+    "openai": "^6.15.0",
+    "replicate": "^1.4.0"
+  }
+}
