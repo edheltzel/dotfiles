@@ -1,0 +1,13 @@
+{
+  "name": "voice",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "elevenlabs": "^1.59.0"
+  }
+}
