@@ -104,6 +104,31 @@ The repository uses these stow packages (defined in `Makefile:1`):
 
 **Git Submodules:** Both `atlas` and `neoed` are managed as separate repositories. After cloning, run `git submodule update --init --recursive` to initialize them.
 
+### Atlas - Personal AI Infrastructure
+
+The `atlas/` submodule contains the Personal AI Infrastructure (PAI) for Claude Code and OpenCode:
+
+| Directory | Purpose |
+|-----------|---------|
+| `atlas/.claude/commands/atlas/` | 18 slash commands (`/atlas:*`) |
+| `atlas/.claude/skills/` | 7 skills (CORE, Art, Agents, Browser, Prompting, etc.) |
+| `atlas/.claude/hooks/` | TypeScript session lifecycle hooks |
+| `atlas/.claude/voice/` | ElevenLabs TTS voice server |
+| `atlas/.claude/observability/` | Real-time Vue dashboard |
+| `atlas/.config/opencode/` | OpenCode AI configuration |
+
+**Working with Atlas:**
+
+```bash
+# Update atlas submodule
+cd ~/.dotfiles/atlas && git pull origin master
+
+# Restow after changes
+make stow pkg=atlas
+```
+
+**Atlas Commands:** Run `/atlas:help` in Claude Code to see all available commands.
+
 ### XDG Compliance
 
 All paths configured in `fish/.config/fish/conf.d/paths.fish`:
