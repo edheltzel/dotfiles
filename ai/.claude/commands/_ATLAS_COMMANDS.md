@@ -15,7 +15,7 @@
 - Pack-based modularity
 - Stack preference enforcement
 
-The command system exposes 17 slash commands under the `atlas-*` namespace.
+The command system exposes 16 slash commands under the `atlas-*` namespace.
 
 ## Architecture
 
@@ -31,7 +31,7 @@ The command system exposes 17 slash commands under the `atlas-*` namespace.
 - `~/.claude/hooks/` - Hook scripts (TypeScript, executed by bun)
 - `~/.claude/skills/` - Skill definitions (Markdown)
 - `~/.claude/observability/` - Real-time dashboard server
-- `~/Developer/PAI/` - PAI pack repository
+- `~/Developer/ai-dev/PAI/` - PAI pack repository
 
 **Runtime:** bun (NOT npm/yarn/pnpm)
 **Language:** TypeScript preferred over Python
@@ -116,7 +116,7 @@ Skills are specialized capabilities that can be invoked via the Skill tool or sl
 **Purpose:** Quick system health overview
 **Checks:**
 - PAI_DIR, DA, PAI_SOURCE_APP, TIME_ZONE environment variables
-- Voice server (port 3456)
+- Voice server (port 8888)
 - Skills directory
 - Hooks configuration
 
@@ -131,7 +131,7 @@ Skills are specialized capabilities that can be invoked via the Skill tool or sl
 🕐 Timezone: America/New_York
 
 Voice Server:
-  ✅ Running on port 3456
+  ✅ Running on port 8888
 
 Active Skills:
   📚 Skills loaded: 7
@@ -232,9 +232,18 @@ PreToolUse:
 
 Packs are self-contained markdown files that add capabilities to Atlas.
 
-#### `/atlas-packs`
-**Purpose:** List available PAI packs from repository
-**Source:** `~/Developer/PAI/Packs/`
+#### `/atlas-pack [action] [name]`
+**Purpose:** Unified pack management - list available/installed packs or install new ones
+**Allowed Tools:** Read, Write, Edit, Bash
+**Source:** `~/Developer/ai-dev/PAI/Packs/`
+
+**Subcommands:**
+| Command | Action |
+|---------|--------|
+| `/atlas-pack` | List all packs with installation status |
+| `/atlas-pack list` | Same as above |
+| `/atlas-pack install <name>` | Install a specific pack |
+
 **Categories:**
 - Feature Packs: `kai-*-system.md` (architecture systems)
 - Skill Packs: `kai-*-skill.md` (action-oriented capabilities)
@@ -243,37 +252,41 @@ Packs are self-contained markdown files that add capabilities to Atlas.
 **Example Output:**
 ```
 📦 Atlas Pack System
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Feature Packs:
-  • kai-history-system
-  • kai-hook-system
-  • kai-observability-server
-  • kai-voice-system
+  ✅ kai-history-system
+  ✅ kai-hook-system
+     kai-observability-server
+  ✅ kai-voice-system
 
 Skill Packs:
-  • kai-agents-skill
-  • kai-art-skill
-  • kai-prompting-skill
+  ✅ kai-agents-skill
+  ✅ kai-art-skill
+     kai-browser-skill
+  ✅ kai-prompting-skill
+
+Core Packs:
+  ✅ kai-core-install
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ = Installed
+
+Use: /atlas-pack install <pack-name>
 ```
 
-#### `/atlas-install <pack-name>`
-**Purpose:** Install a PAI pack
-**Allowed Tools:** Read, Write, Edit, Bash
-
-**Process:**
-1. Read pack file: `~/Developer/PAI/Packs/<pack-name>.md`
+**Installation Process:**
+1. Read pack file from `~/Developer/ai-dev/PAI/Packs/<pack-name>.md`
 2. Parse contents (code files, settings, dependencies)
 3. Create required directories
 4. Write all code files
-5. Merge settings.json configuration
+5. Merge settings.json configuration (don't overwrite existing)
 6. Verify installation
 7. Report status
 
-**Safety:** Does not overwrite existing configurations; merges instead
-
 **Example:**
 ```
-/atlas-install kai-history-system
+/atlas-pack install kai-browser-skill
 ```
 
 #### `/atlas-docs [doc]`
@@ -463,7 +476,7 @@ Commands use:
 ### File System Access
 Commands only access:
 - `~/.claude/` - Atlas installation directory
-- `~/Developer/PAI/` - PAI pack repository
+- `~/Developer/ai-dev/PAI/` - PAI pack repository
 - Current working directory (read-only)
 
 ---
@@ -473,10 +486,10 @@ Commands only access:
 ### Voice Server Not Running
 ```bash
 # Check process
-lsof -ti:3456
+lsof -ti:8888
 
 # Start manually
-bun run ~/.claude/hooks/start-voice-server.ts
+bun run ~/.claude/voice/server.ts
 ```
 
 ### Skills Not Loading
@@ -502,7 +515,7 @@ tail ~/.claude/observability/apps/server/logs/*.log
 ## Version Information
 
 - **Command System Version:** 1.0.0
-- **Total Commands:** 17
+- **Total Commands:** 16
 - **Namespace:** `atlas-*`
 - **Runtime:** bun
 - **Platform:** Claude Code
@@ -562,8 +575,8 @@ bash -x <(sed -n '/^!/p' ~/.claude/commands/atlas-<name>.md | sed 's/^!//')
 ## Related Documentation
 
 - **User README:** `ai/.claude/commands/README.md`
-- **PAI Documentation:** `~/Developer/PAI/README.md`
-- **Pack System:** `~/Developer/PAI/PACKS.md`
+- **PAI Documentation:** `~/Developer/ai-dev/PAI/README.md`
+- **Pack System:** `~/Developer/ai-dev/PAI/PACKS.md`
 - **Skills Index:** `~/.claude/skills/skill-index.json`
 - **Hook System:** `~/.claude/settings.json`
 

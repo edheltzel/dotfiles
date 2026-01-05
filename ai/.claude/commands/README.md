@@ -53,11 +53,10 @@ Commands will be symlinked to `~/.claude/commands/` and available in all Claude 
 |---------|-------------|
 | `/atlas-stack-check` | Verify project uses Atlas stack preferences |
 
-### Pack Management (3)
+### Pack Management (2)
 | Command | Description |
 |---------|-------------|
-| `/atlas-packs` | List available Atlas packs for installation |
-| `/atlas-install <pack>` | Install a Atlas pack |
+| `/atlas-pack [action] [name]` | Manage packs - list (default), install |
 | `/atlas-docs [doc]` | Access Atlas documentation |
 
 ### Utilities (2)
@@ -68,14 +67,14 @@ Commands will be symlinked to `~/.claude/commands/` and available in all Claude 
 
 ## Command Categories
 
-**17 total commands** organized by utility:
+**16 total commands** organized by utility:
 
 - **Voice Management:** 2 commands
 - **Skills:** 4 commands
 - **System Status:** 4 commands
 - **Observability:** 1 command
 - **Stack & Preferences:** 1 command
-- **Pack Management:** 3 commands
+- **Pack Management:** 2 commands
 - **Utilities:** 2 commands
 
 ## Usage
@@ -107,7 +106,7 @@ Most commands require:
 - Voice personalities config (`~/.claude/voice-personalities.json`)
 
 Some commands also require:
-- PAI repository at `~/Developer/PAI/` (for pack management)
+- PAI repository at `~/Developer/ai-dev/PAI/` (for pack management)
 - Voice server running (for voice commands)
 - Observability server (for dashboard commands)
 

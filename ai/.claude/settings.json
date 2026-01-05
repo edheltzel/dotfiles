@@ -126,5 +126,9 @@
       }
     ]
   },
-  "model": "sonnet"
+  "enabledPlugins": {
+    "commit-commands@claude-code-plugins": true,
+    "ralph-wiggum@claude-code-plugins": true,
+    "security-guidance@claude-code-plugins": true
+  }
 }
