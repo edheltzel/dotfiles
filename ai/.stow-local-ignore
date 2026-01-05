@@ -6,7 +6,8 @@
 # Comments and blank lines are allowed
 
 .DS_Store
+.claude/README.md
 .config/opencode/README.md
+.config/opencode/node_modules
 .config/opencode/bun.lock
 .config/opencode/package.json
-.config/opencode/node_modules
