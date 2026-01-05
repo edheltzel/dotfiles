@@ -40,6 +40,7 @@ repos/playground.list
 
 ### PRIVATE ###
 private/ssh/
+fish/.config/fish/conf.d/secrets.fish
 .gitsecret/keys/random_seed
 !*.secret
 gha-creds-*.json
