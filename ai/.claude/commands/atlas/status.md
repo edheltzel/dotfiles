@@ -1,5 +1,5 @@
 ---
-description: Show Atlas system status and health
+description: "Show Atlas system status and health. Usage: /atlas:status"
 ---
 
 # Atlas System Status

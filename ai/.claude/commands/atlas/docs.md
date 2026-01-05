@@ -1,5 +1,5 @@
 ---
-description: Quick access to Atlas documentation
+description: "Quick access to Atlas documentation. Usage: /atlas:docs [readme|packs|platform|security]"
 ---
 
 # Atlas Documentation
@@ -20,9 +20,9 @@ Access Atlas system documentation and resources.
 - 🎁 Bundle Template: `~/Developer/ai-dev/PAI/Tools/PAIBundleTemplate.md`
 
 **Quick Actions:**
-- View all packs: `/atlas-packs`
-- System status: `/atlas-status`
-- Health check: `/atlas-check`
+- View all packs: `/atlas:packs`
+- System status: `/atlas:status`
+- Health check: `/atlas:check`
 
 ## Read Documentation
 

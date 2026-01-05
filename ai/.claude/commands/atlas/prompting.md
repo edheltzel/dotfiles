@@ -1,5 +1,5 @@
 ---
-description: Launch Prompting skill for meta-prompting tasks
+description: "Launch Prompting skill for meta-prompting tasks. Usage: /atlas:prompting <task>"
 ---
 
 # Prompting Skill

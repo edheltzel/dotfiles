@@ -1,5 +1,5 @@
 ---
-description: Manage Atlas packs - list available/installed packs or install new ones
+description: "Manage Atlas packs. Usage: /atlas:pack [list|install <name>]"
 allowed-tools: [Read, Write, Edit, Bash]
 ---
 
@@ -9,9 +9,9 @@ Manage PAI packs for your Atlas system.
 
 ## Usage
 
-- `/atlas-pack` - List all available and installed packs
-- `/atlas-pack list` - Same as above
-- `/atlas-pack install <name>` - Install a specific pack
+- `/atlas:pack` - List all available and installed packs
+- `/atlas:pack list` - Same as above
+- `/atlas:pack install <name>` - Install a specific pack
 
 ## Arguments: $ARGUMENTS
 
@@ -61,7 +61,7 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
   done && \
   echo "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && \
   echo "✅ = Installed" && \
-  echo "\nUse: /atlas-pack install <pack-name>" && \
+  echo "\nUse: /atlas:pack install <pack-name>" && \
   echo "Docs: ~/Developer/ai-dev/PAI/PACKS.md\n"; \
 else \
   echo "❌ PAI repository not found at ~/Developer/ai-dev/PAI\n"; \

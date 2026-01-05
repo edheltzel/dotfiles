@@ -1,5 +1,5 @@
 ---
-description: Switch Atlas voice personality
+description: "Switch Atlas voice personality. Usage: /atlas:voice <personality>"
 ---
 
 # Voice Personality Switcher
@@ -25,4 +25,4 @@ Switch to personality: `$ARGUMENTS`
 
 ---
 
-**Note:** Voice will remain active for this session. Use `/atlas-voice pai` to return to default.
+**Note:** Voice will remain active for this session. Use `/atlas:voice pai` to return to default.

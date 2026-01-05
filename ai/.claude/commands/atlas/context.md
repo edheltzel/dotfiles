@@ -1,5 +1,5 @@
 ---
-description: Show current Atlas session context
+description: "Show current Atlas session context. Usage: /atlas:context"
 ---
 
 # Current Session Context

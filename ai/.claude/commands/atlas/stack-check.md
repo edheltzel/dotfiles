@@ -1,5 +1,5 @@
 ---
-description: Verify project uses Atlas stack preferences
+description: "Verify project uses Atlas stack preferences. Usage: /atlas:stack-check"
 allowed-tools: [Read, Glob, Grep]
 ---
 

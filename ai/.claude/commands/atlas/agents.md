@@ -1,5 +1,5 @@
 ---
-description: Launch Agents skill for custom agent composition
+description: "Launch Agents skill for custom agent composition. Usage: /atlas:agents <task>"
 ---
 
 # Agents Skill

@@ -1,5 +1,5 @@
 ---
-description: Launch Art skill for visual content generation
+description: "Launch Art skill for visual content generation. Usage: /atlas:art <task>"
 ---
 
 # Art Skill

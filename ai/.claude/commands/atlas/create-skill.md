@@ -1,5 +1,5 @@
 ---
-description: Create a new Atlas skill
+description: "Create a new Atlas skill. Usage: /atlas:create-skill <name>"
 allowed-tools: [Write, Bash, Read]
 ---
 
@@ -63,7 +63,7 @@ Any implementation details, dependencies, or requirements.
 
 3. **Register the Skill:**
    - Verify the skill is in ~/.claude/skills/
-   - Test by listing with `/atlas-skills`
+   - Test by listing with `/atlas:skills`
 
 4. **Provide Usage:**
    - Show how to invoke the skill

@@ -1,5 +1,5 @@
 ---
-description: Show active Atlas hooks configuration
+description: "Show active Atlas hooks configuration. Usage: /atlas:hooks"
 ---
 
 # Active Hooks

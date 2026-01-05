@@ -1,5 +1,5 @@
 ---
-description: Start Atlas observability dashboard
+description: "Manage Atlas observability dashboard. Usage: /atlas:observability [start|stop|restart|status]"
 ---
 
 # Atlas Observability Dashboard
@@ -26,7 +26,7 @@ Real-time multi-agent activity monitoring dashboard - see exactly what your AI a
       echo "Dashboard available at:"; \
       echo "  http://localhost:5173"; \
       echo ""; \
-      echo "Use /atlas-observability stop to shut down"; \
+      echo "Use /atlas:observability stop to shut down"; \
       ;; \
     stop) \
       echo "⏹️  Stopping Atlas Observability Dashboard..."; \
@@ -48,5 +48,5 @@ Real-time multi-agent activity monitoring dashboard - see exactly what your AI a
 else \
   echo "❌ Observability server not installed"; \
   echo ""; \
-  echo "To install, run: /atlas-install kai-observability-server"; \
+  echo "To install, run: /atlas:install kai-observability-server"; \
 fi

@@ -1,5 +1,5 @@
 ---
-description: Check Atlas system state and health
+description: "Run comprehensive Atlas system health check. Usage: /atlas:check"
 allowed-tools: [Read, Bash, Grep, Glob]
 ---
 

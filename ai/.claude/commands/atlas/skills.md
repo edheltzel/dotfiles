@@ -1,5 +1,5 @@
 ---
-description: List installed Atlas skills
+description: "List installed Atlas skills. Usage: /atlas:skills"
 ---
 
 # Installed Skills
