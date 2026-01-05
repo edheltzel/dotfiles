@@ -2,6 +2,34 @@
 // $PAI_DIR/hooks/lib/prosody-enhancer.ts
 // Enhances voice output with emotional markers and natural speech patterns
 
+import { existsSync, readFileSync } from 'fs';
+import { join } from 'path';
+import { homedir } from 'os';
+
+// Load .env from PAI directory (same as voice server)
+let envLoaded = false;
+function loadEnv(): void {
+  if (envLoaded) return;
+
+  const paiDir = process.env.PAI_DIR || join(homedir(), '.claude');
+  const envPath = join(paiDir, '.env');
+
+  if (existsSync(envPath)) {
+    const envContent = readFileSync(envPath, 'utf-8');
+    envContent.split('\n').forEach(line => {
+      const eqIndex = line.indexOf('=');
+      if (eqIndex > 0) {
+        const key = line.substring(0, eqIndex).trim();
+        const value = line.substring(eqIndex + 1).trim();
+        if (key && value && !key.startsWith('#')) {
+          process.env[key] = value;
+        }
+      }
+    });
+  }
+  envLoaded = true;
+}
+
 export interface AgentPersonality {
   name: string;
   rate_wpm: number;
@@ -331,11 +359,42 @@ export function cleanForSpeech(message: string): string {
 }
 
 /**
+ * Get the current personality from state file (set via /atlas-voice command)
+ */
+function getCurrentPersonality(): string {
+  const paiDir = process.env.PAI_DIR || join(homedir(), '.claude');
+  const personalityFile = join(paiDir, 'state', 'current-personality.txt');
+
+  try {
+    if (existsSync(personalityFile)) {
+      const personality = readFileSync(personalityFile, 'utf-8').trim().toLowerCase();
+      const validPersonalities = ['pai', 'default', 'intern', 'engineer', 'architect',
+                                   'researcher', 'designer', 'artist', 'pentester', 'writer'];
+      if (validPersonalities.includes(personality)) {
+        return personality;
+      }
+    }
+  } catch {
+    // Ignore errors, fall through to default
+  }
+  return 'pai'; // Default
+}
+
+/**
  * Get the voice ID for an agent type
  */
 export function getVoiceId(agentType: string): string {
-  // Read from environment or config file
-  const envKey = `ELEVENLABS_VOICE_${agentType.toUpperCase()}`;
+  // Load environment variables from ~/.claude/.env
+  loadEnv();
+
+  // For main agent (pai), check if user has switched personality via /atlas-voice
+  let effectiveAgentType = agentType.toLowerCase();
+  if (effectiveAgentType === 'pai' || effectiveAgentType === 'default') {
+    effectiveAgentType = getCurrentPersonality();
+  }
+
+  // Read from environment - personality-specific voice
+  const envKey = `ELEVENLABS_VOICE_${effectiveAgentType.toUpperCase()}`;
   const envVoice = process.env[envKey];
   if (envVoice) {
     return envVoice;
