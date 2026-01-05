@@ -169,9 +169,14 @@ There are two options for managing packages with GNU Stow:
 
 ## Stow Packages
 
+- **atlas (atlas/) - [Git Submodule](https://github.com/edheltzel/atlas)**
+  - Personal AI Infrastructure (PAI) for Claude Code and OpenCode
+  - `.claude/` - Claude Code configuration (hooks, skills, commands, voice system, observability)
+  - `.config/opencode/` - OpenCode configuration (agents, commands, plugins, themes)
+  - Managed as a separate repository for independent versioning
+  - See [Atlas README](./atlas/README.md) for full documentation
 - dots (dots/)
   - misc dotfiles that are stored in the $HOME directory
-  - `.claude/` that is stored in the $HOME directory includes skills, agents, commands, etc.
 - git (git/)
   - git configuration
 - fish (fish/)
@@ -403,7 +408,11 @@ Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-
 <details>
   <summary>Git Submodules</summary>
 
-This repo uses git submodules for managing the Neovim configuration. If you encounter issues with submodules:
+This repo uses git submodules for managing:
+- **neoed** - Neovim configuration ([NEO.ED](https://github.com/edheltzel/neoed))
+- **atlas** - Personal AI Infrastructure ([Atlas](https://github.com/edheltzel/atlas))
+
+If you encounter issues with submodules:
 
 **Initialize/Update Submodules:**
 
@@ -412,14 +421,21 @@ cd ~/.dotfiles
 git submodule update --init --recursive
 ```
 
-**Update Nvim Config to Latest:**
+**Update Submodule to Latest:**
 
 ```shell
+# For Neovim (neoed)
 cd ~/.dotfiles/neoed/.config/nvim
 git pull origin master
+
+# For Atlas
+cd ~/.dotfiles/atlas
+git pull origin master
+
+# Commit the update
 cd ~/.dotfiles
-git add neoed/.config/nvim
-git commit -m "Update neoed submodule"
+git add neoed atlas
+git commit -m "Update submodules"
 ```
 
 **Clone with Submodules:**
@@ -431,7 +447,7 @@ git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotf
 **If Submodule is Empty:**
 
 ```shell
-git submodule deinit -f neoed/.config/nvim
+git submodule deinit -f <submodule-path>
 git submodule update --init --recursive
 ```
 

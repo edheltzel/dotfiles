@@ -91,13 +91,18 @@ reload                     # Reload Fish configuration
 
 The repository uses these stow packages (defined in `Makefile:1`):
 
-- **ai** - Claude Code and OpenCode AI agent configs
+- **atlas** - Personal AI Infrastructure (PAI) - **Git Submodule** ([repo](https://github.com/edheltzel/atlas))
+  - Claude Code: hooks, skills, commands, voice system, observability dashboard
+  - OpenCode: agents, commands, plugins, themes
+  - Symlinks to `~/.claude/` and `~/.config/opencode/`
 - **dots** - Misc dotfiles in `$HOME` (`.npmrc`, `.curlrc`, etc.)
 - **git** - Git configuration with SSH signing
 - **fish** - Fish shell config (XDG-compliant structure)
 - **config** - 27+ application configs (yazi, raycast, aerospace, karabiner, zed, etc.)
-- **neoed** - LazyVim customizations (NEO.ED)
+- **neoed** - LazyVim customizations (NEO.ED) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
 - **local** - User-specific non-config data
+
+**Git Submodules:** Both `atlas` and `neoed` are managed as separate repositories. After cloning, run `git submodule update --init --recursive` to initialize them.
 
 ### XDG Compliance
 
