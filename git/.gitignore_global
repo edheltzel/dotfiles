@@ -78,7 +78,7 @@ Icon\r
 
 ### Ruby ###
 *.gem
-/.config
+# /.config
 /coverage/
 /InstalledFiles
 /pkg/
