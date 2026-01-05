@@ -255,7 +255,7 @@ cask 'typinator'                   # Text expander - macOS only
 cask 'keka'                        # File archiver and extractor
 cask 'homerow'                     # keyboaard shortcuts for every button in macOS
 
-# brew 'stats'                     # System stats in menubar
+brew 'stats'                       # System stats in menubar
 
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
