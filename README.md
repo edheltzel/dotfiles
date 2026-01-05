@@ -176,6 +176,15 @@ There are two options for managing packages with GNU Stow:
   - git configuration
 - fish (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
+  - **Secrets Management**: API keys and sensitive environment variables are stored in `conf.d/secrets.fish` (gitignored). This file is created locally and never committed to version control.
+    - Copy the template: `cp fish/.config/fish/conf.d/secrets.fish.example fish/.config/fish/conf.d/secrets.fish`
+    - Or create manually and add your keys:
+      ```fish
+      # secrets.fish - API keys and sensitive environment variables
+      set -gx ANTHROPIC_API_KEY "sk-ant-..."
+      set -gx OPENAI_API_KEY "sk-..."
+      ```
+    - Used by: `claude-models` function (lists available Anthropic models)
   - **Lazy-Loading Architecture**: Fish config is optimized for fast shell startup using lazy-loading patterns. Heavy tools are only initialized on first use:
     - `conf.d/fnm.fish` - Node version manager (fnm) initialized on first `node`/`npm` call
     - `conf.d/zoxide.fish` - Directory jumper (`z`/`zi` commands) initialized on first use
