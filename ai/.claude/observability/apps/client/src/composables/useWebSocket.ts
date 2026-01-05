@@ -1,14 +1,19 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import type { HookEvent, WebSocketMessage } from '../types';
 
+export type ConnectionState = 'connected' | 'reconnecting' | 'shutdown';
+
 export function useWebSocket(url: string) {
   const events = ref<HookEvent[]>([]);
   const isConnected = ref(false);
   const error = ref<string | null>(null);
-  
+  const connectionState = ref<ConnectionState>('connected');
+
   let ws: WebSocket | null = null;
   let reconnectTimeout: number | null = null;
-  
+  let reconnectAttempts = 0;
+  const MAX_RECONNECT_ATTEMPTS = 3;
+
   // Get max events from environment variable or use default
   const maxEvents = parseInt(import.meta.env.VITE_MAX_EVENTS_TO_DISPLAY || '100');
   
@@ -19,7 +24,9 @@ export function useWebSocket(url: string) {
       ws.onopen = () => {
         console.log('WebSocket connected');
         isConnected.value = true;
+        connectionState.value = 'connected';
         error.value = null;
+        reconnectAttempts = 0; // Reset on successful connection
       };
       
       ws.onmessage = (event) => {
@@ -53,10 +60,24 @@ export function useWebSocket(url: string) {
       ws.onclose = () => {
         console.log('WebSocket disconnected');
         isConnected.value = false;
-        
-        // Attempt to reconnect after 3 seconds
+
+        // Increment reconnect attempts
+        reconnectAttempts++;
+
+        // If we've exceeded max attempts, assume permanent shutdown
+        if (reconnectAttempts >= MAX_RECONNECT_ATTEMPTS) {
+          console.log('Max reconnect attempts reached. Server appears to be shutdown.');
+          connectionState.value = 'shutdown';
+          error.value = null; // Clear error on graceful shutdown
+          return;
+        }
+
+        // Otherwise, mark as reconnecting and try again
+        connectionState.value = 'reconnecting';
+        error.value = `Reconnecting... (attempt ${reconnectAttempts}/${MAX_RECONNECT_ATTEMPTS})`;
+
         reconnectTimeout = window.setTimeout(() => {
-          console.log('Attempting to reconnect...');
+          console.log(`Reconnection attempt ${reconnectAttempts}/${MAX_RECONNECT_ATTEMPTS}...`);
           connect();
         }, 3000);
       };
@@ -94,6 +115,7 @@ export function useWebSocket(url: string) {
     events,
     isConnected,
     error,
+    connectionState,
     clearEvents
   };
 }

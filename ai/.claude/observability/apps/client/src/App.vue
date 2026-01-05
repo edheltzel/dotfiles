@@ -93,6 +93,9 @@
       :agent-color="toast.agentColor"
       @dismiss="dismissToast(toast.id)"
     />
+
+    <!-- Shutdown Overlay -->
+    <ShutdownOverlay :show="connectionState === 'shutdown'" />
   </div>
 </template>
 
@@ -109,9 +112,10 @@ import LivePulseChart from './components/LivePulseChart.vue';
 import ThemeManager from './components/ThemeManager.vue';
 import ToastNotification from './components/ToastNotification.vue';
 import AgentSwimLaneContainer from './components/AgentSwimLaneContainer.vue';
+import ShutdownOverlay from './components/ShutdownOverlay.vue';
 
 // WebSocket connection
-const { events, isConnected, error, clearEvents } = useWebSocket('ws://localhost:4000/stream');
+const { events, isConnected, error, connectionState, clearEvents } = useWebSocket('ws://localhost:4000/stream');
 
 // Theme management (sets up theme system)
 useThemes();
