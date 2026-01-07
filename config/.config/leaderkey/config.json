@@ -15,6 +15,66 @@
         {
           "actions" : [
             {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+            },
+            {
+              "key" : "b",
+              "type" : "application",
+              "value" : "/Applications/BambuStudio.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/FreeCAD.app"
+            },
+            {
+              "key" : "m",
+              "type" : "application",
+              "value" : "/Applications/MeshLab2025.07.app"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/OrcaSlicer.app"
+            },
+            {
+              "iconPath" : "cube.fill",
+              "key" : "O",
+              "label" : "Onshape",
+              "type" : "url",
+              "value" : "https://cad.onshape.com/signin"
+            },
+            {
+              "key" : "s",
+              "type" : "application",
+              "value" : "/Applications/Shapr3D.app"
+            },
+            {
+              "key" : "S",
+              "type" : "application",
+              "value" : "/Applications/OpenSCAD-2021.01.app"
+            },
+            {
+              "key" : "x",
+              "type" : "application",
+              "value" : "/Applications/xTool Studio.app"
+            }
+          ],
+          "iconPath" : "view.3d",
+          "key" : "3",
+          "label" : "Print in 3D",
+          "type" : "group"
+        },
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Applications/Affinity.app"
+        },
+        {
+          "actions" : [
+            {
               "key" : "b",
               "type" : "application",
               "value" : "/Applications/Brave Browser.app"
@@ -54,34 +114,6 @@
           "key" : "c",
           "type" : "application",
           "value" : "/Applications/Claude.app"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "a",
-              "type" : "application",
-              "value" : "/Applications/Affinity.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/Figma.app"
-            },
-            {
-              "key" : "i",
-              "type" : "application",
-              "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
-            },
-            {
-              "key" : "p",
-              "type" : "application",
-              "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
-            }
-          ],
-          "iconPath" : "theatermask.and.paintbrush.fill",
-          "key" : "d",
-          "label" : "Design Apps",
-          "type" : "group"
         },
         {
           "actions" : [
@@ -209,61 +241,6 @@
           "value" : "/Applications/Obsidian.app"
         },
         {
-          "actions" : [
-            {
-              "key" : "a",
-              "type" : "application",
-              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
-            },
-            {
-              "key" : "b",
-              "type" : "application",
-              "value" : "/Applications/BambuStudio.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/FreeCAD.app"
-            },
-            {
-              "key" : "m",
-              "type" : "application",
-              "value" : "/Applications/MeshLab2025.07.app"
-            },
-            {
-              "key" : "o",
-              "type" : "application",
-              "value" : "/Applications/OrcaSlicer.app"
-            },
-            {
-              "iconPath" : "cube.fill",
-              "key" : "O",
-              "label" : "Onshape",
-              "type" : "url",
-              "value" : "https://cad.onshape.com/signin"
-            },
-            {
-              "key" : "s",
-              "type" : "application",
-              "value" : "/Applications/Shapr3D.app"
-            },
-            {
-              "key" : "S",
-              "type" : "application",
-              "value" : "/Applications/OpenSCAD-2021.01.app"
-            },
-            {
-              "key" : "x",
-              "type" : "application",
-              "value" : "/Applications/xTool Studio.app"
-            }
-          ],
-          "iconPath" : "view.3d",
-          "key" : "p",
-          "label" : "Print in 3D",
-          "type" : "group"
-        },
-        {
           "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
@@ -300,6 +277,21 @@
           "key" : "g",
           "label" : "Google Gemini",
           "type" : "group"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Applications/Figma.app"
+        },
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
+        },
+        {
+          "key" : "l",
+          "type" : "application",
+          "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -344,7 +336,7 @@
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
         },
         {
-          "key" : "f",
+          "key" : "p",
           "type" : "folder",
           "value" : "/Users/ed/Documents"
         },
@@ -374,7 +366,7 @@
           "value" : "/Users/ed/Movies"
         },
         {
-          "key" : "p",
+          "key" : "f",
           "type" : "folder",
           "value" : "/Users/ed/Pictures"
         },
