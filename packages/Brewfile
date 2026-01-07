@@ -100,6 +100,7 @@ brew 'procs'        # Advanced process viewer (better ps) - Rust
 # CLI Productivity Apps
 brew 'rclone'       # Manage cloud storage
 brew 'kondo'        # Clean up old files and directories - Rust
+brew 'mole'         # Deep clean and optimize
 brew 'portal'       # file transfer utility - Go
 
 # CLI Development Suits
