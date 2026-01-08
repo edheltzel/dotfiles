@@ -651,6 +651,7 @@
             {
               "iconPath" : "cup.and.saucer.fill",
               "key" : "c",
+              "label" : "Caffeinate While",
               "type" : "url",
               "value" : "raycast://extensions/mooxl/coffee/caffeinateWhile"
             }
