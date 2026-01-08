@@ -638,6 +638,27 @@
           "label" : "Open Project in Zed",
           "type" : "url",
           "value" : "raycast://extensions/theherk/zoxide-git-projects/find"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "cup.and.saucer",
+              "key" : "d",
+              "label" : "Decaffeinate",
+              "type" : "url",
+              "value" : "raycast://extensions/mooxl/coffee/decaffeinate"
+            },
+            {
+              "iconPath" : "cup.and.saucer.fill",
+              "key" : "c",
+              "type" : "url",
+              "value" : "raycast://extensions/mooxl/coffee/caffeinateWhile"
+            }
+          ],
+          "iconPath" : "cup.and.saucer.fill",
+          "key" : "C",
+          "label" : "Caffeinate",
+          "type" : "group"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
