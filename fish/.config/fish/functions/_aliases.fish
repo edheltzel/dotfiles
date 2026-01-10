@@ -41,7 +41,7 @@ alias neo "cd ~/.dotfiles/neoed/.config/nvim"
 alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱ \""
 
 # Actions
-alias e "$EDITOR" # open in Default Editor
+alias e '$EDITOR' # open in Default Editor
 alias o "open"
 alias oo "open ."
 alias oa "open -a"
