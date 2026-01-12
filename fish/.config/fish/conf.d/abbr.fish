@@ -12,7 +12,7 @@ if status is-interactive
     abbr --add oc opencode
     abbr --add occ 'opencode --continue'
     abbr --add ocp 'opencode --agent plan'
-    abbr --add gg gemini
+    abbr --add gg 'gemini --yolo'
 
     # Directories
     # abbr --add cls '$DROPBOX/Clients'

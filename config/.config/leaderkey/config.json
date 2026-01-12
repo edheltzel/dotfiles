@@ -80,14 +80,14 @@
               "value" : "/Applications/Brave Browser.app"
             },
             {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/Firefox.app"
-            },
-            {
               "key" : "c",
               "type" : "application",
               "value" : "/Applications/Google Chrome.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/Firefox.app"
             },
             {
               "key" : "s",
@@ -166,6 +166,39 @@
           "type" : "group"
         },
         {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Applications/Figma.app"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "a",
+              "label" : "🤖 Ai Studio",
+              "type" : "url",
+              "value" : "https://aistudio.google.com/apps"
+            },
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "g",
+              "label" : "🤖 Gemini",
+              "type" : "url",
+              "value" : "https://gemini.google.com/app"
+            },
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "n",
+              "label" : "🤖 NotebookLM",
+              "type" : "url",
+              "value" : "https://notebooklm.google.com/"
+            }
+          ],
+          "key" : "g",
+          "label" : "Google Gemini",
+          "type" : "group"
+        },
+        {
           "key" : "i",
           "type" : "application",
           "value" : "/Applications/Invoice Ninja.app"
@@ -226,6 +259,11 @@
           "type" : "group"
         },
         {
+          "key" : "l",
+          "type" : "application",
+          "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
+        },
+        {
           "key" : "m",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
@@ -241,57 +279,24 @@
           "value" : "/Applications/Obsidian.app"
         },
         {
-          "key" : "r",
-          "type" : "application",
-          "value" : "/System/Applications/Reminders.app"
-        },
-        {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Todoist.app"
-        },
-        {
-          "actions" : [
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "g",
-              "label" : "🤖 Gemini",
-              "type" : "url",
-              "value" : "https://gemini.google.com/app"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "a",
-              "label" : "🤖 Ai Studio",
-              "type" : "url",
-              "value" : "https://aistudio.google.com/apps"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "n",
-              "label" : "🤖 NotebookLM",
-              "type" : "url",
-              "value" : "https://notebooklm.google.com/"
-            }
-          ],
-          "key" : "g",
-          "label" : "Google Gemini",
-          "type" : "group"
-        },
-        {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Applications/Figma.app"
-        },
-        {
           "key" : "p",
           "type" : "application",
           "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
         },
         {
-          "key" : "l",
+          "key" : "r",
           "type" : "application",
-          "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
+          "value" : "/System/Applications/Reminders.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Safari.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/Todoist.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -302,10 +307,20 @@
     {
       "actions" : [
         {
-          "iconPath" : "view.3d",
-          "key" : "y",
+          "iconPath" : "person.2",
+          "key" : "c",
           "type" : "folder",
-          "value" : "/Users/ed/Documents/3D-CAD"
+          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
+        },
+        {
+          "key" : "d",
+          "type" : "folder",
+          "value" : "/Users/ed/Desktop"
+        },
+        {
+          "key" : "f",
+          "type" : "folder",
+          "value" : "/Users/ed/Pictures"
         },
         {
           "actions" : [
@@ -330,17 +345,6 @@
           "type" : "group"
         },
         {
-          "iconPath" : "person.2",
-          "key" : "c",
-          "type" : "folder",
-          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
-        },
-        {
-          "key" : "p",
-          "type" : "folder",
-          "value" : "/Users/ed/Documents"
-        },
-        {
           "key" : "h",
           "type" : "folder",
           "value" : "/Users/ed/Developer"
@@ -351,9 +355,9 @@
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
-          "key" : "d",
+          "key" : "m",
           "type" : "folder",
-          "value" : "/Users/ed/Desktop"
+          "value" : "/Users/ed/Movies"
         },
         {
           "key" : "o",
@@ -361,19 +365,20 @@
           "value" : "/Users/ed/Downloads"
         },
         {
-          "key" : "m",
+          "key" : "p",
           "type" : "folder",
-          "value" : "/Users/ed/Movies"
-        },
-        {
-          "key" : "f",
-          "type" : "folder",
-          "value" : "/Users/ed/Pictures"
+          "value" : "/Users/ed/Documents"
         },
         {
           "key" : "s",
           "type" : "folder",
           "value" : "/Users/ed/Sites"
+        },
+        {
+          "iconPath" : "view.3d",
+          "key" : "y",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents/3D-CAD"
         }
       ],
       "iconPath" : "/System/Library/CoreServices/Finder.app",
@@ -577,6 +582,28 @@
           "value" : "raycast://extensions/erics118/change-case/change-case"
         },
         {
+          "actions" : [
+            {
+              "iconPath" : "cup.and.saucer.fill",
+              "key" : "c",
+              "label" : "Caffeinate While",
+              "type" : "url",
+              "value" : "raycast://extensions/mooxl/coffee/caffeinateWhile"
+            },
+            {
+              "iconPath" : "cup.and.saucer",
+              "key" : "d",
+              "label" : "Decaffeinate",
+              "type" : "url",
+              "value" : "raycast://extensions/mooxl/coffee/decaffeinate"
+            }
+          ],
+          "iconPath" : "cup.and.saucer.fill",
+          "key" : "C",
+          "label" : "Caffeinate",
+          "type" : "group"
+        },
+        {
           "iconPath" : "button.programmable.square.fill",
           "key" : "d",
           "label" : "Edit Dotfiles",
@@ -613,7 +640,7 @@
         },
         {
           "iconPath" : "x.circle.fill",
-          "key" : "r",
+          "key" : "R",
           "label" : "Restart",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/restart"
@@ -638,28 +665,6 @@
           "label" : "Open Project in Zed",
           "type" : "url",
           "value" : "raycast://extensions/theherk/zoxide-git-projects/find"
-        },
-        {
-          "actions" : [
-            {
-              "iconPath" : "cup.and.saucer",
-              "key" : "d",
-              "label" : "Decaffeinate",
-              "type" : "url",
-              "value" : "raycast://extensions/mooxl/coffee/decaffeinate"
-            },
-            {
-              "iconPath" : "cup.and.saucer.fill",
-              "key" : "c",
-              "label" : "Caffeinate While",
-              "type" : "url",
-              "value" : "raycast://extensions/mooxl/coffee/caffeinateWhile"
-            }
-          ],
-          "iconPath" : "cup.and.saucer.fill",
-          "key" : "C",
-          "label" : "Caffeinate",
-          "type" : "group"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
