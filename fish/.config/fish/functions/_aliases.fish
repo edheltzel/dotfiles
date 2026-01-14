@@ -2,12 +2,11 @@
 alias grep "grep --color=auto"
 alias egrep "egrep --color=auto"
 alias fgrep "fgrep --color=auto"
-
 # gitnow
-alias sta "state"
-alias cma "commit-all"
-alias cm "commit"
-alias gs "state"
+alias sta state
+alias cma commit-all
+alias cm commit
+alias gs state
 
 # Confirm before overwriting
 alias cp "cp -Ri"
@@ -16,7 +15,7 @@ alias rm "rm -i"
 
 # Utilities 
 alias md "mkdir -p"
-alias cwd "pwd"
+alias cwd pwd
 
 # Navigation
 alias .. "cd .."
@@ -42,15 +41,15 @@ alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
-alias o "open"
+alias o open
 alias oo "open ."
 alias oa "open -a"
-alias del "trash"
+alias del trash
 alias sdel "sudo rm -rf"
 
 # Editors and Utilities
-alias serve "miniserve" #start a simple http server
-alias du "dua"
+alias serve miniserve #start a simple http server
+alias du dua
 alias wget "wget -c"
 
 # Network shortcuts/aliases and utilities
@@ -66,18 +65,18 @@ alias hostfile "eval sudo nvim /etc/hosts"
 alias editssh "eval nvim ~/.ssh"
 
 # Docker aliases
-alias dk "docker"
-alias dc "docker-compose"
+alias dk docker
+alias dc docker-compose
 
 #### Language Support ####
 # Node - PNPM
-alias pn "pnpm"
+alias pn pnpm
 alias px "pnpm dlx"
 
 # PHP - Laravel
 alias art "php artisan"
 alias tinker "php artisan tinker"
 alias mfs "php artisan migrate:fresh --seed"
-alias phpunit "vendor/bin/phpunit"
-alias pest "vendor/bin/pest"
-alias vapor "vendor/bin/vapor"
+alias phpunit vendor/bin/phpunit
+alias pest vendor/bin/pest
+alias vapor vendor/bin/vapor
