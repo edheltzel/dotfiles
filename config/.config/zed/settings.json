@@ -142,7 +142,7 @@
     },
     "commit_message_model": {
       "provider": "google",
-      "model": "gemini-3-flash",
+      "model": "gemini-2.5-flash",
     },
     "thread_summary_model": {
       "provider": "zed.dev",
