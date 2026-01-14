@@ -1,147 +1,148 @@
 [
-	// Workspace
-	{
-		"context": "Workspace",
-		"bindings": {
-			"ctrl-alt-cmd-x": "zed::Extensions",
-			"ctrl-alt-cmd-g": "git_panel::ToggleFocus",
-			"ctrl-alt-cmd-e": "project_panel::ToggleFocus",
-			"ctrl-cmd-home": "git::Push",
-			"ctrl-alt-p": "workspace::ToggleZoom",
-			"alt-home": "project_panel::CollapseAllEntries",
-			"ctrl-alt-cmd-b": "workspace::ToggleLeftDock",
-			"alt-b": "workspace::ToggleLeftDock",
-			"cmd-b": "workspace::ToggleRightDock",
-			"space q q": "workspace::CloseWindow",
-			"alt-`": "workspace::NewCenterTerminal",
-			// Tabs/Buffers
-			"cmd-1": ["pane::ActivateItem", 0],
-			"cmd-2": ["pane::ActivateItem", 1],
-			"cmd-3": ["pane::ActivateItem", 2],
-			"cmd-4": ["pane::ActivateItem", 3],
-			"cmd-5": ["pane::ActivateItem", 4],
-			"cmd-6": ["pane::ActivateItem", 5],
-			"cmd-7": ["pane::ActivateItem", 6],
-			"cmd-8": ["pane::ActivateItem", 7],
-			"cmd-9": ["pane::ActivateItem", 8],
-		},
-	},
-	// Window navigation
-	{
-		"context": "Dock || Terminal || Editor",
-		"bindings": {
-			"ctrl-h": "workspace::ActivatePaneLeft",
-			"ctrl-l": "workspace::ActivatePaneRight",
-			"ctrl-k": "workspace::ActivatePaneUp",
-			"ctrl-j": "workspace::ActivatePaneDown",
-		},
-	},
-	//Project Panel
-	{
-		"context": "ProjectPanel && !editing",
-		"bindings": {
-			"r": "project_panel::Rename",
-			"a": "project_panel::NewFile",
-		},
-	},
-	// Terminal
-	{
-		"context": "Terminal",
-		"bindings": {
-			"cmd-ctrl-=": "pane::CloseActiveItem",
-			"cmd-shift-d": "pane::SplitRight",
-			"cmd-d": "pane::SplitDown",
-		},
-	},
-	// Tasks + Spawn AI agents
-	{
-		"context": "Editor && VimControl && !VimWaiting && !menu",
-		"bindings": {
-			"space g g": [
-				"task::Spawn",
-				{
-					"task_name": "LazyGit",
-					"reveal_target": "center",
-				},
-			],
-			"space a d": [
-				"task::Spawn",
-				{
-					"task_name": "Claude Danger",
-					"reveal_target": "center",
-				},
-			],
-			"ctrl-alt-shift-c": [
-				"task::Spawn",
-				{
-					"task_name": "Claude Danger",
-					"reveal_target": "center",
-				},
-			],
-			"space a c": [
-				"task::Spawn",
-				{
-					"task_name": "Claude Code",
-					"reveal_target": "center",
-				},
-			],
-			"space a o": [
-				"task::Spawn",
-				{
-					"task_name": "Opencode",
-					"reveal_target": "center",
-				},
-			],
-		},
-	},
-	// Editor + Vim
-	{
-		"context": "Editor && VimControl && !VimWaiting && !menu",
-		"bindings": {
-			"space space": "file_finder::Toggle",
-			"space f f": "file_finder::Toggle",
-			"space f s": "workspace::Save",
-			"space f shift-s": "workspace::SaveAll",
-			"space f b": "tab_switcher::ToggleAll",
-			"space b b": "tab_switcher::ToggleAll",
-			"space ,": "tab_switcher::ToggleAll",
-			"space b a": "pane::CloseAllItems",
-			"space b o": "pane::CloseOtherItems",
-			"space b d": "pane::CloseActiveItem",
-			"space b h": "pane::SplitAndMoveLeft",
-			"space b j": "pane::SplitAndMoveDown",
-			"space b k": "pane::SplitAndMoveUp",
-			"space b l": "pane::SplitAndMoveRight",
-			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
-			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
-			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
-			"cmd-k": "command_palette::Toggle",
-			"cmd shift l": "editor::SelectAllMatches",
-		},
-	},
-	// Vim Motions
-	{
-		"context": "vim_mode == normal || vim_mode == visual",
-		"bindings": {
-			"g h": "editor::MoveToBeginningOfLine",
-			"g l": "editor::MoveToEndOfLine",
-			"s": "vim::PushSneak",
-			"S": "vim::PushSneakBackward",
-			"cmd-shift-d": "editor::DuplicateLineDown",
-			"ctrl-alt-d": "editor::DuplicateLineDown",
-			"alt-k": "editor::MoveLineUp",
-			"alt-j": "editor::MoveLineDown",
-			"enter": "editor::Fold",
-			"enter": "editor::UnfoldLines",
-		},
-	},
-	{
-		"context": "VimControl && !menu && vim_mode != operator",
-		"bindings": {
-			"w": "vim::NextSubwordStart",
-			"b": "vim::PreviousSubwordStart",
-			"e": "vim::NextSubwordEnd",
-			"g e": "vim::PreviousSubwordEnd",
-		},
-	},
+  // Workspace
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-cmd-x": "zed::Extensions",
+      "ctrl-alt-cmd-g": "git_panel::ToggleFocus",
+      "ctrl-alt-cmd-g": "workspace::ToggleRightDock",
+      "ctrl-alt-cmd-e": "project_panel::ToggleFocus",
+      "ctrl-alt-cmd-e": "workspace::ToggleRightDock",
+      "ctrl-alt-cmd-b": "workspace::ToggleRightDock",
+      "cmd-b": "workspace::ToggleLeftDock",
+      "ctrl-cmd-home": "git::Push",
+      "ctrl-alt-p": "workspace::ToggleZoom",
+      "alt-home": "project_panel::CollapseAllEntries",
+      "space q q": "workspace::CloseWindow",
+      "alt-`": "workspace::NewCenterTerminal",
+      // Tabs/Buffers
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+    },
+  },
+  // Window navigation
+  {
+    "context": "Dock || Terminal || Editor",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  //Project Panel
+  {
+    "context": "ProjectPanel && !editing",
+    "bindings": {
+      "r": "project_panel::Rename",
+      "a": "project_panel::NewFile",
+    },
+  },
+  // Terminal
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-ctrl-=": "pane::CloseActiveItem",
+      "cmd-shift-d": "pane::SplitRight",
+      "cmd-d": "pane::SplitDown",
+    },
+  },
+  // Tasks + Spawn AI agents
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space g g": [
+        "task::Spawn",
+        {
+          "task_name": "LazyGit",
+          "reveal_target": "center",
+        },
+      ],
+      "space a d": [
+        "task::Spawn",
+        {
+          "task_name": "Claude Danger",
+          "reveal_target": "center",
+        },
+      ],
+      "ctrl-alt-shift-c": [
+        "task::Spawn",
+        {
+          "task_name": "Claude Danger",
+          "reveal_target": "center",
+        },
+      ],
+      "space a c": [
+        "task::Spawn",
+        {
+          "task_name": "Claude Code",
+          "reveal_target": "center",
+        },
+      ],
+      "space a o": [
+        "task::Spawn",
+        {
+          "task_name": "Opencode",
+          "reveal_target": "center",
+        },
+      ],
+    },
+  },
+  // Editor + Vim
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::Save",
+      "space f shift-s": "workspace::SaveAll",
+      "space f b": "tab_switcher::ToggleAll",
+      "space b b": "tab_switcher::ToggleAll",
+      "space ,": "tab_switcher::ToggleAll",
+      "space b a": "pane::CloseAllItems",
+      "space b o": "pane::CloseOtherItems",
+      "space b d": "pane::CloseActiveItem",
+      "space b h": "pane::SplitAndMoveLeft",
+      "space b j": "pane::SplitAndMoveDown",
+      "space b k": "pane::SplitAndMoveUp",
+      "space b l": "pane::SplitAndMoveRight",
+      "space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
+      "space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
+      "space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
+      "cmd-k": "command_palette::Toggle",
+      "cmd shift l": "editor::SelectAllMatches",
+    },
+  },
+  // Vim Motions
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "g h": "editor::MoveToBeginningOfLine",
+      "g l": "editor::MoveToEndOfLine",
+      "s": "vim::PushSneak",
+      "S": "vim::PushSneakBackward",
+      "cmd-shift-d": "editor::DuplicateLineDown",
+      "ctrl-alt-d": "editor::DuplicateLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "enter": "editor::Fold",
+      "enter": "editor::UnfoldLines",
+    },
+  },
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd",
+    },
+  },
 ]
