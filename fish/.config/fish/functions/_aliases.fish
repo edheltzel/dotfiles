@@ -32,12 +32,12 @@ alias ltd "eza -TaD --icons --ignore-glob=\"node_modules|.git|.vscode|.DS_Store\
 
 # Shortcuts
 alias dev "cd ~/Developer"
-alias work "cd ~/Developer/work"
+alias work "cd ~/Developer"
 alias sites "cd ~/Sites"
 alias dots "cd ~/.dotfiles"
 alias neoed "cd ~/.dotfiles/neoed/.config/nvim"
 alias neo "cd ~/.dotfiles/neoed/.config/nvim"
-alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱ \""
+alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
