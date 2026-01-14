@@ -5,9 +5,7 @@
     "bindings": {
       "ctrl-alt-cmd-x": "zed::Extensions",
       "ctrl-alt-cmd-g": "git_panel::ToggleFocus",
-      "ctrl-alt-cmd-g": "workspace::ToggleRightDock",
       "ctrl-alt-cmd-e": "project_panel::ToggleFocus",
-      "ctrl-alt-cmd-e": "workspace::ToggleRightDock",
       "ctrl-alt-cmd-b": "workspace::ToggleRightDock",
       "cmd-b": "workspace::ToggleLeftDock",
       "ctrl-cmd-home": "git::Push",
@@ -65,24 +63,24 @@
           "reveal_target": "center",
         },
       ],
-      "space a d": [
-        "task::Spawn",
-        {
-          "task_name": "Claude Danger",
-          "reveal_target": "center",
-        },
-      ],
-      "ctrl-alt-shift-c": [
-        "task::Spawn",
-        {
-          "task_name": "Claude Danger",
-          "reveal_target": "center",
-        },
-      ],
       "space a c": [
         "task::Spawn",
         {
-          "task_name": "Claude Code",
+          "task_name": "Claude Danger",
+          "reveal_target": "center",
+        },
+      ],
+      "ctrl-alt-cmd-c": [
+        "task::Spawn",
+        {
+          "task_name": "Claude Danger",
+          "reveal_target": "center",
+        },
+      ],
+      "ctrl-alt-cmd-o": [
+        "task::Spawn",
+        {
+          "task_name": "Opencode",
           "reveal_target": "center",
         },
       ],
@@ -109,10 +107,14 @@
       "space b a": "pane::CloseAllItems",
       "space b o": "pane::CloseOtherItems",
       "space b d": "pane::CloseActiveItem",
+      "space w d": "pane::CloseActiveItem",
+      "space |": "pane::SplitAndMoveLeft",
       "space b h": "pane::SplitAndMoveLeft",
       "space b j": "pane::SplitAndMoveDown",
       "space b k": "pane::SplitAndMoveUp",
       "space b l": "pane::SplitAndMoveRight",
+      "space s g": "pane::DeploySearch",
+      "space s r": "buffer_search::DeployReplace",
       "space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
       "space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
       "space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
