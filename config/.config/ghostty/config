@@ -1,7 +1,7 @@
 initial-window = false
 
 quick-terminal-position = "left"
-quick-terminal-size = 50% 
+quick-terminal-size = 50%
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = false
 
@@ -29,14 +29,14 @@ window-title-font-family = "Lilex Nerd Font Mono"
 font-size = 18
 font-family = "Lilex Nerd Font Mono"
 
+mouse-hide-while-typing = true
+
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
 macos-titlebar-style = tabs
 macos-titlebar-proxy-icon = hidden
 macos-window-buttons = hidden
-macos-icon =  retro
-
-mouse-hide-while-typing = true
+macos-icon = retro
 
 # Custom keybinding
 # keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
