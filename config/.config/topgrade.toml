@@ -51,5 +51,5 @@ repos = [
   "~/Developer/AI/agent-design-os/",
   "~/Developer/AI/agent-os/",
   "~/Developer/AI/Fabric/",
-  "~/Developer/AI/Personal_AI_Infrastructure/",
+  "~/Developer/AI/PAI/",
 ]
