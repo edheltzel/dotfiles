@@ -534,9 +534,9 @@
         {
           "iconPath" : "checkmark.rectangle.stack.fill",
           "key" : "=",
-          "label" : "Todoist",
+          "label" : "Reminder",
           "type" : "url",
-          "value" : "raycast://extensions/doist/todoist/create-task"
+          "value" : "raycast://extensions/raycast/apple-reminders/create-reminder"
         },
         {
           "iconPath" : "face.smiling",
