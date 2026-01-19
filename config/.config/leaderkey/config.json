@@ -389,6 +389,56 @@
     {
       "actions" : [
         {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Applications/Antigravity.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Visual Studio Code.app"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/Zed.app"
+        },
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
+          "key" : "k",
+          "type" : "application",
+          "value" : "/Applications/kitty.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Applications/Typora.app"
+        },
+        {
+          "iconPath" : "apple.terminal.fill",
+          "key" : "v",
+          "label" : "Neovim ✨",
+          "type" : "command",
+          "value" : "open -na WezTerm --args start -- nvim"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/WezTerm.app"
+        }
+      ],
+      "iconPath" : "apple.terminal.on.rectangle.fill",
+      "key" : "e",
+      "label" : "Editors",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/Bazecor.app"
