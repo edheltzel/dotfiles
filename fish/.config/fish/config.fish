@@ -52,3 +52,4 @@ if status is-interactive
         __init_prompt
     end
 end
+alias pai="cd ~/.claude && claude"

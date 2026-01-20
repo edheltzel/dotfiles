@@ -7,6 +7,9 @@ alias sta state
 alias cma commit-all
 alias cm commit
 alias gs state
+# ADE ( AI Developemnt Environment )
+alias pai="cd ~/.claude && claude --dangerously-skip-permissions"
+alias atlas="cd ~/Developer/atlasProject/atlas && claude --dangerously-skip-permissions"
 
 # Confirm before overwriting
 alias cp "cp -Ri"
