@@ -49,6 +49,15 @@ local keys = {
 
   -- create new tab
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k z" },
+  -- Split directions (matching Ghostty)
+  { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left", domain = "CurrentPaneDomain" }), desc = "split left w/ cmd+k h" },
+  { key = "l", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }), desc = "split right w/ cmd+k l" },
+  { key = "j", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }), desc = "split down w/ cmd+k j" },
+  { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up", domain = "CurrentPaneDomain" }), desc = "split up w/ cmd+k u" },
+  -- Command palette alias
+  { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k p" },
+  -- New window
+  { key = "n", mods = "LEADER", action = act.SpawnWindow, desc = "new window w/ cmd+k n" },
   { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
   { key = "T", mods = "LEADER", action = act.ShowTabNavigator },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
@@ -142,8 +151,8 @@ local keys = {
   -- Tabs/Panes keybindings
   { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0), desc = "Previous Tab" },
   { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2), desc = "Next Tab" },
-  { key = "[", mods = "SUPER|CTRL|ALT", action = act.ActivateWindowRelative(1), desc = "Previous Window" },
-  { key = "]", mods = "SUPER|CTRL|ALT", action = act.ActivateWindowRelative(-1), desc = "Next Window" },
+  { key = "[", mods = "SUPER|CTRL|ALT", action = act.MoveTabRelative(-1), desc = "Move Tab Left" },
+  { key = "]", mods = "SUPER|CTRL|ALT", action = act.MoveTabRelative(1), desc = "Move Tab Right" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
@@ -174,6 +183,17 @@ local keys = {
   { key = "r", mods = "SUPER|CTRL", action = act.SendString("\x12"), desc = "fzf: Search History" },
   { key = "p", mods = "SUPER|CTRL", action = act.SendString("\x1b\x10"), desc = "fzf: Search Processes" },
   { key = "v", mods = "SUPER|CTRL", action = act.SendString("\x16"), desc = "fzf: Search Variables" },
+  { key = "Enter", mods = "SHIFT", action = act.SendString("\x1b\r"), desc = "fzf: Accept entry" },
+
+  -- Quick-access split/resize (matching Ghostty's super+ctrl+alt bindings)
+  { key = "\\", mods = "SUPER|CTRL|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }), desc = "split right" },
+  { key = "-", mods = "SUPER|CTRL|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }), desc = "split down" },
+  { key = "h", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Left", 10 }), desc = "resize pane left" },
+  { key = "j", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Down", 10 }), desc = "resize pane down" },
+  { key = "k", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Up", 10 }), desc = "resize pane up" },
+  { key = "l", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Right", 10 }), desc = "resize pane right" },
+  { key = "z", mods = "SUPER|CTRL|ALT", action = act.TogglePaneZoomState, desc = "toggle zoom" },
+  { key = ",", mods = "SUPER|CTRL|ALT", action = act.ReloadConfiguration, desc = "reload config" },
 }
 
 -- Jump to a tab with index (⌘+k 1-9 OR ⌘+1-9)
