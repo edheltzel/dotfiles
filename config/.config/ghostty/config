@@ -76,15 +76,22 @@ keybind = super+k>5=goto_tab:5
 keybind = super+k>6=goto_tab:6
 keybind = super+k>7=goto_tab:7
 keybind = super+k>8=goto_tab:8
-#w/o leader key
+
+#w/o leader key - move tabs
 keybind = super+ctrl+alt+[=move_tab:-1
 keybind = super+ctrl+alt+]=move_tab:1
 
 # fzf.fish keybindings - Cmd+Ctrl sends Ctrl+Alt sequences to fish
-keybind = super+ctrl+f=text:\x1b\x06
-keybind = super+ctrl+l=text:\x1b\x0c
-keybind = super+ctrl+s=text:\x1b\x13
-keybind = super+ctrl+r=text:\x12
-keybind = super+ctrl+p=text:\x1b\x10
-keybind = super+ctrl+v=text:\x16
-keybind = shift+enter=text:\x1b\r
+keybind = super+alt+ctrl+f=text:\x1b\x06
+# gitlog
+keybind = super+alt+ctrl+l=text:\x1b\x0c
+# gitstatus
+keybind = super+alt+ctrl+s=text:\x1b\x13
+# history
+keybind = super+alt+ctrl+r=text:\x12
+# processes
+keybind = super+alt+ctrl+p=text:\x1b\x10
+# variables
+keybind = super+alt+ctrl+v=text:\x16
+# line break in propmt 
+keybind = super+alt+ctrl+enter=text:\x1b\r
