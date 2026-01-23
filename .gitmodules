@@ -1,6 +1,3 @@
 [submodule "neoed/.config/nvim"]
 	path = neoed/.config/nvim
 	url = git@github.com:edheltzel/neoed.git
-[submodule "atlas"]
-	path = atlas
-	url = git@github.com:edheltzel/atlas.git
