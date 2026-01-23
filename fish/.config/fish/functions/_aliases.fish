@@ -12,9 +12,6 @@ alias gs state
 alias pai="cd ~/.claude && claude --dangerously-skip-permissions"
 alias atlas="cd ~/Developer/atlasProject/atlas && claude --dangerously-skip-permissions"
 
-# kitty terminal specifics 
-alias ssh "kitty +kitten ssh"
-
 # Confirm before overwriting
 alias cp "cp -Ri"
 alias mv "mv -i"
@@ -70,6 +67,8 @@ alias whois "grc whois" # colorized whois
 # SSH and localhost
 alias hostfile "eval sudo nvim /etc/hosts"
 alias editssh "eval nvim ~/.ssh"
+# kitty terminal specifics 
+#alias ssh "kitty +kitten ssh"
 
 # Docker aliases
 alias dk docker
