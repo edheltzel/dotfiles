@@ -7,7 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-	"colorize_brackets": true,
+	"ui_font_weight": 400.0,
+ "colorize_brackets": true,
 	"hover_popover_enabled": true,
 	"context_servers": {},
 	"project_panel": {
@@ -30,7 +31,7 @@
 	"git_panel": {
 		"dock": "right",
 	},
-	"ui_font_size": 18,
+	"ui_font_size": 19.0,
 	"search": {
 		"include_ignored": true,
 	},

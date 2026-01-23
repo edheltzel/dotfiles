@@ -26,7 +26,7 @@ window-inherit-font-size = false
 window-padding-x = 10
 window-title-font-family = "Lilex Nerd Font Mono"
 
-font-size = 18
+font-size = 20
 font-family = "Lilex Nerd Font Mono"
 
 mouse-hide-while-typing = true
