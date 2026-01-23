@@ -43,8 +43,7 @@ if status is-interactive
     # Utilities
     abbr --add atm fastfetch
     abbr --add cat 'bat -pp'
-    abbr --add cmy 'bunx mac-cleaner-cli'
-    abbr --add clean 'bunx mac-cleaner-cli'
+    abbr --add clean mac-cleaner-cli
 
     # Package Managers 
     abbr --add bi 'brew install '

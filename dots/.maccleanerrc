@@ -1,0 +1,22 @@
+{
+  "downloadsDaysOld": 30,
+  "largeFilesMinSize": 524288000,
+  "backupEnabled": false,
+  "backupRetentionDays": 7,
+  "parallelScans": true,
+  "concurrency": 4,
+  "extraPaths": {
+    "nodeModules": [
+      "~/Projects",
+      "~/Developer",
+      "~/Code",
+      "~/Sites"
+    ],
+    "projects": [
+      "~/Projects",
+      "~/Developer",
+      "~/Code",
+      "~/Sites"
+    ]
+  }
+}
