@@ -7,7 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-	"ui_font_weight": 400.0,
+	"buffer_line_height": "comfortable",
+ "ui_font_weight": 400.0,
  "colorize_brackets": true,
 	"hover_popover_enabled": true,
 	"context_servers": {},
@@ -80,7 +81,7 @@
 	"buffer_font_features": {
 		"calt": true,
 	},
-	"buffer_font_size": 18.0,
+	"buffer_font_size": 19.0,
 	"buffer_font_family": "Lilex Nerd Font Mono",
 	"buffer_font_weight": 400,
 	"ui_font_family": "Lilex Nerd Font Mono",
