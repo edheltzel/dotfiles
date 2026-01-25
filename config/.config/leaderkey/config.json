@@ -423,7 +423,7 @@
           "key" : "v",
           "label" : "Neovim ✨",
           "type" : "command",
-          "value" : "open -na WezTerm --args start -- nvim"
+          "value" : "open -na Ghostty --args start -- nvim"
         },
         {
           "key" : "w",

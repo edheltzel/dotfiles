@@ -50,10 +50,10 @@ local keys = {
   -- create new tab
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k z" },
   -- Split directions (matching Ghostty)
-  { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left", domain = "CurrentPaneDomain" }), desc = "split left w/ cmd+k h" },
+  { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left" }), desc = "split left w/ cmd+k h" },
   { key = "l", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }), desc = "split right w/ cmd+k l" },
   { key = "j", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }), desc = "split down w/ cmd+k j" },
-  { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up", domain = "CurrentPaneDomain" }), desc = "split up w/ cmd+k u" },
+  { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up" }), desc = "split up w/ cmd+k u" },
   -- Command palette alias
   { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k p" },
   -- New window
