@@ -8,24 +8,25 @@ Unified theme switching system for all applications in dotfiles.
 
 - `eldritch` - Eldritch
 - `rose-pine` - Rosé Pine
+- `rose-pine-dawn` - Rosé Pine Dawn (light theme)
 - `rose-pine-moon` - Rosé Pine Moon (default)
 - `tokyo-night` - Tokyo Night
 - `tokyo-night-moon` - Tokyo Night Moon
 
 ## Supported Applications
 
-| Application | Eldritch | Rose Pine | Rose Pine Moon | Tokyo Night | Tokyo Night Moon |
-| ----------- | -------- | --------- | -------------- | ----------- | ---------------- |
-| Ghostty     | ✓        | ✓         | ✓              | ✓           | ✓                |
-| Kitty       | ✓        | ✓         | ✓              | ✗           | ✗                |
-| WezTerm     | ✓        | ✓         | ✓              | ✓           | ✓                |
-| Neovim      | ✓        | ✓         | ✓              | ✓           | ✓                |
-| bat         | ✓        | ✓         | ✓              | ✓           | ✓                |
-| btop        | ✓        | ✓         | ✓              | ✗           | ✗                |
-| lazygit     | ✓        | ✓         | ✓              | ✓           | ✓                |
-| eza         | ✓        | ✓         | ✓              | ✓           | ✗                |
-| oh-my-posh  | ✓        | ✓         | ✓              | ✓           | ✓                |
-| OpenCode    | ✓\*      | ✓         | ✓\*            | ✓           | ✓\*              |
+| Application | Eldritch | Rose Pine | Rose Pine Dawn | Rose Pine Moon | Tokyo Night | Tokyo Night Moon |
+| ----------- | -------- | --------- | -------------- | -------------- | ----------- | ---------------- |
+| Ghostty     | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
+| Kitty       | ✓        | ✓         | ✓              | ✓              | ✗           | ✗                |
+| WezTerm     | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
+| Neovim      | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
+| bat         | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
+| btop        | ✓        | ✓         | ✓              | ✓              | ✗           | ✗                |
+| lazygit     | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
+| eza         | ✓        | ✓         | ✓              | ✓              | ✓           | ✗                |
+| oh-my-posh  | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
+| OpenCode    | ✓\*      | ✓         | ✓\*            | ✓\*            | ✓           | ✓\*              |
 
 \*OpenCode uses `system` theme for Eldritch (no native support), and `rosepine`/`tokyonight` for moon variants (single variant only).
 
@@ -62,6 +63,7 @@ theme-switcher/
 ├── lazygit/                   # lazygit theme snippets
 │   ├── eldritch.yml
 │   ├── rose-pine.yml
+│   ├── rose-pine-dawn.yml
 │   ├── rose-pine-moon.yml
 │   ├── tokyo-night.yml
 │   └── tokyo-night-moon.yml

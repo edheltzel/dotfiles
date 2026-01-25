@@ -9,7 +9,7 @@ DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 
 # Available themes
-THEMES=("aura" "eldritch" "rose-pine" "rose-pine-moon" "tokyo-night" "tokyo-night-moon")
+THEMES=("aura" "eldritch" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "tokyo-night" "tokyo-night-moon")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -48,6 +48,7 @@ get_ghostty_theme() {
   aura) echo "aura" ;;
   eldritch) echo "config-file" ;;
   rose-pine) echo "Rose Pine" ;;
+  rose-pine-dawn) echo "Rose Pine Dawn" ;;
   rose-pine-moon) echo "Rose Pine Moon" ;;
   tokyo-night) echo "TokyoNight" ;;
   tokyo-night-moon) echo "TokyoNight Moon" ;;
@@ -59,6 +60,7 @@ get_kitty_theme() {
   aura) echo "eldritch-neoed.conf" ;; # Use eldritch as fallback
   eldritch) echo "eldritch-neoed.conf" ;;
   rose-pine) echo "rose-pine.conf" ;;
+  rose-pine-dawn) echo "rose-pine-dawn.conf" ;;
   rose-pine-moon) echo "rose-pine-moon.conf" ;;
   tokyo-night) echo "" ;;      # Skip
   tokyo-night-moon) echo "" ;; # Skip
@@ -70,6 +72,7 @@ get_wezterm_theme() {
   aura) echo "Aura" ;;
   eldritch) echo "Eldritch" ;;
   rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "Tokyo Night" ;;
   tokyo-night-moon) echo "Tokyo Night Moon" ;;
@@ -81,6 +84,7 @@ get_neovim_theme() {
   aura) echo "aura-dark" ;;
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "tokyonight-night" ;;
   tokyo-night-moon) echo "tokyonight-moon" ;;
@@ -92,6 +96,7 @@ get_bat_theme() {
   aura) echo "aura" ;;
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "tokyonight_night" ;;
   tokyo-night-moon) echo "tokyonight_moon" ;;
@@ -103,6 +108,7 @@ get_btop_theme() {
   aura) echo "eldritch" ;; # Use eldritch as fallback
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "" ;;      # Skip
   tokyo-night-moon) echo "" ;; # Skip
@@ -114,6 +120,7 @@ get_omp_palette() {
   aura) echo "aura" ;;
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "tokyo-night" ;;
   tokyo-night-moon) echo "tokyo-night-moon" ;;
@@ -125,6 +132,7 @@ get_opencode_theme() {
   aura) echo "aura" ;;
   eldritch) echo "eldritch-dark" ;; # Custom theme with darker bg
   rose-pine) echo "rosepine" ;;
+  rose-pine-dawn) echo "rosepine" ;; # OpenCode only has one rosepine variant
   rose-pine-moon) echo "rosepine" ;; # OpenCode only has one rosepine variant
   tokyo-night) echo "tokyonight" ;;
   tokyo-night-moon) echo "tokyonight" ;; # OpenCode only has one tokyonight variant

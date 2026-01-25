@@ -8,8 +8,8 @@
 // command palette
 {
 	"buffer_line_height": "comfortable",
- "ui_font_weight": 400.0,
- "colorize_brackets": true,
+	"ui_font_weight": 400.0,
+	"colorize_brackets": true,
 	"hover_popover_enabled": true,
 	"context_servers": {},
 	"project_panel": {
@@ -63,9 +63,9 @@
 		"metrics": false,
 	},
 	"theme": {
-		"mode": "dark",
-		"light": "Rosé Pine Dawn",
-		"dark": "Aura Dark",
+		"mode": "system",
+		"light": "Fleet Light",
+		"dark": "Fleet Dark",
 	},
 	"icon_theme": "Catppuccin Latte",
 	"experimental.theme_overrides": {

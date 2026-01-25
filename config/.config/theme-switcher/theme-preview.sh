@@ -60,6 +60,18 @@ show_colors() {
       echo -e "  \033[38;2;246;193;119m███\033[0m gold"
       echo -e "  \033[38;2;234;154;151m███\033[0m rose"
       ;;
+    rose-pine-dawn)
+      echo -e "\033[38;2;144;122;169m████\033[0m Rosé Pine Dawn"
+      echo ""
+      echo -e "  \033[38;2;250;244;237m███\033[0m bg"
+      echo -e "  \033[38;2;87;82;121m███\033[0m fg"
+      echo -e "  \033[38;2;144;122;169m███\033[0m iris"
+      echo -e "  \033[38;2;40;105;131m███\033[0m pine"
+      echo -e "  \033[38;2;86;148;159m███\033[0m foam"
+      echo -e "  \033[38;2;180;99;122m███\033[0m love"
+      echo -e "  \033[38;2;234;157;52m███\033[0m gold"
+      echo -e "  \033[38;2;215;130;126m███\033[0m rose"
+      ;;
     tokyo-night)
       echo -e "\033[38;2;187;154;247m████\033[0m Tokyo Night"
       echo ""
@@ -134,6 +146,7 @@ if [ -z "$theme" ]; then
   echo "  - aura"
   echo "  - eldritch"
   echo "  - rose-pine"
+  echo "  - rose-pine-dawn"
   echo "  - rose-pine-moon"
   echo "  - tokyo-night"
   echo "  - tokyo-night-moon"
