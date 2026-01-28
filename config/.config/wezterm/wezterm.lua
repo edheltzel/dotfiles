@@ -78,7 +78,7 @@ config.initial_rows = 50
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.macos_window_background_blur = 25
-config.scrollback_lines = 10000
+config.scrollback_lines = 5000
 config.default_workspace = wezterm.nerdfonts.cod_rocket
 
 config.inactive_pane_hsb = {
