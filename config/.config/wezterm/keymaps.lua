@@ -3,9 +3,18 @@ local act = wezterm.action
 
 local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1502, desc = "leader key cmd+k" }
 local keys = {
-  ---- START LEADER KEY
-  { key = "c", mods = "LEADER", action = act.ActivateCopyMode, desc = "copy mode w/ cmd+k c" },
+  -- Command palette aliases
+  { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k p" },
   { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k space" },
+
+  -- natural editing
+  { key = "RightArrow", mods = "OPT", action = act.SendKey({ mods = "ALT", key = "f" }) },
+  { key = "LeftArrow", mods = "OPT", action = act.SendKey({ mods = "ALT", key = "b" }) },
+  { key = "LeftArrow", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "a" }) },
+  { key = "RightArrow", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "e" }) },
+  { key = "Backspace", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "u" }) },
+
+  ---- START LEADER KEY
   {
     key = "k",
     mods = "LEADER",
@@ -14,6 +23,14 @@ local keys = {
       act.SendKey({ key = "L", mods = "CTRL" }),
     }),
     desc = "clear the screen w/ cmd+k k",
+  },
+  -- New window/tab/pane
+  { key = "n", mods = "LEADER", action = act.SpawnWindow, desc = "new window w/ cmd+k n" },
+  {
+    key = "t",
+    mods = "LEADER",
+    action = act.SpawnTab("CurrentPaneDomain"),
+    desc = "new tab w/ cmd+k t",
   },
   {
     key = "x",
@@ -33,23 +50,7 @@ local keys = {
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     desc = "split panes w/ cmd+k - (horizontal)",
   },
-  {
-    key = "r",
-    mods = "LEADER",
-    action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }),
-    desc = "resize pane w/ cmd+k r -> use h,j,k,l to resize",
-  },
-
-  -- natural editing
-  { key = "RightArrow", mods = "OPT", action = act.SendKey({ mods = "ALT", key = "f" }) },
-  { key = "LeftArrow", mods = "OPT", action = act.SendKey({ mods = "ALT", key = "b" }) },
-  { key = "LeftArrow", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "a" }) },
-  { key = "RightArrow", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "e" }) },
-  { key = "Backspace", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "u" }) },
-
-  -- create new tab
-  { key = "z", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k z" },
-  -- Split directions (matching Ghostty)
+  -- Ghostty style Split directions (h=left, j=down, l=right, u=up) k is used to clear
   { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left" }), desc = "split left w/ cmd+k h" },
   {
     key = "l",
@@ -64,11 +65,15 @@ local keys = {
     desc = "split down w/ cmd+k j",
   },
   { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up" }), desc = "split up w/ cmd+k u" },
-  -- Command palette alias
-  { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k p" },
-  -- New window
-  { key = "n", mods = "LEADER", action = act.SpawnWindow, desc = "new window w/ cmd+k n" },
-  { key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+
+  -- Zoom/Focus a pane
+  { key = "z", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k z" },
+
+  --- ---------------------------------------------------------------------------
+  -- these will jump you into a modes for wezterm
+  --- ---------------------------------------------------------------------------
+  { key = "c", mods = "LEADER", action = act.ActivateCopyMode, desc = "copy mode w/ cmd+k c" },
+
   { key = "T", mods = "LEADER", action = act.ShowTabNavigator },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   {
@@ -86,6 +91,13 @@ local keys = {
         end
       end),
     }),
+  },
+  -- resize pane
+  {
+    key = "r",
+    mods = "LEADER",
+    action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }),
+    desc = "resize pane w/ cmd+k r -> use h,j,k,l to resize",
   },
   --- ---------------------------------------------------------------------------
   -- Workspace and Multiplexing
@@ -131,7 +143,8 @@ local keys = {
     }),
     desc = "Rename Workspace",
   },
-  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
+
+  { key = "n", mods = "SUPER|CTRL", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
   { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY
@@ -139,19 +152,6 @@ local keys = {
   { key = "=", mods = "CMD|CTRL", action = act.CloseCurrentPane({ confirm = false }), desc = "Close Terminal" },
   { key = "f", mods = "CMD|CTRL", action = act.ToggleFullScreen, desc = "Full Screen" },
 
-  -- resize window/pane/splits see :36 cmd+k r -> use h,j,k,l to resize
-  -- {
-  --   key = "LeftArrow",
-  --   mods = "SUPER|CTRL",
-  --   action = act.AdjustPaneSize({ "Left", 6 }),
-  -- },
-  -- { key = "DownArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Down", 6 }) },
-  -- { key = "UpArrow", mods = "SUPER|CTRL", action = act.AdjustPaneSize({ "Up", 6 }) },
-  -- {
-  --   key = "RightArrow",
-  --   mods = "SUPER|CTRL",
-  --   action = act.AdjustPaneSize({ "Right", 6 }),
-  -- },
   {
     key = "T",
     mods = "LEADER",
@@ -161,8 +161,6 @@ local keys = {
   -- Tabs/Panes keybindings
   { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0), desc = "Previous Tab" },
   { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2), desc = "Next Tab" },
-  { key = "[", mods = "SUPER|CTRL|ALT", action = act.MoveTabRelative(-1), desc = "Move Tab Left" },
-  { key = "]", mods = "SUPER|CTRL|ALT", action = act.MoveTabRelative(1), desc = "Move Tab Right" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
