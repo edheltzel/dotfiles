@@ -18,6 +18,9 @@ config.default_prog = { fish_path, "-l" }
 config.enable_kitty_keyboard = true
 config.enable_csi_u_key_encoding = false
 
+config.front_end = "WebGpu"
+config.webgpu_power_preference = "HighPerformance"
+
 config.font = wezterm.font_with_fallback({
   {
     family = "Lilex Nerd Font Mono",
@@ -94,9 +97,10 @@ config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
 
--- Pill-shaped tabs with NerdFont half-circle glyphs
-local PILL_LEFT = wezterm.nerdfonts.ple_right_half_circle_thick
-local PILL_RIGHT = wezterm.nerdfonts.ple_left_half_circle_thick
+-- Pill-shaped tabs with NerdFont half-circle glyphs (Powerline Extra)
+-- U+E0B6 = right half circle, U+E0B4 = left half circle
+local PILL_LEFT = utf8.char(0xe0b6)
+local PILL_RIGHT = utf8.char(0xe0b4)
 local TAB_BAR_BG = "#171928" -- Eldritch background
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
