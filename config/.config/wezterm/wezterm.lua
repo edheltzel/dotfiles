@@ -92,15 +92,6 @@ config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
 
 wezterm.on("update-status", function(window, pane)
-  -- Dynamic padding: zero for TUI apps (Neovim, htop), comfortable for shell
-  local overrides = window:get_config_overrides() or {}
-  if pane:is_alt_screen_active() then
-    overrides.window_padding = { left = 1, right = 1, top = 4, bottom = 0 }
-  else
-    overrides.window_padding = { left = 10, right = 10, top = 8, bottom = 4 }
-  end
-  window:set_config_overrides(overrides)
-
   -- Workspace name
   local stat = window:active_workspace()
   local stat_color = colorRed
