@@ -51,8 +51,18 @@ local keys = {
   { key = "z", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k z" },
   -- Split directions (matching Ghostty)
   { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left" }), desc = "split left w/ cmd+k h" },
-  { key = "l", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }), desc = "split right w/ cmd+k l" },
-  { key = "j", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }), desc = "split down w/ cmd+k j" },
+  {
+    key = "l",
+    mods = "LEADER",
+    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    desc = "split right w/ cmd+k l",
+  },
+  {
+    key = "j",
+    mods = "LEADER",
+    action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
+    desc = "split down w/ cmd+k j",
+  },
   { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up" }), desc = "split up w/ cmd+k u" },
   -- Command palette alias
   { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k p" },
@@ -160,7 +170,7 @@ local keys = {
   -- Reload config
   {
     key = ",",
-    mods = "SUPER|CTRL",
+    mods = "SUPER|CTRL|ALT",
     action = act.ReloadConfiguration,
   },
 
@@ -186,8 +196,18 @@ local keys = {
   { key = "Enter", mods = "SHIFT", action = act.SendString("\x1b\r"), desc = "fzf: Accept entry" },
 
   -- Quick-access split/resize (matching Ghostty's super+ctrl+alt bindings)
-  { key = "\\", mods = "SUPER|CTRL|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }), desc = "split right" },
-  { key = "-", mods = "SUPER|CTRL|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }), desc = "split down" },
+  {
+    key = "\\",
+    mods = "SUPER|CTRL|ALT",
+    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    desc = "split right",
+  },
+  {
+    key = "-",
+    mods = "SUPER|CTRL|ALT",
+    action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
+    desc = "split down",
+  },
   { key = "h", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Left", 10 }), desc = "resize pane left" },
   { key = "j", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Down", 10 }), desc = "resize pane down" },
   { key = "k", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Up", 10 }), desc = "resize pane up" },

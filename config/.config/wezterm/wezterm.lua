@@ -30,22 +30,34 @@ local theme = "Eldritch"
 config.color_scheme = theme
 
 -- Theme-aware accent colors
-local colorRed, colorPurple, colorCyan, colorYellow
+local colorRed, colorPurple, colorCyan, colorYellow, colorPink, colorGreen, colorWhite, colorMuted
 if theme == "rose-pine-dawn" then
   colorRed = "#b4637a" -- love
   colorPurple = "#907aa9" -- iris
   colorCyan = "#56949f" -- foam
   colorYellow = "#ea9d34" -- gold
+  colorPink = "#d7827e" -- rose
+  colorGreen = "#286983" -- pine
+  colorWhite = "#575279" -- text
+  colorMuted = "#9893a5" -- subtle
 elseif theme:match("^rose%-pine") then
   colorRed = "#eb6f92" -- love
   colorPurple = "#c4a7e7" -- iris
   colorCyan = "#9ccfd8" -- foam
   colorYellow = "#f6c177" -- gold
+  colorPink = "#ebbcba" -- rose
+  colorGreen = "#31748f" -- pine
+  colorWhite = "#e0def4" -- text
+  colorMuted = "#6e6a86" -- muted
 else -- Eldritch
-  colorRed = "#F7768E"
+  colorRed = "#F16C75"
   colorPurple = "#A48CF2"
   colorCyan = "#04D1F9"
-  colorYellow = "#E0AF68"
+  colorYellow = "#F7F67F"
+  colorPink = "#F265B5"
+  colorGreen = "#37F499"
+  colorWhite = "#EBFAFA"
+  colorMuted = "#7081D0" -- alt purple / muted
 end
 
 local keymaps = require("keymaps")
@@ -162,13 +174,23 @@ wezterm.on("update-status", function(window, pane)
 
   -- Right status
   window:set_right_status(wezterm.format({
-    { Text = wezterm.nerdfonts.md_folder .. "  " .. cwd },
+    -- CWD: pink icon, white text
+    { Foreground = { Color = colorPink } },
+    { Text = wezterm.nerdfonts.md_folder .. "  " },
+    { Foreground = { Color = colorWhite } },
+    { Text = cwd },
     { Text = " ⋮ " },
+    -- Command: cyan icon, white text
     { Foreground = { Color = colorCyan } },
-    { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd },
-    "ResetAttributes",
+    { Text = wezterm.nerdfonts.fa_code .. "  " },
+    { Foreground = { Color = colorWhite } },
+    { Text = cmd },
     { Text = " ⋮ " },
-    { Text = wezterm.nerdfonts.md_clock .. "  " .. time },
+    -- Time: yellow icon, white text
+    { Foreground = { Color = colorYellow } },
+    { Text = wezterm.nerdfonts.md_clock .. "  " },
+    { Foreground = { Color = colorWhite } },
+    { Text = time },
     { Text = "  " },
   }))
 end)
