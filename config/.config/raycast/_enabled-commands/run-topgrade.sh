@@ -23,7 +23,7 @@
 
 # Application Mode: this will open a Wezterm window, create a new tab and run topgrade command
 osascript -e 'tell application "System Events" to keystroke "t" using {shift down,control down, option down, command down}'
-sleep 1                                                                               # Wait for Ghostty to open
+sleep 1                                                                               # Wait for WezTerm to open
 osascript -e 'tell application "System Events" to keystroke "t" using {command down}' # Create new tab
 osascript -e 'tell application "System Events" to keystroke "topgrade"'               # Run topgrade
 osascript -e 'tell application "System Events" to key code 36'                        # Press Enter
