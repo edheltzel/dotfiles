@@ -150,6 +150,7 @@ local keys = {
   ---- END LEADER KEY
 
   { key = "=", mods = "CMD|CTRL", action = act.CloseCurrentPane({ confirm = false }), desc = "Close Terminal" },
+  { key = "w", mods = "CMD|SHIFT", action = act.QuitApplication, desc = "Close Window" },
   { key = "f", mods = "CMD|CTRL", action = act.ToggleFullScreen, desc = "Full Screen" },
 
   {

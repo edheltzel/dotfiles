@@ -62,6 +62,28 @@ else -- Eldritch
   colorWhite = "#EBFAFA"
 end
 
+-- Tab bar colors (mirrors TOML [colors.tab_bar] for format-tab-title)
+local tabBarBg, activeTabBg, activeTabFg, inactiveTabBg, inactiveTabFg
+if theme == "rose-pine-dawn" then
+  tabBarBg = "#f2e9e1"
+  activeTabBg = "#faf4ed"
+  activeTabFg = "#575279"
+  inactiveTabBg = "#fffaf3"
+  inactiveTabFg = "#6A6681"
+elseif theme:match("^rose%-pine") then
+  tabBarBg = "#191724"
+  activeTabBg = "#ebbcba"
+  activeTabFg = "#191724"
+  inactiveTabBg = "#26233a"
+  inactiveTabFg = "#9ccfd8"
+else -- Eldritch
+  tabBarBg = "#171928"
+  activeTabBg = "#37F499"
+  activeTabFg = "#171928"
+  inactiveTabBg = "#212337"
+  inactiveTabFg = "#7081D0"
+end
+
 local keymaps = require("keymaps")
 config.leader = keymaps.leader
 config.keys = keymaps.keys
@@ -76,7 +98,7 @@ config.max_fps = 240
 config.initial_cols = 100
 config.initial_rows = 50
 config.window_decorations = "RESIZE"
-config.window_close_confirmation = "NeverPrompt"
+config.window_close_confirmation = "AlwaysPrompt"
 config.macos_window_background_blur = 25
 config.scrollback_lines = 5000
 config.default_workspace = wezterm.nerdfonts.cod_rocket
@@ -86,10 +108,118 @@ config.inactive_pane_hsb = {
   brightness = 0.5, -- Dim brightness to half for a clear distinction
 }
 
--- Tab bar
+-- Tab bar (override theme cell backgrounds so format-tab-title has full control)
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
+-- Project-to-color mapping for tab coloring (directory name → accent color)
+local project_colors = {
+  [".dotfiles"] = colorCyan,
+  neoed = colorPurple,
+  atlas = colorRed,
+  -- Add projects: ["my-project"] = colorPink,
+}
+
+-- Process-to-icon mapping for tab titles
+local process_icons = {
+  nvim = wezterm.nerdfonts.custom_vim,
+  vim = wezterm.nerdfonts.custom_vim,
+  glow = wezterm.nerdfonts.oct_markdown,
+  fish = wezterm.nerdfonts.md_fish,
+  zsh = wezterm.nerdfonts.dev_terminal,
+  bash = wezterm.nerdfonts.cod_terminal_bash,
+  git = wezterm.nerdfonts.dev_git,
+  gh = wezterm.nerdfonts.oct_mark_github,
+  lazygit = wezterm.nerdfonts.dev_git,
+  deno = wezterm.nerdfonts.dev_denojs,
+  node = wezterm.nerdfonts.md_nodejs,
+  python = wezterm.nerdfonts.dev_python,
+  python3 = wezterm.nerdfonts.dev_python,
+  ruby = wezterm.nerdfonts.dev_ruby,
+  go = wezterm.nerdfonts.md_language_go,
+  cargo = wezterm.nerdfonts.dev_rust,
+  rustc = wezterm.nerdfonts.dev_rust,
+  docker = wezterm.nerdfonts.dev_docker,
+  ssh = wezterm.nerdfonts.md_ssh,
+  make = wezterm.nerdfonts.seti_makefile,
+  btop = wezterm.nerdfonts.md_chart_areaspline,
+  claude = wezterm.nerdfonts.fa_robot,
+  opencode = wezterm.nerdfonts.md_robot,
+  gemini = wezterm.nerdfonts.md_robot,
+}
+
+-- Pill-shaped tabs with activity indicator and process icons
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+  -- Check for unseen output (use panes param; tab.panes is undocumented)
+  local unseen = false
+  if panes then
+    for _, p in ipairs(panes) do
+      if p.has_unseen_output then
+        unseen = true
+        break
+      end
+    end
+  end
+
+  -- Detect project color from CWD
+  local cwd_url = tab.active_pane.current_working_dir
+  local project_color = nil
+  if cwd_url then
+    local cwd_str = type(cwd_url) == "userdata" and cwd_url.file_path or tostring(cwd_url)
+    project_color = project_colors[basename(cwd_str)]
+  end
+
+  -- Determine tab colors
+  local bg, fg
+  if tab.is_active then
+    bg = project_color or activeTabBg
+    fg = activeTabFg
+  elseif unseen then
+    bg = inactiveTabBg
+    fg = colorYellow
+  elseif project_color then
+    bg = inactiveTabBg
+    fg = project_color
+  else
+    bg = inactiveTabBg
+    fg = inactiveTabFg
+  end
+
+  -- Process icon: check pane title first (catches interpreted scripts where
+  -- the process name is the runtime, e.g. node/python), then process name
+  local title_cmd = (tab.active_pane.title or ""):match("^(%S+)")
+  local proc = tab.active_pane.foreground_process_name or ""
+  local proc_name = basename(proc)
+  local icon = (title_cmd and process_icons[title_cmd])
+    or process_icons[proc_name]
+    or wezterm.nerdfonts.cod_terminal
+
+  -- Build title with index and icon
+  local index = tab.tab_index + 1
+  local title = tab.tab_title and #tab.tab_title > 0 and tab.tab_title or tab.active_pane.title
+  local formatted = index .. ": " .. icon .. " " .. title
+
+  -- Truncate to fit (pill edges + padding = ~4 cells)
+  local max_chars = max_width - 4
+  if #formatted > max_chars and max_chars > 0 then
+    formatted = formatted:sub(1, max_chars - 1) .. "…"
+  end
+
+  return {
+    { Background = { Color = tabBarBg } },
+    { Foreground = { Color = bg } },
+    { Text = wezterm.nerdfonts.ple_left_half_circle_thick },
+    { Background = { Color = bg } },
+    { Foreground = { Color = fg } },
+    { Text = " " .. formatted .. " " },
+    { Background = { Color = tabBarBg } },
+    { Foreground = { Color = bg } },
+    { Text = wezterm.nerdfonts.ple_right_half_circle_thick },
+  }
+end)
+
+-- Git branch cache (only re-query when CWD changes)
+local git_cache = { cwd = "", branch = "" }
 
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
@@ -106,16 +236,31 @@ wezterm.on("update-status", function(window, pane)
     stat_color = colorCyan
   end
 
-  -- Current working directory
-  local cwd = pane:get_current_working_dir()
-  if cwd then
-    if type(cwd) == "userdata" then
-      cwd = basename(cwd.file_path)
+  -- Current working directory (full path + basename)
+  local cwd_uri = pane:get_current_working_dir()
+  local cwd_path = ""
+  local cwd = ""
+  if cwd_uri then
+    if type(cwd_uri) == "userdata" then
+      cwd_path = cwd_uri.file_path
     else
-      cwd = basename(cwd)
+      cwd_path = tostring(cwd_uri)
     end
+    cwd = basename(cwd_path)
+  end
+
+  -- Git branch (cached, only updates on CWD change)
+  local branch = ""
+  if cwd_path ~= "" and cwd_path ~= git_cache.cwd then
+    local handle = io.popen("git -C " .. wezterm.shell_quote_arg(cwd_path) .. " branch --show-current 2>/dev/null")
+    if handle then
+      branch = handle:read("*l") or ""
+      handle:close()
+    end
+    git_cache.cwd = cwd_path
+    git_cache.branch = branch
   else
-    cwd = ""
+    branch = git_cache.branch
   end
 
   -- Current command
@@ -136,26 +281,39 @@ wezterm.on("update-status", function(window, pane)
   }))
 
   -- Right status
-  window:set_right_status(wezterm.format({
+  local right_items = {
     -- CWD: pink icon, white text
     { Foreground = { Color = colorPink } },
     { Text = wezterm.nerdfonts.md_folder .. "  " },
     { Foreground = { Color = colorWhite } },
     { Text = cwd },
-    { Text = " ⋮ " },
-    -- Command: cyan icon, white text
-    { Foreground = { Color = colorCyan } },
-    { Text = wezterm.nerdfonts.fa_code .. "  " },
-    { Foreground = { Color = colorWhite } },
-    { Text = cmd },
-    { Text = " ⋮ " },
-    -- Time: yellow icon, white text
-    { Foreground = { Color = colorYellow } },
-    { Text = wezterm.nerdfonts.md_clock .. "  " },
-    { Foreground = { Color = colorWhite } },
-    { Text = time },
-    { Text = "  " },
-  }))
+  }
+
+  -- Git branch (only show if in a git repo)
+  if branch ~= "" then
+    table.insert(right_items, { Text = " ⋮ " })
+    table.insert(right_items, { Foreground = { Color = colorPurple } })
+    table.insert(right_items, { Text = wezterm.nerdfonts.dev_git_branch .. "  " })
+    table.insert(right_items, { Foreground = { Color = colorWhite } })
+    table.insert(right_items, { Text = branch })
+  end
+
+  -- Command: cyan icon, white text
+  table.insert(right_items, { Text = " ⋮ " })
+  table.insert(right_items, { Foreground = { Color = colorCyan } })
+  table.insert(right_items, { Text = wezterm.nerdfonts.fa_code .. "  " })
+  table.insert(right_items, { Foreground = { Color = colorWhite } })
+  table.insert(right_items, { Text = cmd })
+
+  -- Time: yellow icon, white text
+  table.insert(right_items, { Text = " ⋮ " })
+  table.insert(right_items, { Foreground = { Color = colorYellow } })
+  table.insert(right_items, { Text = wezterm.nerdfonts.md_clock .. "  " })
+  table.insert(right_items, { Foreground = { Color = colorWhite } })
+  table.insert(right_items, { Text = time })
+  table.insert(right_items, { Text = "  " })
+
+  window:set_right_status(wezterm.format(right_items))
 end)
 
 return config
