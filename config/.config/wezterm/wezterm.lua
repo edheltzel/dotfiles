@@ -89,7 +89,11 @@ config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
 
--- Custom tab titles: show CWD for inactive tabs, process name for active tab
+-- Pill-shaped tabs with NerdFont half-circle glyphs
+local PILL_LEFT = wezterm.nerdfonts.ple_right_half_circle_thick
+local PILL_RIGHT = wezterm.nerdfonts.ple_left_half_circle_thick
+local TAB_BAR_BG = "#171928" -- Eldritch background
+
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
   local pane = tab:active_pane()
   local title = ""
@@ -116,12 +120,35 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     end
   end
 
-  -- Truncate if too long
-  if #title > max_width - 2 then
-    title = string.sub(title, 1, max_width - 5) .. "..."
+  -- Truncate if too long (account for pill edges)
+  if #title > max_width - 4 then
+    title = wezterm.truncate_right(title, max_width - 6) .. "…"
   end
 
-  return title
+  -- Determine colors based on state
+  local bg, fg
+  if tab.is_active then
+    bg = colorGreen -- #37F499
+    fg = TAB_BAR_BG -- dark text on bright bg
+  elseif hover then
+    bg = "#3b3052" -- hover highlight
+    fg = colorWhite
+  else
+    bg = "#212337" -- subtle inactive
+    fg = colorMuted
+  end
+
+  return {
+    { Background = { Color = TAB_BAR_BG } },
+    { Foreground = { Color = bg } },
+    { Text = PILL_LEFT },
+    { Background = { Color = bg } },
+    { Foreground = { Color = fg } },
+    { Text = " " .. title .. " " },
+    { Background = { Color = TAB_BAR_BG } },
+    { Foreground = { Color = bg } },
+    { Text = PILL_RIGHT },
+  }
 end)
 
 wezterm.on("update-status", function(window, pane)
