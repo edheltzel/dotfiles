@@ -79,14 +79,6 @@ config.macos_window_background_blur = 25
 config.scrollback_lines = 10000
 config.default_workspace = wezterm.nerdfonts.cod_rocket
 
--- Zero padding to eliminate gaps around Neovim (cell grid alignment)
-config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 0,
-  bottom = 0,
-}
-
 config.inactive_pane_hsb = {
   saturation = 0.9, -- Slightly reduce saturation for a muted effect
   brightness = 0.5, -- Dim brightness to half for a clear distinction
@@ -160,6 +152,15 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 end)
 
 wezterm.on("update-status", function(window, pane)
+  -- Dynamic padding: zero for TUI apps (Neovim, htop), comfortable for shell
+  local overrides = window:get_config_overrides() or {}
+  if pane:is_alt_screen_active() then
+    overrides.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
+  else
+    overrides.window_padding = { left = 8, right = 8, top = 4, bottom = 4 }
+  end
+  window:set_config_overrides(overrides)
+
   -- Workspace name
   local stat = window:active_workspace()
   local stat_color = colorRed
