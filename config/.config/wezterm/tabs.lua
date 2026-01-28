@@ -7,6 +7,7 @@ local function setup(theme)
   local colors = theme.colors
   local tab_bar = theme.tab_bar
   local basename = theme.basename
+  local process_icons = theme.process_icons
 
   -- Project-to-color mapping for tab coloring (directory name → accent color)
   local project_colors = {
@@ -14,34 +15,6 @@ local function setup(theme)
     neoed = colors.purple,
     atlas = colors.red,
     -- Add projects: ["my-project"] = colors.pink,
-  }
-
-  -- Process-to-icon mapping for tab titles
-  local process_icons = {
-    nvim = wezterm.nerdfonts.custom_vim,
-    vim = wezterm.nerdfonts.custom_vim,
-    glow = wezterm.nerdfonts.oct_markdown,
-    fish = wezterm.nerdfonts.md_fish,
-    zsh = wezterm.nerdfonts.dev_terminal,
-    bash = wezterm.nerdfonts.cod_terminal_bash,
-    git = wezterm.nerdfonts.dev_git,
-    gh = wezterm.nerdfonts.oct_mark_github,
-    lazygit = wezterm.nerdfonts.dev_git,
-    deno = wezterm.nerdfonts.dev_denojs,
-    node = wezterm.nerdfonts.md_nodejs,
-    python = wezterm.nerdfonts.dev_python,
-    python3 = wezterm.nerdfonts.dev_python,
-    ruby = wezterm.nerdfonts.dev_ruby,
-    go = wezterm.nerdfonts.md_language_go,
-    cargo = wezterm.nerdfonts.dev_rust,
-    rustc = wezterm.nerdfonts.dev_rust,
-    docker = wezterm.nerdfonts.dev_docker,
-    ssh = wezterm.nerdfonts.md_ssh,
-    make = wezterm.nerdfonts.seti_makefile,
-    btop = wezterm.nerdfonts.md_chart_areaspline,
-    claude = wezterm.nerdfonts.fa_robot,
-    opencode = wezterm.nerdfonts.md_robot,
-    gemini = wezterm.nerdfonts.md_robot,
   }
 
   -- Pill-shaped tabs with activity indicator and process icons

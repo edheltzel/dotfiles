@@ -6,6 +6,7 @@ local wezterm = require("wezterm")
 local function setup(theme)
   local colors = theme.colors
   local basename = theme.basename
+  local process_icons = theme.process_icons
 
   -- Git branch cache (only re-query when CWD changes)
   local git_cache = { cwd = "", branch = "" }
@@ -52,9 +53,13 @@ local function setup(theme)
       branch = git_cache.branch
     end
 
-    -- Current command
+    -- Current command + dynamic icon (title-first for Node.js CLIs, then process name)
     local cmd = pane:get_foreground_process_name()
     cmd = cmd and basename(cmd) or ""
+    local title_cmd = (pane:get_title() or ""):match("^(%S+)")
+    local cmd_icon = (title_cmd and process_icons[title_cmd])
+      or process_icons[cmd]
+      or wezterm.nerdfonts.fa_code
 
     -- Time
     local time = wezterm.strftime("%H:%M")
@@ -85,10 +90,10 @@ local function setup(theme)
       table.insert(right_items, { Text = branch })
     end
 
-    -- Command: cyan icon, white text
+    -- Command: cyan dynamic icon, white text
     table.insert(right_items, { Text = " ⋮ " })
     table.insert(right_items, { Foreground = { Color = colors.cyan } })
-    table.insert(right_items, { Text = wezterm.nerdfonts.fa_code .. "  " })
+    table.insert(right_items, { Text = cmd_icon .. "  " })
     table.insert(right_items, { Foreground = { Color = colors.white } })
     table.insert(right_items, { Text = cmd })
 

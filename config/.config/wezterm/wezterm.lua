@@ -1,10 +1,10 @@
 -- wezterm.lua: Orchestrator — wires together all modules.
 --
 -- Module map:
---   theme.lua         → Theme colors, tab bar palette, basename helper
+--   theme.lua         → Theme colors, tab bar palette, process icons, basename helper
 --   configuration.lua → Config settings (shell, font, window, rendering)
 --   keymaps.lua       → Leader key, key bindings, key tables
---   tabs.lua          → format-tab-title (pill tabs, process icons, project colors)
+--   tabs.lua          → format-tab-title (pill tabs, project colors)
 --   statusbar.lua     → update-status (workspace, CWD, git branch, command, time)
 
 local theme = require("theme")
