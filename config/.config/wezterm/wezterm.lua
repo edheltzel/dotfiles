@@ -97,10 +97,9 @@ config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
 
--- Pill-shaped tabs with NerdFont half-circle glyphs (Powerline Extra)
--- U+E0B6 = right half circle, U+E0B4 = left half circle
-local PILL_LEFT = utf8.char(0xe0b6)
-local PILL_RIGHT = utf8.char(0xe0b4)
+-- Pill-shaped tabs with NerdFont half-circle glyphs
+local PILL_LEFT = wezterm.nerdfonts.ple_right_half_circle_thick
+local PILL_RIGHT = wezterm.nerdfonts.ple_left_half_circle_thick
 local TAB_BAR_BG = "#171928" -- Eldritch background
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
@@ -137,7 +136,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
   -- Determine colors based on state
   local bg, fg
   if tab.is_active then
-    bg = colorGreen -- #37F499
+    bg = colorGreen -- #17a4aa
     fg = TAB_BAR_BG -- dark text on bright bg
   elseif hover then
     bg = "#3b3052" -- hover highlight
@@ -164,9 +163,9 @@ wezterm.on("update-status", function(window, pane)
   -- Dynamic padding: zero for TUI apps (Neovim, htop), comfortable for shell
   local overrides = window:get_config_overrides() or {}
   if pane:is_alt_screen_active() then
-    overrides.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
+    overrides.window_padding = { left = 1, right = 1, top = 4, bottom = 0 }
   else
-    overrides.window_padding = { left = 8, right = 8, top = 4, bottom = 4 }
+    overrides.window_padding = { left = 10, right = 10, top = 8, bottom = 4 }
   end
   window:set_config_overrides(overrides)
 
