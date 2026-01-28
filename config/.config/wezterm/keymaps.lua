@@ -1,3 +1,6 @@
+-- keymaps.lua: Leader key, key bindings, and key tables.
+-- Exports leader, keys, and key_tables for the config.
+
 local wezterm = require("wezterm")
 local act = wezterm.action
 
