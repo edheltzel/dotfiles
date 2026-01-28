@@ -79,6 +79,14 @@ config.macos_window_background_blur = 25
 config.scrollback_lines = 10000
 config.default_workspace = wezterm.nerdfonts.cod_rocket
 
+-- Zero padding to eliminate gaps around Neovim (cell grid alignment)
+config.window_padding = {
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
+}
+
 config.inactive_pane_hsb = {
   saturation = 0.9, -- Slightly reduce saturation for a muted effect
   brightness = 0.5, -- Dim brightness to half for a clear distinction
