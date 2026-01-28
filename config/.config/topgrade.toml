@@ -33,6 +33,7 @@ skip_notify = true
 "Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
 "LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa"
 "Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa'"
+"Claude Code" = "claude update"
 # TODO: add MasonUpdate command
 
 # Custom Post-commands
