@@ -1,6 +1,11 @@
 local wezterm = require("wezterm")
 local fish_path = "/opt/homebrew/bin/fish"
 
+-- Helper: extract basename from path
+local function basename(s)
+  return string.gsub(s, "(.*[/\\])(.*)", "%2")
+end
+
 local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
@@ -173,10 +178,6 @@ wezterm.on("update-status", function(window, pane)
   if window:leader_is_active() then
     stat = wezterm.nerdfonts.md_lightning_bolt .. wezterm.nerdfonts.md_lightning_bolt
     stat_color = colorCyan
-  end
-
-  local basename = function(s)
-    return string.gsub(s, "(.*[/\\])(.*)", "%2")
   end
 
   -- Current working directory
