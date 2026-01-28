@@ -63,7 +63,7 @@
 		"metrics": false,
 	},
 	"theme": {
-		"mode": "system",
+		"mode": "dark",
 		"light": "Fleet Light",
 		"dark": "Fleet Dark",
 	},
