@@ -38,34 +38,28 @@ local theme = "Eldritch"
 config.color_scheme = theme
 
 -- Theme-aware accent colors
-local colorRed, colorPurple, colorCyan, colorYellow, colorPink, colorGreen, colorWhite, colorMuted
+local colorRed, colorPurple, colorCyan, colorYellow, colorPink, colorWhite
 if theme == "rose-pine-dawn" then
   colorRed = "#b4637a" -- love
   colorPurple = "#907aa9" -- iris
   colorCyan = "#56949f" -- foam
   colorYellow = "#ea9d34" -- gold
   colorPink = "#d7827e" -- rose
-  colorGreen = "#286983" -- pine
   colorWhite = "#575279" -- text
-  colorMuted = "#9893a5" -- subtle
 elseif theme:match("^rose%-pine") then
   colorRed = "#eb6f92" -- love
   colorPurple = "#c4a7e7" -- iris
   colorCyan = "#9ccfd8" -- foam
   colorYellow = "#f6c177" -- gold
   colorPink = "#ebbcba" -- rose
-  colorGreen = "#31748f" -- pine
   colorWhite = "#e0def4" -- text
-  colorMuted = "#6e6a86" -- muted
 else -- Eldritch
   colorRed = "#F16C75"
   colorPurple = "#A48CF2"
   colorCyan = "#04D1F9"
   colorYellow = "#F7F67F"
   colorPink = "#F265B5"
-  colorGreen = "#37F499"
   colorWhite = "#EBFAFA"
-  colorMuted = "#7081D0" -- alt purple / muted
 end
 
 local keymaps = require("keymaps")
@@ -96,68 +90,6 @@ config.inactive_pane_hsb = {
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = true
-
--- Pill-shaped tabs with NerdFont half-circle glyphs
-local PILL_LEFT = wezterm.nerdfonts.ple_right_half_circle_thick
-local PILL_RIGHT = wezterm.nerdfonts.ple_left_half_circle_thick
-local TAB_BAR_BG = "#171928" -- Eldritch background
-
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-  local pane = tab:active_pane()
-  local title = ""
-
-  if tab.is_active then
-    -- Show process name for active tab
-    local cmd = pane:get_foreground_process_name()
-    if cmd and cmd ~= "" then
-      title = basename(cmd)
-    else
-      title = "Terminal"
-    end
-  else
-    -- Show current working directory for inactive tabs
-    local cwd = pane:get_current_working_dir()
-    if cwd then
-      if type(cwd) == "userdata" then
-        title = basename(cwd.file_path)
-      else
-        title = basename(cwd)
-      end
-    else
-      title = "~"
-    end
-  end
-
-  -- Truncate if too long (account for pill edges)
-  if #title > max_width - 4 then
-    title = wezterm.truncate_right(title, max_width - 6) .. "…"
-  end
-
-  -- Determine colors based on state
-  local bg, fg
-  if tab.is_active then
-    bg = colorGreen -- #17a4aa
-    fg = TAB_BAR_BG -- dark text on bright bg
-  elseif hover then
-    bg = "#3b3052" -- hover highlight
-    fg = colorWhite
-  else
-    bg = "#212337" -- subtle inactive
-    fg = colorMuted
-  end
-
-  return {
-    { Background = { Color = TAB_BAR_BG } },
-    { Foreground = { Color = bg } },
-    { Text = PILL_LEFT },
-    { Background = { Color = bg } },
-    { Foreground = { Color = fg } },
-    { Text = " " .. title .. " " },
-    { Background = { Color = TAB_BAR_BG } },
-    { Foreground = { Color = bg } },
-    { Text = PILL_RIGHT },
-  }
-end)
 
 wezterm.on("update-status", function(window, pane)
   -- Dynamic padding: zero for TUI apps (Neovim, htop), comfortable for shell
