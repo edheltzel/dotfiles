@@ -48,6 +48,7 @@ local function setup(theme, keymaps)
   config.macos_window_background_blur = 25
   config.scrollback_lines = 5000
   config.default_workspace = wezterm.nerdfonts.cod_rocket
+  config.native_macos_fullscreen_mode = false
 
   -- Panes
   config.inactive_pane_hsb = {
