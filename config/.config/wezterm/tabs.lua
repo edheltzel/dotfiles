@@ -7,7 +7,6 @@ local function setup(theme)
   local colors = theme.colors
   local tab_bar = theme.tab_bar
   local basename = theme.basename
-  local process_icons = theme.process_icons
 
   -- Project-to-color mapping for tab coloring (directory name → accent color)
   local project_colors = {
@@ -31,12 +30,8 @@ local function setup(theme)
     end
 
     -- Detect project color from CWD
-    local cwd_url = tab.active_pane.current_working_dir
-    local project_color = nil
-    if cwd_url then
-      local cwd_str = type(cwd_url) == "userdata" and cwd_url.file_path or tostring(cwd_url)
-      project_color = project_colors[basename(cwd_str)]
-    end
+    local cwd_path = theme.get_cwd_path(tab.active_pane.current_working_dir)
+    local project_color = cwd_path ~= "" and project_colors[basename(cwd_path)] or nil
 
     -- Determine tab colors
     local bg, fg
@@ -56,12 +51,8 @@ local function setup(theme)
 
     -- Process icon: check pane title first (catches interpreted scripts where
     -- the process name is the runtime, e.g. node/python), then process name
-    local title_cmd = (tab.active_pane.title or ""):match("^(%S+)")
     local proc = tab.active_pane.foreground_process_name or ""
-    local proc_name = basename(proc)
-    local icon = (title_cmd and process_icons[title_cmd])
-      or process_icons[proc_name]
-      or wezterm.nerdfonts.cod_terminal
+    local icon = theme.get_process_icon(tab.active_pane.title, basename(proc), wezterm.nerdfonts.cod_terminal)
 
     -- Build title with index and icon
     local index = tab.tab_index + 1
@@ -69,10 +60,7 @@ local function setup(theme)
     local formatted = index .. ": " .. icon .. " " .. title
 
     -- Truncate to fit (pill edges + padding = ~4 cells)
-    local max_chars = max_width - 4
-    if #formatted > max_chars and max_chars > 0 then
-      formatted = formatted:sub(1, max_chars - 1) .. "…"
-    end
+    formatted = wezterm.truncate_right(formatted, max_width - 4)
 
     return {
       { Background = { Color = tab_bar.bg } },

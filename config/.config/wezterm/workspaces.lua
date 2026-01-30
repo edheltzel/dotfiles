@@ -7,9 +7,7 @@ local mux = wezterm.mux
 local function setup()
   wezterm.on("gui-startup", function(cmd)
     -- default workspace: single tab, single pane (rocket icon matches config.default_workspace)
-    local tab, pane, window = mux.spawn_window(cmd or {
-      workspace = wezterm.nerdfonts.cod_rocket,
-    })
+    mux.spawn_window(cmd or { workspace = wezterm.nerdfonts.cod_rocket })
 
     -- "project-x" workspace: 3-pane split layout
     --   ┌────────────┬────────────┐
@@ -19,7 +17,7 @@ local function setup()
     --   │            │   right    │
     --   │            │   bottom   │
     --   └────────────┴────────────┘
-    local project_tab, project_pane, project_window = mux.spawn_window({
+    local _, project_pane = mux.spawn_window({
       workspace = "project-x",
     })
     local right_pane = project_pane:split({
