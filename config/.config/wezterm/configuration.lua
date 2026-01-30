@@ -22,10 +22,11 @@ local function setup(theme, keymaps)
 
   -- Font
   config.font = wezterm.font_with_fallback({
-    { family = "Lilex Nerd Font Mono", weight = 400 },
-    { family = "FiraCode Nerd Font Mono", weight = 400 },
+    { family = "VictorMono Nerd Font", weight = "Regular" },
+    { family = "Lilex Nerd Font Mono", weight = "Regular" },
+    { family = "FiraCode Nerd Font Mono", weight = "Regular" },
   })
-  config.font_size = 18.0
+  config.font_size = 19.0
 
   -- Theme
   config.color_scheme = theme.name
