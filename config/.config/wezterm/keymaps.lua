@@ -77,7 +77,6 @@ local keys = {
   --- ---------------------------------------------------------------------------
   { key = "c", mods = "LEADER", action = act.ActivateCopyMode, desc = "copy mode w/ cmd+k c" },
 
-  { key = "T", mods = "LEADER", action = act.ShowTabNavigator },
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   {
     key = "e",
@@ -163,18 +162,11 @@ local keys = {
     desc = "Tab Navigator",
   },
   -- Tabs/Panes keybindings
-  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(0), desc = "Previous Tab" },
-  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(2), desc = "Next Tab" },
+  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
+  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1), desc = "Next Tab" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
-
-  -- Reload config
-  {
-    key = ",",
-    mods = "SUPER|CTRL|ALT",
-    action = act.ReloadConfiguration,
-  },
 
   -- Disable CTRL+SHIFT+L and CTRL+SHIFT+U to allow pass-through to Neovim
   {

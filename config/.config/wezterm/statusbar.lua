@@ -6,7 +6,6 @@ local wezterm = require("wezterm")
 local function setup(theme)
   local colors = theme.colors
   local basename = theme.basename
-  local process_icons = theme.process_icons
 
   -- Git branch cache (only re-query when CWD changes)
   local git_cache = { cwd = "", branch = "" }
@@ -27,26 +26,16 @@ local function setup(theme)
     end
 
     -- Current working directory (full path + basename)
-    local cwd_uri = pane:get_current_working_dir()
-    local cwd_path = ""
-    local cwd = ""
-    if cwd_uri then
-      if type(cwd_uri) == "userdata" then
-        cwd_path = cwd_uri.file_path
-      else
-        cwd_path = tostring(cwd_uri)
-      end
-      cwd = basename(cwd_path)
-    end
+    local cwd_path = theme.get_cwd_path(pane:get_current_working_dir())
+    local cwd = cwd_path ~= "" and basename(cwd_path) or ""
 
     -- Git branch (cached, only updates on CWD change)
     local branch = ""
     if cwd_path ~= "" and cwd_path ~= git_cache.cwd then
-      local handle = io.popen("git -C " .. wezterm.shell_quote_arg(cwd_path) .. " branch --show-current 2>/dev/null")
-      if handle then
-        branch = handle:read("*l") or ""
-        handle:close()
-      end
+      local success, stdout, _ = wezterm.run_child_process({
+        "git", "-C", cwd_path, "branch", "--show-current"
+      })
+      branch = success and stdout:gsub("%s+$", "") or ""
       git_cache.cwd = cwd_path
       git_cache.branch = branch
     else
@@ -56,10 +45,7 @@ local function setup(theme)
     -- Current command + dynamic icon (title-first for Node.js CLIs, then process name)
     local cmd = pane:get_foreground_process_name()
     cmd = cmd and basename(cmd) or ""
-    local title_cmd = (pane:get_title() or ""):match("^(%S+)")
-    local cmd_icon = (title_cmd and process_icons[title_cmd])
-      or process_icons[cmd]
-      or wezterm.nerdfonts.fa_code
+    local cmd_icon = theme.get_process_icon(pane:get_title(), cmd, wezterm.nerdfonts.fa_code)
 
     -- Time
     local time = wezterm.strftime("%H:%M")

@@ -82,13 +82,12 @@
 		"calt": true,
 	},
 	"buffer_font_size": 19.0,
-	"buffer_font_family": "Lilex Nerd Font Mono",
-	"buffer_font_weight": 400,
-	"ui_font_family": "Lilex Nerd Font Mono",
+	"buffer_font_family": "VictorMono Nerd Font",
+	"ui_font_family": "VictorMono Nerd Font",
 	"ui_font_fallbacks": [
+		"VictorMono Nerd Font Mono",
 		"Lilex Nerd Font Mono",
 		"FiraCode Nerd Font Mono",
-		"VictorMono Nerd Font Mono",
 	],
 	"ui_font_features": {
 		"calt": true,
