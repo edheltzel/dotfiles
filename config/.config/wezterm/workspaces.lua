@@ -9,7 +9,7 @@ local function setup()
     -- default workspace: single tab, single pane (rocket icon matches config.default_workspace)
     mux.spawn_window(cmd or { workspace = wezterm.nerdfonts.cod_rocket })
 
-    -- "project-x" workspace: 3-pane split layout
+    -- "dotfiles" workspace: 3-pane split layout
     --   ┌────────────┬────────────┐
     --   │            │   right    │
     --   │   main     │    top     │
@@ -18,7 +18,8 @@ local function setup()
     --   │            │   bottom   │
     --   └────────────┴────────────┘
     local _, project_pane = mux.spawn_window({
-      workspace = "project-x",
+      workspace = wezterm.nerdfonts.md_triforce,
+      cwd = wezterm.home_dir .. "/.dotfiles",
     })
     local right_pane = project_pane:split({
       direction = "Right",

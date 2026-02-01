@@ -12,6 +12,7 @@ Modular WezTerm config using the Eldritch color scheme with pill-shaped tabs, pr
 | `keymaps.lua` | Leader key, key bindings, key tables |
 | `tabs.lua` | Pill-shaped tabs, project colors, unseen output |
 | `statusbar.lua` | Left/right status bar: workspace, CWD, git branch, command (dynamic icon), time |
+| `workspaces.lua` | Startup workspace layouts via `gui-startup` event |
 
 ## Customization
 

@@ -6,6 +6,7 @@ if status is-interactive
 
     # AI Agents + Models
     abbr --add ccu 'bunx ccusage'
+    abbr --add ccc 'claude converse --dangerously-skip-permissions'
     abbr --add cc 'claude --dangerously-skip-permissions'
     abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add os openspec
@@ -13,6 +14,7 @@ if status is-interactive
     abbr --add occ 'opencode --continue'
     abbr --add ocp 'opencode --agent plan'
     abbr --add gg 'gemini --yolo'
+    abbr --add ag antigravity
 
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
@@ -44,6 +46,15 @@ if status is-interactive
     abbr --add atm fastfetch
     abbr --add cat 'bat -pp'
     abbr --add clean mac-cleaner-cli
+    abbr --add link 'ln -s'
+    abbr --add symlink 'ln -s'
+
+    # Git
+    abbr --add lg lazygit
+    abbr --add ghw 'gh repo view --web'
+    abbr --add ghpr 'gh pr create -a "@me" --fill'
+    abbr --add ghm --set-cursor 'gh pr merge % --merge'
+    abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
 
     # Package Managers 
     abbr --add bi 'brew install '
@@ -52,13 +63,8 @@ if status is-interactive
     abbr --add casks 'brew list --cask'
     abbr --add bic --set-cursor 'brew install % --cask'
     abbr --add cargos 'cargo install --list'
-    abbr --add lg lazygit
     abbr --add eval 'eval ssh-agent -s; and ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
     abbr --add gems 'gem list'
-    abbr --add ghw 'gh repo view --web'
-    abbr --add ghpr 'gh pr create -a "@me" --fill'
-    abbr --add ghm --set-cursor 'gh pr merge % --merge'
-    abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
     abbr --add npms 'npm list -g --depth=0'
     abbr --add pns 'pnpm list -g'
     abbr --add pnpms 'pnpm list -g'
@@ -66,9 +72,6 @@ if status is-interactive
     abbr --add siz 'du -khsc'
     abbr --add sp 'speedtest -u Gbps'
     abbr --add spp 'speedtest -u Gbps'
-    abbr --add grabit 'wget -mkEpnp url_here'
-    abbr --add link 'ln -s'
-    abbr --add symlink 'ln -s'
     abbr --add newcode 'npx --package yo --package generator-code -- yo code'
     abbr --add omp oh-my-posh
     abbr --add yy yazi

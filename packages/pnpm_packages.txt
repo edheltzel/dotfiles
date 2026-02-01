@@ -1,13 +1,3 @@
-@antfu/ni
-@anthropic-ai/claude-code
-@bitwarden/cli
+# pnpm packages - Bun is PRIMARY for global JS packages
+# Only keep packages that specifically require pnpm
 @google/gemini-cli
-@vscode/vsce
-cspell
-easy-sharing
-intelephense
-lighthouse
-neovim
-typescript
-typescript-language-server
-wrangler
