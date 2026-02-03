@@ -24,22 +24,21 @@ workspaces.setup()
 
 -- Zen Mode
 local zen_state = {
-  active = false,
+  zen_windows = {}, -- Track which windows are zen windows by window_id
   padding_percent = 0.25,
+  pending_zen = false, -- Flag to mark next focused window as zen
+  source_window_id = nil, -- Track which window spawned the zen window
 }
 
-local function apply_zen_padding(window)
-  if not zen_state.active then
-    return
-  end
+local function is_zen_window(window)
+  local window_id = tostring(window:window_id())
+  return zen_state.zen_windows[window_id] == true
+end
 
+local function apply_zen_padding(window)
+  local overrides = window:get_config_overrides() or {}
   local window_dims = window:get_dimensions()
   local padding = math.floor(window_dims.pixel_width * zen_state.padding_percent)
-  local overrides = window:get_config_overrides() or {}
-
-  if overrides.window_padding and overrides.window_padding.left == padding then
-    return
-  end
 
   overrides.window_padding = {
     left = padding,
@@ -47,31 +46,71 @@ local function apply_zen_padding(window)
     top = 0,
     bottom = 0,
   }
+  overrides.enable_tab_bar = false
   window:set_config_overrides(overrides)
 end
 
-local function toggle_zen_mode(window, pane)
+local function clear_zen_padding(window)
   local overrides = window:get_config_overrides() or {}
-
-  if zen_state.active then
-    -- Exit zen mode
-    overrides.window_padding = nil
-    zen_state.active = false
-    window:set_config_overrides(overrides)
-  else
-    -- Enter zen mode
-    zen_state.active = true
-    apply_zen_padding(window)
-  end
+  overrides.window_padding = nil
+  overrides.enable_tab_bar = nil
+  window:set_config_overrides(overrides)
 end
 
+-- Toggle zen mode in CURRENT window (affects all tabs in this window)
 wezterm.on("toggle-zen-mode", function(window, pane)
-  toggle_zen_mode(window, pane)
+  local window_id = tostring(window:window_id())
+
+  if zen_state.zen_windows[window_id] then
+    -- Exit zen mode
+    zen_state.zen_windows[window_id] = nil
+    clear_zen_padding(window)
+  else
+    -- Enter zen mode
+    zen_state.zen_windows[window_id] = true
+    apply_zen_padding(window)
+  end
+end)
+
+-- Spawn NEW zen window (isolated from other windows)
+wezterm.on("spawn-zen-window", function(window, pane)
+  local window_id = tostring(window:window_id())
+
+  if zen_state.zen_windows[window_id] then
+    -- Already in zen window, exit zen mode
+    zen_state.zen_windows[window_id] = nil
+    clear_zen_padding(window)
+  else
+    -- Spawn a new zen window, preserving cwd
+    zen_state.pending_zen = true
+    zen_state.source_window_id = window_id
+    local cwd = pane:get_current_working_dir()
+    local spawn_args = {}
+    if cwd then
+      spawn_args.cwd = cwd.file_path or cwd
+    end
+    window:perform_action(wezterm.action.SpawnCommandInNewWindow(spawn_args), pane)
+  end
+end)
+
+-- Use update-status to detect and apply zen to newly spawned windows
+wezterm.on("update-status", function(window, pane)
+  local window_id = tostring(window:window_id())
+
+  -- Check if this is a newly spawned zen window
+  if zen_state.pending_zen and window_id ~= zen_state.source_window_id then
+    zen_state.pending_zen = false
+    zen_state.source_window_id = nil
+    zen_state.zen_windows[window_id] = true
+    apply_zen_padding(window)
+  end
 end)
 
 -- Recalculate padding when window is resized
 wezterm.on("window-resized", function(window, pane)
-  apply_zen_padding(window)
+  if is_zen_window(window) then
+    apply_zen_padding(window)
+  end
 end)
 
 return config

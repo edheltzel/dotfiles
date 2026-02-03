@@ -69,10 +69,12 @@ local keys = {
   },
   { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up" }), desc = "split up w/ cmd+k u" },
 
-  -- Zen Mode: center content with padding
+  -- Zen Mode: toggle in current window
   { key = "z", mods = "LEADER", action = act.EmitEvent("toggle-zen-mode"), desc = "zen mode w/ cmd+k z" },
+  -- Zen Mode: spawn dedicated zen window
+  { key = "Z", mods = "LEADER", action = act.EmitEvent("spawn-zen-window"), desc = "zen window w/ cmd+k Z" },
   -- Zoom/Focus a pane
-  { key = "Z", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k Z" },
+  { key = "=", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k =" },
 
   --- ---------------------------------------------------------------------------
   -- these will jump you into a modes for wezterm

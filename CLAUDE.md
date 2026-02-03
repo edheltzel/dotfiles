@@ -39,6 +39,11 @@ reload              # Reload fish config
 nvim                # Primary editor
 zz                  # Zed in new window
 eva                 # Start SSH agent + add key to keychain
+
+# AI Tools
+cc                  # Claude Code (--dangerously-skip-permissions)
+ccc                 # Claude Converse mode (--dangerously-skip-permissions)
+ccu                 # Claude Code usage stats (bunx ccusage)
 ```
 
 ## Architecture
@@ -62,6 +67,7 @@ eva                 # Start SSH agent + add key to keychain
 - `config.fish` - Minimal bootstrap for fast startup
 - `conf.d/` - Auto-loaded modular configs (abbr, paths, exports, fnm, zoxide)
 - `functions/` - Custom functions
+- `completions/` - Fish completions (voicemode, etc.)
 - `conf.d/secrets.fish` - API keys (gitignored, create from `secrets.fish.example`)
 
 **Lazy-loading:** FNM and Zoxide initialize on first use, not at shell startup.
@@ -140,3 +146,33 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 ```bash
 brew uninstall rustup-init && brew reinstall rust && cargo install cargo-update --force
 ```
+
+## WezTerm Configuration
+
+WezTerm config uses a modular architecture (`config/.config/wezterm/`):
+- `wezterm.lua` - Main orchestrator
+- `keymaps.lua` - Leader key (`cmd+k`) and all keybindings
+- `theme.lua`, `tabs.lua`, `statusbar.lua`, `workspaces.lua` - Modular components
+
+**Key WezTerm Keybindings:**
+```lua
+-- Leader key: cmd+k (1.5s timeout)
+cmd+k z             -- Toggle zen mode in current window (adds padding, hides tab bar)
+cmd+k Z             -- Spawn new dedicated zen window
+cmd+k n             -- New window
+cmd+k t             -- New tab
+cmd+k x             -- Close pane/tab
+cmd+k -             -- Split vertical
+cmd+k \             -- Split horizontal
+cmd+k h/j/l/u       -- Split left/down/right/up (Ghostty-style)
+cmd+k r             -- Resize pane mode (h/j/k/l to resize)
+cmd+k s             -- Switch workspace (fuzzy)
+cmd+k S             -- Create new workspace
+cmd+k =             -- Toggle pane zoom
+cmd+k c             -- Copy mode
+cmd+k 1-9           -- Jump to tab by index
+```
+
+**Zen Mode:** Adds 25% horizontal padding and hides tab bar for focused writing. Two variants:
+- `toggle-zen-mode`: Toggles in current window (affects all tabs)
+- `spawn-zen-window`: Creates new isolated zen window preserving cwd
