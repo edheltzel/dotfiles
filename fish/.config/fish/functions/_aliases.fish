@@ -8,10 +8,6 @@ alias cma commit-all
 alias cm commit
 alias gs state
 
-# ADE ( AI Developemnt Environment )
-alias pai="cd ~/.claude && claude --dangerously-skip-permissions"
-alias atlas="cd ~/Developer/atlasProject/atlas && claude --dangerously-skip-permissions"
-
 # Confirm before overwriting
 alias cp "cp -Ri"
 alias mv "mv -i"
@@ -42,6 +38,10 @@ alias dots "cd ~/.dotfiles"
 alias neoed "cd ~/.dotfiles/neoed/.config/nvim"
 alias neo "cd ~/.dotfiles/neoed/.config/nvim"
 alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
+
+# ADE ( AI Developemnt Environment )
+alias pai="cd ~/.claude && claude --dangerously-skip-permissions"
+alias atlas="cd ~/Developer/atlasProject/atlas && claude --dangerously-skip-permissions"
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
@@ -78,6 +78,7 @@ alias dc docker-compose
 # Node - PNPM
 alias pn pnpm
 alias px "pnpm dlx"
+alias npx bunx
 
 # PHP - Laravel
 alias art "php artisan"

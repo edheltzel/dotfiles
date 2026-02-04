@@ -70,7 +70,35 @@
         {
           "key" : "a",
           "type" : "application",
-          "value" : "/Applications/Affinity.app"
+          "value" : "/Applications/Maestro.app"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/Figma.app"
+            },
+            {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/Applications/Affinity.app"
+            },
+            {
+              "key" : "p",
+              "type" : "application",
+              "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
+            },
+            {
+              "key" : "l",
+              "type" : "application",
+              "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
+            }
+          ],
+          "iconPath" : "theatermask.and.paintbrush.fill",
+          "key" : "d",
+          "label" : "Design Tools",
+          "type" : "group"
         },
         {
           "actions" : [
@@ -166,11 +194,6 @@
           "type" : "group"
         },
         {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Applications/Figma.app"
-        },
-        {
           "actions" : [
             {
               "iconPath" : "questionmark.key.filled",
@@ -194,6 +217,7 @@
               "value" : "https://notebooklm.google.com/"
             }
           ],
+          "iconPath" : "sparkle",
           "key" : "g",
           "label" : "Google Gemini",
           "type" : "group"
@@ -259,11 +283,6 @@
           "type" : "group"
         },
         {
-          "key" : "l",
-          "type" : "application",
-          "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
-        },
-        {
           "key" : "m",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
@@ -279,24 +298,9 @@
           "value" : "/Applications/Obsidian.app"
         },
         {
-          "key" : "p",
-          "type" : "application",
-          "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
-        },
-        {
           "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
-        },
-        {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Safari.app"
-        },
-        {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Todoist.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -564,7 +568,7 @@
           "value" : "/Applications/Shapr3D.app"
         },
         {
-          "key" : "S",
+          "key" : "C",
           "type" : "application",
           "value" : "/Applications/OpenSCAD-2021.01.app"
         },
@@ -572,6 +576,11 @@
           "key" : "x",
           "type" : "application",
           "value" : "/Applications/xTool Studio.app"
+        },
+        {
+          "key" : "u",
+          "type" : "application",
+          "value" : "/Applications/Snapmaker Orca.app"
         }
       ],
       "iconPath" : "view.3d",

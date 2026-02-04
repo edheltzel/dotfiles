@@ -12,7 +12,8 @@
 # 2. Software Dev                                             #
 # 3. Desktop Apps                                             #
 # 4. MacOS Specific Stuff                                     #
-#                                                             #
+#                                                             # 
+# ADE (AI/Agent Development Environment)                      #
 ###############################################################
 
 # Options
@@ -314,14 +315,17 @@ cask 'visual-studio-code'             # Code editor
 cask 'zed'                            # Code editor - Rust
 
 # RAG+CAG LLM
-# cask 'block-goose'                    # On Machine AI Agent
-# cask 'chatgpt'                        # Desktop client AI chat
 # brew 'ollama'                         # Local LLMs
 # cask 'ollama'
 
-brew 'gemini-cli'
-cask 'claude'                         # Desktop client AI chat
+brew 'gemini-cli'                     # Terminal ADE 
+caks 'antigravity'
+brew 'claude-code'                    # Terminal ADE - curl -fsSL https://claude.ai/install.sh | bash
+cask 'claude'                         # AI desktop client
+brew 'opencode'                       # Terminal ADE (AI/Agent Development Environment)
+cask 'opencode-desktop'               # AI desktop client
 cask 'superwhisper'                   # AI dictation app
+cask 'wispr-flow'                     # AI dictation app
 
 # Terminal emulators
 cask 'warp'                           # Rust
