@@ -40,8 +40,8 @@ alias neo "cd ~/.dotfiles/neoed/.config/nvim"
 alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
 
 # ADE ( AI Developemnt Environment )
-alias pai="cd ~/.claude && claude --dangerously-skip-permissions"
-alias atlas="cd ~/Developer/atlasProject/atlas && claude --dangerously-skip-permissions"
+alias pai="cd ~/Developer/AI/PAI
+alias atlas="cd ~/Developer/AI/Atlas"
 
 # Actions
 alias e '$EDITOR' # open in Default Editor
@@ -61,7 +61,7 @@ alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBL
 alias ipl "ipconfig getifaddr en0" #internal network IP
 alias ips "ifconfig -a | grep -o \"inet6\\? \\(\\([0-9]\\+\\.[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)\" | sed -e \"s/inet6* //\""
 alias sniff "sudo ngrep -d \"en1\" -t \"^(GET|POST) \" \"tcp and port 80\""
-alias httpdump "sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias httpdump "sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .* | GET \/.*\""
 alias whois "grc whois" # colorized whois
 
 # SSH and localhost
