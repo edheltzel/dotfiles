@@ -68,6 +68,11 @@
           "type" : "group"
         },
         {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Applications/Maestro.app"
+        },
+        {
           "actions" : [
             {
               "key" : "b",
@@ -276,11 +281,6 @@
           "key" : "k",
           "label" : "Keeb",
           "type" : "group"
-        },
-        {
-          "key" : "M",
-          "type" : "application",
-          "value" : "/Applications/Maestro.app"
         },
         {
           "key" : "m",
@@ -820,6 +820,37 @@
         {
           "actions" : [
             {
+              "key" : "h",
+              "label" : "Focus Left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus left"
+            },
+            {
+              "key" : "j",
+              "label" : "Focus Down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus down"
+            },
+            {
+              "key" : "k",
+              "label" : "Focus Up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus up"
+            },
+            {
+              "key" : "l",
+              "label" : "Focus Right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus right"
+            }
+          ],
+          "key" : "f",
+          "label" : "Focus",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
               "iconPath" : "inset.filled.lefthalf.rectangle",
               "key" : "h",
               "type" : "command",
@@ -847,37 +878,6 @@
           "iconPath" : "rectangle.3.group.fill",
           "key" : "j",
           "label" : "Join with",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "h",
-              "label" : "Focus Left",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace focus left"
-            },
-            {
-              "key" : "j",
-              "label" : "Focus Down",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace focus down"
-            },
-            {
-              "key" : "k",
-              "label" : "Focus Up",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace focus up"
-            },
-            {
-              "key" : "l",
-              "label" : "Focus Right",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace focus right"
-            }
-          ],
-          "key" : "f",
-          "label" : "Focus",
           "type" : "group"
         },
         {
