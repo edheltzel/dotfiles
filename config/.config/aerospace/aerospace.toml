@@ -24,9 +24,9 @@ exec-on-workspace-change = [
 ]
 on-focus-changed = [
   'move-mouse window-lazy-center',
-  'exec-and-forget sketchybar --rigger aerospace_focus_change',
+  'exec-and-forget sketchybar --trigger aerospace_focus_change',
 ]
-on-mode-changed = ['exec-and-forget sketchybar --rigger aerospace_mode_change']
+on-mode-changed = ['exec-and-forget sketchybar --trigger aerospace_mode_change']
 
 [gaps]
 inner.horizontal = 5
@@ -57,10 +57,12 @@ alt-ctrl-shift-h = 'focus left'
 alt-ctrl-shift-k = 'focus up'
 alt-ctrl-shift-l = 'focus right'
 
-[mode.resize.binding]
-minus = 'resize smart -50'
-shift-equal = 'resize smart +50' # plus symbol
-equal = 'balance-sizes'
+[mode.resize.binding] # hyper+w+s
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+0 = 'balance-sizes'
 esc = 'mode main'
 enter = 'mode main'
 

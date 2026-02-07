@@ -68,39 +68,6 @@
           "type" : "group"
         },
         {
-          "key" : "M",
-          "type" : "application",
-          "value" : "/Applications/Maestro.app"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/Figma.app"
-            },
-            {
-              "key" : "a",
-              "type" : "application",
-              "value" : "/Applications/Affinity.app"
-            },
-            {
-              "key" : "p",
-              "type" : "application",
-              "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
-            },
-            {
-              "key" : "l",
-              "type" : "application",
-              "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
-            }
-          ],
-          "iconPath" : "theatermask.and.paintbrush.fill",
-          "key" : "d",
-          "label" : "Design Tools",
-          "type" : "group"
-        },
-        {
           "actions" : [
             {
               "key" : "b",
@@ -142,6 +109,34 @@
           "key" : "c",
           "type" : "application",
           "value" : "/Applications/Claude.app"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/Applications/Affinity.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/Figma.app"
+            },
+            {
+              "key" : "l",
+              "type" : "application",
+              "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
+            },
+            {
+              "key" : "p",
+              "type" : "application",
+              "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
+            }
+          ],
+          "iconPath" : "theatermask.and.paintbrush.fill",
+          "key" : "d",
+          "label" : "Design Tools",
+          "type" : "group"
         },
         {
           "actions" : [
@@ -281,6 +276,11 @@
           "key" : "k",
           "label" : "Keeb",
           "type" : "group"
+        },
+        {
+          "key" : "M",
+          "type" : "application",
+          "value" : "/Applications/Maestro.app"
         },
         {
           "key" : "m",
@@ -541,6 +541,11 @@
           "value" : "/Applications/BambuStudio.app"
         },
         {
+          "key" : "C",
+          "type" : "application",
+          "value" : "/Applications/OpenSCAD-2021.01.app"
+        },
+        {
           "key" : "f",
           "type" : "application",
           "value" : "/Applications/FreeCAD.app"
@@ -568,19 +573,14 @@
           "value" : "/Applications/Shapr3D.app"
         },
         {
-          "key" : "C",
+          "key" : "u",
           "type" : "application",
-          "value" : "/Applications/OpenSCAD-2021.01.app"
+          "value" : "/Applications/Snapmaker Orca.app"
         },
         {
           "key" : "x",
           "type" : "application",
           "value" : "/Applications/xTool Studio.app"
-        },
-        {
-          "key" : "u",
-          "type" : "application",
-          "value" : "/Applications/Snapmaker Orca.app"
         }
       ],
       "iconPath" : "view.3d",
@@ -770,6 +770,12 @@
     {
       "actions" : [
         {
+          "key" : "tab",
+          "label" : "Jump to last Workspace",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace-back-and-forth"
+        },
+        {
           "iconPath" : "0.square.fill",
           "key" : "0",
           "label" : "HQ",
@@ -841,6 +847,37 @@
           "iconPath" : "rectangle.3.group.fill",
           "key" : "j",
           "label" : "Join with",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Focus Left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus left"
+            },
+            {
+              "key" : "j",
+              "label" : "Focus Down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus down"
+            },
+            {
+              "key" : "k",
+              "label" : "Focus Up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus up"
+            },
+            {
+              "key" : "l",
+              "label" : "Focus Right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus right"
+            }
+          ],
+          "key" : "f",
+          "label" : "Focus",
           "type" : "group"
         },
         {
