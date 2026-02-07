@@ -6,7 +6,7 @@ config-version = 2
 after-startup-command = [
   'exec-and-forget borders active_color=0xffa48cf2 inactive_color=0xff3B446A width=5.0',
 ]
-start-at-login = false
+start-at-login = true
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -46,9 +46,12 @@ alt-ctrl-shift-2 = 'workspace design'   # 2 -> design apps
 alt-ctrl-shift-3 = 'workspace comms'    # 3 -> comms
 alt-ctrl-shift-4 = 'workspace overflow' # 4 -> overflow
 
-alt-ctrl-shift-tab = 'workspace-back-and-forth'      ## Cycle last 2 workspaces
+# jump to last workspace
+alt-ctrl-shift-tab = 'workspace-back-and-forth'
+# cycle through workspaces
 alt-ctrl-shift-leftSquareBracket = 'workspace prev'
 alt-ctrl-shift-rightSquareBracket = 'workspace next'
+# cycle through window/app focus
 alt-ctrl-shift-j = 'focus down'
 alt-ctrl-shift-h = 'focus left'
 alt-ctrl-shift-k = 'focus up'
@@ -61,13 +64,13 @@ equal = 'balance-sizes'
 esc = 'mode main'
 enter = 'mode main'
 
-######### DEDICATED APP WORKSPACES ##########
+######### Assigned Workspaces to Apps ##########
 [[on-window-detected]] # HQ Workspace
 if.app-name-regex-substring = 'Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*|Ghostty|Antigravity|Bazecor'
+if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*|Ghostty|Antigravity|Bazecor|Maestro'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace
