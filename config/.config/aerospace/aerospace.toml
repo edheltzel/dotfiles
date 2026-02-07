@@ -76,7 +76,7 @@ if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*|Ghostty|Ant
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace
-if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape"
+if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape|Snapmaker Orca"
 run = "move-node-to-workspace design"
 
 [[on-window-detected]] # Comms Workspace
