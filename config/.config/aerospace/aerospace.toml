@@ -80,7 +80,7 @@ if.app-name-regex-substring = 'Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Typora|kitty|WezTerm|Zed|Warp*|Ghostty|Antigravity|Bazecor|Maestro'
+if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Antigravity|Typora|Maestro|Bazecor'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace
