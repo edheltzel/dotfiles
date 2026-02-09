@@ -48,8 +48,8 @@ brew 'jj'           # Jujitsu — a version control system
 brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
+brew 'tmux'         # Terminal multiplexer
 # brew 'zellij'       # Terminal multiplexer - Rust
-# brew 'tmux'         # Terminal multiplexer
 
 # CLI Basics
 brew 'ast-grep'             # A fast and polyglot tool for code structural search, lint, rewriting at large scale
@@ -328,10 +328,11 @@ cask 'superwhisper'                   # AI dictation app
 cask 'wispr-flow'                     # AI dictation app
 
 # Terminal emulators
-cask 'warp'                           # Rust
-cask 'kitty'                          # Python+C
-cask 'wezterm@nightly'                # Rust
 cask 'ghostty'                        # Zig
+cask 'iterm2'                         # OG terminal 
+cask 'kitty'                          # Python+C
+cask 'warp'                           # Rust
+cask 'wezterm@nightly'                # Rust
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
