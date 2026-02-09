@@ -29,6 +29,7 @@ tap 'sass/sass'	# Sass
 tap 'teamookla/speedtest'	# Command line speed test utility
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
 tap 'FelixKratz/formulae'       # A tap for Janky Borders see brew borders
+tap 'marcus/tap'                # Marcus tap for sidecar
 
 #############################################################
 # 1. Command Line                                           #
@@ -256,6 +257,7 @@ cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'typinator'                   # Text expander - macOS only
 cask 'keka'                        # File archiver and extractor
 cask 'homerow'                     # keyboaard shortcuts for every button in macOS
+brew 'sidecar'                     # AI CLI tool
 
 brew 'stats'                       # System stats in menubar
 
