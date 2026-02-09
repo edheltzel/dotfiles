@@ -811,6 +811,13 @@
           "value" : "/opt/homebrew/bin/aerospace workspace overflow"
         },
         {
+          "iconPath" : "repeat",
+          "key" : "c",
+          "label" : "Reload Config",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
           "iconPath" : "rectangle.on.rectangle.slash.fill",
           "key" : "D",
           "label" : "Close all Windows",
@@ -980,30 +987,30 @@
             }
           ],
           "iconPath" : "appwindow.swipe.rectangle",
-          "key" : "m",
+          "key" : "M",
           "label" : "Move",
           "type" : "group"
         },
         {
           "iconPath" : "arrow.down.forward.and.arrow.up.backward.rectangle.fill",
-          "key" : "r",
+          "key" : "R",
           "label" : "Reset Layout",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace flatten-workspace-tree"
         },
         {
-          "iconPath" : "repeat",
-          "key" : "R",
-          "label" : "Reload Config",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace reload-config"
-        },
-        {
           "iconPath" : "inset.filled.trailinghalf.arrow.trailing.rectangle",
-          "key" : "s",
-          "label" : "Resize",
+          "key" : "r",
+          "label" : "Resize Mode",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace mode resize"
+        },
+        {
+          "iconPath" : "uiwindow.split.2x1",
+          "key" : "m",
+          "label" : "Move Move",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace mode move"
         }
       ],
       "iconPath" : "/Applications/AeroSpace.app",
