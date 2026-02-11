@@ -20,11 +20,12 @@ local function setup(theme, keymaps)
   config.front_end = "WebGpu"
   config.webgpu_power_preference = "HighPerformance"
 
-  -- Font
+  -- Font (light themes get bolder weight for readability)
+  local font_weight = theme.name == "rose-pine-dawn" and "DemiBold" or "Regular"
   config.font = wezterm.font_with_fallback({
-    { family = "VictorMono Nerd Font", weight = "Regular" },
-    { family = "Lilex Nerd Font Mono", weight = "Regular" },
-    { family = "FiraCode Nerd Font Mono", weight = "Regular" },
+    { family = "VictorMono Nerd Font", weight = font_weight },
+    { family = "Lilex Nerd Font Mono", weight = font_weight },
+    { family = "FiraCode Nerd Font Mono", weight = font_weight },
   })
   config.font_size = 19.0
 
@@ -57,10 +58,15 @@ local function setup(theme, keymaps)
     brightness = 0.5,
   }
 
-  -- Tab bar
+  -- Tab bar (override color scheme's tab_bar background to match theme.lua)
   config.use_fancy_tab_bar = false
   config.status_update_interval = 1000
   config.tab_bar_at_bottom = true
+  config.colors = {
+    tab_bar = {
+      background = theme.tab_bar.bg,
+    },
+  }
 
   return config
 end

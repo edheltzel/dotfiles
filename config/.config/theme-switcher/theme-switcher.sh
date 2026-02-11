@@ -184,9 +184,9 @@ update_kitty() {
 update_wezterm() {
   local theme="$1"
   local wezterm_theme=$(get_wezterm_theme "$theme")
-  local config_file="$CONFIG/wezterm/wezterm.lua"
+  local config_file="$CONFIG/wezterm/theme.lua"
 
-  sed -i '' "s/^local theme = .*/local theme = \"$wezterm_theme\"/" "$config_file"
+  sed -i '' "s/^M\.name = .*/M.name = \"$wezterm_theme\"/" "$config_file"
   success "WezTerm → $wezterm_theme"
 }
 

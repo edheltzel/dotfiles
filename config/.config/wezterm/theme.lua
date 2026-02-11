@@ -9,30 +9,45 @@ function M.basename(s)
   return string.gsub(s, "(.*[/\\])(.*)", "%2")
 end
 
--- Theme selection: "Eldritch", "rose-pine", "rose-pine-moon", "rose-pine-dawn"
+-- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
 M.name = "Eldritch"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
-  ["rose-pine-dawn"] = {
-    colors = { red = "#b4637a", purple = "#907aa9", cyan = "#56949f", yellow = "#ea9d34", pink = "#d7827e", white = "#575279" },
-    tab_bar = { bg = "#f2e9e1", active_bg = "#faf4ed", active_fg = "#575279", inactive_bg = "#fffaf3", inactive_fg = "#6A6681" },
+  ["Aura"] = {
+    colors = { red = "#FF6767", purple = "#A277FF", cyan = "#82E2FF", yellow = "#FFCA85", pink = "#F694FF", white = "#EDECEE" },
+    tab_bar = { bg = "#15141B", active_bg = "#A277FF", active_fg = "#15141B", inactive_bg = "#1C1B22", inactive_fg = "#6D6D6D" },
+  },
+  ["Eldritch"] = {
+    colors = { red = "#F16C75", purple = "#A48CF2", cyan = "#04D1F9", yellow = "#F7F67F", pink = "#F265B5", white = "#EBFAFA" },
+    tab_bar = { bg = "#171928", active_bg = "#37F499", active_fg = "#171928", inactive_bg = "#212337", inactive_fg = "#7081D0" },
   },
   ["rose-pine"] = {
     colors = { red = "#eb6f92", purple = "#c4a7e7", cyan = "#9ccfd8", yellow = "#f6c177", pink = "#ebbcba", white = "#e0def4" },
     tab_bar = { bg = "#191724", active_bg = "#ebbcba", active_fg = "#191724", inactive_bg = "#26233a", inactive_fg = "#9ccfd8" },
   },
-  default = {
-    colors = { red = "#F16C75", purple = "#A48CF2", cyan = "#04D1F9", yellow = "#F7F67F", pink = "#F265B5", white = "#EBFAFA" },
-    tab_bar = { bg = "#171928", active_bg = "#37F499", active_fg = "#171928", inactive_bg = "#212337", inactive_fg = "#7081D0" },
+  ["rose-pine-dawn"] = {
+    colors = { red = "#b4637a", purple = "#907aa9", cyan = "#56949f", yellow = "#ea9d34", pink = "#d7827e", white = "#575279" },
+    tab_bar = { bg = "#f2e9e1", active_bg = "#faf4ed", active_fg = "#575279", inactive_bg = "#fffaf3", inactive_fg = "#6A6681" },
+  },
+  ["rose-pine-moon"] = {
+    colors = { red = "#eb6f92", purple = "#c4a7e7", cyan = "#9ccfd8", yellow = "#f6c177", pink = "#ea9a97", white = "#e0def4" },
+    tab_bar = { bg = "#232136", active_bg = "#ea9a97", active_fg = "#232136", inactive_bg = "#232136", inactive_fg = "#9ccfd8" },
+  },
+  ["Tokyo Night"] = {
+    colors = { red = "#F7768E", purple = "#BB9AF7", cyan = "#7AA2F7", yellow = "#E0AF68", pink = "#FF9E64", white = "#C0CAF5" },
+    tab_bar = { bg = "#1A1B26", active_bg = "#BB9AF7", active_fg = "#1A1B26", inactive_bg = "#1A1B26", inactive_fg = "#565F89" },
+  },
+  ["Tokyo Night Moon"] = {
+    colors = { red = "#FF757F", purple = "#C099FF", cyan = "#82AAFF", yellow = "#FFC777", pink = "#FF966C", white = "#C8D3F5" },
+    tab_bar = { bg = "#222236", active_bg = "#C099FF", active_fg = "#222236", inactive_bg = "#222236", inactive_fg = "#636DA6" },
   },
 }
 
--- Resolve theme key (rose-pine-moon inherits rose-pine)
+-- Resolve theme key (fallback to Eldritch if unknown)
 local function get_theme_key(name)
   if themes[name] then return name end
-  if name:match("^rose%-pine") then return "rose-pine" end
-  return "default"
+  return "Eldritch"
 end
 
 local theme_data = themes[get_theme_key(M.name)]

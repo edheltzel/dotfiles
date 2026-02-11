@@ -65,7 +65,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Fleet Light",
-		"dark": "Aura Soft Dark",
+		"dark": "Fleet Dark",
 	},
 	"icon_theme": "Catppuccin Latte",
 	// "experimental.theme_overrides": {
