@@ -103,7 +103,8 @@
 	"hover_popover_delay": 15000,
 	"show_edit_predictions": true,
 	"edit_predictions": {
-		"mode": "subtle",
+		"provider": "supermaven",
+		"mode": "eager",
 		"disabled_globs": [
 			"**/.git",
 			"**/.svn",
@@ -139,7 +140,7 @@
 		},
 		"inline_assistant_model": {
 			"provider": "anthropic",
-			"model": "claude-sonnet-4-5-latest",
+			"model": "claude-opus-4-6-1m-context-latest",
 		},
 		"commit_message_model": {
 			"provider": "google",
@@ -156,10 +157,6 @@
 			"command": "opencode",
 			"args": ["acp"],
 		},
-	},
-	"features": {
-		// "edit_prediction_provider": "supermaven"
-		"edit_prediction_provider": "zed",
 	},
 	"collaboration_panel": {
 		"button": false,
