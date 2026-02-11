@@ -50,7 +50,6 @@ brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
 brew 'tmux'         # Terminal multiplexer
-# brew 'zellij'       # Terminal multiplexer - Rust
 
 # CLI Basics
 brew 'ast-grep'             # A fast and polyglot tool for code structural search, lint, rewriting at large scale
@@ -224,7 +223,7 @@ cask 'bambu-studio'         # 3D Slicer
 cask 'orcaslicer'           # 3D Slicer
 
 # Media
-cask 'boom-3d'                 # Audio enhancer
+cask 'boom-3d'              # Audio enhancer - paid
 cask 'kap'                  # Screen recorder
 brew 'pandoc'               # Universal file converter
 cask 'vlc'                  # Media player
@@ -250,14 +249,14 @@ cask 'keycastr'                    # Display keystrokes
 cask 'onyx'                        # System maintenance
 cask 'transnomino'                 # A batch rename utility
 brew 'shortcat'                    # vim motions for MacOS
-cask 'mouseless'                   # Mouseless app for MacOS
+cask 'mouseless'                   # Mouse-less app for MacOS
 cask 'openinterminal'              # Finder button, opens directory in terminal
 cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'typinator'                   # Text expander - macOS only
-cask 'keka'                        # File archiver and extractor
-cask 'homerow'                     # keyboaard shortcuts for every button in macOS
-brew 'sidecar'                     # AI CLI tool
+cask 'keka'                        # File archive and extractor
+cask 'homerow'                     # keyboard shortcuts for every button in macOS
+cask tailscale-app
 
 brew 'stats'                       # System stats in menubar
 
@@ -265,9 +264,9 @@ brew 'stats'                       # System stats in menubar
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
 cask 'via'                         # Keyboard configuration desktop client
 cask 'vial'                        # Keyboard configuration desktop client
-cask 'bazecor'                     # Keyboard config for Dygma Defey keyboard
+cask 'bazecor'                     # Keyboard config for Dygma Defy keyboard
 
-# cask 'karabiner-elements'          # Keyboard customization tool
+# cask 'karabiner-elements'          # Keyboard customization tool - paid
 cask 'leader-key'                  # Keyboard App launcher
 
 # Menu Bar Hacks
@@ -328,6 +327,7 @@ brew 'opencode'                       # Terminal ADE (AI/Agent Development Envir
 cask 'opencode-desktop'               # AI desktop client
 cask 'superwhisper'                   # AI dictation app
 cask 'wispr-flow'                     # AI dictation app
+brew 'sidecar'                     # AI CLI tool
 
 # Terminal emulators
 cask 'ghostty'                        # Zig
