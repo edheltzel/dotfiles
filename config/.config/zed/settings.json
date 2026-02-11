@@ -65,18 +65,18 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Fleet Light",
-		"dark": "Fleet Dark",
+		"dark": "Aura Soft Dark",
 	},
 	"icon_theme": "Catppuccin Latte",
-	"experimental.theme_overrides": {
-		"players": [
-			{
-				"cursor": "#ea9a97ff",
-				"background": "#ea9a97ff",
-				"selection": "#ea9a972d",
-			},
-		],
-	},
+	// "experimental.theme_overrides": {
+	// 	"players": [
+	// 		{
+	// 			"cursor": "#ea9a97ff",
+	// 			"background": "#ea9a97ff",
+	// 			"selection": "#ea9a972d",
+	// 		},
+	// 	],
+	// },
 	"base_keymap": "VSCode",
 	"buffer_font_features": {
 		"calt": true,
@@ -266,7 +266,7 @@
 		"button": false,
 		"cursor_shape": "bar",
 		"copy_on_select": true,
-		"font_family": "Lilex Nerd Font Mono",
+		"font_family": "VictorMono Nerd Font",
 		"font_size": 18.0,
 		"font_weight": 500.0,
 		"default_height": 500,
