@@ -9,7 +9,8 @@ fish_add_path /Applications/Warp.app/Contents/MacOS
 
 # Prompt configuration - change this to swap prompts
 # Options: "starship", "oh-my-posh"
-set -g FISH_PROMPT oh-my-posh
+#set -g FISH_PROMPT oh-my-posh
+set -g FISH_PROMPT starship
 
 function __init_prompt
     switch $FISH_PROMPT
