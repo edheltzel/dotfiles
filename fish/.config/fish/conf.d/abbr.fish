@@ -15,7 +15,8 @@ if status is-interactive
     abbr --add ocp 'opencode --agent plan'
     abbr --add gg 'gemini --yolo'
     abbr --add ag antigravity
-
+    abbr --add ma maestro-cli
+    
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
     abbr --add config '~/.config/'
