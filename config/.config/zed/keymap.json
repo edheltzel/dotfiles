@@ -8,9 +8,6 @@
 			"ctrl-alt-cmd-e": "project_panel::ToggleFocus",
 			"ctrl-alt-cmd-b": "workspace::ToggleRightDock",
 			"cmd-b": "workspace::ToggleLeftDock",
-			"ctrl-cmd-p": "git::Push",
-			"ctrl-alt-p": "workspace::ToggleZoom",
-			"alt-home": "project_panel::CollapseAllEntries",
 			"space q q": "workspace::CloseWindow",
 			"alt-`": "workspace::NewCenterTerminal",
 			// Tabs/Buffers
@@ -133,7 +130,7 @@
 			"ctrl-alt-d": "editor::DuplicateLineDown",
 			"alt-k": "editor::MoveLineUp",
 			"alt-j": "editor::MoveLineDown",
-			"enter": "editor::Fold",
+			"cmd-enter": "editor::Fold",
 			"enter": "editor::UnfoldLines",
 		},
 	},
