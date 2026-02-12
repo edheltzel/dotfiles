@@ -24,10 +24,10 @@ window-save-state = always
 window-colorspace = "display-p3"
 window-inherit-font-size = false
 window-padding-x = 10
-window-title-font-family = "Lilex Nerd Font Mono"
+window-title-font-family = "VictorMono Nerd Font"
 
 font-size = 18
-font-family = "Lilex Nerd Font Mono"
+font-family = "VictorMono Nerd Font"
 
 mouse-hide-while-typing = true
 
