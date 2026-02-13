@@ -110,11 +110,14 @@
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
+			// File / Find
 			"space space": "file_finder::Toggle",
 			"space f f": "file_finder::Toggle",
 			"space f s": "workspace::Save",
 			"space f S": "workspace::SaveAll",
+			"space f n": "workspace::NewFile",
 			"space f b": "tab_switcher::ToggleAll",
+			// Buffers
 			"space b b": "tab_switcher::ToggleAll",
 			"space ,": "tab_switcher::ToggleAll",
 			"space b a": "pane::CloseAllItems",
@@ -126,13 +129,40 @@
 			"space b j": "pane::SplitAndMoveDown",
 			"space b k": "pane::SplitAndMoveUp",
 			"space b l": "pane::SplitAndMoveRight",
+			// Search
 			"space s g": "pane::DeploySearch",
+			"space /": "pane::DeploySearch",
 			"space s r": "buffer_search::DeployReplace",
+			"space s s": "outline::Toggle",
+			"space s S": "project_symbols::Toggle",
+			// LSP / Code
+			"space c a": "editor::ToggleCodeActions",
+			"space c r": "editor::Rename",
+			"space c f": "editor::Format",
+			"space c o": "editor::OrganizeImports",
+			"space c d": "editor::GoToDiagnostic",
+			// Git
+			"space g b": "editor::ToggleGitBlameInline",
+			// UI Toggles
+			"space u z": "workspace::ToggleCenteredLayout",
+			"space u w": "editor::ToggleSoftWrap",
+			"space u l": "editor::ToggleLineNumbers",
+			"space u L": "editor::ToggleRelativeLineNumbers",
+			"space u g": "editor::ToggleIndentGuides",
+			"space u h": "editor::ToggleInlayHints",
+			"space u d": "editor::ToggleInlineDiagnostics",
+			// Window
+			"space -": "pane::SplitDown",
+			"space w m": "pane::ToggleZoom",
+			// Terminal
+			"space f t": "workspace::NewCenterTerminal",
+			// Panels
+			"space e": "project_panel::ToggleFocus",
+			// AI Agents
 			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
 			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
-			"space e": "project_panel::ToggleFocus",
-			"space u z": "workspace::ToggleCenteredLayout",
+			// Misc
 			"cmd-k": "command_palette::Toggle",
 			"cmd shift l": "editor::SelectAllMatches",
 		},
@@ -149,6 +179,23 @@
 			"alt-j": "editor::MoveLineDown",
 			"cmd-enter": "editor::Fold",
 			"enter": "editor::UnfoldLines",
+			// LSP navigation
+			"g d": "editor::GoToDefinition",
+			"g D": "editor::GoToTypeDefinition",
+			"g I": "editor::GoToImplementation",
+			"g r": "editor::FindAllReferences",
+			"K": "editor::Hover",
+			// Diagnostics
+			"] d": "editor::GoToDiagnostic",
+			"[ d": "editor::GoToPrevDiagnostic",
+			// Git hunks
+			"] h": "editor::GoToHunk",
+			"[ h": "editor::GoToPrevHunk",
+			// Buffer cycling
+			"shift-h": "pane::ActivatePrevItem",
+			"shift-l": "pane::ActivateNextItem",
+			// Redo
+			"U": "editor::Redo",
 		},
 	},
 	// Sneak - normal mode only (S conflicts with surround in visual)
@@ -186,6 +233,13 @@
 		"bindings": {
 			"shift-s": "vim::PushAddSurrounds",
 			"g s a": "vim::PushAddSurrounds",
+		},
+	},
+	// Insert mode - jk to escape
+	{
+		"context": "vim_mode == insert",
+		"bindings": {
+			"j k": "vim::NormalBefore",
 		},
 	},
 ]
