@@ -20,6 +20,7 @@
 			"cmd-7": ["pane::ActivateItem", 6],
 			"cmd-8": ["pane::ActivateItem", 7],
 			"cmd-9": ["pane::ActivateItem", 8],
+			"space k m": "zed::OpenKeymap",
 		},
 	},
 	// Window navigation
@@ -111,12 +112,14 @@
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
 			// File / Find
-			"space space": "file_finder::Toggle",
+			// "space space": "file_finder::Toggle",
 			"space f f": "file_finder::Toggle",
+			"space f r": "file_finder::Toggle",
 			"space f s": "workspace::Save",
 			"space f S": "workspace::SaveAll",
 			"space f n": "workspace::NewFile",
-			"space f b": "tab_switcher::ToggleAll",
+			"space f b": "tab_switcher::Toggle",
+			// "space f b": "tab_switcher::ToggleAll",
 			// Buffers
 			"space b b": "tab_switcher::ToggleAll",
 			"space ,": "tab_switcher::ToggleAll",
@@ -124,7 +127,7 @@
 			"space b o": "pane::CloseOtherItems",
 			"space b d": "pane::CloseActiveItem",
 			"space w d": "pane::CloseActiveItem",
-			"space |": "pane::SplitAndMoveLeft",
+			"space \\": "pane::SplitAndMoveRight",
 			"space b h": "pane::SplitAndMoveLeft",
 			"space b j": "pane::SplitAndMoveDown",
 			"space b k": "pane::SplitAndMoveUp",
@@ -143,6 +146,7 @@
 			"space c d": "editor::GoToDiagnostic",
 			// Git
 			"space g b": "editor::ToggleGitBlameInline",
+			"space g d": "git::Diff",
 			// UI Toggles
 			"space u z": "workspace::ToggleCenteredLayout",
 			"space u w": "editor::ToggleSoftWrap",
@@ -152,12 +156,19 @@
 			"space u h": "editor::ToggleInlayHints",
 			"space u d": "editor::ToggleInlineDiagnostics",
 			// Window
+			"space |": "pane::SplitRight",
 			"space -": "pane::SplitDown",
-			"space w m": "pane::ToggleZoom",
+			"space w m": "workspace::ToggleZoom",
+			"space w z": "workspace::ToggleZoom",
 			// Terminal
 			"space f t": "workspace::NewCenterTerminal",
+			// Diagnostics (trouble.nvim equivalent)
+			"space x x": "diagnostics::Deploy",
+			// Clear search highlights
+			"space n h": ["workspace::SendKeystrokes", ": n o h enter"],
 			// Panels
 			"space e": "project_panel::ToggleFocus",
+			"space o": "outline_panel::ToggleFocus",
 			// AI Agents
 			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
@@ -177,8 +188,7 @@
 			"ctrl-alt-d": "editor::DuplicateLineDown",
 			"alt-k": "editor::MoveLineUp",
 			"alt-j": "editor::MoveLineDown",
-			"cmd-enter": "editor::Fold",
-			"enter": "editor::UnfoldLines",
+			"enter": "editor::ToggleFold",
 			// LSP navigation
 			"g d": "editor::GoToDefinition",
 			"g D": "editor::GoToTypeDefinition",
@@ -187,13 +197,16 @@
 			"K": "editor::Hover",
 			// Diagnostics
 			"] d": "editor::GoToDiagnostic",
-			"[ d": "editor::GoToPrevDiagnostic",
+			"[ d": "editor::GoToPreviousDiagnostic",
 			// Git hunks
 			"] h": "editor::GoToHunk",
-			"[ h": "editor::GoToPrevHunk",
+			"[ h": "editor::GoToPreviousHunk",
 			// Buffer cycling
-			"shift-h": "pane::ActivatePrevItem",
+			"shift-h": "pane::ActivatePreviousItem",
 			"shift-l": "pane::ActivateNextItem",
+			// Folding
+			"z R": "editor::UnfoldAll",
+			"z M": "editor::FoldAll",
 			// Redo
 			"U": "editor::Redo",
 		},

@@ -2,6 +2,8 @@
 //
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
+// Todo: test
+// Fix: test
 //
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
@@ -12,30 +14,17 @@
 	"colorize_brackets": true,
 	"hover_popover_enabled": true,
 	"context_servers": {},
-	"project_panel": {
-		"dock": "right",
-		"scrollbar": {
-			"show": "never",
-		},
-	},
-	"title_bar": {
-		"show_branch_icon": true,
-	},
-	"outline_panel": {
-		"dock": "right",
-	},
 	"git": {
 		"blame": {
 			"show_avatar": true,
 		},
-	},
-	"git_panel": {
-		"dock": "right",
+		"inline_blame": {
+			"enabled": true,
+			"delay_ms": 600,
+			"show_commit_summary": true,
+		},
 	},
 	"ui_font_size": 19.0,
-	"search": {
-		"include_ignored": true,
-	},
 	"minimap": {
 		"show": "never",
 	},
@@ -65,18 +54,53 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Fleet Light",
-		"dark": "Eldritch",
+		"dark": "Eldritch Deeper",
 	},
 	"icon_theme": "Catppuccin Latte",
-	// "experimental.theme_overrides": {
-	// 	"players": [
-	// 		{
-	// 			"cursor": "#ea9a97ff",
-	// 			"background": "#ea9a97ff",
-	// 			"selection": "#ea9a972d",
-	// 		},
-	// 	],
-	// },
+	"experimental.theme_overrides": {
+		"players": [
+			{
+				"cursor": "#37f499ff",
+				"background": "#37f499ff",
+				"selection": "#7081d02A",
+			},
+		],
+		"syntax": {
+			// TODO, WIP, MAYBE, ?
+			"constant.comment.todo": {
+				"color": "#04d1f9ff",
+				"font_weight": 700,
+			},
+			"constant.comment.todo.text": {
+				"color": "#04d1f9ff",
+			},
+			// INFO, NOTE, XXX, DOCS, PERF, TEST, *
+			"string.comment.info": {
+				"color": "#37f499ff",
+				"font_style": "italic",
+			},
+			"string.comment.info.text": {
+				"color": "#37f499ff",
+				"font_style": "italic",
+			},
+			// WARN, HACK, WARNING, FIX, SAFETY, #
+			"keyword.comment.warn": {
+				"color": "#f7c67fff",
+				"font_weight": 700,
+			},
+			"keyword.comment.warn.text": {
+				"color": "#f7c67fff",
+			},
+			// ERROR, FIXME, BUG, DELETE, !
+			"property.comment.error": {
+				"color": "#f16c75ff",
+				"font_weight": 700,
+			},
+			"property.comment.error.text": {
+				"color": "#f16c75ff",
+			},
+		},
+	},
 	"base_keymap": "VSCode",
 	"buffer_font_features": {
 		"calt": true,
@@ -99,6 +123,12 @@
 		"use_smartcase_find": true,
 		"use_system_clipboard": "on_yank",
 		"highlight_on_yank_duration": 250,
+	},
+	"use_autoclose": true,
+	"use_auto_surround": true,
+	"which_key": {
+		"enabled": true,
+		"delay_ms": 0,
 	},
 	"hover_popover_delay": 15000,
 	"show_edit_predictions": true,
@@ -128,29 +158,6 @@
 			"**/.ruff_cache",
 		],
 	},
-	"agent": {
-		"dock": "left",
-		"default_width": 800,
-		"always_allow_tool_actions": true,
-		"play_sound_when_agent_done": true,
-		"default_profile": "ask",
-		"default_model": {
-			"provider": "anthropic",
-			"model": "claude-sonnet-4-5",
-		},
-		"inline_assistant_model": {
-			"provider": "anthropic",
-			"model": "claude-opus-4-6-1m-context-latest",
-		},
-		"commit_message_model": {
-			"provider": "google",
-			"model": "gemini-2.5-flash",
-		},
-		"thread_summary_model": {
-			"provider": "zed.dev",
-			"model": "grok-code-fast-1",
-		},
-	},
 	"agent_servers": {
 		"OpenCode": {
 			"type": "custom",
@@ -168,7 +175,11 @@
 	"lsp_document_colors": "background",
 	"vertical_scroll_margin": 99,
 	"indent_guides": {
+		"enabled": true,
+		"line_width": 1,
+		"active_line_width": 2,
 		"coloring": "indent_aware",
+		"background_coloring": "indent_aware",
 	},
 	"message_editor": {
 		"auto_replace_emoji_shortcode": false,
@@ -267,5 +278,82 @@
 		"font_size": 18.0,
 		"font_weight": 500.0,
 		"default_height": 500,
+	},
+
+	// ── UI Simplification ──────────────────────────────────────────
+	// Comment out any line below to restore that element
+	// Status bar panel buttons
+	"project_panel": {
+		"dock": "right",
+		"scrollbar": { "show": "never" },
+		"button": false,
+	},
+	"outline_panel": {
+		"dock": "right",
+		"button": false,
+	},
+	"git_panel": {
+		"dock": "right",
+		"button": false,
+	},
+	"agent": {
+		"dock": "left",
+		"default_width": 800,
+		"always_allow_tool_actions": true,
+		"play_sound_when_agent_done": true,
+		"default_profile": "ask",
+		"default_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4-5",
+		},
+		"inline_assistant_model": {
+			"provider": "anthropic",
+			"model": "claude-opus-4-6-1m-context-latest",
+		},
+		"commit_message_model": {
+			"provider": "google",
+			"model": "gemini-2.5-flash",
+		},
+		"thread_summary_model": {
+			"provider": "zed.dev",
+			"model": "grok-code-fast-1",
+		},
+		"button": false,
+	},
+	"debugger": {
+		"button": false,
+	},
+	"diagnostics": {
+		"button": false,
+	},
+	"search": {
+		"include_ignored": true,
+		"button": false,
+	},
+	"global_lsp_settings": {
+		"button": false,
+	},
+	// Toolbar
+	"toolbar": {
+		"breadcrumbs": true,
+		"quick_actions": true,
+		"selections_menu": true,
+		"code_actions": true,
+	},
+	// Title bar
+	"title_bar": {
+		"show_branch_icon": true,
+		"show_branch_name": true,
+		"show_project_items": true,
+		"show_user_picture": false,
+		"show_sign_in": false,
+		"show_user_menu": false,
+	},
+	// Status bar
+	"status_bar": {
+		"active_language_button": true,
+		"cursor_position_button": true,
+		"line_endings_button": false,
+		"active_encoding_button": "non_utf8",
 	},
 }
