@@ -311,7 +311,7 @@
 			"model": "gemini-3-flash",
 		},
 		"commit_message_model": {
-			"provider": "zed.dev",
+			"provider": "google",
 			"model": "gemini-2.5-flash",
 		},
 		"thread_summary_model": {
