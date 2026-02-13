@@ -1,5 +1,10 @@
 # agent guidelines - dotfiles repository
 
+## MANDATORY: Use td for Task Management
+
+You must run td usage --new-session at conversation start (or after /clear) to see current work.
+Use td usage -q for subsequent reads.
+
 this file provides guidance to ai coding agents when working with code in this repository.
 
 ## repository overview

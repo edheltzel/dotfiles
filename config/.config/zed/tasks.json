@@ -8,18 +8,7 @@
 		"hide": "always",
 		"shell": "system",
 		"show_summary": true,
-		"show_command": true
-	},
-	{
-		"label": "Claude Code",
-		"command": "claude --dangerously-skip-permissions ",
-		"use_new_terminal": true,
-		"allow_concurrent_runs": true,
-		"reveal": "always",
-		"hide": "always",
-		"shell": "system",
-		"show_summary": true,
-		"show_command": true
+		"show_command": true,
 	},
 	{
 		"label": "Claude Danger",
@@ -30,7 +19,7 @@
 		"hide": "always",
 		"shell": "system",
 		"show_summary": true,
-		"show_command": true
+		"show_command": true,
 	},
 	{
 		"label": "Opencode",
@@ -41,6 +30,17 @@
 		"hide": "always",
 		"shell": "system",
 		"show_summary": true,
-		"show_command": true
-	}
+		"show_command": true,
+	},
+	{
+		"label": "Sidecar",
+		"command": "sidecar",
+		"use_new_terminal": true,
+		"allow_concurrent_runs": true,
+		"reveal": "always",
+		"hide": "always",
+		"shell": "system",
+		"show_summary": true,
+		"show_command": true,
+	},
 ]

@@ -18,14 +18,14 @@ set -gx CARGO_TARGET_DIR /var/folders/88/3h9cyc4979d2l6p7xkn79yqr0000gn/T/cargo-
 set -gx MANPAGER "nvim +Man!"
 
 # Default Terminal use kitty, warp, wezterm, ghostty, etc.
-set -gx TERMINAL kitty
+set -gx TERMINAL wezterm
 set -gx WARP_THEME_DIR "$HOME/.warp/themes"
 
 string match -q "$TERM_PROGRAM" nvim
 and . (nvim --locate-shell-integration-path fish)
 
 # Default Editor use zed, code, nvim, etc.
-set -gx EDITOR nvim
+set -gx EDITOR zed
 
 # Volumes
 set -gx VOL xxx

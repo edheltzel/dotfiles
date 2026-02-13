@@ -67,13 +67,7 @@
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
-			"space g g": [
-				"task::Spawn",
-				{
-					"task_name": "LazyGit",
-					"reveal_target": "center",
-				},
-			],
+			"space g g": "git_panel::ToggleFocus",
 			"space a c": [
 				"task::Spawn",
 				{
@@ -102,6 +96,20 @@
 					"reveal_target": "center",
 				},
 			],
+			"ctrl-alt-cmd-s": [
+				"task::Spawn",
+				{
+					"task_name": "Sidecar",
+					"reveal_target": "center",
+				},
+			],
+			"space a s": [
+				"task::Spawn",
+				{
+					"task_name": "Sidecar",
+					"reveal_target": "center",
+				},
+			],
 		},
 	},
 	// Editor + Vim
@@ -116,10 +124,9 @@
 			"space f s": "workspace::Save",
 			"space f S": "workspace::SaveAll",
 			"space f n": "workspace::NewFile",
-			"space f b": "tab_switcher::Toggle",
-			// "space f b": "tab_switcher::ToggleAll",
 			// Buffers
-			"space b b": "tab_switcher::ToggleAll",
+			"space f b": "tab_switcher::ToggleAll",
+			"space b b": "tab_switcher::Toggle",
 			"space ,": "tab_switcher::ToggleAll",
 			"space b a": "pane::CloseAllItems",
 			"space b o": "pane::CloseOtherItems",
@@ -140,7 +147,7 @@
 			"space c a": "editor::ToggleCodeActions",
 			"space c r": "editor::Rename",
 			"space c f": "editor::Format",
-			"space c o": "editor::OrganizeImports",
+			"space c i": "editor::OrganizeImports",
 			"space c d": "editor::GoToDiagnostic",
 			// Git
 			"space g b": "editor::ToggleGitBlameInline",
@@ -171,6 +178,20 @@
 			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
 			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
+			"space c o": [
+				"agent::NewExternalAgentThread",
+				{
+					"agent": {
+						"custom": {
+							"name": "OpenCode",
+							"command": {
+								"command": "opencode",
+								"args": ["acp"],
+							},
+						},
+					},
+				},
+			],
 			// Misc
 			"space q q": "workspace::CloseWindow",
 			"space k m": "zed::OpenKeymap",

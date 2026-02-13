@@ -193,7 +193,7 @@
 	},
 	"tab_bar": {
 		"show_tab_bar_buttons": false,
-		"show": true,
+		"show": false,
 		"show_nav_history_buttons": false,
 	},
 	"tabs": {
@@ -303,20 +303,20 @@
 		"play_sound_when_agent_done": true,
 		"default_profile": "ask",
 		"default_model": {
-			"provider": "anthropic",
-			"model": "claude-sonnet-4-5",
+			"provider": "google",
+			"model": "gemini-3-pro",
 		},
 		"inline_assistant_model": {
-			"provider": "anthropic",
-			"model": "claude-opus-4-6-1m-context-latest",
+			"provider": "google",
+			"model": "gemini-3-flash",
 		},
 		"commit_message_model": {
-			"provider": "google",
+			"provider": "zed.dev",
 			"model": "gemini-2.5-flash",
 		},
 		"thread_summary_model": {
-			"provider": "zed.dev",
-			"model": "grok-code-fast-1",
+			"provider": "google",
+			"model": "gemini-3-flash",
 		},
 		"button": false,
 	},
@@ -333,6 +333,7 @@
 	"global_lsp_settings": {
 		"button": false,
 	},
+	// Minimal UI
 	// Toolbar
 	"toolbar": {
 		"breadcrumbs": true,
