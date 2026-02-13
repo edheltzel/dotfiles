@@ -1,282 +1,282 @@
-# Agent Guidelines - Dotfiles Repository
+# agent guidelines - dotfiles repository
 
-This file provides guidance to AI coding agents when working with code in this repository.
+this file provides guidance to ai coding agents when working with code in this repository.
 
-## Repository Overview
+## repository overview
 
-This is a Fish shell-based macOS dotfiles repository (v3) using **GNU Stow** for symlink management. The repository follows a modular, package-based architecture where each major configuration area is a separate stow package.
+this is a fish shell-based macos dotfiles repository (v3) using **gnu stow** for symlink management. the repository follows a modular, package-based architecture where each major configuration area is a separate stow package.
 
-**Key Philosophy:**
+**key philosophy:**
 
-- Non-invasive symlink-based configuration management
-- XDG Base Directory compliance to keep `~` clean
-- Multi-editor strategy (Neovim primary, Zed secondary)
-- Performance-optimized shell with lazy-loading patterns
-- Machine-independent design with local overrides
+- non-invasive symlink-based configuration management
+- xdg base directory compliance to keep `~` clean
+- multi-editor strategy (neovim primary, zed secondary)
+- performance-optimized shell with lazy-loading patterns
+- machine-independent design with local overrides
 
-## Commands
+## commands
 
-### Installation & Setup
+### installation & setup
 
 ```bash
-# Fresh machine setup (runs install.sh)
+# fresh machine setup (runs install.sh)
 make install
 
-# Symlink all dotfiles packages
+# symlink all dotfiles packages
 make run
 
-# Add/remove individual packages
+# add/remove individual packages
 make stow pkg=nvim
 make unstow pkg=nvim
 
-# Update all symlinked packages (restows + cleans dead symlinks)
+# update all symlinked packages (restows + cleans dead symlinks)
 make update  # or make up
 
-# Remove all symlinks
+# remove all symlinks
 make delete
 ```
 
-### Testing & Linting
+### testing & linting
 
-- **Test shell scripts**: Run shellcheck manually, no automated tests
-- **Lint Lua**: `stylua --check neoed/.config/nvim` (uses stylua.toml: 2 spaces, 120 width)
+- **test shell scripts**: run shellcheck manually, no automated tests
+- **lint lua**: `stylua --check neoed/.config/nvim` (uses stylua.toml: 2 spaces, 120 width)
 
-### Package Management
-
-```bash
-# Update ALL packages and dependencies
-upp  # alias for topgrade (updates Homebrew, Node, Rust, etc.)
-
-# Package listing commands
-brews          # List Homebrew packages
-casks          # List Homebrew casks
-npms           # List global npm packages
-cargos         # List Cargo packages
-gems           # List Ruby gems
-```
-
-### Development Workflow
+### package management
 
 ```bash
-# Node version management (FNM)
-fnm use                    # Switch to .node-version or .nvmrc
-fnm env --use-on-cd | source  # Enable auto-switching
+# update all packages and dependencies
+upp  # alias for topgrade (updates homebrew, node, rust, etc.)
 
-# Git shortcuts (extensive aliases in .gitconfig)
-git cm "message"           # Signed commit
-git cma "message"          # Add all + signed commit
-git addi                   # Interactive add with fzf
-git logs                   # Pretty git log graph
-
-# Editors
-nvim                       # Primary editor (LazyVim-based NEO.ED)
-zed -n .                   # Zed in new window (alias: zz)
-code -r .                  # VSCode reuse window (alias: coo)
-
-# Shell
-reload                     # Reload Fish configuration
+# package listing commands
+brews          # list homebrew packages
+casks          # list homebrew casks
+npms           # list global npm packages
+cargos         # list cargo packages
+gems           # list ruby gems
 ```
 
-## Code Style
+### development workflow
 
-- **Shell**: Bash with `set -e`, use helper functions from `scripts/functions.sh` (error/success/info/warning), POSIX-compliant where possible
-- **Fish**: Lazy-loading pattern for speed, functions in `functions/`, config in `conf.d/`, abbreviations not aliases
-- **Lua (Neovim)**: 2 space indent, 120 char width, `set` for keymaps not `vim.keymap.set`, local vars, descriptive descriptions
-- **Formatting**: EditorConfig enforced (2 spaces, LF, UTF-8, trim=false, final newline), Makefiles use tabs
-- **Comments**: Use inline for complex logic, avoid obvious comments, document "why" not "what"
+```bash
+# node version management (fnm)
+fnm use                    # switch to .node-version or .nvmrc
+fnm env --use-on-cd | source  # enable auto-switching
 
-## Architecture
+# git shortcuts (extensive aliases in .gitconfig)
+git cm "message"           # signed commit
+git cma "message"          # add all + signed commit
+git addi                   # interactive add with fzf
+git logs                   # pretty git log graph
 
-### Stow Packages
+# editors
+nvim                       # primary editor (lazyvim-based neo.ed)
+zed -n .                   # zed in new window (alias: zz)
+code -r .                  # vscode reuse window (alias: coo)
 
-The repository uses these stow packages (defined in `Makefile:1`):
+# shell
+reload                     # reload fish configuration
+```
 
-- **atlas** - Personal AI Infrastructure (PAI) - **Git Submodule** ([repo](https://github.com/edheltzel/atlas))
-  - Claude Code: hooks, skills, commands, voice system, observability dashboard
-  - OpenCode: agents, commands, plugins, themes
-  - Symlinks to `~/.claude/` and `~/.config/opencode/`
-- **dots** - Misc dotfiles in `$HOME` (`.npmrc`, `.curlrc`, etc.)
-- **git** - Git configuration with SSH signing
-- **fish** - Fish shell config (XDG-compliant structure)
+## code style
+
+- **shell**: bash with `set -e`, use helper functions from `scripts/functions.sh` (error/success/info/warning), posix-compliant where possible
+- **fish**: lazy-loading pattern for speed, functions in `functions/`, config in `conf.d/`, abbreviations not aliases
+- **lua (neovim)**: 2 space indent, 120 char width, `set` for keymaps not `vim.keymap.set`, local vars, descriptive descriptions
+- **formatting**: editorconfig enforced (2 spaces, lf, utf-8, trim=false, final newline), makefiles use tabs
+- **comments**: use inline for complex logic, avoid obvious comments, document "why" not "what"
+
+## architecture
+
+### stow packages
+
+the repository uses these stow packages (defined in `makefile:1`):
+
+- **atlas** - personal ai infrastructure (pai) - **git submodule** ([repo](https://github.com/edheltzel/atlas))
+  - claude code: hooks, skills, commands, voice system, observability dashboard
+  - opencode: agents, commands, plugins, themes
+  - symlinks to `~/.claude/` and `~/.config/opencode/`
+- **dots** - misc dotfiles in `$home` (`.npmrc`, `.curlrc`, etc.)
+- **git** - git configuration with ssh signing
+- **fish** - fish shell config (xdg-compliant structure)
 - **config** - 27+ application configs (yazi, raycast, aerospace, karabiner, zed, etc.)
-- **neoed** - LazyVim customizations (NEO.ED) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
-- **local** - User-specific non-config data
+- **neoed** - lazyvim customizations (neo.ed) - **git submodule** ([repo](https://github.com/edheltzel/neoed))
+- **local** - user-specific non-config data
 
-**Git Submodules:** Both `atlas` and `neoed` are managed as separate repositories. After cloning, run `git submodule update --init --recursive` to initialize them.
+**git submodules:** both `atlas` and `neoed` are managed as separate repositories. after cloning, run `git submodule update --init --recursive` to initialize them.
 
-### Atlas - Personal AI Infrastructure
+### atlas - personal ai infrastructure
 
-The `atlas/` submodule contains the Personal AI Infrastructure (PAI) for Claude Code and OpenCode:
+the `atlas/` submodule contains the personal ai infrastructure (pai) for claude code and opencode:
 
-| Directory | Purpose |
+| directory | purpose |
 |-----------|---------|
 | `atlas/.claude/commands/atlas/` | 18 slash commands (`/atlas:*`) |
-| `atlas/.claude/skills/` | 7 skills (CORE, Art, Agents, Browser, Prompting, etc.) |
-| `atlas/.claude/hooks/` | TypeScript session lifecycle hooks |
-| `atlas/.claude/voice/` | ElevenLabs TTS voice server |
-| `atlas/.claude/observability/` | Real-time Vue dashboard |
-| `atlas/.config/opencode/` | OpenCode AI configuration |
+| `atlas/.claude/skills/` | 7 skills (core, art, agents, browser, prompting, etc.) |
+| `atlas/.claude/hooks/` | typescript session lifecycle hooks |
+| `atlas/.claude/voice/` | elevenlabs tts voice server |
+| `atlas/.claude/observability/` | real-time vue dashboard |
+| `atlas/.config/opencode/` | opencode ai configuration |
 
-**Working with Atlas:**
+**working with atlas:**
 
 ```bash
-# Update atlas submodule
+# update atlas submodule
 cd ~/.dotfiles/atlas && git pull origin master
 
-# Restow after changes
+# restow after changes
 make stow pkg=atlas
 ```
 
-**Atlas Commands:** Run `/atlas:help` in Claude Code to see all available commands.
+**atlas commands:** run `/atlas:help` in claude code to see all available commands.
 
-### XDG Compliance
+### xdg compliance
 
-All paths configured in `fish/.config/fish/conf.d/paths.fish`:
+all paths configured in `fish/.config/fish/conf.d/paths.fish`:
 
-- Config: `~/.config`
-- Data: `~/.local/share`
-- Cache: `~/.cache`
-- Local: `~/.local`
+- config: `~/.config`
+- data: `~/.local/share`
+- cache: `~/.cache`
+- local: `~/.local`
 
-### Machine-Specific Configuration
+### machine-specific configuration
 
-- Use `.gitconfig.local` pattern, never commit machine-specific paths/keys
-- Per-machine files: `gitconfig-bigmac.local`, `gitconfig-macdaddy.local`
-- After cloning on new machine, run `git/git.sh` to provision `.gitconfig.local`
+- use `.gitconfig.local` pattern, never commit machine-specific paths/keys
+- per-machine files: `gitconfig-bigmac.local`, `gitconfig-macdaddy.local`
+- after cloning on new machine, run `git/git.sh` to provision `.gitconfig.local`
 
-### Dependencies
+### dependencies
 
-Homebrew primary, FNM (Node), rbenv (Ruby), rustup (Rust), pipx (Python)
+homebrew primary, fnm (node), rbenv (ruby), rustup (rust), pipx (python)
 
-## Conventions
+## conventions
 
-- Variables: `SCREAMING_SNAKE_CASE` for env/constants, `lowercase_snake` for locals in shell; `camelCase` in Lua
-- Functions: `lowercase_snake_case` with verb prefixes (install*, check*, etc.)
-- Error handling: Always use `set -e` in shell, validate commands exist before use, fail fast with clear messages
+- variables: `screaming_snake_case` for env/constants, `lowercase_snake` for locals in shell; `camelcase` in lua
+- functions: `lowercase_snake_case` with verb prefixes (install*, check*, etc.)
+- error handling: always use `set -e` in shell, validate commands exist before use, fail fast with clear messages
 
-## Code Architecture
+## code architecture
 
-### Fish Shell Structure (`fish/.config/fish/`)
+### fish shell structure (`fish/.config/fish/`)
 
-**Performance Pattern:** Minimal `config.fish` with lazy-loading
+**performance pattern:** minimal `config.fish` with lazy-loading
 
-- `config.fish` - Ultra-minimal for fast startup
-- `conf.d/` - Auto-loaded modular configs:
-  - `abbr.fish` - Abbreviations/aliases (loaded interactively)
-  - `paths.fish` - XDG Base Directory paths
-  - `exports.fish` - Environment variables
-  - `fnm.fish` - FNM (Node) lazy-loaded on first use
-  - `brew.fish` - Homebrew integration
+- `config.fish` - ultra-minimal for fast startup
+- `conf.d/` - auto-loaded modular configs:
+  - `abbr.fish` - abbreviations/aliases (loaded interactively)
+  - `paths.fish` - xdg base directory paths
+  - `exports.fish` - environment variables
+  - `fnm.fish` - fnm (node) lazy-loaded on first use
+  - `brew.fish` - homebrew integration
 - `functions/` - 26 custom functions
-- `completions/` - Custom completions
-- `themes/` - Color themes
+- `completions/` - custom completions
+- `themes/` - color themes
 
-**Important:** FNM and Zoxide use lazy-loading to optimize shell startup speed.
+**important:** fnm and zoxide use lazy-loading to optimize shell startup speed.
 
-### Neovim Configuration (`neoed/.config/nvim/`)
+### neovim configuration (`neoed/.config/nvim/`)
 
-**Framework:** LazyVim with extensive customizations (NEO.ED)
+**framework:** lazyvim with extensive customizations (neo.ed)
 
-- `init.lua` - Bootstrap (loads `config.lazy`)
-- `lua/config/lazy.lua` - Lazy.nvim package manager
-- `lua/config/keymaps.lua` - Custom keybindings (matches Zed where possible)
-- `lua/plugins/` - Plugin specifications:
-  - `colorscheme.lua` - Theme config (Eldritch)
-  - `lualine.lua` - Custom statusline
-  - `snacks.lua` - UI enhancements
-  - `supermaven.lua` - AI code completion
-  - `themes/` - Color schemes (Eldritch, Neoed)
-  - `languages/` - LSP configs per language
-- `lazy-lock.json` - Dependency lock file
+- `init.lua` - bootstrap (loads `config.lazy`)
+- `lua/config/lazy.lua` - lazy.nvim package manager
+- `lua/config/keymaps.lua` - custom keybindings (matches zed where possible)
+- `lua/plugins/` - plugin specifications:
+  - `colorscheme.lua` - theme config (eldritch)
+  - `lualine.lua` - custom statusline
+  - `snacks.lua` - ui enhancements
+  - `supermaven.lua` - ai code completion
+  - `themes/` - color schemes (eldritch, neoed)
+  - `languages/` - lsp configs per language
+- `lazy-lock.json` - dependency lock file
 
-**Editor Priority:** Neovim is default git editor (`.gitconfig:3`)
+**editor priority:** neovim is default git editor (`.gitconfig:3`)
 
-### Git Configuration
+### git configuration
 
-**SSH Signing (not GPG):**
+**ssh signing (not gpg):**
 
-- Uses SSH keys for commit/tag signing
-- Machine-specific config in `.gitconfig.local` (not tracked)
-- Per-machine allowed signers file
-- Setup script: `git/git.sh` provisions local config
+- uses ssh keys for commit/tag signing
+- machine-specific config in `.gitconfig.local` (not tracked)
+- per-machine allowed signers file
+- setup script: `git/git.sh` provisions local config
 
-**Key Aliases:**
+**key aliases:**
 
-- `git cm "msg"` - Signed commit with message
-- `git cma "msg"` - Add all + signed commit
-- `git addi` - Interactive add with fzf selection
-- `git logs` - Pretty graph log
-- Delta pager for diff viewing
+- `git cm "msg"` - signed commit with message
+- `git cma "msg"` - add all + signed commit
+- `git addi` - interactive add with fzf selection
+- `git logs` - pretty graph log
+- delta pager for diff viewing
 
-### Installation Scripts
+### installation scripts
 
-**Flow:** `bootstrap.sh` → `install.sh` → individual scripts
+**flow:** `bootstrap.sh` → `install.sh` → individual scripts
 
-1. **install.sh** - Main orchestrator:
-   - Installs Xcode CLI tools, Homebrew, Git
-   - Sources `scripts/functions.sh` for helpers
-   - Runs `packages/packages.sh` for all package managers
-   - Stows all packages
-   - Runs `duti/duti.sh` (file associations)
-   - Runs `macos/macos.sh` (system preferences)
-   - Runs `git/git.sh` (git setup)
+1. **install.sh** - main orchestrator:
+   - installs xcode cli tools, homebrew, git
+   - sources `scripts/functions.sh` for helpers
+   - runs `packages/packages.sh` for all package managers
+   - stows all packages
+   - runs `duti/duti.sh` (file associations)
+   - runs `macos/macos.sh` (system preferences)
+   - runs `git/git.sh` (git setup)
 
-2. **packages/packages.sh** - Multi-package manager:
-   - Homebrew (`Brewfile` - 80+ CLI tools, 50+ casks)
-   - FNM (Node) - installs LTS + `node_packages.txt`
-   - pipx (Python) - `pipx_packages.txt`
-   - rbenv (Ruby) - `ruby_packages.txt`
-   - rustup (Rust) - `rust_packages.txt`
-   - Bun - `bun_packages.txt`
+2. **packages/packages.sh** - multi-package manager:
+   - homebrew (`brewfile` - 80+ cli tools, 50+ casks)
+   - fnm (node) - installs lts + `node_packages.txt`
+   - pipx (python) - `pipx_packages.txt`
+   - rbenv (ruby) - `ruby_packages.txt`
+   - rustup (rust) - `rust_packages.txt`
+   - bun - `bun_packages.txt`
 
-### Application Configs (`config/.config/`)
+### application configs (`config/.config/`)
 
 27+ applications configured:
 
-- **Terminal:** alacritty, kitty, ghostty, wezterm
-- **Multiplexers:** tmux, zellij
-- **Window Manager:** aerospace (Stage Manager + Raycast)
-- **File Manager:** yazi (custom keybindings)
-- **Git UI:** lazygit
-- **Monitoring:** btop, fastfetch
-- **Launcher:** raycast (extensive scripts)
-- **Prompt:** Oh My Posh (default) or Starship - configurable via `FISH_PROMPT` in `config.fish`
-- **Updater:** topgrade (unified package updater)
-- **Keyboard:** karabiner (Hyper key chording)
-- **Editor:** zed (Vim mode + AI integration)
+- **terminal:** alacritty, kitty, ghostty, wezterm
+- **multiplexers:** tmux, zellij
+- **window manager:** aerospace (stage manager + raycast)
+- **file manager:** yazi (custom keybindings)
+- **git ui:** lazygit
+- **monitoring:** btop, fastfetch
+- **launcher:** raycast (extensive scripts)
+- **prompt:** oh my posh (default) or starship - configurable via `fish_prompt` in `config.fish`
+- **updater:** topgrade (unified package updater)
+- **keyboard:** karabiner (hyper key chording)
+- **editor:** zed (vim mode + ai integration)
 
-## Development Patterns
+## development patterns
 
-### Adding New Configuration
+### adding new configuration
 
-1. Add files to appropriate stow package directory
-2. Run `make stow pkg=<packagename>`
-3. Test the configuration
-4. Commit to git
-5. Run `make update` to restow all packages
+1. add files to appropriate stow package directory
+2. run `make stow pkg=<packagename>`
+3. test the configuration
+4. commit to git
+5. run `make update` to restow all packages
 
-### Troubleshooting Common Issues
+### troubleshooting common issues
 
-**SSH Agent Not Persistent:**
+**ssh agent not persistent:**
 
 ```bash
-eva  # Alias for: eval ssh-agent -s; and ssh-add --apple-use-keychain
+eva  # alias for: eval ssh-agent -s; and ssh-add --apple-use-keychain
 ```
 
-**Node Version Issues:**
+**node version issues:**
 
 ```bash
-fnm env --use-on-cd | source  # Enable auto-switching
+fnm env --use-on-cd | source  # enable auto-switching
 npm install --global $(cat packages/node_packages.txt)
 ```
 
-**Fish Plugin Manager (Fisher) Issues:**
+**fish plugin manager (fisher) issues:**
 
 ```bash
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+curl -sl https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
-**Cargo/Rust Update Failures:**
+**cargo/rust update failures:**
 
 ```bash
 brew uninstall rustup-init
@@ -285,35 +285,43 @@ cargo install cargo-update --force
 topgrade --only cargo
 ```
 
-**Stow Conflicts:**
+**stow conflicts:**
 
 ```bash
-make delete  # Remove all symlinks
-make run     # Recreate all symlinks
+make delete  # remove all symlinks
+make run     # recreate all symlinks
 ```
 
-## Key Files
+## key files
 
-- `Makefile` - Primary interface for all dotfile operations
-- `install.sh` - Main installation orchestrator
-- `packages/Brewfile` - All Homebrew packages/casks/fonts
-- `fish/.config/fish/conf.d/abbr.fish` - Shell aliases/abbreviations
-- `git/.gitconfig` - Git aliases and configuration
-- `neoed/.config/nvim/lua/config/keymaps.lua` - Neovim keybindings
-- `config/.config/topgrade.toml` - Update manager config
-- `.stow-local-ignore` - Files Stow should skip
+- `makefile` - primary interface for all dotfile operations
+- `install.sh` - main installation orchestrator
+- `packages/brewfile` - all homebrew packages/casks/fonts
+- `fish/.config/fish/conf.d/abbr.fish` - shell aliases/abbreviations
+- `git/.gitconfig` - git aliases and configuration
+- `neoed/.config/nvim/lua/config/keymaps.lua` - neovim keybindings
+- `config/.config/topgrade.toml` - update manager config
+- `.stow-local-ignore` - files stow should skip
 
-## Security Notes
+## security notes
 
-- SSH signing enabled by default (commits & tags)
-- GPG support available but SSH preferred
-- Private directory (`private/`) intentionally empty for sensitive data
-- SSH keys managed via macOS keychain
-- Gatekeeper management in `macos/03-security.sh`
-- LuLu firewall installed via Brewfile
+- ssh signing enabled by default (commits & tags)
+- gpg support available but ssh preferred
+- private directory (`private/`) intentionally empty for sensitive data
+- ssh keys managed via macos keychain
+- gatekeeper management in `macos/03-security.sh`
+- lulu firewall installed via brewfile
 
-## Version History
+## version history
 
-- **v3** (current) - Fish shell + GNU Stow
-- **v2** - Fish shell + custom scripts
+- **v3** (current) - fish shell + gnu stow
+- **v2** - fish shell + custom scripts
 - **v1** - oh-my-zsh
+all agent guidelines have been consolidated into [claude.md](./claude.md).
+
+please refer to `claude.md` for complete repository documentation including:
+- repository overview and architecture
+- commands and workflows
+- code style and conventions
+- stow package details
+- troubleshooting guides

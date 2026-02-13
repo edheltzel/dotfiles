@@ -8,7 +8,6 @@
 			"ctrl-alt-cmd-e": "project_panel::ToggleFocus",
 			"ctrl-alt-cmd-d": "debug_panel::ToggleFocus",
 			"ctrl-alt-cmd-b": "workspace::ToggleLeftDock",
-			"space q q": "workspace::CloseWindow",
 			"alt-`": "workspace::NewCenterTerminal",
 			// Tabs/Buffers
 			"cmd-1": ["pane::ActivateItem", 0],
@@ -20,7 +19,6 @@
 			"cmd-7": ["pane::ActivateItem", 6],
 			"cmd-8": ["pane::ActivateItem", 7],
 			"cmd-9": ["pane::ActivateItem", 8],
-			"space k m": "zed::OpenKeymap",
 		},
 	},
 	// Window navigation
@@ -174,6 +172,8 @@
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
 			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
 			// Misc
+			"space q q": "workspace::CloseWindow",
+			"space k m": "zed::OpenKeymap",
 			"cmd-k": "command_palette::Toggle",
 			"cmd shift l": "editor::SelectAllMatches",
 		},
@@ -188,6 +188,7 @@
 			"ctrl-alt-d": "editor::DuplicateLineDown",
 			"alt-k": "editor::MoveLineUp",
 			"alt-j": "editor::MoveLineDown",
+			"cmd-enter": "editor::Fold",
 			"enter": "editor::ToggleFold",
 			// LSP navigation
 			"g d": "editor::GoToDefinition",
