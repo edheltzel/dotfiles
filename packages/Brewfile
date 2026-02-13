@@ -323,7 +323,7 @@ brew 'gemini-cli'                     # Terminal ADE
 caks 'antigravity'
 brew 'claude-code'                    # Terminal ADE - curl -fsSL https://claude.ai/install.sh | bash
 cask 'claude'                         # AI desktop client
-brew 'opencode'                       # Terminal ADE (AI/Agent Development Environment)
+brew 'anomalyco/tap/opencode'         # Terminal ADE (AI/Agent Development Environment)
 cask 'opencode-desktop'               # AI desktop client
 cask 'superwhisper'                   # AI dictation app
 cask 'wispr-flow'                     # AI dictation app

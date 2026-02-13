@@ -1,5 +1,4 @@
 #:schema https://docs.jj-vcs.dev/latest/config-schema.json
-
 [user]
 name = "Ed Heltzel"
 email = "ed@rainyday.media"
