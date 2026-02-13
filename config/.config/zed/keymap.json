@@ -96,7 +96,7 @@
 			"space space": "file_finder::Toggle",
 			"space f f": "file_finder::Toggle",
 			"space f s": "workspace::Save",
-			"space f shift-s": "workspace::SaveAll",
+			"space f S": "workspace::SaveAll",
 			"space f b": "tab_switcher::ToggleAll",
 			"space b b": "tab_switcher::ToggleAll",
 			"space ,": "tab_switcher::ToggleAll",
@@ -141,6 +141,23 @@
 			"b": "vim::PreviousSubwordStart",
 			"e": "vim::NextSubwordEnd",
 			"g e": "vim::PreviousSubwordEnd",
+		},
+	},
+	// Any bracket/quote text objects (mini.ai style)
+	{
+		"context": "vim_operator == a || vim_operator == i || vim_operator == cs || vim_operator == ds || vim_operator == ys",
+		"bindings": {
+			"q": "vim::MiniQuotes",
+			"b": "vim::MiniBrackets",
+			"Q": "vim::AnyQuotes",
+			"B": "vim::AnyBrackets",
+		},
+	},
+	// Surround in visual mode (mini.surround style: gsa)
+	{
+		"context": "vim_mode == visual",
+		"bindings": {
+			"g s a": "vim::PushAddSurrounds",
 		},
 	},
 ]
