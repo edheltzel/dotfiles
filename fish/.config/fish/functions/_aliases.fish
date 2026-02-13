@@ -1,6 +1,7 @@
 # Colorize grep output (good for log files)
-alias grep "rg"
-# 
+alias grep "grep --color=auto"
+alias egrep "egrep --color=auto"
+alias fgrep "fgrep --color=auto"
 # gitnow
 alias cma commit-all
 alias cm commit
