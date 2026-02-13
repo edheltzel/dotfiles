@@ -6,8 +6,8 @@
 			"ctrl-alt-cmd-x": "zed::Extensions",
 			"ctrl-alt-cmd-g": "git_panel::ToggleFocus",
 			"ctrl-alt-cmd-e": "project_panel::ToggleFocus",
-			"ctrl-alt-cmd-b": "workspace::ToggleRightDock",
-			"cmd-b": "workspace::ToggleLeftDock",
+			"ctrl-alt-cmd-d": "debug_panel::ToggleFocus",
+			"ctrl-alt-cmd-b": "workspace::ToggleLeftDock",
 			"space q q": "workspace::CloseWindow",
 			"alt-`": "workspace::NewCenterTerminal",
 			// Tabs/Buffers
@@ -32,10 +32,26 @@
 			"ctrl-j": "workspace::ActivatePaneDown",
 		},
 	},
+	//Git Panel
+	{
+		"context": "GitPanel && !editing",
+		"bindings": {
+			"ctrl-alt-cmd-g": "workspace::ToggleRightDock",
+		},
+	},
+	// Debug Panel
+	{
+		"context": "DebugPanel",
+		"bindings": {
+			"ctrl-alt-cmd-d": "workspace::ToggleBottomDock",
+		},
+	},
 	//Project Panel
 	{
 		"context": "ProjectPanel && !editing",
 		"bindings": {
+			"ctrl-alt-cmd-e": "workspace::ToggleRightDock",
+			"space e": "workspace::ToggleRightDock",
 			"r": "project_panel::Rename",
 			"a": "project_panel::NewFile",
 		},
@@ -90,6 +106,7 @@
 		},
 	},
 	// Editor + Vim
+	// LazyVim like keybindings
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
@@ -114,18 +131,18 @@
 			"space c g": ["agent::NewExternalAgentThread", { "agent": "gemini" }],
 			"space c c": ["agent::NewExternalAgentThread", { "agent": "claude_code" }],
 			"space c z": ["agent::NewExternalAgentThread", { "agent": "native_agent" }],
+			"space e": "project_panel::ToggleFocus",
+			"space u z": "workspace::ToggleCenteredLayout",
 			"cmd-k": "command_palette::Toggle",
 			"cmd shift l": "editor::SelectAllMatches",
 		},
 	},
-	// Vim Motions
+	// Vim Motions - shared normal + visual
 	{
 		"context": "vim_mode == normal || vim_mode == visual",
 		"bindings": {
 			"g h": "editor::MoveToBeginningOfLine",
 			"g l": "editor::MoveToEndOfLine",
-			"s": "vim::PushSneak",
-			"S": "vim::PushSneakBackward",
 			"cmd-shift-d": "editor::DuplicateLineDown",
 			"ctrl-alt-d": "editor::DuplicateLineDown",
 			"alt-k": "editor::MoveLineUp",
@@ -134,6 +151,16 @@
 			"enter": "editor::UnfoldLines",
 		},
 	},
+	// Sneak - normal mode only (S conflicts with surround in visual)
+	{
+		"context": "vim_mode == normal",
+		"bindings": {
+			"s": "vim::PushSneak",
+			"S": "vim::PushSneakBackward",
+			"space j j": "vim::PushSneak",
+		},
+	},
+	// Subword motions
 	{
 		"context": "VimControl && !menu && vim_mode != operator",
 		"bindings": {
@@ -153,10 +180,11 @@
 			"B": "vim::AnyBrackets",
 		},
 	},
-	// Surround in visual mode (mini.surround style: gsa)
+	// Surround in visual mode (S" or gsa")
 	{
 		"context": "vim_mode == visual",
 		"bindings": {
+			"shift-s": "vim::PushAddSurrounds",
 			"g s a": "vim::PushAddSurrounds",
 		},
 	},
