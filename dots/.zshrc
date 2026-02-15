@@ -1,3 +1,5 @@
 
 . "$HOME/.local/share/../bin/env"
-alias pai='bun run ~/.claude/skills/CORE/Tools/PAI.ts'
+
+# PAI alias
+alias pai='bun /Users/ed/.claude/skills/PAI/Tools/pai.ts'

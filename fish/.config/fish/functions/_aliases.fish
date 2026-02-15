@@ -39,7 +39,7 @@ alias neo "cd ~/.dotfiles/neoed/.config/nvim"
 alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
 
 # ADE ( AI Developemnt Environment )
-alias pai="cd ~/Developer/AI/PAI"
+alias pai="bun /Users/ed/.claude/skills/PAI/Tools/pai.ts"
 alias atlas="cd ~/Developer/AI/Atlas"
 
 # Actions
