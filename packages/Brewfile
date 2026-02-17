@@ -154,7 +154,8 @@ brew 'zig'                    # Zig language
 brew 'curlie'             # Command line HTTP client - Go
 brew 'httpie'             # Command line HTTP client
 # brew 'podman'             # Containers
-# brew 'orbstack'           # Docker image viewer
+brew 'orbstack'           # Docker image viewer
+brew 'docker'
 brew 'container'          # Container CLI by Apple
 brew 'doctl'              # DigitalOcean CLI
 brew 's3cmd'              # S3 command line tool
