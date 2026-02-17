@@ -53,3 +53,4 @@ if status is-interactive
         __init_prompt
     end
 end
+set -gx PROJECTS_DIR ~/Developer
