@@ -1,6 +1,6 @@
 # Environment variables — single source of truth
 # Non-interactive vars (needed by scripts, git, cron) come FIRST, outside guard
-# Interactive-only setup (aliases, keybindings, integrations) inside guard
+# Interactive-only setup (aliases, keybindings) inside guard
 
 # XDG Base Directory
 set -gx XDG_CACHE_HOME $HOME/.cache
@@ -25,12 +25,9 @@ set -gx LC_ALL en_US.UTF-8
 string match -q "$TERM_PROGRAM" nvim
     and . (nvim --locate-shell-integration-path fish)
 
-# Interactive-only: key bindings, aliases, integrations
+# Interactive-only: key bindings, aliases
 if status is-interactive
     set -g fish_key_bindings fish_default_key_bindings
 
     source ~/.config/fish/functions/_aliases.fish
-    source ~/.config/fish/functions/_utils.fish
-    source ~/.config/fish/functions/_backup_restore.fish
-    source ~/.config/fish/utils/iterm2_shell_integration.fish
 end
