@@ -48,6 +48,7 @@ set -gx PATH "$PNPM_HOME" $PATH
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Atlas - PAI
 set -gx PROJECTS_DIR $HOME/Developer
 
 # FZF and FD helpers for NeoVim
@@ -57,8 +58,8 @@ set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 # The next line updates PATH for Netlify's Git Credential Helper.
 test -f '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc' && source '/Users/ed/Library/Preferences/netlify/helper/path.fish.inc'
 
-# # Docker
-# set -g fish_user_paths $HOME/.docker/bin $fish_user_paths
+# Docker
+set -g fish_user_paths $HOME/.docker/bin $fish_user_paths
 
 # Google Antigravity
 set -gx PATH $PATH /Users/ed/.antigravity/antigravity/bin
