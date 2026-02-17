@@ -90,4 +90,30 @@ if status is-interactive
     abbr --add tkill 'tmux kill-session -t'
     abbr --add nmux 'tmux new -s "base"'
 
+    # Migrated from aliases (simple 1:1 mappings)
+    abbr --add md 'mkdir -p'
+    abbr --add cwd pwd
+    abbr --add dev 'cd ~/Developer'
+    abbr --add work 'cd ~/Developer'
+    abbr --add sites 'cd ~/Sites'
+    abbr --add dots 'cd ~/.dotfiles'
+    abbr --add neoed 'cd ~/.dotfiles/neoed/.config/nvim'
+    abbr --add neo 'cd ~/.dotfiles/neoed/.config/nvim'
+    abbr --add e '$EDITOR'
+    abbr --add o open
+    abbr --add oo 'open .'
+    abbr --add oa 'open -a'
+    abbr --add del trash
+    abbr --add sdel 'sudo rm -rf'
+    abbr --add serve miniserve
+    abbr --add du dua
+    abbr --add wget 'wget -c'
+    abbr --add whois 'grc whois'
+    abbr --add hostfile 'sudo nvim /etc/hosts'
+    abbr --add editssh 'nvim ~/.ssh'
+    abbr --add dk docker
+    abbr --add dc 'docker compose'
+    abbr --add pn pnpm
+    abbr --add px 'pnpm dlx'
+
 end

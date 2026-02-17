@@ -20,7 +20,7 @@ if status is-interactive
     end
     function node; __lazy_fnm; command node $argv; end
     function npm; __lazy_fnm; command npm $argv; end
-    function npx; __lazy_fnm; command npx $argv; end
+    function npx; __lazy_fnm; command bunx $argv; end
 
     # Lazy-load rbenv — only inits when ruby/gem/bundle first called
     function __lazy_rbenv
