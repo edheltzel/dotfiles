@@ -128,7 +128,7 @@
 	"use_auto_surround": true,
 	"which_key": {
 		"enabled": true,
-		"delay_ms": 100,
+		"delay_ms": 500,
 	},
 	"hover_popover_delay": 15000,
 	"show_edit_predictions": true,
