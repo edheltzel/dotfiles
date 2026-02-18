@@ -73,14 +73,13 @@ if status is-interactive
     abbr --add sp 'speedtest -u Gbps'
     abbr --add spp 'speedtest -u Gbps'
     abbr --add newcode 'bunx --package yo --package generator-code -- yo code'
-    abbr --add omp oh-my-posh
     abbr --add yy yazi
-    abbr --add wrg wrangler
+    abbr --add wr wrangler
     abbr --add upp topgrade
-    abbr --add psrv 'php -S localhost:8888'
+    abbr --add phps 'php -S localhost:8888'
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress
-    abbr --add lzip ouch list
+    abbr --add lzip ouch ligst
     # Tmux
     abbr --add ax 'tmux at -t base'
     abbr --add amux 'tmux at -t base'
