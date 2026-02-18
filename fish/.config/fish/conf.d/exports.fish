@@ -18,12 +18,12 @@ set -gx EZA_CONFIG_DIR $HOME/.config/eza
 set -gx EZA_COLORS "gm=33;1"
 set -gx MANPAGER "nvim +Man!"
 set -gx TERMINAL wezterm
-set -gx EDITOR zed
+set -gx EDITOR nvim
 set -gx LC_ALL en_US.UTF-8
 
 # Nvim shell integration (terminal-aware)
 string match -q "$TERM_PROGRAM" nvim
-    and . (nvim --locate-shell-integration-path fish)
+and . (nvim --locate-shell-integration-path fish)
 
 # Interactive-only: key bindings, aliases
 if status is-interactive

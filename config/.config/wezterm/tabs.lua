@@ -12,7 +12,7 @@ local function setup(theme)
   local project_colors = {
     [".dotfiles"] = colors.cyan,
     neoed = colors.purple,
-    atlas = colors.red,
+    ["atlas-config"] = colors.red,
     -- Add projects: ["my-project"] = colors.pink,
   }
 
