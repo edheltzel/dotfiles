@@ -1,0 +1,29 @@
+{
+  "prompts": [
+    {
+      "name": "Begin Work on Ticket",
+      "ticketMode": "required",
+      "body": "Start work on {{ticket}}. Use td to track progress."
+    },
+    {
+      "name": "Code Review Ticket",
+      "ticketMode": "required",
+      "body": "Do a detailed code review of {{ticket}}. Focus on correctness and tests."
+    },
+    {
+      "name": "Plan to Epic (No Impl)",
+      "ticketMode": "none",
+      "body": "Plan this task into an epic with sub-tasks using td. Do not implement yet."
+    },
+    {
+      "name": "Plan to Epic + Implement",
+      "ticketMode": "none",
+      "body": "Plan this task into an epic with sub-tasks using td, then implement them."
+    },
+    {
+      "name": "TD Review Session",
+      "ticketMode": "none",
+      "body": "Start a td review session. Review open tasks, fix obvious bugs immediately, create tasks for larger issues.\n\nUse: td usage --new-session"
+    }
+  ]
+}
