@@ -1,6 +1,3 @@
-# Fisher plugins — managed by Fisher, symlinked by Stow
-# IMPORTANT: After `fisher install/remove`, always run `make stow pkg=fish`
-# to restore any stow symlinks that Fisher may have overwritten.
 jorgebucaran/fisher
 meaningful-ooo/sponge
 joseluisq/gitnow
