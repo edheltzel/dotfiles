@@ -5,7 +5,6 @@ if status is-interactive
     abbr --add cl clear
 
     # AI Agents + Models
-    abbr --add ccu 'bunx ccusage'
     abbr --add ccc 'claude converse --dangerously-skip-permissions'
     abbr --add cc 'claude --dangerously-skip-permissions'
     abbr --add ccd 'claude --dangerously-skip-permissions'
@@ -16,7 +15,7 @@ if status is-interactive
     abbr --add gg 'gemini --yolo'
     abbr --add ag antigravity
     abbr --add ma maestro-cli
-    
+
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
     abbr --add config '~/.config/'
@@ -73,7 +72,7 @@ if status is-interactive
     abbr --add siz 'du -khsc'
     abbr --add sp 'speedtest -u Gbps'
     abbr --add spp 'speedtest -u Gbps'
-    abbr --add newcode 'npx --package yo --package generator-code -- yo code'
+    abbr --add newcode 'bunx --package yo --package generator-code -- yo code'
     abbr --add omp oh-my-posh
     abbr --add yy yazi
     abbr --add wrg wrangler
