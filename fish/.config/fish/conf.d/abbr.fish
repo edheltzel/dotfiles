@@ -15,6 +15,7 @@ if status is-interactive
     abbr --add gg 'gemini --yolo'
     abbr --add ag antigravity
     abbr --add ma maestro-cli
+    abbr --add sc sidecar
 
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
