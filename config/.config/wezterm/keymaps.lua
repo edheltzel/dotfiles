@@ -225,6 +225,7 @@ end
 
 -- Define key tables
 local key_tables = {
+  -- use cmd+k r to use resize mode
   resize_pane = {
     { key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
     { key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
@@ -233,6 +234,7 @@ local key_tables = {
     { key = "Escape", action = "PopKeyTable" },
     { key = "Enter", action = "PopKeyTable" },
   },
+  -- use cmd+k m to use move mode
   move_tab = {
     { key = "h", action = act.MoveTabRelative(-1) },
     { key = "j", action = act.MoveTabRelative(-1) },
