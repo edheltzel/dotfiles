@@ -150,7 +150,7 @@ local keys = {
     desc = "Rename Workspace",
   },
 
-  { key = "n", mods = "SUPER|CTRL", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
+  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
   { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY

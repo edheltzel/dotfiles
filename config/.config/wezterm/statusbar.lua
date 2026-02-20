@@ -1,5 +1,5 @@
--- statusbar.lua: Left and right status bar rendering via the update-status event.
--- Includes workspace/leader display, CWD, git branch (cached), command, and time.
+-- statusbar.lua: Left and right status bar rendering via the uppurple-status event.
+-- Includes workspace/leader display, CWD, git branch (cached), command, and session stats.
 
 local wezterm = require("wezterm")
 
@@ -33,7 +33,11 @@ local function setup(theme)
     local branch = ""
     if cwd_path ~= "" and cwd_path ~= git_cache.cwd then
       local success, stdout, _ = wezterm.run_child_process({
-        "git", "-C", cwd_path, "branch", "--show-current"
+        "git",
+        "-C",
+        cwd_path,
+        "branch",
+        "--show-current",
       })
       branch = success and stdout:gsub("%s+$", "") or ""
       git_cache.cwd = cwd_path
@@ -47,8 +51,30 @@ local function setup(theme)
     cmd = cmd and basename(cmd) or ""
     local cmd_icon = theme.get_process_icon(pane:get_title(), cmd, wezterm.nerdfonts.fa_code)
 
-    -- Time
-    local time = wezterm.strftime("%H:%M")
+    -- Session stats: total tabs + panes across all workspaces
+    -- Falls back to current window only if wezterm.mux.all_windows() is unavailable
+    local total_tabs = 0
+    local total_panes = 0
+    local workspace_count = #wezterm.mux.get_workspace_names()
+    local ok, all_wins = pcall(function()
+      return wezterm.mux.all_windows()
+    end)
+    if ok and all_wins then
+      for _, mux_win in ipairs(all_wins) do
+        local tabs = mux_win:tabs()
+        total_tabs = total_tabs + #tabs
+        for _, tab in ipairs(tabs) do
+          total_panes = total_panes + #tab:panes()
+        end
+      end
+    else
+      -- Fallback: current window only
+      local win_tabs = window:mux_window():tabs()
+      total_tabs = #win_tabs
+      for _, tab in ipairs(win_tabs) do
+        total_panes = total_panes + #tab:panes()
+      end
+    end
 
     -- Left status (left of the tab line)
     window:set_left_status(wezterm.format({
@@ -69,6 +95,7 @@ local function setup(theme)
 
     -- Git branch (only show if in a git repo)
     if branch ~= "" then
+      table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
       table.insert(right_items, { Text = " ⋮ " })
       table.insert(right_items, { Foreground = { Color = colors.purple } })
       table.insert(right_items, { Text = wezterm.nerdfonts.dev_git_branch .. "  " })
@@ -77,18 +104,30 @@ local function setup(theme)
     end
 
     -- Command: cyan dynamic icon, white text
+    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
     table.insert(right_items, { Text = " ⋮ " })
     table.insert(right_items, { Foreground = { Color = colors.cyan } })
     table.insert(right_items, { Text = cmd_icon .. "  " })
     table.insert(right_items, { Foreground = { Color = colors.white } })
     table.insert(right_items, { Text = cmd })
 
-    -- Time: yellow icon, white text
+    -- Session stats: tabs (yellow), panes (green), workspaces (red)
+    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
     table.insert(right_items, { Text = " ⋮ " })
-    table.insert(right_items, { Foreground = { Color = colors.yellow } })
-    table.insert(right_items, { Text = wezterm.nerdfonts.md_clock .. "  " })
-    table.insert(right_items, { Foreground = { Color = colors.white } })
-    table.insert(right_items, { Text = time })
+    table.insert(right_items, { Foreground = { Color = colors.red2 } })
+    table.insert(right_items, { Text = wezterm.nerdfonts.md_tab .. " " })
+    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
+    table.insert(right_items, { Text = tostring(total_tabs) })
+    table.insert(right_items, { Text = "  " })
+    table.insert(right_items, { Foreground = { Color = colors.red2 } })
+    table.insert(right_items, { Text = wezterm.nerdfonts.md_view_split_vertical .. " " })
+    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
+    table.insert(right_items, { Text = tostring(total_panes) })
+    table.insert(right_items, { Foreground = { Color = colors.red2 } })
+    table.insert(right_items, { Text = "  " })
+    table.insert(right_items, { Text = wezterm.nerdfonts.cod_layers .. " " })
+    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
+    table.insert(right_items, { Text = tostring(workspace_count) })
     table.insert(right_items, { Text = "  " })
 
     window:set_right_status(wezterm.format(right_items))
