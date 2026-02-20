@@ -28,9 +28,9 @@ alias ltd "eza -TaD --icons --ignore-glob=\"node_modules|.git|.vscode|.DS_Store\
 # Shortcuts
 alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
 
-# ADE ( AI Development Environment )
-alias pai="bun $HOME/.claude/skills/PAI/Tools/pai.ts"
+# ADE ( AI/Agent  Development Environment )
 alias atlas="bun $HOME/.claude/skills/PAI/Tools/pai.ts"
+alias fab="fabric-ai"
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
