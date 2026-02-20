@@ -19,7 +19,7 @@ local function setup()
     --   └────────────┴────────────┘
     local _, project_pane = mux.spawn_window({
       workspace = wezterm.nerdfonts.md_triforce,
-      cwd = wezterm.home_dir .. "/.dotfiles",
+      cwd = wezterm.home_dir .. "~/",
     })
     local right_pane = project_pane:split({
       direction = "Right",
