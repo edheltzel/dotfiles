@@ -316,19 +316,19 @@ cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor
 cask 'zed'                            # Code editor - Rust
 
-# RAG+CAG LLM
-# brew 'ollama'                         # Local LLMs
+# Local LLMs
 # cask 'ollama'
+# brew 'ollama'                         
 
-brew 'gemini-cli'                     # Terminal ADE 
-caks 'antigravity'
-brew 'claude-code'                    # Terminal ADE - curl -fsSL https://claude.ai/install.sh | bash
-cask 'claude'                         # AI desktop client
-brew 'anomalyco/tap/opencode'         # Terminal ADE (AI/Agent Development Environment)
-cask 'opencode-desktop'               # AI desktop client
-cask 'superwhisper'                   # AI dictation app
-cask 'wispr-flow'                     # AI dictation app
-brew 'sidecar'                     # AI CLI tool
+# AI tooling and ADEs (AI/Agent Development Environment)
+cask 'opencode-desktop'               # desktop client
+cask 'superwhisper'                   # dictation app
+cask 'wispr-flow'                     # dictation app
+cask 'antigravity'
+brew 'gemini-cli'                      
+brew 'claude-code'                    
+brew 'fabric-ai'
+brew 'sidecar'                     
 brew 'td'
 
 # Terminal emulators
