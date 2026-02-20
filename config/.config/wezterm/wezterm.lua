@@ -46,14 +46,12 @@ local function apply_zen_padding(window)
     top = 0,
     bottom = 0,
   }
-  overrides.enable_tab_bar = false
   window:set_config_overrides(overrides)
 end
 
 local function clear_zen_padding(window)
   local overrides = window:get_config_overrides() or {}
   overrides.window_padding = nil
-  overrides.enable_tab_bar = nil
   window:set_config_overrides(overrides)
 end
 

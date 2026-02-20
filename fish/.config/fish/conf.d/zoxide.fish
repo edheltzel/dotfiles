@@ -6,10 +6,10 @@ if status is-interactive
     end
     function z
         __lazy_zoxide
-        z $argv
+        __zoxide_z $argv
     end
     function zi
         __lazy_zoxide
-        zi $argv
+        __zoxide_zi $argv
     end
 end
