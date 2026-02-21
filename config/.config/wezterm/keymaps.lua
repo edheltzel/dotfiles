@@ -150,8 +150,8 @@ local keys = {
     desc = "Rename Workspace",
   },
 
-  { key = "n", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
-  { key = "p", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
+  { key = "]", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
+  { key = "[", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY
 
@@ -166,8 +166,8 @@ local keys = {
     desc = "Tab Navigator",
   },
   -- Tabs/Panes keybindings
-  { key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
-  { key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1), desc = "Next Tab" },
+  { key = "h", mods = "SUPER|CTRL|ALT", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
+  { key = "l", mods = "SUPER|CTRL|ALT", action = act.ActivateTabRelative(1), desc = "Next Tab" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
@@ -206,10 +206,10 @@ local keys = {
     action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
     desc = "split down",
   },
-  { key = "h", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Left", 10 }), desc = "resize pane left" },
-  { key = "j", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Down", 10 }), desc = "resize pane down" },
-  { key = "k", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Up", 10 }), desc = "resize pane up" },
-  { key = "l", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Right", 10 }), desc = "resize pane right" },
+  -- { key = "h", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Left", 10 }), desc = "resize pane left" },
+  -- { key = "j", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Down", 10 }), desc = "resize pane down" },
+  -- { key = "k", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Up", 10 }), desc = "resize pane up" },
+  -- { key = "l", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Right", 10 }), desc = "resize pane right" },
   { key = "z", mods = "SUPER|CTRL|ALT", action = act.TogglePaneZoomState, desc = "toggle zoom" },
   { key = ",", mods = "SUPER|CTRL|ALT", action = act.ReloadConfiguration, desc = "reload config" },
 }
