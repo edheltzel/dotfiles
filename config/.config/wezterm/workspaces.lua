@@ -7,7 +7,7 @@ local mux = wezterm.mux
 local function setup()
   wezterm.on("gui-startup", function(cmd)
     -- default workspace: single tab, single pane (rocket icon matches config.default_workspace)
-    mux.spawn_window(cmd or { workspace = wezterm.nerdfonts.cod_rocket })
+    mux.spawn_window(cmd or { workspace = wezterm.nerdfonts.md_delta })
 
     -- "dotfiles" workspace: 3-pane split layout
     --   ┌────────────┬────────────┐
@@ -31,7 +31,7 @@ local function setup()
     })
 
     -- Start in the default workspace
-    mux.set_active_workspace(wezterm.nerdfonts.cod_rocket)
+    mux.set_active_workspace(wezterm.nerdfonts.md_delta)
   end)
 end
 
