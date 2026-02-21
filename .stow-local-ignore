@@ -1,0 +1,5 @@
+# Root-level stow ignore — applies to all packages in this stow directory
+# See: https://www.gnu.org/software/stow/manual/html_node/Types-And-Syntax-Of-Ignore-Lists.html
+
+# Ignore literal ~ directory (accidentally created by Atlas tooling path expansion)
+^~$
