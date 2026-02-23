@@ -1,0 +1,18 @@
+# Tab 1: Default shell
+new_tab
+enabled_layouts splits,tall,stack
+layout splits
+cd ~
+launch --cwd=current
+
+# Tab 2: Dotfiles (3-pane split)
+new_tab dotfiles
+enabled_layouts splits,tall,stack
+layout splits
+cd ~/.dotfiles
+launch --cwd=current
+launch --location=vsplit --cwd=current
+launch --location=hsplit --cwd=current
+
+# Focus first tab
+focus_tab 0
