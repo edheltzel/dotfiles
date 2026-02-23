@@ -29,7 +29,7 @@ alias ltd "eza -TaD --icons --ignore-glob=\"node_modules|.git|.vscode|.DS_Store\
 alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
 
 # ADE ( AI/Agent  Development Environment )
-alias atlas="bun $HOME/.claude/skills/PAI/Tools/pai.ts"
+# alias atlas="bun $HOME/.claude/skills/PAI/Tools/pai.ts"
 alias fab="fabric-ai"
 
 # Network shortcuts/aliases and utilities
