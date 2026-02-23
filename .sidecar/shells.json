@@ -1,4 +1,12 @@
 {
   "version": 1,
-  "shells": []
+  "shells": [
+    {
+      "tmuxName": "sidecar-sh--dotfiles-1",
+      "displayName": "ShellTest1",
+      "createdAt": "2026-02-19T17:14:13.981126-05:00",
+      "agentType": "claude",
+      "skipPerms": true
+    }
+  ]
 }
