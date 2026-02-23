@@ -1,15 +1,8 @@
 # agent guidelines - dotfiles repository
 
-## MANDATORY: Use td for Task Management
-
-You must run td usage --new-session at conversation start (or after /clear) to see current work.
-Use td usage -q for subsequent reads.
-
-this file provides guidance to ai coding agents when working with code in this repository.
-
 ## repository overview
 
-this is a fish shell-based macos dotfiles repository (v3) using **gnu stow** for symlink management. the repository follows a modular, package-based architecture where each major configuration area is a separate stow package.
+This is a fish shell-based macos dotfiles repository (v3) using **gnu stow** for symlink management. the repository follows a modular, package-based architecture where each major configuration area is a separate stow package.
 
 **key philosophy:**
 
@@ -113,14 +106,14 @@ the repository uses these stow packages (defined in `makefile:1`):
 
 the `atlas/` submodule contains the personal ai infrastructure (pai) for claude code and opencode:
 
-| directory | purpose |
-|-----------|---------|
-| `atlas/.claude/commands/atlas/` | 18 slash commands (`/atlas:*`) |
-| `atlas/.claude/skills/` | 7 skills (core, art, agents, browser, prompting, etc.) |
-| `atlas/.claude/hooks/` | typescript session lifecycle hooks |
-| `atlas/.claude/voice/` | elevenlabs tts voice server |
-| `atlas/.claude/observability/` | real-time vue dashboard |
-| `atlas/.config/opencode/` | opencode ai configuration |
+| directory                       | purpose                                                |
+| ------------------------------- | ------------------------------------------------------ |
+| `atlas/.claude/commands/atlas/` | 18 slash commands (`/atlas:*`)                         |
+| `atlas/.claude/skills/`         | 7 skills (core, art, agents, browser, prompting, etc.) |
+| `atlas/.claude/hooks/`          | typescript session lifecycle hooks                     |
+| `atlas/.claude/voice/`          | elevenlabs tts voice server                            |
+| `atlas/.claude/observability/`  | real-time vue dashboard                                |
+| `atlas/.config/opencode/`       | opencode ai configuration                              |
 
 **working with atlas:**
 
@@ -322,9 +315,10 @@ make run     # recreate all symlinks
 - **v3** (current) - fish shell + gnu stow
 - **v2** - fish shell + custom scripts
 - **v1** - oh-my-zsh
-all agent guidelines have been consolidated into [claude.md](./claude.md).
+  all agent guidelines have been consolidated into [claude.md](./claude.md).
 
 please refer to `claude.md` for complete repository documentation including:
+
 - repository overview and architecture
 - commands and workflows
 - code style and conventions
