@@ -1,0 +1,6 @@
+# Default workspace: single tab, fish shell
+new_tab
+enabled_layouts splits,tall,stack
+layout splits
+cd ~
+launch --cwd=current

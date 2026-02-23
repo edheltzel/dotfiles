@@ -1,0 +1,16 @@
+# Dotfiles workspace: 3-pane split layout
+#   ┌────────────┬────────────┐
+#   │            │   right    │
+#   │   main     │    top     │
+#   │            ├────────────┤
+#   │            │   right    │
+#   │            │   bottom   │
+#   └────────────┴────────────┘
+
+new_tab dotfiles
+enabled_layouts splits,tall,stack
+layout splits
+cd ~/.dotfiles
+launch --cwd=current
+launch --location=vsplit --cwd=current
+launch --location=hsplit --cwd=current
