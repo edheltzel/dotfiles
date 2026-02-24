@@ -54,7 +54,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Fleet Light",
-		"dark": "Eldritch",
+		"dark": "Eldritch Deeper",
 	},
 	"icon_theme": "Catppuccin Latte",
 	"experimental.theme_overrides": {
@@ -297,10 +297,12 @@
 		"button": false,
 	},
 	"agent": {
-		"notify_when_agent_waiting": "all_screens",
+		"tool_permissions": {
+   "default": "allow"
+  },
+  "notify_when_agent_waiting": "all_screens",
 		"dock": "left",
 		"default_width": 800,
-		"always_allow_tool_actions": true,
 		"play_sound_when_agent_done": true,
 		"default_profile": "ask",
 		"default_model": {
