@@ -134,8 +134,7 @@ def _get_active_window_data() -> tuple[str, str]:
     if w is None:
         return "", ""
     cwd = w.cwd_of_child or ""
-    procs = w.child.foreground_processes
-    exe = procs[0]["cmdline"][0] if procs else ""
+    exe = w.get_exe_of_child() or ""
     return cwd, os.path.basename(exe)
 
 

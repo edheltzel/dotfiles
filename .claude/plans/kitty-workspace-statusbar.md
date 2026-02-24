@@ -266,11 +266,15 @@ map cmd+k>s goto_session ~/.config/kitty/sessions
 map cmd+k>S goto_session ~/.config/kitty/sessions/dotfiles.kitty-session
 
 # Toggle to previous session (like alt-tab for workspaces)
+# NOTE: goto_session only supports backward history (-1, -2, etc.)
+# There is no +1 / forward navigation — both [ and ] go to previous session
 map cmd+ctrl+alt+[ goto_session -1
 map cmd+ctrl+alt+] goto_session -1
 ```
 
 When `goto_session` is called with a directory path, kitty scans for `*.kitty-session` files and presents an interactive selection list — functionally identical to WezTerm's fuzzy workspace switcher.
+
+> **Limitation (verified against docs):** `goto_session` only supports backward history traversal via negative indices (`-1`, `-2`, …). There is no `+1` or forward navigation. Both `[` and `]` navigate to the previously active session.
 
 ### Save Current State
 
@@ -281,11 +285,20 @@ map cmd+k>W save_as_session --use-foreground-process --base-dir ~/.config/kitty/
 
 ### Tab Bar Session Filtering
 
-Scope the tab bar to only show tabs from the active session:
+Scope the tab bar to only show tabs from the active session. Add to `kitty.conf`:
 
 ```conf
 tab_bar_filter session:~ or session:^$
 ```
+
+> **Verified against docs (verbatim example from kitty source):**
+> - `session:~` — matches tabs in the currently active session (falls back to last active session if none is active)
+> - `session:^$` — matches tabs with no session association (created outside any session)
+> - Together: shows only tabs relevant to current context + any "orphan" tabs
+>
+> **Side effect:** `next_tab` / `prev_tab` / `goto_tab` navigation is automatically restricted to only matching tabs — Ctrl+Tab will skip filtered-out tabs. This is intentional and matches WezTerm workspace isolation behavior.
+>
+> **Version requirement:** kitty ≥ 0.43.0 (Sept 2025). Bug fix for `tab_bar_min_tabs` interaction in 0.44.0.
 
 ---
 
@@ -306,7 +319,7 @@ Below is a complete audit of WezTerm's `keymaps.lua` vs kitty's `keymaps.conf`.
 | `cmd+k -` | Split vertical (hsplit) | `launch --location=hsplit --cwd=current` | **Match** | |
 | `cmd+k \` | Split horizontal (vsplit) | `launch --location=vsplit --cwd=current` | **Match** | |
 | `cmd+k z` | Toggle zen mode | `toggle_layout stack` | **Approximate** | Stack layout = zoom; no padding. Acceptable |
-| `cmd+k =` | Toggle pane zoom | `resize_window reset` | **Mismatch** | Should be `toggle_layout stack` for zoom parity |
+| `cmd+k =` | Toggle pane zoom | `resize_window reset` | **Mismatch → Fix** | Change to `toggle_layout stack` for zoom parity |
 | `cmd+k h` | Split left | Not mapped | **Missing** | Add: `launch --location=vsplit --cwd=current` (kitty splits relative to active) |
 | `cmd+k l` | Split right | Not mapped | **Missing** | Add: `launch --location=vsplit --cwd=current` |
 | `cmd+k j` | Split down | Not mapped | **Missing** | Add: `launch --location=hsplit --cwd=current` |
@@ -347,24 +360,14 @@ Below is a complete audit of WezTerm's `keymaps.lua` vs kitty's `keymaps.conf`.
 | `cmd+shift+=` | Increase font | Mapped | **Match** | |
 | `cmd+shift+-` | Decrease font | Mapped | **Match** | |
 | `ctrl+shift+L/U` | Disabled (Neovim passthrough) | Not disabled | **Missing** | Add `no_op` |
-| `cmd+ctrl+alt+[` | Previous workspace | Not mapped | **Missing** | Add: `goto_session -1` (toggle previous session) |
-| `cmd+ctrl+alt+]` | Next workspace | Not mapped | **Missing** | Add: `goto_session -1` (toggle previous session) |
+| `cmd+ctrl+alt+[` | Previous workspace | Not mapped | **Missing** | Add: `goto_session -1` (go to previous session) |
+| `cmd+ctrl+alt+]` | Next workspace | Not mapped | **N/A** | No `goto_session +1` exists — kitty only supports backward history |
 
 ### Resize Keybindings
 
-Kitty doesn't have modal key tables like WezTerm's `resize_pane` mode. Two options:
+Kitty doesn't have modal key tables like WezTerm's `resize_pane` mode.
 
-**Option A: Direct bindings (recommended)**
-Map resize to `cmd+ctrl+alt+{h,j,k,l}` since they're currently commented out in WezTerm:
-```conf
-map cmd+ctrl+alt+h resize_window wider 5
-map cmd+ctrl+alt+j resize_window shorter 3
-map cmd+ctrl+alt+k resize_window taller 3
-map cmd+ctrl+alt+l resize_window narrower 5
-```
-
-**Option B: Resize via kitty_mod** (already partially present)
-Already mapped at `keymaps.conf:42-45`. Keep as-is.
+**Decision: Option B — keep existing `kitty_mod` resize bindings** (already present at `keymaps.conf:42-45`). No changes needed.
 
 ### Split Direction Limitations
 
@@ -404,7 +407,7 @@ This matches WezTerm's `tab_bar_at_bottom = true` from `configuration.lua:64`.
 
 | File | Changes |
 |------|---------|
-| `config/.config/kitty/kitty.conf` | Add `startup_session sessions/startup.kitty-session` |
+| `config/.config/kitty/kitty.conf` | Add `startup_session sessions/startup.kitty-session`, `tab_bar_filter session:~ or session:^$` |
 | `config/.config/kitty/layout.conf` | `tab_bar_edge bottom`, `tab_bar_style custom`, `tab_bar_min_tabs 1` |
 | `config/.config/kitty/keymaps.conf` | Add missing bindings, fix mismatches, add `goto_session` mappings |
 

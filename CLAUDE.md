@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) and AI coding agents
 Fish shell-based macOS dotfiles (v3) using **GNU Stow** for symlink management. Modular, package-based architecture with XDG Base Directory compliance.
 
 **Key Philosophy:**
+
 - Non-invasive symlink-based configuration management
 - XDG Base Directory compliance to keep `~` clean
 - Multi-editor strategy (Neovim primary, Zed secondary)
@@ -81,21 +82,25 @@ ccu                 # Claude Code usage stats (bunx ccusage)
 ## Code Style
 
 **Shell Scripts:**
+
 - Use `set -e` for error handling
 - POSIX-compliant where possible
 - Use helper functions from `scripts/functions.sh` (error/success/info/warning)
 
 **Fish:**
+
 - Abbreviations (not aliases) for better composability
 - Functions in `functions/`, configs in `conf.d/`
 - Lazy-loading pattern for heavy tools
 
 **Lua (Neovim):**
+
 - 2 space indent, 120 char width
 - Use `set` for keymaps (not `vim.keymap.set`)
 - Local vars, descriptive descriptions
 
 **Formatting:**
+
 - EditorConfig enforced: 2 spaces, LF, UTF-8, trim=false, final newline
 - Makefiles use tabs
 - Comments: use inline for complex logic, avoid obvious comments, document "why" not "what"
@@ -130,14 +135,14 @@ The repository uses these stow packages (defined in `Makefile:1`):
 
 The `atlas/` submodule contains the Personal AI Infrastructure (PAI) for Claude Code and OpenCode:
 
-| Directory | Purpose |
-|-----------|---------|
-| `atlas/.claude/commands/atlas/` | 18 slash commands (`/atlas:*`) |
-| `atlas/.claude/skills/` | 7 skills (CORE, Art, Agents, Browser, Prompting, etc.) |
-| `atlas/.claude/hooks/` | TypeScript session lifecycle hooks |
-| `atlas/.claude/voice/` | ElevenLabs TTS voice server |
-| `atlas/.claude/observability/` | Real-time Vue dashboard |
-| `atlas/.config/opencode/` | OpenCode AI configuration |
+| Directory                       | Purpose                                                |
+| ------------------------------- | ------------------------------------------------------ |
+| `atlas/.claude/commands/atlas/` | 18 slash commands (`/atlas:*`)                         |
+| `atlas/.claude/skills/`         | 7 skills (CORE, Art, Agents, Browser, Prompting, etc.) |
+| `atlas/.claude/hooks/`          | TypeScript session lifecycle hooks                     |
+| `atlas/.claude/voice/`          | ElevenLabs TTS voice server                            |
+| `atlas/.claude/observability/`  | Real-time Vue dashboard                                |
+| `atlas/.config/opencode/`       | OpenCode AI configuration                              |
 
 **Working with Atlas:**
 
@@ -289,28 +294,33 @@ Homebrew primary, FNM (Node), rbenv (Ruby), rustup (Rust), pipx (Python)
 ## Troubleshooting
 
 **Stow Conflicts:**
+
 ```bash
 make delete  # Remove all symlinks
 make run     # Recreate all symlinks
 ```
 
 **SSH Agent Issues:**
+
 ```bash
 eva  # Alias for: eval ssh-agent -s; and ssh-add --apple-use-keychain
 ```
 
 **FNM/Node Issues:**
+
 ```bash
 fnm env --use-on-cd | source  # Enable auto-switching
 npm install --global $(cat packages/node_packages.txt)
 ```
 
 **Fisher Plugin Issues:**
+
 ```bash
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
 **Cargo/Rust Failures:**
+
 ```bash
 brew uninstall rustup-init
 brew reinstall rust
@@ -321,11 +331,13 @@ topgrade --only cargo
 ## WezTerm Configuration
 
 WezTerm config uses a modular architecture (`config/.config/wezterm/`):
+
 - `wezterm.lua` - Main orchestrator
 - `keymaps.lua` - Leader key (`cmd+k`) and all keybindings
 - `theme.lua`, `tabs.lua`, `statusbar.lua`, `workspaces.lua` - Modular components
 
 **Key WezTerm Keybindings:**
+
 ```lua
 -- Leader key: cmd+k (1.5s timeout)
 cmd+k z             -- Toggle zen mode in current window (adds padding, hides tab bar)
@@ -345,6 +357,7 @@ cmd+k 1-9           -- Jump to tab by index
 ```
 
 **Zen Mode:** Adds 25% horizontal padding and hides tab bar for focused writing. Two variants:
+
 - `toggle-zen-mode`: Toggles in current window (affects all tabs)
 - `spawn-zen-window`: Creates new isolated zen window preserving cwd
 
