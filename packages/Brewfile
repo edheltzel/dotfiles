@@ -30,6 +30,7 @@ tap 'teamookla/speedtest'	# Command line speed test utility
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
 tap 'FelixKratz/formulae'       # A tap for Janky Borders see brew borders
 tap 'marcus/tap'                # For sidecar and td
+tap 'gromgit/brewtils'
 
 #############################################################
 # 1. Command Line                                           #
@@ -50,6 +51,7 @@ brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
 brew 'tmux'         # Terminal multiplexer
+brew 'taproom'      # TUI for homebrew
 
 # CLI Basics
 brew 'ast-grep'             # A fast and polyglot tool for code structural search, lint, rewriting at large scale
@@ -76,8 +78,8 @@ brew 'ripgrep'              # Searching within files (better grep) - Rust
 brew 'rsync'                # Fast incremental file transfer
 brew 'sd'                   # RegEx find and replace (better sed) - Rust
 brew 'sevenzip'             # 7-Zip file archive tool
-brew 'xenso' # Terminal CSV Processing - Rust
-brew 'zoxide' # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
+brew 'csvlens'              # CSV viewer
+brew 'zoxide'               # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
 
 # CLI Image Processing and Compression
 brew 'ffmpegthumbnailer'    # Create thumbnails from videos
@@ -324,7 +326,7 @@ cask 'zed'                            # Code editor - Rust
 cask 'opencode-desktop'               # desktop client
 cask 'superwhisper'                   # dictation app
 cask 'wispr-flow'                     # dictation app
-cask 'antigravity'
+casks 'antigravity'
 brew 'gemini-cli'                      
 brew 'claude-code'                    
 brew 'fabric-ai'
