@@ -30,7 +30,7 @@ alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/
 
 # ADE ( AI/Agent  Development Environment )
 alias atlas="bun $HOME/.claude/skills/PAI/Tools/pai.ts"
-alias fab="fabric-ai"
+alias fabic="fabric-ai"
 
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
