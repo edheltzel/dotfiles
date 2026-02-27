@@ -61,6 +61,7 @@ brew 'brew-cask-completion' # Fish shell completion for brew cask
 brew 'broot'                # File tree explorer (better tree) - Rust
 brew 'chafa'                # Image to ASCII art converter
 brew 'cmake'                # CMake - cross-platform build system
+brew 'just'                 # Just a command runner
 brew 'assimp'               # Open source library to import various 3d-model-formats in an uniform manner
 brew 'yazi'                 # File manager - Rust
 brew 'coreutils'            # GNU core utilities (those that come with macOS are outdated)
