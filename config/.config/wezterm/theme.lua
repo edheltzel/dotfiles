@@ -29,6 +29,7 @@ local themes = {
       active_fg = "#15141B",
       inactive_bg = "#1C1B22",
       inactive_fg = "#6D6D6D",
+      agent_activity = "#FFCA85",
     },
   },
   ["Eldritch"] = {
@@ -53,6 +54,7 @@ local themes = {
       active_fg = "#171928",
       inactive_bg = "#212337",
       inactive_fg = "#7081D0",
+      agent_activity = "#F7C67F",
     },
   },
   ["rose-pine"] = {
@@ -70,6 +72,7 @@ local themes = {
       active_fg = "#191724",
       inactive_bg = "#26233a",
       inactive_fg = "#9ccfd8",
+      agent_activity = "#f6c177",
     },
   },
   ["rose-pine-dawn"] = {
@@ -87,6 +90,7 @@ local themes = {
       active_fg = "#575279",
       inactive_bg = "#fffaf3",
       inactive_fg = "#6A6681",
+      agent_activity = "#ea9d34",
     },
   },
   ["rose-pine-moon"] = {
@@ -104,6 +108,7 @@ local themes = {
       active_fg = "#232136",
       inactive_bg = "#232136",
       inactive_fg = "#9ccfd8",
+      agent_activity = "#f6c177",
     },
   },
   ["Tokyo Night"] = {
@@ -121,6 +126,7 @@ local themes = {
       active_fg = "#1A1B26",
       inactive_bg = "#1A1B26",
       inactive_fg = "#565F89",
+      agent_activity = "#E0AF68",
     },
   },
   ["Tokyo Night Moon"] = {
@@ -138,6 +144,7 @@ local themes = {
       active_fg = "#222236",
       inactive_bg = "#222236",
       inactive_fg = "#636DA6",
+      agent_activity = "#FFC777",
     },
   },
 }
@@ -153,6 +160,36 @@ end
 local theme_data = themes[get_theme_key(M.name)]
 M.colors = theme_data.colors
 M.tab_bar = theme_data.tab_bar
+
+-- Agent processes: names that trigger "agent activity" tab coloring
+-- Matches against basename of foreground_process_name AND user_vars.WEZTERM_PROG
+M.agent_processes = {
+  claude = true,
+  opencode = true,
+  gemini = true,
+  aider = true,
+  copilot = true,
+}
+
+-- Helper: check if a pane is running a known coding agent
+-- Checks process name, pane title, and user_vars (agents like claude run as
+-- node/deno, so foreground_process_name alone won't match)
+function M.is_agent_pane(pane_info)
+  local proc = pane_info.foreground_process_name or ""
+  local proc_base = M.basename(proc)
+  if M.agent_processes[proc_base] then
+    return true
+  end
+  local title_cmd = pane_info.title and pane_info.title:match("^(%S+)")
+  if title_cmd and M.agent_processes[title_cmd] then
+    return true
+  end
+  local user_prog = pane_info.user_vars and pane_info.user_vars["WEZTERM_PROG"] or ""
+  if M.agent_processes[user_prog] then
+    return true
+  end
+  return false
+end
 
 -- Process-to-icon mapping (shared by tabs and statusbar) - defined before helpers that use it
 M.process_icons = {

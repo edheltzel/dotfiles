@@ -18,13 +18,17 @@ local function setup(theme)
 
   -- Pill-shaped tabs with activity indicator and process icons
   wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-    -- Check for unseen output (use panes param; tab.panes is undocumented)
+    -- Check for unseen output and agent activity
+    -- Prefer tab.panes over callback `panes` param (wezterm#5499: param is buggy,
+    -- always returns active tab's panes). Fallback to param if tab.panes unavailable.
     local unseen = false
-    if panes then
-      for _, p in ipairs(panes) do
-        if p.has_unseen_output then
-          unseen = true
-          break
+    local agent_activity = false
+    local pane_list = tab.panes or panes or {}
+    for _, p in ipairs(pane_list) do
+      if p.has_unseen_output then
+        unseen = true
+        if theme.is_agent_pane(p) then
+          agent_activity = true
         end
       end
     end
@@ -33,10 +37,13 @@ local function setup(theme)
     local cwd_path = theme.get_cwd_path(tab.active_pane.current_working_dir)
     local project_color = cwd_path ~= "" and project_colors[basename(cwd_path)] or nil
 
-    -- Determine tab colors
+    -- Determine tab colors (priority: active > agent activity > unseen > project > default)
     local bg, fg
     if tab.is_active then
       bg = project_color or tab_bar.active_bg
+      fg = tab_bar.active_fg
+    elseif agent_activity then
+      bg = tab_bar.agent_activity
       fg = tab_bar.active_fg
     elseif unseen then
       bg = tab_bar.inactive_bg
