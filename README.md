@@ -60,7 +60,7 @@ Table of Contents:
 <details>
   <summary><strong>Install with a single line...</strong></summary>
 
-I have not tested this on a fresh install, so this could break your setup. I'd suggest you read through the `bootstrap.sh` and `install.sh` scripts and the `Makefile` before running this command.
+I have not tested this on a fresh install, so this could break your setup. I'd suggest you read through the `bootstrap.sh` and `install.sh` scripts and the `justfile` before running this command.
 
 In theory, this will clone the repository and install everything outlined below. Again, In theory.
 
@@ -124,8 +124,8 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 3. Clone repo with submodules
    - `git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
    - Or if already cloned: `cd ~/.dotfiles && git submodule update --init --recursive`
-4. Use the [`Makefile`](makefile) for the rest of the setup
-   - `cd ~/.dotfiles && make install`
+4. Use the [`justfile`](justfile) for the rest of the setup
+   - `cd ~/.dotfiles && just install`
    - Alternatively, run install script `cd ~/.dotfiles && ./install.sh`
    - **Note:** The install script automatically initializes git submodules
 5. After the setup is complete, run `upp` to execute topgrade and update everything.
@@ -141,7 +141,7 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 
 Originally, I used a series of custom scripts to create symlinks, and it worked, but I've since switched to using [GNU Stow][STOW]. This is way easier to manage.
 
-So, with the addition of GNU Stow, I added a `makefile` – I treat this like NPM scripts. You need to be in the root of `~/.dotfiles` to execute any of the `make` tasks.
+So, with the addition of GNU Stow, I added a `justfile` – I treat this like NPM scripts. You need to be in the root of `~/.dotfiles` to execute any of the `just` recipes.
 
 The following are available:
 
@@ -157,15 +157,14 @@ update        Sync & clean dead symlinks w/Stow
 
 **Bootstrapping**
 
-- `make install` task, it will execute the `bootstrap.sh` script. This script, is for setting up a brand new machine, it will install the necessary package managers, packages with dependencies, applications, clone the necessary repositories, configure the `~/.gitconfig.local` and symlink dotfiles using GNU Stow.
+- `just install` recipe, it will execute the `bootstrap.sh` script. This script, is for setting up a brand new machine, it will install the necessary package managers, packages with dependencies, applications, clone the necessary repositories, configure the `~/.gitconfig.local` and symlink dotfiles using GNU Stow.
 
 **Stowing/Unstowing (add/remove)**
 
 There are two options for managing packages with GNU Stow:
 
-1. Just use Stow: `stow nvim` / `stow --restow nvim` or `stow -D nvim` _(unstow)_
-2. Use the Makefile: `make stow pkg=nvim` or `make unstow pkg=nvim`
-   - The `pkg=` variable must be specified.
+1. Just use Stow directly: `stow nvim` / `stow --restow nvim` or `stow -D nvim` _(unstow)_
+2. Use the justfile: `just stow nvim` or `just unstow nvim`
 
 ## Stow Packages
 
@@ -310,9 +309,9 @@ fnm completions --shell fish
 Make sure you run:
 
 ```shell
-make update #updates all stow packages
+just update #updates all stow packages
 OR
-make stow pkg=fish
+just stow fish
 ```
 
 Enable auto switch of Node versions with `.node-version` or `.nvmrc` files

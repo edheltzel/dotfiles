@@ -18,20 +18,20 @@ This is a fish shell-based macos dotfiles repository (v3) using **gnu stow** for
 
 ```bash
 # fresh machine setup (runs install.sh)
-make install
+just install
 
 # symlink all dotfiles packages
-make run
+just run
 
 # add/remove individual packages
-make stow pkg=nvim
-make unstow pkg=nvim
+just stow nvim
+just unstow nvim
 
 # update all symlinked packages (restows + cleans dead symlinks)
-make update  # or make up
+just update  # or just up
 
 # remove all symlinks
-make delete
+just delete
 ```
 
 ### testing & linting
@@ -80,14 +80,14 @@ reload                     # reload fish configuration
 - **shell**: bash with `set -e`, use helper functions from `scripts/functions.sh` (error/success/info/warning), posix-compliant where possible
 - **fish**: lazy-loading pattern for speed, functions in `functions/`, config in `conf.d/`, abbreviations not aliases
 - **lua (neovim)**: 2 space indent, 120 char width, `set` for keymaps not `vim.keymap.set`, local vars, descriptive descriptions
-- **formatting**: editorconfig enforced (2 spaces, lf, utf-8, trim=false, final newline), makefiles use tabs
+- **formatting**: editorconfig enforced (2 spaces, lf, utf-8, trim=false, final newline), justfiles use spaces (no tab requirement)
 - **comments**: use inline for complex logic, avoid obvious comments, document "why" not "what"
 
 ## architecture
 
 ### stow packages
 
-the repository uses these stow packages (defined in `makefile:1`):
+the repository uses these stow packages (defined in `justfile:5`):
 
 - **atlas** - personal ai infrastructure (pai) - **git submodule** ([repo](https://github.com/edheltzel/atlas))
   - claude code: hooks, skills, commands, voice system, observability dashboard
@@ -122,7 +122,7 @@ the `atlas/` submodule contains the personal ai infrastructure (pai) for claude 
 cd ~/.dotfiles/atlas && git pull origin master
 
 # restow after changes
-make stow pkg=atlas
+just stow atlas
 ```
 
 **atlas commands:** run `/atlas:help` in claude code to see all available commands.
@@ -248,10 +248,10 @@ homebrew primary, fnm (node), rbenv (ruby), rustup (rust), pipx (python)
 ### adding new configuration
 
 1. add files to appropriate stow package directory
-2. run `make stow pkg=<packagename>`
+2. run `just stow <packagename>`
 3. test the configuration
 4. commit to git
-5. run `make update` to restow all packages
+5. run `just update` to restow all packages
 
 ### troubleshooting common issues
 
@@ -286,13 +286,13 @@ topgrade --only cargo
 **stow conflicts:**
 
 ```bash
-make delete  # remove all symlinks
-make run     # recreate all symlinks
+just delete  # remove all symlinks
+just run     # recreate all symlinks
 ```
 
 ## key files
 
-- `makefile` - primary interface for all dotfile operations
+- `justfile` - primary interface for all dotfile operations
 - `install.sh` - main installation orchestrator
 - `packages/brewfile` - all homebrew packages/casks/fonts
 - `fish/.config/fish/conf.d/abbr.fish` - shell aliases/abbreviations

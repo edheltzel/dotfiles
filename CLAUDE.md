@@ -16,15 +16,15 @@ Fish shell-based macOS dotfiles (v3) using **GNU Stow** for symlink management. 
 
 ## Commands
 
-### Dotfile Management (Makefile)
+### Dotfile Management (justfile)
 
 ```bash
-make install        # Bootstrap new machine (runs install.sh)
-make run            # Symlink all packages
-make stow pkg=fish  # Add specific package
-make unstow pkg=fish # Remove specific package
-make update         # Restow all + clean dead symlinks (also: make up)
-make delete         # Remove all symlinks
+just install        # Bootstrap new machine (runs install.sh)
+just run            # Symlink all packages
+just stow fish      # Add specific package
+just unstow fish    # Remove specific package
+just update         # Restow all + clean dead symlinks (also: just up)
+just delete         # Remove all symlinks
 ```
 
 ### Testing & Linting
@@ -102,7 +102,7 @@ ccu                 # Claude Code usage stats (bunx ccusage)
 **Formatting:**
 
 - EditorConfig enforced: 2 spaces, LF, UTF-8, trim=false, final newline
-- Makefiles use tabs
+- Justfiles use spaces (no tab requirement)
 - Comments: use inline for complex logic, avoid obvious comments, document "why" not "what"
 
 ## Conventions
@@ -116,7 +116,7 @@ ccu                 # Claude Code usage stats (bunx ccusage)
 
 ### Stow Packages
 
-The repository uses these stow packages (defined in `Makefile:1`):
+The repository uses these stow packages (defined in `justfile:5`):
 
 - **atlas** - Personal AI Infrastructure (PAI) - **Git Submodule** ([repo](https://github.com/edheltzel/atlas))
   - Claude Code: hooks, skills, commands, voice system, observability dashboard
@@ -151,7 +151,7 @@ The `atlas/` submodule contains the Personal AI Infrastructure (PAI) for Claude 
 cd ~/.dotfiles/atlas && git pull origin master
 
 # Restow after changes
-make stow pkg=atlas
+just stow atlas
 ```
 
 **Atlas Commands:** Run `/atlas:help` in Claude Code to see all available commands.
@@ -271,7 +271,7 @@ Homebrew primary, FNM (Node), rbenv (Ruby), rustup (Rust), pipx (Python)
 
 ## Key Files
 
-- `Makefile` - Primary interface for all dotfile operations
+- `justfile` - Primary interface for all dotfile operations
 - `install.sh` - Main installation orchestrator
 - `packages/Brewfile` - All Homebrew packages/casks/fonts
 - `scripts/functions.sh` - Helper functions (error/success/info/warning with colors)
@@ -286,18 +286,18 @@ Homebrew primary, FNM (Node), rbenv (Ruby), rustup (Rust), pipx (Python)
 ### Adding New Configuration
 
 1. Add files to appropriate stow package directory
-2. Run `make stow pkg=<packagename>`
+2. Run `just stow <packagename>`
 3. Test the configuration
 4. Commit to git
-5. Run `make update` to restow all packages
+5. Run `just update` to restow all packages
 
 ## Troubleshooting
 
 **Stow Conflicts:**
 
 ```bash
-make delete  # Remove all symlinks
-make run     # Recreate all symlinks
+just delete  # Remove all symlinks
+just run     # Recreate all symlinks
 ```
 
 **SSH Agent Issues:**
