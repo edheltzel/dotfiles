@@ -49,7 +49,7 @@ local function setup(theme, keymaps)
   config.window_close_confirmation = "AlwaysPrompt"
   config.macos_window_background_blur = 25
   config.scrollback_lines = 5000
-  config.default_workspace = wezterm.nerdfonts.cod_rocket
+  config.default_workspace = "∗"
   config.native_macos_fullscreen_mode = false
 
   -- Panes
