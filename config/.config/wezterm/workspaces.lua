@@ -11,24 +11,27 @@ local function setup()
 
     -- "dotfiles" workspace: 3-pane split layout
     --   ┌────────────┬────────────┐
-    --   │            │   right    │
-    --   │   main     │    top     │
-    --   │            ├────────────┤
-    --   │            │   right    │
-    --   │            │   bottom   │
+    --   │    left    │            │
+    --   │    top     │            │
+    --   ├────────────┤    main    │
+    --   │    left    │   (nvim)   │
+    --   │   bottom   │            │
     --   └────────────┴────────────┘
-    local _, project_pane = mux.spawn_window({
+    local _, top_left_pane = mux.spawn_window({
       workspace = wezterm.nerdfonts.md_triforce,
-      cwd = wezterm.home_dir .. "~/",
+      cwd = wezterm.home_dir .. "/Developer/atlas-config",
     })
-    local right_pane = project_pane:split({
-      direction = "Right",
-      size = 0.5,
-    })
-    right_pane:split({
+    top_left_pane:split({
       direction = "Bottom",
       size = 0.5,
+      cwd = wezterm.home_dir .. "/Developer/myChron",
     })
+    local right_pane = top_left_pane:split({
+      direction = "Right",
+      size = 0.5,
+      cwd = wezterm.home_dir,
+    })
+    right_pane:send_text("nvim\n")
 
     -- Start in the default workspace
     mux.set_active_workspace(wezterm.nerdfonts.md_delta)
