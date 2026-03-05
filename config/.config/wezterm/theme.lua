@@ -171,25 +171,9 @@ M.agent_processes = {
   copilot = true,
 }
 
--- Helper: check if a pane is running a known coding agent
--- Checks process name, pane title, and user_vars (agents like claude run as
--- node/deno, so foreground_process_name alone won't match)
-function M.is_agent_pane(pane_info)
-  local proc = pane_info.foreground_process_name or ""
-  local proc_base = M.basename(proc)
-  if M.agent_processes[proc_base] then
-    return true
-  end
-  local title_cmd = pane_info.title and pane_info.title:match("^(%S+)")
-  if title_cmd and M.agent_processes[title_cmd] then
-    return true
-  end
-  local user_prog = pane_info.user_vars and pane_info.user_vars["WEZTERM_PROG"] or ""
-  if M.agent_processes[user_prog] then
-    return true
-  end
-  return false
-end
+-- Note: Agent idle/working detection lives in tabs.lua's update-status handler,
+-- which uses full Pane API (get_foreground_process_info) for argv inspection.
+-- The agent_processes table above is the single source of truth for agent names.
 
 -- Process-to-icon mapping (shared by tabs and statusbar) - defined before helpers that use it
 M.process_icons = {
