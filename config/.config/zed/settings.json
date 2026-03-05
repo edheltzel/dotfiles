@@ -54,7 +54,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Fleet Light",
-		"dark": "Eldritch Deeper",
+		"dark": "Aura Dark",
 	},
 	"icon_theme": "Catppuccin Latte",
 	"experimental.theme_overrides": {
