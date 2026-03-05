@@ -3,8 +3,8 @@ alias grep "grep --color=auto"
 alias egrep "egrep --color=auto"
 alias fgrep "fgrep --color=auto"
 # gitnow
-alias cma commit-all
-alias cm commit
+alias gcma commit-all
+alias gcm commit
 alias gs state
 
 # Confirm before overwriting
