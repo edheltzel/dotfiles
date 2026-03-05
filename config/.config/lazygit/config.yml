@@ -30,3 +30,5 @@ gui:
       - "#f16c75"
     defaultFgColor:
       - "#ebfafa"
+git:
+  overrideGpg: true
