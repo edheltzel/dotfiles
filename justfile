@@ -15,9 +15,9 @@ default:
 
 # Bootstrap a new machine
 install:
-    @echo "{{yellow}}Running bootstrap to provision the system...{{clr}}"
+    @printf "{{yellow}}Running bootstrap to provision the system...{{clr}}\n"
     @./install.sh
-    @echo "{{green}}System provisioning complete!{{clr}}"
+    @printf "{{green}}System provisioning complete!{{clr}}\n"
 
 # Symlink all dotfiles with Stow
 run:
@@ -54,14 +54,14 @@ update:
         fi; \
         stow --restow $pkg; \
     done
-    @echo "{{green}}Dotfiles updated successfully{{clr}} - run {{yellow}}reload{{clr}} to apply changes to Fish"
+    @printf "{{green}}Dotfiles updated successfully{{clr}} - run {{yellow}}reload{{clr}} to apply changes to Fish\n"
 
 # Remove all dotfile symlinks
 delete:
     @for pkg in {{stow_packages}}; do \
         stow --delete $pkg; \
     done
-    @echo "{{white}}Dotfiles zapped! ⚡️"
+    @printf "{{white}}Dotfiles zapped! ⚡️{{clr}}\n"
 
 # Aliases
 alias up := update
