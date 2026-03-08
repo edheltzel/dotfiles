@@ -691,13 +691,6 @@
     {
       "actions" : [
         {
-          "iconPath" : "brain.fill",
-          "key" : "b",
-          "label" : "BrainFM",
-          "type" : "url",
-          "value" : "https://my.brain.fm"
-        },
-        {
           "iconPath" : "music.note.list",
           "key" : "m",
           "label" : "YouTube Music",
@@ -710,6 +703,13 @@
           "label" : "YouTube",
           "type" : "url",
           "value" : "https://youtube.com"
+        },
+        {
+          "iconPath" : "dollarsign.circle.fill",
+          "key" : "p",
+          "label" : "Orders",
+          "type" : "url",
+          "value" : "https://peptideware.com/wp-admin/admin.php?page=wc-orders"
         }
       ],
       "iconPath" : "airpods.gen3",
