@@ -298,28 +298,28 @@
 	},
 	"agent": {
 		"tool_permissions": {
-   "default": "allow"
-  },
-  "notify_when_agent_waiting": "all_screens",
+			"default": "allow",
+		},
+		"notify_when_agent_waiting": "all_screens",
 		"dock": "left",
 		"default_width": 800,
 		"play_sound_when_agent_done": true,
 		"default_profile": "ask",
 		"default_model": {
 			"provider": "google",
-			"model": "gemini-3-pro-preview",
+			"model": "gemini-3.1-pro",
 		},
 		"inline_assistant_model": {
 			"provider": "google",
-			"model": "gemini-3-flash-preview",
+			"model": "gemini-3.1-pro",
 		},
 		"commit_message_model": {
 			"provider": "google",
-			"model": "gemini-3-flash-preview",
+			"model": "gemini-2.0-flash",
 		},
 		"thread_summary_model": {
 			"provider": "google",
-			"model": "gemini-3-flash-preview",
+			"model": "gemini-3.1-pro",
 		},
 		"button": false,
 	},
