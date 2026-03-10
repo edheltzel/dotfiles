@@ -712,8 +712,8 @@
           "value" : "https://peptideware.com/wp-admin/admin.php?page=wc-orders"
         }
       ],
-      "iconPath" : "airpods.gen3",
-      "key" : "s",
+      "iconPath" : "bookmark.fill",
+      "key" : "b",
       "label" : "Sounds (Music)",
       "type" : "group"
     },
