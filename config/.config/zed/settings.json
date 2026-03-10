@@ -275,7 +275,7 @@
 		"cursor_shape": "bar",
 		"copy_on_select": true,
 		"font_family": "VictorMono Nerd Font",
-		"font_size": 18.0,
+		"font_size": 19.0,
 		"font_weight": 500.0,
 		"default_height": 500,
 	},
@@ -297,14 +297,6 @@
 		"button": false,
 	},
 	"agent": {
-		"tool_permissions": {
-			"default": "allow",
-		},
-		"notify_when_agent_waiting": "all_screens",
-		"dock": "left",
-		"default_width": 800,
-		"play_sound_when_agent_done": true,
-		"default_profile": "ask",
 		"default_model": {
 			"provider": "google",
 			"model": "gemini-3.1-pro",
@@ -321,6 +313,14 @@
 			"provider": "google",
 			"model": "gemini-3.1-pro",
 		},
+		"tool_permissions": {
+			"default": "allow",
+		},
+		"notify_when_agent_waiting": "all_screens",
+		"dock": "left",
+		"default_width": 800,
+		"play_sound_when_agent_done": true,
+		"default_profile": "ask",
 		"button": false,
 	},
 	"debugger": {
