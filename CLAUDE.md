@@ -247,7 +247,7 @@ git sm          # Submodule update --init --recursive
 27+ applications configured:
 
 - **Terminal:** alacritty, kitty, ghostty, wezterm
-- **Multiplexers:** tmux, zellij
+- **Multiplexers:** zellij, tmux,
 - **Window Manager:** aerospace (Stage Manager + Raycast)
 - **File Manager:** yazi (custom keybindings)
 - **Git UI:** lazygit

@@ -232,7 +232,7 @@ homebrew primary, fnm (node), rbenv (ruby), rustup (rust), pipx (python)
 27+ applications configured:
 
 - **terminal:** alacritty, kitty, ghostty, wezterm
-- **multiplexers:** tmux, zellij
+- **multiplexers:** zellij, tmux
 - **window manager:** aerospace (stage manager + raycast)
 - **file manager:** yazi (custom keybindings)
 - **git ui:** lazygit
