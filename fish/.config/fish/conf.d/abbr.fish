@@ -15,7 +15,7 @@ if status is-interactive
     abbr --add gg 'gemini --yolo'
     abbr --add ag antigravity
     abbr --add ma maestro-cli
-    abbr --add sc sidecar
+    abbr --add sa sidecar
 
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
@@ -81,13 +81,6 @@ if status is-interactive
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress
     abbr --add lzip ouch ligst
-    # Tmux
-    abbr --add ax 'tmux at -t base'
-    abbr --add amux 'tmux at -t base'
-    abbr --add nx 'tmux new -s "base"'
-    abbr --add kx 'tmux kill-session -t'
-    abbr --add tkill 'tmux kill-session -t'
-    abbr --add nmux 'tmux new -s "base"'
 
     # Migrated from aliases (simple 1:1 mappings)
     abbr --add md 'mkdir -p'
