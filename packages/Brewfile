@@ -257,7 +257,6 @@ cask 'mouseless'                   # Mouse-less app for MacOS
 cask 'openinterminal'              # Finder button, opens directory in terminal
 cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
-cask 'typinator'                   # Text expander - macOS only
 cask 'keka'                        # File archive and extractor
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
 cask tailscale-app
