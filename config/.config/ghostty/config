@@ -26,7 +26,7 @@ window-inherit-font-size = false
 window-padding-x = 10
 window-title-font-family = "VictorMono Nerd Font"
 
-font-size = 18
+font-size = 19
 font-family = "VictorMono Nerd Font"
 
 mouse-hide-while-typing = true
