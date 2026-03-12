@@ -19,7 +19,7 @@ local function setup()
     --   └────────────┴────────────┘
     local _, left_pane = mux.spawn_window({
       workspace = wezterm.nerdfonts.md_triforce,
-      cwd = wezterm.home_dir .. "/Developer/atlas-config",
+      cwd = wezterm.home_dir .. "/Developer/GAT/MyChron",
     })
     local right_pane = left_pane:split({
       direction = "Right",
@@ -29,7 +29,7 @@ local function setup()
     left_pane:split({
       direction = "Bottom",
       size = 0.5,
-      cwd = wezterm.home_dir .. "/Developer/myChron",
+      cwd = wezterm.home_dir .. "/Developer/GAT/MyChron",
     })
     right_pane:send_text("nvim\n")
 
