@@ -26,9 +26,11 @@ if status is-interactive
     abbr --add goo 'cd ~/.go/'
 
     # Editors/Terminals
-    abbr --add ght wezterm
+    abbr --add gho ghostty
     abbr --add wez wezterm
     abbr --add kit kitten
+    abbr --add zela 'zellij a %'
+    abbr --add zels 'zellij -s %'
     # vscode
     abbr --add co code
     abbr --add con 'code -n .'
