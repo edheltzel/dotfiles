@@ -313,6 +313,8 @@ load_plugins {
 // --- Appearance ---
 simplified_ui true
 pane_frames false
+styled_underlines true
+pane_border_color "#323449"
 
 // Eldritch theme (matching Wezterm/Ghostty)
 themes {

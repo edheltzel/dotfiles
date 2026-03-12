@@ -29,8 +29,20 @@ if status is-interactive
     abbr --add gho ghostty
     abbr --add wez wezterm
     abbr --add kit kitten
-    abbr --add zela 'zellij a %'
-    abbr --add zels 'zellij -s %'
+    abbr --add zela 'zellij a'
+    abbr --add zels 'zellij -s'
+    abbr --add zelk 'zellij k'
+    abbr --add zelka 'zellij ka'
+    abbr --add zeld 'zellij d'
+    abbr --add zelda 'zellij da'
+    abbr --add zell 'zellij ls'
+    abbr --add muxa 'zellij a'
+    abbr --add muxs 'zellij -s'
+    abbr --add muxk 'zellij k'
+    abbr --add muxka 'zellij ka'
+    abbr --add muxl 'zellij ls'
+    abbr --add muxd 'zellij d'
+    abbr --add muxda 'zellij da'
     # vscode
     abbr --add co code
     abbr --add con 'code -n .'

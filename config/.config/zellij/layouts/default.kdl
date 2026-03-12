@@ -99,9 +99,8 @@ layout {
         }
     }
 
-    // Bottom-aligned status bar (children first, then zjstatus)
+    // Top-aligned status bar (zjstatus first, then children)
     default_tab_template {
-        children
         pane size=2 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
                 // --- Eldritch color variables ---
@@ -129,46 +128,46 @@ layout {
                 border_enabled  "true"
                 border_char     "─"
                 border_format   "#[fg=#212337]{char}"
-                border_position "top"
+                border_position "bottom"
 
                 hide_frame_for_single_pane "true"
 
                 // --- Mode indicators ---
                 // Normal: green badge
-                mode_normal        "#[bg=#37F499,fg=#171928,bold] NORMAL #[bg=#171928,fg=#37F499]"
+                mode_normal        "#[bg=#171928,fg=#37F499]#[bg=#37F499,fg=#171928,bold] NORMAL #[bg=#171928,fg=#37F499]"
                 // Leader/Tmux: cyan badge (matches Wezterm leader indicator)
-                mode_tmux          "#[bg=#04D1F9,fg=#171928,bold]  LDR  #[bg=#171928,fg=#04D1F9]"
+                mode_tmux          "#[bg=#171928,fg=#04D1F9]#[bg=#04D1F9,fg=#171928,bold]  LDR  #[bg=#171928,fg=#04D1F9]"
                 // Locked: red badge
-                mode_locked        "#[bg=#F16C75,fg=#171928,bold] LOCKED #[bg=#171928,fg=#F16C75]"
+                mode_locked        "#[bg=#171928,fg=#F16C75]#[bg=#F16C75,fg=#171928,bold] LOCKED #[bg=#171928,fg=#F16C75]"
                 // Interactive modes: purple badge
-                mode_resize        "#[bg=#A48CF2,fg=#171928,bold] RESIZE #[bg=#171928,fg=#A48CF2]"
-                mode_pane          "#[bg=#A48CF2,fg=#171928,bold] PANE #[bg=#171928,fg=#A48CF2]"
-                mode_tab           "#[bg=#F7F67F,fg=#171928,bold] TAB #[bg=#171928,fg=#F7F67F]"
-                mode_scroll        "#[bg=#A48CF2,fg=#171928,bold] SCROLL #[bg=#171928,fg=#A48CF2]"
-                mode_enter_search  "#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
-                mode_search        "#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
-                mode_session       "#[bg=#F265B5,fg=#171928,bold] SESSION #[bg=#171928,fg=#F265B5]"
-                mode_move          "#[bg=#A48CF2,fg=#171928,bold] MOVE #[bg=#171928,fg=#A48CF2]"
+                mode_resize        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] RESIZE #[bg=#171928,fg=#A48CF2]"
+                mode_pane          "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] PANE #[bg=#171928,fg=#A48CF2]"
+                mode_tab           "#[bg=#171928,fg=#F7F67F]#[bg=#F7F67F,fg=#171928,bold] TAB #[bg=#171928,fg=#F7F67F]"
+                mode_scroll        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] SCROLL #[bg=#171928,fg=#A48CF2]"
+                mode_enter_search  "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
+                mode_search        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
+                mode_session       "#[bg=#171928,fg=#A48CF2]#[bg=#F265B5,fg=#171928,bold] SESSION #[bg=#171928,fg=#F265B5]"
+                mode_move          "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] MOVE #[bg=#171928,fg=#A48CF2]"
                 // Rename modes: orange badge
-                mode_rename_tab    "#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
-                mode_rename_pane   "#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
-                mode_prompt        "#[bg=#A48CF2,fg=#171928,bold] PROMPT #[bg=#171928,fg=#A48CF2]"
+                mode_rename_tab    "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
+                mode_rename_pane   "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
+                mode_prompt        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] PROMPT #[bg=#171928,fg=#A48CF2]"
                 mode_default_to_mode "normal"
 
                 // --- Tabs (color-coded pill style with Eldritch colors) ---
                 // Each tab state gets a distinct color for instant visual identification
                 // Normal: cyan pill
-                tab_normal              "#[bg=#171928,fg=#04D1F9]#[bg=#04D1F9,fg=#171928,bold]{index} #[bg=#212337,fg=#04D1F9,bold] {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
+                tab_normal              "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#7081D0,bold]{index} {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
                 // Sync: purple pill
-                tab_normal_sync         "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold]{index} #[bg=#212337,fg=#A48CF2,bold] {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
+                tab_normal_sync         "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#7081D0,bold]{index} {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
                 // Fullscreen: yellow pill
-                tab_normal_fullscreen   "#[bg=#171928,fg=#F7F67F]#[bg=#F7F67F,fg=#171928,bold]{index} #[bg=#212337,fg=#F7F67F,bold] {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
+                tab_normal_fullscreen   "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#7081D0,bold]{index} {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
                 // Active: green pill
-                tab_active              "#[bg=#171928,fg=#37F499]#[bg=#37F499,fg=#171928,bold]{index} #[bg=#212337,fg=#37F499,bold] {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
+                tab_active              "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#F265B5,bold]{index} {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
                 // Active + sync: pink pill
-                tab_active_sync         "#[bg=#171928,fg=#F265B5]#[bg=#F265B5,fg=#171928,bold]{index} #[bg=#212337,fg=#F265B5,bold] {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
+                tab_active_sync         "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#F265B5,bold]{index} {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
                 // Active + fullscreen: orange pill
-                tab_active_fullscreen   "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold]{index} #[bg=#212337,fg=#F7C67F,bold] {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
+                tab_active_fullscreen   "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#F265B5,bold]{index} {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
 
                 tab_separator           "#[bg=#171928] "
 
@@ -195,5 +194,6 @@ layout {
 
             }
         }
+        children
     }
 }

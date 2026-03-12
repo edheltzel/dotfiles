@@ -169,6 +169,7 @@ M.agent_processes = {
   gemini = true,
   aider = true,
   copilot = true,
+  pi = true,
 }
 
 -- Note: Agent idle/working detection lives in tabs.lua's update-status handler,
@@ -201,6 +202,7 @@ M.process_icons = {
   claude = wezterm.nerdfonts.fa_robot,
   opencode = wezterm.nerdfonts.md_robot,
   gemini = wezterm.nerdfonts.md_robot,
+  pi = wezterm.nerdfonts.fa_robot,
 }
 
 -- Helper: extract file path from CWD URI (handles Url object or string)
