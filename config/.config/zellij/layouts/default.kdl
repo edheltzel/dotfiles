@@ -1,0 +1,199 @@
+// Zellij Layout — Atlas (Eldritch theme)
+// zjstatus status bar at bottom, matching Wezterm statusbar.lua
+//
+// Install zjstatus:
+//   mkdir -p ~/.config/zellij/plugins
+//   curl -L -o ~/.config/zellij/plugins/zjstatus.wasm \
+//     https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm
+
+layout {
+    // Swap layouts for tiled panes
+    swap_tiled_layout name="vertical" {
+        tab max_panes=5 {
+            pane split_direction="vertical" {
+                pane
+                pane { children; }
+            }
+        }
+        tab max_panes=8 {
+            pane split_direction="vertical" {
+                pane { children; }
+                pane { pane; pane; pane; pane; }
+            }
+        }
+        tab max_panes=12 {
+            pane split_direction="vertical" {
+                pane { children; }
+                pane { pane; pane; pane; pane; }
+                pane { pane; pane; pane; pane; }
+            }
+        }
+    }
+
+    swap_tiled_layout name="horizontal" {
+        tab max_panes=5 {
+            pane
+            pane
+        }
+        tab max_panes=8 {
+            pane {
+                pane split_direction="vertical" { children; }
+                pane split_direction="vertical" { pane; pane; pane; pane; }
+            }
+        }
+        tab max_panes=12 {
+            pane {
+                pane split_direction="vertical" { children; }
+                pane split_direction="vertical" { pane; pane; pane; pane; }
+                pane split_direction="vertical" { pane; pane; pane; pane; }
+            }
+        }
+    }
+
+    swap_tiled_layout name="stacked" {
+        tab min_panes=5 {
+            pane split_direction="vertical" {
+                pane
+                pane stacked=true { children; }
+            }
+        }
+    }
+
+    swap_floating_layout name="staggered" {
+        floating_panes
+    }
+
+    swap_floating_layout name="enlarged" {
+        floating_panes max_panes=10 {
+            pane { x "5%"; y 1; width "90%"; height "90%"; }
+            pane { x "5%"; y 2; width "90%"; height "90%"; }
+            pane { x "5%"; y 3; width "90%"; height "90%"; }
+            pane { x "5%"; y 4; width "90%"; height "90%"; }
+            pane { x "5%"; y 5; width "90%"; height "90%"; }
+            pane { x "5%"; y 6; width "90%"; height "90%"; }
+            pane { x "5%"; y 7; width "90%"; height "90%"; }
+            pane { x "5%"; y 8; width "90%"; height "90%"; }
+            pane { x "5%"; y 9; width "90%"; height "90%"; }
+            pane focus=true { x 10; y 10; width "90%"; height "90%"; }
+        }
+    }
+
+    swap_floating_layout name="spread" {
+        floating_panes max_panes=1 {
+            pane { y "50%"; x "50%"; }
+        }
+        floating_panes max_panes=2 {
+            pane { x "1%"; y "25%"; width "45%"; }
+            pane { x "50%"; y "25%"; width "45%"; }
+        }
+        floating_panes max_panes=3 {
+            pane focus=true { y "55%"; width "45%"; height "45%"; }
+            pane { x "1%"; y "1%"; width "45%"; }
+            pane { x "50%"; y "1%"; width "45%"; }
+        }
+        floating_panes max_panes=4 {
+            pane { x "1%"; y "55%"; width "45%"; height "45%"; }
+            pane focus=true { x "50%"; y "55%"; width "45%"; height "45%"; }
+            pane { x "1%"; y "1%"; width "45%"; height "45%"; }
+            pane { x "50%"; y "1%"; width "45%"; height "45%"; }
+        }
+    }
+
+    // Bottom-aligned status bar (children first, then zjstatus)
+    default_tab_template {
+        children
+        pane size=2 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+                // --- Eldritch color variables ---
+                // bg=#171928  black (status bar background)
+                // dark=#212337  (surface)
+                // fg=#EBFAFA  white (primary text)
+                // green=#37F499  (active/normal mode)
+                // red=#F16C75  (locked mode)
+                // purple=#A48CF2  (general mode indicator)
+                // cyan=#04D1F9  (tmux/leader mode)
+                // yellow=#F7F67F  (tab mode, active tab)
+                // pink=#F265B5  (session)
+                // orange=#F7C67F  (rename modes)
+                // purple_alt=#7081D0  (inactive text, separators)
+
+                // --- Format layout ---
+                format_left   "{mode}#[bg=#171928] {tabs}"
+                format_center ""
+                format_right  "{command_cwd}{command_git_branch}#[bg=#171928,fg=#AD4E54]  {session}"
+                format_space  "#[bg=#171928]"
+                format_hide_on_overlength "true"
+                format_precedence "crl"
+
+                // --- Border ---
+                border_enabled  "true"
+                border_char     "─"
+                border_format   "#[fg=#212337]{char}"
+                border_position "top"
+
+                hide_frame_for_single_pane "true"
+
+                // --- Mode indicators ---
+                // Normal: green badge
+                mode_normal        "#[bg=#37F499,fg=#171928,bold] NORMAL #[bg=#171928,fg=#37F499]"
+                // Leader/Tmux: cyan badge (matches Wezterm leader indicator)
+                mode_tmux          "#[bg=#04D1F9,fg=#171928,bold]  LDR  #[bg=#171928,fg=#04D1F9]"
+                // Locked: red badge
+                mode_locked        "#[bg=#F16C75,fg=#171928,bold] LOCKED #[bg=#171928,fg=#F16C75]"
+                // Interactive modes: purple badge
+                mode_resize        "#[bg=#A48CF2,fg=#171928,bold] RESIZE #[bg=#171928,fg=#A48CF2]"
+                mode_pane          "#[bg=#A48CF2,fg=#171928,bold] PANE #[bg=#171928,fg=#A48CF2]"
+                mode_tab           "#[bg=#F7F67F,fg=#171928,bold] TAB #[bg=#171928,fg=#F7F67F]"
+                mode_scroll        "#[bg=#A48CF2,fg=#171928,bold] SCROLL #[bg=#171928,fg=#A48CF2]"
+                mode_enter_search  "#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
+                mode_search        "#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
+                mode_session       "#[bg=#F265B5,fg=#171928,bold] SESSION #[bg=#171928,fg=#F265B5]"
+                mode_move          "#[bg=#A48CF2,fg=#171928,bold] MOVE #[bg=#171928,fg=#A48CF2]"
+                // Rename modes: orange badge
+                mode_rename_tab    "#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
+                mode_rename_pane   "#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
+                mode_prompt        "#[bg=#A48CF2,fg=#171928,bold] PROMPT #[bg=#171928,fg=#A48CF2]"
+                mode_default_to_mode "normal"
+
+                // --- Tabs (color-coded pill style with Eldritch colors) ---
+                // Each tab state gets a distinct color for instant visual identification
+                // Normal: cyan pill
+                tab_normal              "#[bg=#171928,fg=#04D1F9]#[bg=#04D1F9,fg=#171928,bold]{index} #[bg=#212337,fg=#04D1F9,bold] {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
+                // Sync: purple pill
+                tab_normal_sync         "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold]{index} #[bg=#212337,fg=#A48CF2,bold] {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
+                // Fullscreen: yellow pill
+                tab_normal_fullscreen   "#[bg=#171928,fg=#F7F67F]#[bg=#F7F67F,fg=#171928,bold]{index} #[bg=#212337,fg=#F7F67F,bold] {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
+                // Active: green pill
+                tab_active              "#[bg=#171928,fg=#37F499]#[bg=#37F499,fg=#171928,bold]{index} #[bg=#212337,fg=#37F499,bold] {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
+                // Active + sync: pink pill
+                tab_active_sync         "#[bg=#171928,fg=#F265B5]#[bg=#F265B5,fg=#171928,bold]{index} #[bg=#212337,fg=#F265B5,bold] {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
+                // Active + fullscreen: orange pill
+                tab_active_fullscreen   "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold]{index} #[bg=#212337,fg=#F7C67F,bold] {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
+
+                tab_separator           "#[bg=#171928] "
+
+                // Indicators
+                tab_sync_indicator       " "
+                tab_fullscreen_indicator " 󰊓"
+                tab_floating_indicator   " 󰹙"
+
+                // --- Git branch (command widget) ---
+                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+                command_git_branch_format      "#[bg=#171928,fg=#A48CF2]  {stdout} "
+                command_git_branch_interval    "10"
+                command_git_branch_rendermode  "static"
+                command_git_branch_hide_on_empty_stdout "true"
+
+                // --- Current working directory ---
+                command_cwd_command     "bash -c 'basename \"$(pwd)\"'"
+                command_cwd_format      "#[bg=#171928,fg=#F265B5] 󰉋 {stdout} "
+                command_cwd_interval    "5"
+                command_cwd_rendermode  "static"
+
+                // --- Session name (matches Wezterm workspace icon) ---
+                session "#[fg=#7081D0]{name} "
+
+            }
+        }
+    }
+}

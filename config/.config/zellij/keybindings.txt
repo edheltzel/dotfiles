@@ -1,0 +1,74 @@
+╔══════════════════════════════════════════════════════════════╗
+║  Zellij Keybindings — Leader: Ctrl+K (tmux mode)           ║
+╚══════════════════════════════════════════════════════════════╝
+
+── LEADER (Ctrl+K then...) ──────────────────────────────────
+
+SPLITS
+  \        Split right
+  -        Split down
+  "        Split down (TMUX compat)
+  %        Split right (TMUX compat)
+
+PANE MANAGEMENT
+  h/j/k/l  Navigate panes (vim directions)
+  ←↑↓→     Navigate panes (arrows)
+  x        Close pane
+  z        Toggle zoom/fullscreen
+  =        Toggle zoom/fullscreen (alias)
+  w        Toggle floating panes
+  o        Focus next pane
+
+TAB MANAGEMENT
+  t        New tab
+  c        New tab (TMUX compat)
+  e        Rename tab
+  ,        Rename tab (TMUX compat)
+  n        Next tab
+  p        Previous tab
+  Tab      Toggle last tab
+  1-9      Jump to tab by number
+
+SUB-MODES
+  r        Enter resize mode (then h/j/k/l to resize)
+  m        Enter move mode (then h/j/k/l to move panes)
+
+SESSION
+  s        Session manager (fuzzy picker)
+  d        Detach from session
+
+SCROLLBACK
+  [        Enter scroll/copy mode
+
+MISC
+  Space    Next swap layout
+  Ctrl+K   Send literal Ctrl+K (passthrough)
+  ?        This help menu
+
+── GLOBAL (no leader needed) ─────────────────────────────────
+
+  Ctrl+G   Toggle locked mode (all keys pass through)
+  Ctrl+T   Enter tab mode
+  Ctrl+P   Enter pane mode
+  Ctrl+R   Enter resize mode
+  Ctrl+H   Enter move mode
+  Ctrl+O   Enter session mode
+  Ctrl+S   Enter scroll mode
+  Ctrl+Q   Quit Zellij
+
+  Alt+H/L  Move focus or tab left/right
+  Alt+J/K  Move focus down/up
+  Alt+N    New pane
+  Alt+F    Toggle floating panes
+  Alt+I/O  Move tab left/right
+  Alt+[-]  Decrease size
+  Alt+[+]  Increase size
+  Alt+[[]  Previous swap layout
+  Alt+[]]  Next swap layout
+
+── CLI (for coding agents) ───────────────────────────────────
+
+  zellij action rename-tab "NAME"
+  zellij action rename-pane "NAME"
+  zellij action new-tab --name "NAME"
+  zellij action new-tab --layout path/to/layout.kdl
