@@ -3,6 +3,11 @@ use = "ktunprasert/git-files"
 rev = "c7289ad"
 hash = "cdb1a69bed63211c75b72521bbab875d"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "1962818"
+hash = "26db011a778f261d730d4f5f8bf24b3f"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "8e6296f"
