@@ -211,28 +211,56 @@ keybinds clear-defaults=true {
     // Only Ctrl+K (leader) and Ctrl+G (lock) use Ctrl — all other Ctrl keys
     // are left free for shell use (Ctrl+R search, Ctrl+P history, etc.)
     shared_except "locked" {
+        // --- Direct tab switching (Ctrl+1-9) ---
+        bind "Ctrl 1" { GoToTab 1; }
+        bind "Ctrl 2" { GoToTab 2; }
+        bind "Ctrl 3" { GoToTab 3; }
+        bind "Ctrl 4" { GoToTab 4; }
+        bind "Ctrl 5" { GoToTab 5; }
+        bind "Ctrl 6" { GoToTab 6; }
+        bind "Ctrl 7" { GoToTab 7; }
+        bind "Ctrl 8" { GoToTab 8; }
+        bind "Ctrl 9" { GoToTab 9; }
+
+        // --- Tab cycling (Ctrl+, and Ctrl+.) ---
+        bind "Ctrl ," { GoToPreviousTab; }
+        bind "Ctrl ." { GoToNextTab; }
+
+        // --- Pane cycling (Alt+[ and Alt+]) ---
+        bind "Alt [" { FocusPreviousPane; }
+        bind "Alt ]" { FocusNextPane; }
+
+        // --- Pane/tab focus (Alt+arrows and Alt+hjkl) ---
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
         bind "Alt right" { MoveFocusOrTab "right"; }
-        bind "Alt +" { Resize "Increase"; }
-        bind "Alt -" { Resize "Decrease"; }
-        bind "Alt =" { Resize "Increase"; }
-        bind "Alt [" { FocusPreviousPane; }
-        bind "Alt ]" { FocusNextPane; }
-        bind "Alt {" { PreviousSwapLayout; }
-        bind "Alt }" { NextSwapLayout; }
-        bind "Alt f" { ToggleFloatingPanes; }
-        bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Alt h" { MoveFocusOrTab "left"; }
-        bind "Alt i" { MoveTab "left"; }
         bind "Alt j" { MoveFocus "down"; }
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
+
+        // --- Resize (Alt+/- /=) ---
+        bind "Alt +" { Resize "Increase"; }
+        bind "Alt -" { Resize "Decrease"; }
+        bind "Alt =" { Resize "Increase"; }
+
+        // --- Layout swap ---
+        bind "Alt {" { PreviousSwapLayout; }
+        bind "Alt }" { NextSwapLayout; }
+
+        // --- Floating panes (Alt+w instead of Alt+f to avoid OPT+Right conflict) ---
+        bind "Alt w" { ToggleFloatingPanes; }
+
+        // --- Mode shortcuts ---
+        bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Alt n" { NewPane; }
+        bind "Alt i" { MoveTab "left"; }
         bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { SwitchToMode "pane"; }
         bind "Alt t" { SwitchToMode "tab"; }
+
+        // --- Alt+1-9 also switches tabs (keeping for compatibility) ---
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
         bind "Alt 3" { GoToTab 3; }
