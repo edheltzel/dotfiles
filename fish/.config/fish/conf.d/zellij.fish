@@ -1,10 +1,5 @@
-# Zellij integration — push CWD to zjstatus and auto-rename tabs
+# Zellij integration — auto-rename tabs based on CWD
 if status is-interactive; and set -q ZELLIJ
-    function __zellij_update_cwd --on-event fish_prompt
-        command zellij pipe --plugin zjstatus "zjstatus::pipe::cwd::(basename $PWD)" &
-        disown
-    end
-
     function __zellij_update_tabname --on-variable PWD
         set -l tab_name
         if test "$PWD" = "$HOME"

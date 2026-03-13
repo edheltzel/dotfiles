@@ -119,7 +119,7 @@ layout {
                 // --- Format layout ---
                 format_left   "{mode}#[bg=#171928] {tabs}"
                 format_center ""
-                format_right  "{command_cwd}{command_git_branch}#[bg=#171928,fg=#AD4E54]  {session}"
+                format_right  "#[bg=#171928,fg=#AD4E54] {session}"
                 format_space  "#[bg=#171928]"
                 format_hide_on_overlength "true"
                 format_precedence "crl"
@@ -133,23 +133,23 @@ layout {
 
                 // --- Mode indicators ---
                 // Normal: green badge
-                mode_normal        "#[bg=#171928,fg=#37F499]#[bg=#37F499,fg=#171928,bold] NORMAL #[bg=#171928,fg=#37F499]"
+                mode_normal        "#[bg=#171928,fg=#37F499]#[bg=#37F499,fg=#171928,bold] N #[bg=#171928,fg=#37F499]"
                 // Leader/Tmux: cyan badge (matches Wezterm leader indicator)
-                mode_tmux          "#[bg=#171928,fg=#04D1F9]#[bg=#04D1F9,fg=#171928,bold]  LDR  #[bg=#171928,fg=#04D1F9]"
+                mode_tmux          "#[bg=#171928,fg=#04D1F9]#[bg=#04D1F9,fg=#171928,bold] 󰯙  #[bg=#171928,fg=#04D1F9]"
                 // Locked: red badge
-                mode_locked        "#[bg=#171928,fg=#F16C75]#[bg=#F16C75,fg=#171928,bold] LOCKED #[bg=#171928,fg=#F16C75]"
+                mode_locked        "#[bg=#171928,fg=#F16C75]#[bg=#F16C75,fg=#171928,bold]   #[bg=#171928,fg=#F16C75]"
                 // Interactive modes: purple badge
-                mode_resize        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] RESIZE #[bg=#171928,fg=#A48CF2]"
-                mode_pane          "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] PANE #[bg=#171928,fg=#A48CF2]"
-                mode_tab           "#[bg=#171928,fg=#F7F67F]#[bg=#F7F67F,fg=#171928,bold] TAB #[bg=#171928,fg=#F7F67F]"
+                mode_resize        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] 󰁌  #[bg=#171928,fg=#A48CF2]"
+                mode_pane          "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold]   #[bg=#171928,fg=#A48CF2]"
+                mode_tab           "#[bg=#171928,fg=#F7F67F]#[bg=#F7F67F,fg=#171928,bold] 󰓩  #[bg=#171928,fg=#F7F67F]"
                 mode_scroll        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] SCROLL #[bg=#171928,fg=#A48CF2]"
-                mode_enter_search  "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
-                mode_search        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] SEARCH #[bg=#171928,fg=#A48CF2]"
+                mode_enter_search  "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] 󱁴  #[bg=#171928,fg=#A48CF2]"
+                mode_search        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] 󱁴  #[bg=#171928,fg=#A48CF2]"
                 mode_session       "#[bg=#171928,fg=#A48CF2]#[bg=#F265B5,fg=#171928,bold] SESSION #[bg=#171928,fg=#F265B5]"
                 mode_move          "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] MOVE #[bg=#171928,fg=#A48CF2]"
                 // Rename modes: orange badge
-                mode_rename_tab    "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
-                mode_rename_pane   "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold] RENAME #[bg=#171928,fg=#F7C67F]"
+                mode_rename_tab    "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold]   #[bg=#171928,fg=#F7C67F]"
+                mode_rename_pane   "#[bg=#171928,fg=#F7C67F]#[bg=#F7C67F,fg=#171928,bold]   #[bg=#171928,fg=#F7C67F]"
                 mode_prompt        "#[bg=#171928,fg=#A48CF2]#[bg=#A48CF2,fg=#171928,bold] PROMPT #[bg=#171928,fg=#A48CF2]"
                 mode_default_to_mode "normal"
 
@@ -175,21 +175,8 @@ layout {
                 tab_fullscreen_indicator " 󰊓"
                 tab_floating_indicator   " 󰹙"
 
-                // --- Git branch (command widget) ---
-                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
-                command_git_branch_format      "#[bg=#171928,fg=#A48CF2]  {stdout} "
-                command_git_branch_interval    "10"
-                command_git_branch_rendermode  "static"
-                command_git_branch_hide_on_empty_stdout "true"
-
-                // --- Current working directory ---
-                command_cwd_command     "bash -c 'basename \"$(pwd)\"'"
-                command_cwd_format      "#[bg=#171928,fg=#F265B5] 󰉋 {stdout} "
-                command_cwd_interval    "5"
-                command_cwd_rendermode  "static"
-
-                // --- Session name (matches Wezterm workspace icon) ---
-                session "#[fg=#7081D0]{name} "
+                // --- Session name ---
+                session "#[fg=#7081D0] {name} "
 
             }
         }
