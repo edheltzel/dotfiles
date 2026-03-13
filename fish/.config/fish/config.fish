@@ -18,18 +18,42 @@ if status is-interactive
         functions -e __lazy_fnm node npm npx
         fnm env --use-on-cd | source
     end
-    function node; __lazy_fnm; command node $argv; end
-    function npm; __lazy_fnm; command npm $argv; end
-    function npx; __lazy_fnm; command bunx $argv; end
+    function node
+        __lazy_fnm
+        command node $argv
+    end
+    function npm
+        __lazy_fnm
+        command npm $argv
+    end
+    function npx
+        __lazy_fnm
+        command bunx $argv
+    end
 
     # Lazy-load rbenv — only inits when ruby/gem/bundle first called
     function __lazy_rbenv
         functions -e __lazy_rbenv ruby gem bundle rake irb
         source (rbenv init -|psub)
     end
-    function ruby; __lazy_rbenv; command ruby $argv; end
-    function gem; __lazy_rbenv; command gem $argv; end
-    function bundle; __lazy_rbenv; command bundle $argv; end
-    function rake; __lazy_rbenv; command rake $argv; end
-    function irb; __lazy_rbenv; command irb $argv; end
+    function ruby
+        __lazy_rbenv
+        command ruby $argv
+    end
+    function gem
+        __lazy_rbenv
+        command gem $argv
+    end
+    function bundle
+        __lazy_rbenv
+        command bundle $argv
+    end
+    function rake
+        __lazy_rbenv
+        command rake $argv
+    end
+    function irb
+        __lazy_rbenv
+        command irb $argv
+    end
 end
