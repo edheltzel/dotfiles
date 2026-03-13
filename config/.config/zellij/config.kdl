@@ -1,6 +1,6 @@
 // Zellij Configuration — Atlas
-// Leader key: Ctrl+K (tmux mode), matching Wezterm/TMUX setup
-// Keybinding reference: Ctrl+K ? opens floating help pane
+// Leader key: Alt+K (tmux mode), matching Wezterm/TMUX setup
+// Keybinding reference: Alt+K ? opens floating help pane
 
 keybinds clear-defaults=true {
     locked {
@@ -130,10 +130,14 @@ keybinds clear-defaults=true {
         }
     }
 
-    // --- Leader mode (Ctrl+K) — 1:1 with Wezterm Cmd+K ---
+    // --- Leader mode (Alt+K) — 1:1 with Wezterm Cmd+K ---
     tmux {
-        // Double-tap Ctrl+K sends literal Ctrl+K (kill-line in fish/readline)
-        bind "Ctrl k" { Write 11; SwitchToMode "normal"; }
+        // Double-tap Alt+K sends literal Ctrl+K (kill-line in fish/readline)
+        bind "Alt k" { Write 11; SwitchToMode "normal"; }
+
+        // Clear terminal (Ctrl+K k — mirrors WezTerm Cmd+K k)
+        // Sends Ctrl+C (byte 3) to cancel, then Ctrl+L (byte 12) to clear
+        bind "k" { Write 3; Write 12; SwitchToMode "normal"; }
 
         // Splits — Wezterm: Cmd+K \ (right), Cmd+K - (down)
         bind "\\" { NewPane "right"; SwitchToMode "normal"; }
@@ -208,7 +212,7 @@ keybinds clear-defaults=true {
     }
 
     // --- Shared bindings ---
-    // Only Ctrl+K (leader) and Ctrl+G (lock) use Ctrl — all other Ctrl keys
+    // Only Alt+K (leader) and Ctrl+G (lock) use Ctrl — all other Ctrl keys
     // are left free for shell use (Ctrl+R search, Ctrl+P history, etc.)
     shared_except "locked" {
         // --- Direct tab switching (Ctrl+1-9) ---
@@ -237,7 +241,6 @@ keybinds clear-defaults=true {
         bind "Alt right" { MoveFocusOrTab "right"; }
         bind "Alt h" { MoveFocusOrTab "left"; }
         bind "Alt j" { MoveFocus "down"; }
-        bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
 
         // --- Resize (Alt+/- /=) ---
@@ -272,10 +275,10 @@ keybinds clear-defaults=true {
         bind "Alt 9" { GoToTab 9; }
         bind "Ctrl q" { Quit; }
     }
-    // Leader key: Ctrl+K enters tmux mode — the single entry point
-    // (all sub-modes accessible via Ctrl+K then r/m/c/s/etc.)
+    // Leader key: Alt+K enters tmux mode — the single entry point
+    // (all sub-modes accessible via Alt+K then r/m/c/s/etc.)
     shared_except "locked" "scroll" "search" "tmux" {
-        bind "Ctrl k" { SwitchToMode "tmux"; }
+        bind "Alt k" { SwitchToMode "tmux"; }
     }
     shared_except "normal" "locked" "entersearch" {
         bind "enter" { SwitchToMode "normal"; }
