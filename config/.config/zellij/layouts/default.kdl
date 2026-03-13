@@ -130,7 +130,6 @@ layout {
                 border_format   "#[fg=#212337]{char}"
                 border_position "bottom"
 
-                hide_frame_for_single_pane "true"
 
                 // --- Mode indicators ---
                 // Normal: green badge
