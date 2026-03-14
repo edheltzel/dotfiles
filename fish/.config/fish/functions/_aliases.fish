@@ -27,9 +27,8 @@ alias ltd "eza -TaD --icons --ignore-glob=\"node_modules|.git|.vscode|.DS_Store\
 
 # Shortcuts
 alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
-alias atlas="bun $HOME/.claude/skills/PAI/Tools/pai.ts"
 alias fabric="fabric-ai"
-alias mux="zellij"
+alias mux="tmux"
 alias zel="zellij"
 
 # Network shortcuts/aliases and utilities
