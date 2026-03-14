@@ -21,10 +21,7 @@ local keys = {
   {
     key = "k",
     mods = "LEADER",
-    action = act.Multiple({
-      act.SendKey({ key = "C", mods = "CTRL" }),
-      act.SendKey({ key = "L", mods = "CTRL" }),
-    }),
+    action = act.ClearScrollback("ScrollbackAndViewport"),
     desc = "clear the screen w/ cmd+k k",
   },
   -- New window/tab/pane
@@ -152,6 +149,7 @@ local keys = {
 
   { key = "j", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
   { key = "k", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
+  { key = "d", mods = "LEADER", action = act.DetachDomain("CurrentPaneDomain"), desc = "detach tmux session w/ cmd+k d" },
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY
 
