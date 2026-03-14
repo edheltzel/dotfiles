@@ -154,19 +154,12 @@ layout {
                 mode_default_to_mode "normal"
 
                 // --- Tabs (color-coded pill style with Eldritch colors) ---
-                // Each tab state gets a distinct color for instant visual identification
-                // Normal: cyan pill
                 tab_normal              "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#7081D0,bold]{index} {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
-                // Sync: purple pill
                 tab_normal_sync         "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#7081D0,bold]{index} {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
-                // Fullscreen: yellow pill
                 tab_normal_fullscreen   "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#7081D0,bold]{index} {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
-                // Active: green pill
                 tab_active              "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#F265B5,bold]{index} {name}{floating_indicator}#[bg=#171928,fg=#212337,bold]"
-                // Active + sync: pink pill
-                tab_active_sync         "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#F265B5,bold]{index} {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
-                // Active + fullscreen: orange pill
                 tab_active_fullscreen   "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#F265B5,bold]{index} {name}{fullscreen_indicator}#[bg=#171928,fg=#212337,bold]"
+                tab_active_sync         "#[bg=#171928,fg=#212337]#[bg=#212337,fg=#F265B5,bold]{index} {name}{sync_indicator}#[bg=#171928,fg=#212337,bold]"
 
                 tab_separator           "#[bg=#171928] "
 
