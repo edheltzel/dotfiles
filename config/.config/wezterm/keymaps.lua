@@ -150,6 +150,11 @@ local keys = {
   { key = "j", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
   { key = "k", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
   { key = "d", mods = "LEADER", action = act.DetachDomain("CurrentPaneDomain"), desc = "detach tmux session w/ cmd+k d" },
+
+  -- Remap Cmd+Alt+Ctrl → Ctrl+Alt for tmux -CC compatibility (Super modifier doesn't survive tmux)
+  { key = "c", mods = "SUPER|ALT|CTRL", action = act.SendKey({ key = "c", mods = "ALT|CTRL" }), desc = "Toggle Claude Code" },
+  { key = "o", mods = "SUPER|ALT|CTRL", action = act.SendKey({ key = "o", mods = "ALT|CTRL" }), desc = "Toggle OpenCode" },
+  { key = "p", mods = "SUPER|ALT|CTRL", action = act.SendKey({ key = "p", mods = "ALT|CTRL" }), desc = "Toggle Pi" },
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY
 
