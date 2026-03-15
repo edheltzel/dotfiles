@@ -259,8 +259,8 @@ cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archive and extractor
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
-cask tailscale-app
-
+cask 'tailscale-app'
+brew 'hmans/beans/beans'
 brew 'stats'                       # System stats in menubar
 
 # Keyboard+Mouse Hacks
@@ -283,10 +283,11 @@ brew 'borders'                      # A window borders manager
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
-cask 'chromium'                  # For tests
-cask 'firefox'                   # For tests
-cask 'vivaldi'                   # Chromium - daily driver
+cask 'brave-browser'             # Chromium - daily driver
+cask 'vivaldi'                   # Chromium
 cask 'zen'                       # Gecko
+cask 'firefox'                   # For tests
+cask 'google-chrome'             # For tests
 cask 'safari-preview'            # For tests
 cask 'vladdoster/formulae/vimari' # Safari extension for Vim motions
 
@@ -339,6 +340,7 @@ cask 'iterm2'                         # OG terminal
 cask 'kitty'                          # Python+C
 cask 'warp'                           # Rust
 cask 'wezterm@nightly'                # Rust
+cask 'cmux'
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
