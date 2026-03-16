@@ -2,7 +2,7 @@
 
 set shell := ["bash", "-cu"]
 
-stow_packages := "dots git fish config neoed local"
+stow_packages := "dots git fish config neoed local wezterm"
 
 yellow := '\033[33m'
 green := '\033[32m'
@@ -26,9 +26,18 @@ run:
     done
     @echo "Dotfiles stowed successfully"
 
+# List available stow packages
+list:
+    @printf "{{yellow}}Available stow packages:{{clr}}\n"
+    @for pkg in {{stow_packages}}; do \
+        printf "  {{green}}%s{{clr}}\n" "$pkg"; \
+    done
+
 # Add individual package with Stow (e.g., just stow fish)
-stow pkg:
-    @if echo "{{stow_packages}}" | grep -qw "{{pkg}}"; then \
+stow pkg="":
+    @if [ -z "{{pkg}}" ]; then \
+        just list; \
+    elif echo "{{stow_packages}}" | grep -qw "{{pkg}}"; then \
         stow {{pkg}}; \
         echo "{{pkg}} was added"; \
     else \

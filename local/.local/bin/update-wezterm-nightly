@@ -1,0 +1,33 @@
+#!/bin/sh
+# Update WezTerm nightly from GitHub releases
+# Used by topgrade via [commands] section
+set -e
+
+APP_NAME="WezTerm.app"
+APP_DIR="/Applications"
+URL="https://github.com/wez/wezterm/releases/download/nightly/WezTerm-macos-nightly.zip"
+TMP_DIR=$(mktemp -d)
+TMP_ZIP="$TMP_DIR/wezterm-nightly.zip"
+
+cleanup() {
+  rm -rf "$TMP_DIR"
+}
+trap cleanup EXIT
+
+echo "Downloading WezTerm nightly..."
+curl -fsSL "$URL" -o "$TMP_ZIP"
+
+echo "Extracting..."
+unzip -qo "$TMP_ZIP" -d "$TMP_DIR"
+
+EXTRACTED=$(find "$TMP_DIR" -maxdepth 1 -type d -name "WezTerm-macos-*" | head -1)
+if [ -z "$EXTRACTED" ]; then
+  echo "Error: Could not find extracted WezTerm directory" >&2
+  exit 1
+fi
+
+echo "Installing to $APP_DIR..."
+rm -rf "$APP_DIR/$APP_NAME"
+mv "$EXTRACTED/$APP_NAME" "$APP_DIR/"
+
+echo "WezTerm Nightly updated successfully"

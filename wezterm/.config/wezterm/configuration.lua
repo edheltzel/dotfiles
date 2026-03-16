@@ -51,8 +51,9 @@ local function setup(theme, keymaps)
   config.window_decorations = "RESIZE"
   config.window_close_confirmation = "AlwaysPrompt"
   config.macos_window_background_blur = 25
-  config.scrollback_lines = 5000
-  config.default_workspace = "∗"
+  config.scrollback_lines = 10000
+  config.window_background_opacity = 0.98
+  config.default_workspace = wezterm.nerdfonts.md_delta .. " HQ"
   config.native_macos_fullscreen_mode = false
 
   -- Panes
@@ -65,7 +66,7 @@ local function setup(theme, keymaps)
   config.use_fancy_tab_bar = false
   config.status_update_interval = 1000
   config.tab_bar_at_bottom = true
-  config.hide_tab_bar_if_only_one_tab = true
+  config.hide_tab_bar_if_only_one_tab = false
   config.colors = {
     tab_bar = {
       background = theme.tab_bar.bg,

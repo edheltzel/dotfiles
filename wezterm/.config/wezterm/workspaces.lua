@@ -7,7 +7,7 @@ local mux = wezterm.mux
 local function setup()
   wezterm.on("gui-startup", function(cmd)
     -- default workspace: single tab, single pane (rocket icon matches config.default_workspace)
-    mux.spawn_window(cmd or { workspace = wezterm.nerdfonts.md_delta })
+    mux.spawn_window(cmd or { workspace = wezterm.nerdfonts.md_delta .. " HQ" })
 
     -- "dotfiles" workspace: 3-pane split layout (disabled for Layered Harmony — Zellij owns panes)
     --   ┌────────────┬────────────┐

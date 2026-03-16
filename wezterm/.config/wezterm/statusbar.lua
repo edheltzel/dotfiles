@@ -5,6 +5,7 @@ local wezterm = require("wezterm")
 
 local function setup(theme)
   local colors = theme.colors
+  local separator_color = colors.purple_alt or colors.purple
   local basename = theme.basename
 
   -- Git branch cache (only re-query when CWD changes)
@@ -51,20 +52,22 @@ local function setup(theme)
     cmd = cmd and basename(cmd) or ""
     local cmd_icon = theme.get_process_icon(pane:get_title(), cmd, wezterm.nerdfonts.fa_code)
 
-    -- Session stats: total tabs + panes across all workspaces
-    -- Falls back to current window only if wezterm.mux.all_windows() is unavailable
+    -- Session stats: tabs + panes for current workspace only
     local total_tabs = 0
     local total_panes = 0
     local workspace_count = #wezterm.mux.get_workspace_names()
+    local current_workspace = window:active_workspace()
     local ok, all_wins = pcall(function()
       return wezterm.mux.all_windows()
     end)
     if ok and all_wins then
       for _, mux_win in ipairs(all_wins) do
-        local tabs = mux_win:tabs()
-        total_tabs = total_tabs + #tabs
-        for _, tab in ipairs(tabs) do
-          total_panes = total_panes + #tab:panes()
+        if mux_win:get_workspace() == current_workspace then
+          local tabs = mux_win:tabs()
+          total_tabs = total_tabs + #tabs
+          for _, tab in ipairs(tabs) do
+            total_panes = total_panes + #tab:panes()
+          end
         end
       end
     else
@@ -95,7 +98,7 @@ local function setup(theme)
 
     -- Git branch (only show if in a git repo)
     if branch ~= "" then
-      table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
+      table.insert(right_items, { Foreground = { Color = separator_color } })
       table.insert(right_items, { Text = " ⋮ " })
       table.insert(right_items, { Foreground = { Color = colors.purple } })
       table.insert(right_items, { Text = wezterm.nerdfonts.dev_git_branch .. "  " })

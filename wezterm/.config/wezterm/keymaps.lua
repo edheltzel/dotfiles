@@ -50,7 +50,6 @@ local keys = {
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     desc = "split panes w/ cmd+k - (horizontal)",
   },
-  -- Ghostty style Split directions (h=left, j=down, l=right, u=up) k is used to clear
   { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left" }), desc = "split left w/ cmd+k h" },
   {
     key = "l",
@@ -106,7 +105,7 @@ local keys = {
   -- Workspace and Multiplexing
   --- ---------------------------------------------------------------------------
   {
-    key = "S",
+    key = "W",
     mods = "LEADER",
     action = act.PromptInputLine({
       description = wezterm.format({
@@ -128,7 +127,7 @@ local keys = {
     desc = "Create A Workspace",
   },
   {
-    key = "s",
+    key = "w",
     mods = "LEADER",
     action = act.ShowLauncherArgs({ title = "Workspaces", flags = "FUZZY|WORKSPACES" }),
     desc = "Switch Workspace",
@@ -149,11 +148,26 @@ local keys = {
 
   { key = "j", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(1), desc = "Next Workspace" },
   { key = "k", mods = "SUPER|CTRL|ALT", action = act.SwitchWorkspaceRelative(-1), desc = "Previous Workspace" },
-  { key = "d", mods = "LEADER", action = act.DetachDomain("CurrentPaneDomain"), desc = "detach tmux session w/ cmd+k d" },
+  {
+    key = "d",
+    mods = "LEADER",
+    action = act.DetachDomain("CurrentPaneDomain"),
+    desc = "detach tmux session w/ cmd+k d",
+  },
 
   -- Remap Cmd+Alt+Ctrl → Ctrl+Alt for tmux -CC compatibility (Super modifier doesn't survive tmux)
-  { key = "c", mods = "SUPER|ALT|CTRL", action = act.SendKey({ key = "c", mods = "ALT|CTRL" }), desc = "Toggle Claude Code" },
-  { key = "o", mods = "SUPER|ALT|CTRL", action = act.SendKey({ key = "o", mods = "ALT|CTRL" }), desc = "Toggle OpenCode" },
+  {
+    key = "c",
+    mods = "SUPER|ALT|CTRL",
+    action = act.SendKey({ key = "c", mods = "ALT|CTRL" }),
+    desc = "Toggle Claude Code",
+  },
+  {
+    key = "o",
+    mods = "SUPER|ALT|CTRL",
+    action = act.SendKey({ key = "o", mods = "ALT|CTRL" }),
+    desc = "Toggle OpenCode",
+  },
   { key = "p", mods = "SUPER|ALT|CTRL", action = act.SendKey({ key = "p", mods = "ALT|CTRL" }), desc = "Toggle Pi" },
   { key = "B", mods = "LEADER", action = act.ShowDebugOverlay, desc = "Debug Overlay" },
   ---- END LEADER KEY
@@ -240,8 +254,6 @@ local key_tables = {
   -- use cmd+k m to use move mode
   move_tab = {
     { key = "h", action = act.MoveTabRelative(-1) },
-    { key = "j", action = act.MoveTabRelative(-1) },
-    { key = "k", action = act.MoveTabRelative(1) },
     { key = "l", action = act.MoveTabRelative(1) },
     { key = "Escape", action = "PopKeyTable" },
     { key = "Enter", action = "PopKeyTable" },

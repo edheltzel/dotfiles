@@ -168,17 +168,11 @@ There are two options for managing packages with GNU Stow:
 
 ## Stow Packages
 
-- **atlas (atlas/) - [Git Submodule](https://github.com/edheltzel/atlas)**
-  - Personal AI Infrastructure (PAI) for Claude Code and OpenCode
-  - `.claude/` - Claude Code configuration (hooks, skills, commands, voice system, observability)
-  - `.config/opencode/` - OpenCode configuration (agents, commands, plugins, themes)
-  - Managed as a separate repository for independent versioning
-  - See [Atlas README](./atlas/README.md) for full documentation
-- dots (dots/)
-  - misc dotfiles that are stored in the $HOME directory
-- git (git/)
-  - git configuration
-- fish (fish/)
+- **dots** (dots/)
+  - Misc dotfiles stored in `$HOME` (`.npmrc`, `.tmux.conf`, `.biome.json`, etc.)
+- **git** (git/)
+  - Git configuration with SSH signing, Delta pager, machine-specific local configs
+- **fish** (fish/)
   - XDG Base Directory – Reference: [XDG Base Directory][XDGRef] for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
   - **Secrets Management**: API keys and sensitive environment variables are stored in `conf.d/secrets.fish` (gitignored). This file is created locally and never committed to version control.
     - Copy the template: `cp fish/.config/fish/conf.d/secrets.fish.example fish/.config/fish/conf.d/secrets.fish`
@@ -194,20 +188,8 @@ There are two options for managing packages with GNU Stow:
     - `conf.d/zoxide.fish` - Directory jumper (`z`/`zi` commands) initialized on first use
     - Pattern: wrapper functions erase themselves and source the real tool init, then call the actual command
   - See `config.fish` for the main lazy-loading orchestration
-- **nvim (nvim/) - Primary Editor**
-  - **[NEO.ED](https://github.com/edheltzel/neoed)** - LazyVim-based Neovim configuration managed as a **git submodule**
-  - This is the default editor for day-to-day development work
-  - See [neoed/.config/nvim/README.md](./neoed/.config/nvim/README.md) for full documentation
-  - **Key Features:**
-    - AI Integration: Claude Code, Codeium, Supermaven
-    - Multi-language support: Go, Python, TypeScript, PHP/Laravel, Rust, and more
-    - Eldritch colorscheme with custom lualine statusline
-    - Snacks.nvim for explorer, picker, dashboard, and terminal
-    - Biome-first formatting with Prettier fallback
-  - **Plugin Organization:** `lua/plugins/{ai,coding,editor,formatting,languages,linting,ui,utils}/`
-  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neoed/.config/nvim/`
-- config (config/)
-  - Configuration files for various applications, instead of adding them to root of the repo.
+- **config** (config/)
+  - Configuration files for 25+ applications, instead of adding them to root of the repo.
   - **Prompt**: Configurable prompt system supporting Oh My Posh (default) or Starship
     - `starship-ish.omp.json` - Oh My Posh theme (styled like Starship)
     - `starship.toml` - Starship config (alternative)
@@ -216,22 +198,27 @@ There are two options for managing packages with GNU Stow:
     - Run `theme` for interactive fzf picker with preview, or `theme <name>` to switch directly
     - Supported themes: `eldritch`, `rose-pine`, `rose-pine-moon`, `tokyo-night`, `tokyo-night-moon`
     - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode
-    - See [config/.config/themes/README.md](./config/.config/themes/README.md) for details
-  - **OpenCode**: AI coding assistant configuration
-    - `opencode.jsonc` - Main config with Claude Opus model, Context7 MCP server, and Eldritch theme
-    - `command/` - Custom slash commands (`/commit`, `/commit-push`) for git workflows
-    - `plugin/audio-feedback.js` - TTS notifications using macOS `say` for permission requests and task completion
-    - `themes/` - Custom Eldritch color themes for OpenCode UI
-    - **Plugin Dependencies**: Run `cd ~/.config/opencode && bun add @opencode-ai/plugin` to install plugin types (node_modules, package.json, bun.lock are git-ignored)
-- karabiner (config/.config/karabiner/)
-  - Complex keyboard customizations with Hyper key chording
-  - I am keeping this in for legacy reasons - I am using [LeaderKey](https://github.com/mikker/LeaderKey)
-- vscode - Legacy (no longer managed)
-  - VSCode configurations stored directly in `~/Library/Application Support/Code/User/`
-- zed (config/.config/zed/) - Legacy
-  - Zed editor config maintained for occasional use; not primary workflow
-- local (local/)
-  - User-specific data not configuration-related. ie: dictionaries and misc items that mean nothing, etc.
+  - **Terminal configs**: alacritty, kitty, ghostty (WezTerm is its own package below)
+  - **Keyboard**: karabiner (legacy, now using [LeaderKey](https://github.com/mikker/LeaderKey)), leaderkey config
+  - **Editors**: zed (Vim mode + AI integration) — maintained for occasional use
+- **neoed** (neoed/) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
+  - **[NEO.ED](https://github.com/edheltzel/neoed)** - LazyVim-based Neovim configuration — the primary editor
+  - See [neoed/.config/nvim/README.md](./neoed/.config/nvim/README.md) for full documentation
+  - **Key Features:**
+    - AI Integration: Claude Code, OpenCode, Pi Agent
+    - Multi-language support: Go, Python, TypeScript, PHP/Laravel, Rust, and more
+    - Eldritch colorscheme with custom lualine statusline
+    - Snacks.nvim for explorer, picker, dashboard, and terminal
+    - Biome-first formatting with Prettier fallback
+  - **Plugin Organization:** `lua/plugins/{ai,coding,editor,formatting,languages,linting,ui,utils}/`
+  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neoed/.config/nvim/`
+- **local** (local/)
+  - User-specific data: `~/.local/bin` scripts, cspell dictionaries, keyboard config backups (Corne, Dygma Defy, Keychron Q11), GitHub CLI extensions
+- **wezterm** (wezterm/)
+  - Modular WezTerm terminal configuration with Lua architecture
+  - `wezterm.lua` (orchestrator), `configuration.lua`, `keymaps.lua`, `theme.lua`, `tabs.lua`, `statusbar.lua`, `workspaces.lua`
+  - Features: pill-shaped tabs, AI agent activity detection, project-colored tabs, git branch in statusbar, zen mode, multi-theme support, workspace management
+  - Leader key: `cmd+k` with 1.5s timeout
 
 <h2 id="scripts">Scripts <a href="#to-the-top">↑</a></h2>
 
@@ -407,13 +394,12 @@ Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-
 <details>
   <summary>Git Submodules</summary>
 
-This repo uses git submodules for managing:
+This repo uses a git submodule for:
 - **neoed** - Neovim configuration ([NEO.ED](https://github.com/edheltzel/neoed))
-- **atlas** - Personal AI Infrastructure ([Atlas](https://github.com/edheltzel/atlas))
 
-If you encounter issues with submodules:
+If you encounter issues with the submodule:
 
-**Initialize/Update Submodules:**
+**Initialize/Update Submodule:**
 
 ```shell
 cd ~/.dotfiles
@@ -423,21 +409,16 @@ git submodule update --init --recursive
 **Update Submodule to Latest:**
 
 ```shell
-# For Neovim (neoed)
 cd ~/.dotfiles/neoed/.config/nvim
-git pull origin master
-
-# For Atlas
-cd ~/.dotfiles/atlas
 git pull origin master
 
 # Commit the update
 cd ~/.dotfiles
-git add neoed atlas
-git commit -m "Update submodules"
+git add neoed
+git commit -m "Update neoed submodule"
 ```
 
-**Clone with Submodules:**
+**Clone with Submodule:**
 
 ```shell
 git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles
@@ -446,7 +427,7 @@ git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotf
 **If Submodule is Empty:**
 
 ```shell
-git submodule deinit -f <submodule-path>
+git submodule deinit -f neoed/.config/nvim
 git submodule update --init --recursive
 ```
 

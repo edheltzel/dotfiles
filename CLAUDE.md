@@ -118,43 +118,15 @@ ccu                 # Claude Code usage stats (bunx ccusage)
 
 The repository uses these stow packages (defined in `justfile:5`):
 
-- **atlas** - Personal AI Infrastructure (PAI) - **Git Submodule** ([repo](https://github.com/edheltzel/atlas))
-  - Claude Code: hooks, skills, commands, voice system, observability dashboard
-  - OpenCode: agents, commands, plugins, themes
-  - Symlinks to `~/.claude/` and `~/.config/opencode/`
-- **neoed** - LazyVim customizations (NEO.ED) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
-- **fish** - Fish shell config (XDG-compliant, lazy-loading)
+- **dots** - Misc dotfiles in `$HOME` (`.npmrc`, `.curlrc`, `.tmux.conf`, etc.)
 - **git** - Git configuration with SSH signing
-- **config** - 27+ application configs (yazi, raycast, aerospace, karabiner, zed, etc.)
-- **dots** - Misc dotfiles in `$HOME` (`.npmrc`, `.curlrc`, etc.)
-- **local** - User-specific non-config data
+- **fish** - Fish shell config (XDG-compliant, lazy-loading)
+- **config** - 25+ application configs (yazi, raycast, aerospace, ghostty, kitty, karabiner, zed, etc.)
+- **neoed** - LazyVim customizations (NEO.ED) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
+- **local** - User-specific non-config data (`~/.local/bin`, dictionaries, keyboard backups)
+- **wezterm** - WezTerm terminal config (modular Lua architecture)
 
-**Git Submodules:** Both `atlas` and `neoed` are managed as separate repositories. After cloning, run `git submodule update --init --recursive` to initialize them.
-
-### Atlas - Personal AI Infrastructure
-
-The `atlas/` submodule contains the Personal AI Infrastructure (PAI) for Claude Code and OpenCode:
-
-| Directory                       | Purpose                                                |
-| ------------------------------- | ------------------------------------------------------ |
-| `atlas/.claude/commands/atlas/` | 18 slash commands (`/atlas:*`)                         |
-| `atlas/.claude/skills/`         | 7 skills (CORE, Art, Agents, Browser, Prompting, etc.) |
-| `atlas/.claude/hooks/`          | TypeScript session lifecycle hooks                     |
-| `atlas/.claude/voice/`          | ElevenLabs TTS voice server                            |
-| `atlas/.claude/observability/`  | Real-time Vue dashboard                                |
-| `atlas/.config/opencode/`       | OpenCode AI configuration                              |
-
-**Working with Atlas:**
-
-```bash
-# Update atlas submodule
-cd ~/.dotfiles/atlas && git pull origin master
-
-# Restow after changes
-just stow atlas
-```
-
-**Atlas Commands:** Run `/atlas:help` in Claude Code to see all available commands.
+**Git Submodule:** `neoed` is managed as a separate repository. After cloning, run `git submodule update --init --recursive` to initialize it.
 
 ### XDG Compliance
 
@@ -199,7 +171,7 @@ All paths configured in `fish/.config/fish/conf.d/paths.fish`:
   - `languages/` - LSP configs per language
 - `lazy-lock.json` - Dependency lock file
 
-**Editor Priority:** Neovim is default git editor (`.gitconfig:3`)
+**Editor Priority:** Zed is default git editor (`.gitconfig` `core.editor`), Neovim is primary development editor
 
 ### Git Configuration
 
@@ -244,10 +216,10 @@ git sm          # Submodule update --init --recursive
 
 ### Application Configs (`config/.config/`)
 
-27+ applications configured:
+25+ applications configured (WezTerm has its own stow package at `wezterm/`):
 
-- **Terminal:** alacritty, kitty, ghostty, wezterm
-- **Multiplexers:** zellij, tmux,
+- **Terminal:** alacritty, kitty, ghostty
+- **Multiplexers:** zellij, tmux
 - **Window Manager:** aerospace (Stage Manager + Raycast)
 - **File Manager:** yazi (custom keybindings)
 - **Git UI:** lazygit
@@ -279,6 +251,7 @@ Homebrew primary, FNM (Node), rbenv (Ruby), rustup (Rust), pipx (Python)
 - `git/.gitconfig` - Git aliases and configuration
 - `neoed/.config/nvim/lua/config/keymaps.lua` - Neovim keybindings
 - `config/.config/topgrade.toml` - Update manager config
+- `wezterm/.config/wezterm/wezterm.lua` - WezTerm main orchestrator
 - `.stow-local-ignore` - Files Stow should skip
 
 ## Development Patterns
@@ -330,7 +303,7 @@ topgrade --only cargo
 
 ## WezTerm Configuration
 
-WezTerm config uses a modular architecture (`config/.config/wezterm/`):
+WezTerm config is its own stow package with a modular Lua architecture (`wezterm/.config/wezterm/`):
 
 - `wezterm.lua` - Main orchestrator
 - `keymaps.lua` - Leader key (`cmd+k`) and all keybindings
@@ -348,9 +321,9 @@ cmd+k x             -- Close pane/tab
 cmd+k -             -- Split vertical
 cmd+k \             -- Split horizontal
 cmd+k h/j/l/u       -- Split left/down/right/up (Ghostty-style)
-cmd+k r             -- Resize pane mode (h/j/k/l to resize)
-cmd+k s             -- Switch workspace (fuzzy)
-cmd+k S             -- Create new workspace
+cmd+k r             -- Resize pane mode (h/l to move)
+cmd+k w             -- Switch workspace (fuzzy)
+cmd+k W             -- Create new workspace
 cmd+k =             -- Toggle pane zoom
 cmd+k c             -- Copy mode
 cmd+k 1-9           -- Jump to tab by index
