@@ -7,7 +7,7 @@ set -e
 THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
-
+WEZCONFIG="$DOTFILES/wezterm/.config"
 # Available themes
 THEMES=("aura" "eldritch" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "tokyo-night" "tokyo-night-moon")
 
@@ -184,7 +184,7 @@ update_kitty() {
 update_wezterm() {
   local theme="$1"
   local wezterm_theme=$(get_wezterm_theme "$theme")
-  local config_file="$CONFIG/wezterm/theme.lua"
+  local config_file="$WEZCONFIG/wezterm/theme.lua"
 
   sed -i '' "s/^M\.name = .*/M.name = \"$wezterm_theme\"/" "$config_file"
   success "WezTerm → $wezterm_theme"
