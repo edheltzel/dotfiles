@@ -1,18 +1,18 @@
 # WezTerm Configuration
 
-Modular WezTerm config using the Eldritch color scheme with pill-shaped tabs, process icons, project-based tab colors, and a git-aware status bar.
+Modular WezTerm config using the (Eldritch)[https://github.com/eldritch-theme/eldritch] color scheme with pill-shaped tabs, process icons, project-based tab colors, and a git-aware status bar.
 
 ## File Structure
 
-| File | Purpose |
-|------|---------|
-| `wezterm.lua` | Orchestrator — wires all modules together |
-| `theme.lua` | Color palette, tab bar colors, process icons, shared `basename()` helper |
-| `configuration.lua` | Config settings: shell, font, rendering, window, panes, tab bar |
-| `keymaps.lua` | Leader key, key bindings, key tables |
-| `tabs.lua` | Pill-shaped tabs, project colors, unseen output |
-| `statusbar.lua` | Left/right status bar: workspace, CWD, git branch, command (dynamic icon), time |
-| `workspaces.lua` | Startup workspace layouts via `gui-startup` event |
+| File                | Purpose                                                                         |
+| ------------------- | ------------------------------------------------------------------------------- |
+| `wezterm.lua`       | Orchestrator — wires all modules together                                       |
+| `theme.lua`         | Color palette, tab bar colors, process icons, shared `basename()` helper        |
+| `configuration.lua` | Config settings: shell, font, rendering, window, panes, tab bar                 |
+| `keymaps.lua`       | Leader key, key bindings, key tables                                            |
+| `tabs.lua`          | Pill-shaped tabs, project colors, unseen output                                 |
+| `statusbar.lua`     | Left/right status bar: workspace, CWD, git branch, command (dynamic icon), time |
+| `workspaces.lua`    | Startup workspace layouts via `gui-startup` event                               |
 
 ## Customization
 
@@ -64,60 +64,60 @@ Leader key: **Cmd+K** (1.5s timeout)
 
 ### Panes
 
-| Keys | Action |
-|------|--------|
-| `LDR -` | Split down |
-| `LDR \` | Split right |
-| `LDR h/j/k/l/u` | Split left/down/clear/right/up |
-| `LDR x` | Close pane |
-| `LDR z` | Toggle zoom |
-| `LDR r` | Resize mode (`h/j/k/l`, `Esc` to exit) |
-| `Cmd+]` / `Cmd+[` | Next / previous pane |
-| `Cmd+Ctrl+=` | Close pane |
+| Keys              | Action                                 |
+| ----------------- | -------------------------------------- |
+| `LDR -`           | Split down                             |
+| `LDR \`           | Split right                            |
+| `LDR h/j/k/l/u`   | Split left/down/clear/right/up         |
+| `LDR x`           | Close pane                             |
+| `LDR z`           | Toggle zoom                            |
+| `LDR r`           | Resize mode (`h/j/k/l`, `Esc` to exit) |
+| `Cmd+]` / `Cmd+[` | Next / previous pane                   |
+| `Cmd+Ctrl+=`      | Close pane                             |
 
 ### Tabs
 
-| Keys | Action |
-|------|--------|
-| `LDR t` | New tab |
-| `LDR 1-9` | Jump to tab |
-| `LDR e` | Rename tab |
-| `LDR T` | Tab navigator |
-| `LDR m` | Move tab mode (`h/l`, `Esc` to exit) |
-| `Cmd+Shift+]` / `[` | Next / previous tab |
+| Keys                | Action                               |
+| ------------------- | ------------------------------------ |
+| `LDR t`             | New tab                              |
+| `LDR 1-9`           | Jump to tab                          |
+| `LDR e`             | Rename tab                           |
+| `LDR T`             | Tab navigator                        |
+| `LDR m`             | Move tab mode (`h/l`, `Esc` to exit) |
+| `Cmd+Shift+]` / `[` | Next / previous tab                  |
 
 ### Workspaces
 
-| Keys | Action |
-|------|--------|
-| `LDR s` | Switch workspace (fuzzy) |
-| `LDR S` | Create workspace |
-| `LDR E` | Rename workspace |
-| `Ctrl+Cmd+N` | Next workspace |
-| `Ctrl+Cmd+Alt+P` | Previous workspace |
+| Keys             | Action                   |
+| ---------------- | ------------------------ |
+| `LDR s`          | Switch workspace (fuzzy) |
+| `LDR S`          | Create workspace         |
+| `LDR E`          | Rename workspace         |
+| `Ctrl+Cmd+N`     | Next workspace           |
+| `Ctrl+Cmd+Alt+P` | Previous workspace       |
 
 ### fzf.fish Integration
 
-| Keys | Action |
-|------|--------|
-| `Cmd+Ctrl+F` | Search directory |
-| `Cmd+Ctrl+L` | Search git log |
+| Keys         | Action            |
+| ------------ | ----------------- |
+| `Cmd+Ctrl+F` | Search directory  |
+| `Cmd+Ctrl+L` | Search git log    |
 | `Cmd+Ctrl+S` | Search git status |
-| `Cmd+Ctrl+R` | Search history |
-| `Cmd+Ctrl+P` | Search processes |
-| `Cmd+Ctrl+V` | Search variables |
+| `Cmd+Ctrl+R` | Search history    |
+| `Cmd+Ctrl+P` | Search processes  |
+| `Cmd+Ctrl+V` | Search variables  |
 
 ### Other
 
-| Keys | Action |
-|------|--------|
-| `LDR p` / `LDR Space` | Command palette |
-| `LDR k` | Clear screen |
-| `LDR n` | New window |
-| `LDR c` | Copy mode |
-| `LDR B` | Debug overlay |
-| `Cmd+Shift+W` | Quit application (with confirmation) |
-| `Cmd+Ctrl+F` | Toggle fullscreen |
+| Keys                  | Action                               |
+| --------------------- | ------------------------------------ |
+| `LDR p` / `LDR Space` | Command palette                      |
+| `LDR k`               | Clear screen                         |
+| `LDR n`               | New window                           |
+| `LDR c`               | Copy mode                            |
+| `LDR B`               | Debug overlay                        |
+| `Cmd+Shift+W`         | Quit application (with confirmation) |
+| `Cmd+Ctrl+F`          | Toggle fullscreen                    |
 
 ## Status Bar
 
