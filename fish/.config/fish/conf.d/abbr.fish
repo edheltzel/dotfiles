@@ -99,6 +99,7 @@ if status is-interactive
     # Migrated from aliases (simple 1:1 mappings)
     abbr --add md 'mkdir -p'
     abbr --add cwd pwd
+    abbr --add yp 'pwd | pbcopy'
     abbr --add dev 'cd ~/Developer'
     abbr --add work 'cd ~/Developer'
     abbr --add sites 'cd ~/Sites'
