@@ -92,6 +92,7 @@ brew 'mozjpeg'              # JPEG image compression
 brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
 brew 'glow'                 # Render Markdown on the CLI
+brew 'vhs'                  # Write terminal GIFs as code
 
 # CLI Monitoring and Performance Apps
 brew 'bmon'         # BC/Python and width utilization monitor

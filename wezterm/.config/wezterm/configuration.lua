@@ -39,6 +39,7 @@ local function setup(theme, keymaps)
   config.leader = keymaps.leader
   config.keys = keymaps.keys
   config.key_tables = keymaps.key_tables
+  config.use_ime = false
 
   -- Cursor & window
   config.cursor_blink_rate = 500
