@@ -66,7 +66,7 @@ update:
         fi; \
         stow --restow $pkg; \
     done
-    @printf "{{green}}Dotfiles updated successfully{{clr}} - run {{yellow}}reload{{clr}} to apply changes to Fish\n"
+    @printf "{{green}}Dotfiles updated successfully{{clr}} - run {{yellow}}reload{{clr}} to apply changes to your shell\n"
 
 # Remove all dotfile symlinks
 delete:

@@ -3,6 +3,9 @@
 
 [[ -o interactive ]] || return
 
+# --- Mise (runtime manager) ---
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
+
 # --- Antidote plugin manager ---
 # Try ZDOTDIR-local install first, fall back to Homebrew
 if [[ -f "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh" ]]; then
@@ -78,6 +81,9 @@ case "$ZSH_PROMPT" in
   starship)   eval "$(starship init zsh)" ;;
   oh-my-posh) eval "$(oh-my-posh init zsh --config ~/.config/starship-ish.omp.json)" ;;
 esac
+
+# --- Atlas (PAI) ---
+alias atlas='bun /Users/ed/.claude/skills/PAI/Tools/pai.ts'
 
 # --- Nvim shell integration ---
 if [[ "$TERM_PROGRAM" == "nvim" ]]; then
