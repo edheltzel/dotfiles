@@ -1,0 +1,33 @@
+#compdef obsidian-cli
+
+# Zsh completion for obsidian-cli (Cobra-based CLI)
+# Auto-generated completions via __complete command
+
+_obsidian-cli() {
+  local -a completions
+  local -a flags
+  local lastParam lastChar flagPrefix requestComp
+
+  requestComp="${words[1]} __complete ${words[2,-1]}"
+
+  local -a results
+  results=(${(f)"$(eval "$requestComp" 2>/dev/null)"})
+
+  local directive="${results[-1]}"
+  results=("${results[1,-2]}")
+
+  local -a completions_with_desc
+  for line in "${results[@]}"; do
+    if [[ "$line" == *$'\t'* ]]; then
+      local comp="${line%%$'\t'*}"
+      local desc="${line#*$'\t'}"
+      completions_with_desc+=("$comp:$desc")
+    else
+      completions_with_desc+=("$line")
+    fi
+  done
+
+  _describe -t completions 'obsidian-cli' completions_with_desc
+}
+
+_obsidian-cli "$@"

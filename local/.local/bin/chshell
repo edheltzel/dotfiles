@@ -1,0 +1,37 @@
+#!/bin/sh
+# chshell — quickly switch login shell between fish, zsh, and bash
+set -e
+
+usage() {
+  printf "Usage: chshell <fish|zsh|bash>\n"
+  printf "Switch your default login shell.\n\n"
+  printf "Shells:\n"
+  printf "  fish    %s\n" "$(command -v fish 2>/dev/null || echo 'not installed')"
+  printf "  zsh     %s\n" "$(command -v zsh 2>/dev/null || echo 'not installed')"
+  printf "  bash    %s\n" "$(command -v bash 2>/dev/null || echo 'not installed')"
+  printf "\nCurrent: %s\n" "$SHELL"
+  exit 1
+}
+
+[ -z "$1" ] && usage
+
+case "$1" in
+  fish) shell_path="$(command -v fish 2>/dev/null)" ;;
+  zsh)  shell_path="$(command -v zsh 2>/dev/null)" ;;
+  bash) shell_path="$(command -v bash 2>/dev/null)" ;;
+  *)    printf "Unknown shell: %s\n" "$1"; usage ;;
+esac
+
+if [ -z "$shell_path" ]; then
+  printf "Error: %s is not installed\n" "$1"
+  exit 1
+fi
+
+if [ "$SHELL" = "$shell_path" ]; then
+  printf "Already using %s (%s)\n" "$1" "$shell_path"
+  exit 0
+fi
+
+printf "Switching to %s (%s)...\n" "$1" "$shell_path"
+chsh -s "$shell_path"
+printf "Done. New terminals will use %s.\n" "$1"

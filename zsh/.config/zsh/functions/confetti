@@ -1,0 +1,4 @@
+# Make it rain confetti
+confetti() {
+  open "raycast://extensions/raycast/raycast/confetti"
+}

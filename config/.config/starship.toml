@@ -15,7 +15,7 @@ error_symbol = '[](bold #F7768E)'
 fish_indicator = ""
 unknown_indicator = "?"
 style = "bold fg:white"
-disabled = false
+disabled = true
 ## end character ##
 
 ## start prompt ##

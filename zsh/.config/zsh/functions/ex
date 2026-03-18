@@ -1,0 +1,4 @@
+# Alias for exit
+ex() {
+  exit
+}

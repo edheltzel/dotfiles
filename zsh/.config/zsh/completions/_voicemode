@@ -1,0 +1,9 @@
+#compdef voicemode
+
+_voicemode() {
+  local -a completions
+  completions=(${(f)"$(env _VOICEMODE_COMPLETE=zsh_complete voicemode 2>/dev/null)"})
+  compadd -a completions
+}
+
+_voicemode "$@"

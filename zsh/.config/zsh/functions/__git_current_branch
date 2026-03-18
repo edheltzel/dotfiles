@@ -1,0 +1,5 @@
+# Output git's current branch name
+__git_current_branch() {
+  git symbolic-ref HEAD 2>/dev/null | sed -e 's|^refs/heads/||' \
+    || git rev-parse --short HEAD 2>/dev/null
+}

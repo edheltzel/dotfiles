@@ -1,0 +1,4 @@
+# Create a .bak copy of a file
+mkbak() {
+  cp -- "$1" "$1.bak"
+}

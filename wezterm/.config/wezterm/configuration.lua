@@ -9,8 +9,7 @@ local function setup(theme, keymaps)
     config = wezterm.config_builder()
   end
 
-  -- Shell
-  config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
+  -- Shell: no default_prog — WezTerm uses login shell from OS (respects chsh)
   config.term = "xterm-256color"
 
   -- Input

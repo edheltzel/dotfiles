@@ -1,0 +1,23 @@
+# Switch color theme across all apps
+theme() {
+  local themes_dir="$HOME/.config/theme-switcher"
+  local script="$themes_dir/theme-switcher.sh"
+
+  if [[ ! -x "$script" ]]; then
+    echo "Error: Theme switcher script not found at $script" >&2
+    return 1
+  fi
+
+  if (( $# == 0 )); then
+    "$script"
+  else
+    "$script" "$1"
+  fi
+
+  # Re-initialize oh-my-posh with new palette if it's the active prompt
+  if [[ "$ZSH_PROMPT" == "oh-my-posh" ]]; then
+    eval "$(oh-my-posh init zsh --config ~/.config/starship-ish.omp.json)"
+    echo ""
+    echo -e "\033[0;32m✓\033[0m Prompt refreshed with new theme"
+  fi
+}

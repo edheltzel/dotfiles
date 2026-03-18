@@ -1,0 +1,4 @@
+# Terminal Doom
+doom() {
+  cd "$HOME/Developer/games/terminal-doom" && zig-out/bin/terminal-doom
+}

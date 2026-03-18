@@ -1,0 +1,12 @@
+# Delete multiple git branches
+# Usage: __git_delete_branches [-f|--force] branch1 branch2 ...
+__git_delete_branches() {
+  local delete_flag="-d"
+  if [[ "$1" == "-f" || "$1" == "--force" ]]; then
+    delete_flag="-D"
+    shift
+  fi
+  for branch in "$@"; do
+    git branch "$delete_flag" "$branch"
+  done
+}

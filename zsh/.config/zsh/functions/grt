@@ -1,0 +1,4 @@
+# cd into the top of the current repository or submodule
+grt() {
+  cd "$(git rev-parse --show-toplevel 2>/dev/null || echo ".")"
+}

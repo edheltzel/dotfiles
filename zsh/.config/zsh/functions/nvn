@@ -1,0 +1,4 @@
+# Open a new file in neovim from clipboard contents
+nvn() {
+  nvim -c 'enew | put +' -c startinsert
+}

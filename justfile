@@ -2,7 +2,7 @@
 
 set shell := ["bash", "-cu"]
 
-stow_packages := "dots git fish config neoed local wezterm"
+stow_packages := "dots git fish zsh config neoed local wezterm"
 
 yellow := '\033[33m'
 green := '\033[32m'
@@ -61,9 +61,12 @@ update:
         if [ "$pkg" = "fish" ]; then \
             rm -f ~/.config/fish/conf.d/brew.fish ~/.config/fish/conf.d/fish-ssh-agent.fish; \
         fi; \
+        if [ "$pkg" = "zsh" ]; then \
+            rm -f ~/.config/zsh/.zcompdump*; \
+        fi; \
         stow --restow $pkg; \
     done
-    @printf "{{green}}Dotfiles updated successfully{{clr}} - run {{yellow}}reload{{clr}} to apply changes to Fish\n"
+    @printf "{{green}}Dotfiles updated successfully{{clr}} - run {{yellow}}reload{{clr}} to apply changes to your shell\n"
 
 # Remove all dotfile symlinks
 delete:

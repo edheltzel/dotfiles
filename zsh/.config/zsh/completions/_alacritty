@@ -1,0 +1,25 @@
+#compdef alacritty
+
+_alacritty() {
+  _arguments \
+    '(-v --version)'{-v,--version}'[Prints version information]' \
+    '(-h --help)'{-h,--help}'[Prints help information]' \
+    '--live-config-reload[Enable automatic config reloading]' \
+    '--no-live-config-reload[Disable automatic config reloading]' \
+    '--persistent-logging[Keep the log file after quitting]' \
+    '--config-file[Specify an alternative config file]:file:_files' \
+    '(-t --title)'{-t,--title}'[Defines the window title]:title:' \
+    '--class[Defines the window class]:class:' \
+    '--embed[Defines the X11 window ID to embed within]:id:' \
+    '--working-directory[Start shell in specified directory]:dir:_directories' \
+    '--hold[Remain open after child process exits]' \
+    '--print-events[Print all events to stdout]' \
+    '-q[Reduces verbosity]' \
+    '-qq[Reduces verbosity further]' \
+    '--ref-test[Generates ref test]' \
+    '(-d --dimensions)'{-d,--dimensions}'[Window dimensions]:columns lines:' \
+    '--position[Window position]:x-pos y-pos:' \
+    '(-e --command)'{-e,--command}'[Execute command (must be last arg)]:command:_command_names'
+}
+
+_alacritty "$@"

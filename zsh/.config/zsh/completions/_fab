@@ -1,0 +1,41 @@
+#compdef fab
+
+# Zsh completions for 'fab' (alias for fabric-ai)
+
+_fab_get_patterns()  { fab --listpatterns --shell-complete-list 2>/dev/null }
+_fab_get_models()    { fab --listmodels --shell-complete-list 2>/dev/null }
+_fab_get_vendors()   { fab --listvendors --shell-complete-list 2>/dev/null }
+_fab_get_contexts()  { fab --listcontexts --shell-complete-list 2>/dev/null }
+_fab_get_sessions()  { fab --listsessions --shell-complete-list 2>/dev/null }
+_fab_get_strategies(){ fab --liststrategies --shell-complete-list 2>/dev/null }
+_fab_get_extensions(){ fab --listextensions --shell-complete-list 2>/dev/null }
+
+_fab() {
+  _arguments \
+    '(-p --pattern)'{-p,--pattern}'[Choose a pattern]:pattern:($(_fab_get_patterns))' \
+    '(-v --variable)'{-v,--variable}'[Pattern variable values]' \
+    '(-C --context)'{-C,--context}'[Choose a context]:context:($(_fab_get_contexts))' \
+    '--session[Choose a session]:session:($(_fab_get_sessions))' \
+    '(-a --attachment)'{-a,--attachment}'[Attachment path or URL]:file:_files' \
+    '(-t --temperature)'{-t,--temperature}'[Set temperature]' \
+    '(-T --topp)'{-T,--topp}'[Set top P]' \
+    '(-m --model)'{-m,--model}'[Choose model]:model:($(_fab_get_models))' \
+    '(-V --vendor)'{-V,--vendor}'[Specify vendor]:vendor:($(_fab_get_vendors))' \
+    '(-o --output)'{-o,--output}'[Output to file]:file:_files' \
+    '(-y --youtube)'{-y,--youtube}'[YouTube URL]' \
+    '(-u --scrape_url)'{-u,--scrape_url}'[Scrape URL to markdown]' \
+    '--strategy[Choose a strategy]:strategy:($(_fab_get_strategies))' \
+    '--thinking[Reasoning level]:(off low medium high)' \
+    '(-S --setup)'{-S,--setup}'[Run setup]' \
+    '(-s --stream)'{-s,--stream}'[Stream output]' \
+    '(-r --raw)'{-r,--raw}'[Use model defaults]' \
+    '(-l --listpatterns)'{-l,--listpatterns}'[List all patterns]' \
+    '(-L --listmodels)'{-L,--listmodels}'[List all models]' \
+    '(-c --copy)'{-c,--copy}'[Copy to clipboard]' \
+    '(-U --updatepatterns)'{-U,--updatepatterns}'[Update patterns]' \
+    '--serve[Serve the Fabric REST API]' \
+    '--version[Print current version]' \
+    '(-h --help)'{-h,--help}'[Show help message]'
+}
+
+_fab "$@"

@@ -1,0 +1,5 @@
+# Restore a file from a .bak file
+restore() {
+  local original="${1%.bak}"
+  mv -- "$1" "$original"
+}

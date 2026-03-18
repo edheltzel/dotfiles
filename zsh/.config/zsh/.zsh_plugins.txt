@@ -1,0 +1,18 @@
+# Fish-equivalent plugins for Zsh (managed by Antidote)
+# Inline suggestions from history (Fish's killer feature)
+zsh-users/zsh-autosuggestions
+
+# Real-time syntax coloring (better perf than zsh-syntax-highlighting)
+zdharma-continuum/fast-syntax-highlighting
+
+# Fish-style abbreviations with inline expansion
+olets/zsh-abbr
+
+# Fish-style up/down arrow history search
+zsh-users/zsh-history-substring-search
+
+# Auto-close brackets, quotes, parens (≈ laughedelic/pisces)
+hlissner/zsh-autopair
+
+# Additional completion definitions
+zsh-users/zsh-completions kind:fpath
