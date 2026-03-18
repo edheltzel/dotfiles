@@ -5,6 +5,8 @@
 # or just `abbr` for user abbreviations (persistent, stored in zsh-abbr's data file).
 #
 # We use session abbreviations here since we manage them declaratively in dotfiles.
+# --quieter suppresses "Added the regular session abbreviation" stdout spam.
+ABBR_QUIETER=1
 
 # Window
 abbr -S cw='center_window' 2>/dev/null
