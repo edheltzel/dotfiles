@@ -15,7 +15,7 @@
 	"hover_popover_enabled": true,
 	"context_servers": {
 		"mcp-server-context7": {
-			"enabled": true,
+   "enabled": true,
 			"remote": false,
 			"settings": {
 				"context7_api_key": "ctx7sk-dd56a916-db8e-4ec7-96d3-d4dcf26a35e5",
