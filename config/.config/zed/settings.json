@@ -13,7 +13,15 @@
 	"ui_font_weight": 400.0,
 	"colorize_brackets": true,
 	"hover_popover_enabled": true,
-	"context_servers": {},
+	"context_servers": {
+		"mcp-server-context7": {
+			"enabled": true,
+			"remote": false,
+			"settings": {
+				"context7_api_key": "ctx7sk-dd56a916-db8e-4ec7-96d3-d4dcf26a35e5",
+			},
+		},
+	},
 	"git": {
 		"blame": {
 			"show_avatar": true,
@@ -54,7 +62,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Fleet Light",
-		"dark": "Aura Dark",
+		"dark": "Eldritch",
 	},
 	"icon_theme": "Catppuccin Latte",
 	"experimental.theme_overrides": {
@@ -133,7 +141,7 @@
 	"hover_popover_delay": 15000,
 	"show_edit_predictions": true,
 	"edit_predictions": {
-		"provider": "supermaven",
+		"provider": "none",
 		"mode": "eager",
 		"disabled_globs": [
 			"**/.git",
@@ -159,10 +167,8 @@
 		],
 	},
 	"agent_servers": {
-		"OpenCode": {
-			"type": "custom",
-			"command": "opencode",
-			"args": ["acp"],
+		"claude-acp": {
+			"type": "registry",
 		},
 	},
 	"collaboration_panel": {
@@ -193,7 +199,7 @@
 	},
 	"tab_bar": {
 		"show_tab_bar_buttons": false,
-		"show": false,
+		"show": true,
 		"show_nav_history_buttons": false,
 	},
 	"tabs": {
@@ -276,7 +282,7 @@
 		"copy_on_select": true,
 		"font_family": "VictorMono Nerd Font",
 		"font_size": 19.0,
-		"font_weight": 500.0,
+		"font_weight": 400.0,
 		"default_height": 500,
 	},
 

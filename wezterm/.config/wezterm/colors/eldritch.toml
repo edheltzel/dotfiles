@@ -16,7 +16,7 @@ ansi = [
 ]
 background = '#171928'
 brights = [
-  '#212337',
+  '#323449',
   '#F9515D',
   '#37F499',
   '#E9F941',
@@ -74,9 +74,8 @@ underline = 'None'
 
 [colors.tab_bar.new_tab_hover]
 bg_color = '#37F499'
-fg_color = '#EBFAFA'
+fg_color = '#171928'
 intensity = 'Normal'
-italic = true
 strikethrough = false
 underline = 'None'
 
