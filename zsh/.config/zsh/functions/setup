@@ -1,0 +1,4 @@
+# Defines one-time abbreviations for the current shell
+setup() {
+  abbr -S lzd='lazydocker' 2>/dev/null
+}

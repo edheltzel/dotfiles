@@ -1,0 +1,4 @@
+# List all bat themes with a preview
+batthemes() {
+  bat --list-themes | fzf --preview="bat --theme={} --color=always Makefile" | pbcopy
+}

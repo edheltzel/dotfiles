@@ -1,0 +1,13 @@
+# Recursive ImageMagick converter
+# Usage: imgcon <from_ext> <to_ext>
+imgcon() {
+  if (( $# != 2 )); then
+    echo "Usage: imgcon <from_extension> <to_extension>"
+    return 1
+  fi
+  local from="$1" to="$2"
+  for image in **/*."$from"; do
+    [[ -f "$image" ]] || continue
+    convert -verbose "$image" "${image%.$from}.$to"
+  done
+}

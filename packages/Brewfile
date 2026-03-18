@@ -40,6 +40,7 @@ brew 'starship'                             # Cross-shell prompt - Rust
 brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
 
 # zsh plugins
+brew 'antidote'                            # Zsh plugin manager (lightweight, no Oh My Zsh)
 brew 'zsh-syntax-highlighting'             # Syntax highlighting for zsh
 brew 'zsh-autopair'                        # Auto-pairing for zsh
 brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh

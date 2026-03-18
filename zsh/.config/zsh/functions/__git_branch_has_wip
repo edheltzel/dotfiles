@@ -1,0 +1,4 @@
+# Returns 0 if branch has --wip--, otherwise 1
+__git_branch_has_wip() {
+  git log -n 1 2>/dev/null | grep -qc "\-\-wip\-\-"
+}

@@ -1,0 +1,4 @@
+# Restart the WindowServer on macOS (this will log you out)
+killws() {
+  sudo killall -HUP WindowServer
+}

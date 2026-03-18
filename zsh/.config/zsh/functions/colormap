@@ -1,0 +1,4 @@
+# Check terminal color support and print color palette
+colormap() {
+  "$HOME/.config/fish/utils/color-map.sh"
+}

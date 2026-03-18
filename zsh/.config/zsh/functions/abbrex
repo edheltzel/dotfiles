@@ -1,0 +1,16 @@
+# Utility for expanding abbreviations
+abbrex() {
+  if (( $# == 0 )); then
+    echo "Usage: abbrex <abbreviation> [args...]"
+    return 1
+  fi
+  local abbr_name="$1"
+  shift
+  local expansion
+  expansion=$(abbr list 2>/dev/null | grep "^$abbr_name=" | sed "s/^$abbr_name=//; s/^'//; s/'$//")
+  if [[ -n "$expansion" ]]; then
+    echo "$expansion $*"
+  else
+    echo "$abbr_name $*"
+  fi
+}

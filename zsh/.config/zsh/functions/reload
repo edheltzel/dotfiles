@@ -1,0 +1,4 @@
+# Reload shell configuration
+reload() {
+  exec zsh
+}

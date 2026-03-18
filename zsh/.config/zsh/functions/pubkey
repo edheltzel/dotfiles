@@ -1,0 +1,10 @@
+# Copy public SSH key to clipboard
+pubkey() {
+  if [[ -f ~/.ssh/id_rsa.pub ]]; then
+    cat ~/.ssh/id_rsa.pub | pbcopy && echo '=> Public key copied to clipboard.'
+  elif [[ -f ~/.ssh/id_ed25519.pub ]]; then
+    cat ~/.ssh/id_ed25519.pub | pbcopy && echo '=> Public key copied to clipboard.'
+  else
+    echo 'No public key found.'
+  fi
+}

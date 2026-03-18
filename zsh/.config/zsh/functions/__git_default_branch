@@ -1,0 +1,13 @@
+# Use init.defaultBranch if set and exists, otherwise main, falls back to master
+__git_default_branch() {
+  command git rev-parse --git-dir &>/dev/null || return
+  local default_branch
+  default_branch=$(command git config --get init.defaultBranch)
+  if [[ -n "$default_branch" ]] && command git show-ref -q --verify "refs/heads/$default_branch"; then
+    echo "$default_branch"
+  elif command git show-ref -q --verify refs/heads/main; then
+    echo main
+  else
+    echo master
+  fi
+}

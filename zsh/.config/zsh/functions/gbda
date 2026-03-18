@@ -1,0 +1,30 @@
+# Delete all branches merged in current HEAD, including squashed
+gbda() {
+  local default_branch
+  default_branch=$(__git_default_branch)
+
+  # Handle --gone flag
+  if [[ "$1" == "-g" || "$1" == "--gone" ]]; then
+    __git_delete_branches --force $(
+      git for-each-ref refs/heads/ --format="%(refname:short) %(upstream:track)" | \
+        command awk '$2 == "[gone]" { print $1 }'
+    )
+  fi
+
+  # Delete merged branches
+  __git_delete_branches $(
+    git branch --merged | \
+      command grep -vE '^\*|^\+|^\s*(master|main|develop)\s*$' | \
+      tr -d ' '
+  )
+
+  # Delete squash-merged branches
+  git for-each-ref refs/heads/ "--format=%(refname:short)" | \
+    while read -r branch; do
+      local merge_base
+      merge_base=$(git merge-base "$default_branch" "$branch")
+      if [[ "$(git cherry "$default_branch" "$(git commit-tree "$(git rev-parse "${branch}^{tree}")" -p "$merge_base" -m _)")" == -* ]]; then
+        __git_delete_branches --force "$branch"
+      fi
+    done
+}

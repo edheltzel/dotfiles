@@ -1,0 +1,4 @@
+# Center Window with Raycast
+center_window() {
+  open -g 'raycast://customWindowManagementCommand?&name=Center%20Center&position=center&relativeWidth=0.6&relativeHeight=1.0'
+}

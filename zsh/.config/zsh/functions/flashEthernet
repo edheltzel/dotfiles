@@ -1,0 +1,11 @@
+# Disable and re-enable the Ethernet network interface
+flashEthernet() {
+  local interface="Ethernet"
+  if sudo networksetup -setnetworkserviceenabled "$interface" off && \
+     sleep 1 && \
+     sudo networksetup -setnetworkserviceenabled "$interface" on; then
+    echo "$interface successfully disabled and will re-enable shortly."
+  else
+    echo "Failed to disable and re-enable $interface."
+  fi
+}

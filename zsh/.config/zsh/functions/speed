@@ -1,0 +1,8 @@
+# Network speed test (alias for networkQuality)
+speed() {
+  if (( $# > 0 )); then
+    command networkQuality "$@"
+  else
+    command networkQuality -v
+  fi
+}

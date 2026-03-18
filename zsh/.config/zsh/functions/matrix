@@ -1,0 +1,4 @@
+# Matrix-style screensaver for your terminal
+matrix() {
+  "$HOME/.config/fish/utils/matrix.sh"
+}

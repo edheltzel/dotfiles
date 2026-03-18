@@ -31,6 +31,7 @@ skip_notify = true
 # Custom commands
 [commands]
 "Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
+"Antidote Plugins" = "antidote update"
 "LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa"
 "Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa'"
 "Claude Code" = "claude update"

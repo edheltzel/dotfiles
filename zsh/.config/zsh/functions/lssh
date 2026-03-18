@@ -1,0 +1,4 @@
+# List ssh hosts
+lssh() {
+  grep -w -i Host ~/.ssh/config | sed s/Host//
+}

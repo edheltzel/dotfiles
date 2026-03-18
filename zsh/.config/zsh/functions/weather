@@ -1,0 +1,4 @@
+# Check the weather
+weather() {
+  curl 'wttr.in/~Springboro+Ohio?u'
+}

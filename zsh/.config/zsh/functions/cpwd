@@ -1,0 +1,4 @@
+# pwd copied to clipboard
+cpwd() {
+  command pwd | tr -d '\n' | pbcopy && echo 'pwd copied to clipboard'
+}
