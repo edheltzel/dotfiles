@@ -15,6 +15,9 @@ else
 fi
 antidote load "${ZDOTDIR:-$HOME}/.zsh_plugins.txt"
 
+# --- Autosuggestion ---
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=60"
+
 # --- Zsh options (Fish-like behavior) ---
 setopt AUTO_CD              # cd by typing a directory name alone
 setopt AUTO_PUSHD           # Push dirs to stack automatically
