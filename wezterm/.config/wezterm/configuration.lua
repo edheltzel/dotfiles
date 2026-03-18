@@ -51,8 +51,8 @@ local function setup(theme, keymaps)
   config.initial_rows = 50
   config.window_decorations = "RESIZE"
   config.window_close_confirmation = "AlwaysPrompt"
-  config.macos_window_background_blur = 25
   config.scrollback_lines = 10000
+  config.macos_window_background_blur = 25
   config.window_background_opacity = 0.98
   config.default_workspace = wezterm.nerdfonts.md_delta .. " HQ"
   config.native_macos_fullscreen_mode = false

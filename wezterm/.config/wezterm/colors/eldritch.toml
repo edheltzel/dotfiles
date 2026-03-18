@@ -2,6 +2,7 @@
 # https://github.com/eldritch-theme/eldritch
 # dark #212337
 # darker #171928
+# alt dark #323449
 # alt purple #7081D0
 [colors]
 ansi = [
@@ -16,7 +17,7 @@ ansi = [
 ]
 background = '#171928'
 brights = [
-  '#323449',
+  '#7081D0',
   '#F9515D',
   '#37F499',
   '#E9F941',
@@ -33,7 +34,7 @@ foreground = '#EBFAFA'
 scrollbar_thumb = '#37F499'
 selection_bg = 'rgba(26.666668% 27.843138% 35.294117% 75%)'
 selection_fg = 'rgba(0% 0% 0% 0%)'
-split = '#7081D0'
+split = '#323449'
 
 [colors.indexed]
 
