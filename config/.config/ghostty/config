@@ -7,6 +7,8 @@ config-file = "colors/eldritch"
 
 # background-opacity = 0.95
 # background-blur-radius = 50
+unfocused-split-fill = "black"
+mouse-hide-while-typing = true
 
 copy-on-select = clipboard
 
@@ -24,7 +26,6 @@ window-title-font-family = "VictorMono Nerd Font"
 font-size = 19
 font-family = "VictorMono Nerd Font"
 
-mouse-hide-while-typing = true
 
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
