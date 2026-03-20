@@ -1,10 +1,5 @@
 initial-window = false
 
-quick-terminal-position = "left"
-quick-terminal-size = 50%
-quick-terminal-animation-duration = 0
-quick-terminal-autohide = false
-
 alpha-blending = linear-corrected
 
 config-file = "colors/eldritch"
@@ -38,8 +33,14 @@ macos-titlebar-proxy-icon = hidden
 macos-window-buttons = hidden
 macos-icon = retro
 
+# Quick Terminal
+quick-terminal-position = "left"
+quick-terminal-size = 50%
+quick-terminal-animation-duration = 0
+quick-terminal-autohide = false
+keybind = global:alt+`=toggle_quick_terminal
+
 # Custom keybinding
-# keybind = global:cmd+ctrl+alt+t=toggle_quick_terminal
 keybind = super+ctrl+alt+,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
 
