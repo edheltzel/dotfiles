@@ -55,6 +55,21 @@ theme:
   ui:
     table:
       showSeparator: true
+  colors:
+    text:
+      primary: "#EBFAFA"
+      secondary: "#A48CF2"
+      inverted: "#171928"
+      faint: "#7081D0"
+      warning: "#F7F67F"
+      success: "#37F499"
+      error: "#F16C75"
+    background:
+      selected: "#323449"
+    border:
+      primary: "#7081D0"
+      secondary: "#323449"
+      faint: "#212337"
 pager:
   diff: ""
 confirmQuit: false
