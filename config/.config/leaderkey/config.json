@@ -68,9 +68,19 @@
           "type" : "group"
         },
         {
-          "key" : "6",
+          "key" : "M",
           "type" : "application",
           "value" : "/Applications/Maestro.app"
+        },
+        {
+          "key" : "C",
+          "type" : "application",
+          "value" : "/Applications/Commander.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
         },
         {
           "actions" : [
@@ -109,11 +119,6 @@
           "key" : "b",
           "label" : "Browsers",
           "type" : "group"
-        },
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
         },
         {
           "actions" : [
