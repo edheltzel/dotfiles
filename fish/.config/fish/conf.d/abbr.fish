@@ -8,14 +8,12 @@ if status is-interactive
     abbr --add ccc 'claude converse --dangerously-skip-permissions'
     abbr --add cc 'claude --dangerously-skip-permissions'
     abbr --add ccd 'claude --dangerously-skip-permissions'
-    abbr --add os openspec
     abbr --add oc opencode
     abbr --add occ 'opencode --continue'
     abbr --add ocp 'opencode --agent plan'
     abbr --add gg 'gemini --yolo'
     abbr --add ag antigravity
     abbr --add ma maestro-cli
-    abbr --add sa sidecar
 
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
@@ -24,6 +22,8 @@ if status is-interactive
     abbr --add wall '~/.wallpapers/'
     abbr --add dls '~/Downloads/'
     abbr --add goo 'cd ~/.go/'
+    abbr --add pg 'cd ~/Developer/_playground/'
+    abbr --add sb 'cd ~/Developer/_sandboxes/'
 
     # Editors/Terminals
     abbr --add gho ghostty
@@ -60,7 +60,6 @@ if status is-interactive
     # Utilities
     abbr --add atm fastfetch
     abbr --add cat 'bat -pp'
-    abbr --add clean mac-cleaner-cli
     abbr --add link 'ln -s'
     abbr --add symlink 'ln -s'
 
@@ -73,7 +72,7 @@ if status is-interactive
 
     # Package Managers 
     abbr --add bi 'brew install '
-    abbr --add binfo 'brew info'
+    abbr --add bii 'brew info'
     abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
     abbr --add bic --set-cursor 'brew install % --cask'
