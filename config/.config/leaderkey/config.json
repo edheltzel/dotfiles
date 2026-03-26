@@ -78,6 +78,11 @@
           "value" : "/Applications/Commander.app"
         },
         {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/OpenCode.app"
+        },
+        {
           "key" : "c",
           "type" : "application",
           "value" : "/Applications/Claude.app"
@@ -293,12 +298,12 @@
           "value" : "/System/Applications/Messages.app"
         },
         {
-          "key" : "n",
+          "key" : "N",
           "type" : "application",
           "value" : "/System/Applications/Notes.app"
         },
         {
-          "key" : "o",
+          "key" : "n",
           "type" : "application",
           "value" : "/Applications/Obsidian.app"
         },
