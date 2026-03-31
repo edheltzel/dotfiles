@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "ktunprasert/git-files"
-rev = "c7289ad"
-hash = "cdb1a69bed63211c75b72521bbab875d"
+rev = "529444e"
+hash = "a028c3c06630a33b068f4d5bd714a795"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
