@@ -7,6 +7,7 @@ if status is-interactive
     # AI Agents + Models
     abbr --add ccc 'claude converse --dangerously-skip-permissions'
     abbr --add cc 'claude --dangerously-skip-permissions'
+    abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add oc opencode
     abbr --add occ 'opencode --continue'
