@@ -38,7 +38,7 @@ macos-icon = retro
 quick-terminal-position = "left"
 quick-terminal-size = 50%
 quick-terminal-animation-duration = 0
-quick-terminal-autohide = true
+quick-terminal-autohide = false
 keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
 
 # Custom keybinding
