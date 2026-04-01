@@ -23,7 +23,7 @@ just install        # Bootstrap new machine (runs install.sh)
 just run            # Symlink all packages
 just stow fish      # Add specific package
 just unstow fish    # Remove specific package
-just update         # Restow all + clean dead symlinks (also: just up)
+just update         # Re-stow all + clean dead symlinks (also: just up)
 just delete         # Remove all symlinks
 ```
 
@@ -42,7 +42,7 @@ upp                 # Update ALL packages and dependencies (topgrade)
 # Package listing commands
 brews               # List Homebrew packages
 casks               # List Homebrew casks
-npms                # List global npm packages
+npms/buns/pnpms     # List global npm packages (depends on your global pm)
 cargos              # List Cargo packages
 gems                # List Ruby gems
 ```
@@ -61,7 +61,7 @@ git addi                   # Interactive add with fzf
 git logs                   # Pretty git log graph
 git sm                     # Submodule update --init --recursive
 
-# Editors
+# Editors (see abbrv/aliases)
 nvim                       # Primary editor (LazyVim-based NEO.ED)
 zed -n .                   # Zed in new window (alias: zz)
 code -r .                  # VSCode reuse window (alias: coo)
@@ -74,7 +74,7 @@ eva                        # Start SSH agent + add key to keychain
 ### AI Tools
 
 ```bash
-cc                  # Claude Code (--dangerously-skip-permissions)
+cc                  # Claude Code
 ccc                 # Claude Converse mode (--dangerously-skip-permissions)
 ccu                 # Claude Code usage stats (bunx ccusage)
 ```
@@ -121,10 +121,9 @@ The repository uses these stow packages (defined in `justfile:5`):
 - **dots** - Misc dotfiles in `$HOME` (`.npmrc`, `.curlrc`, `.tmux.conf`, etc.)
 - **git** - Git configuration with SSH signing
 - **fish** - Fish shell config (XDG-compliant, lazy-loading)
-- **config** - 25+ application configs (yazi, raycast, aerospace, ghostty, kitty, karabiner, zed, etc.)
+- **config** - 25+ application configs (yazi, raycast, aerospace, ghostty, kitty, karabiner, wezterm, zed, etc.)
 - **neoed** - LazyVim customizations (NEO.ED) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
 - **local** - User-specific non-config data (`~/.local/bin`, dictionaries, keyboard backups)
-- **wezterm** - WezTerm terminal config (modular Lua architecture)
 
 **Git Submodule:** `neoed` is managed as a separate repository. After cloning, run `git submodule update --init --recursive` to initialize it.
 
@@ -216,9 +215,9 @@ git sm          # Submodule update --init --recursive
 
 ### Application Configs (`config/.config/`)
 
-25+ applications configured (WezTerm has its own stow package at `wezterm/`):
+25+ applications configured:
 
-- **Terminal:** alacritty, kitty, ghostty
+- **Terminal:** alacritty, kitty, ghostty, wezterm
 - **Multiplexers:** zellij, tmux
 - **Window Manager:** aerospace (Stage Manager + Raycast)
 - **File Manager:** yazi (custom keybindings)
@@ -251,7 +250,7 @@ Homebrew primary, FNM (Node), rbenv (Ruby), rustup (Rust), pipx (Python)
 - `git/.gitconfig` - Git aliases and configuration
 - `neoed/.config/nvim/lua/config/keymaps.lua` - Neovim keybindings
 - `config/.config/topgrade.toml` - Update manager config
-- `wezterm/.config/wezterm/wezterm.lua` - WezTerm main orchestrator
+- `config/.config/wezterm/wezterm.lua` - WezTerm main orchestrator
 - `.stow-local-ignore` - Files Stow should skip
 
 ## Development Patterns
@@ -303,7 +302,7 @@ topgrade --only cargo
 
 ## WezTerm Configuration
 
-WezTerm config is its own stow package with a modular Lua architecture (`wezterm/.config/wezterm/`):
+WezTerm config lives inside the `config` stow package at `config/.config/wezterm/` with a modular Lua architecture:
 
 - `wezterm.lua` - Main orchestrator
 - `keymaps.lua` - Leader key (`cmd+k`) and all keybindings

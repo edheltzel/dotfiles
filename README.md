@@ -34,10 +34,12 @@ Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working wit
 But get **inspired**, take what you want, and leave the rest to make it your own.
 
 <details>
-  <summary>Older Versions</summary>
+  <summary>Different Versions</summary>
 
-- [v1](https://github.com/edheltzel/dotfiles/tree/v1) uses oh-my-zsh
-- [v2](https://github.com/edheltzel/dotfiles/tree/v2) uses fish shell + custom scripts
+- [v1](https://github.com/edheltzel/dotfiles/tree/v1) uses oh-my-zsh (very old)
+- [v2](https://github.com/edheltzel/dotfiles/tree/v2) uses fish shell + custom scripts (old)
+- v3 uses fish shell + GNU Stow (recent)
+- v3.2 includes Zsh config (current)
 
 </details>
 
@@ -188,6 +190,21 @@ There are two options for managing packages with GNU Stow:
     - `conf.d/zoxide.fish` - Directory jumper (`z`/`zi` commands) initialized on first use
     - Pattern: wrapper functions erase themselves and source the real tool init, then call the actual command
   - See `config.fish` for the main lazy-loading orchestration
+- **zsh** (zsh/)
+  - Near-identical mirror of the Fish config (~90-95% feature parity) for Zsh compatibility. XDG-compliant (`ZDOTDIR=~/.config/zsh`), keeping `$HOME` clean.
+  - **Plugin Manager**: [Antidote](https://getantidote.github.io/) — plugins defined in `.zsh_plugins.txt`:
+    - `zsh-autosuggestions` - Fish-style inline history suggestions
+    - `fast-syntax-highlighting` - Real-time command coloring
+    - `zsh-abbr` - Fish-style abbreviation expansion
+    - `zsh-history-substring-search` - Fish-style up/down history search
+    - `zsh-autopair` - Auto-close brackets/quotes
+    - `zsh-completions` - Additional completion definitions
+  - **Modular Architecture**: `.zshrc.d/` numbered configs loaded in order (01-paths through 12-lazy-zoxide), matching Fish's `conf.d/` pattern
+  - **Lazy-Loading**: FNM, rbenv, and Zoxide are lazy-loaded on first use (same pattern as Fish)
+  - **Secrets Management**: `secrets.zsh` (gitignored) — copy from `secrets.zsh.example`
+  - **Prompt**: Configurable via `ZSH_PROMPT` variable — Starship (default) or Oh My Posh
+  - **Functions**: 30+ autoloaded functions in `functions/` — same set as Fish (theme, reload, flashEthernet, etc.)
+  - **Completions**: Custom completions in `completions/` (voicemode, fab, obsidian-cli, alacritty)
 - **config** (config/)
   - Configuration files for 25+ applications, instead of adding them to root of the repo.
   - **Prompt**: Configurable prompt system supporting Oh My Posh (default) or Starship
@@ -198,7 +215,7 @@ There are two options for managing packages with GNU Stow:
     - Run `theme` for interactive fzf picker with preview, or `theme <name>` to switch directly
     - Supported themes: `eldritch`, `rose-pine`, `rose-pine-moon`, `tokyo-night`, `tokyo-night-moon`
     - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode
-  - **Terminal configs**: alacritty, kitty, ghostty (WezTerm is its own package below)
+  - **Terminal configs**: alacritty, kitty, ghostty, wezterm
   - **Keyboard**: karabiner (legacy, now using [LeaderKey](https://github.com/mikker/LeaderKey)), leaderkey config
   - **Editors**: zed (Vim mode + AI integration) — maintained for occasional use
 - **neoed** (neoed/) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
@@ -214,11 +231,6 @@ There are two options for managing packages with GNU Stow:
   - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neoed/.config/nvim/`
 - **local** (local/)
   - User-specific data: `~/.local/bin` scripts, cspell dictionaries, keyboard config backups (Corne, Dygma Defy, Keychron Q11), GitHub CLI extensions
-- **wezterm** (wezterm/)
-  - Modular WezTerm terminal configuration with Lua architecture
-  - `wezterm.lua` (orchestrator), `configuration.lua`, `keymaps.lua`, `theme.lua`, `tabs.lua`, `statusbar.lua`, `workspaces.lua`
-  - Features: pill-shaped tabs, AI agent activity detection, project-colored tabs, git branch in statusbar, zen mode, multi-theme support, workspace management
-  - Leader key: `cmd+k` with 1.5s timeout
 
 <h2 id="scripts">Scripts <a href="#to-the-top">↑</a></h2>
 
@@ -395,6 +407,7 @@ Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-
   <summary>Git Submodules</summary>
 
 This repo uses a git submodule for:
+
 - **neoed** - Neovim configuration ([NEO.ED](https://github.com/edheltzel/neoed))
 
 If you encounter issues with the submodule:
