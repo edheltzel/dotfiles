@@ -1,0 +1,84 @@
+# Rose Pine Moon theme (softer dark)
+# https://rosepinetheme.com/
+[colors]
+ansi = [
+  '#393552',
+  '#eb6f92',
+  '#3e8fb0',
+  '#f6c177',
+  '#c4a7e7',
+  '#ea9a97',
+  '#9ccfd8',
+  '#e0def4',
+]
+background = '#232136'
+brights = [
+  '#6e6a86',
+  '#eb6f92',
+  '#3e8fb0',
+  '#f6c177',
+  '#c4a7e7',
+  '#ea9a97',
+  '#9ccfd8',
+  '#e0def4',
+]
+compose_cursor = '#f6c177'
+cursor_bg = '#ea9a97'
+cursor_border = '#ea9a97'
+cursor_fg = '#232136'
+foreground = '#e0def4'
+scrollbar_thumb = '#c4a7e7'
+selection_bg = 'rgba(57% 53% 82% 75%)'
+selection_fg = 'rgba(0% 0% 0% 0%)'
+split = '#6e6a86'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#232136'
+
+[colors.tab_bar.active_tab]
+bg_color = '#ea9a97'
+fg_color = '#232136'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#232136'
+fg_color = '#9ccfd8'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#ea9a97'
+fg_color = '#232136'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#232136'
+fg_color = '#e0def4'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#ea9a97'
+fg_color = '#e0def4'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+author = 'Rose Pine'
+name = 'rose-pine-moon'
+origin_url = 'https://rosepinetheme.com/'

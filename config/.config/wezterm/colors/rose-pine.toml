@@ -1,0 +1,84 @@
+# Rose Pine theme
+# https://rosepinetheme.com/
+[colors]
+ansi = [
+  '#26233a',
+  '#eb6f92',
+  '#31748f',
+  '#f6c177',
+  '#c4a7e7',
+  '#ebbcba',
+  '#9ccfd8',
+  '#e0def4',
+]
+background = '#191724'
+brights = [
+  '#6e6a86',
+  '#eb6f92',
+  '#31748f',
+  '#f6c177',
+  '#c4a7e7',
+  '#ebbcba',
+  '#9ccfd8',
+  '#e0def4',
+]
+compose_cursor = '#f6c177'
+cursor_bg = '#ebbcba'
+cursor_border = '#ebbcba'
+cursor_fg = '#191724'
+foreground = '#e0def4'
+scrollbar_thumb = '#c4a7e7'
+selection_bg = 'rgba(38% 35% 58% 75%)'
+selection_fg = 'rgba(0% 0% 0% 0%)'
+split = '#6e6a86'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#191724'
+
+[colors.tab_bar.active_tab]
+bg_color = '#ebbcba'
+fg_color = '#191724'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#191724'
+fg_color = '#9ccfd8'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#ebbcba'
+fg_color = '#191724'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#191724'
+fg_color = '#e0def4'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#ebbcba'
+fg_color = '#e0def4'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+author = 'Rose Pine'
+name = 'rose-pine'
+origin_url = 'https://rosepinetheme.com/'
