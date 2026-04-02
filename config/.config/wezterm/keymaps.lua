@@ -208,7 +208,7 @@ local keys = {
   { key = "r", mods = "SUPER|CTRL", action = act.SendString("\x12"), desc = "fzf: Search History" },
   { key = "p", mods = "SUPER|CTRL", action = act.SendString("\x1b\x10"), desc = "fzf: Search Processes" },
   { key = "v", mods = "SUPER|CTRL", action = act.SendString("\x16"), desc = "fzf: Search Variables" },
-  { key = "Enter", mods = "SHIFT", action = act.SendString("\x1b\r"), desc = "fzf: Accept entry" },
+  -- Shift+Enter: line break in Pi/Claude Code (Kitty keyboard protocol handles this natively)
 
   -- Quick-access split/resize (matching Ghostty's super+ctrl+alt bindings)
   {
