@@ -12,7 +12,7 @@ local function setup(theme, keymaps)
   -- Shell: no default_prog — WezTerm uses login shell from OS (respects chsh)
   config.term = "xterm-256color"
 
-  config.enable_kitty_keyboard = true
+  config.enable_csi_u_key_encoding = false
   config.send_composed_key_when_left_alt_is_pressed = false
   config.send_composed_key_when_right_alt_is_pressed = false
 
