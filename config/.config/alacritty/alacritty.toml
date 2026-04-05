@@ -19,9 +19,9 @@ position = { x = 670, y = 413 }
 history = 25000
 
 [font]
-size = 16
+size = 18
 offset = { x = 1, y = 1 }
-normal = { family = "Iosevka Term", style = "Regular" }
+normal = { family = "VictorMono Nerd Font Mono", style = "Regular" }
 bold.style = "Regular"
 italic.style = "Italic"
 
