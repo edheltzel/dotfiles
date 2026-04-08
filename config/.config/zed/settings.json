@@ -64,7 +64,11 @@
 		"light": "Fleet Light",
 		"dark": "Eldritch",
 	},
-	"icon_theme": "Catppuccin Latte",
+	"icon_theme": {
+  "mode": "dark",
+  "light": "Catppuccin Latte",
+  "dark": "Catppuccin Latte"
+ },
 	"experimental.theme_overrides": {
 		"players": [
 			{
