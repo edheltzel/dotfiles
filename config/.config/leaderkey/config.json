@@ -68,16 +68,6 @@
           "type" : "group"
         },
         {
-          "key" : "M",
-          "type" : "application",
-          "value" : "/Applications/Maestro.app"
-        },
-        {
-          "key" : "C",
-          "type" : "application",
-          "value" : "/Applications/Commander.app"
-        },
-        {
           "key" : "o",
           "type" : "application",
           "value" : "/Applications/OpenCode.app"
@@ -146,6 +136,11 @@
               "key" : "p",
               "type" : "application",
               "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
+            },
+            {
+              "key" : "d",
+              "type" : "application",
+              "value" : "/Applications/Adobe InDesign 2026/Adobe InDesign 2026.app"
             }
           ],
           "iconPath" : "theatermask.and.paintbrush.fill",
@@ -490,11 +485,6 @@
     },
     {
       "actions" : [
-        {
-          "key" : "a",
-          "type" : "application",
-          "value" : "/Users/ed/Applications/Autodesk Fusion.app"
-        },
         {
           "key" : "b",
           "type" : "application",
