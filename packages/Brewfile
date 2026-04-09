@@ -280,17 +280,14 @@ cask 'leader-key'                  # Keyboard App launcher
 brew 'jordanbaird-ice' # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
-cask 'nikitabobko/tap/aerospace'    # Window Management
+# cask 'nikitabobko/tap/aerospace'    # Window Management
 brew 'borders'                      # A window borders manager
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser'             # Chromium - daily driver
-cask 'vivaldi'                   # Chromium
 cask 'zen'                       # Gecko
-cask 'firefox'                   # For tests
 cask 'google-chrome'             # For tests
-cask 'safari-preview'            # For tests
 cask 'vladdoster/formulae/vimari' # Safari extension for Vim motions
 
 # Fonts
