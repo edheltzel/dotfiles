@@ -4,6 +4,10 @@
 ### Git ###
 #git/.gitconfig-local
 
+### Jijitsu - jj ###
+.jj/*
+!.jj/repo/config.toml
+
 ### VSCode ###
 .vsce
 
