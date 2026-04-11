@@ -41,6 +41,9 @@ fish_add_path $HOME/.composer/vendor/bin
 # Warp terminal
 fish_add_path /Applications/Warp.app/Contents/MacOS
 
+# Wireshark CLI tools (tshark, dumpcap, editcap, mergecap, capinfos, etc.)
+fish_add_path /Applications/Wireshark.app/Contents/MacOS
+
 # Projects
 set -gx PROJECTS_DIR $HOME/Developer
 
