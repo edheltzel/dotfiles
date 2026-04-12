@@ -90,7 +90,7 @@ if status is-interactive
     abbr --add newcode 'bunx --package yo --package generator-code -- yo code'
     abbr --add yy yazi
     abbr --add wr wrangler
-    abbr --add upp topgrade
+    abbr --add upp 'topgrade --yes'
     abbr --add phps 'php -S localhost:8888'
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress
