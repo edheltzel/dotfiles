@@ -17,6 +17,7 @@ disable = [
   "cargo",
   "rustup",
   "pipx",
+  "pyenv",
 ]
 ignore_failures = ["bun_packages"]
 assume_yes = true
@@ -30,8 +31,8 @@ skip_notify = true
 # Custom commands
 [commands]
 "Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
-"LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa"
-"Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa'"
+"LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa &>/dev/null; and echo 'LazyVim Plugins Update Complete'"
+"Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa' &>/dev/null; and echo 'Treesitter Update Complete'"
 
 # Custom Post-commands
 [post_commands]
