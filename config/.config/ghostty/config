@@ -21,10 +21,10 @@ window-save-state = always
 window-colorspace = "display-p3"
 window-inherit-font-size = false
 window-padding-x = 10
-window-title-font-family = "VictorMono Nerd Font"
+window-title-font-family = "Lilex Nerd Font Mono"
 
 font-size = 19
-font-family = "VictorMono Nerd Font"
+font-family = "Lilex Nerd Font Mono"
 
 
 macos-non-native-fullscreen = true

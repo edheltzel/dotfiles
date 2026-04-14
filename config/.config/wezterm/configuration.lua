@@ -23,8 +23,8 @@ local function setup(theme, keymaps)
   -- Font (light themes get bolder weight for readability)
   local font_weight = theme.name == "rose-pine-dawn" and "DemiBold" or "Regular"
   config.font = wezterm.font_with_fallback({
-    { family = "VictorMono Nerd Font", weight = font_weight },
     { family = "Lilex Nerd Font Mono", weight = font_weight },
+    { family = "VictorMono Nerd Font", weight = font_weight },
     { family = "FiraCode Nerd Font Mono", weight = font_weight },
   })
   config.font_size = 19.0
@@ -50,7 +50,7 @@ local function setup(theme, keymaps)
   config.window_close_confirmation = "AlwaysPrompt"
   config.scrollback_lines = 10000
   config.macos_window_background_blur = 25
-  config.window_background_opacity = 0.98
+  config.window_background_opacity = 0.90
   config.default_workspace = wezterm.nerdfonts.md_delta .. " HQ"
   config.native_macos_fullscreen_mode = false
 

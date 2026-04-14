@@ -21,7 +21,7 @@ history = 25000
 [font]
 size = 18
 offset = { x = 1, y = 1 }
-normal = { family = "VictorMono Nerd Font Mono", style = "Regular" }
+normal = { family = "Lilex Nerd Font Mono", style = "Regular" }
 bold.style = "Regular"
 italic.style = "Italic"
 
