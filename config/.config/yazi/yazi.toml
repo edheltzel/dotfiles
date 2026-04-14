@@ -4,9 +4,11 @@
 
 [mgr]
 show_hidden = true
-sort_by = "alphabetical"
+sort_by = "mtime"
 sort_dir_first = true
-sort_reverse = false
+sort_reverse = true
+sort_sensitive = false
+sort_translit = false
 
 [[plugin.prepend_fetchers]]
 id  = "git"
