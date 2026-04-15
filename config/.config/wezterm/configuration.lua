@@ -28,7 +28,7 @@ local function setup(theme, keymaps)
     { family = "FiraCode Nerd Font Mono", weight = font_weight },
   })
   config.font_size = 19.0
-
+  config.line_height = 1.1
   -- Theme
   config.color_scheme = theme.name
 
@@ -50,7 +50,7 @@ local function setup(theme, keymaps)
   config.window_close_confirmation = "AlwaysPrompt"
   config.scrollback_lines = 10000
   config.macos_window_background_blur = 25
-  config.window_background_opacity = 0.90
+  config.window_background_opacity = 1
   config.default_workspace = wezterm.nerdfonts.md_delta .. " HQ"
   config.native_macos_fullscreen_mode = false
 
