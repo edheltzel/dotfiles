@@ -36,7 +36,7 @@ skip_notify = true
 
 # Custom Post-commands
 [post_commands]
-"Brew - Cleanup" = "brew cleanup --prune=all"
+"Brew - Cleanup" = "brew cleanup --prune=all &>/dev/null; and echo 'Brew Cleanup Complete'"
 
 [composer]
 self_update = true
