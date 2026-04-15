@@ -3,7 +3,7 @@ initial-window = false
 alpha-blending = linear-corrected
 
 config-file = "colors/eldritch"
-#theme = Rose Pine Dawn
+#theme = aura
 
 # background-opacity = 0.95
 # background-blur-radius = 50
