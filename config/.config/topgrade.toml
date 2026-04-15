@@ -47,7 +47,7 @@ autoremove = true
 
 [git]
 repos = [
-  "~/Developer/AI/pi-mono/",
   "~/Developer/AI/Fabric/",
+  "~/Developer/AI/claude-cybersecurity",
   "~/Developer/AI/PAI/",
 ]

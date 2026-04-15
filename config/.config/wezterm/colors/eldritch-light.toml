@@ -1,0 +1,88 @@
+# Eldritch Light theme (Hi-Fi variant)
+# Sibling to Eldritch (https://github.com/eldritch-theme/eldritch)
+# Cool off-white background keeps the cyberpunk-at-noon feel.
+# paper    #EDEEF5   primary bg
+# alt      #DDDFEA   tab bar / pane alt
+# split    #C9CCE0
+# fg       #171928   inverted from Eldritch's darkest navy
+[colors]
+ansi = [
+  '#171928',
+  '#E83D50',
+  '#1FD085',
+  '#C8AB00',
+  '#7A5CF0',
+  '#E63F9B',
+  '#00AEE0',
+  '#D5D7E2',
+]
+background = '#EDEEF5'
+brights = [
+  '#5A5D74',
+  '#C42D3F',
+  '#0FA968',
+  '#B89800',
+  '#5A45C4',
+  '#C42A88',
+  '#1BBFE8',
+  '#171928',
+]
+compose_cursor = '#C8AB00'
+cursor_bg = '#1FD085'
+cursor_border = '#00AEE0'
+cursor_fg = '#EDEEF5'
+foreground = '#171928'
+scrollbar_thumb = '#1FD085'
+selection_bg = 'rgba(9% 9.8% 15.7% 20%)'
+selection_fg = 'rgba(0% 0% 0% 0%)'
+split = '#C9CCE0'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#DDDFEA'
+
+[colors.tab_bar.active_tab]
+bg_color = '#1FD085'
+fg_color = '#171928'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#DDDFEA'
+fg_color = '#5A45C4'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#C9CCE0'
+fg_color = '#171928'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#DDDFEA'
+fg_color = '#171928'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#1FD085'
+fg_color = '#171928'
+intensity = 'Normal'
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+author = 'edheltzel (Hi-Fi light variant of Eldritch by jacobrreed)'
+name = 'Eldritch Light'
+origin_url = 'https://github.com/eldritch-theme/eldritch'

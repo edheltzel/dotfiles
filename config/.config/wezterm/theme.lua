@@ -57,6 +57,31 @@ local themes = {
       agent_activity = "#F7C67F",
     },
   },
+  ["Eldritch Light"] = {
+    colors = {
+      red = "#E83D50",
+      red2 = "#C42D3F",
+      red3 = "#8F1F2C",
+      purple = "#7A5CF0",
+      purple_alt = "#5A45C4",
+      cyan = "#00AEE0",
+      yellow = "#C8AB00",
+      pink = "#E63F9B",
+      white = "#171928", -- semantic "fg" slot — inverted to navy for dark text on light bg
+      green = "#1FD085",
+      orange = "#E88A2C",
+      dark = "#DDDFEA", -- inverted from Eldritch's #212337
+      black = "#EDEEF5", -- inverted from Eldritch's #171928 (true bg)
+    },
+    tab_bar = {
+      bg = "#DDDFEA",
+      active_bg = "#1FD085",
+      active_fg = "#171928",
+      inactive_bg = "#DDDFEA",
+      inactive_fg = "#5A45C4",
+      agent_activity = "#E88A2C",
+    },
+  },
   ["rose-pine"] = {
     colors = {
       red = "#eb6f92",
