@@ -75,6 +75,54 @@ local function setup(theme)
   -- Last-rendered signature; used to skip rendering when nothing visible changed.
   local _last_sig = ""
 
+  -- Workspace tab/pane stats cache (feature-preserving: still an accurate
+  -- cross-window count, just not recomputed on every tick). Invalidated when
+  -- the current window's tab count OR total workspace count changes. Edge
+  -- cases (pane split without tab count change, tab add in a different window
+  -- of same workspace) may be momentarily stale — next real change refreshes.
+  local _ws_stats = {} -- workspace_name → { tabs, panes, local_tabs, ws_count }
+
+  local function get_workspace_stats(window, workspace, local_tab_count, workspace_count)
+    local cached = _ws_stats[workspace]
+    if cached
+      and cached.local_tabs == local_tab_count
+      and cached.ws_count == workspace_count
+    then
+      return cached.tabs, cached.panes
+    end
+
+    local total_tabs, total_panes = 0, 0
+    local ok, all_wins = pcall(function()
+      return wezterm.mux.all_windows()
+    end)
+    if ok and all_wins then
+      for _, mux_win in ipairs(all_wins) do
+        if mux_win:get_workspace() == workspace then
+          local tabs = mux_win:tabs()
+          total_tabs = total_tabs + #tabs
+          for _, tab in ipairs(tabs) do
+            total_panes = total_panes + #tab:panes()
+          end
+        end
+      end
+    else
+      -- Fallback: current window only
+      local win_tabs = window:mux_window():tabs()
+      total_tabs = #win_tabs
+      for _, tab in ipairs(win_tabs) do
+        total_panes = total_panes + #tab:panes()
+      end
+    end
+
+    _ws_stats[workspace] = {
+      tabs = total_tabs,
+      panes = total_panes,
+      local_tabs = local_tab_count,
+      ws_count = workspace_count,
+    }
+    return total_tabs, total_panes
+  end
+
   -- Pre-allocated format slots. Static slots never change — reused every tick.
   -- Dynamic slots have their `.Text` (or `.Foreground.Color`) mutated in place.
   -- This eliminates ~30 table allocations per update-status tick.
@@ -154,30 +202,8 @@ local function setup(theme)
     local cwd = cwd_path ~= "" and basename(cwd_path) or ""
     local cmd_icon = theme.get_process_icon(title, cmd, NF_CODE)
 
-    -- Session stats: tabs + panes for current workspace only (cross-window accurate)
-    local total_tabs = 0
-    local total_panes = 0
-    local ok, all_wins = pcall(function()
-      return wezterm.mux.all_windows()
-    end)
-    if ok and all_wins then
-      for _, mux_win in ipairs(all_wins) do
-        if mux_win:get_workspace() == workspace then
-          local tabs = mux_win:tabs()
-          total_tabs = total_tabs + #tabs
-          for _, tab in ipairs(tabs) do
-            total_panes = total_panes + #tab:panes()
-          end
-        end
-      end
-    else
-      -- Fallback: current window only
-      local win_tabs = window:mux_window():tabs()
-      total_tabs = #win_tabs
-      for _, tab in ipairs(win_tabs) do
-        total_panes = total_panes + #tab:panes()
-      end
-    end
+    -- Session stats (cross-window accurate, cached by workspace structure)
+    local total_tabs, total_panes = get_workspace_stats(window, workspace, local_tab_count, workspace_count)
 
     -- Left status: mutate pre-allocated slots
     d_left_color.Foreground.Color = stat_color
