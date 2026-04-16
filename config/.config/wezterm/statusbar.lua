@@ -24,23 +24,43 @@ local function setup(theme)
   -- Git branch cache (only re-query when CWD changes)
   local git_cache = { cwd = "", branch = "" }
 
-  wezterm.on("update-status", function(window, pane)
-    -- Workspace name
-    local stat = window:active_workspace()
-    local stat_color = colors.red
+  -- Last-rendered signature; used to skip rendering when nothing visible changed.
+  local _last_sig = ""
 
-    -- Utilize this to display LDR or current key table name
-    if window:active_key_table() then
-      stat = window:active_key_table()
+  wezterm.on("update-status", function(window, pane)
+    -- Pre-read inputs for both the signature check and the rest of the handler.
+    local workspace       = window:active_workspace()
+    local key_table       = window:active_key_table() or ""
+    local leader          = window:leader_is_active()
+    local cwd_path        = theme.get_cwd_path(pane:get_current_working_dir())
+    local title           = pane:get_title() or ""
+    local cmd_raw         = pane:get_foreground_process_name()
+    local cmd             = cmd_raw and basename(cmd_raw) or ""
+    local local_tab_count = #window:mux_window():tabs()
+    local workspace_count = #wezterm.mux.get_workspace_names()
+
+    -- Cheap discriminator: if nothing display-affecting has changed, skip
+    -- the expensive mux walk and status re-render. Note: pane splits *within*
+    -- a single tab are not caught by local_tab_count; they'll surface on the
+    -- next cwd/cmd/workspace change. Acceptable trade-off.
+    local sig = workspace .. "|" .. cwd_path .. "|" .. cmd .. "|" .. title
+      .. "|" .. key_table .. "|" .. tostring(leader)
+      .. "|" .. local_tab_count .. "|" .. workspace_count
+    if sig == _last_sig then return end
+    _last_sig = sig
+
+    -- Determine left-status label + color.
+    local stat = workspace
+    local stat_color = colors.red
+    if key_table ~= "" then
+      stat = key_table
       stat_color = colors.purple
     end
-    if window:leader_is_active() then
+    if leader then
       stat = NF_LIGHTNING .. NF_LIGHTNING
       stat_color = colors.cyan
     end
 
-    -- Current working directory (full path + basename)
-    local cwd_path = theme.get_cwd_path(pane:get_current_working_dir())
     local cwd = cwd_path ~= "" and basename(cwd_path) or ""
 
     -- Git branch (cached, only updates on CWD change)
@@ -60,22 +80,17 @@ local function setup(theme)
       branch = git_cache.branch
     end
 
-    -- Current command + dynamic icon (title-first for Node.js CLIs, then process name)
-    local cmd = pane:get_foreground_process_name()
-    cmd = cmd and basename(cmd) or ""
-    local cmd_icon = theme.get_process_icon(pane:get_title(), cmd, NF_CODE)
+    local cmd_icon = theme.get_process_icon(title, cmd, NF_CODE)
 
-    -- Session stats: tabs + panes for current workspace only
+    -- Session stats: tabs + panes for current workspace only (cross-window accurate)
     local total_tabs = 0
     local total_panes = 0
-    local workspace_count = #wezterm.mux.get_workspace_names()
-    local current_workspace = window:active_workspace()
     local ok, all_wins = pcall(function()
       return wezterm.mux.all_windows()
     end)
     if ok and all_wins then
       for _, mux_win in ipairs(all_wins) do
-        if mux_win:get_workspace() == current_workspace then
+        if mux_win:get_workspace() == workspace then
           local tabs = mux_win:tabs()
           total_tabs = total_tabs + #tabs
           for _, tab in ipairs(tabs) do
