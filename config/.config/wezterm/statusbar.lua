@@ -62,9 +62,27 @@ local function read_git_branch(cwd)
   local line = f:read("*l")
   f:close()
   if not line then return "" end
+
+  -- Common case: symbolic ref on a local branch
   local branch = line:match("^ref: refs/heads/(.+)$")
   if branch then return branch end
-  return line:sub(1, 7) -- detached HEAD: show short hash
+
+  -- Rebase in progress: show the branch being rebased (matches user expectation)
+  local rebase = io.open(gitdir .. "/rebase-merge/head-name", "r")
+    or io.open(gitdir .. "/rebase-apply/head-name", "r")
+  if rebase then
+    local rb = rebase:read("*l") or ""
+    rebase:close()
+    local rb_branch = rb:match("refs/heads/(.+)$")
+    if rb_branch then return rb_branch end
+  end
+
+  -- Non-heads ref (refs/tags/*, refs/remotes/*, etc.) or detached HEAD.
+  -- Return "" to hide the branch section, matching `git branch --show-current`
+  -- semantics exactly. (Previously we returned line:sub(1,7), which produced
+  -- garbage like "ref: re" for tag refs and a short hash for detached HEAD —
+  -- both behaviors the user never had.)
+  return ""
 end
 
 local function setup(theme)
@@ -75,18 +93,46 @@ local function setup(theme)
   -- Last-rendered signature; used to skip rendering when nothing visible changed.
   local _last_sig = ""
 
-  -- Workspace tab/pane stats cache (feature-preserving: still an accurate
-  -- cross-window count, just not recomputed on every tick). Invalidated when
-  -- the current window's tab count OR total workspace count changes. Edge
-  -- cases (pane split without tab count change, tab add in a different window
-  -- of same workspace) may be momentarily stale — next real change refreshes.
-  local _ws_stats = {} -- workspace_name → { tabs, panes, local_tabs, ws_count }
+  -- Branch cache: cwd_path → branch string. Avoids re-walking the filesystem
+  -- on every tick for an unchanged cwd. Bounded LRU keeps memory under control
+  -- across many directory visits; ~32 entries is plenty for typical workflows
+  -- and ensures we don't thrash when switching between panes in different
+  -- repos (the original single-slot cache did thrash).
+  -- Trade-off: `git checkout` in the same pane (cwd unchanged) won't refresh
+  -- the displayed branch until cwd changes. Matches the original behavior.
+  local GIT_CACHE_MAX = 32
+  local _branch_cache = {}        -- cwd_path → branch
+  local _branch_cache_order = {}  -- insertion order for LRU eviction
 
-  local function get_workspace_stats(window, workspace, local_tab_count, workspace_count)
-    local cached = _ws_stats[workspace]
+  local function branch_for(cwd_path)
+    if not cwd_path or cwd_path == "" then return "" end
+    local cached = _branch_cache[cwd_path]
+    if cached ~= nil then return cached end
+    local branch = read_git_branch(cwd_path)
+    _branch_cache[cwd_path] = branch
+    _branch_cache_order[#_branch_cache_order + 1] = cwd_path
+    if #_branch_cache_order > GIT_CACHE_MAX then
+      local evict = table.remove(_branch_cache_order, 1)
+      _branch_cache[evict] = nil
+    end
+    return branch
+  end
+
+  -- Workspace tab/pane stats cache. Keyed by (workspace_name, window_id) so
+  -- that multi-window workspaces don't cause the cache to thrash between
+  -- windows with different tab counts. Each window maintains its own slot.
+  -- Invalidated when the current window's tab count, total workspace count,
+  -- or active-tab pane count changes.
+  local _ws_stats = {} -- (workspace .. "|" .. window_id) → { tabs, panes, local_tabs, ws_count, active_panes }
+
+  local function get_workspace_stats(window, workspace, local_tab_count, workspace_count, active_pane_count)
+    local window_id = tostring(window:window_id())
+    local key = workspace .. "|" .. window_id
+    local cached = _ws_stats[key]
     if cached
       and cached.local_tabs == local_tab_count
       and cached.ws_count == workspace_count
+      and cached.active_panes == active_pane_count
     then
       return cached.tabs, cached.panes
     end
@@ -114,11 +160,12 @@ local function setup(theme)
       end
     end
 
-    _ws_stats[workspace] = {
+    _ws_stats[key] = {
       tabs = total_tabs,
       panes = total_panes,
       local_tabs = local_tab_count,
       ws_count = workspace_count,
+      active_panes = active_pane_count,
     }
     return total_tabs, total_panes
   end
@@ -170,22 +217,26 @@ local function setup(theme)
     local title           = pane:get_title() or ""
     local cmd_raw         = pane:get_foreground_process_name()
     local cmd             = cmd_raw and basename(cmd_raw) or ""
-    local local_tab_count = #window:mux_window():tabs()
-    local workspace_count = #wezterm.mux.get_workspace_names()
-    -- Read branch directly from .git/HEAD (no subprocess). Included in the
-    -- signature so `git checkout` without other state change still refreshes.
-    local branch = read_git_branch(cwd_path)
+    local local_tab_count   = #window:mux_window():tabs()
+    local workspace_count   = #wezterm.mux.get_workspace_names()
+    -- Pane count in the active tab — added to sig so pane splits/closes
+    -- in the CURRENT tab trigger a re-render (and a stats cache refresh).
+    local active_tab        = window:active_tab()
+    local active_pane_count = active_tab and #active_tab:panes() or 0
 
     -- Cheap discriminator: if nothing display-affecting has changed, skip
-    -- the expensive mux walk and status re-render. Note: pane splits *within*
-    -- a single tab are not caught by local_tab_count; they'll surface on the
-    -- next cwd/cmd/workspace change. Acceptable trade-off.
+    -- the expensive mux walk and status re-render. Branch is intentionally
+    -- NOT in the sig — it's cached per-cwd by branch_for() below, matching
+    -- the original behavior of only refreshing on cwd change.
     local sig = workspace .. "|" .. cwd_path .. "|" .. cmd .. "|" .. title
       .. "|" .. key_table .. "|" .. tostring(leader)
       .. "|" .. local_tab_count .. "|" .. workspace_count
-      .. "|" .. branch
+      .. "|" .. active_pane_count
     if sig == _last_sig then return end
     _last_sig = sig
+
+    -- Branch (cached by cwd_path; runs only on sig change, not every tick)
+    local branch = branch_for(cwd_path)
 
     -- Determine left-status label + color.
     local stat = workspace
@@ -202,8 +253,10 @@ local function setup(theme)
     local cwd = cwd_path ~= "" and basename(cwd_path) or ""
     local cmd_icon = theme.get_process_icon(title, cmd, NF_CODE)
 
-    -- Session stats (cross-window accurate, cached by workspace structure)
-    local total_tabs, total_panes = get_workspace_stats(window, workspace, local_tab_count, workspace_count)
+    -- Session stats (cross-window accurate, cached by (workspace, window_id))
+    local total_tabs, total_panes = get_workspace_stats(
+      window, workspace, local_tab_count, workspace_count, active_pane_count
+    )
 
     -- Left status: mutate pre-allocated slots
     d_left_color.Foreground.Color = stat_color
