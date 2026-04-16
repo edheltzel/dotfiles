@@ -43,14 +43,16 @@ local function setup(theme, keymaps)
   config.default_cursor_style = "BlinkingBar"
   config.hide_mouse_cursor_when_typing = true
   config.audible_bell = "SystemBeep"
-  config.max_fps = 240
+  config.max_fps = 120
   config.initial_cols = 100
   config.initial_rows = 50
   config.window_decorations = "RESIZE"
   config.window_close_confirmation = "AlwaysPrompt"
-  config.scrollback_lines = 10000
-  config.macos_window_background_blur = 25
-  config.window_background_opacity = 1
+  config.scrollback_lines = 5000
+  -- Blur skipped while opacity is at default (1.0, fully opaque) — blur would be invisible.
+  -- If you uncomment window_background_opacity below with a value < 1, restore blur to ~25.
+  config.macos_window_background_blur = 0
+  -- config.window_background_opacity = 1
   config.default_workspace = wezterm.nerdfonts.md_delta .. " HQ"
   config.native_macos_fullscreen_mode = false
 
