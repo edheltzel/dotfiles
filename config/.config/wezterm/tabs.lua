@@ -8,6 +8,14 @@
 
 local wezterm = require("wezterm")
 
+-- Hot-path locals: see statusbar.lua for rationale. Resolved once at load.
+local wz_truncate_right = wezterm.truncate_right
+local nf = wezterm.nerdfonts
+local NF_ROBOT    = nf.fa_robot
+local NF_TERMINAL = nf.cod_terminal
+local NF_PLE_L    = nf.ple_left_half_circle_thick
+local NF_PLE_R    = nf.ple_right_half_circle_thick
+
 local function setup(theme)
   local colors = theme.colors
   local tab_bar = theme.tab_bar
@@ -136,9 +144,9 @@ local function setup(theme)
     local proc = tab.active_pane.foreground_process_name or ""
     local icon
     if agent_state[tab.active_pane.pane_id] then
-      icon = wezterm.nerdfonts.fa_robot
+      icon = NF_ROBOT
     else
-      icon = theme.get_process_icon(tab.active_pane.title, basename(proc), wezterm.nerdfonts.cod_terminal)
+      icon = theme.get_process_icon(tab.active_pane.title, basename(proc), NF_TERMINAL)
     end
 
     -- Build title with index and icon
@@ -147,18 +155,18 @@ local function setup(theme)
     local formatted = index .. ": " .. icon .. " " .. title
 
     -- Truncate to fit (pill edges + padding = ~4 cells)
-    formatted = wezterm.truncate_right(formatted, max_width - 4)
+    formatted = wz_truncate_right(formatted, max_width - 4)
 
     return {
       { Background = { Color = tab_bar.bg } },
       { Foreground = { Color = bg } },
-      { Text = wezterm.nerdfonts.ple_left_half_circle_thick },
+      { Text = NF_PLE_L },
       { Background = { Color = bg } },
       { Foreground = { Color = fg } },
       { Text = " " .. formatted .. " " },
       { Background = { Color = tab_bar.bg } },
       { Foreground = { Color = bg } },
-      { Text = wezterm.nerdfonts.ple_right_half_circle_thick },
+      { Text = NF_PLE_R },
     }
   end)
 end

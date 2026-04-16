@@ -3,6 +3,19 @@
 
 local wezterm = require("wezterm")
 
+-- Hot-path locals: resolve module-level functions + constants once at load time.
+-- In Lua 5.4 (WezTerm's runtime) globals/table lookups are ~20x slower than
+-- local register access. Pays off every time update-status fires.
+local wz_format = wezterm.format
+local nf = wezterm.nerdfonts
+local NF_LIGHTNING = nf.md_lightning_bolt
+local NF_LAYERS    = nf.cod_layers
+local NF_FOLDER    = nf.md_folder
+local NF_BRANCH    = nf.dev_git_branch
+local NF_TAB       = nf.md_tab
+local NF_PANE      = nf.md_view_split_vertical
+local NF_CODE      = nf.fa_code
+
 local function setup(theme)
   local colors = theme.colors
   local separator_color = colors.purple_alt or colors.purple
@@ -22,7 +35,7 @@ local function setup(theme)
       stat_color = colors.purple
     end
     if window:leader_is_active() then
-      stat = wezterm.nerdfonts.md_lightning_bolt .. wezterm.nerdfonts.md_lightning_bolt
+      stat = NF_LIGHTNING .. NF_LIGHTNING
       stat_color = colors.cyan
     end
 
@@ -50,7 +63,7 @@ local function setup(theme)
     -- Current command + dynamic icon (title-first for Node.js CLIs, then process name)
     local cmd = pane:get_foreground_process_name()
     cmd = cmd and basename(cmd) or ""
-    local cmd_icon = theme.get_process_icon(pane:get_title(), cmd, wezterm.nerdfonts.fa_code)
+    local cmd_icon = theme.get_process_icon(pane:get_title(), cmd, NF_CODE)
 
     -- Session stats: tabs + panes for current workspace only
     local total_tabs = 0
@@ -80,10 +93,10 @@ local function setup(theme)
     end
 
     -- Left status (left of the tab line)
-    window:set_left_status(wezterm.format({
+    window:set_left_status(wz_format({
       { Foreground = { Color = stat_color } },
       { Text = "  " },
-      { Text = wezterm.nerdfonts.cod_layers .. "  " .. stat },
+      { Text = NF_LAYERS .. "  " .. stat },
       { Text = " ⋮ " },
     }))
 
@@ -91,7 +104,7 @@ local function setup(theme)
     local right_items = {
       -- CWD: pink icon, white text
       { Foreground = { Color = colors.pink } },
-      { Text = wezterm.nerdfonts.md_folder .. "  " },
+      { Text = NF_FOLDER .. "  " },
       { Foreground = { Color = colors.white } },
       { Text = cwd },
     }
@@ -101,7 +114,7 @@ local function setup(theme)
       table.insert(right_items, { Foreground = { Color = separator_color } })
       table.insert(right_items, { Text = " ⋮ " })
       table.insert(right_items, { Foreground = { Color = colors.purple } })
-      table.insert(right_items, { Text = wezterm.nerdfonts.dev_git_branch .. "  " })
+      table.insert(right_items, { Text = NF_BRANCH .. "  " })
       table.insert(right_items, { Foreground = { Color = colors.white } })
       table.insert(right_items, { Text = branch })
     end
@@ -118,22 +131,22 @@ local function setup(theme)
     table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
     table.insert(right_items, { Text = " ⋮ " })
     table.insert(right_items, { Foreground = { Color = colors.red2 } })
-    table.insert(right_items, { Text = wezterm.nerdfonts.md_tab .. " " })
+    table.insert(right_items, { Text = NF_TAB .. " " })
     table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
     table.insert(right_items, { Text = tostring(total_tabs) })
     table.insert(right_items, { Text = "  " })
     table.insert(right_items, { Foreground = { Color = colors.red2 } })
-    table.insert(right_items, { Text = wezterm.nerdfonts.md_view_split_vertical .. " " })
+    table.insert(right_items, { Text = NF_PANE .. " " })
     table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
     table.insert(right_items, { Text = tostring(total_panes) })
     table.insert(right_items, { Foreground = { Color = colors.red2 } })
     table.insert(right_items, { Text = "  " })
-    table.insert(right_items, { Text = wezterm.nerdfonts.cod_layers .. " " })
+    table.insert(right_items, { Text = NF_LAYERS .. " " })
     table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
     table.insert(right_items, { Text = tostring(workspace_count) })
     table.insert(right_items, { Text = "  " })
 
-    window:set_right_status(wezterm.format(right_items))
+    window:set_right_status(wz_format(right_items))
   end)
 end
 
