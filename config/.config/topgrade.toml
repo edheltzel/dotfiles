@@ -18,6 +18,7 @@ disable = [
   "rustup",
   "pipx",
   "pyenv",
+  "microsoft_office",
 ]
 ignore_failures = ["bun_packages"]
 assume_yes = true
