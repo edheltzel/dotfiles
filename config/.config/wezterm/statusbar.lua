@@ -27,6 +27,44 @@ local function setup(theme)
   -- Last-rendered signature; used to skip rendering when nothing visible changed.
   local _last_sig = ""
 
+  -- Pre-allocated format slots. Static slots never change — reused every tick.
+  -- Dynamic slots have their `.Text` (or `.Foreground.Color`) mutated in place.
+  -- This eliminates ~30 table allocations per update-status tick.
+
+  -- Static color slots
+  local c_pink       = { Foreground = { Color = colors.pink } }
+  local c_white      = { Foreground = { Color = colors.white } }
+  local c_sep        = { Foreground = { Color = separator_color } }
+  local c_purple     = { Foreground = { Color = colors.purple } }
+  local c_purple_alt = { Foreground = { Color = colors.purple_alt } }
+  local c_cyan       = { Foreground = { Color = colors.cyan } }
+  local c_red2       = { Foreground = { Color = colors.red2 } }
+
+  -- Static text slots
+  local t_folder_icon = { Text = NF_FOLDER .. "  " }
+  local t_branch_icon = { Text = NF_BRANCH .. "  " }
+  local t_sep         = { Text = " ⋮ " }
+  local t_spacer      = { Text = "  " }
+  local t_tab_icon    = { Text = NF_TAB .. " " }
+  local t_pane_icon   = { Text = NF_PANE .. " " }
+  local t_ws_icon     = { Text = NF_LAYERS .. " " }
+  local t_left_pad    = { Text = "  " }
+
+  -- Dynamic slots (mutated each tick)
+  local d_left_color  = { Foreground = { Color = colors.red } }
+  local d_left_stat   = { Text = "" }
+  local d_cwd         = { Text = "" }
+  local d_branch      = { Text = "" }
+  local d_cmd_icon    = { Text = "" }
+  local d_cmd         = { Text = "" }
+  local d_tabs        = { Text = "" }
+  local d_panes       = { Text = "" }
+  local d_ws_count    = { Text = "" }
+
+  -- Reusable outer arrays
+  local left_items = { d_left_color, t_left_pad, d_left_stat, t_sep }
+  local right_items = {}
+
   wezterm.on("update-status", function(window, pane)
     -- Pre-read inputs for both the signature check and the rest of the handler.
     local workspace       = window:active_workspace()
@@ -107,59 +145,68 @@ local function setup(theme)
       end
     end
 
-    -- Left status (left of the tab line)
-    window:set_left_status(wz_format({
-      { Foreground = { Color = stat_color } },
-      { Text = "  " },
-      { Text = NF_LAYERS .. "  " .. stat },
-      { Text = " ⋮ " },
-    }))
+    -- Left status: mutate pre-allocated slots
+    d_left_color.Foreground.Color = stat_color
+    d_left_stat.Text = NF_LAYERS .. "  " .. stat
+    window:set_left_status(wz_format(left_items))
 
-    -- Right status
-    local right_items = {
-      -- CWD: pink icon, white text
-      { Foreground = { Color = colors.pink } },
-      { Text = NF_FOLDER .. "  " },
-      { Foreground = { Color = colors.white } },
-      { Text = cwd },
-    }
+    -- Right status: mutate dynamic text slots
+    d_cwd.Text      = cwd
+    d_branch.Text   = branch
+    d_cmd_icon.Text = cmd_icon .. "  "
+    d_cmd.Text      = cmd
+    d_tabs.Text     = tostring(total_tabs)
+    d_panes.Text    = tostring(total_panes)
+    d_ws_count.Text = tostring(workspace_count)
 
-    -- Git branch (only show if in a git repo)
+    -- Build right_items with direct indexed writes (no table.insert overhead)
+    local n = 0
+    -- CWD section
+    n = n + 1; right_items[n] = c_pink
+    n = n + 1; right_items[n] = t_folder_icon
+    n = n + 1; right_items[n] = c_white
+    n = n + 1; right_items[n] = d_cwd
+
+    -- Git branch (conditional)
     if branch ~= "" then
-      table.insert(right_items, { Foreground = { Color = separator_color } })
-      table.insert(right_items, { Text = " ⋮ " })
-      table.insert(right_items, { Foreground = { Color = colors.purple } })
-      table.insert(right_items, { Text = NF_BRANCH .. "  " })
-      table.insert(right_items, { Foreground = { Color = colors.white } })
-      table.insert(right_items, { Text = branch })
+      n = n + 1; right_items[n] = c_sep
+      n = n + 1; right_items[n] = t_sep
+      n = n + 1; right_items[n] = c_purple
+      n = n + 1; right_items[n] = t_branch_icon
+      n = n + 1; right_items[n] = c_white
+      n = n + 1; right_items[n] = d_branch
     end
 
-    -- Command: cyan dynamic icon, white text
-    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
-    table.insert(right_items, { Text = " ⋮ " })
-    table.insert(right_items, { Foreground = { Color = colors.cyan } })
-    table.insert(right_items, { Text = cmd_icon .. "  " })
-    table.insert(right_items, { Foreground = { Color = colors.white } })
-    table.insert(right_items, { Text = cmd })
+    -- Command section
+    n = n + 1; right_items[n] = c_purple_alt
+    n = n + 1; right_items[n] = t_sep
+    n = n + 1; right_items[n] = c_cyan
+    n = n + 1; right_items[n] = d_cmd_icon
+    n = n + 1; right_items[n] = c_white
+    n = n + 1; right_items[n] = d_cmd
 
-    -- Session stats: tabs (yellow), panes (green), workspaces (red)
-    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
-    table.insert(right_items, { Text = " ⋮ " })
-    table.insert(right_items, { Foreground = { Color = colors.red2 } })
-    table.insert(right_items, { Text = NF_TAB .. " " })
-    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
-    table.insert(right_items, { Text = tostring(total_tabs) })
-    table.insert(right_items, { Text = "  " })
-    table.insert(right_items, { Foreground = { Color = colors.red2 } })
-    table.insert(right_items, { Text = NF_PANE .. " " })
-    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
-    table.insert(right_items, { Text = tostring(total_panes) })
-    table.insert(right_items, { Foreground = { Color = colors.red2 } })
-    table.insert(right_items, { Text = "  " })
-    table.insert(right_items, { Text = NF_LAYERS .. " " })
-    table.insert(right_items, { Foreground = { Color = colors.purple_alt } })
-    table.insert(right_items, { Text = tostring(workspace_count) })
-    table.insert(right_items, { Text = "  " })
+    -- Session stats
+    n = n + 1; right_items[n] = c_purple_alt
+    n = n + 1; right_items[n] = t_sep
+    n = n + 1; right_items[n] = c_red2
+    n = n + 1; right_items[n] = t_tab_icon
+    n = n + 1; right_items[n] = c_purple_alt
+    n = n + 1; right_items[n] = d_tabs
+    n = n + 1; right_items[n] = t_spacer
+    n = n + 1; right_items[n] = c_red2
+    n = n + 1; right_items[n] = t_pane_icon
+    n = n + 1; right_items[n] = c_purple_alt
+    n = n + 1; right_items[n] = d_panes
+    n = n + 1; right_items[n] = c_red2
+    n = n + 1; right_items[n] = t_spacer
+    n = n + 1; right_items[n] = t_ws_icon
+    n = n + 1; right_items[n] = c_purple_alt
+    n = n + 1; right_items[n] = d_ws_count
+    n = n + 1; right_items[n] = t_spacer
+
+    -- Truncate any stale entries from a prior longer render (when branch was set
+    -- and now isn't, the array would otherwise have leftover trailing slots).
+    for i = n + 1, #right_items do right_items[i] = nil end
 
     window:set_right_status(wz_format(right_items))
   end)
