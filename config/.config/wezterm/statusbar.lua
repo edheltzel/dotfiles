@@ -16,13 +16,61 @@ local NF_TAB       = nf.md_tab
 local NF_PANE      = nf.md_view_split_vertical
 local NF_CODE      = nf.fa_code
 
+-- Walk up from cwd looking for a .git directory or file. Handles:
+--   1. Regular repo:   <root>/.git/ (directory)
+--   2. Worktree/submodule: <dir>/.git (file containing "gitdir: <path>")
+-- Returns absolute path to the git dir, or nil if not inside a repo.
+local function find_git_dir(cwd)
+  if not cwd or cwd == "" then return nil end
+  local path = cwd
+  while path and path ~= "" and path ~= "/" do
+    -- Case 1: .git is a directory with a HEAD file
+    local head = io.open(path .. "/.git/HEAD", "r")
+    if head then
+      head:close()
+      return path .. "/.git"
+    end
+    -- Case 2: .git is a file pointing to a gitdir
+    local gitfile = io.open(path .. "/.git", "r")
+    if gitfile then
+      local first = gitfile:read("*l") or ""
+      gitfile:close()
+      local gitdir = first:match("^gitdir:%s*(.+)$")
+      if gitdir then
+        if not gitdir:match("^/") then
+          gitdir = path .. "/" .. gitdir
+        end
+        return gitdir
+      end
+    end
+    -- Walk up one level
+    local parent = path:match("^(.+)/[^/]+$")
+    if not parent or parent == path then break end
+    path = parent
+  end
+  return nil
+end
+
+-- Read current branch from .git/HEAD directly (no subprocess).
+-- Handles: symbolic ref (normal branch), detached HEAD (short hash).
+-- ~10-20μs per call; replaces the ~20ms `git branch --show-current` fork.
+local function read_git_branch(cwd)
+  local gitdir = find_git_dir(cwd)
+  if not gitdir then return "" end
+  local f = io.open(gitdir .. "/HEAD", "r")
+  if not f then return "" end
+  local line = f:read("*l")
+  f:close()
+  if not line then return "" end
+  local branch = line:match("^ref: refs/heads/(.+)$")
+  if branch then return branch end
+  return line:sub(1, 7) -- detached HEAD: show short hash
+end
+
 local function setup(theme)
   local colors = theme.colors
   local separator_color = colors.purple_alt or colors.purple
   local basename = theme.basename
-
-  -- Git branch cache (only re-query when CWD changes)
-  local git_cache = { cwd = "", branch = "" }
 
   -- Last-rendered signature; used to skip rendering when nothing visible changed.
   local _last_sig = ""
@@ -76,6 +124,9 @@ local function setup(theme)
     local cmd             = cmd_raw and basename(cmd_raw) or ""
     local local_tab_count = #window:mux_window():tabs()
     local workspace_count = #wezterm.mux.get_workspace_names()
+    -- Read branch directly from .git/HEAD (no subprocess). Included in the
+    -- signature so `git checkout` without other state change still refreshes.
+    local branch = read_git_branch(cwd_path)
 
     -- Cheap discriminator: if nothing display-affecting has changed, skip
     -- the expensive mux walk and status re-render. Note: pane splits *within*
@@ -84,6 +135,7 @@ local function setup(theme)
     local sig = workspace .. "|" .. cwd_path .. "|" .. cmd .. "|" .. title
       .. "|" .. key_table .. "|" .. tostring(leader)
       .. "|" .. local_tab_count .. "|" .. workspace_count
+      .. "|" .. branch
     if sig == _last_sig then return end
     _last_sig = sig
 
@@ -100,24 +152,6 @@ local function setup(theme)
     end
 
     local cwd = cwd_path ~= "" and basename(cwd_path) or ""
-
-    -- Git branch (cached, only updates on CWD change)
-    local branch = ""
-    if cwd_path ~= "" and cwd_path ~= git_cache.cwd then
-      local success, stdout, _ = wezterm.run_child_process({
-        "git",
-        "-C",
-        cwd_path,
-        "branch",
-        "--show-current",
-      })
-      branch = success and stdout:gsub("%s+$", "") or ""
-      git_cache.cwd = cwd_path
-      git_cache.branch = branch
-    else
-      branch = git_cache.branch
-    end
-
     local cmd_icon = theme.get_process_icon(title, cmd, NF_CODE)
 
     -- Session stats: tabs + panes for current workspace only (cross-window accurate)
