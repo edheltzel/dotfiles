@@ -91,12 +91,14 @@ wezterm.on("spawn-zen-window", function(window, pane)
   end
 end)
 
--- Use update-status to detect and apply zen to newly spawned windows
+-- Use update-status to detect and apply zen to newly spawned windows.
+-- Early-exit when no spawn is pending — this handler fires on every window
+-- every tick (~1/sec), so bail cheaply when there's nothing to do.
 wezterm.on("update-status", function(window, pane)
-  local window_id = tostring(window:window_id())
+  if not zen_state.pending_zen then return end
 
-  -- Check if this is a newly spawned zen window
-  if zen_state.pending_zen and window_id ~= zen_state.source_window_id then
+  local window_id = tostring(window:window_id())
+  if window_id ~= zen_state.source_window_id then
     zen_state.pending_zen = false
     zen_state.source_window_id = nil
     zen_state.zen_windows[window_id] = true
@@ -108,6 +110,20 @@ end)
 wezterm.on("window-resized", function(window, pane)
   if is_zen_window(window) then
     apply_zen_padding(window)
+  end
+end)
+
+-- Clean up zen_state when a window closes so the table doesn't accumulate
+-- orphan entries across long sessions.
+wezterm.on("window-focus-changed", function(window)
+  -- Best-effort cleanup: scan for window_ids that no longer exist.
+  -- Cheap (small table, rare event) and avoids requiring window-destroyed.
+  local live = {}
+  for _, w in ipairs(wezterm.mux.all_windows()) do
+    live[tostring(w:window_id())] = true
+  end
+  for id in pairs(zen_state.zen_windows) do
+    if not live[id] then zen_state.zen_windows[id] = nil end
   end
 end)
 
