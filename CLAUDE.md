@@ -146,13 +146,18 @@ All paths configured in `fish/.config/fish/conf.d/paths.fish`:
   - `paths.fish` - XDG Base Directory paths
   - `exports.fish` - Environment variables
   - `fnm.fish` - FNM (Node) lazy-loaded on first use
+  - `zoxide.fish` - Zoxide `z`/`zi` wrappers (lazy-loaded via `--no-cmd`; wrappers call `__list_dir` after jumping)
   - `brew.fish` - Homebrew integration
   - `secrets.fish` - API keys (gitignored, create from `secrets.fish.example`)
-- `functions/` - 26 custom functions
+- `functions/` - 27 custom functions
+  - `cd.fish` - wraps `builtin cd` + `__list_dir`
+  - `__list_dir.fish` - shared eza listing called by both `cd` and `z`/`zi`
 - `completions/` - Custom completions (voicemode, etc.)
 - `themes/` - Color themes
 
 **Important:** FNM and Zoxide use lazy-loading to optimize shell startup speed.
+
+**Navigation listing pattern:** `cd`, `z`, and `zi` all delegate to the shared `__list_dir` function after a successful directory change. When modifying listing flags (columns, icons, git info), edit `functions/__list_dir.fish` — do NOT duplicate the flags in `cd.fish` or `zoxide.fish`.
 
 ### Neovim Configuration (`neoed/.config/nvim/`)
 
@@ -247,6 +252,8 @@ Homebrew primary, FNM (Node), rbenv (Ruby), rustup (Rust), pipx (Python)
 - `packages/Brewfile` - All Homebrew packages/casks/fonts
 - `scripts/functions.sh` - Helper functions (error/success/info/warning with colors)
 - `fish/.config/fish/conf.d/abbr.fish` - Shell aliases/abbreviations
+- `fish/.config/fish/conf.d/zoxide.fish` - Lazy-loaded `z`/`zi` wrappers (list after jumping)
+- `fish/.config/fish/functions/__list_dir.fish` - Shared eza listing for `cd`/`z`/`zi`
 - `git/.gitconfig` - Git aliases and configuration
 - `neoed/.config/nvim/lua/config/keymaps.lua` - Neovim keybindings
 - `config/.config/topgrade.toml` - Update manager config

@@ -188,7 +188,8 @@ There are two options for managing packages with GNU Stow:
   - **Lazy-Loading Architecture**: Fish config is optimized for fast shell startup using lazy-loading patterns. Heavy tools are only initialized on first use:
     - `conf.d/fnm.fish` - Node version manager (fnm) initialized on first `node`/`npm` call
     - `conf.d/zoxide.fish` - Directory jumper (`z`/`zi` commands) initialized on first use
-    - Pattern: wrapper functions erase themselves and source the real tool init, then call the actual command
+    - Pattern: persistent wrapper functions call the real tool init once (guarded by `functions -q`), then delegate to the underlying command. Wrappers are NOT self-erasing — this lets them add post-jump behavior (e.g. `z` calls `__list_dir` after jumping). For zoxide, `--no-cmd` is used so zoxide's own `alias z=__zoxide_z` doesn't overwrite our wrapper.
+  - **Shared directory listing (`__list_dir`)**: `functions/__list_dir.fish` centralizes the `eza` flags used after every directory change. Both `cd` and `z`/`zi` call it, so every navigation produces the same listing — icons, git status, grouped dirs-first, no noise columns.
   - See `config.fish` for the main lazy-loading orchestration
 - **zsh** (zsh/)
   - Near-identical mirror of the Fish config (~90-95% feature parity) for Zsh compatibility. XDG-compliant (`ZDOTDIR=~/.config/zsh`), keeping `$HOME` clean.
