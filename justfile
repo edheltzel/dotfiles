@@ -39,7 +39,7 @@ stow pkg="":
         just list; \
     elif echo "{{stow_packages}}" | grep -qw "{{pkg}}"; then \
         stow {{pkg}}; \
-        echo "{{pkg}} was added"; \
+        echo "{{pkg}} stowed successfully"; \
     else \
         echo "Error: Package '{{pkg}}' not found. Available: {{stow_packages}}"; \
         exit 1; \
@@ -49,7 +49,7 @@ stow pkg="":
 unstow pkg:
     @if echo "{{stow_packages}}" | grep -qw "{{pkg}}"; then \
         stow --delete {{pkg}}; \
-        echo "{{pkg}} was removed"; \
+        echo "{{pkg}} unstowed successfully"; \
     else \
         echo "Error: Package '{{pkg}}' not found. Available: {{stow_packages}}"; \
         exit 1; \
