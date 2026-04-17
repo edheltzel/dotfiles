@@ -1,8 +1,10 @@
-# Lazy-load zoxide on first use
+# Lazy-load zoxide on first use.
+# --no-cmd: zoxide only defines __zoxide_* internals, so it does NOT overwrite
+# our z / zi wrappers with its own `alias z=__zoxide_z` (which would skip __list_dir).
 if status is-interactive
     function __lazy_zoxide
-        functions -e __lazy_zoxide z zi
-        zoxide init fish | source
+        functions -q __zoxide_z; and return
+        zoxide init fish --no-cmd | source
     end
     function z
         __lazy_zoxide
