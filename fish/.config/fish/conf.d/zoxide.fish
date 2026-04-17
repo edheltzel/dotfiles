@@ -6,10 +6,10 @@ if status is-interactive
     end
     function z
         __lazy_zoxide
-        __zoxide_z $argv
+        __zoxide_z $argv; and __list_dir
     end
     function zi
         __lazy_zoxide
-        __zoxide_zi $argv
+        __zoxide_zi $argv; and __list_dir
     end
 end
