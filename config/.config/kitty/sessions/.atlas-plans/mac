@@ -1,0 +1,22 @@
+
+new_tab
+layout splits
+enabled_layouts splits,tall,stack
+set_layout_state {"pairs": {"one": 1}, "opts": {"default_axis_is_horizontal": true}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [1], "window_groups": [{"id": 1, "window_ids": [1]}]}}
+cd /Users/ed/Sites/murphysAutocare/mac3
+
+launch 'kitty-unserialize-data={"id": 1, "cmd_at_shell_startup": "nvim ."}'
+focus
+
+new_tab dotfiles
+layout splits
+enabled_layouts splits,tall,stack
+set_layout_state {"pairs": {"one": 2, "two": {"horizontal": false, "one": 3, "two": 4}}, "opts": {"default_axis_is_horizontal": true}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [2, 3, 4], "window_groups": [{"id": 2, "window_ids": [2]}, {"id": 3, "window_ids": [3]}, {"id": 4, "window_ids": [4]}]}}
+cd /Users/ed/.dotfiles
+
+launch 'kitty-unserialize-data={"id": 2}'
+focus
+launch 'kitty-unserialize-data={"id": 3}'
+launch 'kitty-unserialize-data={"id": 4}'
+
+focus_tab 0

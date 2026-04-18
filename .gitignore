@@ -51,7 +51,7 @@ gha-creds-*.json
 
 ### AI Config (root only) ###
 /.claude/
-.atlas-plans/
+.atlas/
 
 ### OpenCode ###
 ai/.config/opencode/node_modules/
