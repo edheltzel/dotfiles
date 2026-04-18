@@ -67,6 +67,7 @@ if status is-interactive
     # Git
     abbr --add lg lazygit
     abbr --add ghw 'gh repo view --web'
+    abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
     abbr --add ghm --set-cursor 'gh pr merge % --merge'
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
