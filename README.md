@@ -87,6 +87,27 @@ Below are the resources I used to get to this point in my setup.
 </details>
 
 <details>
+  <summary>My Equipment - Keyboards & Trackballs</summary>
+
+I collect, build, and use different ergonomic keyboards and trackballs. Generally I'm running some kind of erognomic split keyboard with the trackball in between.
+
+- [Dygma Defy](https://dygma.com/products/dygma-defy) - daily driver ❤︎
+- [Keychron Q11](https://www.keychron.com/products/keychron-q11-qmk-custom-mechanical-keyboard)
+- [Lily58 Pro](https://github.com/kata0510/Lily58)
+- [Erogdox 76 Hot Dox v2](https://apos.audio/products/ergodox-76-hot-dox-v2-mechanical-keyboard)
+- [Corne v4.1](https://github.com/foostan/crkbd)
+- [Cheapino](https://github.com/tompi/cheapino)
+- [Keychron Q10](https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard)
+- [Daskeyboard 4 Pro](https://www.daskeyboard.com/daskeyboard-4-professional-for-mac/)
+
+**Trackballs**:
+
+- [Elecom Deft Pro](https://elecomusa.com/products/deft-pro-trackball-copy-1)
+- [Kensington Expert Mouse](https://www.kensington.com/p/products/electronic-control-solutions/trackball-products/expert-mouse-wireless-trackball-1/)
+- [Ploopy Thumb](https://ploopy.co/thumb-trackball/)
+</details>
+
+<details>
   <summary><em>Caveats for non-Apple Silicon (Intel)</em></summary>
   If you are on any version of macOS that uses AFPS, you'll need to disable the SIP.
   First check to see if SIP is enabled or not.
@@ -105,8 +126,8 @@ If your SIP is enabled, then follow the next steps to disable it – Assuming th
 
 1. Turn off your Mac (Apple > Shut Down).
 2. Hold down Command-R and press the Power button. Keep holding Command-R until the Apple logo appears.
-3. Wait for OS X to boot into the OS X Utilities window.
-4. Choose Utilities > Terminal.
+3. Choose Utilities > Terminal.
+4. Wait for OS X to boot into the OS X Utilities window.
 5. Enter csrutil _disable_.
 6. Enter reboot.
 7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
@@ -137,7 +158,7 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
    - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (in macos/security.sh)
    - Make sure to run `fnm env --use-on-cd | source` to enable auto-switching of Node versions. (in fish)
 7. Wallpapers are stored in `~/.wallpapers/` which now lives in it's own [repo here](https://github.com/edheltzel/wallpapers)
-   - Raycast uses this repo/directory to set wallpapers
+   - [Raycast](https://www.raycast.com/) uses this repo/directory to set wallpapers
 
 <h2 id="the-nitty-gritty">The Nitty Gritty <a href="#to-the-top">↑</a></h2>
 
@@ -231,13 +252,13 @@ There are two options for managing packages with GNU Stow:
   - **Plugin Organization:** `lua/plugins/{ai,coding,editor,formatting,languages,linting,ui,utils}/`
   - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neoed/.config/nvim/`
 - **local** (local/)
-  - User-specific data: `~/.local/bin` scripts, cspell dictionaries, keyboard config backups (Corne, Dygma Defy, Keychron Q11), GitHub CLI extensions
+  - User-specific data: `~/.local/bin` scripts, cspell dictionaries, keyboard config backups ([Corne](https://github.com/foostan/crkbd), [Dygma Defy](https://dygma.com/products/dygma-defy), [Keychron Q11](https://www.keychron.com/products/keychron-q11-qmk-custom-mechanical-keyboard)), GitHub CLI extensions
 
 <h2 id="scripts">Scripts <a href="#to-the-top">↑</a></h2>
 
 Any of the scripts can be run individually at any time to update/reset as needed. ie: `cd ~/.dotfiles && ./duti/duti.sh`
 
-- macObS (macos/)
+- macOS (macos/)
   - `macos.sh` - Executes a long list of commands pertaining to macOS Preferences – **DO NOT** blindly run this script - it is a WIP with each macOS update things change.
 - packages (packages/)
   - `packages.sh` - Installs the Brewfile and each package manager's packages based on the `.txt` files.
@@ -255,27 +276,25 @@ Any of the scripts can be run individually at any time to update/reset as needed
 
 > [!NOTE]
 > ~~For Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.~~
-> I've move away from using the Keychron Q11 to using a Dygma Defy
+> I've move away from using the [Keychron Q11](https://www.keychron.com/products/keychron-q11-qmk-custom-mechanical-keyboard) to using a [Dygma Defy](https://dygma.com/products/dygma-defy)
 
-<h4 id="window-manager">~~Aerospace Window~~ Native MacOS Stage Manager + Raycast + Alt-Tab <a href="#to-the-top">↑</a></h4>
+<h4 id="window-manager">~~Aerospace Window~~ Native MacOS Stage Manager + Raycast + [Alt-Tab](https://alt-tab.app/) <a href="#to-the-top">↑</a></h4>
 <h4 id="status-bar">Ice Bar <a href="#to-the-top">↑</a></h4>
-I only use Ice.app to change the appearance of the native MacOS menu bar.
+I only use [Ice.app](https://icemenubar.app/) to change the appearance of the native MacOS menu bar.
 
 <h4 id="keyboard-hacks">Karabiner Elements <a href="#to-the-top">↑</a></h4>
 
-For most of my keyboard hacking, I'm using a combination of QMK (thru VIA app), with Raycast, but I leverage Karabiner Elements for more complex modifications, like chording the Hyper Key with other modifiers.
+For most of my keyboard hacking, I'm using a combination of QMK (thru VIA app), with [Raycast](https://www.raycast.com/), but I leverage [Karabiner Elements](https://karabiner-elements.pqrs.org/) for more complex modifications, like chording the Hyper Key with other modifiers.
 
-My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (notice that it is the right side modifiers
-only.) - This is still relevant with the Dygma Defy, I just use the Bazecore software to setup a Hyper key with the LeaderKey app for chording keys and Raycast for non-chorded keys:
-
+My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (notice that it is the right side modifiers only.) - This is still relevant with the Dygma Defy, I just use the Bazecore software to setup a Hyper key with the [LeaderKey](https://github.com/mikker/LeaderKey) app for chording keys and [Raycast](https://www.raycast.com/) for non-chorded keys:
 ie:
-non-chorded: `hyper + t` launches Ghostty, my current default terminal - handled by Raycast
-chorded: `hyper + r + d` launches my Dotfiles in my default editor - handled by LeaderKey
+non-chorded: `hyper + t` launches [Wezterm](https://wezterm.org/), my current default terminal - handled by [Raycast](https://www.raycast.com/)
+chorded: `hyper + r + d` launches my Dotfiles in my default editor - handled by [LeaderKey](https://github.com/mikker/LeaderKey)
 
 See the Readme for more details: [config/.config/karabiner/README.md](./config/.config/karabiner/README.md)
 
 > [!INFO]
-> I have migrated to using LeaderKey and relying on my Dygma Defy with Bazcore
+> I have migrated to using [LeaderKey](https://github.com/mikker/LeaderKey) and relying on my Dygma Defy with Bazcore
 
 <h2 id="troubleshooting">Troubleshooting <a href="#to-the-top">↑</a></h2>
 <h4 id="troubleshoot-dotfiles">Dotfiles<a href="#to-the-top">↑</a></h4>
@@ -361,7 +380,7 @@ GPG signing is set to `TRUE` by default. If you rather not enable GPG then execu
 
 [Generate new key and assign to global git config](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374#:~:text=It%20means%20that%20is%20not,secret%20keys%20available%20in%20GPG.)
 
-main take away:
+Main take away:
 
 - `gpg --list-secret-keys --keyid-format=long`
 - Copy key
@@ -448,7 +467,7 @@ git submodule update --init --recursive
 </details>
 <h4 id="troubleshoot-macos">MacOS<a href="#to-the-top">↑</a></h4>
 
-I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.sh` - it's a great resource to see what the default key repeat rate will be. fs
+I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.sh` - it's a great resource to see what the default key repeat rate will be.
 
 <details>
   <summary>WindowServer RAM Leak</summary>
