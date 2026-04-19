@@ -485,10 +485,12 @@ speedtest
 </details>
 <h2 id="todos">TODOs <a href="#to-the-top">↑</a></h2>
 
-- [x] ~~Convert fish functions to zsh functions - **WIP**~~ this was a dumb idea
+> see [github issues](https://github.com/edheltzel/dotfiles/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen)
+
+- [x] ~~Convert fish functions to zsh functions
 - [x] ~~zsh completions seem to be broken [issue #40](https://github.com/edheltzel/dotfiles/issues/40)~~
+- [x] ~~Consider using [Home Manager](https://nix-community.github.io/home-manager/) for package management.~~
   - [x] ~~Look into zsh-completions vs autocomplete~~
-- [x] Consider using [Home Manager](https://nix-community.github.io/home-manager/) for package management.
 - [x] include zsh abbreviations
 - [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
