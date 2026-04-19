@@ -49,6 +49,9 @@ autoremove = true
 [git]
 repos = [
   "~/Developer/AI/Fabric/",
-  "~/Developer/AI/claude-cybersecurity",
+  "~/Developer/AI/gstack/",
+  "~/Developer/AI/claude-seo/",
+  "~/Developer/AI/claude-obsidian/",
+  "~/Developer/AI/claude-cybersecurity/",
   "~/Developer/AI/PAI/",
 ]
