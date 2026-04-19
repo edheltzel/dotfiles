@@ -1,0 +1,21 @@
+
+new_tab
+layout splits
+enabled_layouts splits,tall,stack,fat,grid,horizontal,vertical
+set_layout_state {"pairs": {"one": 1}, "opts": {"default_axis_is_horizontal": true}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [1], "window_groups": [{"id": 1, "window_ids": [1]}]}}
+cd /Users/ed/.dotfiles
+
+launch 'kitty-unserialize-data={"id": 1}'
+focus
+
+new_tab ✅ Kitty now matches WezTerm's
+layout splits
+enabled_layouts splits,tall,stack,fat,grid,horizontal,vertical
+set_layout_state {"pairs": {"one": 2, "two": 3}, "opts": {"default_axis_is_horizontal": true}, "class": "Splits", "all_windows": {"active_group_idx": 1, "active_group_history": [4, 2, 3], "window_groups": [{"id": 2, "window_ids": [2]}, {"id": 3, "window_ids": [3]}]}}
+cd /Users/ed/.dotfiles
+
+launch 'kitty-unserialize-data={"id": 2, "cmd_at_shell_startup": "claude --dangerously-skip-permissions"}' '--title=✅ Kitty now matches WezTerm'"'"'s'
+launch 'kitty-unserialize-data={"id": 3}'
+focus
+
+focus_tab 1
