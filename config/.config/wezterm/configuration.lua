@@ -20,9 +20,9 @@ local function setup(theme, keymaps)
   config.front_end = "WebGpu"
   config.webgpu_power_preference = "HighPerformance"
 
-  -- Font (light themes get bolder weight for readability)
+  -- Font (light themes get a slightly heavier weight for readability)
   local light_themes = { ["rose-pine-dawn"] = true, ["Eldritch Light"] = true }
-  local font_weight = light_themes[theme.name] and "DemiBold" or "Regular"
+  local font_weight = light_themes[theme.name] and "Medium" or "Regular"
   config.font = wezterm.font_with_fallback({
     { family = "Lilex Nerd Font Mono", weight = font_weight },
     { family = "VictorMono Nerd Font", weight = font_weight },
