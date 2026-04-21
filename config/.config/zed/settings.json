@@ -60,7 +60,7 @@
     "metrics": false,
   },
   "theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "Rosé Pine Dawn",
     "dark": "Eldritch",
   },
@@ -329,7 +329,7 @@
     "notify_when_agent_waiting": "all_screens",
     "dock": "left",
     "default_width": 800,
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
     "default_profile": "ask",
     "button": false,
   },
