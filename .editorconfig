@@ -10,3 +10,7 @@ insert_final_newline = true
 
 [*Makefile]
 indent_style = tab
+
+[{Justfile,justfile,.justfile,*.just}]
+indent_style = space
+indent_size = 2

@@ -3,7 +3,7 @@ initial-window = false
 alpha-blending = linear-corrected
 
 config-file = "colors/eldritch"
-#theme = aura
+#theme = Rose Pine
 
 # background-opacity = 0.95
 # background-blur-radius = 50
@@ -26,17 +26,17 @@ window-title-font-family = "Lilex Nerd Font Mono"
 font-size = 19
 font-family = "Lilex Nerd Font Mono"
 
-
+# Tabs
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
-macos-titlebar-style = tabs
 macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = tabs
 macos-window-buttons = hidden
 macos-icon = retro
 
 # Quick Terminal
-quick-terminal-position = "left"
-quick-terminal-size = 50%
+quick-terminal-position = left
+quick-terminal-size = 25%,50%
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = false
 keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal

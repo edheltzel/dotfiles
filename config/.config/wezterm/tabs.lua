@@ -47,12 +47,22 @@ local function setup(theme)
     return false
   end
 
+  -- PERF_DEBUG: logs a warning to wezterm.log whenever a single update-status
+  -- tick exceeds the threshold. Remove this block once the lag is diagnosed.
+  local PERF_THRESHOLD_MS = 50
+
   -- Agent detection (runs every ~1s via update-status timer)
   -- Uses full Pane objects to inspect process argv and user_vars
   wezterm.on("update-status", function(window, pane)
+    local _t0 = wezterm.time.now()
+    local _pane_count = 0
+    local _fg_info_calls = 0
+    local _fg_info_ms = 0
+
     local new_state = {}
     for _, mux_tab in ipairs(window:mux_window():tabs()) do
       for _, p in ipairs(mux_tab:panes()) do
+        _pane_count = _pane_count + 1
         local pane_id = p:pane_id()
         local is_agent = false
 
@@ -80,7 +90,10 @@ local function setup(theme)
           -- the foreground process. When idle, argv contains the agent name.
           -- When busy, a child (git, rg, bash) is the foreground process.
           local is_idle = false
+          local _fg_t0 = wezterm.time.now()
           local ok, info = pcall(p.get_foreground_process_info, p)
+          _fg_info_ms = _fg_info_ms + (wezterm.time.now() - _fg_t0):get_seconds() * 1000
+          _fg_info_calls = _fg_info_calls + 1
           if ok and info then
             is_idle = argv_has_agent(info)
           end
@@ -89,6 +102,14 @@ local function setup(theme)
       end
     end
     agent_state = new_state
+
+    local _elapsed = (wezterm.time.now() - _t0):get_seconds() * 1000
+    if _elapsed > PERF_THRESHOLD_MS then
+      wezterm.log_warn(string.format(
+        "[tabs.update-status] SLOW: %.1fms total, %d panes, %d get_fg_info calls (%.1fms)",
+        _elapsed, _pane_count, _fg_info_calls, _fg_info_ms
+      ))
+    end
   end)
 
   -- Pill-shaped tabs with agent activity, project colors, and process icons
