@@ -562,11 +562,53 @@
           "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
         },
         {
-          "iconPath" : "photo.badge.checkmark.fill",
+          "iconPath" : "folder.fill",
           "key" : "1",
-          "label" : "WebP convert",
+          "label" : "Folder 🔎",
           "type" : "url",
-          "value" : "raycast://extensions/HelloImSteven/sips/convert?context=%7B%22convertTo%22%3A%22WEBP%22%7D"
+          "value" : "raycast://extensions/GastroGeek/folder-search/search"
+        },
+        {
+          "iconPath" : "document.on.document.fill",
+          "key" : "2",
+          "label" : "Files 🔎",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/file-search/search-files"
+        },
+        {
+          "iconPath" : "link",
+          "key" : "3",
+          "label" : "Quick Links 🔗",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/raycast/search-quicklinks"
+        },
+        {
+          "iconPath" : "chevron.left.forwardslash.chevron.right",
+          "key" : "4",
+          "label" : "Snippets 🔎",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/snippets/search-snippets"
+        },
+        {
+          "iconPath" : "text.document.fill",
+          "key" : "7",
+          "label" : "Notes",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/screenshots/search-screenshots"
+        },
+        {
+          "iconPath" : "characters.uppercase",
+          "key" : "8",
+          "label" : "Change Case",
+          "type" : "url",
+          "value" : "raycast://extensions/erics118/change-case/change-case"
+        },
+        {
+          "iconPath" : "photo.on.rectangle.angled",
+          "key" : "9",
+          "label" : "Photo 🔎",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/screenshots/search-screenshots"
         },
         {
           "actions" : [
@@ -589,13 +631,6 @@
           "key" : "b",
           "label" : "Bitwarden",
           "type" : "group"
-        },
-        {
-          "iconPath" : "characters.uppercase",
-          "key" : "c",
-          "label" : "Change Case",
-          "type" : "url",
-          "value" : "raycast://extensions/erics118/change-case/change-case"
         },
         {
           "actions" : [
