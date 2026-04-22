@@ -15,7 +15,12 @@
 
 ### My personal setup for 🐠 Fish shell on  MacOS - `v3`
 
-Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)) - my ADE (ai/agent development environment) of choice, VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
+Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [WezTerm](https://wezterm.org) - my AI Development Environment _(ADE)_ of choice for Agent Harness/Orchestration/Workflow _(whatever buzz term you want to use)_. VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
+
+> [!WARNING]
+> Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
+
+But get **inspired**, take what you want, and leave the rest to make it your own.
 
 - [NEO.ED - Neovim Config](https://github.com/edheltzel/neoed)
 - [E.Defy - Dygma Defy keyboard](https://github.com/edheltzel/DygmaDefy)
@@ -27,11 +32,6 @@ Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working wit
 | ![5-lazygit](local/.local/__repoImages/2026/5-lazygit.png)                         | ![6-nvim-neoed-picker](local/.local/__repoImages/2026/6-nvim-neoed-picker.jpeg) |
 | ![7-nvim-neoed-dash](local/.local/__repoImages/2026/7-nvim-neoed-dash.png)         | ![8-theme-switcher](local/.local/__repoImages/2026/8-theme-switcher.png)        |
 | ![9-vscode](local/.local/__repoImages/2026/9-vscode.png)                           | ![10-yazi](local/.local/__repoImages/2026/10-yazi.png)                          |
-
-> [!WARNING]
-> Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
-
-But get **inspired**, take what you want, and leave the rest to make it your own.
 
 <details>
   <summary>Different Versions</summary>
