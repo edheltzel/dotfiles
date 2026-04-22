@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# sudo -v
 
-# Define variables for each package manager and include the corresponding package lists
-. ../scripts/functions.sh
+# functions.sh may already be loaded by install.sh — only re-source when run standalone
+if [ -z "${DOTFILES_FUNCTIONS_LOADED:-}" ]; then
+    . ../scripts/functions.sh
+fi
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
 global_packages="bun_packages.txt" #pnpm_packages.txt is another option
@@ -12,10 +13,10 @@ rust_packages="rust_packages.txt"
 
 # Define a function for installing packages with Homebrew
 install_brew_packages() {
-  if ! command -v $(which brew) &>/dev/null; then
+  if ! command -v brew &>/dev/null; then
     substep_info "Homebrew not found. Installing..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    if ! command -v $(which brew) &>/dev/null; then
+    if ! command -v brew &>/dev/null; then
       error "Failed to install Homebrew. Exiting."
       exit 1
     fi
@@ -60,17 +61,21 @@ install_bun_packages() {
 
 # Define a function for installing packages with Python
 install_python_packages() {
-  if ! command -v $(which python) &>/dev/null; then
-    substep_info "Python not found. Installing..."
-    brew install python
-    if ! command -v $(which python) &>/dev/null; then
-      error "Failed to install Python. Exiting."
+  if ! command -v pipx &>/dev/null; then
+    substep_info "pipx not found. Installing..."
+    brew install pipx
+    pipx ensurepath
+    if ! command -v pipx &>/dev/null; then
+      error "Failed to install pipx. Exiting."
       exit 1
     fi
-    substep_success "Python installed."
+    substep_success "pipx installed."
   fi
-  info "Installing Python packages..."
-  pip install $(cat "$python_packages")
+  info "Installing Python packages via pipx..."
+  while IFS= read -r pkg; do
+    [ -z "$pkg" ] && continue
+    pipx install "$pkg"
+  done < "$python_packages"
   success "Finished installing Python packages."
 }
 
@@ -101,11 +106,11 @@ install_ruby_packages() {
 
 # Define a function for installing packages with Rust
 install_rust_packages() {
-  if ! command -v $(which rustc) &>/dev/null; then
+  if ! command -v rustc &>/dev/null; then
     substep_info "Rust not found. Installing..."
     brew install rust rustup-init
     rustup-init
-    if ! command -v $(which rustc) &>/dev/null; then
+    if ! command -v rustc &>/dev/null; then
       error "Failed to install Rust. Exiting."
       exit 1
     fi

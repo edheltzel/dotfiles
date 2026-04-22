@@ -13,18 +13,15 @@ clr := '\033[0m'
 default:
     @just --list
 
-# Bootstrap a new machine
+# Bootstrap a new machine (full provision)
 install:
     @printf "{{yellow}}Running bootstrap to provision the system...{{clr}}\n"
-    @./install.sh
+    @./install.sh bootstrap
     @printf "{{green}}System provisioning complete!{{clr}}\n"
 
-# Symlink all dotfiles with Stow
-run:
-    @for pkg in {{stow_packages}}; do \
-        stow $pkg; \
-    done
-    @echo "Dotfiles stowed successfully"
+# Symlink all dotfiles with Stow (idempotent)
+link:
+    @./install.sh link
 
 # List available stow packages
 list:
@@ -79,3 +76,5 @@ delete:
 alias up := update
 alias add := stow
 alias remove := unstow
+alias run := link
+alias bootstrap := install

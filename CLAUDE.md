@@ -199,16 +199,18 @@ git sm          # Submodule update --init --recursive
 
 ### Installation Scripts
 
-**Flow:** `bootstrap.sh` -> `install.sh` -> individual scripts
+**Flow:** `install.sh` is a single unified entry point with subcommands. No separate bootstrap script.
 
-1. **install.sh** - Main orchestrator:
-   - Installs Xcode CLI tools, Homebrew, Git
-   - Sources `scripts/functions.sh` for helpers
-   - Runs `packages/packages.sh` for all package managers
-   - Stows all packages
-   - Runs `duti/duti.sh` (file associations)
-   - Runs `macos/macos.sh` (system preferences)
-   - Runs `git/git.sh` (git setup)
+1. **install.sh** - Unified installer with subcommand dispatch:
+   - `./install.sh bootstrap` — full machine provision. Self-detects remote-curl invocation and clones to `~/.dotfiles` before re-executing.
+     - Installs Xcode CLI tools, Homebrew, language package managers
+     - Sources `packages/packages.sh` for brew/fnm/pipx/rbenv/rustup/bun
+     - Stows all dotfiles packages
+     - Runs `duti/duti.sh` (file associations), `macos/macos.sh` (system preferences), `git/git.sh` (machine-specific git config)
+     - Optionally sets fish as default shell
+   - `./install.sh link` — symlink dotfiles only (idempotent `stow --restow`)
+   - Flags: `-y`/`--yes`, `--no-packages`, `--no-macos`, `-h`/`--help`
+   - Sources `scripts/functions.sh` for shared helpers (error/success/info/warning, install_xcode, install_homebrew, sudo_keep_alive)
 
 2. **packages/packages.sh** - Multi-package manager:
    - Homebrew (`Brewfile` - 80+ CLI tools, 50+ casks)
