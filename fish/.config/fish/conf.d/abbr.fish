@@ -44,6 +44,12 @@ if status is-interactive
     abbr --add muxka 'tmux kill-server'
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxd 'tmux detach'
+
+    #herdr - tmux for agents
+    abbr --add hss 'herdr server stop'
+    abbr --add hrd herdr
+    abbr --add hdr herdr
+
     # vscode
     abbr --add co code
     abbr --add con 'code -n .'
