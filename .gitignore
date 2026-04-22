@@ -52,6 +52,8 @@ gha-creds-*.json
 ### AI Config (root only) ###
 /.claude/
 .atlas/
+/AGENTS.md
+/CLAUDE.md
 
 ### OpenCode ###
 ai/.config/opencode/node_modules/
