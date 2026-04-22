@@ -579,7 +579,7 @@
             },
             {
               "iconPath" : "checkmark.shield.fill",
-              "key" : "o",
+              "key" : "a",
               "label" : "Auth",
               "type" : "url",
               "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
@@ -600,23 +600,23 @@
         {
           "actions" : [
             {
-              "iconPath" : "cup.and.saucer.fill",
-              "key" : "c",
-              "label" : "Caffeinate While",
+              "iconPath" : "pill.fill",
+              "key" : "n",
+              "label" : "Start NEW session",
               "type" : "url",
-              "value" : "raycast://extensions/mooxl/coffee/caffeinateWhile"
+              "value" : "raycast://extensions/gstvds/amphetamine/amp-start"
             },
             {
-              "iconPath" : "cup.and.saucer",
-              "key" : "d",
+              "iconPath" : "pill",
+              "key" : "e",
               "label" : "Decaffeinate",
               "type" : "url",
-              "value" : "raycast://extensions/mooxl/coffee/decaffeinate"
+              "value" : "raycast://extensions/gstvds/amphetamine/amp-end"
             }
           ],
-          "iconPath" : "cup.and.saucer.fill",
-          "key" : "C",
-          "label" : "Caffeinate",
+          "iconPath" : "pills.fill",
+          "key" : "a",
+          "label" : "Amphetamine",
           "type" : "group"
         },
         {
