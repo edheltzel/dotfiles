@@ -28,21 +28,21 @@ local function setup()
     --   │    left    │   (nvim)   │
     --   │   bottom   │            │
     --   └────────────┴────────────┘
-    local _, left_pane = mux.spawn_window({
-      workspace = DOTFILES_WORKSPACE,
-      cwd = DOTFILES_DIR,
-    })
-    local right_pane = left_pane:split({
-      direction = "Right",
-      size = 0.6,
-      cwd = wezterm.home_dir,
-    })
-    left_pane:split({
-      direction = "Bottom",
-      size = 0.5,
-      cwd = DOTFILES_DIR,
-    })
-    right_pane:send_text("nvim\n")
+    -- local _, left_pane = mux.spawn_window({
+    --   workspace = DOTFILES_WORKSPACE,
+    --   cwd = DOTFILES_DIR,
+    -- })
+    -- local right_pane = left_pane:split({
+    --   direction = "Right",
+    --   size = 0.6,
+    --   cwd = wezterm.home_dir,
+    -- })
+    -- left_pane:split({
+    --   direction = "Bottom",
+    --   size = 0.5,
+    --   cwd = DOTFILES_DIR,
+    -- })
+    -- right_pane:send_text("nvim\n")
 
     -- Start in the default workspace
     mux.set_active_workspace(HQ_WORKSPACE)
