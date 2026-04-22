@@ -208,7 +208,12 @@ local function setup(theme)
   local left_items = { d_left_color, t_left_pad, d_left_stat, t_sep }
   local right_items = {}
 
+  -- PERF_DEBUG: logs when a single update-status tick exceeds threshold.
+  -- Remove once lag is diagnosed.
+  local PERF_THRESHOLD_MS = 50
+
   wezterm.on("update-status", function(window, pane)
+    local _t0 = wezterm.time.now()
     -- Pre-read inputs for both the signature check and the rest of the handler.
     local workspace       = window:active_workspace()
     local key_table       = window:active_key_table() or ""
@@ -322,6 +327,14 @@ local function setup(theme)
     for i = n + 1, #right_items do right_items[i] = nil end
 
     window:set_right_status(wz_format(right_items))
+
+    local _elapsed = (wezterm.time.now() - _t0):get_seconds() * 1000
+    if _elapsed > PERF_THRESHOLD_MS then
+      wezterm.log_warn(string.format(
+        "[statusbar.update-status] SLOW: %.1fms  cwd=%s cmd=%s branch=%s",
+        _elapsed, cwd_path, cmd, branch
+      ))
+    end
   end)
 end
 
