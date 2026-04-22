@@ -18,7 +18,7 @@
 Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow][STOW]. You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [WezTerm](https://wezterm.org) - my AI Development Environment _(ADE)_ of choice for Agent Harness/Orchestration/Workflow _(whatever buzz term you want to use)_. VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
 
 > [!WARNING]
-> Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first.
+> Again, this is my personal setup and <ins>**changes often**</ins>, so don't blindly fork and run the [`install.sh`][installFile] script without reading it first. The script uses subcommands — see `./install.sh help` for usage.
 
 But get **inspired**, take what you want, and leave the rest to make it your own.
 
@@ -62,12 +62,19 @@ Table of Contents:
 <details>
   <summary><strong>Install with a single line...</strong></summary>
 
-I have not tested this on a fresh install, so this could break your setup. I'd suggest you read through the `bootstrap.sh` and `install.sh` scripts and the `justfile` before running this command.
+I have not tested this on a fresh install, so this could break your setup. I'd suggest you read through the `install.sh` script and the `justfile` before running this command.
 
-In theory, this will clone the repository and install everything outlined below. Again, In theory.
+In theory, this will clone the repository to `~/.dotfiles`, then bootstrap the machine. Again, in theory.
 
 ```shell
-bash -c "`curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/master/bootstrap.sh`"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/master/install.sh)" -- bootstrap
+```
+
+The remote-curl invocation detects it's running outside a cloned repo, clones itself to `~/.dotfiles`, then re-executes with the `bootstrap` subcommand. If you prefer, clone first and run locally:
+
+```shell
+git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles && ./install.sh bootstrap
 ```
 
 </details>
@@ -148,8 +155,9 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
    - `git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
    - Or if already cloned: `cd ~/.dotfiles && git submodule update --init --recursive`
 4. Use the [`justfile`](justfile) for the rest of the setup
-   - `cd ~/.dotfiles && just install`
-   - Alternatively, run install script `cd ~/.dotfiles && ./install.sh`
+   - `cd ~/.dotfiles && just install` (calls `./install.sh bootstrap`)
+   - Or invoke the script directly: `cd ~/.dotfiles && ./install.sh bootstrap`
+   - For stow-only (no software install): `./install.sh link` or `just link`
    - **Note:** The install script automatically initializes git submodules
 5. After the setup is complete, run `upp` to execute topgrade and update everything.
    - `upp` is an alias for `topgrade` which is Update Packages _(this is what I say to myself)_.
@@ -169,18 +177,23 @@ So, with the addition of GNU Stow, I added a `justfile` – I treat this like NP
 The following are available:
 
 ```shell
-help          Show this help message (default)
-install       Bootstraps a new machine
-run           Symlink all dotfiles w/Stow
-stow          Add individual packages w/Stow
-unstow        Remove individual packages w/Stow
-delete        Delete all dotfiles w/Stow
-update        Sync & clean dead symlinks w/Stow
+default       Show available recipes (default)
+install       Bootstrap a new machine [alias: bootstrap]
+link          Symlink all dotfiles w/Stow [alias: run]
+list          List available stow packages
+stow          Add individual packages w/Stow [alias: add]
+unstow        Remove individual packages w/Stow [alias: remove]
+update        Restow all packages w/Stow [alias: up]
+delete        Remove all dotfile symlinks
 ```
 
 **Bootstrapping**
 
-- `just install` recipe, it will execute the `bootstrap.sh` script. This script, is for setting up a brand new machine, it will install the necessary package managers, packages with dependencies, applications, clone the necessary repositories, configure the `~/.gitconfig.local` and symlink dotfiles using GNU Stow.
+- `just install` calls `./install.sh bootstrap` under the hood. The unified installer has two primary subcommands:
+  - `./install.sh bootstrap` — provision a new machine (Xcode CLT, Homebrew, language package managers, Stow, duti, macOS prefs, git config, optional fish as default shell).
+  - `./install.sh link` — symlink dotfiles only (idempotent). Use this when the machine is already set up.
+- Supported flags for `bootstrap`: `-y`/`--yes` (skip prompts), `--no-packages` (skip Homebrew bundle), `--no-macos` (skip system preferences).
+- Run `./install.sh help` for full usage.
 
 **Stowing/Unstowing (add/remove)**
 
@@ -513,6 +526,7 @@ speedtest
 - [x] include zsh abbreviations
 - [x] Create a single-line install script to execute bootstrap.sh
 - [x] use makefile to execute bootstrap.sh and install.sh
+- [x] Unify `bootstrap.sh` + `install.sh` into a single subcommand-driven script
 - [x] update make unstow to include only the available stow package or all
 - [x] add customizations to LazyVim
   - [x] move neovim config to its own repo
