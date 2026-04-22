@@ -229,7 +229,7 @@ git sm          # Submodule update --init --recursive
 - **Git UI:** lazygit
 - **Monitoring:** btop, fastfetch
 - **Launcher:** raycast (extensive scripts)
-- **Prompt:** Oh My Posh (default) or Starship - configurable via `FISH_PROMPT` in `config.fish`
+- **Prompt:** [Starship](https://starship.rs) - configurable via `FISH_PROMPT` in `config.fish`
 - **Updater:** topgrade (unified package updater)
 - **Keyboard:** karabiner (Hyper key chording)
 - **Editor:** zed (Vim mode + AI integration)
