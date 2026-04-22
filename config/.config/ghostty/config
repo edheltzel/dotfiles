@@ -43,7 +43,7 @@ keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
 
 # Custom keybinding
 keybind = alt+backspace=text:\x1b\x7f
-keybind = super+ctrl+alt+,=reload_config
+keybind = super+ctrl+,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
 
 # Leader key (cmd+k) sequences
