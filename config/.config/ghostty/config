@@ -5,7 +5,7 @@ alpha-blending = linear-corrected
 # config-file = "colors/eldritch"
 theme = Rose Pine
 
-background-opacity = 0.75
+background-opacity = 0.90
 background-blur-radius = 50
 unfocused-split-fill = "black"
 mouse-hide-while-typing = true
@@ -21,10 +21,13 @@ window-save-state = always
 window-colorspace = "display-p3"
 window-inherit-font-size = false
 window-padding-x = 10
-window-title-font-family = "Lilex Nerd Font Mono"
+window-title-font-family = "Lilex Nerd Font"
 
 font-size = 19
-font-family = "Lilex Nerd Font Mono"
+font-family = "Lilex Nerd Font"
+
+shell-integration-features = true
+
 
 # Tabs
 macos-non-native-fullscreen = true
@@ -36,7 +39,7 @@ macos-icon = retro
 
 # Quick Terminal
 quick-terminal-position = left
-quick-terminal-size = 25%,50%
+quick-terminal-size = 50%
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = false
 keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
