@@ -3,10 +3,10 @@ initial-window = false
 alpha-blending = linear-corrected
 
 # config-file = "colors/eldritch"
-theme = Rose Pine
+#theme = Rose Pine
 
-background-opacity = 0.90
-background-blur-radius = 50
+# background-opacity = 0.95
+# background-blur-radius = 50
 unfocused-split-fill = "black"
 mouse-hide-while-typing = true
 

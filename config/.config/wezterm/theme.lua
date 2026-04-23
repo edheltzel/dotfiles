@@ -10,7 +10,7 @@ function M.basename(s)
 end
 
 -- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
-M.name = "rose-pine"
+M.name = "Eldritch"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
