@@ -2,7 +2,9 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR"
 
-. ../scripts/functions.sh
+if [ -z "${DOTFILES_FUNCTIONS_LOADED:-}" ]; then
+    . ../scripts/functions.sh
+fi
 
 SOURCE="$(realpath .)"
 DESTINATION="$(realpath ~)"

@@ -6,7 +6,7 @@ if [ -z "${DOTFILES_FUNCTIONS_LOADED:-}" ]; then
 fi
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
-global_packages="bun_packages.txt" #pnpm_packages.txt is another option
+global_packages="bun_packages.txt"
 ruby_packages="ruby_packages.txt"
 rust_packages="rust_packages.txt"
 
@@ -69,7 +69,7 @@ install_ruby_packages() {
   fi
 
   # Install Ruby 3.3.6 with rbenv and set as default
-  if ! rbenv versions | grep -q 3.3.6; then
+  if ! rbenv versions --bare | grep -qx 3.3.6; then
     substep_info "Installing Ruby 3.3.6..."
     rbenv install 3.3.6
     rbenv global 3.3.6

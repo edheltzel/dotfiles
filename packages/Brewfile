@@ -146,7 +146,7 @@ brew 'pipx'                   # Python - i dont use python very often
 brew 'rbenv'                  # Ruby version manager
 brew 'redis'                  # Redis database engine
 brew 'ruby-build'             # Ruby build plugin for rbenv
-brew 'richgo'                 # Go test output formatter/opt/homebrew/bin/fish
+brew 'richgo'                 # Go test output formatter
 brew 'rustup-init'            # Rust version manager
 brew 'sass/sass/migrator'     # Sass migration tool
 brew 'sass/sass/sass'         # Sass CSS pre-processor

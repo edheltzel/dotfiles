@@ -13,10 +13,10 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 install_nvm() {
-  nvm_repo='https://github.com/LazyVim/starter.git' # Corrected this line
-  if [ -d "$NVM_DIR" ]; then                        # Already installed, update
-    cd $NVM_DIR && git pull                         # Corrected this line
-  else                                              # Not yet installed, prompt user to confirm before proceeding
+  nvm_repo='https://github.com/LazyVim/starter.git'
+  if [ -d "$NVM_DIR" ]; then
+    cd "$NVM_DIR" && git pull
+  else
     printf "${YELLOW}Do you want to clone %s? (y/N): ${NC}" "$VIM_DISTRO"
     read -r reply
     case "$reply" in
