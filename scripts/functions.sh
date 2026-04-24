@@ -117,28 +117,28 @@ sudo_keep_alive() {
 
 install_xcode() {
   if ! xcode-select --print-path &>/dev/null; then
-    print_banner "Xcode Command Line Tools not found. Installing Xcode Command Line Tools..."
+    substep_info "Xcode Command Line Tools not found. Installing Xcode Command Line Tools..."
     xcode-select --install &>/dev/null
     # Wait for Xcode Command Line Tools installation
     until xcode-select --print-path &>/dev/null; do sleep 5; done
-    print_banner "Xcode Command Line Tools installation complete."
+    substep_info "Xcode Command Line Tools installation complete."
   else
-    print_banner "Xcode Command Line Tools already installed. Skipping installation."
+    substep_info "Xcode Command Line Tools already installed. Skipping installation."
   fi
 }
 
 install_git() {
   if ! command -v git &>/dev/null; then
-    print_banner "Git not found. Installing Git..."
+    substep_info "Git not found. Installing Git..."
     # Assuming Homebrew is installed, install Git
     brew install git
     if ! command -v git &>/dev/null; then
-      print_error "Error installing Git. Exiting script."
+      substep_error "Error installing Git. Exiting script."
       exit 1
     fi
-    print_banner "Git installation complete."
+    substep_info "Git installation complete."
   else
-    print_banner "Git already installed. Skipping installation."
+    substep_info "Git already installed. Skipping installation."
   fi
 }
 

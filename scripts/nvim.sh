@@ -17,13 +17,18 @@ install_nvm() {
   if [ -d "$NVM_DIR" ]; then                        # Already installed, update
     cd $NVM_DIR && git pull                         # Corrected this line
   else                                              # Not yet installed, prompt user to confirm before proceeding
-    if read -p "$(echo -e "${YELLOW}Do you want to clone ${VIM_DISTRO}? (y/n): ${NC}")"; then
-      echo -e "Installing..."
-      cd $CONFIG_PATH && git clone $nvm_repo nvim
-    else
-      echo -e "Aborting..."
-      return
-    fi
+    printf "${YELLOW}Do you want to clone %s? (y/N): ${NC}" "$VIM_DISTRO"
+    read -r reply
+    case "$reply" in
+      [yY]|[yY][eE][sS])
+        echo "Installing..."
+        cd "$CONFIG_PATH" && git clone "$nvm_repo" nvim
+        ;;
+      *)
+        echo "Aborting..."
+        return
+        ;;
+    esac
   fi
 }
 

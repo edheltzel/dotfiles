@@ -7,7 +7,6 @@ fi
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
 global_packages="bun_packages.txt" #pnpm_packages.txt is another option
-python_packages="pipx_packages.txt"
 ruby_packages="ruby_packages.txt"
 rust_packages="rust_packages.txt"
 
@@ -59,27 +58,7 @@ install_bun_packages() {
   bun install -g $(cat $global_packages)
 }
 
-# Define a function for installing packages with Python
-install_python_packages() {
-  if ! command -v pipx &>/dev/null; then
-    substep_info "pipx not found. Installing..."
-    brew install pipx
-    pipx ensurepath
-    if ! command -v pipx &>/dev/null; then
-      error "Failed to install pipx. Exiting."
-      exit 1
-    fi
-    substep_success "pipx installed."
-  fi
-  info "Installing Python packages via pipx..."
-  while IFS= read -r pkg; do
-    [ -z "$pkg" ] && continue
-    pipx install "$pkg"
-  done < "$python_packages"
-  success "Finished installing Python packages."
-}
-
-# Install Ruby with rbenv, set 3.1.3 as default, then install gems
+# Install Ruby with rbenv, set 3.3.6 as default, then install gems
 install_ruby_packages() {
   # Install rbenv
   if ! command -v rbenv &>/dev/null; then
@@ -89,13 +68,13 @@ install_ruby_packages() {
     substep_success "rbenv installed."
   fi
 
-  # Install Ruby 3.1.3 with rbenv and set as default
-  if ! rbenv versions | grep -q 3.1.3; then
-    substep_info "Installing Ruby 3.1.3..."
-    rbenv install 3.1.3
-    rbenv global 3.1.3
+  # Install Ruby 3.3.6 with rbenv and set as default
+  if ! rbenv versions | grep -q 3.3.6; then
+    substep_info "Installing Ruby 3.3.6..."
+    rbenv install 3.3.6
+    rbenv global 3.3.6
     rbenv rehash
-    substep_success "Ruby 3.1.3 installed and set as default for rbenv."
+    substep_success "Ruby 3.3.6 installed and set as default for rbenv."
   fi
 
   # Install gems
@@ -108,7 +87,7 @@ install_ruby_packages() {
 install_rust_packages() {
   if ! command -v rustc &>/dev/null; then
     substep_info "Rust not found. Installing..."
-    brew install rust rustup-init
+    brew install rustup-init
     rustup-init
     if ! command -v rustc &>/dev/null; then
       error "Failed to install Rust. Exiting."
@@ -125,7 +104,6 @@ install_rust_packages() {
 # Call each installation function
 install_brew_packages
 install_node_packages
-# install_python_packages
 install_ruby_packages
 install_rust_packages
 install_bun_packages

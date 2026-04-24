@@ -147,7 +147,6 @@ brew 'rbenv'                  # Ruby version manager
 brew 'redis'                  # Redis database engine
 brew 'ruby-build'             # Ruby build plugin for rbenv
 brew 'richgo'                 # Go test output formatter/opt/homebrew/bin/fish
-brew 'rust'                   # Rust language
 brew 'rustup-init'            # Rust version manager
 brew 'sass/sass/migrator'     # Sass migration tool
 brew 'sass/sass/sass'         # Sass CSS pre-processor
@@ -254,7 +253,6 @@ cask 'betterdisplay'               # Display settings
 cask 'keycastr'                    # Display keystrokes
 cask 'onyx'                        # System maintenance
 cask 'transnomino'                 # A batch rename utility
-brew 'shortcat'                    # vim motions for MacOS
 cask 'mouseless'                   # Mouse-less app for MacOS
 cask 'openinterminal'              # Finder button, opens directory in terminal
 cask 'itsycal'                     # Calendar in menubar
@@ -325,9 +323,9 @@ cask 'zed'                            # Code editor - Rust
 # AI tooling and ADEs (AI/Agent Development Environment)
 cask 'superwhisper'                   # TTS app
 cask 'opencode-desktop'               # desktop client
-casks 'antigravity'
+cask 'antigravity'
 brew 'gemini-cli'
-brew 'claude-code'
+cask 'claude-code'
 brew 'fabric-ai'
 brew 'agent-browser'
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=$(dirname "$0")
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR"
 
 . ../scripts/functions.sh
