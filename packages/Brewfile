@@ -325,7 +325,8 @@ cask 'superwhisper'                   # TTS app
 cask 'opencode-desktop'               # desktop client
 cask 'antigravity'
 brew 'gemini-cli'
-cask 'claude-code'
+cask 'claude'                         # Claude Desktop (chat app)
+cask 'claude-code'                    # Claude Code (agentic CLI/IDE)
 brew 'fabric-ai'
 brew 'agent-browser'
 
