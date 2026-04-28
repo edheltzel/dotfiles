@@ -40,22 +40,22 @@ outer.bottom = 5
 preset = 'qwerty'
 
 [mode.main.binding]
-alt-ctrl-shift-0 = 'workspace hq'       # 0 -> primary workspace
-alt-ctrl-shift-1 = 'workspace code'     # 1 -> dev apps
-alt-ctrl-shift-2 = 'workspace design'   # 2 -> design apps
-alt-ctrl-shift-3 = 'workspace comms'    # 3 -> comms
-alt-ctrl-shift-4 = 'workspace overflow' # 4 -> overflow
+alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
+alt-ctrl-1 = 'workspace code'     # 1 -> dev apps
+alt-ctrl-2 = 'workspace design'   # 2 -> design apps
+alt-ctrl-3 = 'workspace comms'    # 3 -> comms
+alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 
 # jump to last workspace
 alt-ctrl-shift-tab = 'workspace-back-and-forth'
 # cycle through workspaces
-alt-ctrl-shift-leftSquareBracket = 'workspace prev'
-alt-ctrl-shift-rightSquareBracket = 'workspace next'
-# cycle through window/app focus
-alt-ctrl-shift-j = 'focus down'
-alt-ctrl-shift-h = 'focus left'
-alt-ctrl-shift-k = 'focus up'
-alt-ctrl-shift-l = 'focus right'
+alt-ctrl-shift-rightSquareBracket = 'workspace prev'
+alt-ctrl-shift-leftSquareBracket = 'workspace next'
+# cycle through window/app focus #hyper+w+f
+# cmd-ctrl-shift-j = 'focus down'
+# cmd-ctrl-shift-h = 'focus left'
+# cmd-ctrl-shift-k = 'focus up'
+# cmd-ctrl-shift-l = 'focus right'
 
 [mode.resize.binding] # hyper+w+s
 h = 'resize width -50'
@@ -75,12 +75,13 @@ esc = 'mode main'
 enter = 'mode main'
 
 ######### Assigned Workspaces to Apps ##########
+
 [[on-window-detected]] # HQ Workspace
-if.app-name-regex-substring = 'Zen|Brave|Safari*|Google Chrome|Vivaldi'
+if.app-name-regex-substring = 'Helium|Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Antigravity|Typora|Maestro|Bazecor'
+if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Antigravity|Typora|Maestro'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace
@@ -88,7 +89,7 @@ if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|
 run = "move-node-to-workspace design"
 
 [[on-window-detected]] # Comms Workspace
-if.app-name-regex-substring = 'Messages|Microsoft Teams|Notion*|Slack|Discord|WhatsApp|Claude'
+if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp|Bazecor'
 run = "move-node-to-workspace comms"
 
 [[on-window-detected]] # Overflow Workspace
@@ -101,5 +102,5 @@ run = ['layout floating', 'move-node-to-workspace overflow']
 
 # Floating Windows
 [[on-window-detected]]
-if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview'
+if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview|Stickies'
 run = "layout floating"
