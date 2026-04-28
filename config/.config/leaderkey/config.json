@@ -75,7 +75,7 @@
               "value" : "/Applications/Claude.app"
             },
             {
-              "key" : "M",
+              "key" : "m",
               "type" : "application",
               "value" : "/Applications/Maestro.app"
             },
@@ -199,6 +199,11 @@
               "key" : "w",
               "type" : "application",
               "value" : "/Applications/WezTerm.app"
+            },
+            {
+              "key" : "W",
+              "type" : "application",
+              "value" : "/Applications/Warp.app"
             }
           ],
           "iconPath" : "apple.terminal.on.rectangle",
@@ -660,6 +665,13 @@
               "label" : "End Amp",
               "type" : "url",
               "value" : "raycast://extensions/gstvds/amphetamine/amp-end"
+            },
+            {
+              "iconPath" : "stopwatch.fill",
+              "key" : "r",
+              "label" : "Remaining Time",
+              "type" : "url",
+              "value" : "raycast://extensions/gstvds/amphetamine/remaining"
             }
           ],
           "iconPath" : "pills.fill",
