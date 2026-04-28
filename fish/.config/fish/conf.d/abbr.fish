@@ -43,19 +43,19 @@ if status is-interactive
     abbr --add hdr herdr
 
     # AI Agents + Models
-    abbr --add cc claude
-    abbr --add co codex
-    abbr --add oc opencode
-    abbr --add gg gemini
-    abbr --add ma maestro-cli
     abbr --add ag antigravity
+    abbr --add gg gemini
+    abbr --add ggy 'gemini --yolo'
+    abbr --add cc claude
     abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add ccc 'claude converse --dangerously-skip-permissions'
     abbr --add ccd 'claude --dangerously-skip-permissions'
+    abbr --add oc opencode
     abbr --add occ 'opencode --continue'
     abbr --add ocp 'opencode --agent plan'
-    abbr --add ggy 'gemini --yolo'
+    abbr --add co codex
     abbr --add coo 'codex --yolo'
+    abbr --add ma maestro-cli
 
     # vscode
     abbr --add con 'code -n .'
