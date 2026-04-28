@@ -33,7 +33,7 @@ shell-integration-features = true
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 macos-window-buttons = hidden
 macos-icon = retro
 
