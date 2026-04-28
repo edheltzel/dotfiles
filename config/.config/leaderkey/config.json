@@ -68,16 +68,6 @@
           "type" : "group"
         },
         {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/OpenCode.app"
-        },
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
-        },
-        {
           "actions" : [
             {
               "key" : "b",
@@ -118,9 +108,33 @@
         {
           "actions" : [
             {
+              "key" : "c",
+              "type" : "application",
+              "value" : "/Applications/Claude.app"
+            },
+            {
+              "key" : "w",
+              "label" : "Claude Code Web",
+              "type" : "url",
+              "value" : "https://claude.ai/code"
+            }
+          ],
+          "iconPath" : "asterisk",
+          "key" : "c",
+          "label" : "Claude",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
               "key" : "a",
               "type" : "application",
               "value" : "/Applications/Affinity.app"
+            },
+            {
+              "key" : "d",
+              "type" : "application",
+              "value" : "/Applications/Adobe InDesign 2026/Adobe InDesign 2026.app"
             },
             {
               "key" : "f",
@@ -136,11 +150,6 @@
               "key" : "p",
               "type" : "application",
               "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
-            },
-            {
-              "key" : "d",
-              "type" : "application",
-              "value" : "/Applications/Adobe InDesign 2026/Adobe InDesign 2026.app"
             }
           ],
           "iconPath" : "theatermask.and.paintbrush.fill",
@@ -289,8 +298,15 @@
         },
         {
           "key" : "m",
+          "label" : "💬",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
+        },
+        {
+          "key" : "M",
+          "label" : "Maestro✨",
+          "type" : "application",
+          "value" : "/Applications/Maestro.app"
         },
         {
           "key" : "N",
@@ -303,6 +319,11 @@
           "value" : "/Applications/Obsidian.app"
         },
         {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/OpenCode.app"
+        },
+        {
           "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
@@ -311,6 +332,35 @@
       "iconPath" : "/System/Applications/App Store.app",
       "key" : "a",
       "label" : "Apps",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "music.note.list",
+          "key" : "m",
+          "label" : "YouTube Music",
+          "type" : "url",
+          "value" : "https://music.youtube.com"
+        },
+        {
+          "iconPath" : "dollarsign.circle.fill",
+          "key" : "p",
+          "label" : "Orders",
+          "type" : "url",
+          "value" : "https://peptideware.com/wp-admin/admin.php?page=wc-orders"
+        },
+        {
+          "iconPath" : "video.fill",
+          "key" : "y",
+          "label" : "YouTube",
+          "type" : "url",
+          "value" : "https://youtube.com"
+        }
+      ],
+      "iconPath" : "bookmark.fill",
+      "key" : "b",
+      "label" : "Sounds (Music)",
       "type" : "group"
     },
     {
@@ -613,45 +663,45 @@
         {
           "actions" : [
             {
-              "iconPath" : "shield.lefthalf.filled",
-              "key" : "b",
-              "label" : "Bitwarden",
+              "iconPath" : "pill",
+              "key" : "e",
+              "label" : "Decaffeinate",
               "type" : "url",
-              "value" : "raycast://extensions/jomifepe/bitwarden/search"
+              "value" : "raycast://extensions/gstvds/amphetamine/amp-end"
             },
-            {
-              "iconPath" : "checkmark.shield.fill",
-              "key" : "a",
-              "label" : "Auth",
-              "type" : "url",
-              "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
-            }
-          ],
-          "iconPath" : "bolt.shield.fill",
-          "key" : "b",
-          "label" : "Bitwarden",
-          "type" : "group"
-        },
-        {
-          "actions" : [
             {
               "iconPath" : "pill.fill",
               "key" : "n",
               "label" : "Start NEW session",
               "type" : "url",
               "value" : "raycast://extensions/gstvds/amphetamine/amp-start"
-            },
-            {
-              "iconPath" : "pill",
-              "key" : "e",
-              "label" : "Decaffeinate",
-              "type" : "url",
-              "value" : "raycast://extensions/gstvds/amphetamine/amp-end"
             }
           ],
           "iconPath" : "pills.fill",
           "key" : "a",
           "label" : "Amphetamine",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "checkmark.shield.fill",
+              "key" : "a",
+              "label" : "Auth",
+              "type" : "url",
+              "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
+            },
+            {
+              "iconPath" : "shield.lefthalf.filled",
+              "key" : "b",
+              "label" : "Bitwarden",
+              "type" : "url",
+              "value" : "raycast://extensions/jomifepe/bitwarden/search"
+            }
+          ],
+          "iconPath" : "bolt.shield.fill",
+          "key" : "b",
+          "label" : "Bitwarden",
           "type" : "group"
         },
         {
@@ -721,35 +771,6 @@
       "iconPath" : "/Applications/Raycast.app",
       "key" : "r",
       "label" : "Raycast",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "iconPath" : "music.note.list",
-          "key" : "m",
-          "label" : "YouTube Music",
-          "type" : "url",
-          "value" : "https://music.youtube.com"
-        },
-        {
-          "iconPath" : "video.fill",
-          "key" : "y",
-          "label" : "YouTube",
-          "type" : "url",
-          "value" : "https://youtube.com"
-        },
-        {
-          "iconPath" : "dollarsign.circle.fill",
-          "key" : "p",
-          "label" : "Orders",
-          "type" : "url",
-          "value" : "https://peptideware.com/wp-admin/admin.php?page=wc-orders"
-        }
-      ],
-      "iconPath" : "bookmark.fill",
-      "key" : "b",
-      "label" : "Sounds (Music)",
       "type" : "group"
     }
   ],
