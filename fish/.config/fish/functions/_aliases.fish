@@ -25,12 +25,6 @@ alias cll "clear; and eza --long --all --header --git --icons --no-permissions -
 alias tree "eza -Ta --icons --ignore-glob=\"node_modules|.git|.vscode|.DS_Store\""
 alias ltd "eza -TaD --icons --ignore-glob=\"node_modules|.git|.vscode|.DS_Store\""
 
-# Shortcuts
-alias fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
-alias fabric="fabric-ai"
-alias mux="tmux"
-alias zel="zellij"
-
 # Network shortcuts/aliases and utilities
 alias ip "dig +short myip.opendns.com @resolver1.opendns.com" # dumps [YOUR PUBLIC IP] [URL IP]
 alias ipl "ipconfig getifaddr en0" #internal network IP

@@ -4,18 +4,6 @@ if status is-interactive
     abbr --add cw center_window
     abbr --add cl clear
 
-    # AI Agents + Models
-    abbr --add ccc 'claude converse --dangerously-skip-permissions'
-    abbr --add cc 'claude --dangerously-skip-permissions'
-    abbr --add ccp --set-cursor 'claude -p "%"'
-    abbr --add ccd 'claude --dangerously-skip-permissions'
-    abbr --add oc opencode
-    abbr --add occ 'opencode --continue'
-    abbr --add ocp 'opencode --agent plan'
-    abbr --add gg 'gemini --yolo'
-    abbr --add ag antigravity
-    abbr --add ma maestro-cli
-
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
     abbr --add config '~/.config/'
@@ -25,6 +13,7 @@ if status is-interactive
     abbr --add goo 'cd ~/.go/'
     abbr --add pg 'cd ~/Developer/_playground/'
     abbr --add sb 'cd ~/Developer/_sandboxes/'
+    abbr --add fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
 
     # Editors/Terminals
     abbr --add gho ghostty
@@ -44,14 +33,31 @@ if status is-interactive
     abbr --add muxka 'tmux kill-server'
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxd 'tmux detach'
+    abbr --add fabric fabric-ai
+    abbr --add mux tmux
+    abbr --add zel zellij
 
     #herdr - tmux for agents
     abbr --add hss 'herdr server stop'
     abbr --add hrd herdr
     abbr --add hdr herdr
 
+    # AI Agents + Models
+    abbr --add cc claude
+    abbr --add co codex
+    abbr --add oc opencode
+    abbr --add gg gemini
+    abbr --add ma maestro-cli
+    abbr --add ag antigravity
+    abbr --add ccp --set-cursor 'claude -p "%"'
+    abbr --add ccc 'claude converse --dangerously-skip-permissions'
+    abbr --add ccd 'claude --dangerously-skip-permissions'
+    abbr --add occ 'opencode --continue'
+    abbr --add ocp 'opencode --agent plan'
+    abbr --add ggy 'gemini --yolo'
+    abbr --add coo 'codex --yolo'
+
     # vscode
-    abbr --add co code
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
     # zed
