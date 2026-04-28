@@ -1,4 +1,4 @@
--- statusbar.lua: Left and right status bar rendering via the uppurple-status event.
+-- statusbar.lua: Left and right status bar rendering via the update-status event.
 -- Includes workspace/leader display, CWD, git branch (cached), command, and session stats.
 
 local wezterm = require("wezterm")
@@ -78,10 +78,7 @@ local function read_git_branch(cwd)
   end
 
   -- Non-heads ref (refs/tags/*, refs/remotes/*, etc.) or detached HEAD.
-  -- Return "" to hide the branch section, matching `git branch --show-current`
-  -- semantics exactly. (Previously we returned line:sub(1,7), which produced
-  -- garbage like "ref: re" for tag refs and a short hash for detached HEAD —
-  -- both behaviors the user never had.)
+  -- Return "" to hide the branch section, matching `git branch --show-current`.
   return ""
 end
 
@@ -208,12 +205,7 @@ local function setup(theme)
   local left_items = { d_left_color, t_left_pad, d_left_stat, t_sep }
   local right_items = {}
 
-  -- PERF_DEBUG: logs when a single update-status tick exceeds threshold.
-  -- Remove once lag is diagnosed.
-  local PERF_THRESHOLD_MS = 50
-
   wezterm.on("update-status", function(window, pane)
-    local _t0 = wezterm.time.now()
     -- Pre-read inputs for both the signature check and the rest of the handler.
     local workspace       = window:active_workspace()
     local key_table       = window:active_key_table() or ""
@@ -327,14 +319,6 @@ local function setup(theme)
     for i = n + 1, #right_items do right_items[i] = nil end
 
     window:set_right_status(wz_format(right_items))
-
-    local _elapsed = (wezterm.time.now() - _t0):get_seconds() * 1000
-    if _elapsed > PERF_THRESHOLD_MS then
-      wezterm.log_warn(string.format(
-        "[statusbar.update-status] SLOW: %.1fms  cwd=%s cmd=%s branch=%s",
-        _elapsed, cwd_path, cmd, branch
-      ))
-    end
   end)
 end
 
