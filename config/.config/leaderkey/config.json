@@ -70,6 +70,29 @@
         {
           "actions" : [
             {
+              "key" : "c",
+              "type" : "application",
+              "value" : "/Applications/Claude.app"
+            },
+            {
+              "key" : "M",
+              "type" : "application",
+              "value" : "/Applications/Maestro.app"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/OpenCode.app"
+            }
+          ],
+          "iconPath" : "sparkles",
+          "key" : "a",
+          "label" : "AI tooling 🤖",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
               "key" : "b",
               "type" : "application",
               "value" : "/Applications/Brave Browser.app"
@@ -80,9 +103,9 @@
               "value" : "/Applications/Google Chrome.app"
             },
             {
-              "key" : "f",
+              "key" : "h",
               "type" : "application",
-              "value" : "/Applications/Firefox.app"
+              "value" : "/Applications/Helium.app"
             },
             {
               "key" : "s",
@@ -108,33 +131,9 @@
         {
           "actions" : [
             {
-              "key" : "c",
-              "type" : "application",
-              "value" : "/Applications/Claude.app"
-            },
-            {
-              "key" : "w",
-              "label" : "Claude Code Web",
-              "type" : "url",
-              "value" : "https://claude.ai/code"
-            }
-          ],
-          "iconPath" : "asterisk",
-          "key" : "c",
-          "label" : "Claude",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
               "key" : "a",
               "type" : "application",
               "value" : "/Applications/Affinity.app"
-            },
-            {
-              "key" : "d",
-              "type" : "application",
-              "value" : "/Applications/Adobe InDesign 2026/Adobe InDesign 2026.app"
             },
             {
               "key" : "f",
@@ -142,7 +141,7 @@
               "value" : "/Applications/Figma.app"
             },
             {
-              "key" : "i",
+              "key" : "l",
               "type" : "application",
               "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
             },
@@ -298,15 +297,8 @@
         },
         {
           "key" : "m",
-          "label" : "💬",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
-        },
-        {
-          "key" : "M",
-          "label" : "Maestro✨",
-          "type" : "application",
-          "value" : "/Applications/Maestro.app"
         },
         {
           "key" : "N",
@@ -314,14 +306,16 @@
           "value" : "/System/Applications/Notes.app"
         },
         {
+          "iconPath" : "document.badge.plus.fill",
           "key" : "n",
-          "type" : "application",
-          "value" : "/Applications/Obsidian.app"
+          "label" : "New Raycast Note",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/raycast-notes/create-note"
         },
         {
           "key" : "o",
           "type" : "application",
-          "value" : "/Applications/OpenCode.app"
+          "value" : "/Applications/Obsidian.app"
         },
         {
           "key" : "r",
@@ -344,13 +338,6 @@
           "value" : "https://music.youtube.com"
         },
         {
-          "iconPath" : "dollarsign.circle.fill",
-          "key" : "p",
-          "label" : "Orders",
-          "type" : "url",
-          "value" : "https://peptideware.com/wp-admin/admin.php?page=wc-orders"
-        },
-        {
           "iconPath" : "video.fill",
           "key" : "y",
           "label" : "YouTube",
@@ -358,9 +345,9 @@
           "value" : "https://youtube.com"
         }
       ],
-      "iconPath" : "bookmark.fill",
-      "key" : "b",
-      "label" : "Sounds (Music)",
+      "iconPath" : "music.note.list",
+      "key" : "s",
+      "label" : "Music 🎧",
       "type" : "group"
     },
     {
@@ -442,7 +429,7 @@
       ],
       "iconPath" : "/System/Library/CoreServices/Finder.app",
       "key" : "d",
-      "label" : "Directories",
+      "label" : "Directories 📁",
       "type" : "group"
     },
     {
@@ -497,7 +484,7 @@
       ],
       "iconPath" : "keyboard.fill",
       "key" : "k",
-      "label" : "Keeb",
+      "label" : "Keeb ⌨️",
       "type" : "group"
     },
     {
@@ -536,6 +523,25 @@
     {
       "actions" : [
         {
+          "iconPath" : "cube.fill",
+          "key" : "O",
+          "label" : "Onshape",
+          "type" : "url",
+          "value" : "https://cad.onshape.com/signin"
+        },
+        {
+          "iconPath" : "cube.fill",
+          "key" : "T",
+          "label" : "Tinkercad",
+          "type" : "url",
+          "value" : "https://www.tinkercad.com/dashboard"
+        },
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Users/ed/Applications/Autodesk Fusion.app"
+        },
+        {
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/BambuStudio.app"
@@ -561,13 +567,6 @@
           "value" : "/Applications/OrcaSlicer.app"
         },
         {
-          "iconPath" : "cube.fill",
-          "key" : "O",
-          "label" : "Onshape",
-          "type" : "url",
-          "value" : "https://cad.onshape.com/signin"
-        },
-        {
           "key" : "s",
           "type" : "application",
           "value" : "/Applications/Shapr3D.app"
@@ -585,7 +584,7 @@
       ],
       "iconPath" : "view.3d",
       "key" : "p",
-      "label" : "Print in 3D",
+      "label" : "Print in 3D 🖨️",
       "type" : "group"
     },
     {
@@ -614,14 +613,14 @@
         {
           "iconPath" : "folder.fill",
           "key" : "1",
-          "label" : "Folder 🔎",
+          "label" : "Search Folders",
           "type" : "url",
           "value" : "raycast://extensions/GastroGeek/folder-search/search"
         },
         {
           "iconPath" : "document.on.document.fill",
           "key" : "2",
-          "label" : "Files 🔎",
+          "label" : "Search Files",
           "type" : "url",
           "value" : "raycast://extensions/raycast/file-search/search-files"
         },
@@ -633,76 +632,69 @@
           "value" : "raycast://extensions/raycast/raycast/search-quicklinks"
         },
         {
-          "iconPath" : "chevron.left.forwardslash.chevron.right",
+          "iconPath" : "text.viewfinder",
           "key" : "4",
-          "label" : "Snippets 🔎",
+          "label" : "Snippets",
           "type" : "url",
           "value" : "raycast://extensions/raycast/snippets/search-snippets"
         },
         {
-          "iconPath" : "text.document.fill",
-          "key" : "7",
-          "label" : "Notes",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/screenshots/search-screenshots"
-        },
-        {
-          "iconPath" : "characters.uppercase",
-          "key" : "8",
-          "label" : "Change Case",
-          "type" : "url",
-          "value" : "raycast://extensions/erics118/change-case/change-case"
-        },
-        {
-          "iconPath" : "photo.on.rectangle.angled",
-          "key" : "9",
-          "label" : "Photo 🔎",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/screenshots/search-screenshots"
-        },
-        {
           "actions" : [
             {
-              "iconPath" : "pill",
-              "key" : "e",
-              "label" : "Decaffeinate",
+              "iconPath" : "pill.fill",
+              "key" : "a",
+              "label" : "Start Amp",
               "type" : "url",
-              "value" : "raycast://extensions/gstvds/amphetamine/amp-end"
+              "value" : "raycast://extensions/gstvds/amphetamine/amp-start"
             },
             {
               "iconPath" : "pill.fill",
-              "key" : "n",
-              "label" : "Start NEW session",
+              "key" : "d",
+              "label" : "Timed Amp",
               "type" : "url",
-              "value" : "raycast://extensions/gstvds/amphetamine/amp-start"
+              "value" : "raycast://extensions/gstvds/amphetamine/amp-duration"
+            },
+            {
+              "iconPath" : "pill",
+              "key" : "e",
+              "label" : "End Amp",
+              "type" : "url",
+              "value" : "raycast://extensions/gstvds/amphetamine/amp-end"
             }
           ],
           "iconPath" : "pills.fill",
           "key" : "a",
-          "label" : "Amphetamine",
+          "label" : "Amphetamine 💊",
           "type" : "group"
         },
         {
           "actions" : [
-            {
-              "iconPath" : "checkmark.shield.fill",
-              "key" : "a",
-              "label" : "Auth",
-              "type" : "url",
-              "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
-            },
             {
               "iconPath" : "shield.lefthalf.filled",
               "key" : "b",
               "label" : "Bitwarden",
               "type" : "url",
               "value" : "raycast://extensions/jomifepe/bitwarden/search"
+            },
+            {
+              "iconPath" : "checkmark.shield.fill",
+              "key" : "o",
+              "label" : "Auth",
+              "type" : "url",
+              "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
             }
           ],
           "iconPath" : "bolt.shield.fill",
           "key" : "b",
           "label" : "Bitwarden",
           "type" : "group"
+        },
+        {
+          "iconPath" : "characters.uppercase",
+          "key" : "c",
+          "label" : "Change Case",
+          "type" : "url",
+          "value" : "raycast://extensions/erics118/change-case/change-case"
         },
         {
           "iconPath" : "button.programmable.square.fill",
@@ -726,11 +718,25 @@
           "value" : "raycast://extensions/raycast/raycast-focus/toggle-focus-session"
         },
         {
-          "iconPath" : "text.page.badge.magnifyingglass",
+          "iconPath" : "photo.badge.checkmark.fill",
+          "key" : "I",
+          "label" : "WebP convert",
+          "type" : "url",
+          "value" : "raycast://extensions/HelloImSteven/sips/convert?context=%7B%22convertTo%22%3A%22WEBP%22%7D"
+        },
+        {
+          "iconPath" : "note.text.badge.plus",
           "key" : "n",
           "label" : "Create New Note",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-notes/search-notes"
+          "value" : "raycast://extensions/raycast/raycast-notes/create-note"
+        },
+        {
+          "iconPath" : "eyedropper.full",
+          "key" : "p",
+          "label" : "Color Picker",
+          "type" : "url",
+          "value" : "raycast://extensions/thomas/color-picker/pick-color"
         },
         {
           "iconPath" : "x.circle.fill",
@@ -771,6 +777,257 @@
       "iconPath" : "/Applications/Raycast.app",
       "key" : "r",
       "label" : "Raycast",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "iconPath" : "0.square.fill",
+          "key" : "0",
+          "label" : "HQ",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace hq"
+        },
+        {
+          "iconPath" : "1.square.fill",
+          "key" : "1",
+          "label" : "CODE",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace code"
+        },
+        {
+          "iconPath" : "2.square.fill",
+          "key" : "2",
+          "label" : "DESIGN",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace design"
+        },
+        {
+          "iconPath" : "3.square.fill",
+          "key" : "3",
+          "label" : "COMMS",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace comms"
+        },
+        {
+          "iconPath" : "4.square.fill",
+          "key" : "4",
+          "label" : "OVERFLOW",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace overflow"
+        },
+        {
+          "iconPath" : "repeat",
+          "key" : "c",
+          "label" : "Reload Config",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
+          "iconPath" : "rectangle.on.rectangle.slash.fill",
+          "key" : "D",
+          "label" : "Close all Windows",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace close-all-windows-but-current"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Focus Left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus left"
+            },
+            {
+              "key" : "j",
+              "label" : "Focus Down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus down"
+            },
+            {
+              "key" : "k",
+              "label" : "Focus Up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus up"
+            },
+            {
+              "key" : "l",
+              "label" : "Focus Right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace focus right"
+            }
+          ],
+          "key" : "f",
+          "label" : "Focus",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "inset.filled.lefthalf.rectangle",
+              "key" : "h",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with left"
+            },
+            {
+              "iconPath" : "inset.filled.bottomhalf.rectangle",
+              "key" : "j",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with down"
+            },
+            {
+              "iconPath" : "inset.filled.tophalf.rectangle",
+              "key" : "k",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with up"
+            },
+            {
+              "iconPath" : "inset.filled.righthalf.rectangle",
+              "key" : "l",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with right"
+            }
+          ],
+          "iconPath" : "rectangle.3.group.fill",
+          "key" : "j",
+          "label" : "Join with",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "a",
+              "label" : "Accordion",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace layout accordion horizontal vertical"
+            },
+            {
+              "key" : "f",
+              "label" : "Floating",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
+            },
+            {
+              "key" : "t",
+              "label" : "Tiles",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace layout tiles vertical horizontal"
+            }
+          ],
+          "iconPath" : "inset.filled.topleft.topright.bottomleft.bottomright.rectangle",
+          "key" : "l",
+          "label" : "Layout",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "0.circle.fill",
+              "key" : "0",
+              "label" : "Move to HQ",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace hq --focus-follows-window"
+            },
+            {
+              "iconPath" : "1.circle.fill",
+              "key" : "1",
+              "label" : "Move to CODE",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace code --focus-follows-window"
+            },
+            {
+              "iconPath" : "2.circle.fill",
+              "key" : "2",
+              "label" : "Move to DESIGN",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace design --focus-follows-window"
+            },
+            {
+              "iconPath" : "3.circle.fill",
+              "key" : "3",
+              "label" : "Move to COMMS",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace comms --focus-follows-window"
+            },
+            {
+              "iconPath" : "4.alt.circle.fill",
+              "key" : "4",
+              "label" : "Move to OVERFLOW",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace overflow --focus-follows-window"
+            },
+            {
+              "iconPath" : "arrow.down.backward.and.arrow.up.forward.rectangle.fill",
+              "key" : "F",
+              "label" : "Fullscreen",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace fullscreen"
+            },
+            {
+              "iconPath" : "inset.filled.lefthalf.righthalf.rectangle",
+              "key" : "h",
+              "label" : "Left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move left"
+            },
+            {
+              "iconPath" : "inset.filled.bottomhalf.tophalf.rectangle",
+              "key" : "j",
+              "label" : "Down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move down"
+            },
+            {
+              "iconPath" : "inset.filled.tophalf.bottomhalf.rectangle",
+              "key" : "k",
+              "label" : "Up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move up"
+            },
+            {
+              "iconPath" : "inset.filled.trailinghalf.leadinghalf.rectangle",
+              "key" : "l",
+              "label" : "Right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move right"
+            }
+          ],
+          "iconPath" : "appwindow.swipe.rectangle",
+          "key" : "M",
+          "label" : "Move",
+          "type" : "group"
+        },
+        {
+          "iconPath" : "uiwindow.split.2x1",
+          "key" : "m",
+          "label" : "Move Move",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace mode move"
+        },
+        {
+          "iconPath" : "arrow.down.forward.and.arrow.up.backward.rectangle.fill",
+          "key" : "R",
+          "label" : "Reset Layout",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace flatten-workspace-tree"
+        },
+        {
+          "iconPath" : "inset.filled.trailinghalf.arrow.trailing.rectangle",
+          "key" : "r",
+          "label" : "Resize Mode",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace mode resize"
+        },
+        {
+          "key" : "tab",
+          "label" : "Jump to last Workspace",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace-back-and-forth"
+        }
+      ],
+      "iconPath" : "/Applications/AeroSpace.app",
+      "key" : "w",
+      "label" : "Aerospace",
       "type" : "group"
     }
   ],
