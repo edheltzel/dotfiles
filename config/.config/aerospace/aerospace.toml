@@ -13,7 +13,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 
 default-root-container-layout = 'tiles'     #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
-accordion-padding = 30
+accordion-padding = 15
 
 automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
 persistent-workspaces = ["hq", "code", "design", "comms", "overflow"]
