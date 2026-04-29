@@ -648,14 +648,14 @@
             {
               "iconPath" : "pill.fill",
               "key" : "a",
-              "label" : "Start Amp",
+              "label" : "Start Session",
               "type" : "url",
               "value" : "raycast://extensions/gstvds/amphetamine/amp-start"
             },
             {
               "iconPath" : "pill.fill",
               "key" : "d",
-              "label" : "Timed Amp",
+              "label" : "Start Session for Time",
               "type" : "url",
               "value" : "raycast://extensions/gstvds/amphetamine/amp-duration"
             },
