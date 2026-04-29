@@ -1,7 +1,6 @@
 
-#### This config is inteneded to be paired with the Leaderkey app ####
-# https://github.com/mikker/LeaderKey
-# https://tunaformac.com/
+#### This config is inteneded to be paired with the Leaderkey app #######
+#### https://github.com/mikker/LeaderKey OR https://tunaformac.com/ ####
 
 config-version = 2
 after-startup-command = [
@@ -42,14 +41,21 @@ preset = 'qwerty'
 
 [mode.main.binding] # hyper+w+<NUMBER>
 alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
-alt-ctrl-1 = 'workspace code'     # 1 -> dev apps
-alt-ctrl-2 = 'workspace design'   # 2 -> design apps
+alt-ctrl-1 = 'workspace code'     # 1 -> dev
+alt-ctrl-2 = 'workspace design'   # 2 -> design
 alt-ctrl-3 = 'workspace comms'    # 3 -> comms
 alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 
-# cycle through workspaces
-alt-ctrl-shift-rightSquareBracket = 'workspace prev'
-alt-ctrl-shift-leftSquareBracket = 'workspace next'
+# cycle through workspaces (wraps around)
+alt-ctrl-shift-tab = 'workspace prev --wrap-around'
+alt-ctrl-tab = 'workspace next --wrap-around'
+
+# cycle through windows (wraps around))
+alt-ctrl-leftSquareBracket = 'focus --boundaries-action wrap-around-the-workspace left'
+alt-ctrl-rightSquareBracket = 'focus --boundaries-action wrap-around-the-workspace right'
+
+# jump between last two workspaces
+alt-ctrl-backtick = 'focus-back-and-forth'
 
 [mode.resize.binding] # hyper+w+s
 h = 'resize width -50'
