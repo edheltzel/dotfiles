@@ -8,7 +8,8 @@
       "ctrl-alt-cmd-e": "project_panel::ToggleFocus",
       "ctrl-alt-cmd-d": "debug_panel::ToggleFocus",
       "ctrl-alt-cmd-b": "workspace::ToggleLeftDock",
-      "alt-`": "workspace::NewCenterTerminal",
+      "alt-`": "workspace::NewTerminal",
+      "ctrl-`": "workspace::NewCenterTerminal",
       // Tabs/Buffers
       "cmd-1": ["pane::ActivateItem", 0],
       "cmd-2": ["pane::ActivateItem", 1],
