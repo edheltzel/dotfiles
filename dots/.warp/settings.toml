@@ -93,6 +93,9 @@ agent_mode_coding_permissions = "always_allow_reading"
 [agents.warp_agent.input]
 nld_in_terminal_enabled = true
 
+[agents.voice]
+voice_input_enabled = false
+
 [privacy]
 telemetry_enabled = true
 crash_reporting_enabled = true
@@ -164,6 +167,8 @@ agent_mode_codebase_context_auto_indexing = true
 
 [code.editor]
 prefer_markdown_viewer = true
+open_file_editor = "env_editor"
+open_code_panels_file_editor = "warp"
 
 [warpify]
 
