@@ -1,0 +1,171 @@
+[general]
+show_warning_before_quitting = false
+default_session_mode = "terminal"
+quit_on_last_window_closed = true
+
+[appearance]
+spacing = "compact"
+
+[appearance.window]
+new_windows_num_rows = 50
+new_windows_num_columns = 80
+open_windows_at_custom_size = true
+override_opacity = 100
+override_blur = 20
+
+[appearance.themes]
+theme = "dark"
+system_theme = true
+selected_system_themes = {
+  dark = { custom = { name = "Eldritch", path = "/Users/ed/.warp/themes/eldritch/eldritch.yaml" } },
+  light = {
+    custom = { name = "Catppuccin Latte", path = "/Users/ed/.warp/themes/catppuccin/catppuccin_latte.yml" },
+  },
+}
+
+[appearance.text]
+font_size = 19.0
+ligature_rendering_enabled = true
+ai_font_name = "Lilex Nerd Font Mono"
+notebook_font_size = 14.0
+match_ai_font = true
+font_name = "Lilex Nerd Font Mono"
+line_height_ratio = 1.0
+
+[appearance.blocks]
+show_block_dividers = true
+
+[appearance.tabs]
+workspace_decoration_visibility = "always_show"
+show_indicators_button = true
+tab_close_button_position = "right"
+
+[appearance.cursor]
+cursor_blink = "enabled"
+cursor_display_type = "bar"
+
+[appearance.vertical_tabs]
+primary_info = "command"
+display_granularity = "panes"
+view_mode = "compact"
+enabled = true
+
+[appearance.input]
+input_mode = "waterfall"
+
+[appearance.panes]
+should_dim_inactive_panes = false
+
+[appearance.icon]
+app_icon = "default"
+
+[text_editing]
+vim_mode_enabled = true
+vim_unnamed_system_clipboard = true
+
+[global_hotkey]
+
+[global_hotkey.dedicated_window]
+enabled = true
+
+[global_hotkey.dedicated_window.settings]
+active_pin_position = "left"
+hide_window_when_unfocused = true
+keybinding = "ctrl-alt-cmd-t"
+
+[global_hotkey.dedicated_window.settings.pin_position_to_size_percentages]
+bottom = { height = 30, width = 100 }
+left = { height = 100, width = 50 }
+right = { height = 100, width = 40 }
+top = { height = 30, width = 100 }
+
+[global_hotkey.toggle_all_windows]
+enabled = false
+
+[agents]
+cloud_conversation_storage_enabled = true
+
+[agents.profiles]
+agent_mode_coding_permissions = "always_allow_reading"
+
+[agents.warp_agent]
+
+[agents.warp_agent.input]
+nld_in_terminal_enabled = true
+
+[privacy]
+telemetry_enabled = true
+crash_reporting_enabled = true
+custom_secret_regex_list = [
+  { name = "IPv4 Address", pattern = '\b((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}\b' },
+  {
+    name = "IPv6 Address",
+    pattern = '\b((([0-9A-Fa-f]{1,4}:){1,6}:)|(([0-9A-Fa-f]{1,4}:){7}))([0-9A-Fa-f]{1,4})\b',
+  },
+  { name = "Slack App Token", pattern = '\bxapp-[0-9]+-[A-Za-z0-9_]+-[0-9]+-[a-f0-9]+\b' },
+  { name = "Phone Number", pattern = '\b(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b' },
+  {
+    name = "AWS Access ID",
+    pattern = '\b(AKIA|A3T|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{12,}\b',
+  },
+  {
+    name = "MAC Address",
+    pattern = '\b((([a-zA-z0-9]{2}[-:]){5}([a-zA-z0-9]{2}))|(([a-zA-z0-9]{2}:){5}([a-zA-z0-9]{2})))\b',
+  },
+  { name = "Google API Key", pattern = '\bAIza[0-9A-Za-z-_]{35}\b' },
+  { name = "Google OAuth ID", pattern = '\b[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com\b' },
+  { name = "GitHub Classic Personal Access Token", pattern = '\bghp_[A-Za-z0-9_]{36}\b' },
+  { name = "GitHub Fine-Grained Personal Access Token", pattern = '\bgithub_pat_[A-Za-z0-9_]{82}\b' },
+  { name = "GitHub OAuth Access Token", pattern = '\bgho_[A-Za-z0-9_]{36}\b' },
+  { name = "GitHub User-to-Server Token", pattern = '\bghu_[A-Za-z0-9_]{36}\b' },
+  { name = "GitHub Server-to-Server Token", pattern = '\bghs_[A-Za-z0-9_]{36}\b' },
+  { name = "Stripe Key", pattern = '\b(?:r|s)k_(test|live)_[0-9a-zA-Z]{24}\b' },
+  { name = "Firebase Auth Domain", pattern = '\b([a-z0-9-]){1,30}(\.firebaseapp\.com)\b' },
+  { name = "JWT", pattern = '\b(ey[a-zA-z0-9_\-=]{10,}\.){2}[a-zA-z0-9_\-=]{10,}\b' },
+  { name = "OpenAI API Key", pattern = '\bsk-[a-zA-Z0-9]{48}\b' },
+  { name = "Anthropic API Key", pattern = '\bsk-ant-api\d{0,2}-[a-zA-Z0-9\-]{80,120}\b' },
+  { name = "Generic SK API Key", pattern = '\bsk-[a-zA-Z0-9\-]{10,100}\b' },
+  { name = "Fireworks API Key", pattern = '\bfw_[a-zA-Z0-9]{24}\b' },
+]
+
+[privacy.secret_redaction]
+hide_secrets_in_block_list = false
+enabled = true
+
+[terminal]
+
+[terminal.input]
+alias_expansion_enabled = false
+completions_open_while_typing = true
+honor_ps1 = true
+input_box_type_setting = "classic"
+
+[terminal.input.autosuggestions]
+keybinding_hint = true
+
+[notifications]
+
+[notifications.preferences]
+is_agent_task_completed_enabled = true
+is_long_running_enabled = true
+is_needs_attention_enabled = true
+is_password_prompt_enabled = true
+long_running_threshold = 45
+mode = "enabled"
+play_notification_sound = true
+
+[account]
+is_settings_sync_enabled = true
+
+[code]
+
+[code.indexing]
+agent_mode_codebase_context_auto_indexing = true
+
+[code.editor]
+prefer_markdown_viewer = true
+
+[warpify]
+
+[warpify.ssh]
+use_ssh_tmux_wrapper = true
