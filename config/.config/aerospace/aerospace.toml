@@ -50,7 +50,7 @@ alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 alt-ctrl-shift-tab = 'workspace prev --wrap-around'
 alt-ctrl-tab = 'workspace next --wrap-around'
 
-# cycle through windows (wraps around))
+# cycle through windows (wraps around)
 alt-ctrl-leftSquareBracket = 'focus --boundaries-action wrap-around-the-workspace left'
 alt-ctrl-rightSquareBracket = 'focus --boundaries-action wrap-around-the-workspace right'
 
