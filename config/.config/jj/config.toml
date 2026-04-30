@@ -2,3 +2,38 @@
 [user]
 name = "Ed Heltzel"
 email = "ed@rainyday.media"
+
+[ui]
+default-command = "status"
+pager = ["delta", "--dark"]
+diff.format = "git"
+editor = "nvim"
+diff-editor = ":builtin"
+
+[merge-tools.difft]
+program = "difft"
+diff-args = ["--color=always", "--display=inline", "$left", "$right"]
+
+[colors]
+"added" = { fg = "green", bold = true }
+"modified" = { fg = "yellow", bold = false }
+"removed" = { fg = "red", bold = true }
+"diff removed token" = { fg = "bright red", bg = "#C99C99", underline = false }
+"diff added token" = { fg = "bright green", bg = "#CDFAAA", underline = false }
+
+[aliases]
+l = ["log", "--limit", "15", "--no-graph"]
+e = ["evolog"]
+d = ["diff", "--tool", "difft"]
+f = ["git", "fetch"]
+p = ["git", "push"]
+t = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+
+[remotes.origin]
+auto-track-bookmarks = "glob:*"
+
+[revsets]
+bookmark-advance-to = "@-"
+
+[revset-aliases]
+'immutable_heads()' = 'builtin_immutable_heads() | remote_bookmarks()'
