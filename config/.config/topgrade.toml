@@ -19,6 +19,7 @@ disable = [
   "pipx",
   "pyenv",
   "microsoft_office",
+  "antigravity",
 ]
 ignore_failures = ["bun_packages"]
 assume_yes = true
