@@ -57,6 +57,3 @@ if status is-interactive
         command irb $argv
     end
 end
-
-# opencode
-fish_add_path /Users/ed/.opencode/bin
