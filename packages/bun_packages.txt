@@ -1,5 +1,4 @@
 @anthropic-ai/claude-code
-opencode-ai
 @antfu/ni
 @bitwarden/cli
 @mermaid-js/mermaid-cli
