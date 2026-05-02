@@ -47,15 +47,16 @@ alt-ctrl-3 = 'workspace comms'    # 3 -> comms
 alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
 
 # cycle through workspaces (wraps around)
-alt-ctrl-shift-tab = 'workspace prev --wrap-around'
-alt-ctrl-tab = 'workspace next --wrap-around'
+alt-ctrl-shift-j = 'workspace next --wrap-around'
+alt-ctrl-shift-k = 'workspace prev --wrap-around'
 
 # cycle through windows (wraps around)
-alt-ctrl-leftSquareBracket = 'focus --boundaries-action wrap-around-the-workspace left'
-alt-ctrl-rightSquareBracket = 'focus --boundaries-action wrap-around-the-workspace right'
+alt-ctrl-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'
+alt-ctrl-shift-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
-# jump between last two workspaces
-alt-ctrl-backtick = 'focus-back-and-forth'
+# jumps
+alt-ctrl-shift-i = 'focus-back-and-forth' #last 2 windows
+alt-ctrl-shift-u = 'workspace-back-and-forth' #last 2 workspaces
 
 [mode.resize.binding] # hyper+w+s
 h = 'resize width -50'

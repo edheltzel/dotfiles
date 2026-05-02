@@ -3,13 +3,12 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-alt-cmd-x": "zed::Extensions",
-      "ctrl-alt-cmd-g": "git_panel::ToggleFocus",
-      "ctrl-alt-cmd-e": "project_panel::ToggleFocus",
-      "ctrl-alt-cmd-d": "debug_panel::ToggleFocus",
-      "ctrl-alt-cmd-b": "workspace::ToggleLeftDock",
-      "alt-`": "workspace::NewTerminal",
-      "ctrl-`": "workspace::NewCenterTerminal",
+      "ctrl-cmd-x": "zed::Extensions",
+      "ctrl-cmd-g": "git_panel::ToggleFocus",
+      "ctrl-cmd-e": "project_panel::ToggleFocus",
+      "ctrl-cmd-d": "debug_panel::ToggleFocus",
+      // "ctrl-cmd-b": "workspace::ToggleLeftDock",
+      "ctrl-cmd-`": "workspace::NewCenterTerminal",
       // Tabs/Buffers
       "cmd-1": ["pane::ActivateItem", 0],
       "cmd-2": ["pane::ActivateItem", 1],
@@ -50,10 +49,11 @@
   {
     "context": "ProjectPanel && !editing",
     "bindings": {
-      "ctrl-alt-cmd-e": "workspace::ToggleRightDock",
+      "ctrl-cmd-e": "workspace::ToggleRightDock",
       "space e": "workspace::ToggleRightDock",
       "r": "project_panel::Rename",
       "a": "project_panel::NewFile",
+      "x": "project_panel::Cut",
     },
   },
   // Terminal
@@ -183,6 +183,8 @@
       // Clear search highlights
       "space n h": ["workspace::SendKeystrokes", ": n o h enter"],
       // Panels
+      "ctrl-cmd-b": "workspace::ToggleLeftDock",
+      "ctrl-cmd-e": "workspace::ToggleRightDock",
       "space e": "project_panel::ToggleFocus",
       "space o": "outline_panel::ToggleFocus",
       // AI Agents
@@ -248,7 +250,7 @@
     "bindings": {
       "s": "vim::PushSneak",
       "S": "vim::PushSneakBackward",
-      "space j j": "vim::PushSneak",
+      "space j j": "vim::Search",
     },
   },
   // Subword motions
