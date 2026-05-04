@@ -8,7 +8,7 @@ enabled = true
 delivery = "terminal"
 
 [theme]
-name = "rose-pine"
+name = "dracula"
 
 # Eldritch — Lovecraftian dark theme
 # Palette source: https://github.com/eldritch-theme
