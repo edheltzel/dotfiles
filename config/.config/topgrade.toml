@@ -10,7 +10,6 @@ disable = [
   "ruby_gems",
   "gem",
   "tlmgr",
-  "node",
   "pnpm",
   "yarn",
   "shell",
