@@ -3,7 +3,9 @@ initial-window = false
 alpha-blending = linear-corrected
 
 config-file = "colors/eldritch"
-#theme = Rose Pine
+#theme = aura
+
+term = xterm-256color
 
 # background-opacity = 0.95
 # background-blur-radius = 50
@@ -27,7 +29,6 @@ font-size = 19
 font-family = "Lilex Nerd Font"
 
 shell-integration-features = true
-
 
 # Tabs
 macos-non-native-fullscreen = true
