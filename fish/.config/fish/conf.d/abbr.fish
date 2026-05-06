@@ -33,7 +33,7 @@ if status is-interactive
     abbr --add muxka 'tmux kill-server'
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxd 'tmux detach'
-    abbr --add fabric fabric-ai
+    # abbr --add fabric fabric-ai
     abbr --add mux tmux
     abbr --add zel zellij
 
