@@ -824,6 +824,13 @@
         {
           "iconPath" : "4.square.fill",
           "key" : "4",
+          "label" : "AI",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace ai"
+        },
+        {
+          "iconPath" : "4.square.fill",
+          "key" : "5",
           "label" : "OVERFLOW",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace overflow"
@@ -964,6 +971,13 @@
             {
               "iconPath" : "4.alt.circle.fill",
               "key" : "4",
+              "label" : "Move to AI",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace ai --focus-follows-window"
+            },
+            {
+              "iconPath" : "4.alt.circle.fill",
+              "key" : "5",
               "label" : "Move to OVERFLOW",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace overflow --focus-follows-window"
