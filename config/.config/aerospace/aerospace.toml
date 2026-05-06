@@ -95,7 +95,7 @@ run = "move-node-to-workspace comms"
 
 [[on-window-detected]] # Ai Workspace
 if.app-name-regex-substring = 'Claude|OpenCode|Maestro|Superconductor|Superset'
-run = "move-node-to-workspace overflow"
+run = "move-node-to-workspace ai"
 
 [[on-window-detected]] # Overflow Workspace
 if.app-name-regex-substring = 'Notes|Reminders|Obsidian|Freeform|Claude|OpenCode'
