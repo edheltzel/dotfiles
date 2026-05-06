@@ -15,18 +15,18 @@ default-root-container-layout = 'tiles'     #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 accordion-padding = 15
 
-automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
-persistent-workspaces = ["hq", "code", "design", "comms", "overflow"]
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUS_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
-]
-on-focus-changed = [
-  'move-mouse window-lazy-center',
-  'exec-and-forget sketchybar --trigger aerospace_focus_change',
-]
-on-mode-changed = ['exec-and-forget sketchybar --trigger aerospace_mode_change']
+automatically-unhide-macos-hidden-apps = false                              #focuses app regardless of visibility
+persistent-workspaces = ["ai", "hq", "code", "design", "comms", "overflow"]
+# exec-on-workspace-change = [
+#   '/bin/bash',
+#   '-c',
+#   'sketchybar --trigger aerospace_workspace_change FOCUS_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+# ]
+# on-focus-changed = [
+#   'move-mouse window-lazy-center',
+#   'exec-and-forget sketchybar --trigger aerospace_focus_change',
+# ]
+# on-mode-changed = ['exec-and-forget sketchybar --trigger aerospace_mode_change']
 
 [gaps]
 inner.horizontal = 5
@@ -44,7 +44,8 @@ alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
 alt-ctrl-1 = 'workspace code'     # 1 -> dev
 alt-ctrl-2 = 'workspace design'   # 2 -> design
 alt-ctrl-3 = 'workspace comms'    # 3 -> comms
-alt-ctrl-4 = 'workspace overflow' # 4 -> overflow
+alt-ctrl-4 = 'workspace ai'       # 4 -> ai tooling
+alt-ctrl-5 = 'workspace overflow' # 5 -> overflow
 
 # cycle through workspaces (wraps around)
 alt-ctrl-shift-j = 'workspace next --wrap-around'
@@ -55,7 +56,7 @@ alt-ctrl-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'
 alt-ctrl-shift-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
 # jumps
-alt-ctrl-shift-i = 'focus-back-and-forth' #last 2 windows
+alt-ctrl-shift-i = 'focus-back-and-forth'     #last 2 windows
 alt-ctrl-shift-u = 'workspace-back-and-forth' #last 2 workspaces
 
 [mode.resize.binding] # hyper+w+s
@@ -81,19 +82,23 @@ if.app-name-regex-substring = 'Helium|Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Antigravity|Typora|Maestro'
+if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Antigravity|Typora'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace
-if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape|Snapmaker Orca"
+if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape|Snapmaker Orca|Font Book|HueForge"
 run = "move-node-to-workspace design"
 
 [[on-window-detected]] # Comms Workspace
-if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp|Bazecor'
+if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp|Bazecor|VIA|Vial'
 run = "move-node-to-workspace comms"
 
+[[on-window-detected]] # Ai Workspace
+if.app-name-regex-substring = 'Claude|OpenCode|Maestro|Superconductor|Superset'
+run = "move-node-to-workspace overflow"
+
 [[on-window-detected]] # Overflow Workspace
-if.app-name-regex-substring = 'Notes|Reminders|Todoist|Obsidian|Notion|Claude|OpenCode'
+if.app-name-regex-substring = 'Notes|Reminders|Obsidian|Freeform|Claude|OpenCode'
 run = "move-node-to-workspace overflow"
 
 [[on-window-detected]] # Overflow Workspace with floating windows
@@ -102,5 +107,5 @@ run = ['layout floating', 'move-node-to-workspace overflow']
 
 # Floating Windows
 [[on-window-detected]]
-if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview|Stickies'
+if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview|superwhisper|Stickies'
 run = "layout floating"
