@@ -80,9 +80,9 @@
               "value" : "/Applications/Maestro.app"
             },
             {
-              "key" : "o",
+              "key" : "s",
               "type" : "application",
-              "value" : "/Applications/OpenCode.app"
+              "value" : "/Applications/Superconductor.app"
             }
           ],
           "iconPath" : "sparkles",
