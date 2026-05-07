@@ -2,8 +2,8 @@ initial-window = false
 
 alpha-blending = linear-corrected
 
-#config-file = "colors/eldritch"
-theme = Rose Pine Dawn
+config-file = "colors/eldritch"
+#theme = Rose Pine Dawn
 
 term = xterm-256color
 
@@ -41,9 +41,9 @@ macos-icon = retro
 
 # Quick Terminal
 quick-terminal-position = left
-quick-terminal-size =  90%, 90%
+quick-terminal-size = 100%,100% 
 quick-terminal-animation-duration = 0
-quick-terminal-autohide = true
+quick-terminal-autohide = false
 keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
 
 # Custom keybinding
