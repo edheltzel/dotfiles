@@ -15,18 +15,18 @@ default-root-container-layout = 'tiles'     #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 accordion-padding = 15
 
-automatically-unhide-macos-hidden-apps = false                              #focuses app regardless of visibility
+automatically-unhide-macos-hidden-apps = false #focuses app regardless of visibility
 persistent-workspaces = ["ai", "hq", "code", "design", "comms", "overflow"]
-# exec-on-workspace-change = [
-#   '/bin/bash',
-#   '-c',
-#   'sketchybar --trigger aerospace_workspace_change FOCUS_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
-# ]
-# on-focus-changed = [
-#   'move-mouse window-lazy-center',
-#   'exec-and-forget sketchybar --trigger aerospace_focus_change',
-# ]
-# on-mode-changed = ['exec-and-forget sketchybar --trigger aerospace_mode_change']
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUS_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+on-focus-changed = [
+  'move-mouse window-lazy-center',
+  'exec-and-forget sketchybar --trigger aerospace_focus_change',
+]
+on-mode-changed = ['exec-and-forget sketchybar --trigger aerospace_mode_change']
 
 [gaps]
 inner.horizontal = 5
@@ -86,7 +86,7 @@ if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Anti
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Designing Workspace
-if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape|Snapmaker Orca|Font Book|HueForge"
+if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape|Snapmaker Orca|HueForge"
 run = "move-node-to-workspace design"
 
 [[on-window-detected]] # Comms Workspace
@@ -94,15 +94,15 @@ if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp|B
 run = "move-node-to-workspace comms"
 
 [[on-window-detected]] # Ai Workspace
-if.app-name-regex-substring = 'Claude|OpenCode|Maestro|Superconductor|Superset'
+if.app-name-regex-substring = 'Claude|Maestro|Superconductor|Superset'
 run = "move-node-to-workspace ai"
 
 [[on-window-detected]] # Overflow Workspace
-if.app-name-regex-substring = 'Notes|Reminders|Obsidian|Freeform|Claude|OpenCode'
+if.app-name-regex-substring = 'Notes|Reminders|Obsidian|Freeform|Podcasts'
 run = "move-node-to-workspace overflow"
 
 [[on-window-detected]] # Overflow Workspace with floating windows
-if.app-name-regex-substring = '.*toggl|Cyberduck'
+if.app-name-regex-substring = '.*toggl|Font Book|Cyberduck'
 run = ['layout floating', 'move-node-to-workspace overflow']
 
 # Floating Windows
