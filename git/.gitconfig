@@ -5,7 +5,7 @@
   autocrlf     = input
   quotepath    = false
   safecrlf     = warn
-  pager        = delta
+	pager = hunk pager
 [include]
 	path = ~/.gitconfig.local
 [credential]
@@ -47,7 +47,7 @@
 [apply]
   whitespace = fix
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = hunk 
 ## Git Aliases 
 [alias]
   aa  = add --all
