@@ -36,8 +36,8 @@ macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden
 macos-window-buttons = hidden
-macos-icon = retro
-# macos-hidden = always
+#macos-icon = retro
+macos-hidden = always
 
 # Quick Terminal
 quick-terminal-position = left
