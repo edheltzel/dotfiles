@@ -68,7 +68,8 @@ brew 'csvlens'              # CSV viewer
 brew 'duti'                 # Set default apps for file types
 brew 'eza'                  # Listing files with info (better ls) - Rust
 brew 'fd'                   # Find files - Rust
-brew 'fzf'                  # Fuzzy file finder and filtering - Go
+brew 'fzf'                  # Fuzzy finder - Go
+brew 'television'           # Fuzzy finder - Rust
 brew 'grc'                  # Colorize terminal output
 brew 'hexyl'                # Hex viewer - Rust
 brew 'jq'                   # JSON parser, output and query files

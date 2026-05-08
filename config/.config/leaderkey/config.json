@@ -542,11 +542,6 @@
           "value" : "https://www.tinkercad.com/dashboard"
         },
         {
-          "key" : "a",
-          "type" : "application",
-          "value" : "/Users/ed/Applications/Autodesk Fusion.app"
-        },
-        {
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/BambuStudio.app"
