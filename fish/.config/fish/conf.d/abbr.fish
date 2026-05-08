@@ -16,16 +16,8 @@ if status is-interactive
     abbr --add fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
 
     # Editors/Terminals
-    abbr --add gho ghostty
-    abbr --add wez wezterm
-    abbr --add kit kitten
-    abbr --add zela 'zellij a'
-    abbr --add zels 'zellij -s'
-    abbr --add zelk 'zellij k'
-    abbr --add zelka 'zellij ka'
-    abbr --add zeld 'zellij d'
-    abbr --add zelda 'zellij da'
-    abbr --add zell 'zellij ls'
+    abbr --add gty ghostty
+    abbr --add mux tmux
     abbr --add muxa 'tmux attach'
     abbr --add muxaa 'tmux attach -t'
     abbr --add muxs 'tmux new-session -s'
@@ -33,40 +25,29 @@ if status is-interactive
     abbr --add muxka 'tmux kill-server'
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxd 'tmux detach'
-    # abbr --add fabric fabric-ai
-    abbr --add mux tmux
-    abbr --add zel zellij
-
-    #herdr - tmux for agents
     abbr --add hss 'herdr server stop'
     abbr --add hrd herdr
     abbr --add hdr herdr
 
     # AI Agents + Models
-    abbr --add ag antigravity
-    abbr --add gg gemini
-    abbr --add ggy 'gemini --yolo'
     abbr --add cc claude
-    abbr --add ccp --set-cursor 'claude -p "%"'
-    abbr --add ccc 'claude converse --dangerously-skip-permissions'
     abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add co codex
     abbr --add coo 'codex --yolo'
+    abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add cop --set-cursor 'codex -p "%"'
     abbr --add ppi --set-cursor 'pi -p "%"'
 
-    # vscode
+    # text editors
     abbr --add con 'code -n .'
     abbr --add coo 'code -r .'
-    # zed
-    abbr --add ze zed
-    abbr --add zz 'zed -n .'
-    # neovim 
+    abbr --add zz zed
+    abbr --add zzn 'zed -n .'
     abbr --add vim nvim
     abbr --add nv nvim
     abbr --add v nvim
-    abbr --add nn 'nvim .'
     abbr --add vv 'nvim .'
+    abbr --add obs obsidian
 
     # Utilities
     abbr --add atm fastfetch
@@ -83,11 +64,8 @@ if status is-interactive
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
 
     # Package Managers 
-    abbr --add bi 'brew install '
-    abbr --add bii 'brew info'
     abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
-    abbr --add bic --set-cursor 'brew install % --cask'
     abbr --add cargos 'cargo install --list'
     abbr --add eval 'eval ssh-agent -s; and ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
     abbr --add gems 'gem list'
