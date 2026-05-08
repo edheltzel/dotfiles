@@ -47,25 +47,24 @@ brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 
 # CLI Essentials
 brew 'git'          # Version control
-brew 'jj'           # Jujitsu — a version control system
+brew 'jj'           # Version control
 brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
-brew 'tmux'         # Terminal multiplexer
+brew 'tmux'         # Multiplexer
 brew 'taproom'      # TUI for homebrew
 
 # CLI Basics
 brew 'ast-grep'             # A fast and polyglot tool for code structural search, lint, rewriting at large scale
 brew 'ack'                  # Search tool like grep, but faster
+brew 'assimp'               # Open source library to import various 3d-model-formats in an uniform manner
 brew 'bat'                  # Output highlighting (better cat) - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
 brew 'broot'                # File tree explorer (better tree) - Rust
 brew 'chafa'                # Image to ASCII art converter
-brew 'cmake'                # CMake - cross-platform build system
-brew 'just'                 # Just a command runner
-brew 'assimp'               # Open source library to import various 3d-model-formats in an uniform manner
-brew 'yazi'                 # File manager - Rust
 brew 'coreutils'            # GNU core utilities (those that come with macOS are outdated)
+brew 'cmake'                # CMake - cross-platform build system
+brew 'csvlens'              # CSV viewer
 brew 'duti'                 # Set default apps for file types
 brew 'eza'                  # Listing files with info (better ls) - Rust
 brew 'fd'                   # Find files - Rust
@@ -73,15 +72,16 @@ brew 'fzf'                  # Fuzzy file finder and filtering - Go
 brew 'grc'                  # Colorize terminal output
 brew 'hexyl'                # Hex viewer - Rust
 brew 'jq'                   # JSON parser, output and query files
+brew 'just'                 # better make
 brew 'mas'                  # Mac App Store CLI
-brew 'most'                 # Multi-window scroll pager (better less)
+brew 'most'                 # better less
+brew 'ouch'                 # better zip/unzip - Rust
 brew 'poppler'              # PDF rendering library
-brew 'ripgrep'              # Searching within files (better grep) - Rust
+brew 'ripgrep'              # better grep - Rust
 brew 'rsync'                # Fast incremental file transfer
-brew 'sd'                   # RegEx find and replace (better sed) - Rust
-brew 'sevenzip'             # 7-Zip file archive tool
-brew 'csvlens'              # CSV viewer
-brew 'zoxide'               # Auto-learning navigation (better cd/jump) - Rust --> fish plugin adds to PATH
+brew 'sd'                   # better sed - Rust
+brew 'yazi'                 # File manager - Rust
+brew 'zoxide'               # better cd/jump - Rust
 
 # CLI Image Processing and Compression
 brew 'ffmpegthumbnailer'    # Create thumbnails from videos
@@ -123,7 +123,7 @@ brew 'fortune'       # Print a random, hopefully interesting, adage
 brew 'cowsay'        # Print a cow with a message
 
 #############################################################
-# C/Python 2. Software / Web Development                             #
+# 2. Software / Web Development                             #
 #############################################################
 
 # Development Langs, Compilers, Package Managers and SDKs
@@ -137,7 +137,7 @@ brew 'hugo'                   # Static site generator - Go
 brew 'lua'                    # Lua interpreter
 brew 'luarocks'               # Package manager for Lua
 brew 'mysql'                  # MySQL database engine
-# brew 'node'                 # Node.js -->  Use fnm See packages/
+
 brew 'php'                    # PHP
 brew 'postgresql@14'          # PostgreSQL database engine
 brew 'python'                 # Python 2
@@ -178,7 +178,6 @@ brew 'scc'                # Source code counter - Go
 brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
-brew 'zaquestion/tap/lab' # GitLab CLI
 brew 'atac'               # A simple API client (postman like) in your terminal - Rust
 
 # Network and Security Testing
@@ -192,8 +191,6 @@ brew 'termshark'
 cask 'lulu'               # LuLu - Open source firewall
 
 # Security Utilities
-# brew 'bitwarden-cli'     # Bitwarden CLI - outdated - use https://github.com/bitwarden/cli/
-# note: workaround - manually move the binary to /opt/homebrew/bin/bw
 brew 'clamav'            # Open source virus scanning suite
 brew 'gnupg'             # GNU Privacy Guard
 brew 'lynis'             # Scan system for common security issues
@@ -211,21 +208,20 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 # Creativity
 cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity'             # Affinity.studio
-# cask 'affinity-designer'    # Illustrator replacement
-# cask 'affinity-publisher'   # InDesign replacement
-# cask 'affinity-photo'       # Photoshop replacement
 cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
-cask 'principle'            # Prototyping tool
 
 # 3D Modeling & CAD
 cask 'blender'              # 3D Software
 cask 'openscad'             # 3D CAD Modeller
-cask 'kicad'                # Electronics Design Automation - PCB design
 cask 'freecad'              # 3D CAD - open source
-cask 'autodesk-fusion'      # 3D CAD - freeware
-cask 'bambu-studio'         # 3D Slicer
-cask 'orcaslicer'           # 3D Slicer
+
+# 3D Slicers
+cask 'bambu-studio'         
+cask 'orcaslicer'           
+cask 'snapmaker-orca'
+
+cask 'kicad'                # Electronics Design Automation - PCB design
 
 # Media
 cask 'boom-3d'              # Audio enhancer - paid
@@ -236,31 +232,23 @@ brew 'webp'                 # WebP image format
 cask 'shottr'               # Screenshot and recorder app
 cask 'obs'                  # Screen recorder
 cask 'capcut'               # Video Editing
-# Communication and Chat
-cask 'discord' # Chat app
 
 # Personal Applications
 cask 'bitwarden'            # Password manager
 cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
-cask 'brainfm'              # BrainFM - Music streaming
 
 # Utility Applications
 cask 'alt-tab'                     # Replace for cmd+tab more Windows like alt-tab
 brew 'm-cli'                       # All in one MacOS management CLI app: m help
-cask 'displaylink'                 # DisplayLink drivers
-cask 'betterdisplay'               # Display settings
 cask 'keycastr'                    # Display keystrokes
 cask 'onyx'                        # System maintenance
 cask 'transnomino'                 # A batch rename utility
-cask 'mouseless'                   # Mouse-less app for MacOS
-cask 'openinterminal'              # Finder button, opens directory in terminal
 cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archive and extractor
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
 cask 'tailscale-app'
-brew 'hmans/beans/beans'
 brew 'stats'                       # System stats in menubar
 
 # Keyboard+Mouse Hacks
@@ -269,49 +257,38 @@ cask 'via'                         # Keyboard configuration desktop client
 cask 'vial'                        # Keyboard configuration desktop client
 cask 'bazecor'                     # Keyboard config for Dygma Defy keyboard
 
-# cask 'karabiner-elements'          # Keyboard customization tool - paid
+cask 'karabiner-elements'          # Keyboard customization tool - paid
 cask 'leader-key'                  # Keyboard App launcher
 
 # Menu Bar Hacks
-# brew 'sketchybar'                 # status bar replacement for MacOS - paired with Aerospace
-# cask 'bartender'                    # Menu bar replacement for MacOS - paid for this, waste of money
 brew 'jordanbaird-ice' # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
-# cask 'nikitabobko/tap/aerospace'    # Window Management
+cask 'nikitabobko/tap/aerospace'    # Window Management
 brew 'borders'                      # A window borders manager
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
-cask 'brave-browser'             # Chromium - daily driver
+cask 'helium-browser'
 cask 'zen'                       # Gecko
 cask 'google-chrome'             # For tests
-cask 'vladdoster/formulae/vimari' # Safari extension for Vim motions
 
 # Fonts
-cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
-
 cask 'sf-symbols'
 brew 'font-sf-pro'
-
-cask 'font-inter'                     # Design font
-cask 'font-space-grotesk'             # Design Font 
-
-cask 'font-lilex-nerd-font'           # Dev/Terminal Font
-cask 'font-fira-code-nerd-font'       # Dev/Terminal Font
-cask 'font-jetbrains-mono-nerd-font'  # Dev/Terminal Font
-cask 'font-victor-mono-nerd-font'     # Dev/Terminal Font
+cask 'font-inter'                     
+cask 'font-space-grotesk'             
+cask 'font-lilex-nerd-font'           
+cask 'font-fira-code-nerd-font'       
+cask 'font-victor-mono-nerd-font'     
+cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 
 # Development Apps
 cask 'cyberduck'                      # Mount remote storage locations
-cask 'dbngin'                         # Local MySQL database management
-cask 'devtoys'                        # Dev tools/utilities for Mac
 cask 'local'                          # Local WordPress development
-cask 'wordpresscom-studio'            # Local WordPress development
 
 cask 'obsidian'                       # PKM editor
 cask 'sequel-ace'                     # MySQL database management
-cask 'tableplus'                      # Database management
 cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor
 cask 'zed'                            # Code editor - Rust
