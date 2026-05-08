@@ -316,25 +316,25 @@ cask 'typora'                         # Markdown editor
 cask 'visual-studio-code'             # Code editor
 cask 'zed'                            # Code editor - Rust
 
-# Local LLMs
-# cask 'ollama'
-# brew 'ollama'
-
 # AI tooling and ADEs (AI/Agent Development Environment)
+cask 'ollama'
+brew 'ollama'
+
 cask 'superwhisper'                   # TTS app
-cask 'opencode-desktop'               # desktop client
-cask 'antigravity'
-brew 'gemini-cli'
-cask 'claude'                         # Claude Desktop (chat app)
-cask 'claude-code'                    # Claude Code (agentic CLI/IDE)
+cask 'claude'                         # Claude Desktop
+cask 'claude-code'                    # Claude Code
+cask 'codex'                          # Codex cli
+cask 'codex-app'                      # Codex Desktop 
 brew 'fabric-ai'
 brew 'agent-browser'
 
+brew 'whisper-cpp'
+brew 'sox'
+brew 'socat'
+
 # Terminal emulators
 cask 'ghostty'                        # Zig
-cask 'iterm2'                         # OG terminal 
 cask 'kitty'                          # Python+C
-cask 'warp'                           # Rust
 cask 'wezterm@nightly'                # Rust
 
 #############################################################
@@ -354,11 +354,11 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac App Store Installs
 mas 'Shapr3d', id: 1091675654
-mas 'ColorSlurp', id: 1287239339
-mas 'Icon Slate', id: 439697913
+# mas 'ColorSlurp', id: 1287239339
+# mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
-mas 'Gifski', id: 1351639930
+# mas 'Gifski', id: 1351639930
 mas 'Xcode', id: 497799835
 mas 'Amphetamine', id: 937984704
 # mas 'Qi FM', id: 147969619
