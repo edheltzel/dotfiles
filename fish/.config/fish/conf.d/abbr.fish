@@ -50,12 +50,10 @@ if status is-interactive
     abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add ccc 'claude converse --dangerously-skip-permissions'
     abbr --add ccd 'claude --dangerously-skip-permissions'
-    abbr --add oc opencode
-    abbr --add occ 'opencode --continue'
-    abbr --add ocp 'opencode --agent plan'
     abbr --add co codex
     abbr --add coo 'codex --yolo'
-    abbr --add ma maestro-cli
+    abbr --add cop --set-cursor 'codex -p "%"'
+    abbr --add ppi --set-cursor 'pi -p "%"'
 
     # vscode
     abbr --add con 'code -n .'
