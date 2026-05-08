@@ -176,7 +176,6 @@ brew 'miniserve'          # Static file server
 brew 'mkcert'             # Local HTTPS development
 brew 'scc'                # Source code counter - Go
 brew 'tig'                # Text-mode interface for git
-brew 'difftastic'         # Diff Tool for Git + JJ
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
 brew 'zaquestion/tap/lab' # GitLab CLI
@@ -323,7 +322,7 @@ cask 'zed'                            # Code editor - Rust
 
 # AI tooling and ADEs (AI/Agent Development Environment)
 cask 'superwhisper'                   # TTS app
-# cask 'opencode-desktop'               # desktop client
+cask 'opencode-desktop'               # desktop client
 cask 'antigravity'
 brew 'gemini-cli'
 cask 'claude'                         # Claude Desktop (chat app)

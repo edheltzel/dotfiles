@@ -5,10 +5,10 @@
 @vscode/vsce
 cspell
 easy-sharing
+hunkdiff
 intelephense
 lighthouse
 neovim
 typescript
 typescript-language-server
 wrangler
-mac-cleaner-cli

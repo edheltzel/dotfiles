@@ -42,9 +42,9 @@ preset = 'qwerty'
 [mode.main.binding] # hyper+w+<NUMBER>
 alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
 alt-ctrl-1 = 'workspace code'     # 1 -> dev
-alt-ctrl-2 = 'workspace design'   # 2 -> design
-alt-ctrl-3 = 'workspace comms'    # 3 -> comms
-alt-ctrl-4 = 'workspace ai'       # 4 -> ai tooling
+alt-ctrl-2 = 'workspace ai'       # 2 -> ai tooling
+alt-ctrl-3 = 'workspace design'   # 3 -> design
+alt-ctrl-4 = 'workspace comms'    # 4 -> comms
 alt-ctrl-5 = 'workspace overflow' # 5 -> overflow
 
 # cycle through workspaces (wraps around)
@@ -82,23 +82,23 @@ if.app-name-regex-substring = 'Helium|Zen|Brave|Safari*|Google Chrome|Vivaldi'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Antigravity|Typora'
+if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Obsidian|Typora'
 run = "move-node-to-workspace code"
 
+[[on-window-detected]] # Ai Workspace
+if.app-name-regex-substring = 'Claude|Maestro|Superconductor|Superset'
+run = "move-node-to-workspace ai"
+
 [[on-window-detected]] # Designing Workspace
-if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape|Snapmaker Orca|HueForge"
+if.app-name-regex-substring = ".*Creative|Adobe|Figma|Affinity|Shapr3D|.*Fusion|.*CAD|.*Slicer|.*Studio|.*Orca|AnycubicPhotonWorkshop|Microsoft (?!Teams).*|GIMP|Inkscape|HueForge"
 run = "move-node-to-workspace design"
 
 [[on-window-detected]] # Comms Workspace
 if.app-name-regex-substring = 'Messages|Microsoft Teams|Slack|Discord|WhatsApp|Bazecor|VIA|Vial'
 run = "move-node-to-workspace comms"
 
-[[on-window-detected]] # Ai Workspace
-if.app-name-regex-substring = 'Claude|Maestro|Superconductor|Superset'
-run = "move-node-to-workspace ai"
-
 [[on-window-detected]] # Overflow Workspace
-if.app-name-regex-substring = 'Notes|Reminders|Obsidian|Freeform|Podcasts'
+if.app-name-regex-substring = 'Notes|Reminders|Freeform|Podcasts'
 run = "move-node-to-workspace overflow"
 
 [[on-window-detected]] # Overflow Workspace with floating windows

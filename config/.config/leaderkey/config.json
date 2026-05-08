@@ -810,26 +810,26 @@
         {
           "iconPath" : "2.square.fill",
           "key" : "2",
-          "label" : "DESIGN",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace design"
-        },
-        {
-          "iconPath" : "3.square.fill",
-          "key" : "3",
-          "label" : "COMMS",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace comms"
-        },
-        {
-          "iconPath" : "4.square.fill",
-          "key" : "4",
           "label" : "AI",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace ai"
         },
         {
+          "iconPath" : "3.square.fill",
+          "key" : "3",
+          "label" : "DESIGN",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace design"
+        },
+        {
           "iconPath" : "4.square.fill",
+          "key" : "4",
+          "label" : "COMMS",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace comms"
+        },
+        {
+          "iconPath" : "5.square.fill",
           "key" : "5",
           "label" : "OVERFLOW",
           "type" : "command",
@@ -941,42 +941,42 @@
         {
           "actions" : [
             {
-              "iconPath" : "0.circle.fill",
+              "iconPath" : "0.square.fill",
               "key" : "0",
               "label" : "Move to HQ",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace hq --focus-follows-window"
             },
             {
-              "iconPath" : "1.circle.fill",
+              "iconPath" : "1.square.fill",
               "key" : "1",
               "label" : "Move to CODE",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace code --focus-follows-window"
             },
             {
-              "iconPath" : "2.circle.fill",
+              "iconPath" : "2.square.fill",
               "key" : "2",
-              "label" : "Move to DESIGN",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace design --focus-follows-window"
-            },
-            {
-              "iconPath" : "3.circle.fill",
-              "key" : "3",
-              "label" : "Move to COMMS",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace comms --focus-follows-window"
-            },
-            {
-              "iconPath" : "4.alt.circle.fill",
-              "key" : "4",
               "label" : "Move to AI",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace ai --focus-follows-window"
             },
             {
-              "iconPath" : "4.alt.circle.fill",
+              "iconPath" : "3.square.fill",
+              "key" : "3",
+              "label" : "Move to DESIGN",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace design --focus-follows-window"
+            },
+            {
+              "iconPath" : "4.square.fill",
+              "key" : "4",
+              "label" : "Move to COMMS",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace comms --focus-follows-window"
+            },
+            {
+              "iconPath" : "5.square.fill",
               "key" : "5",
               "label" : "Move to OVERFLOW",
               "type" : "command",
