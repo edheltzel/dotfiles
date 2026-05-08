@@ -236,7 +236,7 @@
             }
           ],
           "iconPath" : "sparkle",
-          "key" : "g",
+          "key" : "G",
           "label" : "Google Gemini",
           "type" : "group"
         },
