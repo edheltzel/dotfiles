@@ -1,14 +1,16 @@
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [[plugin.prepend_fetchers]]
 id = "git"
 url = "*"
 run = "git"
+group = "git"
 
 [[plugin.prepend_fetchers]]
 id = "git"
 url = "*/"
 run = "git"
+group = "git"
 
 [mgr]
 ratio = [2, 2, 4]
