@@ -105,7 +105,7 @@ run = "move-node-to-workspace overflow"
 if.app-name-regex-substring = '.*toggl|Font Book|Cyberduck'
 run = ['layout floating', 'move-node-to-workspace overflow']
 
-# Floating Windows
+# Always Floating Windows
 [[on-window-detected]]
-if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview|superwhisper|Stickies'
+if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview|superwhisper|Stickies|Tuna'
 run = "layout floating"
