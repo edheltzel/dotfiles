@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("aura" "eldritch" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "tokyo-night" "tokyo-night-moon")
+THEMES=("aura" "eldritch" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "tokyo-night" "tokyo-night-moon" "vesper")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -51,6 +51,7 @@ get_ghostty_theme() {
   rose-pine-moon) echo "Rose Pine Moon" ;;
   tokyo-night) echo "TokyoNight" ;;
   tokyo-night-moon) echo "TokyoNight Moon" ;;
+  vesper) echo "Vesper" ;;
   esac
 }
 
@@ -63,6 +64,7 @@ get_kitty_theme() {
   rose-pine-moon) echo "rose-pine-moon.conf" ;;
   tokyo-night) echo "" ;;      # Skip
   tokyo-night-moon) echo "" ;; # Skip
+  vesper) echo "vesper.conf" ;;
   esac
 }
 
@@ -75,6 +77,7 @@ get_wezterm_theme() {
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "Tokyo Night" ;;
   tokyo-night-moon) echo "Tokyo Night Moon" ;;
+  vesper) echo "vesper" ;;
   esac
 }
 
@@ -87,6 +90,7 @@ get_neovim_theme() {
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "tokyonight-night" ;;
   tokyo-night-moon) echo "tokyonight-moon" ;;
+  vesper) echo "vesper" ;;
   esac
 }
 
@@ -99,6 +103,7 @@ get_bat_theme() {
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "tokyonight_night" ;;
   tokyo-night-moon) echo "tokyonight_moon" ;;
+  vesper) echo "vesper" ;; # Custom tmTheme
   esac
 }
 
@@ -111,30 +116,15 @@ get_btop_theme() {
   rose-pine-moon) echo "rose-pine-moon" ;;
   tokyo-night) echo "" ;;      # Skip
   tokyo-night-moon) echo "" ;; # Skip
+  vesper) echo "vesper" ;;     # Custom theme file
   esac
 }
 
-get_omp_palette() {
+get_claude_theme() {
   case "$1" in
-  aura) echo "aura" ;;
-  eldritch) echo "eldritch" ;;
-  rose-pine) echo "rose-pine" ;;
-  rose-pine-dawn) echo "rose-pine-dawn" ;;
-  rose-pine-moon) echo "rose-pine-moon" ;;
-  tokyo-night) echo "tokyo-night" ;;
-  tokyo-night-moon) echo "tokyo-night-moon" ;;
-  esac
-}
-
-get_opencode_theme() {
-  case "$1" in
-  aura) echo "aura" ;;
-  eldritch) echo "eldritch-dark" ;; # Custom theme with darker bg
-  rose-pine) echo "rosepine" ;;
-  rose-pine-dawn) echo "rosepine" ;; # OpenCode only has one rosepine variant
-  rose-pine-moon) echo "rosepine" ;; # OpenCode only has one rosepine variant
-  tokyo-night) echo "tokyonight" ;;
-  tokyo-night-moon) echo "tokyonight" ;; # OpenCode only has one tokyonight variant
+  eldritch) echo "custom:eldritch" ;;
+  vesper) echo "custom:vesper" ;;
+  *) echo "" ;; # Skip — no custom theme JSON authored yet
   esac
 }
 
@@ -203,6 +193,11 @@ update_bat() {
   local bat_theme=$(get_bat_theme "$theme")
   local config_file="$CONFIG/bat/config"
 
+  if [[ -z "$bat_theme" ]]; then
+    warning "bat → skipped (theme not available)"
+    return
+  fi
+
   sed -i '' "s/--theme=\".*\"/--theme=\"$bat_theme\"/" "$config_file"
   success "bat → $bat_theme"
 }
@@ -256,34 +251,32 @@ update_lazygit() {
   success "lazygit → $theme"
 }
 
-update_omp() {
+update_claude() {
   local theme="$1"
-  local omp_palette=$(get_omp_palette "$theme")
-  local config_file="$CONFIG/starship-ish.omp.json"
+  local claude_theme=$(get_claude_theme "$theme")
+  local config_file="$HOME/.claude/settings.json"
 
-  # Use jq for robust JSON manipulation
-  if command -v jq &>/dev/null; then
-    jq --arg palette "$omp_palette" '.palettes.template = $palette' "$config_file" >"$config_file.tmp" &&
-      mv "$config_file.tmp" "$config_file"
-    success "oh-my-posh → $omp_palette palette"
-  else
-    warning "oh-my-posh → skipped (jq not installed)"
-  fi
-}
-
-update_opencode() {
-  local theme="$1"
-  local opencode_theme=$(get_opencode_theme "$theme")
-  local config_file="$HOME/.config/opencode/opencode.jsonc"
-
-  if [[ ! -f "$config_file" ]]; then
-    warning "opencode → skipped (config not found)"
+  if [[ -z "$claude_theme" ]]; then
+    warning "claude → skipped (no theme JSON for $theme)"
     return
   fi
 
-  # Use sed to update the theme value in jsonc (handles comments)
-  sed -i '' "s/\"theme\": \"[^\"]*\"/\"theme\": \"$opencode_theme\"/" "$config_file"
-  success "opencode → $opencode_theme"
+  if [[ ! -e "$config_file" ]]; then
+    warning "claude → skipped (settings.json not found)"
+    return
+  fi
+
+  # Resolve symlinks — BSD sed -i refuses to edit through them
+  local real_path
+  if [[ -L "$config_file" ]]; then
+    real_path=$(readlink "$config_file")
+    [[ "$real_path" != /* ]] && real_path="$(cd "$(dirname "$config_file")" && cd "$(dirname "$real_path")" && pwd)/$(basename "$real_path")"
+  else
+    real_path="$config_file"
+  fi
+
+  sed -i '' "s|\"theme\": \"[^\"]*\"|\"theme\": \"$claude_theme\"|" "$real_path"
+  success "claude → $claude_theme"
 }
 
 reload_ghostty() {
@@ -346,10 +339,7 @@ apply_theme() {
   update_bat "$theme"
   update_btop "$theme"
   update_lazygit "$theme"
-  update_opencode "$theme"
-
-  # Update oh-my-posh (fish function will refresh the prompt)
-  update_omp "$theme"
+  update_claude "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"

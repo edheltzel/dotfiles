@@ -1,0 +1,84 @@
+# Vesper theme
+# https://github.com/datsfilipe/vesper.nvim
+# Warm minimal monochrome dark theme
+[colors]
+ansi = [
+  '#101010',
+  '#FF8080',
+  '#82D9C2',
+  '#FFC799',
+  '#99FFE4',
+  '#FFCFA8',
+  '#99FFE4',
+  '#CCCCCC',
+]
+background = '#101010'
+brights = [
+  '#65737E',
+  '#FF8080',
+  '#82D9C2',
+  '#FFC799',
+  '#99FFE4',
+  '#FFCFA8',
+  '#99FFE4',
+  '#FFFFFF',
+]
+compose_cursor = '#FFC799'
+cursor_bg = '#FF9E64'
+cursor_border = '#FF9E64'
+cursor_fg = '#101010'
+foreground = '#CCCCCC'
+scrollbar_thumb = '#505050'
+selection_bg = '#343434'
+selection_fg = '#CCCCCC'
+split = '#282828'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#101010'
+
+[colors.tab_bar.active_tab]
+bg_color = '#FFCFA8'
+fg_color = '#101010'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#161616'
+fg_color = '#7D7D7D'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#232323'
+fg_color = '#CCCCCC'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#101010'
+fg_color = '#CCCCCC'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#FFCFA8'
+fg_color = '#101010'
+intensity = 'Normal'
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+author = 'datsfilipe (port: NEO.ED dotfiles)'
+name = 'vesper'
+origin_url = 'https://github.com/datsfilipe/vesper.nvim'

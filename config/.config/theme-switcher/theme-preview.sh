@@ -96,6 +96,18 @@ show_colors() {
       echo -e "  \033[38;2;255;199;119m███\033[0m yellow"
       echo -e "  \033[38;2;255;150;108m███\033[0m orange"
       ;;
+    vesper)
+      echo -e "\033[38;2;255;207;168m████\033[0m Vesper"
+      echo ""
+      echo -e "  \033[38;2;16;16;16m███\033[0m bg"
+      echo -e "  \033[38;2;204;204;204m███\033[0m fg"
+      echo -e "  \033[38;2;125;125;125m███\033[0m comment"
+      echo -e "  \033[38;2;255;128;128m███\033[0m red"
+      echo -e "  \033[38;2;255;199;153m███\033[0m yellow"
+      echo -e "  \033[38;2;255;207;168m███\033[0m orange"
+      echo -e "  \033[38;2;130;217;194m███\033[0m green"
+      echo -e "  \033[38;2;153;255;228m███\033[0m cyan"
+      ;;
     *)
       echo "Unknown theme: $theme"
       return 1
@@ -115,24 +127,39 @@ show_support() {
   echo "  ✓ ghostty"
   echo "  ✓ wezterm"
   echo "  ✓ neovim"
-  echo "  ✓ bat"
   echo "  ✓ lazygit"
-  echo "  ✓ oh-my-posh"
-  echo "  ✓ opencode"
-  
+
   # Conditional support
   case "$theme" in
     aura)
+      echo "  ✓ bat"
       echo "  ⚡ kitty (eldritch fallback)"
       echo "  ⚡ btop (eldritch fallback)"
       ;;
     tokyo-night|tokyo-night-moon)
+      echo "  ✓ bat"
       echo "  ✗ kitty (not available)"
       echo "  ✗ btop (not available)"
       ;;
+    vesper)
+      echo "  ✓ bat (custom)"
+      echo "  ✓ kitty (custom)"
+      echo "  ✓ btop (custom)"
+      ;;
     *)
+      echo "  ✓ bat"
       echo "  ✓ kitty"
       echo "  ✓ btop"
+      ;;
+  esac
+
+  # Claude Code support (only themes with custom theme JSON)
+  case "$theme" in
+    eldritch|vesper)
+      echo "  ✓ claude"
+      ;;
+    *)
+      echo "  ✗ claude (no theme JSON)"
       ;;
   esac
 }
@@ -150,6 +177,7 @@ if [ -z "$theme" ]; then
   echo "  - rose-pine-moon"
   echo "  - tokyo-night"
   echo "  - tokyo-night-moon"
+  echo "  - vesper"
   echo ""
   exit 0
 fi

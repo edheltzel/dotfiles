@@ -16,11 +16,4 @@ function theme --description 'Switch color theme across all apps'
         # Pass argument(s) to script
         $script $argv[1]
     end
-
-    # Re-initialize oh-my-posh with new palette if it's the active prompt
-    if test "$FISH_PROMPT" = "oh-my-posh"
-        oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
-        echo ""
-        echo -e "\033[0;32m✓\033[0m Prompt refreshed with new theme"
-    end
 end
