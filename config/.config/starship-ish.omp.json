@@ -165,9 +165,32 @@
         "success": "#C3E88D",
         "white": "#C8D3F5",
         "yellow": "#FFC777"
+      },
+      "vesper": {
+        "blue": "#99FFE4",
+        "branch": "#FFCFA8",
+        "cyan": "#99FFE4",
+        "error": "#FF8080",
+        "git_added": "#82D9C2",
+        "git_ahead": "#CCCCCC",
+        "git_deleted": "#FF8080",
+        "git_modified": "#FFC799",
+        "git_staged": "#82D9C2",
+        "git_untracked": "#99FFE4",
+        "green": "#82D9C2",
+        "magenta": "#FFCFA8",
+        "muted": "#7D7D7D",
+        "orange": "#FFCFA8",
+        "path": "#99FFE4",
+        "pink": "#FFCFA8",
+        "purple": "#FFCFA8",
+        "red": "#FF8080",
+        "success": "#82D9C2",
+        "white": "#CCCCCC",
+        "yellow": "#FFC799"
       }
     },
-    "template": "eldritch"
+    "template": "vesper"
   },
   "transient_prompt": {
     "template": "❯ ",

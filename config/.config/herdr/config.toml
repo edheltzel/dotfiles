@@ -7,28 +7,47 @@ enabled = true
 enabled = true
 delivery = "terminal"
 
+[keys]
+prefix = "ctrl+alt+,"
+detach = "d"
+fullscreen = "f"
+resize_mode = "r"
+toggle_sidebar = "b"
+split_vertical = "\\"
+split_horizontal = "-"
+new_tab = "t"
+rename_tab = "e"
+new_workspace = "n"
+close_workspace = "shift+w"
+rename_workspace = "shift+e"
+next_tab = "ctrl+alt+l"
+previous_tab = "ctrl+alt+h"
+next_workspace = "ctrl+alt+u"
+previous_workspace = "ctrl+alt+i"
+close_pane = "x"
+
 # [theme]
-name = "vesper"
+# name = "vesper"
 
 # Eldritch — Lovecraftian dark theme
 # Palette source: https://github.com/eldritch-theme
-# [theme.custom]
-# accent = "#a48cf2"      # Lovecraft Purple
-# panel_bg = "#212337"    # Sunken Depths Grey
-# surface0 = "#323449"    # Shallow Depths Grey (selection)
-# surface1 = "#3a3d57"    # hover/active
-# surface_dim = "#2a2d42" # active workspace bg
-# overlay0 = "#565a7e"    # muted text
-# overlay1 = "#7081d0"    # The Old One Purple
-# text = "#ebfafa"        # Lighthouse White
-# subtext0 = "#a8b0c9"    # dimmed labels
-# mauve = "#f265b5"       # Pustule Pink (git branches)
-# green = "#37f499"       # Great Old One Green
-# yellow = "#f1fc79"      # Gold of Yuggoth
-# red = "#f16c75"         # R'lyeh Red
-# blue = "#04d1f9"        # Watery Tomb Blue
-# teal = "#2bd4d4"        # derived teal
-# peach = "#f7c67f"       # Dreaming Orange
+[theme.custom]
+accent = "#a48cf2"      # Lovecraft Purple
+panel_bg = "#212337"    # Sunken Depths Grey
+surface0 = "#323449"    # Shallow Depths Grey (selection)
+surface1 = "#3a3d57"    # hover/active
+surface_dim = "#2a2d42" # active workspace bg
+overlay0 = "#565a7e"    # muted text
+overlay1 = "#7081d0"    # The Old One Purple
+text = "#ebfafa"        # Lighthouse White
+subtext0 = "#a8b0c9"    # dimmed labels
+mauve = "#f265b5"       # Pustule Pink (git branches)
+green = "#37f499"       # Great Old One Green
+yellow = "#f1fc79"      # Gold of Yuggoth
+red = "#f16c75"         # R'lyeh Red
+blue = "#04d1f9"        # Watery Tomb Blue
+teal = "#2bd4d4"        # derived teal
+peach = "#f7c67f"       # Dreaming Orange
 
 # Rose Pine Dawn — soft pastel light theme
 # Palette source: https://rosepinetheme.com (Dawn variant)
@@ -49,29 +68,3 @@ name = "vesper"
 # blue = "#56949f"        # Foam
 # teal = "#56949f"        # Foam (Rose Pine's cyan)
 # peach = "#d7827e"       # Rose (warm peach)
-
-[keys]
-prefix = "ctrl+alt+,"
-detach = "d"
-fullscreen = "f"
-resize_mode = "r"
-toggle_sidebar = "b"
-split_vertical = "\\"
-split_horizontal = "-"
-new_tab = "t"
-rename_tab = "e"
-new_workspace = "n"
-close_workspace = "shift+w"
-rename_workspace = "shift+e"
-next_tab = "ctrl+alt+l"
-previous_tab = "ctrl+alt+h"
-next_workspace = "ctrl+alt+j"
-previous_workspace = "ctrl+alt+k"
-close_pane = "x"
-# focus_pane_left = "shift+alt+h"
-# focus_pane_up = "shift+alt+k"
-# focus_pane_down = "shift+alt+j"
-# focus_pane_right = "shift+alt+l"
-
-[theme]
-name = "vesper"
