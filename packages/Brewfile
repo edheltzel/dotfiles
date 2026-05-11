@@ -58,16 +58,15 @@ brew 'taproom'      # TUI for homebrew
 brew 'ast-grep'             # A fast and polyglot tool for code structural search, lint, rewriting at large scale
 brew 'ack'                  # Search tool like grep, but faster
 brew 'assimp'               # Open source library to import various 3d-model-formats in an uniform manner
-brew 'bat'                  # Output highlighting (better cat) - Rust
+brew 'bat'                  # better cat - Rust
 brew 'brew-cask-completion' # Fish shell completion for brew cask
-brew 'broot'                # File tree explorer (better tree) - Rust
 brew 'chafa'                # Image to ASCII art converter
 brew 'coreutils'            # GNU core utilities (those that come with macOS are outdated)
 brew 'cmake'                # CMake - cross-platform build system
 brew 'csvlens'              # CSV viewer
 brew 'duti'                 # Set default apps for file types
-brew 'eza'                  # Listing files with info (better ls) - Rust
-brew 'fd'                   # Find files - Rust
+brew 'eza'                  # better ls - Rust
+brew 'fd'                   # better find - Rust
 brew 'fzf'                  # Fuzzy finder - Go
 brew 'television'           # Fuzzy finder - Rust
 brew 'grc'                  # Colorize terminal output
@@ -97,31 +96,26 @@ brew 'glow'                 # Render Markdown on the CLI
 brew 'vhs'                  # Write terminal GIFs as code
 
 # CLI Monitoring and Performance Apps
-brew 'bmon'         # BC/Python and width utilization monitor
-brew 'btop'         # Resource monitor
-brew 'ctop'         # Container metrics and monitoring - Go
-brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
-brew 'duf'          # Get info on mounted disks (better df) - Go
-brew 'procs'        # Advanced process viewer (better ps) - Rust
+brew 'btop'         # better top
+brew 'ctop'         # Container metrics/monitoring - Go
+brew 'dua-cli'      # better du
+brew 'duf'          # better df - Go
+brew 'procs'        # better ps - Rust
 
 # CLI Productivity Apps
 brew 'rclone'       # Manage cloud storage
-brew 'kondo'        # Clean up old files and directories - Rust
 brew 'mole'         # Deep clean and optimize
-brew 'portal'       # file transfer utility - Go
 
 # CLI Development Suits
 brew 'lazydocker' # Full Docker management app - Go
 brew 'lazygit' # TUI for git - Go
 
 # CLI Docs and Cheat-sheets
-brew 'tealdeer' # Read cheat sheets (better tldr) - Rust
+brew 'tealdeer' # better tldr - Rust
 
 # CLI Misc
 brew 'figlet'        # Output text as big ASCII art text
 brew 'fastfetch'     # Show system data and distro info
-brew 'fortune'       # Print a random, hopefully interesting, adage
-brew 'cowsay'        # Print a cow with a message
 
 #############################################################
 # 2. Software / Web Development                             #
@@ -134,7 +128,6 @@ brew 'deno'                   # Deno JavaScript/TypeScript runtime
 brew 'lucapette/tap/fakedata' # Generate fake data - Go
 brew 'fnm'                    # Switching Node versions
 brew 'go'                     # Compiler for Go Lang
-brew 'hugo'                   # Static site generator - Go
 brew 'lua'                    # Lua interpreter
 brew 'luarocks'               # Package manager for Lua
 brew 'mysql'                  # MySQL database engine
@@ -158,7 +151,6 @@ brew 'zig'                    # Zig language
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
 brew 'httpie'             # Command line HTTP client
-# brew 'podman'             # Containers
 brew 'orbstack'           # Docker image viewer
 brew 'docker'
 brew 'container'          # Container CLI by Apple
@@ -218,8 +210,8 @@ cask 'openscad'             # 3D CAD Modeller
 cask 'freecad'              # 3D CAD - open source
 
 # 3D Slicers
-cask 'bambu-studio'         
-cask 'orcaslicer'           
+cask 'bambu-studio'
+cask 'orcaslicer'
 cask 'snapmaker-orca'
 
 cask 'kicad'                # Electronics Design Automation - PCB design
