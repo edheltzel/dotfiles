@@ -5,6 +5,7 @@
 @mermaid-js/mermaid-cli
 @vscode/vsce
 cspell
+designlang
 hunkdiff
 neovim
 portless
