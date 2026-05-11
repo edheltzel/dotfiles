@@ -78,15 +78,15 @@ enter = 'mode main'
 
 ### Dedicated Workspaces of Apps ###
 [[on-window-detected]] # HQ Workspace
-if.app-name-regex-substring = 'Helium|Zen|Brave|Safari*|Google Chrome|Vivaldi'
+if.app-name-regex-substring = 'Helium|Zen|Safari*|Google Chrome'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Zed|iTerm|kitty|WezTerm|Warp*|Ghostty|Obsidian|Typora'
+if.app-name-regex-substring = '.*Code|Zed|Ghostty|Obsidian|Typora|Text*'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Ai Workspace
-if.app-name-regex-substring = 'Claude|Maestro|Superconductor|Superset'
+if.app-name-regex-substring = 'Claude|Codex|Maestro|Superconductor|Superset'
 run = "move-node-to-workspace ai"
 
 [[on-window-detected]] # Designing Workspace
