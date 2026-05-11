@@ -2,8 +2,8 @@ initial-window = false
 
 alpha-blending = linear-corrected
 
-config-file = "colors/eldritch"
-#theme = Rose Pine Dawn
+config-file = "themes/eldritch"
+#theme = Vesper
 
 term = xterm-256color
 
@@ -37,11 +37,11 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden
 macos-window-buttons = hidden
 macos-icon = retro
-macos-hidden = always
+# macos-hidden = always
 
 # Quick Terminal
 quick-terminal-position = left
-quick-terminal-size = 100%,100% 
+# quick-terminal-size = 75%
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = true
 keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
