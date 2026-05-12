@@ -27,7 +27,7 @@ if status is-interactive
     abbr --add muxd 'tmux detach'
     abbr --add hss 'herdr server stop'
     abbr --add hrd herdr
-    abbr --add hrds 'herdr --remote "%"'
+    abbr --add hrds --set-cursor 'herdr --remote %'
 
     # AI Agents + Models
     abbr --add cc claude
