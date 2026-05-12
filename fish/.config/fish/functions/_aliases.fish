@@ -6,8 +6,10 @@ alias fgrep "fgrep --color=auto"
 alias gcma commit-all
 alias gcm commit
 alias gs state
-# Agent
+
 alias fabric fabric-ai
+alias j just
+
 # Confirm before overwriting
 alias cp "cp -Ri"
 alias mv "mv -i"

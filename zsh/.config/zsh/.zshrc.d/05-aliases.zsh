@@ -35,7 +35,7 @@ alias ltd='eza -TaD --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 alias fld='cd "/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱"'
 alias fabric="fabric-ai"
 alias mux="tmux"
-alias zel="zellij"
+alias j ="just"
 
 # Network
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
