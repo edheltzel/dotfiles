@@ -13,7 +13,7 @@ run = "git"
 group = "git"
 
 [mgr]
-ratio = [2, 2, 4]
+ratio = [1, 2, 4]
 sort_by = "alphabetical"
 sort_sensitive = false
 sort_reverse = false
@@ -25,9 +25,10 @@ show_symlink = true
 scrolloff = 5
 
 [preview]
+wrap = "yes"
+max_width = 1500
+max_height = 1500
 tab_size = 2
-max_width = 600
-max_height = 900
 cache_dir = ""
 image_filter = "triangle"
 image_quality = 75
