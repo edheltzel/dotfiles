@@ -1,11 +1,10 @@
 onboarding = false
 
-[ui.sound]
-enabled = true
-
-[ui.toast]
-enabled = true
-delivery = "terminal"
+[ui]
+show_agent_labels_on_pane_borders = true
+sound.enabled = true
+toast.enabled = true
+toast.delivery = "terminal"
 
 [keys]
 prefix = "ctrl+alt+,"
@@ -15,6 +14,8 @@ resize_mode = "r"
 toggle_sidebar = "b"
 split_vertical = "\\"
 split_horizontal = "-"
+close_pane = "x"
+rename_pane = "p"
 new_tab = "t"
 rename_tab = "e"
 new_workspace = "n"
@@ -24,13 +25,14 @@ next_tab = "ctrl+alt+l"
 previous_tab = "ctrl+alt+h"
 next_workspace = "ctrl+alt+u"
 previous_workspace = "ctrl+alt+i"
-close_pane = "x"
+open_notification_target = "ctrl+alt+n"
+previous_agent = "ctrl+alt+j"
+next_agent = "ctrl+alt+k"
 
 # [theme]
 # name = "vesper"
 
 # Eldritch — Lovecraftian dark theme
-# Palette source: https://github.com/eldritch-theme
 [theme.custom]
 accent = "#a48cf2"      # Lovecraft Purple
 panel_bg = "#212337"    # Sunken Depths Grey
@@ -48,23 +50,3 @@ red = "#f16c75"         # R'lyeh Red
 blue = "#04d1f9"        # Watery Tomb Blue
 teal = "#2bd4d4"        # derived teal
 peach = "#f7c67f"       # Dreaming Orange
-
-# Rose Pine Dawn — soft pastel light theme
-# Palette source: https://rosepinetheme.com (Dawn variant)
-# [theme.custom]
-# accent = "#907aa9"      # Iris (signature purple)
-# panel_bg = "#faf4ed"    # Base (cream background)
-# surface0 = "#dfdad9"    # Highlight Med (selection)
-# surface1 = "#cecacd"    # Highlight High (hover/active)
-# surface_dim = "#f4ede8" # Highlight Low (active workspace bg)
-# overlay0 = "#9893a5"    # Muted (muted text)
-# overlay1 = "#286983"    # Pine (deeper blue-green accent)
-# text = "#575279"        # Text (main text)
-# subtext0 = "#797593"    # Subtle (dimmed labels)
-# mauve = "#907aa9"       # Iris (git branches)
-# green = "#286983"       # Pine
-# yellow = "#ea9d34"      # Gold
-# red = "#b4637a"         # Love
-# blue = "#56949f"        # Foam
-# teal = "#56949f"        # Foam (Rose Pine's cyan)
-# peach = "#d7827e"       # Rose (warm peach)
