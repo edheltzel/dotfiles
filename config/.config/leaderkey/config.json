@@ -17,122 +17,6 @@
             {
               "key" : "a",
               "type" : "application",
-              "value" : "/Users/ed/Applications/Autodesk Fusion.app"
-            },
-            {
-              "key" : "b",
-              "type" : "application",
-              "value" : "/Applications/BambuStudio.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/FreeCAD.app"
-            },
-            {
-              "key" : "m",
-              "type" : "application",
-              "value" : "/Applications/MeshLab2025.07.app"
-            },
-            {
-              "key" : "o",
-              "type" : "application",
-              "value" : "/Applications/OrcaSlicer.app"
-            },
-            {
-              "iconPath" : "cube.fill",
-              "key" : "O",
-              "label" : "Onshape",
-              "type" : "url",
-              "value" : "https://cad.onshape.com/signin"
-            },
-            {
-              "key" : "s",
-              "type" : "application",
-              "value" : "/Applications/Shapr3D.app"
-            },
-            {
-              "key" : "S",
-              "type" : "application",
-              "value" : "/Applications/OpenSCAD-2021.01.app"
-            },
-            {
-              "key" : "x",
-              "type" : "application",
-              "value" : "/Applications/xTool Studio.app"
-            }
-          ],
-          "iconPath" : "view.3d",
-          "key" : "3",
-          "label" : "Print in 3D",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "c",
-              "type" : "application",
-              "value" : "/Applications/Claude.app"
-            },
-            {
-              "key" : "m",
-              "type" : "application",
-              "value" : "/Applications/Maestro.app"
-            },
-            {
-              "key" : "s",
-              "type" : "application",
-              "value" : "/Applications/Superconductor.app"
-            }
-          ],
-          "iconPath" : "sparkles",
-          "key" : "a",
-          "label" : "AI tooling 🤖",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "b",
-              "type" : "application",
-              "value" : "/Applications/Brave Browser.app"
-            },
-            {
-              "key" : "c",
-              "type" : "application",
-              "value" : "/Applications/Google Chrome.app"
-            },
-            {
-              "key" : "h",
-              "type" : "application",
-              "value" : "/Applications/Helium.app"
-            },
-            {
-              "key" : "s",
-              "type" : "application",
-              "value" : "/Applications/Safari.app"
-            },
-            {
-              "key" : "v",
-              "type" : "application",
-              "value" : "/Applications/Vivaldi.app"
-            },
-            {
-              "key" : "z",
-              "type" : "application",
-              "value" : "/Applications/Zen.app"
-            }
-          ],
-          "iconPath" : "safari.fill",
-          "key" : "b",
-          "label" : "Browsers",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "a",
-              "type" : "application",
               "value" : "/Applications/Affinity.app"
             },
             {
@@ -154,90 +38,6 @@
           "iconPath" : "theatermask.and.paintbrush.fill",
           "key" : "d",
           "label" : "Design Tools",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "a",
-              "type" : "application",
-              "value" : "/Applications/Antigravity.app"
-            },
-            {
-              "key" : "c",
-              "type" : "application",
-              "value" : "/Applications/Visual Studio Code.app"
-            },
-            {
-              "key" : "e",
-              "type" : "application",
-              "value" : "/Applications/Zed.app"
-            },
-            {
-              "key" : "g",
-              "type" : "application",
-              "value" : "/Applications/Ghostty.app"
-            },
-            {
-              "key" : "k",
-              "type" : "application",
-              "value" : "/Applications/kitty.app"
-            },
-            {
-              "key" : "m",
-              "type" : "application",
-              "value" : "/Applications/Typora.app"
-            },
-            {
-              "iconPath" : "apple.terminal.fill",
-              "key" : "v",
-              "label" : "Neovim ✨",
-              "type" : "command",
-              "value" : "open -na WezTerm --args start -- nvim"
-            },
-            {
-              "key" : "w",
-              "type" : "application",
-              "value" : "/Applications/WezTerm.app"
-            },
-            {
-              "key" : "W",
-              "type" : "application",
-              "value" : "/Applications/Warp.app"
-            }
-          ],
-          "iconPath" : "apple.terminal.on.rectangle",
-          "key" : "e",
-          "label" : "Editors",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "a",
-              "label" : "🤖 Ai Studio",
-              "type" : "url",
-              "value" : "https://aistudio.google.com/apps"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "g",
-              "label" : "🤖 Gemini",
-              "type" : "url",
-              "value" : "https://gemini.google.com/app"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "n",
-              "label" : "🤖 NotebookLM",
-              "type" : "url",
-              "value" : "https://notebooklm.google.com/"
-            }
-          ],
-          "iconPath" : "sparkle",
-          "key" : "G",
-          "label" : "Google Gemini",
           "type" : "group"
         },
         {
@@ -301,9 +101,22 @@
           "type" : "group"
         },
         {
+          "actions" : [
+            {
+              "key" : "m",
+              "type" : "application",
+              "value" : "/System/Applications/Messages.app"
+            },
+            {
+              "key" : "t",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Teams.app"
+            }
+          ],
+          "iconPath" : "ellipsis.message.fill",
           "key" : "m",
-          "type" : "application",
-          "value" : "/System/Applications/Messages.app"
+          "label" : "Messages 💬",
+          "type" : "group"
         },
         {
           "key" : "N",
@@ -318,14 +131,31 @@
           "value" : "raycast://extensions/raycast/raycast-notes/create-note"
         },
         {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/Obsidian.app"
-        },
-        {
           "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "music.note.list",
+              "key" : "m",
+              "label" : "YouTube Music",
+              "type" : "url",
+              "value" : "https://music.youtube.com"
+            },
+            {
+              "iconPath" : "video.fill",
+              "key" : "y",
+              "label" : "YouTube",
+              "type" : "url",
+              "value" : "https://youtube.com"
+            }
+          ],
+          "iconPath" : "music.note.list",
+          "key" : "s",
+          "label" : "Music 🎧",
+          "type" : "group"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -336,23 +166,29 @@
     {
       "actions" : [
         {
-          "iconPath" : "music.note.list",
-          "key" : "m",
-          "label" : "YouTube Music",
-          "type" : "url",
-          "value" : "https://music.youtube.com"
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Google Chrome.app"
         },
         {
-          "iconPath" : "video.fill",
-          "key" : "y",
-          "label" : "YouTube",
-          "type" : "url",
-          "value" : "https://youtube.com"
+          "key" : "h",
+          "type" : "application",
+          "value" : "/Applications/Helium.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Safari.app"
+        },
+        {
+          "key" : "z",
+          "type" : "application",
+          "value" : "/Applications/Zen.app"
         }
       ],
-      "iconPath" : "music.note.list",
-      "key" : "s",
-      "label" : "Music 🎧",
+      "iconPath" : "safari.fill",
+      "key" : "b",
+      "label" : "Browsers",
       "type" : "group"
     },
     {
@@ -440,6 +276,46 @@
     {
       "actions" : [
         {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Visual Studio Code.app"
+        },
+        {
+          "key" : "E",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Excel.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Applications/Typora.app"
+        },
+        {
+          "key" : "P",
+          "type" : "application",
+          "value" : "/Applications/Microsoft PowerPoint.app"
+        },
+        {
+          "iconPath" : "apple.terminal.fill",
+          "key" : "v",
+          "label" : "Neovim ✨",
+          "type" : "command",
+          "value" : "open -na Ghostty --args -e nvim"
+        },
+        {
+          "key" : "W",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Word.app"
+        }
+      ],
+      "iconPath" : "apple.terminal.on.rectangle",
+      "key" : "e",
+      "label" : "Editors",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/Bazecor.app"
@@ -495,52 +371,85 @@
     {
       "actions" : [
         {
-          "key" : "e",
+          "key" : "c",
+          "label" : "Claude Desktop",
           "type" : "application",
-          "value" : "/Applications/Microsoft Excel.app"
+          "value" : "/Applications/Claude.app"
         },
         {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Outlook.app"
+          "actions" : [
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "a",
+              "label" : "🤖 Ai Studio",
+              "type" : "url",
+              "value" : "https://aistudio.google.com/apps"
+            },
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "g",
+              "label" : "🤖 Gemini",
+              "type" : "url",
+              "value" : "https://gemini.google.com/app"
+            },
+            {
+              "iconPath" : "questionmark.key.filled",
+              "key" : "n",
+              "label" : "🤖 NotebookLM",
+              "type" : "url",
+              "value" : "https://notebooklm.google.com/"
+            }
+          ],
+          "iconPath" : "sparkle",
+          "key" : "g",
+          "label" : "Gemini ❇️",
+          "type" : "group"
         },
         {
-          "key" : "p",
-          "type" : "application",
-          "value" : "/Applications/Microsoft PowerPoint.app"
-        },
-        {
+          "iconPath" : "/Applications/Superset.app",
           "key" : "t",
           "type" : "application",
-          "value" : "/Applications/Microsoft Teams.app"
+          "value" : "/Applications/Superset.app"
         },
         {
-          "key" : "w",
+          "key" : "m",
           "type" : "application",
-          "value" : "/Applications/Microsoft Word.app"
+          "value" : "/Applications/Maestro.app"
+        },
+        {
+          "iconPath" : "/Applications/Superconductor.app",
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Superconductor.app"
         }
       ],
-      "iconPath" : "window.ceiling.closed",
-      "key" : "m",
-      "label" : "Microsoft",
+      "iconPath" : "sparkles",
+      "key" : "l",
+      "label" : "LLM AI 🤖",
       "type" : "group"
     },
     {
       "actions" : [
         {
-          "iconPath" : "cube.fill",
-          "key" : "O",
-          "label" : "Onshape",
+          "iconPath" : "calendar.badge.checkmark",
+          "key" : "d",
+          "label" : "Go to Daily Note",
           "type" : "url",
-          "value" : "https://cad.onshape.com/signin"
+          "value" : "obsidian://daily"
         },
         {
-          "iconPath" : "cube.fill",
-          "key" : "T",
-          "label" : "Tinkercad",
-          "type" : "url",
-          "value" : "https://www.tinkercad.com/dashboard"
-        },
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/Obsidian.app"
+        }
+      ],
+      "iconPath" : "/Applications/Obsidian Web Clipper.app",
+      "key" : "o",
+      "label" : "Obsidian ⌘",
+      "type" : "group"
+    },
+    {
+      "actions" : [
         {
           "key" : "b",
           "type" : "application",
@@ -562,6 +471,13 @@
           "value" : "/Applications/MeshLab2025.07.app"
         },
         {
+          "iconPath" : "cube.fill",
+          "key" : "O",
+          "label" : "Onshape",
+          "type" : "url",
+          "value" : "https://cad.onshape.com/signin"
+        },
+        {
           "key" : "o",
           "type" : "application",
           "value" : "/Applications/OrcaSlicer.app"
@@ -570,6 +486,13 @@
           "key" : "s",
           "type" : "application",
           "value" : "/Applications/Shapr3D.app"
+        },
+        {
+          "iconPath" : "cube.fill",
+          "key" : "T",
+          "label" : "Tinkercad",
+          "type" : "url",
+          "value" : "https://www.tinkercad.com/dashboard"
         },
         {
           "key" : "u",
@@ -592,21 +515,14 @@
         {
           "iconPath" : "checkmark.rectangle.stack.fill",
           "key" : "-",
-          "label" : "Add GTask",
+          "label" : "GTask",
           "type" : "url",
           "value" : "raycast://extensions/elliotdes/google-tasks/create-task"
         },
         {
           "iconPath" : "checkmark.rectangle.stack.fill",
-          "key" : "v",
-          "label" : "View GTask",
-          "type" : "url",
-          "value" : "raycast://extensions/elliotdes/google-tasks/view-lists"
-        },
-        {
-          "iconPath" : "checkmark.rectangle.stack.fill",
           "key" : "=",
-          "label" : "Add Reminder",
+          "label" : "Reminder",
           "type" : "url",
           "value" : "raycast://extensions/raycast/apple-reminders/create-reminder"
         },
@@ -796,6 +712,55 @@
     {
       "actions" : [
         {
+          "iconPath" : "camera.metering.spot",
+          "key" : "a",
+          "label" : "Capture Area+Pin",
+          "type" : "url",
+          "value" : "shottr://grab/area?them=save,pin"
+        },
+        {
+          "iconPath" : "5.arrow.trianglehead.clockwise",
+          "key" : "d",
+          "label" : "Delay by 5s",
+          "type" : "url",
+          "value" : "shottr://grab/delayed=5?then=save,edit"
+        },
+        {
+          "iconPath" : "camera.metering.matrix",
+          "key" : "f",
+          "label" : "Fullscreen ",
+          "type" : "url",
+          "value" : "shottr://grab/fullscreen"
+        },
+        {
+          "iconPath" : "camera.metering.multispot",
+          "key" : "s",
+          "label" : "Scrolling Capture",
+          "type" : "url",
+          "value" : "shottr:/grab/scrolling"
+        },
+        {
+          "iconPath" : "camera.metering.center.weighted.average",
+          "key" : "w",
+          "label" : "Capture Window+Pin",
+          "type" : "url",
+          "value" : "shottr:/grab/window?then=save,pin"
+        }
+      ],
+      "iconPath" : "camera.viewfinder",
+      "key" : "s",
+      "label" : "Screenshots",
+      "type" : "group"
+    },
+    {
+      "iconPath" : "list.clipboard.fill",
+      "key" : "v",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
+    },
+    {
+      "actions" : [
+        {
           "iconPath" : "0.square.fill",
           "key" : "0",
           "label" : "HQ",
@@ -812,26 +777,26 @@
         {
           "iconPath" : "2.square.fill",
           "key" : "2",
-          "label" : "AI",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace ai"
-        },
-        {
-          "iconPath" : "3.square.fill",
-          "key" : "3",
           "label" : "DESIGN",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace design"
         },
         {
-          "iconPath" : "4.square.fill",
-          "key" : "4",
+          "iconPath" : "3.square.fill",
+          "key" : "3",
           "label" : "COMMS",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace comms"
         },
         {
-          "iconPath" : "5.square.fill",
+          "iconPath" : "4.square.fill",
+          "key" : "4",
+          "label" : "AI",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace ai"
+        },
+        {
+          "iconPath" : "4.square.fill",
           "key" : "5",
           "label" : "OVERFLOW",
           "type" : "command",
@@ -943,49 +908,42 @@
         {
           "actions" : [
             {
-              "iconPath" : "uiwindow.split.2x1",
-              "key" : "m",
-              "label" : "Move Mode",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace mode move"
-            },
-            {
-              "iconPath" : "0.square.fill",
+              "iconPath" : "0.circle.fill",
               "key" : "0",
               "label" : "Move to HQ",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace hq --focus-follows-window"
             },
             {
-              "iconPath" : "1.square.fill",
+              "iconPath" : "1.circle.fill",
               "key" : "1",
               "label" : "Move to CODE",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace code --focus-follows-window"
             },
             {
-              "iconPath" : "2.square.fill",
+              "iconPath" : "2.circle.fill",
               "key" : "2",
-              "label" : "Move to AI",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace ai --focus-follows-window"
-            },
-            {
-              "iconPath" : "3.square.fill",
-              "key" : "3",
               "label" : "Move to DESIGN",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace design --focus-follows-window"
             },
             {
-              "iconPath" : "4.square.fill",
-              "key" : "4",
+              "iconPath" : "3.circle.fill",
+              "key" : "3",
               "label" : "Move to COMMS",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace comms --focus-follows-window"
             },
             {
-              "iconPath" : "5.square.fill",
+              "iconPath" : "4.alt.circle.fill",
+              "key" : "4",
+              "label" : "Move to AI",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace ai --focus-follows-window"
+            },
+            {
+              "iconPath" : "4.alt.circle.fill",
               "key" : "5",
               "label" : "Move to OVERFLOW",
               "type" : "command",
@@ -1028,9 +986,16 @@
             }
           ],
           "iconPath" : "appwindow.swipe.rectangle",
-          "key" : "m",
+          "key" : "M",
           "label" : "Move",
           "type" : "group"
+        },
+        {
+          "iconPath" : "uiwindow.split.2x1",
+          "key" : "m",
+          "label" : "Move Move",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace mode move"
         },
         {
           "iconPath" : "arrow.down.forward.and.arrow.up.backward.rectangle.fill",
@@ -1051,12 +1016,6 @@
           "label" : "Jump to last Workspace",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace-back-and-forth"
-        },
-        {
-          "key" : "a",
-          "label" : "Launch Aerospace",
-          "type" : "application",
-          "value" : "/Applications/AeroSpace.app"
         }
       ],
       "iconPath" : "/Applications/AeroSpace.app",
