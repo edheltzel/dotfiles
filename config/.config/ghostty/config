@@ -1,4 +1,4 @@
-initial-window = false
+initial-window = true
 
 alpha-blending = linear-corrected
 
@@ -34,10 +34,9 @@ shell-integration-features = true
 macos-non-native-fullscreen = true
 macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = hidden
-macos-window-buttons = hidden
+macos-titlebar-style = tabs
+macos-window-buttons = visible
 macos-icon = retro
-# macos-hidden = always
 
 # Quick Terminal
 quick-terminal-position = left
