@@ -85,8 +85,8 @@ keybind = super+k>7=goto_tab:7
 keybind = super+k>8=goto_tab:8
 
 #w/o leader key - move tabs
-keybind = super+ctrl+alt+[=move_tab:-1
-keybind = super+ctrl+alt+]=move_tab:1
+keybind = ctrl+shift+alt+[=move_tab:-1
+keybind = ctrl+shift+alt+]=move_tab:1
 
 # fzf.fish keybindings - Cmd+Ctrl sends Ctrl+Alt sequences to fish
 keybind = super+ctrl+f=text:\x1b\x06
