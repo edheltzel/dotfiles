@@ -156,6 +156,34 @@
           "key" : "s",
           "label" : "Music 🎧",
           "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "E",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Excel.app"
+            },
+            {
+              "key" : "m",
+              "type" : "application",
+              "value" : "/Applications/Typora.app"
+            },
+            {
+              "key" : "P",
+              "type" : "application",
+              "value" : "/Applications/Microsoft PowerPoint.app"
+            },
+            {
+              "key" : "W",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Word.app"
+            }
+          ],
+          "iconPath" : "apple.terminal.on.rectangle",
+          "key" : "e",
+          "label" : "Editors",
+          "type" : "group"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -271,46 +299,6 @@
       "iconPath" : "/System/Library/CoreServices/Finder.app",
       "key" : "d",
       "label" : "Directories 📁",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Visual Studio Code.app"
-        },
-        {
-          "key" : "E",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Excel.app"
-        },
-        {
-          "key" : "m",
-          "type" : "application",
-          "value" : "/Applications/Typora.app"
-        },
-        {
-          "key" : "P",
-          "type" : "application",
-          "value" : "/Applications/Microsoft PowerPoint.app"
-        },
-        {
-          "iconPath" : "apple.terminal.fill",
-          "key" : "v",
-          "label" : "Neovim ✨",
-          "type" : "command",
-          "value" : "open -na Ghostty --args -e nvim"
-        },
-        {
-          "key" : "W",
-          "type" : "application",
-          "value" : "/Applications/Microsoft Word.app"
-        }
-      ],
-      "iconPath" : "apple.terminal.on.rectangle",
-      "key" : "e",
-      "label" : "Editors",
       "type" : "group"
     },
     {
@@ -1021,6 +1009,36 @@
       "iconPath" : "/Applications/AeroSpace.app",
       "key" : "w",
       "label" : "Aerospace",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Visual Studio Code.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/WezTerm.app"
+        },
+        {
+          "iconPath" : "apple.terminal.fill",
+          "key" : "v",
+          "label" : "Neovim ✨",
+          "type" : "command",
+          "value" : "open -na Ghostty --args -e nvim"
+        }
+      ],
+      "iconPath" : "apple.terminal.fill",
+      "key" : "t",
+      "label" : "Terminals",
       "type" : "group"
     }
   ],

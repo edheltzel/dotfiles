@@ -62,7 +62,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Rosé Pine Dawn",
-		"dark": "Vesper",
+		"dark": "Gruvbox Dark Hard",
 	},
 	"icon_theme": {
 		"mode": "light",

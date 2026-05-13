@@ -4,8 +4,11 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1502, desc = "leader key cmd+k" }
+local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1502 }
 local keys = {
+  -- Suppress WezTerm's default SUPER+k → ClearScrollback so the leader chord activates instead.
+  { key = "k", mods = "SUPER", action = act.DisableDefaultAssignment },
+
   -- Command palette aliases
   { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k p" },
   { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k space" },
