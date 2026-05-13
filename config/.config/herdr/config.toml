@@ -26,8 +26,8 @@ previous_tab = "ctrl+alt+h"
 next_workspace = "ctrl+alt+u"
 previous_workspace = "ctrl+alt+i"
 open_notification_target = "ctrl+alt+n"
-previous_agent = "ctrl+alt+j"
-next_agent = "ctrl+alt+k"
+previous_agent = "ctrl+alt+k"
+next_agent = "ctrl+alt+j"
 
 # [theme]
 # name = "vesper"
