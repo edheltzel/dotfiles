@@ -107,5 +107,5 @@ run = ['layout floating', 'move-node-to-workspace overflow']
 
 # Always Floating Windows
 [[on-window-detected]]
-if.app-name-regex-substring = '.*Finder|.*raycast|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview|Print Center|superwhisper|Stickies|Tuna'
+if.app-name-regex-substring = '.*Finder|.*raycast*|.*karabiner|.*colorslurp|.*ice|.*shottr|.*dropbox|.*keka|Preview|Print Center|superwhisper|Stickies|Tuna'
 run = "layout floating"
