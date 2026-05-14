@@ -52,8 +52,6 @@ gha-creds-*.json
 
 ### AI Config (root only) ###
 /.claude/
-/.agents/
-/.pi/
 /AGENTS.md
 /CLAUDE.md
 
