@@ -41,6 +41,34 @@
           "type" : "group"
         },
         {
+          "actions" : [
+            {
+              "key" : "E",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Excel.app"
+            },
+            {
+              "key" : "m",
+              "type" : "application",
+              "value" : "/Applications/Typora.app"
+            },
+            {
+              "key" : "P",
+              "type" : "application",
+              "value" : "/Applications/Microsoft PowerPoint.app"
+            },
+            {
+              "key" : "W",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Word.app"
+            }
+          ],
+          "iconPath" : "apple.terminal.on.rectangle",
+          "key" : "e",
+          "label" : "Editors",
+          "type" : "group"
+        },
+        {
           "key" : "i",
           "type" : "application",
           "value" : "/Applications/Invoice Ninja.app"
@@ -155,34 +183,6 @@
           "iconPath" : "music.note.list",
           "key" : "s",
           "label" : "Music 🎧",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "E",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Excel.app"
-            },
-            {
-              "key" : "m",
-              "type" : "application",
-              "value" : "/Applications/Typora.app"
-            },
-            {
-              "key" : "P",
-              "type" : "application",
-              "value" : "/Applications/Microsoft PowerPoint.app"
-            },
-            {
-              "key" : "W",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Word.app"
-            }
-          ],
-          "iconPath" : "apple.terminal.on.rectangle",
-          "key" : "e",
-          "label" : "Editors",
           "type" : "group"
         }
       ],
@@ -394,12 +394,6 @@
           "type" : "group"
         },
         {
-          "iconPath" : "/Applications/Superset.app",
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Superset.app"
-        },
-        {
           "key" : "m",
           "type" : "application",
           "value" : "/Applications/Maestro.app"
@@ -505,49 +499,56 @@
           "key" : "-",
           "label" : "GTask",
           "type" : "url",
-          "value" : "raycast://extensions/elliotdes/google-tasks/create-task"
+          "value" : "raycast-x://extensions/elliotdes/google-tasks/create-task"
+        },
+        {
+          "iconPath" : "party.popper.fill",
+          "key" : "enter",
+          "label" : "Confetti",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/raycast/confetti"
         },
         {
           "iconPath" : "checkmark.rectangle.stack.fill",
           "key" : "=",
           "label" : "Reminder",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/apple-reminders/create-reminder"
+          "value" : "raycast-x://extensions/raycast/apple-reminders/create-reminder"
         },
         {
           "iconPath" : "face.smiling",
           "key" : "0",
           "label" : "Emojis",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+          "value" : "raycast-x://extensions/raycast/emoji-symbols/search-emoji-symbols"
         },
         {
           "iconPath" : "folder.fill",
           "key" : "1",
           "label" : "Search Folders",
           "type" : "url",
-          "value" : "raycast://extensions/GastroGeek/folder-search/search"
+          "value" : "raycast-x://extensions/GastroGeek/folder-search/search"
         },
         {
           "iconPath" : "document.on.document.fill",
           "key" : "2",
           "label" : "Search Files",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/file-search/search-files"
+          "value" : "raycast-x://extensions/raycast/file-search/search-files"
         },
         {
           "iconPath" : "link",
           "key" : "3",
           "label" : "Quick Links 🔗",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast/search-quicklinks"
+          "value" : "raycast-x://extensions/raycast/quicklinks/search-quicklinks"
         },
         {
           "iconPath" : "text.viewfinder",
           "key" : "4",
           "label" : "Snippets",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/snippets/search-snippets"
+          "value" : "raycast-x://extensions/raycast/snippets/search-snippets"
         },
         {
           "actions" : [
@@ -556,28 +557,28 @@
               "key" : "a",
               "label" : "Start Session",
               "type" : "url",
-              "value" : "raycast://extensions/gstvds/amphetamine/amp-start"
+              "value" : "raycast-x://extensions/gstvds/amphetamine/amp-start"
             },
             {
               "iconPath" : "pill.fill",
               "key" : "d",
               "label" : "Start Session for Time",
               "type" : "url",
-              "value" : "raycast://extensions/gstvds/amphetamine/amp-duration"
+              "value" : "raycast-x://extensions/gstvds/amphetamine/amp-duration"
             },
             {
               "iconPath" : "pill",
               "key" : "e",
               "label" : "End Amp",
               "type" : "url",
-              "value" : "raycast://extensions/gstvds/amphetamine/amp-end"
+              "value" : "raycast-x://extensions/gstvds/amphetamine/amp-end"
             },
             {
               "iconPath" : "stopwatch.fill",
               "key" : "r",
               "label" : "Remaining Time",
               "type" : "url",
-              "value" : "raycast://extensions/gstvds/amphetamine/remaining"
+              "value" : "raycast-x://extensions/gstvds/amphetamine/remaining"
             }
           ],
           "iconPath" : "pills.fill",
@@ -592,14 +593,14 @@
               "key" : "b",
               "label" : "Bitwarden",
               "type" : "url",
-              "value" : "raycast://extensions/jomifepe/bitwarden/search"
+              "value" : "raycast-x://extensions/jomifepe/bitwarden/search"
             },
             {
               "iconPath" : "checkmark.shield.fill",
               "key" : "o",
               "label" : "Auth",
               "type" : "url",
-              "value" : "raycast://extensions/jomifepe/bitwarden/authenticator"
+              "value" : "raycast-x://extensions/jomifepe/bitwarden/authenticator"
             }
           ],
           "iconPath" : "bolt.shield.fill",
@@ -612,84 +613,84 @@
           "key" : "c",
           "label" : "Change Case",
           "type" : "url",
-          "value" : "raycast://extensions/erics118/change-case/change-case"
+          "value" : "raycast-x://extensions/erics118/change-case/change-case"
         },
         {
           "iconPath" : "button.programmable.square.fill",
           "key" : "d",
           "label" : "Edit Dotfiles",
           "type" : "url",
-          "value" : "raycast://script-commands/edit-dotfiles"
-        },
-        {
-          "iconPath" : "party.popper.fill",
-          "key" : "enter",
-          "label" : "Confetti",
-          "type" : "url",
-          "value" : "raycast://confetti"
+          "value" : "raycast-x://extensions/raycast/script-commands/edit-dotfiles"
         },
         {
           "iconPath" : "target",
           "key" : "f",
           "label" : "Focus",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-focus/toggle-focus-session"
+          "value" : "raycast-x://extensions/raycast/raycast-focus/start-focus-session"
+        },
+        {
+          "iconPath" : "checklist",
+          "key" : "g",
+          "label" : "View Google Tasks",
+          "type" : "url",
+          "value" : "raycast-x://extensions/elliotdes/google-tasks/view-lists"
         },
         {
           "iconPath" : "photo.badge.checkmark.fill",
           "key" : "I",
           "label" : "WebP convert",
           "type" : "url",
-          "value" : "raycast://extensions/HelloImSteven/sips/convert?context=%7B%22convertTo%22%3A%22WEBP%22%7D"
+          "value" : "raycast-x://extensions/raycast/quicklinks/convert-to-webp"
         },
         {
           "iconPath" : "note.text.badge.plus",
           "key" : "n",
           "label" : "Create New Note",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-notes/create-note"
+          "value" : "raycast-x://extensions/raycast/raycast-notes/create-note"
         },
         {
           "iconPath" : "eyedropper.full",
           "key" : "p",
           "label" : "Color Picker",
           "type" : "url",
-          "value" : "raycast://extensions/thomas/color-picker/pick-color"
+          "value" : "raycast-x://extensions/thomas/color-picker/pick-color"
         },
         {
           "iconPath" : "x.circle.fill",
           "key" : "q",
           "label" : "Pick App to Quit",
           "type" : "url",
-          "value" : "raycast://extensions/mackopes/quit-applications/index"
+          "value" : "raycast-x://extensions/mackopes/quit-applications/index"
         },
         {
           "iconPath" : "x.circle.fill",
           "key" : "R",
           "label" : "Restart",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/system/restart"
+          "value" : "raycast-x://extensions/raycast/system-actions/restart"
         },
         {
           "iconPath" : "characters.uppercase",
           "key" : "s",
           "label" : "Spell Check",
           "type" : "url",
-          "value" : "raycast://extensions/rishabswift/word-search/word-spell"
+          "value" : "raycast-x://extensions/rishabswift/word-search/word-spell"
         },
         {
           "iconPath" : "arrow.up.and.down.and.sparkles",
           "key" : "u",
           "label" : "Run Topgrade",
           "type" : "url",
-          "value" : "raycast://script-commands/run-topgrade"
+          "value" : "raycast-x://extensions/raycast/script-commands/run-topgrade"
         },
         {
           "iconPath" : "apple.terminal.on.rectangle",
           "key" : "z",
           "label" : "Open Project in Zed",
           "type" : "url",
-          "value" : "raycast://extensions/theherk/zoxide-git-projects/find"
+          "value" : "raycast-x://extensions/theherk/zoxide-git-projects/find"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
@@ -741,10 +742,40 @@
       "type" : "group"
     },
     {
+      "actions" : [
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/Visual Studio Code.app"
+        },
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
+          "iconPath" : "apple.terminal.fill",
+          "key" : "v",
+          "label" : "Neovim ✨",
+          "type" : "command",
+          "value" : "open -na Ghostty --args -e nvim"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/WezTerm.app"
+        }
+      ],
+      "iconPath" : "apple.terminal.fill",
+      "key" : "t",
+      "label" : "Terminals",
+      "type" : "group"
+    },
+    {
       "iconPath" : "list.clipboard.fill",
       "key" : "v",
       "type" : "url",
-      "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
+      "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
     },
     {
       "actions" : [
@@ -1009,36 +1040,6 @@
       "iconPath" : "/Applications/AeroSpace.app",
       "key" : "w",
       "label" : "Aerospace",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "g",
-          "type" : "application",
-          "value" : "/Applications/Ghostty.app"
-        },
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Visual Studio Code.app"
-        },
-        {
-          "key" : "w",
-          "type" : "application",
-          "value" : "/Applications/WezTerm.app"
-        },
-        {
-          "iconPath" : "apple.terminal.fill",
-          "key" : "v",
-          "label" : "Neovim ✨",
-          "type" : "command",
-          "value" : "open -na Ghostty --args -e nvim"
-        }
-      ],
-      "iconPath" : "apple.terminal.fill",
-      "key" : "t",
-      "label" : "Terminals",
       "type" : "group"
     }
   ],
