@@ -9,6 +9,7 @@ alias gs state
 
 alias fabric fabric-ai
 alias j just
+alias t tv
 
 # Confirm before overwriting
 alias cp "cp -Ri"
