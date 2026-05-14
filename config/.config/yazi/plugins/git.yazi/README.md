@@ -39,10 +39,7 @@ group = "git"
 
 ## Advanced
 
-> [!NOTE]
-> The following configuration must be put before `require("git"):setup()`
-
-You can customize the [Style](https://yazi-rs.github.io/docs/plugins/layout#style) of the status sign with:
+You can customize the [Style](https://yazi-rs.github.io/docs/configuration/theme#types.style) of the status sign with:
 
 - `[git].unknown` - status cannot/not yet determined
 - `[git].modified` - modified file
