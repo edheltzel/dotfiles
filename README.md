@@ -147,9 +147,12 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 
 1. Installing Xcode Command Line Tools
    - `sudo softwardupdate -i -a && xcode-select --install` This will install `git` and `make` if not already installed.
-2. Generate a new SSH key and add to GitHub
-   - [Generate a new ssh keys][GENSSHKEY]
-   - `eval "$(ssh-agent -s)" && ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
+2. Generate SSH keys and add to GitHub
+   - [Generate a new ssh key][GENSSHKEY]
+   - `ssh-keygen -t ed25519 -C "you@host" -f ~/.ssh/id_ed25519` — auth key
+   - `ssh-keygen -t ed25519 -N "" -C "git signing" -f ~/.ssh/id_signing` — signing key, no passphrase
+   - Add `id_ed25519.pub` to GitHub as **Authentication**, `id_signing.pub` as **Signing**
+   - `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
 3. Clone repo with submodules
    - `git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
@@ -383,6 +386,9 @@ The `.gitconfig` includes `.gitconfig.local`
 
 If you choose to use this, make sure you look at that `./git/git.sh`; this script is where the provisioning of `.gitconfig.local` happens.
 
+> [!IMPORTANT]
+> Point `signingkey` at a **dedicated, passphrase-less key** (e.g. `~/.ssh/id_signing.pub`) — not your auth key. `ssh-keygen -Y sign` reads the private key directly and has no macOS keychain hooks, so a passphrased signing key means typing it on every commit. Keep your passphrased `id_ed25519` for auth, generate a separate `id_signing` for signing, and add both to GitHub in their respective slots. Don't forget to add the signing public key to `~/.ssh/allowed_signers` so `git log --show-signature` verifies locally.
+
 </details>
 <details>
   <summary>GPG Commit Signing - <em>optional</em></summary>
@@ -424,16 +430,25 @@ topgrade --only cargo
 </details>
 <details>
   <summary>SSH Agent</summary>
-  In the even when restarting MacOS, the SSH agent will not be running, even though it is configured to run on login. A result of this is that Git will keep asking for your SSH Passphrase, to resolve this you will need to execute the following:
 
-```shell
-eval ssh-agent -s;
-and ssh-add --apple-use-keychain
+`fish/.config/fish/conf.d/fish-ssh-agent.fish` handles ssh-agent for me — a small custom script (not the upstream plugin). On every interactive shell it:
+
+1. Sources `~/.ssh/agent/env.fish` to inherit any agent a previous shell already started.
+2. Pings the agent with `ssh-add -l`. If unreachable, spawns a fresh one with `ssh-agent -c` (csh syntax — fish can't parse the default Bourne output) and persists the new env back to `env.fish`.
+3. Loads `id_ed25519` if its fingerprint isn't already in the agent, prompting for the keychain-cached passphrase if needed.
+
+Result: every fish shell — herdr panes, tmux panes, fresh Ghostty windows — shares **one** ssh-agent instead of spawning its own. Survives Ghostty restarts because the agent is a detached background process and `env.fish` points new shells at it.
+
+If something goes sideways (agent dies, stale sockets pile up, etc.):
+
+```fish
+pkill ssh-agent
+rm ~/.ssh/agent/*
+# open a fresh shell — the script will spawn a clean agent
 ```
 
-<small>What this does: Starts the SSH agent and adds the SSH key to the keychain.</small>
-
-Since we are using [danhper/fish-ssh-agent](https://github.com/danhper/fish-ssh-agent) to manage the SSH agent, we only have to run this once.
+> [!NOTE]
+> Git commit **signing** doesn't use ssh-agent at all — see the SSH Signing section. If commits prompt for a passphrase every time, that's a signing-key problem, not an agent problem.
 
 </details>
 <details>

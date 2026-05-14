@@ -67,7 +67,6 @@ if status is-interactive
     abbr --add brews 'brew list'
     abbr --add casks 'brew list --cask'
     abbr --add cargos 'cargo install --list'
-    abbr --add eval 'eval ssh-agent -s; and ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
     abbr --add gems 'gem list'
     abbr --add npms 'npm list -g --depth=0'
     abbr --add pns 'pnpm list -g'
