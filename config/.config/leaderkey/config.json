@@ -644,6 +644,12 @@
           "value" : "raycast-x://extensions/raycast/quicklinks/convert-to-webp"
         },
         {
+          "key" : "K",
+          "label" : "KILL PROCESS 🚫",
+          "type" : "url",
+          "value" : "raycast-x://extensions/rolandleth/kill-process/index"
+        },
+        {
           "iconPath" : "note.text.badge.plus",
           "key" : "n",
           "label" : "Create New Note",
