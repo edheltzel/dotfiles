@@ -193,6 +193,7 @@ brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
 brew 'sshs'              # Terminal user interface for SSH - Rust
 cask 'gpg-suite'         # GPG encryption files
 brew 'age'               # Simple, modern and secure encryption tool - Go
+brew 'boring'
 
 #############################################################
 # 3. Desktop Applications                                   #
