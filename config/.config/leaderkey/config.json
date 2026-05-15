@@ -732,17 +732,17 @@
           "key" : "s",
           "label" : "Scrolling Capture",
           "type" : "url",
-          "value" : "shottr:/grab/scrolling"
+          "value" : "shottr://grab/scrolling"
         },
         {
           "iconPath" : "camera.metering.center.weighted.average",
           "key" : "w",
           "label" : "Capture Window+Pin",
           "type" : "url",
-          "value" : "shottr:/grab/window?then=save,pin"
+          "value" : "shottr://grab/window?then=save,pin"
         }
       ],
-      "iconPath" : "camera.viewfinder",
+      "iconPath" : "/Applications/Shottr.app",
       "key" : "s",
       "label" : "Screenshots",
       "type" : "group"
