@@ -85,7 +85,7 @@ case "$ZSH_PROMPT" in
   oh-my-posh) eval "$(oh-my-posh init zsh --config ~/.config/starship-ish.omp.json)" ;;
 esac
 
-# --- Atlas (PAI) ---
+# --- Atlas ---
 alias atlas='bun /Users/ed/.claude/skills/PAI/Tools/pai.ts'
 
 # --- Nvim shell integration ---

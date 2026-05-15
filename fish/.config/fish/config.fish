@@ -57,3 +57,5 @@ if status is-interactive
         command irb $argv
     end
 end
+
+alias atlas='bun /Users/ed/.claude/PAI/Tools/pai.ts'
