@@ -51,10 +51,11 @@ fish/.config/fish/conf.d/secrets.fish
 gha-creds-*.json
 
 ### AI Config (root only) ###
-/.agents/
-/.claude/
-/.pi/
-/.codex/
+/.agents/*
+/.atlas/*
+/.claude/*
+/.pi/*
+/.codex/*
 /AGENTS.md
 /CLAUDE.md
 
