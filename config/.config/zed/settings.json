@@ -213,50 +213,56 @@
 			"format_on_save": "on",
 		},
 		"JavaScript": {
-			"formatter": {
-				"language_server": {
-					"name": "biome",
-				},
-			},
 			"format_on_save": "on",
+			"prettier": { "allowed": false },
+			"formatter": [
+				{ "language_server": { "name": "oxfmt" } },
+				{ "code_action": "source.fixAll.oxc" },
+			],
+		},
+		"JSX": {
+			"format_on_save": "on",
+			"prettier": { "allowed": false },
+			"formatter": [
+				{ "language_server": { "name": "oxfmt" } },
+				{ "code_action": "source.fixAll.oxc" },
+			],
 		},
 		"TypeScript": {
 			"format_on_save": "on",
-			"formatter": {
-				"language_server": {
-					"name": "biome",
-				},
-			},
+			"prettier": { "allowed": false },
+			"formatter": [
+				{ "language_server": { "name": "oxfmt" } },
+				{ "code_action": "source.fixAll.oxc" },
+			],
 		},
 		"TSX": {
 			"format_on_save": "on",
-			"formatter": {
-				"language_server": {
-					"name": "biome",
-				},
-			},
+			"prettier": { "allowed": false },
+			"formatter": [
+				{ "language_server": { "name": "oxfmt" } },
+				{ "code_action": "source.fixAll.oxc" },
+			],
 		},
 		"JSON": {
 			"format_on_save": "on",
+			"prettier": { "allowed": false },
+			"formatter": [{ "language_server": { "name": "oxfmt" } }],
 		},
 		"JSONC": {
 			"format_on_save": "on",
+			"prettier": { "allowed": false },
+			"formatter": [{ "language_server": { "name": "oxfmt" } }],
 		},
 		"CSS": {
 			"format_on_save": "on",
-			"formatter": {
-				"language_server": {
-					"name": "biome",
-				},
-			},
+			"prettier": { "allowed": false },
+			"formatter": [{ "language_server": { "name": "oxfmt" } }],
 		},
 		"GraphQL": {
 			"format_on_save": "on",
-			"formatter": {
-				"language_server": {
-					"name": "biome",
-				},
-			},
+			"prettier": { "allowed": false },
+			"formatter": [{ "language_server": { "name": "oxfmt" } }],
 		},
 		"PHP": {
 			"enable_language_server": true,
@@ -267,6 +273,25 @@
 		},
 	},
 	"lsp": {
+		"oxlint": {
+			"initialization_options": {
+				"settings": {
+					"configPath": null,
+					"run": "onType",
+					"disableNestedConfig": false,
+					"fixKind": "safe_fix",
+					"unusedDisableDirectives": "deny",
+				},
+			},
+		},
+		"oxfmt": {
+			"initialization_options": {
+				"settings": {
+					"fmt.configPath": null,
+					"run": "onSave",
+				},
+			},
+		},
 		"biome": {
 			"settings": {
 				"require_config_file": true,

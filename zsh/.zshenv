@@ -7,3 +7,6 @@ export ZDOTDIR="$HOME/.config/zsh"
 export QA_VOICE_TTS_VOICE="en-US-AvaNeural"
 
 export PATH="$HOME/.bun/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
