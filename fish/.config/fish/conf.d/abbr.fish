@@ -25,9 +25,9 @@ if status is-interactive
     abbr --add muxka 'tmux kill-server'
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxd 'tmux detach'
-    abbr --add hss 'herdr server stop'
     abbr --add hrd herdr
-    abbr --add hrds --set-cursor 'herdr --remote %'
+    abbr --add hrr --set-cursor 'herdr --remote %'
+    abbr --add hss 'herdr server stop'
 
     # AI Agents + Models
     abbr --add cc claude
@@ -39,8 +39,6 @@ if status is-interactive
     abbr --add ppi --set-cursor 'pi -p "%"'
 
     # text editors
-    abbr --add con 'code -n .'
-    abbr --add coo 'code -r .'
     abbr --add zz zed
     abbr --add zzn 'zed -n .'
     abbr --add vim nvim

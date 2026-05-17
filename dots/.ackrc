@@ -21,9 +21,6 @@
 
 ### Directories to ignore
 --ignore-directory=is:.git
---ignore-dir=.vscode/
-
-# Jekyll and Hugo
 --ignore-dir=node_modules/
 --ignore-dir=bower_components/
 --ignore-dir=.bundle/

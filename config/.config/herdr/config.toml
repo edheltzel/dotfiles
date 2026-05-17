@@ -28,14 +28,16 @@ previous_workspace = "shift+alt+i"
 open_notification_target = "shift+alt+n"
 previous_agent = "shift+alt+k"
 next_agent = "shift+alt+j"
-focus_pane_left = "control+alt+h"
-focus_pane_up = "control+alt+j"
-focus_pane_down = "control+alt+k"
-focus_pane_right = "control+alt+l"
+# focus_pane_left = "control+alt+h"
+# focus_pane_up = "control+alt+j"
+# focus_pane_down = "control+alt+k"
+# focus_pane_right = "control+alt+l"
 
 # [theme]
 # name = "vesper"
-# Eldritch — Lovecraftian dark theme
+
+
+# Eldritch
 [theme.custom]
 accent = "#a48cf2"      # Lovecraft Purple
 panel_bg = "#212337"    # Sunken Depths Grey
@@ -53,3 +55,4 @@ red = "#f16c75"         # R'lyeh Red
 blue = "#04d1f9"        # Watery Tomb Blue
 teal = "#2bd4d4"        # derived teal
 peach = "#f7c67f"       # Dreaming Orange
+

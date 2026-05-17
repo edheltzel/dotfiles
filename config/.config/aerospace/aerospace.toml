@@ -40,12 +40,12 @@ outer.bottom = 5
 preset = 'qwerty'
 
 [mode.main.binding] # hyper+w+<NUMBER>
-alt-ctrl-0 = 'workspace hq'       # 0 -> primary workspace
-alt-ctrl-1 = 'workspace code'     # 1 -> dev
-alt-ctrl-2 = 'workspace ai'       # 2 -> ai tooling
-alt-ctrl-3 = 'workspace design'   # 3 -> design
-alt-ctrl-4 = 'workspace comms'    # 4 -> comms
-alt-ctrl-5 = 'workspace overflow' # 5 -> overflow
+alt-ctrl-shift-0 = 'workspace hq'       # 0 -> primary workspace
+alt-ctrl-shift-1 = 'workspace code'     # 1 -> dev
+alt-ctrl-shift-2 = 'workspace ai'       # 2 -> ai tooling
+alt-ctrl-shift-3 = 'workspace design'   # 3 -> design
+alt-ctrl-shift-4 = 'workspace comms'    # 4 -> comms
+alt-ctrl-shift-5 = 'workspace overflow' # 5 -> overflow
 
 # cycle through workspaces (wraps around)
 alt-ctrl-shift-j = 'workspace next --wrap-around'

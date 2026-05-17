@@ -16,14 +16,7 @@ abbr -S cl='clear' 2>/dev/null
 abbr -S ccc='claude converse --dangerously-skip-permissions' 2>/dev/null
 abbr -S cc='claude --dangerously-skip-permissions' 2>/dev/null
 abbr -S ccd='claude --dangerously-skip-permissions' 2>/dev/null
-abbr -S os='openspec' 2>/dev/null
-abbr -S oc='opencode' 2>/dev/null
-abbr -S occ='opencode --continue' 2>/dev/null
-abbr -S ocp='opencode --agent plan' 2>/dev/null
-abbr -S gg='gemini --yolo' 2>/dev/null
-abbr -S ag='antigravity' 2>/dev/null
 abbr -S ma='maestro-cli' 2>/dev/null
-abbr -S sa='sidecar' 2>/dev/null
 
 # Directories
 abbr -S config='~/.config/' 2>/dev/null
@@ -33,16 +26,7 @@ abbr -S dls='~/Downloads/' 2>/dev/null
 abbr -S goo='cd ~/.go/' 2>/dev/null
 
 # Editors/Terminals
-abbr -S gho='ghostty' 2>/dev/null
-abbr -S wez='wezterm' 2>/dev/null
-abbr -S kit='kitten' 2>/dev/null
-abbr -S zela='zellij a' 2>/dev/null
-abbr -S zels='zellij -s' 2>/dev/null
-abbr -S zelk='zellij k' 2>/dev/null
-abbr -S zelka='zellij ka' 2>/dev/null
-abbr -S zeld='zellij d' 2>/dev/null
-abbr -S zelda='zellij da' 2>/dev/null
-abbr -S zell='zellij ls' 2>/dev/null
+abbr -S gty='ghostty' 2>/dev/null
 abbr -S muxa='tmux attach' 2>/dev/null
 abbr -S muxaa='tmux attach -t' 2>/dev/null
 abbr -S muxs='tmux new-session -s' 2>/dev/null
@@ -50,10 +34,6 @@ abbr -S muxk='tmux kill-session -t' 2>/dev/null
 abbr -S muxka='tmux kill-server' 2>/dev/null
 abbr -S muxl='tmux list-sessions' 2>/dev/null
 abbr -S muxd='tmux detach' 2>/dev/null
-# vscode
-abbr -S co='code' 2>/dev/null
-abbr -S con='code -n .' 2>/dev/null
-abbr -S coo='code -r .' 2>/dev/null
 # zed
 abbr -S ze='zed' 2>/dev/null
 abbr -S zz='zed -n .' 2>/dev/null

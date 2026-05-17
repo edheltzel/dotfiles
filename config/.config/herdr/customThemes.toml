@@ -1,0 +1,18 @@
+# Atelier Cave
+# [theme.custom]
+# accent = "#955ae7"      # magenta
+# panel_bg = "#19171c"    # cave black
+# surface0 = "#26232b"    # selection bg
+# surface1 = "#322e38"    # hover/active
+# surface_dim = "#1f1d23" # active workspace bg
+# overlay0 = "#655f6d"    # muted text
+# overlay1 = "#8b8792"    # secondary accent
+# text = "#efecf4"        # bright white
+# subtext0 = "#8b8792"    # dimmed labels
+# mauve = "#be4678"       # red/pink (git branches)
+# green = "#2a9292"       # green
+# yellow = "#a06e3b"      # yellow
+# red = "#be4678"         # red
+# blue = "#576ddb"        # blue
+# teal = "#2a9292"        # cyan-teal
+# peach = "#a06e3b"       # warm peach

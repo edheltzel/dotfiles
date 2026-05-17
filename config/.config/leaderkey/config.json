@@ -750,11 +750,6 @@
     {
       "actions" : [
         {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Visual Studio Code.app"
-        },
-        {
           "key" : "g",
           "type" : "application",
           "value" : "/Applications/Ghostty.app"
