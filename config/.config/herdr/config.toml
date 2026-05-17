@@ -36,6 +36,9 @@ focus_pane_right         = "shift+control+alt+l"
 # [theme]
 # name = "vesper"
 
+[experimental]
+allow_nested = true
+kitty_graphics = true
 
 # Eldritch
 [theme.custom]
