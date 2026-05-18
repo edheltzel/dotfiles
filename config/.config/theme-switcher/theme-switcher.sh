@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("aura" "eldritch" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "tokyo-night" "tokyo-night-moon" "vesper")
+THEMES=("eldritch" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -16,6 +16,11 @@ BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
+
+# Tracking arrays for the post-run summary
+UPDATED_APPS=()
+SKIPPED_APPS=()
+MISSING_APPS=()
 
 #------------------------------------------------------------------------------
 # Helper Functions
@@ -38,84 +43,79 @@ error() {
   exit 1
 }
 
+# Detect install via CLI binary on PATH or macOS app bundle in /Applications
+is_installed() {
+  local cmd="$1"
+  local app_bundle="${2:-}"
+  if command -v "$cmd" &>/dev/null; then
+    return 0
+  fi
+  if [[ -n "$app_bundle" && -d "$app_bundle" ]]; then
+    return 0
+  fi
+  return 1
+}
+
 #------------------------------------------------------------------------------
 # Theme Name Mappings
 #------------------------------------------------------------------------------
 
 get_ghostty_theme() {
   case "$1" in
-  aura) echo "aura" ;;
   eldritch) echo "config-file" ;;
   rose-pine) echo "Rose Pine" ;;
   rose-pine-dawn) echo "Rose Pine Dawn" ;;
   rose-pine-moon) echo "Rose Pine Moon" ;;
-  tokyo-night) echo "TokyoNight" ;;
-  tokyo-night-moon) echo "TokyoNight Moon" ;;
   vesper) echo "Vesper" ;;
   esac
 }
 
 get_kitty_theme() {
   case "$1" in
-  aura) echo "eldritch-neoed.conf" ;; # Use eldritch as fallback
   eldritch) echo "eldritch-neoed.conf" ;;
   rose-pine) echo "rose-pine.conf" ;;
   rose-pine-dawn) echo "rose-pine-dawn.conf" ;;
   rose-pine-moon) echo "rose-pine-moon.conf" ;;
-  tokyo-night) echo "" ;;      # Skip
-  tokyo-night-moon) echo "" ;; # Skip
   vesper) echo "vesper.conf" ;;
   esac
 }
 
 get_wezterm_theme() {
   case "$1" in
-  aura) echo "Aura" ;;
   eldritch) echo "Eldritch" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
-  tokyo-night) echo "Tokyo Night" ;;
-  tokyo-night-moon) echo "Tokyo Night Moon" ;;
   vesper) echo "vesper" ;;
   esac
 }
 
 get_neovim_theme() {
   case "$1" in
-  aura) echo "aura-dark" ;;
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
-  tokyo-night) echo "tokyonight-night" ;;
-  tokyo-night-moon) echo "tokyonight-moon" ;;
   vesper) echo "vesper" ;;
   esac
 }
 
 get_bat_theme() {
   case "$1" in
-  aura) echo "aura" ;;
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
-  tokyo-night) echo "tokyonight_night" ;;
-  tokyo-night-moon) echo "tokyonight_moon" ;;
   vesper) echo "vesper" ;; # Custom tmTheme
   esac
 }
 
 get_btop_theme() {
   case "$1" in
-  aura) echo "eldritch" ;; # Use eldritch as fallback
   eldritch) echo "eldritch" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
-  tokyo-night) echo "" ;;      # Skip
-  tokyo-night-moon) echo "" ;; # Skip
   vesper) echo "vesper" ;;     # Custom theme file
   esac
 }
@@ -128,12 +128,30 @@ get_claude_theme() {
   esac
 }
 
+# herdr: rose-pine and vesper are built-in; eldritch uses [theme.custom] overlay on rose-pine
+get_herdr_theme() {
+  case "$1" in
+  eldritch) echo "rose-pine" ;; # base; custom block supplies the palette
+  rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
+  rose-pine-moon) echo "" ;; # Not in herdr's built-in list
+  vesper) echo "vesper" ;;
+  esac
+}
+
 #------------------------------------------------------------------------------
 # Update Functions
 #------------------------------------------------------------------------------
 
 update_ghostty() {
   local theme="$1"
+
+  if ! is_installed ghostty "/Applications/Ghostty.app"; then
+    MISSING_APPS+=("Ghostty")
+    info "Ghostty → not installed, skipped"
+    return
+  fi
+
   local ghostty_theme=$(get_ghostty_theme "$theme")
   local config_file="$CONFIG/ghostty/config"
 
@@ -141,21 +159,31 @@ update_ghostty() {
     # Use custom config file for Eldritch
     sed -i '' 's/^theme = /#theme = /' "$config_file"
     sed -i '' 's/^#config-file = "colors\/eldritch"/config-file = "colors\/eldritch"/' "$config_file"
+    UPDATED_APPS+=("Ghostty → eldritch (custom file)")
     success "Ghostty → eldritch (custom file)"
   else
     # Use built-in theme
     sed -i '' 's/^config-file = /#config-file = /' "$config_file"
     sed -i '' "s/^.*theme = .*/theme = $ghostty_theme/" "$config_file"
+    UPDATED_APPS+=("Ghostty → $ghostty_theme")
     success "Ghostty → $ghostty_theme"
   fi
 }
 
 update_kitty() {
   local theme="$1"
+
+  if ! is_installed kitty "/Applications/kitty.app"; then
+    MISSING_APPS+=("Kitty")
+    info "Kitty → not installed, skipped"
+    return
+  fi
+
   local kitty_theme=$(get_kitty_theme "$theme")
   local config_file="$CONFIG/kitty/kitty.conf"
 
   if [[ -z "$kitty_theme" ]]; then
+    SKIPPED_APPS+=("Kitty (theme $theme not available)")
     warning "Kitty → skipped (theme not available)"
     return
   fi
@@ -163,70 +191,105 @@ update_kitty() {
   # Update the include line within the BEGIN_KITTY_THEME block
   sed -i '' "s|^include ./themes/.*\.conf|include ./themes/$kitty_theme|" "$config_file"
 
-  if [[ "$theme" == "aura" ]]; then
-    success "Kitty → $kitty_theme (eldritch fallback)"
-  else
-    success "Kitty → $kitty_theme"
-  fi
+  UPDATED_APPS+=("Kitty → $kitty_theme")
+  success "Kitty → $kitty_theme"
 }
 
 update_wezterm() {
   local theme="$1"
+
+  if ! is_installed wezterm "/Applications/WezTerm.app"; then
+    MISSING_APPS+=("WezTerm")
+    info "WezTerm → not installed, skipped"
+    return
+  fi
+
   local wezterm_theme=$(get_wezterm_theme "$theme")
   local config_file="$CONFIG/wezterm/theme.lua"
 
   sed -i '' "s/^M\.name = .*/M.name = \"$wezterm_theme\"/" "$config_file"
+  UPDATED_APPS+=("WezTerm → $wezterm_theme")
   success "WezTerm → $wezterm_theme"
 }
 
 update_neovim() {
   local theme="$1"
+
+  if ! is_installed nvim; then
+    MISSING_APPS+=("Neovim")
+    info "Neovim → not installed, skipped"
+    return
+  fi
+
   local nvim_theme=$(get_neovim_theme "$theme")
   local config_file="$DOTFILES/neoed/.config/nvim/lua/plugins/ui/colorscheme.lua"
 
   sed -i '' "s/colorscheme = \".*\"/colorscheme = \"$nvim_theme\"/" "$config_file"
+  UPDATED_APPS+=("Neovim → $nvim_theme")
   success "Neovim → $nvim_theme"
 }
 
 update_bat() {
   local theme="$1"
+
+  if ! is_installed bat; then
+    MISSING_APPS+=("bat")
+    info "bat → not installed, skipped"
+    return
+  fi
+
   local bat_theme=$(get_bat_theme "$theme")
   local config_file="$CONFIG/bat/config"
 
   if [[ -z "$bat_theme" ]]; then
+    SKIPPED_APPS+=("bat (theme $theme not available)")
     warning "bat → skipped (theme not available)"
     return
   fi
 
   sed -i '' "s/--theme=\".*\"/--theme=\"$bat_theme\"/" "$config_file"
+  UPDATED_APPS+=("bat → $bat_theme")
   success "bat → $bat_theme"
 }
 
 update_btop() {
   local theme="$1"
+
+  if ! is_installed btop; then
+    MISSING_APPS+=("btop")
+    info "btop → not installed, skipped"
+    return
+  fi
+
   local btop_theme=$(get_btop_theme "$theme")
   local config_file="$CONFIG/btop/btop.conf"
 
   if [[ -z "$btop_theme" ]]; then
+    SKIPPED_APPS+=("btop (theme $theme not available)")
     warning "btop → skipped (theme not available)"
     return
   fi
 
   sed -i '' "s/color_theme = \".*\"/color_theme = \"$btop_theme\"/" "$config_file"
 
-  if [[ "$theme" == "aura" ]]; then
-    success "btop → $btop_theme (eldritch fallback)"
-  else
-    success "btop → $btop_theme"
-  fi
+  UPDATED_APPS+=("btop → $btop_theme")
+  success "btop → $btop_theme"
 }
 
 update_lazygit() {
   local theme="$1"
+
+  if ! is_installed lazygit; then
+    MISSING_APPS+=("lazygit")
+    info "lazygit → not installed, skipped"
+    return
+  fi
+
   local config_file="$CONFIG/lazygit/config.yml"
   local theme_file="$THEMES_DIR/lazygit/${theme}.yml"
 
   if [[ ! -f "$theme_file" ]]; then
+    SKIPPED_APPS+=("lazygit (theme snippet $theme.yml not found)")
     warning "lazygit → skipped (theme snippet not found)"
     return
   fi
@@ -235,7 +298,7 @@ update_lazygit() {
   # Use awk to replace the entire gui.theme block
   awk -v theme_file="$theme_file" '
     /^gui:/ { in_gui=1; print; next }
-    in_gui && /^  theme:/ { 
+    in_gui && /^  theme:/ {
       in_theme=1
       while ((getline line < theme_file) > 0) {
         print line
@@ -248,20 +311,30 @@ update_lazygit() {
     { print }
   ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
 
+  UPDATED_APPS+=("lazygit → $theme")
   success "lazygit → $theme"
 }
 
 update_claude() {
   local theme="$1"
+
+  if ! is_installed claude; then
+    MISSING_APPS+=("claude")
+    info "claude → not installed, skipped"
+    return
+  fi
+
   local claude_theme=$(get_claude_theme "$theme")
   local config_file="$HOME/.claude/settings.json"
 
   if [[ -z "$claude_theme" ]]; then
+    SKIPPED_APPS+=("claude (no theme JSON for $theme)")
     warning "claude → skipped (no theme JSON for $theme)"
     return
   fi
 
   if [[ ! -e "$config_file" ]]; then
+    SKIPPED_APPS+=("claude (settings.json not found)")
     warning "claude → skipped (settings.json not found)"
     return
   fi
@@ -276,7 +349,56 @@ update_claude() {
   fi
 
   sed -i '' "s|\"theme\": \"[^\"]*\"|\"theme\": \"$claude_theme\"|" "$real_path"
+  UPDATED_APPS+=("claude → $claude_theme")
   success "claude → $claude_theme"
+}
+
+update_herdr() {
+  local theme="$1"
+
+  if ! is_installed herdr; then
+    MISSING_APPS+=("herdr")
+    info "herdr → not installed, skipped"
+    return
+  fi
+
+  local herdr_theme=$(get_herdr_theme "$theme")
+  local config_file="$CONFIG/herdr/config.toml"
+
+  if [[ -z "$herdr_theme" ]]; then
+    SKIPPED_APPS+=("herdr (theme $theme not supported)")
+    warning "herdr → skipped (theme not supported)"
+    return
+  fi
+
+  # Toggle the [theme.custom] block: uncomment for eldritch, re-comment otherwise.
+  # Block runs from the [theme.custom] header to the next blank line.
+  if [[ "$theme" == "eldritch" ]]; then
+    awk '
+      /^# \[theme\.custom\]/ { in_block=1 }
+      in_block && /^$/ { in_block=0 }
+      in_block { sub(/^# /, "") }
+      { print }
+    ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
+  else
+    awk '
+      /^\[theme\.custom\]/ { in_block=1 }
+      in_block && /^$/ { in_block=0; print; next }
+      in_block && !/^#/ { $0 = "# " $0 }
+      { print }
+    ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
+  fi
+
+  # Update [theme] name = "..."
+  sed -i '' "s/^name = \".*\"/name = \"$herdr_theme\"/" "$config_file"
+
+  if [[ "$theme" == "eldritch" ]]; then
+    UPDATED_APPS+=("herdr → eldritch (custom overlay on $herdr_theme)")
+    success "herdr → eldritch (custom overlay on $herdr_theme)"
+  else
+    UPDATED_APPS+=("herdr → $herdr_theme")
+    success "herdr → $herdr_theme"
+  fi
 }
 
 reload_ghostty() {
@@ -285,6 +407,47 @@ reload_ghostty() {
     echo ""
     info "Ghostty: Press Cmd+Ctrl+Alt+, to reload config"
   fi
+}
+
+reload_herdr() {
+  # herdr supports hot config reload via socket API
+  if pgrep -x herdr >/dev/null 2>&1; then
+    echo ""
+    info "herdr: run 'herdr server reload-config' to apply"
+  fi
+}
+
+print_summary() {
+  echo ""
+  echo "════════════════════════════════════════"
+  echo " Theme Switch Summary"
+  echo "════════════════════════════════════════"
+
+  if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
+    echo ""
+    echo -e "${GREEN}Updated (${#UPDATED_APPS[@]}):${NC}"
+    for app in "${UPDATED_APPS[@]}"; do
+      echo -e "  ${GREEN}✓${NC} $app"
+    done
+  fi
+
+  if [[ ${#SKIPPED_APPS[@]} -gt 0 ]]; then
+    echo ""
+    echo -e "${YELLOW}Skipped — theme unavailable (${#SKIPPED_APPS[@]}):${NC}"
+    for app in "${SKIPPED_APPS[@]}"; do
+      echo -e "  ${YELLOW}-${NC} $app"
+    done
+  fi
+
+  if [[ ${#MISSING_APPS[@]} -gt 0 ]]; then
+    echo ""
+    echo -e "${BLUE}Skipped — not installed (${#MISSING_APPS[@]}):${NC}"
+    for app in "${MISSING_APPS[@]}"; do
+      echo -e "  ${BLUE}⊘${NC} $app"
+    done
+  fi
+
+  echo ""
 }
 
 #------------------------------------------------------------------------------
@@ -340,6 +503,7 @@ apply_theme() {
   update_btop "$theme"
   update_lazygit "$theme"
   update_claude "$theme"
+  update_herdr "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
@@ -347,11 +511,17 @@ apply_theme() {
   echo ""
   success "Theme switched to: $theme"
 
+  # Show categorized summary of what changed, was skipped, or missing
+  print_summary
+
   # Show reload instructions
   reload_ghostty
+  reload_herdr
 
-  echo ""
-  info "Apps requiring restart: Neovim, WezTerm, Kitty, btop"
+  if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
+    echo ""
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop"
+  fi
 }
 
 # Parse arguments

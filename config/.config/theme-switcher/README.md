@@ -10,27 +10,23 @@ Unified theme switching system for all applications in dotfiles.
 - `rose-pine` - Rosé Pine
 - `rose-pine-dawn` - Rosé Pine Dawn (light theme)
 - `rose-pine-moon` - Rosé Pine Moon (default)
-- `tokyo-night` - Tokyo Night
-- `tokyo-night-moon` - Tokyo Night Moon
+- `vesper` - Vesper
 
 ## Supported Applications
 
-| Application | Eldritch | Rose Pine | Rose Pine Dawn | Rose Pine Moon | Tokyo Night | Tokyo Night Moon |
-| ----------- | -------- | --------- | -------------- | -------------- | ----------- | ---------------- |
-| Ghostty     | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
-| Kitty       | ✓        | ✓         | ✓              | ✓              | ✗           | ✗                |
-| WezTerm     | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
-| Neovim      | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
-| bat         | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
-| btop        | ✓        | ✓         | ✓              | ✓              | ✗           | ✗                |
-| lazygit     | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
-| eza         | ✓        | ✓         | ✓              | ✓              | ✓           | ✗                |
-| oh-my-posh  | ✓        | ✓         | ✓              | ✓              | ✓           | ✓                |
-| OpenCode    | ✓\*      | ✓         | ✓\*            | ✓\*            | ✓           | ✓\*              |
+| Application  | Eldritch | Rose Pine | Rose Pine Dawn | Rose Pine Moon | Vesper |
+| ------------ | -------- | --------- | -------------- | -------------- | ------ |
+| Ghostty      | ✓        | ✓         | ✓              | ✓              | ✓      |
+| Kitty        | ✓        | ✓         | ✓              | ✓              | ✓      |
+| WezTerm      | ✓        | ✓         | ✓              | ✓              | ✓      |
+| Neovim       | ✓        | ✓         | ✓              | ✓              | ✓      |
+| bat          | ✓        | ✓         | ✓              | ✓              | ✓      |
+| btop         | ✓        | ✓         | ✓              | ✓              | ✓      |
+| lazygit      | ✓        | ✓         | ✓              | ✓              | ✓      |
+| herdr        | ✓\*      | ✓         | ✓              | ✗              | ✓      |
+| Claude Code  | ✓        | ✗         | ✗              | ✗              | ✓      |
 
-\*OpenCode uses `system` theme for Eldritch (no native support), and `rosepine`/`tokyonight` for moon variants (single variant only).
-
-**Note:** Starship is not managed by the theme switcher (use oh-my-posh for automatic theme switching).
+\*herdr uses `[theme.custom]` overlay on the `rose-pine` base for Eldritch (no native Eldritch). Rose Pine Moon is not in herdr's built-in theme list.
 
 ## Usage
 
@@ -65,8 +61,7 @@ theme-switcher/
 │   ├── rose-pine.yml
 │   ├── rose-pine-dawn.yml
 │   ├── rose-pine-moon.yml
-│   ├── tokyo-night.yml
-│   └── tokyo-night-moon.yml
+│   └── vesper.yml
 └── README.md                  # This file
 ```
 
@@ -86,9 +81,8 @@ After switching themes:
 - **Kitty**: Automatically reloads on config change
 - **WezTerm**: Automatically reloads on config change
 - **Neovim**: Restart or `:e` to reload
-- **bat/btop/eza/lazygit**: Changes apply on next launch
-- **oh-my-posh**: Restart shell or `exec fish`
-- **OpenCode**: Restart to apply new theme
+- **bat/btop/lazygit**: Changes apply on next launch
+- **Claude Code**: Restart to apply new theme
 
 ## Adding New Themes
 
