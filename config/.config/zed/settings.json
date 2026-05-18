@@ -32,7 +32,7 @@
       "show_commit_summary": true
     }
   },
-  "ui_font_size": 19.0,
+  "ui_font_size": 18.0,
   "minimap": {
     "show": "never"
   },
@@ -117,7 +117,7 @@
   "buffer_font_features": {
     "calt": true
   },
-  "buffer_font_size": 19.0,
+  "buffer_font_size": 18.0,
   "buffer_font_family": "Lilex Nerd Font",
   "ui_font_family": "Lilex Nerd Font",
   "ui_font_fallbacks": ["Lilex Nerd Font", "VictorMono Nerd Font", "FiraCode Nerd Font"],
@@ -307,7 +307,7 @@
     "cursor_shape": "bar",
     "copy_on_select": true,
     "font_family": "Lilex Nerd Font",
-    "font_size": 19.0,
+    "font_size": 18.0,
     "font_weight": 400.0,
     "default_height": 500
   },

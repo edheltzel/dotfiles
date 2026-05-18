@@ -25,7 +25,7 @@ window-inherit-font-size = false
 window-padding-x = 10
 window-title-font-family = "Lilex Nerd Font"
 
-font-size = 19
+font-size = 18
 font-family = "Lilex Nerd Font"
 
 shell-integration-features = true
