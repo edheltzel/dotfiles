@@ -213,6 +213,7 @@
       "format_on_save": "on"
     },
     "JavaScript": {
+      "language_servers": ["!biome", "..."],
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [
@@ -221,6 +222,7 @@
       ]
     },
     "JSX": {
+      "language_servers": ["!biome", "..."],
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [
@@ -229,6 +231,7 @@
       ]
     },
     "TypeScript": {
+      "language_servers": ["!biome", "..."],
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [
@@ -237,6 +240,7 @@
       ]
     },
     "TSX": {
+      "language_servers": ["!biome", "..."],
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [
@@ -245,16 +249,19 @@
       ]
     },
     "JSON": {
+      "language_servers": ["!biome", "..."],
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [{ "language_server": { "name": "oxfmt" } }]
     },
     "JSONC": {
+      "language_servers": ["!biome", "..."],
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [{ "language_server": { "name": "oxfmt" } }]
     },
     "CSS": {
+      "language_servers": ["!biome", "..."],
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [{ "language_server": { "name": "oxfmt" } }]
