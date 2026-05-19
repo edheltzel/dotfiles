@@ -6,6 +6,13 @@ sound.enabled = true
 toast.enabled = true
 toast.delivery = "terminal"
 
+[theme]
+name = "terminal"
+
+[experimental]
+allow_nested = true
+kitty_graphics = true
+
 [keys]
 prefix = "control+,"
 detach = "d"
@@ -32,29 +39,3 @@ focus_pane_left = "shift+control+alt+h"
 focus_pane_up = "shift+control+alt+k"
 focus_pane_down = "shift+control+alt+j"
 focus_pane_right = "shift+control+alt+l"
-
-[experimental]
-allow_nested = true
-kitty_graphics = true
-
-# Eldritch
-[theme.custom]
-accent = "#a48cf2" # Lovecraft Purple
-panel_bg = "#212337" # Sunken Depths Grey
-surface0 = "#323449" # Shallow Depths Grey (selection)
-surface1 = "#3a3d57" # hover/active
-surface_dim = "#2a2d42" # active workspace bg
-overlay0 = "#565a7e" # muted text
-overlay1 = "#7081d0" # The Old One Purple
-text = "#ebfafa" # Lighthouse White
-subtext0 = "#a8b0c9" # dimmed labels
-mauve = "#f265b5" # Pustule Pink (git branches)
-green = "#37f499" # Great Old One Green
-yellow = "#f1fc79" # Gold of Yuggoth
-red = "#f16c75" # R'lyeh Red
-blue = "#04d1f9" # Watery Tomb Blue
-teal = "#2bd4d4" # derived teal
-peach = "#f7c67f" # Dreaming Orange
-
-[theme]
-name = "rose-pine"
