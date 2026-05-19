@@ -29,8 +29,8 @@ open_notification_target = "shift+alt+n"
 previous_agent = "shift+alt+k"
 next_agent = "shift+alt+j"
 focus_pane_left = "shift+control+alt+h"
-focus_pane_up = "shift+control+alt+j"
-focus_pane_down = "shift+control+alt+k"
+focus_pane_up = "shift+control+alt+k"
+focus_pane_down = "shift+control+alt+j"
 focus_pane_right = "shift+control+alt+l"
 
 [experimental]
