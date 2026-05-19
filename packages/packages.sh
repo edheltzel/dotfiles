@@ -7,6 +7,7 @@ fi
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
 global_packages="bun_packages.txt"
+pnpm_packages="pnpm_packages.txt"
 ruby_packages="ruby_packages.txt"
 rust_packages="rust_packages.txt"
 
@@ -58,6 +59,23 @@ install_bun_packages() {
   bun install -g $(cat $global_packages)
 }
 
+# Install global packages with pnpm
+install_pnpm_packages() {
+  if ! command -v pnpm &>/dev/null; then
+    substep_info "pnpm not found. Installing via corepack..."
+    corepack enable
+    corepack prepare pnpm@latest --activate
+    if ! command -v pnpm &>/dev/null; then
+      error "Failed to install pnpm. Exiting."
+      exit 1
+    fi
+    substep_success "pnpm installed."
+  fi
+  info "Installing pnpm global packages..."
+  pnpm add -g $(cat $pnpm_packages)
+  success "All pnpm global packages installed."
+}
+
 # Install Ruby with rbenv, set 3.3.6 as default, then install gems
 install_ruby_packages() {
   # Install rbenv
@@ -101,9 +119,162 @@ install_rust_packages() {
   success "Finished installing Rust packages."
 }
 
-# Call each installation function
-install_brew_packages
-install_node_packages
-install_ruby_packages
-install_rust_packages
-install_bun_packages
+# ─── Uninstall functions ───────────────────────────────────────────────
+
+uninstall_brew_packages() {
+  if ! command -v brew &>/dev/null; then
+    error "Homebrew not installed; nothing to uninstall."
+    return 1
+  fi
+  info "Uninstalling Homebrew casks from $brew_packages..."
+  brew bundle list --file="$brew_packages" --casks 2>/dev/null | while read -r pkg; do
+    [ -z "$pkg" ] && continue
+    brew uninstall --cask "$pkg" || true
+  done
+  info "Uninstalling Homebrew formulae from $brew_packages..."
+  brew bundle list --file="$brew_packages" --brews 2>/dev/null | while read -r pkg; do
+    [ -z "$pkg" ] && continue
+    brew uninstall "$pkg" || true
+  done
+  success "Finished uninstalling Homebrew packages."
+}
+
+uninstall_node_packages() {
+  if ! command -v npm &>/dev/null; then
+    error "npm not available; nothing to uninstall."
+    return 1
+  fi
+  info "Uninstalling NPM global packages..."
+  npm uninstall -g $(cat $node_packages)
+  success "NPM global packages uninstalled."
+}
+
+uninstall_bun_packages() {
+  if ! command -v bun &>/dev/null; then
+    error "bun not available; nothing to uninstall."
+    return 1
+  fi
+  info "Uninstalling Bun global packages..."
+  bun remove -g $(cat $global_packages)
+  success "Bun global packages uninstalled."
+}
+
+uninstall_pnpm_packages() {
+  if ! command -v pnpm &>/dev/null; then
+    error "pnpm not available; nothing to uninstall."
+    return 1
+  fi
+  info "Uninstalling pnpm global packages..."
+  pnpm remove -g $(cat $pnpm_packages)
+  success "pnpm global packages uninstalled."
+}
+
+uninstall_ruby_packages() {
+  if ! command -v gem &>/dev/null; then
+    error "gem not available; nothing to uninstall."
+    return 1
+  fi
+  info "Uninstalling Ruby gems..."
+  # -a: all versions, -I: ignore deps, -x: also remove executables
+  gem uninstall -aIx $(cat $ruby_packages) || true
+  success "Ruby gems uninstalled."
+}
+
+uninstall_rust_packages() {
+  if ! command -v cargo &>/dev/null; then
+    error "cargo not available; nothing to uninstall."
+    return 1
+  fi
+  info "Uninstalling Rust packages..."
+  while read -r pkg; do
+    [ -z "$pkg" ] && continue
+    cargo uninstall "$pkg" || true
+  done < "$rust_packages"
+  success "Rust packages uninstalled."
+}
+
+# ─── Dispatcher ────────────────────────────────────────────────────────
+
+usage() {
+  cat <<EOF
+Usage: $(basename "$0") [action] [target]
+
+Actions:
+  install    Install packages (default if action omitted)
+  uninstall  Uninstall packages listed in the corresponding file
+
+Targets:
+  brew    Homebrew packages from Brewfile
+  node    Node (FNM) + NPM packages from node_packages.txt
+  bun     Bun global packages from bun_packages.txt
+  pnpm    pnpm global packages from pnpm_packages.txt
+  ruby    Ruby (rbenv) + gems from ruby_packages.txt
+  rust    Rust + cargo packages from rust_packages.txt
+  all     Every target above
+
+Examples:
+  $(basename "$0")                  # install all
+  $(basename "$0") bun              # install bun packages
+  $(basename "$0") install pnpm     # install pnpm packages
+  $(basename "$0") uninstall bun    # uninstall bun packages
+  $(basename "$0") uninstall all    # uninstall everything
+EOF
+}
+
+run_action() {
+  local action="$1"
+  local target="$2"
+  case "$action:$target" in
+    install:brew)   install_brew_packages ;;
+    install:node)   install_node_packages ;;
+    install:bun)    install_bun_packages ;;
+    install:pnpm)   install_pnpm_packages ;;
+    install:ruby)   install_ruby_packages ;;
+    install:rust)   install_rust_packages ;;
+    install:all)
+      install_brew_packages
+      install_node_packages
+      install_ruby_packages
+      install_rust_packages
+      install_bun_packages
+      install_pnpm_packages
+      ;;
+    uninstall:brew) uninstall_brew_packages ;;
+    uninstall:node) uninstall_node_packages ;;
+    uninstall:bun)  uninstall_bun_packages ;;
+    uninstall:pnpm) uninstall_pnpm_packages ;;
+    uninstall:ruby) uninstall_ruby_packages ;;
+    uninstall:rust) uninstall_rust_packages ;;
+    uninstall:all)
+      uninstall_bun_packages
+      uninstall_pnpm_packages
+      uninstall_node_packages
+      uninstall_rust_packages
+      uninstall_ruby_packages
+      uninstall_brew_packages
+      ;;
+    *)
+      error "Unknown action/target: $action $target"
+      usage
+      exit 1
+      ;;
+  esac
+}
+
+case "${1:-}" in
+  ""|all)                 run_action install all ;;
+  -h|--help|help)         usage ;;
+  install|uninstall)
+    action="$1"
+    target="${2:-all}"
+    run_action "$action" "$target"
+    ;;
+  brew|node|bun|pnpm|ruby|rust)
+    run_action install "$1"
+    ;;
+  *)
+    error "Unknown argument: $1"
+    usage
+    exit 1
+    ;;
+esac

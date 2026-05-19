@@ -277,7 +277,35 @@ Any of the scripts can be run individually at any time to update/reset as needed
 - macOS (macos/)
   - `macos.sh` - Executes a long list of commands pertaining to macOS Preferences – **DO NOT** blindly run this script - it is a WIP with each macOS update things change.
 - packages (packages/)
-  - `packages.sh` - Installs the Brewfile and each package manager's packages based on the `.txt` files.
+  - `packages.sh` - Installs (and uninstalls) the Brewfile and each package manager's packages based on the `.txt` files.
+  - Usage: `./packages.sh [action] [target]`
+  - Targets: `brew`, `node`, `bun`, `pnpm`, `ruby`, `rust`, `all`
+  - Source-of-truth files: `Brewfile`, `node_packages.txt`, `bun_packages.txt`, `pnpm_packages.txt`, `ruby_packages.txt`, `rust_packages.txt`
+
+  **Install examples (fish):**
+
+  ```fish
+  ./packages.sh                  # install everything (default)
+  ./packages.sh bun              # install just Bun globals
+  ./packages.sh install pnpm     # install pnpm globals
+  ./packages.sh --help           # full reference
+  ```
+
+  **Uninstall examples (fish):**
+
+  ```fish
+  ./packages.sh uninstall bun    # remove every pkg in bun_packages.txt
+  ./packages.sh uninstall pnpm   # remove every pkg in pnpm_packages.txt
+  ./packages.sh uninstall all    # remove everything (reverse order; brew last)
+  ```
+
+  Or uninstall directly without the script (fish):
+
+  ```fish
+  bun remove -g (cat packages/bun_packages.txt)
+  pnpm remove -g (cat packages/pnpm_packages.txt)
+  npm uninstall -g (cat packages/node_packages.txt)
+  ```
 - repositories (repos/)
   - `repos.sh` - Clones the repositories in the `.txt` files at the corresponding locations
 - private (private/)

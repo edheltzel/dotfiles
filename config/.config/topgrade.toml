@@ -49,10 +49,10 @@ autoremove = true
 repos = [
   "~/Developer/AI/herdr/",
   "~/Developer/AI/Fabric/",
-  "~/Developer/AI/gstack/",
   "~/Developer/AI/claude-seo/",
   "~/Developer/AI/claude-obsidian/",
   "~/Developer/AI/claude-cybersecurity/",
   "~/Developer/AI/PesonalAI/",
   "~/Developer/AI/FLOW/",
+
 ]
