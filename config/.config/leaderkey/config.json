@@ -365,6 +365,11 @@
           "value" : "/Applications/Claude.app"
         },
         {
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Applications/Codex.app"
+        },
+        {
           "actions" : [
             {
               "iconPath" : "questionmark.key.filled",
