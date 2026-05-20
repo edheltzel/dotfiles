@@ -11,7 +11,7 @@ start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-default-root-container-layout = 'tiles'     #Possible values: tiles|accordion
+default-root-container-layout = 'tiles' #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 accordion-padding = 15
 
@@ -30,50 +30,50 @@ on-mode-changed = ['exec-and-forget sketchybar --trigger aerospace_mode_change']
 
 [gaps]
 inner.horizontal = 5
-inner.vertical   = 5
-outer.top        = 2
-outer.left       = 5
-outer.right      = 5
-outer.bottom     = 5
+inner.vertical = 5
+outer.top = 2
+outer.left = 5
+outer.right = 5
+outer.bottom = 5
 
 [key-mapping]
 preset = 'qwerty'
 
 [mode.main.binding] # hyper+w+<NUMBER>
-alt-ctrl-shift-0 = 'workspace hq'       # 0 -> primary workspace
-alt-ctrl-shift-1 = 'workspace code'     # 1 -> dev
-alt-ctrl-shift-2 = 'workspace ai'       # 2 -> ai tooling
-alt-ctrl-shift-3 = 'workspace design'   # 3 -> design
-alt-ctrl-shift-4 = 'workspace comms'    # 4 -> comms
+alt-ctrl-shift-0 = 'workspace hq' # 0 -> primary workspace
+alt-ctrl-shift-1 = 'workspace code' # 1 -> dev
+alt-ctrl-shift-2 = 'workspace ai' # 2 -> ai tooling
+alt-ctrl-shift-3 = 'workspace design' # 3 -> design
+alt-ctrl-shift-4 = 'workspace comms' # 4 -> comms
 alt-ctrl-shift-5 = 'workspace overflow' # 5 -> overflow
 
 # cycle through workspaces (wraps around)
-# alt-ctrl-shift-j = 'workspace next --wrap-around'
-# alt-ctrl-shift-k = 'workspace prev --wrap-around'
+alt-ctrl-shift-i = 'workspace next --wrap-around'
+alt-ctrl-shift-u = 'workspace prev --wrap-around'
 
 # cycle through windows (wraps around)
-alt-ctrl-shift-i = 'focus --boundaries-action wrap-around-the-workspace left'
-alt-ctrl-shift-u = 'focus --boundaries-action wrap-around-the-workspace right'
+# alt-ctrl-shift-i = 'focus --boundaries-action wrap-around-the-workspace left'
+# alt-ctrl-shift-u = 'focus --boundaries-action wrap-around-the-workspace right'
 
 # jumps
 # alt-ctrl-shift-i = 'focus-back-and-forth'     #last 2 windows
 # alt-ctrl-shift-u = 'workspace-back-and-forth' #last 2 workspaces
 
 [mode.resize.binding] # hyper+w+s
-h     = 'resize width -50'
-j     = 'resize height +50'
-k     = 'resize height -50'
-l     = 'resize width +50'
-0     = 'balance-sizes'
-esc   = 'mode main'
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+0 = 'balance-sizes'
+esc = 'mode main'
 enter = 'mode main'
 
 [mode.move.binding] # hyper+w+m
-h     = 'move left'
-j     = 'move down'
-k     = 'move up'
-l     = 'move right'
-esc   = 'mode main'
+h = 'move left'
+j = 'move down'
+k = 'move up'
+l = 'move right'
+esc = 'mode main'
 enter = 'mode main'
 
 ### Dedicated Workspaces of Apps ###
