@@ -59,8 +59,8 @@ if status is-interactive
 end
 
 # pnpm
-set -gx PNPM_HOME "/Users/ed/Library/pnpm"
+set -gx PNPM_HOME /Users/ed/Library/pnpm
 if not string match -q -- "$PNPM_HOME/bin" $PATH
-  set -gx PATH "$PNPM_HOME/bin" $PATH
+    set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
