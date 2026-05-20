@@ -55,23 +55,23 @@ brew 'tmux'         # Multiplexer
 brew 'taproom'      # TUI for homebrew
 
 # CLI Basics
-brew 'ast-grep'             # A fast and polyglot tool for code structural search, lint, rewriting at large scale
-brew 'ack'                  # Search tool like grep, but faster
-brew 'assimp'               # Open source library to import various 3d-model-formats in an uniform manner
+brew 'ast-grep'             # a faster grep
+brew 'ack'                  # Search like grep, but faster
+brew 'assimp'               # 3D model import tool
 brew 'bat'                  # better cat - Rust
-brew 'brew-cask-completion' # Fish shell completion for brew cask
-brew 'chafa'                # Image to ASCII art converter
-brew 'coreutils'            # GNU core utilities (those that come with macOS are outdated)
-brew 'cmake'                # CMake - cross-platform build system
-brew 'csvlens'              # CSV viewer
-brew 'duti'                 # Set default apps for file types
+brew 'brew-cask-completion' # brew cask completion
+brew 'chafa'                # image to ASCII art converter
+brew 'coreutils'            # gnu core utilities (those that come with macOS are outdated)
+brew 'cmake'                # cMake - cross-platform build system
+brew 'csvlens'              # csv viewer
+brew 'duti'                 # set default app for file types
 brew 'eza'                  # better ls - Rust
 brew 'fd'                   # better find - Rust
-brew 'fzf'                  # Fuzzy finder - Go
-brew 'television'           # Fuzzy finder - Rust
-brew 'grc'                  # Colorize terminal output
-brew 'hexyl'                # Hex viewer - Rust
-brew 'jq'                   # JSON parser, output and query files
+brew 'fzf'                  # fuzzy finder - Go
+brew 'television'           # fuzzy finder - Rust
+brew 'grc'                  # colorize terminal output
+brew 'hexyl'                # hex viewer - Rust
+brew 'jq'                   # json parser
 brew 'just'                 # better make
 brew 'mas'                  # Mac App Store CLI
 brew 'most'                 # better less
@@ -206,7 +206,6 @@ cask 'figma'                # Design tool
 cask 'nucleo'               # Icon manager
 
 # 3D Modeling & CAD
-cask 'blender'              # 3D Software
 cask 'openscad'             # 3D CAD Modeller
 cask 'freecad'              # 3D CAD - open source
 
@@ -271,20 +270,16 @@ cask 'google-chrome'             # For tests
 cask 'sf-symbols'
 brew 'font-sf-pro'
 cask 'font-inter'                     
-cask 'font-space-grotesk'             
 cask 'font-lilex-nerd-font'           
 cask 'font-fira-code-nerd-font'       
-cask 'font-victor-mono-nerd-font'     
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 
 # Development Apps
 cask 'cyberduck'                      # Mount remote storage locations
-cask 'local'                          # Local WordPress development
 
 cask 'obsidian'                       # PKM editor
 cask 'sequel-ace'                     # MySQL database management
 cask 'typora'                         # Markdown editor
-# cask 'visual-studio-code'             # Code editor
 cask 'zed'                            # Code editor - Rust
 
 # AI tooling and ADEs (AI/Agent Development Environment)
@@ -298,15 +293,14 @@ cask 'codex'                          # Codex cli
 cask 'codex-app'                      # Codex Desktop 
 brew 'fabric-ai'
 brew 'agent-browser'
-
 brew 'whisper-cpp'
 brew 'sox'
 brew 'socat'
 
 # Terminal emulators
 cask 'ghostty'                        # Zig
-cask 'kitty'                          # Python+C
-cask 'wezterm@nightly'                # Rust
+# cask 'kitty'                          # Python+C
+# cask 'wezterm@nightly'                # Rust
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
@@ -325,13 +319,7 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac App Store Installs
 mas 'Shapr3d', id: 1091675654
-# mas 'ColorSlurp', id: 1287239339
-# mas 'Icon Slate', id: 439697913
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959
-# mas 'Gifski', id: 1351639930
 mas 'Xcode', id: 497799835
 mas 'Amphetamine', id: 937984704
-# mas 'Qi FM', id: 147969619
-# mas 'ColorNoise', id: 1640045375
-# mas 'Toggl Track: Hours & Time Log', id: 1291898086

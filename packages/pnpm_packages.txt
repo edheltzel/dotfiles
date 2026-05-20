@@ -8,6 +8,7 @@ cspell
 designlang
 hunkdiff
 neovim
+opensrc
 portless
 skills
 tree-sitter-cli

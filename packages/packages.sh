@@ -71,6 +71,18 @@ install_pnpm_packages() {
     fi
     substep_success "pnpm installed."
   fi
+
+  # Pre-approve build scripts so install doesn't prompt for puppeteer, bun, etc.
+  # pnpm v10+ blocks postinstall scripts by default; the allowlist lives in
+  # `pnpm root -g`/pnpm-workspace.yaml.
+  local pnpm_global_dir
+  pnpm_global_dir=$(pnpm root -g 2>/dev/null)
+  if [ -n "$pnpm_global_dir" ] && [ -f "pnpm-workspace.yaml" ]; then
+    mkdir -p "$pnpm_global_dir"
+    cp "pnpm-workspace.yaml" "$pnpm_global_dir/pnpm-workspace.yaml"
+    substep_success "Installed pnpm allowBuilds template → $pnpm_global_dir/pnpm-workspace.yaml"
+  fi
+
   info "Installing pnpm global packages..."
   pnpm add -g $(cat $pnpm_packages)
   success "All pnpm global packages installed."
