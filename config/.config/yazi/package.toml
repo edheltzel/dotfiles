@@ -8,6 +8,11 @@ use = "yazi-rs/plugins:git"
 rev = "5d5c480"
 hash = "88e56a64b7ce7c4314427452343fef17"
 
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "406ce6c"
+hash = "f5afc904d5106ee368c8aa2ded43bd74"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "8e6296f"
