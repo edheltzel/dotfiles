@@ -26,8 +26,12 @@ if status is-interactive
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxd 'tmux detach'
     abbr --add hrd herdr
+    abbr --add hup 'herdr update'
+    abbr --add has --set-cursor 'herdr session attach %'
     abbr --add hrr --set-cursor 'herdr --remote %'
+    abbr --add hks --set-cursor 'herdr session stop %'
     abbr --add hss 'herdr server stop'
+    abbr --add hls 'herdr session list'
 
     # AI Agents + Models
     abbr --add cc claude
