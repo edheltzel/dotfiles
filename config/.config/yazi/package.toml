@@ -13,6 +13,11 @@ use = "ndtoan96/ouch"
 rev = "406ce6c"
 hash = "f5afc904d5106ee368c8aa2ded43bd74"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:vcs-files"
+rev = "5d5c480"
+hash = "6b141fbed3c74b45558fbc7088c805ee"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "8e6296f"
