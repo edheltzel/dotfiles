@@ -1,43 +1,62 @@
 onboarding = false
 
-[ui]
-show_agent_labels_on_pane_borders = true
-sound.enabled = true
-toast.enabled = true
-toast.delivery = "terminal"
-
-[theme]
-name = "terminal"
-
 [experimental]
 allow_nested = true
 kitty_graphics = true
 
+[theme]
+name = "terminal"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+[ui.toast]
+enabled = true
+delivery = "terminal"
+
+[ui.sound]
+enabled = true
+path = "sounds/notification.mp3"
+done_path = "sounds/done.mp3"
+request_path = "sounds/request.mp3"
+
 [keys]
 prefix = "shift+alt+,"
 detach = "prefix+d"
-fullscreen = "prefix+f"
 resize_mode = "prefix+r"
 toggle_sidebar = "prefix+b"
+
+fullscreen = "prefix+f"
 split_vertical = "prefix+\\"
 split_horizontal = "prefix+-"
-close_pane = "prefix+x"
-rename_pane = "prefix+p"
+
 new_tab = "prefix+t"
 rename_tab = "prefix+shift+t"
-new_workspace = "prefix+n"
-rename_workspace = "prefix+shift+n"
-close_workspace = "prefix+shift+w"
-
 next_tab = "shift+alt+l"
 previous_tab = "shift+alt+h"
-next_workspace = "shift+alt+u"
-previous_workspace = "shift+alt+i"
-open_notification_target = "shift+alt+n"
+
+new_workspace = "prefix+n"
+rename_workspace = "prefix+shift+e"
+close_workspace = "prefix+shift+w"
+next_workspace = "shift+alt+i"
+previous_workspace = "shift+alt+u"
+
 previous_agent = "shift+alt+k"
 next_agent = "shift+alt+j"
+
+close_pane = "prefix+x"
+rename_pane = "prefix+p"
 focus_pane_left = "shift+control+alt+h"
 focus_pane_up = "shift+control+alt+k"
 focus_pane_down = "shift+control+alt+j"
 focus_pane_right = "shift+control+alt+l"
 
+[[keys.command]]
+key = "prefix+g"
+type = "pane"
+command = "lazygit"
+
+[[keys.command]]
+key = "prefix+y"
+type = "pane"
+command = "yazi"
