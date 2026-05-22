@@ -184,6 +184,12 @@
           "key" : "s",
           "label" : "Music 🎧",
           "type" : "group"
+        },
+        {
+          "key" : "g",
+          "label" : "Gmail 📧",
+          "type" : "url",
+          "value" : "https://mail.google.com/mail/u/0/#inbox"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -697,6 +703,12 @@
           "value" : "raycast-x://extensions/raycast/script-commands/run-topgrade"
         },
         {
+          "iconPath" : "list.clipboard.fill",
+          "key" : "v",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
+        },
+        {
           "iconPath" : "apple.terminal.on.rectangle",
           "key" : "z",
           "label" : "Open Project in Zed",
@@ -776,12 +788,6 @@
       "key" : "t",
       "label" : "Terminals",
       "type" : "group"
-    },
-    {
-      "iconPath" : "list.clipboard.fill",
-      "key" : "v",
-      "type" : "url",
-      "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
     },
     {
       "actions" : [
