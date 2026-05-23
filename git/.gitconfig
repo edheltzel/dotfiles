@@ -160,3 +160,5 @@
   line-numbers-right-style = cyan
   line-numbers-minus-style = 124
   line-numbers-plus-style = 28
+[pager]
+	diff = diffnav
