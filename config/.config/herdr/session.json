@@ -9,21 +9,9 @@
         {
           "custom_name": "review",
           "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 1
-              },
-              "second": {
-                "Pane": 24
-              }
-            }
+            "Pane": 1
           },
           "panes": {
-            "24": {
-              "cwd": "/Users/ed/Developer/atlas-recall"
-            },
             "1": {
               "cwd": "/Users/ed/Developer/atlas-recall",
               "label": "recall"
@@ -44,22 +32,10 @@
         {
           "custom_name": null,
           "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 7
-              },
-              "second": {
-                "Pane": 23
-              }
-            }
+            "Pane": 7
           },
           "panes": {
             "7": {
-              "cwd": "/Users/ed/Developer/atlas-config"
-            },
-            "23": {
               "cwd": "/Users/ed/Developer/atlas-config"
             }
           },
@@ -113,40 +89,28 @@
     {
       "id": "w65268bfb5d7222",
       "custom_name": "Flow",
-      "identity_cwd": "/Users/ed/Developer/AI/FLOW",
+      "identity_cwd": "/Users/ed/.dotfiles",
       "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 11
-              },
-              "second": {
-                "Pane": 13
-              }
-            }
+            "Pane": 11
           },
           "panes": {
             "11": {
-              "cwd": "/Users/ed/Developer/AI/FLOW"
-            },
-            "13": {
-              "cwd": "/Users/ed/Developer/AI/FLOW"
+              "cwd": "/Users/ed/.dotfiles"
             }
           },
           "zoomed": false,
-          "focused": 13,
+          "focused": 11,
           "root_pane": 11
         }
       ],
       "active_tab": 0
     }
   ],
-  "active": 1,
-  "selected": 1,
+  "active": 2,
+  "selected": 2,
   "agent_panel_scope": "AllWorkspaces",
   "sidebar_width": 23,
   "sidebar_section_split": 0.47540984,
