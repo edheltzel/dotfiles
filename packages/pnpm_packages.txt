@@ -1,4 +1,3 @@
-@antfu/ni
 @biomejs/biome
 @bitwarden/cli
 @earendil-works/pi-coding-agent
