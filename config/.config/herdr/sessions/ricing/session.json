@@ -1,0 +1,67 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "w6526b124c28181",
+      "custom_name": null,
+      "identity_cwd": "/Users/ed/.dotfiles",
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 1
+              },
+              "second": {
+                "Pane": 4
+              }
+            }
+          },
+          "panes": {
+            "1": {
+              "cwd": "/Users/ed/.dotfiles"
+            },
+            "4": {
+              "cwd": "/Users/ed/.config/herdr/sounds"
+            }
+          },
+          "zoomed": false,
+          "focused": 4,
+          "root_pane": 1
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w6526b12d2636b2",
+      "custom_name": "NEOED",
+      "identity_cwd": "/Users/ed/.dotfiles/neoed/.config/nvim",
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 2
+          },
+          "panes": {
+            "2": {
+              "cwd": "/Users/ed/.dotfiles/neoed/.config/nvim"
+            }
+          },
+          "zoomed": false,
+          "focused": 2,
+          "root_pane": 2
+        }
+      ],
+      "active_tab": 0
+    }
+  ],
+  "active": 0,
+  "selected": 0,
+  "agent_panel_scope": "AllWorkspaces",
+  "sidebar_width": 26,
+  "sidebar_section_split": 0.5,
+  "collapsed_space_keys": []
+}
