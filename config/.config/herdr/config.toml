@@ -21,7 +21,7 @@ done_path = "sounds/done.mp3"
 request_path = "sounds/request.mp3"
 
 [keys]
-prefix = "control+alt+,"
+prefix = "alt+control+,"
 detach = "prefix+d"
 resize_mode = "prefix+r"
 toggle_sidebar = "prefix+b"
@@ -32,29 +32,34 @@ split_horizontal = "prefix+-"
 
 new_tab = "prefix+t"
 rename_tab = "prefix+shift+t"
-next_tab = "control+alt+l"
-previous_tab = "control+alt+h"
+next_tab = "alt+control+l"
+previous_tab = "alt+control+h"
 
 new_workspace = "prefix+n"
 rename_workspace = "prefix+shift+e"
 close_workspace = "prefix+shift+w"
-next_workspace = "control+alt+i"
-previous_workspace = "control+alt+u"
+next_workspace = "alt+control+i"
+previous_workspace = "alt+control+u"
 
-previous_agent = "control+alt+k"
-next_agent = "control+alt+j"
+previous_agent = "alt+control+k"
+next_agent = "alt+control+j"
 
 close_pane = "prefix+x"
 rename_pane = "prefix+p"
-focus_pane_left = "control+shift+alt+h"
-focus_pane_up = "control+shift+alt+k"
-focus_pane_down = "control+shift+alt+j"
-focus_pane_right = "control+shift+alt+l"
+focus_pane_left = "alt+shift+h"
+focus_pane_up = "alt+shift+k"
+focus_pane_down = "alt+shift+j"
+focus_pane_right = "alt+shift+l"
 
 [[keys.command]]
 key = "prefix+g"
 type = "pane"
 command = "lazygit"
+
+[[keys.command]]
+key = "prefix+shfit+g"
+type = "pane"
+command = "git diff | diffnav --unified"
 
 [[keys.command]]
 key = "prefix+y"

@@ -58,11 +58,11 @@
             }
           },
           "panes": {
-            "10": {
-              "cwd": "/Users/ed/.agents/skills"
-            },
             "20": {
               "cwd": "/Users/ed/.dotfiles/packages"
+            },
+            "10": {
+              "cwd": "/Users/ed/.agents/skills"
             }
           },
           "zoomed": false,
@@ -109,8 +109,8 @@
       "active_tab": 0
     }
   ],
-  "active": 2,
-  "selected": 2,
+  "active": 0,
+  "selected": 0,
   "agent_panel_scope": "AllWorkspaces",
   "sidebar_width": 23,
   "sidebar_section_split": 0.47540984,
