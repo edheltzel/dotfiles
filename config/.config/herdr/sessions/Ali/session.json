@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "w652a980a234101",
+      "custom_name": null,
+      "identity_cwd": "/Users/ed",
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 1
+          },
+          "panes": {
+            "1": {
+              "cwd": "/Users/ed"
+            }
+          },
+          "zoomed": false,
+          "focused": 1,
+          "root_pane": 1
+        }
+      ],
+      "active_tab": 0
+    }
+  ],
+  "active": 0,
+  "selected": 0,
+  "agent_panel_scope": "AllWorkspaces",
+  "sidebar_width": 26,
+  "sidebar_section_split": 0.5,
+  "collapsed_space_keys": []
+}

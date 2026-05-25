@@ -32,16 +32,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 7
+            "Pane": 2
           },
           "panes": {
-            "7": {
+            "2": {
               "cwd": "/Users/ed/Developer/atlas-config"
             }
           },
           "zoomed": false,
-          "focused": 7,
-          "root_pane": 7
+          "focused": 2,
+          "root_pane": 2
         },
         {
           "custom_name": "Diff",
@@ -50,67 +50,67 @@
               "direction": "Horizontal",
               "ratio": 0.5,
               "first": {
-                "Pane": 10
+                "Pane": 3
               },
               "second": {
-                "Pane": 20
+                "Pane": 4
               }
             }
           },
           "panes": {
-            "20": {
-              "cwd": "/Users/ed/.dotfiles/packages"
-            },
-            "10": {
+            "3": {
               "cwd": "/Users/ed/.agents/skills"
+            },
+            "4": {
+              "cwd": "/Users/ed/.dotfiles/packages"
             }
           },
           "zoomed": false,
-          "focused": 20,
-          "root_pane": 10
+          "focused": 4,
+          "root_pane": 3
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 14
+            "Pane": 5
           },
           "panes": {
-            "14": {
+            "5": {
               "cwd": "/Users/ed/Developer/atlas-config/claudecode/.claude"
             }
           },
           "zoomed": false,
-          "focused": 14,
-          "root_pane": 14
+          "focused": 5,
+          "root_pane": 5
         }
       ],
       "active_tab": 0
     },
     {
-      "id": "w65268bfb5d7222",
-      "custom_name": "Flow",
+      "id": "w652a97a8e9fe21",
+      "custom_name": null,
       "identity_cwd": "/Users/ed/.dotfiles",
       "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Pane": 11
+            "Pane": 7
           },
           "panes": {
-            "11": {
+            "7": {
               "cwd": "/Users/ed/.dotfiles"
             }
           },
           "zoomed": false,
-          "focused": 11,
-          "root_pane": 11
+          "focused": 7,
+          "root_pane": 7
         }
       ],
       "active_tab": 0
     }
   ],
-  "active": 0,
-  "selected": 0,
+  "active": 2,
+  "selected": 2,
   "agent_panel_scope": "AllWorkspaces",
   "sidebar_width": 23,
   "sidebar_section_split": 0.47540984,

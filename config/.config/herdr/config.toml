@@ -57,7 +57,7 @@ type = "pane"
 command = "lazygit"
 
 [[keys.command]]
-key = "prefix+shfit+g"
+key = "prefix+/"
 type = "pane"
 command = "git diff | diffnav --unified"
 
