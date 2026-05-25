@@ -52,8 +52,8 @@ alt-ctrl-shift-i = 'workspace next --wrap-around'
 alt-ctrl-shift-u = 'workspace prev --wrap-around'
 
 # cycle through windows (wraps around)
-# alt-ctrl-shift-i = 'focus --boundaries-action wrap-around-the-workspace left'
-# alt-ctrl-shift-u = 'focus --boundaries-action wrap-around-the-workspace right'
+alt-ctrl-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'
+alt-ctrl-shift-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
 # jumps
 # alt-ctrl-shift-i = 'focus-back-and-forth'     #last 2 windows
