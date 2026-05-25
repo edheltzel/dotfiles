@@ -11,6 +11,7 @@ alias atlas='bun /Users/ed/.claude/PAI/Tools/pai.ts'
 alias fabric fabric-ai
 alias j just
 alias t tv
+alias npx='bunx'
 
 # Confirm before overwriting
 alias cp "cp -Ri"
