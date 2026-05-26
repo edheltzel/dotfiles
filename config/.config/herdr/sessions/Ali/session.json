@@ -51,22 +51,48 @@
             }
           },
           "zoomed": false,
-          "focused": 2,
+          "focused": 3,
           "root_pane": 2
         },
         {
           "custom_name": "DIFF+DASH",
           "layout": {
-            "Pane": 4
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 4
+              },
+              "second": {
+                "Pane": 10
+              }
+            }
           },
           "panes": {
             "4": {
+              "cwd": "/Users/ed/.dotfiles/neoed/.config/nvim"
+            },
+            "10": {
               "cwd": "/Users/ed/.dotfiles/neoed/.config/nvim"
             }
           },
           "zoomed": false,
           "focused": 4,
           "root_pane": 4
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 11
+          },
+          "panes": {
+            "11": {
+              "cwd": "/Users/ed/Sites/alianza.health"
+            }
+          },
+          "zoomed": false,
+          "focused": 11,
+          "root_pane": 11
         }
       ],
       "active_tab": 0
