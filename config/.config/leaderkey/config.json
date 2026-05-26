@@ -69,6 +69,12 @@
           "type" : "group"
         },
         {
+          "key" : "g",
+          "label" : "Gmail 📧",
+          "type" : "url",
+          "value" : "https://mail.google.com/mail/u/0/#inbox"
+        },
+        {
           "key" : "i",
           "type" : "application",
           "value" : "/Applications/Invoice Ninja.app"
@@ -184,12 +190,6 @@
           "key" : "s",
           "label" : "Music 🎧",
           "type" : "group"
-        },
-        {
-          "key" : "g",
-          "label" : "Gmail 📧",
-          "type" : "url",
-          "value" : "https://mail.google.com/mail/u/0/#inbox"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -371,11 +371,6 @@
           "value" : "/Applications/Claude.app"
         },
         {
-          "key" : "x",
-          "type" : "application",
-          "value" : "/Applications/Codex.app"
-        },
-        {
           "actions" : [
             {
               "iconPath" : "questionmark.key.filled",
@@ -414,6 +409,11 @@
           "key" : "s",
           "type" : "application",
           "value" : "/Applications/Superconductor.app"
+        },
+        {
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Applications/Codex.app"
         }
       ],
       "iconPath" : "sparkles",
@@ -511,13 +511,6 @@
           "label" : "GTask",
           "type" : "url",
           "value" : "raycast-x://extensions/elliotdes/google-tasks/create-task"
-        },
-        {
-          "iconPath" : "party.popper.fill",
-          "key" : "enter",
-          "label" : "Confetti",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/raycast/confetti"
         },
         {
           "iconPath" : "checkmark.rectangle.stack.fill",
@@ -632,6 +625,13 @@
           "label" : "Edit Dotfiles",
           "type" : "url",
           "value" : "raycast-x://extensions/raycast/script-commands/edit-dotfiles"
+        },
+        {
+          "iconPath" : "party.popper.fill",
+          "key" : "enter",
+          "label" : "Confetti",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/raycast/confetti"
         },
         {
           "iconPath" : "target",
@@ -766,6 +766,11 @@
     },
     {
       "actions" : [
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Applications/cmux.app"
+        },
         {
           "key" : "g",
           "type" : "application",
