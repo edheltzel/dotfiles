@@ -58,7 +58,7 @@ gha-creds-*.json
 /.codex/*
 /AGENTS.md
 /CLAUDE.md
-
+.mcp.json
 
 ### Zellij ###
 config/.config/zellij/plugins/*.wasm
