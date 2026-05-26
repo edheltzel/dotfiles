@@ -30,6 +30,7 @@ if status is-interactive
     abbr --add has --set-cursor 'herdr session attach %'
     abbr --add hrr --set-cursor 'herdr --remote %'
     abbr --add hks --set-cursor 'herdr session stop %'
+    abbr --add hhs --set-cursor 'herdr --session %'
     abbr --add hss 'herdr server stop'
     abbr --add hls 'herdr session list'
 
