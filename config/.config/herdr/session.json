@@ -16,12 +16,12 @@
                 "Pane": 1
               },
               "second": {
-                "Pane": 9
+                "Pane": 2
               }
             }
           },
           "panes": {
-            "9": {
+            "2": {
               "cwd": "/Users/ed/Developer/_AI"
             },
             "1": {
@@ -30,25 +30,58 @@
             }
           },
           "zoomed": false,
-          "focused": 9,
+          "focused": 2,
           "root_pane": 1
+        },
+        {
+          "custom_name": "NVIM",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 3
+              },
+              "second": {
+                "Pane": 9
+              }
+            }
+          },
+          "panes": {
+            "3": {
+              "cwd": "/Users/ed/Developer/atlas-config",
+              "label": "neoed"
+            },
+            "9": {
+              "cwd": "/Users/ed/.dotfiles"
+            }
+          },
+          "zoomed": false,
+          "focused": 9,
+          "root_pane": 3
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 3
+            "Pane": 17
           },
           "panes": {
-            "3": {
-              "cwd": "/Users/ed/Developer/atlas-config"
+            "17": {
+              "cwd": "/Users/ed/Developer/HerdrTUI",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "5b97d6f7-43b3-417e-98b4-9bd47d350831"
+              }
             }
           },
           "zoomed": false,
-          "focused": 3,
-          "root_pane": 3
+          "focused": 17,
+          "root_pane": 17
         }
       ],
-      "active_tab": 0
+      "active_tab": 1
     },
     {
       "id": "w6521ece05c6d43",
@@ -80,15 +113,33 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 5
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 5
+              },
+              "second": {
+                "Pane": 19
+              }
+            }
           },
           "panes": {
             "5": {
+              "cwd": "/Users/ed/Developer/atlas-voicesystem",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "71edcb52-a471-4f12-959c-69d5cc7c593c"
+              }
+            },
+            "19": {
               "cwd": "/Users/ed/Developer/atlas-voicesystem"
             }
           },
           "zoomed": false,
-          "focused": 5,
+          "focused": 19,
           "root_pane": 5
         }
       ],

@@ -675,14 +675,21 @@
           "value" : "raycast-x://extensions/thomas/color-picker/pick-color"
         },
         {
-          "iconPath" : "x.circle.fill",
+          "iconPath" : "xmark.octagon.fill",
           "key" : "q",
           "label" : "Pick App to Quit",
           "type" : "url",
           "value" : "raycast-x://extensions/mackopes/quit-applications/index"
         },
         {
-          "iconPath" : "x.circle.fill",
+          "iconPath" : "eject.fill",
+          "key" : "e",
+          "label" : "Pick App to Quit",
+          "type" : "url",
+          "value" : "raycast-x://extensions/johndturn/single-disk-eject/index"
+        },
+        {
+          "iconPath" : "power.circle.fill",
           "key" : "R",
           "label" : "Restart",
           "type" : "url",

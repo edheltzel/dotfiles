@@ -3,6 +3,8 @@ onboarding = false
 [experimental]
 allow_nested = true
 kitty_graphics = true
+resume_agents_on_restore = true
+pane_history = true
 
 [theme]
 name = "terminal"
@@ -21,35 +23,39 @@ done_path = "sounds/done.mp3"
 request_path = "sounds/request.mp3"
 
 [keys]
-prefix = "control+k"
+prefix = "control+,"
 detach = "prefix+d"
 resize_mode = "prefix+r"
 toggle_sidebar = "prefix+b"
+
+goto=""
+edit_scrollback =""
+new_worktree=""
 
 fullscreen = "prefix+f"
 split_vertical = "prefix+\\"
 split_horizontal = "prefix+-"
 
 new_tab = "prefix+t"
-rename_tab = "prefix+shift+t"
 next_tab = "alt+control+l"
 previous_tab = "alt+control+h"
+rename_tab = "prefix+e"
 
 new_workspace = "prefix+n"
-rename_workspace = "prefix+shift+e"
 close_workspace = "prefix+shift+w"
 next_workspace = "alt+control+i"
 previous_workspace = "alt+control+u"
+rename_workspace = "prefix+shift+e"
 
 previous_agent = "alt+control+k"
 next_agent = "alt+control+j"
 
 close_pane = "prefix+x"
-rename_pane = "prefix+p"
 focus_pane_left = "alt+control+shift+h"
 focus_pane_up = "alt+control+shift+k"
 focus_pane_down = "alt+control+shift+j"
 focus_pane_right = "alt+control+shift+l"
+rename_pane = "prefix+control+e"
 
 [[keys.command]]
 key = "prefix+g"
