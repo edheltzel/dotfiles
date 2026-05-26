@@ -21,16 +21,16 @@
             }
           },
           "panes": {
-            "15": {
-              "cwd": "/Users/ed/Developer/_AI/mattpocockSkills"
-            },
             "1": {
               "cwd": "/Users/ed/Developer/atlas-config",
               "label": "recall"
+            },
+            "15": {
+              "cwd": "/Users/ed/Developer/_AI/mattpocockSkills"
             }
           },
           "zoomed": false,
-          "focused": 15,
+          "focused": 1,
           "root_pane": 1
         },
         {
@@ -48,7 +48,7 @@
           "root_pane": 16
         }
       ],
-      "active_tab": 1
+      "active_tab": 0
     },
     {
       "id": "w6521ece05c6d43",
