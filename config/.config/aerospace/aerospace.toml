@@ -11,7 +11,7 @@ start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-default-root-container-layout = 'tiles' #Possible values: tiles|accordion
+default-root-container-layout = 'accordion' #Possible values: tiles|accordion
 default-root-container-orientation = 'auto'
 accordion-padding = 15
 
@@ -40,20 +40,20 @@ outer.bottom = 5
 preset = 'qwerty'
 
 [mode.main.binding] # hyper+w+<NUMBER>
-alt-ctrl-shift-0 = 'workspace hq' # 0 -> primary workspace
-alt-ctrl-shift-1 = 'workspace code' # 1 -> dev
-alt-ctrl-shift-2 = 'workspace ai' # 2 -> ai tooling
-alt-ctrl-shift-3 = 'workspace design' # 3 -> design
-alt-ctrl-shift-4 = 'workspace comms' # 4 -> comms
-alt-ctrl-shift-5 = 'workspace overflow' # 5 -> overflow
+ctrl-cmd-0 = 'workspace hq' # 0 -> primary workspace
+ctrl-cmd-1 = 'workspace code' # 1 -> dev
+ctrl-cmd-2 = 'workspace ai' # 2 -> ai tooling
+ctrl-cmd-3 = 'workspace design' # 3 -> design
+ctrl-cmd-4 = 'workspace comms' # 4 -> comms
+ctrl-cmd-5 = 'workspace overflow' # 5 -> overflow
 
 # cycle through workspaces (wraps around)
-alt-ctrl-shift-i = 'workspace next --wrap-around'
-alt-ctrl-shift-u = 'workspace prev --wrap-around'
+ctrl-cmd-i = 'workspace next --wrap-around'
+ctrl-cmd-u = 'workspace prev --wrap-around'
 
 # cycle through windows (wraps around)
-alt-ctrl-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'
-alt-ctrl-shift-l = 'focus --boundaries-action wrap-around-the-workspace right'
+ctrl-cmd-h = 'focus --boundaries-action wrap-around-the-workspace left'
+ctrl-cmd-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
 # jumps
 # alt-ctrl-shift-i = 'focus-back-and-forth'     #last 2 windows

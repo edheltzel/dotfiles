@@ -46,10 +46,10 @@ next_agent = "alt+control+j"
 
 close_pane = "prefix+x"
 rename_pane = "prefix+p"
-focus_pane_left = "alt+shift+h"
-focus_pane_up = "alt+shift+k"
-focus_pane_down = "alt+shift+j"
-focus_pane_right = "alt+shift+l"
+focus_pane_left = "alt+control+shift+h"
+focus_pane_up = "alt+control+shift+k"
+focus_pane_down = "alt+control+shift+j"
+focus_pane_right = "alt+control+shift+l"
 
 [[keys.command]]
 key = "prefix+g"

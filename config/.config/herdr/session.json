@@ -3,31 +3,57 @@
   "workspaces": [
     {
       "id": "w651e4028bef8e1",
-      "custom_name": "AtlasRecall",
-      "identity_cwd": "/Users/ed/Developer/atlas-recall",
+      "custom_name": "AtlasConfig",
+      "identity_cwd": "/Users/ed/Developer/atlas-config",
       "tabs": [
         {
           "custom_name": "review",
           "layout": {
-            "Pane": 1
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 1
+              },
+              "second": {
+                "Pane": 15
+              }
+            }
           },
           "panes": {
+            "15": {
+              "cwd": "/Users/ed/Developer/_AI/mattpocockSkills"
+            },
             "1": {
-              "cwd": "/Users/ed/Developer/atlas-recall",
+              "cwd": "/Users/ed/Developer/atlas-config",
               "label": "recall"
             }
           },
           "zoomed": false,
-          "focused": 1,
+          "focused": 15,
           "root_pane": 1
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 16
+          },
+          "panes": {
+            "16": {
+              "cwd": "/Users/ed/Developer/atlas-config"
+            }
+          },
+          "zoomed": false,
+          "focused": 16,
+          "root_pane": 16
         }
       ],
-      "active_tab": 0
+      "active_tab": 1
     },
     {
       "id": "w6521ece05c6d43",
-      "custom_name": null,
-      "identity_cwd": "/Users/ed/Developer/atlas-config",
+      "custom_name": "Recall",
+      "identity_cwd": "/Users/ed/Developer/atlas-recall",
       "tabs": [
         {
           "custom_name": null,
@@ -36,81 +62,107 @@
           },
           "panes": {
             "2": {
-              "cwd": "/Users/ed/Developer/atlas-config"
+              "cwd": "/Users/ed/Developer/atlas-recall"
             }
           },
           "zoomed": false,
           "focused": 2,
           "root_pane": 2
-        },
-        {
-          "custom_name": "Diff",
-          "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 3
-              },
-              "second": {
-                "Pane": 4
-              }
-            }
-          },
-          "panes": {
-            "3": {
-              "cwd": "/Users/ed/.agents/skills"
-            },
-            "4": {
-              "cwd": "/Users/ed/.dotfiles/packages"
-            }
-          },
-          "zoomed": false,
-          "focused": 4,
-          "root_pane": 3
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 5
-          },
-          "panes": {
-            "5": {
-              "cwd": "/Users/ed/Developer/atlas-config/claudecode/.claude"
-            }
-          },
-          "zoomed": false,
-          "focused": 5,
-          "root_pane": 5
         }
       ],
       "active_tab": 0
     },
     {
-      "id": "w652a97a8e9fe21",
-      "custom_name": null,
-      "identity_cwd": "/Users/ed/.dotfiles",
+      "id": "w652a9946196812",
+      "custom_name": "VoiceSystem",
+      "identity_cwd": "/Users/ed/Developer/atlas-voicesystem",
       "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Pane": 7
+            "Pane": 10
           },
           "panes": {
-            "7": {
-              "cwd": "/Users/ed/.dotfiles"
+            "10": {
+              "cwd": "/Users/ed/Developer/atlas-voicesystem"
             }
           },
           "zoomed": false,
-          "focused": 7,
-          "root_pane": 7
+          "focused": 10,
+          "root_pane": 10
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w652a99deecbc53",
+      "custom_name": "AtlasAgents",
+      "identity_cwd": "/Users/ed/Developer/atlas-agents",
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 11
+          },
+          "panes": {
+            "11": {
+              "cwd": "/Users/ed/Developer/atlas-agents"
+            }
+          },
+          "zoomed": false,
+          "focused": 11,
+          "root_pane": 11
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w652a9a718f58f4",
+      "custom_name": "VisualExplainer",
+      "identity_cwd": "/Users/ed/Developer/atlas-VisualExplainer",
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 12
+          },
+          "panes": {
+            "12": {
+              "cwd": "/Users/ed/Developer/atlas-VisualExplainer"
+            }
+          },
+          "zoomed": false,
+          "focused": 12,
+          "root_pane": 12
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w652a9adfd5c895",
+      "custom_name": "AgentSkills",
+      "identity_cwd": "/Users/ed/Developer/agent-skills",
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 13
+          },
+          "panes": {
+            "13": {
+              "cwd": "/Users/ed/Developer/agent-skills"
+            }
+          },
+          "zoomed": false,
+          "focused": 13,
+          "root_pane": 13
         }
       ],
       "active_tab": 0
     }
   ],
-  "active": 2,
-  "selected": 2,
+  "active": 0,
+  "selected": 0,
   "agent_panel_scope": "AllWorkspaces",
   "sidebar_width": 23,
   "sidebar_section_split": 0.47540984,
