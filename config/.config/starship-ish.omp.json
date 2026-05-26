@@ -74,29 +74,6 @@
         "white": "#E0DEF4",
         "yellow": "#F6C177"
       },
-      "tokyo-night": {
-        "blue": "#7AA2F7",
-        "branch": "#FF4499",
-        "cyan": "#7DCFFF",
-        "error": "#F7768E",
-        "git_added": "#9ECE6A",
-        "git_ahead": "#C0CAF5",
-        "git_deleted": "#F7768E",
-        "git_modified": "#E0AF68",
-        "git_staged": "#9ECE6A",
-        "git_untracked": "#7DCFFF",
-        "green": "#9ECE6A",
-        "magenta": "#BB9AF7",
-        "muted": "#565F89",
-        "orange": "#FF9E64",
-        "path": "#7DCFFF",
-        "pink": "#FF4499",
-        "purple": "#BB9AF7",
-        "red": "#F7768E",
-        "success": "#9ECE6A",
-        "white": "#C0CAF5",
-        "yellow": "#E0AF68"
-      },
       "rose-pine-moon": {
         "blue": "#9CCFD8",
         "branch": "#D7827E",
@@ -143,29 +120,6 @@
         "white": "#575279",
         "yellow": "#EA9D34"
       },
-      "tokyo-night-moon": {
-        "blue": "#82AAFF",
-        "branch": "#FF7EB9",
-        "cyan": "#86E1FC",
-        "error": "#FF757F",
-        "git_added": "#C3E88D",
-        "git_ahead": "#C8D3F5",
-        "git_deleted": "#FF757F",
-        "git_modified": "#FFC777",
-        "git_staged": "#C3E88D",
-        "git_untracked": "#86E1FC",
-        "green": "#C3E88D",
-        "magenta": "#C099FF",
-        "muted": "#636DA6",
-        "orange": "#FF966C",
-        "path": "#86E1FC",
-        "pink": "#FF7EB9",
-        "purple": "#C099FF",
-        "red": "#FF757F",
-        "success": "#C3E88D",
-        "white": "#C8D3F5",
-        "yellow": "#FFC777"
-      },
       "vesper": {
         "blue": "#99FFE4",
         "branch": "#FFCFA8",
@@ -190,7 +144,7 @@
         "yellow": "#FFC799"
       }
     },
-    "template": "vesper"
+    "template": "eldritch"
   },
   "transient_prompt": {
     "template": "❯ ",
@@ -221,7 +175,8 @@
             "fetch_e_count": true,
             "fetch_stash_count": true,
             "fetch_status": true,
-            "fetch_upstream_icon": true
+            "fetch_upstream_icon": true,
+            "disable_with_jj": true
           },
           "template": "<p:muted>on</> {{ .HEAD }}{{ if .LatestTag }} <p:blue>󰓹 {{ .LatestTag }}</>{{ end }}{{if .BranchStatus }} <p:git_ahead>{{ .BranchStatus }}</>{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Untracked 0 }} <p:git_untracked>?{{ .Working.Untracked }}</>{{ end }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <p:git_staged></>{{ if gt .Staging.Added 0 }} <p:git_added>+{{ .Staging.Added }}</>{{ end }}{{ if gt .Staging.Modified 0 }} <p:git_modified>~{{ .Staging.Modified }}</>{{ end }}{{ if gt .Staging.Deleted 0 }} <p:git_deleted>-{{ .Staging.Deleted }}</>{{ end }}{{ end }}{{ if gt .StashCount 0 }} <p:purple> {{ .StashCount }}</>{{ end }} ",
           "foreground": "p:branch",
@@ -238,7 +193,7 @@
             "fetch_ahead_counter": true,
             "ignore_working_copy": true
           },
-          "template": "<p:muted>on</> 󰘬 {{ .ChangeID }}{{ if .ClosestBookmarks }} <p:muted>@</> {{ .ClosestBookmarks }}{{ if .Ahead }} <p:git_ahead>⇡{{ .Ahead }}</>{{ end }}{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Moved 0 }} <p:purple>>{{ .Working.Moved }}</>{{ end }}{{ end }} "
+        "template": "<p:muted>on</> <p:cyan>󱗆 </> <p:muted>{{ .ChangeID }}</>{{ if .ClosestBookmarks }} {{ .ClosestBookmarks }}{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Moved 0 }} <p:purple>>{{ .Working.Moved }}</>{{ end }}{{ end }} "
         },
         {
           "options": {

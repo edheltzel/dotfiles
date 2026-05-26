@@ -2,7 +2,7 @@
 # Paths, exports, variables handled by conf.d/ (loaded before this file)
 
 # Prompt engine (change to swap: "starship" or "oh-my-posh")
-set -g FISH_PROMPT starship
+set -g FISH_PROMPT oh-my-posh
 
 if status is-interactive
     # Initialize prompt (once — do NOT reinitialize on events)
