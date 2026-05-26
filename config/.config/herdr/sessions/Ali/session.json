@@ -3,8 +3,8 @@
   "workspaces": [
     {
       "id": "w652a980a234101",
-      "custom_name": null,
-      "identity_cwd": "/Users/ed/Sites/alianza.video/.agents/skills",
+      "custom_name": "AliVideo",
+      "identity_cwd": "/Users/ed/Sites",
       "tabs": [
         {
           "custom_name": null,
@@ -13,7 +13,7 @@
           },
           "panes": {
             "1": {
-              "cwd": "/Users/ed/Sites/alianza.video/.agents/skills"
+              "cwd": "/Users/ed/Sites"
             }
           },
           "zoomed": false,
@@ -57,7 +57,7 @@
           "root_pane": 5
         }
       ],
-      "active_tab": 0
+      "active_tab": 1
     }
   ],
   "active": 1,
