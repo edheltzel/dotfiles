@@ -52,9 +52,10 @@ ctrl-cmd-i = 'workspace next --wrap-around'
 ctrl-cmd-u = 'workspace prev --wrap-around'
 
 # cycle through windows (wraps around)
-ctrl-cmd-h = 'focus --boundaries-action wrap-around-the-workspace left'
-ctrl-cmd-l = 'focus --boundaries-action wrap-around-the-workspace right'
-
+# ctrl-cmd-h = 'focus --boundaries-action wrap-around-the-workspace left'
+# ctrl-cmd-l = 'focus --boundaries-action wrap-around-the-workspace right'
+ctrl-cmd-h = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
+ctrl-cmd-l = 'focus dfs-prev --boundaries-action wrap-around-the-workspace'
 # jumps
 # alt-ctrl-shift-i = 'focus-back-and-forth'     #last 2 windows
 # alt-ctrl-shift-u = 'workspace-back-and-forth' #last 2 workspaces
@@ -82,7 +83,7 @@ if.app-name-regex-substring = 'Helium|Zen|Safari*|Google Chrome'
 run = "move-node-to-workspace hq"
 
 [[on-window-detected]] # Coding Workspace
-if.app-name-regex-substring = '.*Code|Zed|Ghostty|Obsidian|Typora|Text*'
+if.app-name-regex-substring = '.*Code|Zed|Ghostty|cmux|Obsidian|Typora|Text*'
 run = "move-node-to-workspace code"
 
 [[on-window-detected]] # Ai Workspace

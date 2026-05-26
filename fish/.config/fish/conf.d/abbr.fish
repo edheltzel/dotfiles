@@ -60,6 +60,7 @@ if status is-interactive
 
     # Git
     abbr --add lg lazygit
+    abbr --add lj lazyjj
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
@@ -82,6 +83,7 @@ if status is-interactive
     abbr --add yy yazi
     abbr --add wr wrangler
     abbr --add upp 'topgrade --yes'
+    abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
     abbr --add phps 'php -S localhost:8888'
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress

@@ -47,11 +47,16 @@ autoremove = true
 
 [git]
 repos = [
-  "~/Developer/AI/Fabric/",
-  "~/Developer/AI/claude-seo/",
-  "~/Developer/AI/claude-obsidian/",
-  "~/Developer/AI/claude-cybersecurity/",
   "~/Developer/AI/FLOW/",
+  "~/Developer/AI/Fabric/",
   "~/Developer/AI/PersonalAI",
+  "~/Developer/AI/agentPiMono",
+  "~/Developer/AI/claude-cybersecurity/",
+  "~/Developer/AI/claude-obsidian/",
+  "~/Developer/AI/claude-seo/",
+  "~/Developer/AI/jeffallenClaudeSkills",
+  "~/Developer/AI/marcusSkills",
+  "~/Developer/AI/marketingSkills",
+  "~/Developer/AI/mattpocokSkills",
 
 ]
