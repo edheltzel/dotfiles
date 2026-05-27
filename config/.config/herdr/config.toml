@@ -55,7 +55,7 @@ focus_pane_left = "alt+control+shift+h"
 focus_pane_up = "alt+control+shift+k"
 focus_pane_down = "alt+control+shift+j"
 focus_pane_right = "alt+control+shift+l"
-rename_pane = "prefix+control+e"
+rename_pane = "prefix+p"
 
 [[keys.command]]
 key = "prefix+g"
