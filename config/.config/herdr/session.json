@@ -21,12 +21,12 @@
             }
           },
           "panes": {
-            "2": {
-              "cwd": "/Users/ed/Developer/_AI"
-            },
             "1": {
               "cwd": "/Users/ed/Developer/atlas-config",
               "label": "recall"
+            },
+            "2": {
+              "cwd": "/Users/ed/Developer/_AI"
             }
           },
           "zoomed": false,
@@ -53,7 +53,13 @@
               "label": "neoed"
             },
             "9": {
-              "cwd": "/Users/ed/.dotfiles"
+              "cwd": "/Users/ed/.dotfiles",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "b0581e7e-a677-4f0d-9061-cf58a2a097d4"
+              }
             }
           },
           "zoomed": false,
@@ -125,21 +131,15 @@
             }
           },
           "panes": {
-            "5": {
-              "cwd": "/Users/ed/Developer/atlas-voicesystem",
-              "agent_session": {
-                "source": "herdr:claude",
-                "agent": "claude",
-                "kind": "id",
-                "value": "71edcb52-a471-4f12-959c-69d5cc7c593c"
-              }
-            },
             "19": {
+              "cwd": "/Users/ed/Developer/atlas-voicesystem"
+            },
+            "5": {
               "cwd": "/Users/ed/Developer/atlas-voicesystem"
             }
           },
           "zoomed": false,
-          "focused": 19,
+          "focused": 5,
           "root_pane": 5
         }
       ],

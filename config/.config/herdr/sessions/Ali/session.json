@@ -4,20 +4,38 @@
     {
       "id": "w652a980a234101",
       "custom_name": "AliVideo",
-      "identity_cwd": "/Users/ed/Sites",
+      "identity_cwd": "/Users/ed/Sites/alianza.video",
       "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Pane": 1
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 1
+              },
+              "second": {
+                "Pane": 4
+              }
+            }
           },
           "panes": {
             "1": {
-              "cwd": "/Users/ed/Sites"
+              "cwd": "/Users/ed/Sites/alianza.video",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "72b5609b-ab4a-4359-80cd-6f2fc0444019"
+              }
+            },
+            "4": {
+              "cwd": "/Users/ed/Sites/alianza.video"
             }
           },
           "zoomed": false,
-          "focused": 1,
+          "focused": 4,
           "root_pane": 1
         }
       ],
@@ -31,37 +49,37 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 11
+            "Pane": 2
           },
           "panes": {
-            "11": {
+            "2": {
               "cwd": "/Users/ed/Sites/alianza.health"
             }
           },
           "zoomed": false,
-          "focused": 11,
-          "root_pane": 11
+          "focused": 2,
+          "root_pane": 2
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 5
+            "Pane": 3
           },
           "panes": {
-            "5": {
+            "3": {
               "cwd": "/Users/ed/Sites/alianza.health"
             }
           },
           "zoomed": false,
-          "focused": 5,
-          "root_pane": 5
+          "focused": 3,
+          "root_pane": 3
         }
       ],
       "active_tab": 1
     }
   ],
-  "active": 1,
-  "selected": 1,
+  "active": 0,
+  "selected": 0,
   "agent_panel_scope": "AllWorkspaces",
   "sidebar_width": 26,
   "sidebar_section_split": 0.5,
