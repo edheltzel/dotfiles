@@ -120,22 +120,21 @@ get_btop_theme() {
   esac
 }
 
+get_omp_palette() {
+  case "$1" in
+  eldritch) echo "eldritch" ;;
+  rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
+  rose-pine-moon) echo "rose-pine-moon" ;;
+  vesper) echo "vesper" ;;
+  esac
+}
+
 get_claude_theme() {
   case "$1" in
   eldritch) echo "custom:eldritch" ;;
   vesper) echo "custom:vesper" ;;
   *) echo "" ;; # Skip — no custom theme JSON authored yet
-  esac
-}
-
-# herdr: rose-pine and vesper are built-in; eldritch uses [theme.custom] overlay on rose-pine
-get_herdr_theme() {
-  case "$1" in
-  eldritch) echo "rose-pine" ;; # base; custom block supplies the palette
-  rose-pine) echo "rose-pine" ;;
-  rose-pine-dawn) echo "rose-pine-dawn" ;;
-  rose-pine-moon) echo "" ;; # Not in herdr's built-in list
-  vesper) echo "vesper" ;;
   esac
 }
 
@@ -276,6 +275,38 @@ update_btop() {
   success "btop → $btop_theme"
 }
 
+update_omp() {
+  local theme="$1"
+
+  if ! is_installed oh-my-posh; then
+    MISSING_APPS+=("oh-my-posh")
+    info "oh-my-posh → not installed, skipped"
+    return
+  fi
+
+  local omp_palette=$(get_omp_palette "$theme")
+  local config_file="$CONFIG/starship-ish.omp.json"
+
+  if [[ -z "$omp_palette" ]]; then
+    SKIPPED_APPS+=("oh-my-posh (palette $theme not available)")
+    warning "oh-my-posh → skipped (palette not available)"
+    return
+  fi
+
+  if ! is_installed jq; then
+    SKIPPED_APPS+=("oh-my-posh (jq not installed)")
+    warning "oh-my-posh → skipped (jq not installed)"
+    return
+  fi
+
+  # jq for robust JSON edit: swap the active palette under .palettes.template
+  jq --arg palette "$omp_palette" '.palettes.template = $palette' "$config_file" >"$config_file.tmp" &&
+    mv "$config_file.tmp" "$config_file"
+
+  UPDATED_APPS+=("oh-my-posh → $omp_palette palette")
+  success "oh-my-posh → $omp_palette palette"
+}
+
 update_lazygit() {
   local theme="$1"
 
@@ -353,67 +384,11 @@ update_claude() {
   success "claude → $claude_theme"
 }
 
-update_herdr() {
-  local theme="$1"
-
-  if ! is_installed herdr; then
-    MISSING_APPS+=("herdr")
-    info "herdr → not installed, skipped"
-    return
-  fi
-
-  local herdr_theme=$(get_herdr_theme "$theme")
-  local config_file="$CONFIG/herdr/config.toml"
-
-  if [[ -z "$herdr_theme" ]]; then
-    SKIPPED_APPS+=("herdr (theme $theme not supported)")
-    warning "herdr → skipped (theme not supported)"
-    return
-  fi
-
-  # Toggle the [theme.custom] block: uncomment for eldritch, re-comment otherwise.
-  # Block runs from the [theme.custom] header to the next blank line.
-  if [[ "$theme" == "eldritch" ]]; then
-    awk '
-      /^# \[theme\.custom\]/ { in_block=1 }
-      in_block && /^$/ { in_block=0 }
-      in_block { sub(/^# /, "") }
-      { print }
-    ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
-  else
-    awk '
-      /^\[theme\.custom\]/ { in_block=1 }
-      in_block && /^$/ { in_block=0; print; next }
-      in_block && !/^#/ { $0 = "# " $0 }
-      { print }
-    ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
-  fi
-
-  # Update [theme] name = "..."
-  sed -i '' "s/^name = \".*\"/name = \"$herdr_theme\"/" "$config_file"
-
-  if [[ "$theme" == "eldritch" ]]; then
-    UPDATED_APPS+=("herdr → eldritch (custom overlay on $herdr_theme)")
-    success "herdr → eldritch (custom overlay on $herdr_theme)"
-  else
-    UPDATED_APPS+=("herdr → $herdr_theme")
-    success "herdr → $herdr_theme"
-  fi
-}
-
 reload_ghostty() {
   # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
     echo ""
     info "Ghostty: Press Cmd+Ctrl+Alt+, to reload config"
-  fi
-}
-
-reload_herdr() {
-  # herdr supports hot config reload via socket API
-  if pgrep -x herdr >/dev/null 2>&1; then
-    echo ""
-    info "herdr: run 'herdr server reload-config' to apply"
   fi
 }
 
@@ -501,9 +476,9 @@ apply_theme() {
   update_neovim "$theme"
   update_bat "$theme"
   update_btop "$theme"
+  update_omp "$theme"
   update_lazygit "$theme"
   update_claude "$theme"
-  update_herdr "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
@@ -516,7 +491,6 @@ apply_theme() {
 
   # Show reload instructions
   reload_ghostty
-  reload_herdr
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""

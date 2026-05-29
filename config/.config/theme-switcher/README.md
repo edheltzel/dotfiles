@@ -23,10 +23,8 @@ Unified theme switching system for all applications in dotfiles.
 | bat          | ✓        | ✓         | ✓              | ✓              | ✓      |
 | btop         | ✓        | ✓         | ✓              | ✓              | ✓      |
 | lazygit      | ✓        | ✓         | ✓              | ✓              | ✓      |
-| herdr        | ✓\*      | ✓         | ✓              | ✗              | ✓      |
+| oh-my-posh   | ✓        | ✓         | ✓              | ✓              | ✓      |
 | Claude Code  | ✓        | ✗         | ✗              | ✗              | ✓      |
-
-\*herdr uses `[theme.custom]` overlay on the `rose-pine` base for Eldritch (no native Eldritch). Rose Pine Moon is not in herdr's built-in theme list.
 
 ## Usage
 
