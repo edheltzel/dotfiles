@@ -53,7 +53,8 @@
     "plaintext": ["_redirects"],
     "Ruby": ["Brewfile"],
     // "nunjucks": ["*.webc"],
-    "html": ["*.svg"]
+    "html": ["*.svg"],
+    "TOML": ["config"]
   },
   "telemetry": {
     "diagnostics": false,
@@ -61,7 +62,7 @@
   },
   "theme": {
     "mode": "dark",
-    "light": "Solarized Light",
+    "light": "Gruvbox Light Hard",
     "dark": "Eldritch"
   },
   "icon_theme": {
@@ -167,6 +168,9 @@
     ]
   },
   "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry"
     }
