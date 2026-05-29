@@ -627,6 +627,13 @@
           "value" : "raycast-x://extensions/raycast/script-commands/edit-dotfiles"
         },
         {
+          "iconPath" : "eject.fill",
+          "key" : "e",
+          "label" : "Pick App to Quit",
+          "type" : "url",
+          "value" : "raycast-x://extensions/johndturn/single-disk-eject/index"
+        },
+        {
           "iconPath" : "party.popper.fill",
           "key" : "enter",
           "label" : "Confetti",
@@ -680,13 +687,6 @@
           "label" : "Pick App to Quit",
           "type" : "url",
           "value" : "raycast-x://extensions/mackopes/quit-applications/index"
-        },
-        {
-          "iconPath" : "eject.fill",
-          "key" : "e",
-          "label" : "Pick App to Quit",
-          "type" : "url",
-          "value" : "raycast-x://extensions/johndturn/single-disk-eject/index"
         },
         {
           "iconPath" : "power.circle.fill",
@@ -1029,13 +1029,13 @@
             }
           ],
           "iconPath" : "appwindow.swipe.rectangle",
-          "key" : "M",
+          "key" : "m",
           "label" : "Move",
           "type" : "group"
         },
         {
           "iconPath" : "uiwindow.split.2x1",
-          "key" : "m",
+          "key" : "M",
           "label" : "Move Move",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace mode move"
