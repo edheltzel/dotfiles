@@ -50,6 +50,7 @@ repos = [
   "~/Developer/AI/FLOW/",
   "~/Developer/AI/Fabric/",
   "~/Developer/AI/PersonalAI",
+  "~/Developer/AI/compoundEngineering",
   "~/Developer/AI/agentPiMono",
   "~/Developer/AI/claude-cybersecurity/",
   "~/Developer/AI/claude-obsidian/",
