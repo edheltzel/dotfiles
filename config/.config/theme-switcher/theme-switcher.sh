@@ -158,7 +158,7 @@ update_ghostty() {
   if [[ "$theme" == "eldritch" ]]; then
     # Use custom config file for Eldritch
     sed -i '' 's/^theme = /#theme = /' "$config_file"
-    sed -i '' 's/^#config-file = "colors\/eldritch"/config-file = "colors\/eldritch"/' "$config_file"
+    sed -i '' 's/^#config-file = /config-file = /' "$config_file"
     UPDATED_APPS+=("Ghostty → eldritch (custom file)")
     success "Ghostty → eldritch (custom file)"
   else
