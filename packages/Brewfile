@@ -52,7 +52,8 @@ brew 'lazyjj'       # TUI for jj (Jujutsu)
 brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
-brew 'tmux'         # Multiplexer
+brew 'herdr'        # Multiplexer for Agents
+# brew 'tmux'         # Multiplexer
 brew 'taproom'      # TUI for homebrew
 
 # CLI Basics
