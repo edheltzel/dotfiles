@@ -668,13 +668,6 @@
           "value" : "raycast-x://extensions/rolandleth/kill-process/index"
         },
         {
-          "iconPath" : "note.text.badge.plus",
-          "key" : "n",
-          "label" : "Create New Note",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/raycast-notes/create-note"
-        },
-        {
           "iconPath" : "eyedropper.full",
           "key" : "p",
           "label" : "Color Picker",
@@ -721,6 +714,25 @@
           "label" : "Open Project in Zed",
           "type" : "url",
           "value" : "raycast-x://extensions/theherk/zoxide-git-projects/find"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "note.text.badge.plus",
+              "key" : "n",
+              "label" : "Create New Note",
+              "type" : "url",
+              "value" : "raycast-x://extensions/raycast/raycast-notes/create-note"
+            },
+            {
+              "iconPath" : "rectangle.and.text.magnifyingglass",
+              "key" : "s",
+              "type" : "url",
+              "value" : "raycast-x://extensions/raycast/raycast-notes/search-notes"
+            }
+          ],
+          "key" : "n",
+          "type" : "group"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
