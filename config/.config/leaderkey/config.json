@@ -1077,6 +1077,13 @@
       "key" : "w",
       "label" : "Aerospace",
       "type" : "group"
+    },
+    {
+      "iconPath" : "document.on.clipboard.fill",
+      "key" : "v",
+      "label" : "Clipboard",
+      "type" : "url",
+      "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
     }
   ],
   "type" : "group"
