@@ -74,7 +74,7 @@ if status is-interactive
     abbr --add gems 'gem list'
     abbr --add npms 'npm list -g --depth=0'
     abbr --add pns 'pnpm list -g'
-    abbr --add pnpms 'pnpm list -g'
+    abbr --add vps 'vp list -g'
     abbr --add buns 'bun pm ls -g'
     abbr --add siz 'du -khsc'
     abbr --add sp 'speedtest -u Gbps'
