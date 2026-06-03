@@ -42,14 +42,14 @@ if status is-interactive
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxs 'tmux new-session -s'
 
-    # AI Agents + Models
+    # Agent Harnesses
     abbr --add cc claude
-    abbr --add ccd 'claude --dangerously-skip-permissions'
     abbr --add co codex
-    abbr --add coo 'codex --yolo'
+    abbr --add oo omp
     abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add cop --set-cursor 'codex -p "%"'
-    abbr --add ppi --set-cursor 'pi -p "%"'
+    abbr --add pip --set-cursor 'pi -p "%"'
+    abbr --add opp --set-cursor 'omp -p "%"'
 
     # text editors
     abbr --add zz zed
@@ -82,9 +82,9 @@ if status is-interactive
     abbr --add cwd pwd
     abbr --add yp 'pwd | pbcopy'
     abbr --add e '$EDITOR'
-    abbr --add o open
-    abbr --add oo 'open .'
+    abbr --add o --set-cursor 'open %'
     abbr --add oa 'open -a'
+    abbr --add ooo 'open .'
     abbr --add del trash
     abbr --add sdel 'sudo rm -rf'
     abbr --add serve miniserve
