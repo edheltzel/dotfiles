@@ -1,39 +1,41 @@
 onboarding = false
 
+update.channel = "preview"
+
 [experimental]
 allow_nested = true
 kitty_graphics = true
 resume_agents_on_restore = true
-pane_history = false
+pane_history = true
 
 [theme]
 name = "terminal"
 
 [ui]
+prompt_new_tab_name = false
 show_agent_labels_on_pane_borders = true
+toast.enabled = true
+toast.delivery = "terminal"
+sound.enabled = true
+sound.path = "sounds/notification.mp3"
+sound.done_path = "sounds/done.mp3"
+sound.request_path = "sounds/request.mp3"
 
-[ui.toast]
-enabled = true
-delivery = "terminal"
-
-[ui.sound]
-enabled = true
-path = "sounds/notification.mp3"
-done_path = "sounds/done.mp3"
-request_path = "sounds/request.mp3"
+[worktrees]
+directory = "~/Developer/_Worktrees"
 
 [keys]
 prefix = "alt+control+,"
+
+goto=""
+new_worktree=""
+edit_scrollback =""
 
 detach = "prefix+d"
 resize_mode = "prefix+r"
 toggle_sidebar = "prefix+b"
 
 fullscreen = "prefix+f"
-
-goto=""
-new_worktree=""
-edit_scrollback =""
 
 previous_agent = "alt+control+k"
 next_agent = "alt+control+j"
@@ -62,18 +64,24 @@ focus_pane_right = "alt+control+shift+l"
 key = "prefix+g"
 type = "pane"
 command = "lazygit"
+description = "launch lazygit"
 
 [[keys.command]]
 key = "prefix+/"
 type = "pane"
 command = "git diff | diffnav --unified"
+description = "launch diffnav"
 
 [[keys.command]]
 key = "prefix+v"
 type = "pane"
 command = "nvim"
+description = "launch diffnav"
 
 [[keys.command]]
 key = "prefix+y"
 type = "pane"
 command = "yazi"
+description = "launch yazi"
+
+
