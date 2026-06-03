@@ -51,6 +51,29 @@
         "white": "#EBFAFA",
         "yellow": "#F1FC79"
       },
+      "tokyonight": {
+        "blue": "#7AA2F7",
+        "branch": "#BB9AF7",
+        "cyan": "#7DCFFF",
+        "error": "#F7768E",
+        "git_added": "#9ECE6A",
+        "git_ahead": "#C0CAF5",
+        "git_deleted": "#F7768E",
+        "git_modified": "#E0AF68",
+        "git_staged": "#9ECE6A",
+        "git_untracked": "#7DCFFF",
+        "green": "#9ECE6A",
+        "magenta": "#BB9AF7",
+        "muted": "#565F89",
+        "orange": "#FF9E64",
+        "path": "#7DCFFF",
+        "pink": "#BB9AF7",
+        "purple": "#9D7CD8",
+        "red": "#F7768E",
+        "success": "#9ECE6A",
+        "white": "#C0CAF5",
+        "yellow": "#E0AF68"
+      },
       "rose-pine": {
         "blue": "#9CCFD8",
         "branch": "#D7827E",
@@ -193,7 +216,7 @@
             "fetch_ahead_counter": true,
             "ignore_working_copy": true
           },
-        "template": "<p:muted>on</> <p:cyan>󱗆 </> <p:muted>{{ .ChangeID }}</>{{ if .ClosestBookmarks }} {{ .ClosestBookmarks }}{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Moved 0 }} <p:purple>>{{ .Working.Moved }}</>{{ end }}{{ end }} "
+          "template": "<p:muted>on</> <p:cyan>󱗆 </> <p:muted>{{ .ChangeID }}</>{{ if .ClosestBookmarks }} {{ .ClosestBookmarks }}{{ end }}{{ if .Working.Changed }} <p:git_modified></>{{ if gt .Working.Added 0 }} <p:git_added>+{{ .Working.Added }}</>{{ end }}{{ if gt .Working.Modified 0 }} <p:git_modified>~{{ .Working.Modified }}</>{{ end }}{{ if gt .Working.Deleted 0 }} <p:git_deleted>-{{ .Working.Deleted }}</>{{ end }}{{ if gt .Working.Moved 0 }} <p:purple>>{{ .Working.Moved }}</>{{ end }}{{ end }} "
         },
         {
           "options": {

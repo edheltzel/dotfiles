@@ -10,7 +10,7 @@ if status is-interactive
         case starship
             starship init fish | source
         case oh-my-posh
-            oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
+            oh-my-posh init fish --config ~/.config/starship-ish.oh-my-posh.json | source
     end
 
     # Lazy-load FNM/Node — only inits when node/npm/npx first called
