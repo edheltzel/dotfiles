@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("eldritch" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper")
+THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -63,6 +63,7 @@ is_installed() {
 get_ghostty_theme() {
   case "$1" in
   eldritch) echo "config-file" ;;
+  tokyonight) echo "TokyoNight Night" ;;
   rose-pine) echo "Rose Pine" ;;
   rose-pine-dawn) echo "Rose Pine Dawn" ;;
   rose-pine-moon) echo "Rose Pine Moon" ;;
@@ -83,6 +84,7 @@ get_kitty_theme() {
 get_wezterm_theme() {
   case "$1" in
   eldritch) echo "Eldritch" ;;
+  tokyonight) echo "Tokyo Night" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
@@ -93,6 +95,7 @@ get_wezterm_theme() {
 get_neovim_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  tokyonight) echo "tokyonight" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
@@ -103,6 +106,7 @@ get_neovim_theme() {
 get_bat_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  tokyonight) echo "tokyonight_night" ;; # bat builtin
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
@@ -123,6 +127,7 @@ get_btop_theme() {
 get_omp_palette() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  tokyonight) echo "tokyonight" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
@@ -285,7 +290,7 @@ update_omp() {
   fi
 
   local omp_palette=$(get_omp_palette "$theme")
-  local config_file="$CONFIG/starship-ish.omp.json"
+  local config_file="$CONFIG/starship-ish.oh-my-posh.json"
 
   if [[ -z "$omp_palette" ]]; then
     SKIPPED_APPS+=("oh-my-posh (palette $theme not available)")
@@ -388,7 +393,7 @@ reload_ghostty() {
   # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
     echo ""
-    info "Ghostty: Press Cmd+Ctrl+Alt+, to reload config"
+    info "Ghostty: Press Shift+Ctrl+Alt+, to reload config"
   fi
 }
 

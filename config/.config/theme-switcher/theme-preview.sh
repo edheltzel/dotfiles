@@ -72,7 +72,7 @@ show_colors() {
       echo -e "  \033[38;2;234;157;52m███\033[0m gold"
       echo -e "  \033[38;2;215;130;126m███\033[0m rose"
       ;;
-    tokyo-night)
+    tokyonight)
       echo -e "\033[38;2;187;154;247m████\033[0m Tokyo Night"
       echo ""
       echo -e "  \033[38;2;26;27;38m███\033[0m bg"
@@ -84,7 +84,7 @@ show_colors() {
       echo -e "  \033[38;2;224;175;104m███\033[0m yellow"
       echo -e "  \033[38;2;255;158;100m███\033[0m orange"
       ;;
-    tokyo-night-moon)
+    tokyonight-moon)
       echo -e "\033[38;2;192;153;255m████\033[0m Tokyo Night Moon"
       echo ""
       echo -e "  \033[38;2;34;34;54m███\033[0m bg"
@@ -136,7 +136,7 @@ show_support() {
       echo "  ⚡ kitty (eldritch fallback)"
       echo "  ⚡ btop (eldritch fallback)"
       ;;
-    tokyo-night|tokyo-night-moon)
+    tokyonight|tokyonight-moon)
       echo "  ✓ bat"
       echo "  ✗ kitty (not available)"
       echo "  ✗ btop (not available)"
@@ -175,8 +175,8 @@ if [ -z "$theme" ]; then
   echo "  - rose-pine"
   echo "  - rose-pine-dawn"
   echo "  - rose-pine-moon"
-  echo "  - tokyo-night"
-  echo "  - tokyo-night-moon"
+  echo "  - tokyonight"
+  echo "  - tokyonight-moon"
   echo "  - vesper"
   echo ""
   exit 0

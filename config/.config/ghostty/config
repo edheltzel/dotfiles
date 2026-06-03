@@ -3,7 +3,7 @@ initial-window = true
 alpha-blending = linear-corrected
 
 config-file = "themes/eldritch"
-#theme = Rose Pine Moon
+#theme = TokyoNight Moon
 
 term = xterm-256color
 
@@ -47,7 +47,7 @@ keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
 
 # Custom keybinding
 keybind = alt+backspace=text:\x1b\x7f
-keybind = super+ctrl+,=reload_config
+keybind = shift+ctrl+alt+,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
 
 # Leader key (cmd+k) sequences
