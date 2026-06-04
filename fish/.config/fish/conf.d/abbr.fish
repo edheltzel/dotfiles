@@ -80,7 +80,6 @@ if status is-interactive
     abbr --add phps 'php -S localhost:8888'
     abbr --add md 'mkdir -p'
     abbr --add cwd pwd
-    abbr --add yp 'pwd | pbcopy'
     abbr --add e '$EDITOR'
     abbr --add o open
     abbr --add oo 'open .'
