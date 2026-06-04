@@ -95,12 +95,16 @@ cd "$SCRIPT_DIR"
 DOTFILES_FUNCTIONS_LOADED=1
 
 # One-line fatal for CLI usage problems; runtime failures use error() banner + exit.
-die() { echo "Error: $1" >&2; exit "${2:-1}"; }
+die() {
+  echo "Error: $1" >&2
+  exit "${2:-1}"
+}
 
 # Stow a list of packages. With mode=strict, stow conflicts abort (set -e);
 # with mode=lenient, conflicts are reported and the loop continues.
 _run_stow() {
-  local mode="$1"; shift
+  local mode="$1"
+  shift
   info "Linking dotfiles with GNU Stow..."
   for pkg in "$@"; do
     if [ ! -d "$SCRIPT_DIR/$pkg" ]; then
@@ -149,7 +153,7 @@ Flags (apply to bootstrap):
 Notes:
   - Re-running bootstrap will run `brew upgrade` on all installed packages.
   - `link` is always safe to re-run; it uses `stow --restow`.
-  - See .atlas/plans/ for design rationale.
+  - See .agents/atlas/plans/ for design rationale.
 
 Examples:
   ./install.sh bootstrap              # full provision, interactive
@@ -174,7 +178,10 @@ cmd_bootstrap() {
   if [ "$SKIP_CONFIRM" -eq 0 ]; then
     warning "This will install & configure dotfiles on your system. It may overwrite existing files."
     read -r -p "Are you sure you want to proceed? (y/N) " confirm
-    [[ "$confirm" == [yY] ]] || { error "Installation aborted."; exit 0; }
+    [[ "$confirm" == [yY] ]] || {
+      error "Installation aborted."
+      exit 0
+    }
   fi
 
   # -v is portable back to older macOS (--validate is Sudo 1.9+)
@@ -196,22 +203,22 @@ cmd_bootstrap() {
   if [ "$SKIP_PACKAGES" -eq 0 ]; then
     info "Installing language/package managers..."
     # packages.sh uses relative paths internally; run it from its own dir
-    ( cd "$SCRIPT_DIR/packages" && . ./packages.sh )
+    (cd "$SCRIPT_DIR/packages" && . ./packages.sh)
   else
     info "Skipping packages (--no-packages)"
   fi
 
   _run_stow strict "${STOW_PACKAGES[@]}"
 
-  ( cd "$SCRIPT_DIR/duti" && . ./duti.sh )
+  (cd "$SCRIPT_DIR/duti" && . ./duti.sh)
 
   if [ "$SKIP_MACOS" -eq 0 ]; then
-    ( cd "$SCRIPT_DIR/macos" && . ./macos.sh )
+    (cd "$SCRIPT_DIR/macos" && . ./macos.sh)
   else
     info "Skipping macOS sysprefs (--no-macos)"
   fi
 
-  ( cd "$SCRIPT_DIR/git" && . ./git.sh )
+  (cd "$SCRIPT_DIR/git" && . ./git.sh)
 
   # Fish as default shell — irreversible per-user preference, own prompt
   if command -v fish >/dev/null 2>&1; then
@@ -241,24 +248,33 @@ fi
 
 SUBCOMMAND=""
 case "${1:-}" in
-  bootstrap|link|help) SUBCOMMAND="$1"; shift ;;
-  -h|--help)           cmd_help; exit 0 ;;
-  *)                   die "Unknown subcommand: '$1'. Run './install.sh help' for usage." ;;
+bootstrap | link | help)
+  SUBCOMMAND="$1"
+  shift
+  ;;
+-h | --help)
+  cmd_help
+  exit 0
+  ;;
+*) die "Unknown subcommand: '$1'. Run './install.sh help' for usage." ;;
 esac
 
 while [ "$#" -gt 0 ]; do
   case "$1" in
-    -y|--yes)      SKIP_CONFIRM=1 ;;
-    --no-packages) SKIP_PACKAGES=1 ;;
-    --no-macos)    SKIP_MACOS=1 ;;
-    -h|--help)     cmd_help; exit 0 ;;
-    *)             die "Unknown flag: '$1'. Run './install.sh help' for usage." ;;
+  -y | --yes) SKIP_CONFIRM=1 ;;
+  --no-packages) SKIP_PACKAGES=1 ;;
+  --no-macos) SKIP_MACOS=1 ;;
+  -h | --help)
+    cmd_help
+    exit 0
+    ;;
+  *) die "Unknown flag: '$1'. Run './install.sh help' for usage." ;;
   esac
   shift
 done
 
 case "$SUBCOMMAND" in
-  bootstrap) cmd_bootstrap ;;
-  link)      cmd_link ;;
-  help)      cmd_help ;;
+bootstrap) cmd_bootstrap ;;
+link) cmd_link ;;
+help) cmd_help ;;
 esac
