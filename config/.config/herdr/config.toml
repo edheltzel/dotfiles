@@ -27,6 +27,7 @@ directory = "~/Developer/_Worktrees"
 [keys]
 prefix = "alt+control+,"
 
+# reload_config ="prefix+shift+r"
 goto=""
 new_worktree=""
 edit_scrollback =""
@@ -69,7 +70,7 @@ description = "launch lazygit"
 [[keys.command]]
 key = "prefix+/"
 type = "pane"
-command = "git diff | diffnav --unified"
+command = "git diff | diffnav --watch"
 description = "launch diffnav"
 
 [[keys.command]]
