@@ -47,9 +47,11 @@ if status is-interactive
     abbr --add cc claude
     abbr --add co codex
     abbr --add opp omp
+    abbr --add oup 'omp update'
     abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add cop --set-cursor 'codex -p "%"'
     abbr --add ppi --set-cursor 'pi -p "%"'
+    abbr --add pup 'pi update'
 
     # text editors
     abbr --add zz zed
