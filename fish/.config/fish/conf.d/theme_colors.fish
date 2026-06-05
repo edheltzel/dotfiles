@@ -10,14 +10,17 @@
 
 set -l current_theme_file $HOME/.config/theme-switcher/current
 
-# Light themes need a muted ghost-text color that still reads against a
-# cream/light background. Add future light themes here.
-set -l light_themes rose-pine-dawn
-
+# Light themes each need their own swatches that read against a cream/light
+# background. The frozen file's values are tuned for dark backgrounds, so we
+# override per-theme here. Add future light themes as new `case` branches.
 if test -r $current_theme_file
     set -l current (cat $current_theme_file)
-    if contains -- $current $light_themes
-        # Rose Pine Dawn `muted` — canonical "subdued" swatch on the cream base.
-        set --global fish_color_autosuggestion 9893a5
+    switch $current
+        case rose-pine-dawn
+            # Rose Pine Dawn `muted` — canonical "subdued" swatch on the cream base.
+            set --global fish_color_autosuggestion 9893a5
+        case catppuccin-latte
+            # Catppuccin Latte `yellow` — darker/more saturated than the frozen
+            set --global fish_color_option df8e1d
     end
 end
