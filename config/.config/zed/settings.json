@@ -61,8 +61,8 @@
     "metrics": false
   },
   "theme": {
-    "mode": "dark",
-    "light": "Gruvbox Light Hard",
+    "mode": "light",
+    "light": "Rosé Pine Dawn",
     "dark": "Eldritch"
   },
   "icon_theme": {
