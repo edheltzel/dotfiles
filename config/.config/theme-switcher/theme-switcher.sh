@@ -290,7 +290,7 @@ update_omp() {
   fi
 
   local omp_palette=$(get_omp_palette "$theme")
-  local config_file="$CONFIG/starship-ish.oh-my-posh.json"
+  local config_file="$CONFIG/starship-ish.omp.json"
 
   if [[ -z "$omp_palette" ]]; then
     SKIPPED_APPS+=("oh-my-posh (palette $theme not available)")
@@ -307,6 +307,9 @@ update_omp() {
   # jq for robust JSON edit: swap the active palette under .palettes.template
   jq --arg palette "$omp_palette" '.palettes.template = $palette' "$config_file" >"$config_file.tmp" &&
     mv "$config_file.tmp" "$config_file"
+
+  # oh-my-posh caches the parsed config; clear it so the new palette applies on next prompt
+  oh-my-posh cache clear &>/dev/null || true
 
   UPDATED_APPS+=("oh-my-posh → $omp_palette palette")
   success "oh-my-posh → $omp_palette palette"
