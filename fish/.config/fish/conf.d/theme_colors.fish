@@ -20,7 +20,10 @@ if test -r $current_theme_file
             # Rose Pine Dawn `muted` — canonical "subdued" swatch on the cream base.
             set --global fish_color_autosuggestion 9893a5
         case catppuccin-latte
+            # Fish highlights package names/arguments as params; keep them bold on Latte
+            # so typed command text has enough contrast on the light background.
+            set --global fish_color_param 179299 --bold
             # Catppuccin Latte `yellow` — darker/more saturated than the frozen
-            set --global fish_color_option df8e1d
+            set --global fish_color_option df8e1d --bold
     end
 end

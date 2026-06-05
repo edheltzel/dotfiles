@@ -2,8 +2,8 @@ initial-window = true
 
 alpha-blending = linear-corrected
 
+# theme = TokyoNight Day
 config-file = "themes/catppuccin-latte"
-#theme = Catppuccin Latte
 
 cursor-style = block
 
