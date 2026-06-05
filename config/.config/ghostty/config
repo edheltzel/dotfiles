@@ -4,7 +4,6 @@ alpha-blending = linear-corrected
 
 # theme = TokyoNight Day
 config-file = "themes/catppuccin-latte"
-
 cursor-style = block
 
 term = xterm-256color

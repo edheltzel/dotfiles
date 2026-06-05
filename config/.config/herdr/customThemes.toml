@@ -1,18 +1,71 @@
-# Atelier Cave
+# =============================================================================
+# herdr custom themes — REFERENCE ONLY (this file is NOT loaded by herdr)
+# =============================================================================
+# herdr only reads ~/.config/herdr/config.toml. Theme customization lives in a
+# [theme.custom] block there, applied on top of [theme] name. Editing THIS file
+# changes nothing on its own — paste a block into config.toml and run:
+#     herdr server reload-config
+#
+# Valid keys = herdr's CustomThemeColors struct (16):
+#   panel_bg accent surface_dim surface0 surface1 overlay0 overlay1
+#   text subtext0 mauve red peach yellow green teal blue
+# Token roles:
+#   accent       highlights, borders, navigation
+#   panel_bg     sidebar / panel background
+#   surface_dim  active workspace background
+#   surface0     selection background
+#   surface1     hover / active
+#   overlay0     muted text
+#   overlay1     secondary accent
+#   text         primary text
+#   subtext0     dimmed labels
+#   mauve        git branches
+# Values: hex "#rrggbb", "rgb(r,g,b)", named colors, or "reset"/"default"/"none".
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Catppuccin Latte — contrast-tuned (the live theme; mirror of config.toml)
+# Fixes stock latte's washed-out muted text by mapping it to darker subtext greys
+# and widening surface separation, while keeping canonical Latte accents.
+# -----------------------------------------------------------------------------
+# [theme]
+# name = "catppuccin-latte"
+#
 # [theme.custom]
-# accent = "#955ae7"      # magenta
-# panel_bg = "#19171c"    # cave black
-# surface0 = "#26232b"    # selection bg
-# surface1 = "#322e38"    # hover/active
-# surface_dim = "#1f1d23" # active workspace bg
-# overlay0 = "#655f6d"    # muted text
-# overlay1 = "#8b8792"    # secondary accent
-# text = "#efecf4"        # bright white
-# subtext0 = "#8b8792"    # dimmed labels
-# mauve = "#be4678"       # red/pink (git branches)
-# green = "#2a9292"       # green
-# yellow = "#a06e3b"      # yellow
-# red = "#be4678"         # red
-# blue = "#576ddb"        # blue
-# teal = "#2a9292"        # cyan-teal
-# peach = "#a06e3b"       # warm peach
+# panel_bg    = "#e6e9ef"  # mantle   — sidebar / panel background
+# surface_dim = "#ccd0da"  # surface0 — active workspace background
+# surface0    = "#bcc0cc"  # surface1 — selection background
+# surface1    = "#acb0be"  # surface2 — hover / active
+# text        = "#4c4f69"  # text     — primary text
+# subtext0    = "#5c5f77"  # subtext1 — dimmed labels (darker than stock)
+# overlay0    = "#6c6f85"  # subtext0 — muted text   (darker than stock overlay)
+# overlay1    = "#7287fd"  # lavender — secondary accent
+# accent      = "#1e66f5"  # blue     — highlights, borders, navigation
+# mauve       = "#8839ef"  # mauve    — git branches
+# red         = "#d20f39"  # red
+# peach       = "#fe640b"  # peach
+# yellow      = "#df8e1d"  # yellow
+# green       = "#40a02b"  # green
+# teal        = "#179299"  # teal
+# blue        = "#1e66f5"  # blue
+
+# -----------------------------------------------------------------------------
+# Atelier Cave (dark) — archived reference
+# -----------------------------------------------------------------------------
+# [theme.custom]
+# accent      = "#955ae7"  # magenta
+# panel_bg    = "#19171c"  # cave black
+# surface0    = "#26232b"  # selection bg
+# surface1    = "#322e38"  # hover/active
+# surface_dim = "#1f1d23"  # active workspace bg
+# overlay0    = "#655f6d"  # muted text
+# overlay1    = "#8b8792"  # secondary accent
+# text        = "#efecf4"  # bright white
+# subtext0    = "#8b8792"  # dimmed labels
+# mauve       = "#be4678"  # red/pink (git branches)
+# green       = "#2a9292"  # green
+# yellow      = "#a06e3b"  # yellow
+# red         = "#be4678"  # red
+# blue        = "#576ddb"  # blue
+# teal        = "#2a9292"  # cyan-teal
+# peach       = "#a06e3b"  # warm peach
