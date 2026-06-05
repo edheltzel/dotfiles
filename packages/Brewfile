@@ -265,7 +265,7 @@ brew 'borders'                      # A window borders manager
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'helium-browser'
-cask 'zen'                       # Gecko
+cask 'firefox'                   
 cask 'google-chrome'             # For tests
 
 # Fonts
