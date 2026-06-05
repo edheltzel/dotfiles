@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper")
+THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -68,6 +68,10 @@ get_ghostty_theme() {
   rose-pine-dawn) echo "Rose Pine Dawn" ;;
   rose-pine-moon) echo "Rose Pine Moon" ;;
   vesper) echo "Vesper" ;;
+  catppuccin-latte) echo "Catppuccin Latte" ;;
+  catppuccin-frappe) echo "Catppuccin Frappe" ;;
+  catppuccin-macchiato) echo "Catppuccin Macchiato" ;;
+  catppuccin-mocha) echo "Catppuccin Mocha" ;;
   esac
 }
 
@@ -78,6 +82,10 @@ get_kitty_theme() {
   rose-pine-dawn) echo "rose-pine-dawn.conf" ;;
   rose-pine-moon) echo "rose-pine-moon.conf" ;;
   vesper) echo "vesper.conf" ;;
+  catppuccin-latte) echo "catppuccin-latte.conf" ;;
+  catppuccin-frappe) echo "catppuccin-frappe.conf" ;;
+  catppuccin-macchiato) echo "catppuccin-macchiato.conf" ;;
+  catppuccin-mocha) echo "catppuccin-mocha.conf" ;;
   esac
 }
 
@@ -89,6 +97,10 @@ get_wezterm_theme() {
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   vesper) echo "vesper" ;;
+  catppuccin-latte) echo "Catppuccin Latte" ;;
+  catppuccin-frappe) echo "Catppuccin Frappe" ;;
+  catppuccin-macchiato) echo "Catppuccin Macchiato" ;;
+  catppuccin-mocha) echo "Catppuccin Mocha" ;;
   esac
 }
 
@@ -100,6 +112,10 @@ get_neovim_theme() {
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   vesper) echo "vesper" ;;
+  catppuccin-latte) echo "catppuccin-latte" ;;
+  catppuccin-frappe) echo "catppuccin-frappe" ;;
+  catppuccin-macchiato) echo "catppuccin-macchiato" ;;
+  catppuccin-mocha) echo "catppuccin-mocha" ;;
   esac
 }
 
@@ -111,6 +127,10 @@ get_bat_theme() {
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   vesper) echo "vesper" ;; # Custom tmTheme
+  catppuccin-latte) echo "Catppuccin Latte" ;;       # bat builtin
+  catppuccin-frappe) echo "Catppuccin Frappe" ;;     # bat builtin
+  catppuccin-macchiato) echo "Catppuccin Macchiato" ;; # bat builtin
+  catppuccin-mocha) echo "Catppuccin Mocha" ;;       # bat builtin
   esac
 }
 
@@ -121,6 +141,10 @@ get_btop_theme() {
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   vesper) echo "vesper" ;;     # Custom theme file
+  catppuccin-latte) echo "catppuccin-latte" ;;
+  catppuccin-frappe) echo "catppuccin-frappe" ;;
+  catppuccin-macchiato) echo "catppuccin-macchiato" ;;
+  catppuccin-mocha) echo "catppuccin-mocha" ;;
   esac
 }
 
@@ -132,6 +156,10 @@ get_omp_palette() {
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
   vesper) echo "vesper" ;;
+  catppuccin-latte) echo "catppuccin-latte" ;;
+  catppuccin-frappe) echo "catppuccin-frappe" ;;
+  catppuccin-macchiato) echo "catppuccin-macchiato" ;;
+  catppuccin-mocha) echo "catppuccin-mocha" ;;
   esac
 }
 
@@ -139,7 +167,13 @@ get_claude_theme() {
   case "$1" in
   eldritch) echo "custom:eldritch" ;;
   vesper) echo "custom:vesper" ;;
-  *) echo "" ;; # Skip — no custom theme JSON authored yet
+  rose-pine) echo "custom:rose-pine" ;;
+  rose-pine-dawn) echo "custom:rose-pine-dawn" ;;
+  catppuccin-latte) echo "custom:catppuccin-latte" ;;
+  catppuccin-frappe) echo "custom:catppuccin-frappe" ;;
+  catppuccin-macchiato) echo "custom:catppuccin-macchiato" ;;
+  catppuccin-mocha) echo "custom:catppuccin-mocha" ;;
+  *) echo "" ;; # Skip — no custom theme JSON (rose-pine-moon, tokyonight)
   esac
 }
 

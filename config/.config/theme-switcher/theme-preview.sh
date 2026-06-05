@@ -108,6 +108,54 @@ show_colors() {
       echo -e "  \033[38;2;130;217;194m███\033[0m green"
       echo -e "  \033[38;2;153;255;228m███\033[0m cyan"
       ;;
+    catppuccin-latte)
+      echo -e "\033[38;2;136;57;239m████\033[0m Catppuccin Latte"
+      echo ""
+      echo -e "  \033[38;2;239;241;245m███\033[0m bg"
+      echo -e "  \033[38;2;76;79;105m███\033[0m fg"
+      echo -e "  \033[38;2;136;57;239m███\033[0m mauve"
+      echo -e "  \033[38;2;64;160;43m███\033[0m green"
+      echo -e "  \033[38;2;30;102;245m███\033[0m blue"
+      echo -e "  \033[38;2;210;15;57m███\033[0m red"
+      echo -e "  \033[38;2;223;142;29m███\033[0m yellow"
+      echo -e "  \033[38;2;254;100;11m███\033[0m peach"
+      ;;
+    catppuccin-frappe)
+      echo -e "\033[38;2;202;158;230m████\033[0m Catppuccin Frappé"
+      echo ""
+      echo -e "  \033[38;2;48;52;70m███\033[0m bg"
+      echo -e "  \033[38;2;198;208;245m███\033[0m fg"
+      echo -e "  \033[38;2;202;158;230m███\033[0m mauve"
+      echo -e "  \033[38;2;166;209;137m███\033[0m green"
+      echo -e "  \033[38;2;140;170;238m███\033[0m blue"
+      echo -e "  \033[38;2;231;130;132m███\033[0m red"
+      echo -e "  \033[38;2;229;200;144m███\033[0m yellow"
+      echo -e "  \033[38;2;239;159;118m███\033[0m peach"
+      ;;
+    catppuccin-macchiato)
+      echo -e "\033[38;2;198;160;246m████\033[0m Catppuccin Macchiato"
+      echo ""
+      echo -e "  \033[38;2;36;39;58m███\033[0m bg"
+      echo -e "  \033[38;2;202;211;245m███\033[0m fg"
+      echo -e "  \033[38;2;198;160;246m███\033[0m mauve"
+      echo -e "  \033[38;2;166;218;149m███\033[0m green"
+      echo -e "  \033[38;2;138;173;244m███\033[0m blue"
+      echo -e "  \033[38;2;237;135;150m███\033[0m red"
+      echo -e "  \033[38;2;238;212;159m███\033[0m yellow"
+      echo -e "  \033[38;2;245;169;127m███\033[0m peach"
+      ;;
+    catppuccin-mocha)
+      echo -e "\033[38;2;203;166;247m████\033[0m Catppuccin Mocha"
+      echo ""
+      echo -e "  \033[38;2;30;30;46m███\033[0m bg"
+      echo -e "  \033[38;2;205;214;244m███\033[0m fg"
+      echo -e "  \033[38;2;203;166;247m███\033[0m mauve"
+      echo -e "  \033[38;2;166;227;161m███\033[0m green"
+      echo -e "  \033[38;2;137;180;250m███\033[0m blue"
+      echo -e "  \033[38;2;243;139;168m███\033[0m red"
+      echo -e "  \033[38;2;249;226;175m███\033[0m yellow"
+      echo -e "  \033[38;2;250;179;135m███\033[0m peach"
+      ;;
     *)
       echo "Unknown theme: $theme"
       return 1
@@ -155,7 +203,7 @@ show_support() {
 
   # Claude Code support (only themes with custom theme JSON)
   case "$theme" in
-    eldritch|vesper)
+    eldritch|vesper|rose-pine|rose-pine-dawn|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha)
       echo "  ✓ claude"
       ;;
     *)
@@ -178,6 +226,10 @@ if [ -z "$theme" ]; then
   echo "  - tokyonight"
   echo "  - tokyonight-moon"
   echo "  - vesper"
+  echo "  - catppuccin-latte"
+  echo "  - catppuccin-frappe"
+  echo "  - catppuccin-macchiato"
+  echo "  - catppuccin-mocha"
   echo ""
   exit 0
 fi

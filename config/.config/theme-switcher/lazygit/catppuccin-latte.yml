@@ -1,8 +1,3 @@
----
-# cSpell: disable
-# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
-# this is the default config.
-gui:
   theme:
     activeBorderColor:
       - "#1e66f5"
@@ -29,4 +24,3 @@ gui:
       - "#d20f39"
     defaultFgColor:
       - "#4c4f69"
-  overrideGpg: true

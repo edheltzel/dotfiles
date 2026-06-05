@@ -10,7 +10,7 @@ function M.basename(s)
 end
 
 -- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
-M.name = "rose-pine-dawn"
+M.name = "Catppuccin Latte"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
@@ -170,6 +170,78 @@ local themes = {
       inactive_bg = "#222236",
       inactive_fg = "#636DA6",
       agent_activity = "#FFC777",
+    },
+  },
+  ["Catppuccin Latte"] = {
+    colors = {
+      red = "#d20f39",
+      purple = "#8839ef",
+      cyan = "#04a5e5",
+      yellow = "#df8e1d",
+      pink = "#ea76cb",
+      white = "#4c4f69",
+    },
+    tab_bar = {
+      bg = "#eff1f5",
+      active_bg = "#8839ef",
+      active_fg = "#dce0e8",
+      inactive_bg = "#e6e9ef",
+      inactive_fg = "#8c8fa1",
+      agent_activity = "#fe640b",
+    },
+  },
+  ["Catppuccin Frappe"] = {
+    colors = {
+      red = "#e78284",
+      purple = "#ca9ee6",
+      cyan = "#99d1db",
+      yellow = "#e5c890",
+      pink = "#f4b8e4",
+      white = "#c6d0f5",
+    },
+    tab_bar = {
+      bg = "#303446",
+      active_bg = "#ca9ee6",
+      active_fg = "#232634",
+      inactive_bg = "#292c3c",
+      inactive_fg = "#838ba7",
+      agent_activity = "#ef9f76",
+    },
+  },
+  ["Catppuccin Macchiato"] = {
+    colors = {
+      red = "#ed8796",
+      purple = "#c6a0f6",
+      cyan = "#91d7e3",
+      yellow = "#eed49f",
+      pink = "#f5bde6",
+      white = "#cad3f5",
+    },
+    tab_bar = {
+      bg = "#24273a",
+      active_bg = "#c6a0f6",
+      active_fg = "#181926",
+      inactive_bg = "#1e2030",
+      inactive_fg = "#8087a2",
+      agent_activity = "#f5a97f",
+    },
+  },
+  ["Catppuccin Mocha"] = {
+    colors = {
+      red = "#f38ba8",
+      purple = "#cba6f7",
+      cyan = "#89dceb",
+      yellow = "#f9e2af",
+      pink = "#f5c2e7",
+      white = "#cdd6f4",
+    },
+    tab_bar = {
+      bg = "#1e1e2e",
+      active_bg = "#cba6f7",
+      active_fg = "#11111b",
+      inactive_bg = "#181825",
+      inactive_fg = "#7f849c",
+      agent_activity = "#fab387",
     },
   },
 }

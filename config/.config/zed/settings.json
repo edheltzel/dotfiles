@@ -62,7 +62,7 @@
   },
   "theme": {
     "mode": "light",
-    "light": "Rosé Pine Dawn",
+    "light": "Catppuccin Latte",
     "dark": "Eldritch"
   },
   "icon_theme": {
@@ -168,6 +168,9 @@
     ]
   },
   "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
     "pi-acp": {
       "type": "registry"
     },

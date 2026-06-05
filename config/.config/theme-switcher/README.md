@@ -11,20 +11,26 @@ Unified theme switching system for all applications in dotfiles.
 - `rose-pine-dawn` - Rosé Pine Dawn (light theme)
 - `rose-pine-moon` - Rosé Pine Moon (default)
 - `vesper` - Vesper
+- `catppuccin-latte` - Catppuccin Latte (light theme)
+- `catppuccin-frappe` - Catppuccin Frappé
+- `catppuccin-macchiato` - Catppuccin Macchiato
+- `catppuccin-mocha` - Catppuccin Mocha
 
 ## Supported Applications
 
-| Application  | Eldritch | Rose Pine | Rose Pine Dawn | Rose Pine Moon | Vesper |
-| ------------ | -------- | --------- | -------------- | -------------- | ------ |
-| Ghostty      | ✓        | ✓         | ✓              | ✓              | ✓      |
-| Kitty        | ✓        | ✓         | ✓              | ✓              | ✓      |
-| WezTerm      | ✓        | ✓         | ✓              | ✓              | ✓      |
-| Neovim       | ✓        | ✓         | ✓              | ✓              | ✓      |
-| bat          | ✓        | ✓         | ✓              | ✓              | ✓      |
-| btop         | ✓        | ✓         | ✓              | ✓              | ✓      |
-| lazygit      | ✓        | ✓         | ✓              | ✓              | ✓      |
-| oh-my-posh   | ✓        | ✓         | ✓              | ✓              | ✓      |
-| Claude Code  | ✓        | ✗         | ✗              | ✗              | ✓      |
+| Application  | Eldritch | Rose Pine | Rose Pine Dawn | Rose Pine Moon | Vesper | Catppuccin† |
+| ------------ | -------- | --------- | -------------- | -------------- | ------ | ----------- |
+| Ghostty      | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| Kitty        | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| WezTerm      | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| Neovim       | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| bat          | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| btop         | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| lazygit      | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| oh-my-posh   | ✓        | ✓         | ✓              | ✓              | ✓      | ✓           |
+| Claude Code  | ✓        | ✓         | ✓              | ✗              | ✓      | ✓           |
+
+† All four Catppuccin flavors (Latte, Frappé, Macchiato, Mocha) are supported identically. Terminals (Ghostty, WezTerm) and bat use built-in Catppuccin themes; Neovim uses the `catppuccin/nvim` plugin; Kitty and btop use the official port theme files; oh-my-posh and lazygit use generated palettes from the official Catppuccin color spec.
 
 ## Usage
 
@@ -59,7 +65,11 @@ theme-switcher/
 │   ├── rose-pine.yml
 │   ├── rose-pine-dawn.yml
 │   ├── rose-pine-moon.yml
-│   └── vesper.yml
+│   ├── vesper.yml
+│   ├── catppuccin-latte.yml
+│   ├── catppuccin-frappe.yml
+│   ├── catppuccin-macchiato.yml
+│   └── catppuccin-mocha.yml
 └── README.md                  # This file
 ```
 
