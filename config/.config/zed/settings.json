@@ -61,9 +61,9 @@
     "metrics": false
   },
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Eldritch"
+    "dark": "Tokyo Night Storm"
   },
   "icon_theme": {
     "mode": "dark",

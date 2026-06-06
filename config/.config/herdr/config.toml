@@ -9,25 +9,7 @@ resume_agents_on_restore = true
 pane_history = true
 
 [theme]
-name = "terminal"
-
-[theme.custom]
-# panel_bg    = "#e6e9ef"  # mantle   — sidebar / panel background
-surface_dim = "#ededed"  # surface0 — active workspace background
-surface0    = "#ced0da"  # surface1 — selection background
-surface1    = "#acb0be"  # surface2 — hover / active
-text        = "#1e66f5"  # text     — primary text
-subtext0    = "#585b72"  # dimmed labels / agent names (BOLD)
-overlay0    = "#4c4f69"  # muted text / agent type label (rendered DIM by herdr)
-# overlay1    = "#7287fd"  # lavender — secondary accent
-# accent      = "#1e66f5"  # blue     — highlights, borders, navigation
-# mauve       = "#8839ef"  # mauve    — git branches
-# red         = "#d20f39"  # red
-# peach       = "#fe640b"  # peach
-# yellow      = "#df8e1d"  # yellow
-# green       = "#40a02b"  # green
-# teal        = "#179299"  # teal
-# blue        = "#1e66f5"  # blue
+name = "tokyo-night"
 
 [ui]
 prompt_new_tab_name = false

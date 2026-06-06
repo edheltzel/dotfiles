@@ -259,7 +259,7 @@
         "yellow": "#f9e2af"
       }
     },
-    "template": "catppuccin-latte"
+    "template": "tokyonight"
   },
   "transient_prompt": {
     "template": "❯ ",

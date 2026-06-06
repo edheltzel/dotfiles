@@ -10,7 +10,7 @@ function M.basename(s)
 end
 
 -- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
-M.name = "Catppuccin Latte"
+M.name = "Tokyo Night"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
