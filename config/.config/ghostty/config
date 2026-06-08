@@ -24,10 +24,9 @@ window-save-state = always
 window-colorspace = "display-p3"
 window-inherit-font-size = false
 window-padding-x = 10
-window-title-font-family = "Lilex Nerd Font"
-
-font-size = 18
-font-family = "Lilex Nerd Font"
+# window-title-font-family = "Lilex Nerd Font"
+# font-family = "Lilex Nerd Font"
+font-size = 17
 
 shell-integration-features = true
 
@@ -44,27 +43,28 @@ quick-terminal-position = right
 quick-terminal-size = 50%,20%
 quick-terminal-animation-duration = 0
 quick-terminal-autohide = true
-keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
 
 #### KEYBINDING ####
+# global
+keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
+
 keybind = alt+backspace=text:\x1b\x7f
-keybind = shift+ctrl+alt+,=reload_config
+keybind = super+,>,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
 
 # Leader key (cmd+k) sequences
-keybind = super+k>p=toggle_command_palette
-keybind = super+k>k=clear_screen
-keybind = super+k>n=new_window
-keybind = super+k>x=close_surface
+keybind = super+,>k=clear_screen
+keybind = super+,>n=new_window
+keybind = super+,>x=close_surface
 #splits/panes
-keybind = super+k>h=new_split:left
-keybind = super+k>l=new_split:right
-keybind = super+k>backslash=new_split:right
-keybind = super+k>minus=new_split:down
-keybind = super+k>j=new_split:down
-keybind = super+k>u=new_split:up
-keybind = super+k>z=toggle_split_zoom
-keybind = super+k>equal=equalize_splits
+keybind = super+,>h=new_split:left
+keybind = super+,>l=new_split:right
+keybind = super+,>backslash=new_split:right
+keybind = super+,>minus=new_split:down
+keybind = super+,>j=new_split:down
+keybind = super+,>u=new_split:up
+keybind = super+,>z=toggle_split_zoom
+keybind = super+,>equal=equalize_splits
 #w/o leader key
 keybind = super+ctrl+alt+backslash=new_split:right
 keybind = super+ctrl+alt+minus=new_split:down
@@ -74,16 +74,16 @@ keybind = super+ctrl+alt+k=resize_split:up,50
 keybind = super+ctrl+alt+l=resize_split:right,50
 keybind = super+ctrl+alt+z=toggle_split_zoom
 #tabs
-keybind = super+k>t=new_tab
-keybind = super+k>e=prompt_surface_title
-keybind = super+k>1=goto_tab:1
-keybind = super+k>2=goto_tab:2
-keybind = super+k>3=goto_tab:3
-keybind = super+k>4=goto_tab:4
-keybind = super+k>5=goto_tab:5
-keybind = super+k>6=goto_tab:6
-keybind = super+k>7=goto_tab:7
-keybind = super+k>8=goto_tab:8
+keybind = super+,>t=new_tab
+keybind = super+,>e=prompt_surface_title
+keybind = super+,>1=goto_tab:1
+keybind = super+,>2=goto_tab:2
+keybind = super+,>3=goto_tab:3
+keybind = super+,>4=goto_tab:4
+keybind = super+,>5=goto_tab:5
+keybind = super+,>6=goto_tab:6
+keybind = super+,>7=goto_tab:7
+keybind = super+,>8=goto_tab:8
 
 #w/o leader key - move tabs
 keybind = ctrl+shift+alt+[=move_tab:-1
