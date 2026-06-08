@@ -1,88 +1,71 @@
 onboarding = false
-
 update.channel = "preview"
 
 [experimental]
-allow_nested = true
-kitty_graphics = true
+allow_nested             = true
+kitty_graphics           = true
 resume_agents_on_restore = true
-pane_history = true
+pane_history             = true
 
 [theme]
 name = "tokyo-night"
 
 [ui]
-prompt_new_tab_name = false
+prompt_new_tab_name               = false
 show_agent_labels_on_pane_borders = true
-toast.enabled = true
-toast.delivery = "terminal"
-sound.enabled = true
-sound.path = "sounds/notification.mp3"
-sound.done_path = "sounds/done.mp3"
-sound.request_path = "sounds/request.mp3"
+toast.enabled                     = true
+toast.delivery                    = "terminal"
+sound.enabled                     = true
+sound.path                        = "sounds/notification.mp3"
+sound.done_path                   = "sounds/done.mp3"
+sound.request_path                = "sounds/request.mp3"
 
 [worktrees]
-directory = "~/Developer/_Worktrees"
+directory = "~/.agents/Worktrees"
 
 [keys]
-prefix = "alt+control+,"
+prefix             = "control+,"
 
-# reload_config ="prefix+shift+r"
-goto=""
-new_worktree=""
-edit_scrollback =""
+goto               = ""
+new_worktree       = ""
+edit_scrollback    = ""
+swap_pane_left     = ""
+swap_pane_down     = ""
+swap_pane_up       = ""
+swap_pane_right    = ""
 
-detach = "prefix+d"
-resize_mode = "prefix+r"
-toggle_sidebar = "prefix+b"
+split_vertical     = "prefix+\\"
 
-fullscreen = "prefix+f"
-
-previous_agent = "alt+control+k"
-next_agent = "alt+control+j"
-
-new_workspace = "prefix+n"
-close_workspace = "prefix+shift+w"
-rename_workspace = "prefix+shift+e"
-next_workspace = "alt+control+i"
-previous_workspace = "alt+control+u"
-
-new_tab = "prefix+t"
-rename_tab = "prefix+e"
-next_tab = "alt+control+l"
-previous_tab = "alt+control+h"
-
-split_vertical = "prefix+\\"
-split_horizontal = "prefix+-"
-close_pane = "prefix+x"
-rename_pane = "prefix+p"
-focus_pane_left = "alt+control+shift+h"
-focus_pane_up = "alt+control+shift+k"
-focus_pane_down = "alt+control+shift+j"
-focus_pane_right = "alt+control+shift+l"
+next_workspace     = "shift+control+i"
+previous_workspace = "shift+control+u"
+next_tab           = "shift+control+l"
+previous_tab       = "shift+control+h"
+cycle_pane_next    = "shift+control+]"
+cycle_pane_previous= "shift+control+["
+previous_agent     = "shift+control+k"
+next_agent         = "shift+control+j"
 
 [[keys.command]]
-key = "prefix+g"
-type = "pane"
-command = "lazygit"
+key         = "prefix+g"
+type        = "pane"
+command     = "lazygit"
 description = "launch lazygit"
 
 [[keys.command]]
-key = "prefix+/"
-type = "pane"
-command = "git diff | diffnav --watch"
+key         = "prefix+/"
+type        = "pane"
+command     = "git diff | diffnav --watch"
 description = "launch diffnav"
 
 [[keys.command]]
-key = "prefix+v"
-type = "pane"
-command = "nvim"
+key         = "prefix+v"
+type        = "pane"
+command     = "nvim"
 description = "launch diffnav"
 
 [[keys.command]]
-key = "prefix+y"
-type = "pane"
-command = "yazi"
+key         = "prefix+y"
+type        = "pane"
+command     = "yazi"
 description = "launch yazi"
-
 
