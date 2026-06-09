@@ -1,53 +1,46 @@
-initial-window = true
+initial-window             = true
+confirm-close-surface      = false
+shell-integration-features = true
+alpha-blending             = linear-corrected
 
-alpha-blending = linear-corrected
-
-theme = TokyoNight Moon
-#config-file = "themes/catppuccin-latte"
-cursor-style = block
-
-term = xterm-256color
-
-# background-opacity = 0.95
-# background-blur-radius = 50
-unfocused-split-fill = "black"
+# config-file             = "themes/catppuccin-latte"
+theme                   = TokyoNight Moon
+cursor-style            = block
+term                    = xterm-256color
+unfocused-split-fill    = "black"
 mouse-hide-while-typing = true
 
-copy-on-select = clipboard
+copy-on-select           = clipboard
+clipboard-read           = allow
+clipboard-write          = allow
+scrollback-limit         = 10000000
 
-clipboard-read = allow
-clipboard-write = allow
-
-scrollback-limit = 10000000
-
-window-save-state = always
-window-colorspace = "display-p3"
+window-save-state        = always
+window-colorspace        = "display-p3"
 window-inherit-font-size = false
-window-padding-x = 10
-# window-title-font-family = "Lilex Nerd Font"
-# font-family = "Lilex Nerd Font"
-font-size = 17
-
-shell-integration-features = true
+window-padding-x         = 10
+window-title-font-family = "Lilex Nerd Font Mono"
+font-family              = "Lilex Nerd Font Mono"
+font-size                = 16
+font-feature             = zero,calt
 
 # Tabs
 macos-non-native-fullscreen = true
-macos-option-as-alt = true
-macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = tabs
-macos-window-buttons = visible
-macos-icon = retro
+macos-option-as-alt         = true
+macos-titlebar-proxy-icon   = hidden
+macos-titlebar-style        = tabs
+macos-window-buttons        = visible
+macos-icon                  = retro
 
 # Quick Terminal
-quick-terminal-position = right
-quick-terminal-size = 50%,20%
+quick-terminal-position           = right
+quick-terminal-size               = 50%,20%
 quick-terminal-animation-duration = 0
-quick-terminal-autohide = true
+quick-terminal-autohide           = true
 
 #### KEYBINDING ####
 # global
 keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
-
 keybind = alt+backspace=text:\x1b\x7f
 keybind = super+,>,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
