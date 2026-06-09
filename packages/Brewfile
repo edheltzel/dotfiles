@@ -155,6 +155,7 @@ brew 'curlie'             # Command line HTTP client - Go
 brew 'httpie'             # Command line HTTP client
 brew 'orbstack'           # Docker image viewer
 brew 'docker'
+brew 'derailed/k9s/k9s'
 brew 'container'          # Container CLI by Apple
 brew 'doctl'              # DigitalOcean CLI
 brew 's3cmd'              # S3 command line tool
@@ -272,7 +273,10 @@ cask 'google-chrome'             # For tests
 cask 'sf-symbols'
 brew 'font-sf-pro'
 cask 'font-inter'                     
+cask 'font-lilex'
 cask 'font-lilex-nerd-font'           
+cask 'font-jetbrains-mono'
+caks 'font-jetbrains-mono-nerd-font'
 cask 'font-fira-code-nerd-font'       
 cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 
