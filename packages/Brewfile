@@ -282,7 +282,6 @@ cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 
 # Development Apps
 cask 'cyberduck'                      # Mount remote storage locations
-
 cask 'obsidian'                       # PKM editor
 cask 'sequel-ace'                     # MySQL database management
 cask 'typora'                         # Markdown editor
