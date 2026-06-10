@@ -24,7 +24,7 @@ sound.request_path                = "sounds/request.mp3"
 directory = "~/.agents/Worktrees"
 
 [keys]
-prefix             = "control+,"
+prefix             = "shift+control+,"
 
 goto               = ""
 new_worktree       = ""
