@@ -1,5 +1,5 @@
 format = "$all"
-# right_format = "$cmd_duration"
+right_format = "$cmd_duration"
 
 command_timeout = 500
 
