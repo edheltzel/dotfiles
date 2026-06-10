@@ -54,6 +54,12 @@ command     = "lazygit"
 description = "launch LazyGit"
 
 [[keys.command]]
+key         = "prefix+d"
+type        = "pane"
+command     = "gh dash"
+description = "launch Dash"
+
+[[keys.command]]
 key         = "prefix+/"
 type        = "pane"
 command     = "git diff | diffnav --watch"
