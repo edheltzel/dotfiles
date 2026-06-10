@@ -126,7 +126,7 @@
 	required = true
 	process = git-lfs filter-process
 [push]
-  default    = matching
+  default    = simple
   followTags = true
 [pull]
   rebase = false
