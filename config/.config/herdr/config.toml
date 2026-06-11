@@ -1,5 +1,7 @@
 onboarding = false
-update.channel = "preview"
+
+[update]
+channel = "stable"
 
 [experimental]
 allow_nested             = true
@@ -25,7 +27,9 @@ directory = "~/.agents/Worktrees"
 
 [keys]
 prefix             = "shift+control+,"
+detach             = "prefix+shift+d"
 
+# disabled
 goto               = ""
 new_worktree       = ""
 edit_scrollback    = ""
@@ -34,10 +38,19 @@ swap_pane_down     = ""
 swap_pane_up       = ""
 swap_pane_right    = ""
 
+# close
+close_workspace    = "prefix+shift+w"
+
+# rename 
+rename_workspace   = "prefix+shift+e"
+rename_tab         ="prefix+e"
+
+# create term
 new_workspace      = "prefix+n"
 new_tab            = "prefix+t"
 split_vertical     = "prefix+\\"
 
+# cycle
 next_workspace     = "shift+control+i"
 previous_workspace = "shift+control+u"
 next_tab           = "shift+control+l"
