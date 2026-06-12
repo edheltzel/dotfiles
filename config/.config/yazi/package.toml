@@ -18,6 +18,11 @@ use = "yazi-rs/plugins:vcs-files"
 rev = "598cdb6"
 hash = "6b141fbed3c74b45558fbc7088c805ee"
 
+[[plugin.deps]]
+use = "WhoSowSee/mdv-previewer"
+rev = "04aa2bd"
+hash = "64de0b69e2b4829bd7ad4c500a3f7a61"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "8e6296f"
