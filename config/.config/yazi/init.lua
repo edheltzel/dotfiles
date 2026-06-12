@@ -1,11 +1,26 @@
 -- Git status colors (Tokyo Night palette)
 -- Signs use plugin defaults (Nerd Font glyphs)
 th.git = th.git or {}
-th.git.modified  = ui.Style():fg("#7aa2f7"):bold()   -- blue
-th.git.added     = ui.Style():fg("#9ece6a"):bold()   -- green
-th.git.untracked = ui.Style():fg("#ff9e64"):bold()   -- orange
-th.git.deleted   = ui.Style():fg("#f7768e"):bold()   -- red
-th.git.ignored   = ui.Style():fg("#414868")           -- muted gray
-th.git.updated   = ui.Style():fg("#e0af68"):bold()   -- yellow (conflict)
+th.git.modified = ui.Style():fg("#7aa2f7"):bold() -- blue
+th.git.added = ui.Style():fg("#9ece6a"):bold() -- green
+th.git.untracked = ui.Style():fg("#ff9e64"):bold() -- orange
+th.git.deleted = ui.Style():fg("#f7768e"):bold() -- red
+th.git.ignored = ui.Style():fg("#414868") -- muted gray
+th.git.updated = ui.Style():fg("#e0af68"):bold() -- yellow (conflict)
 
-require("git"):setup { order = 1500 }
+require("git"):setup({ order = 1500 })
+
+require("mdv-previewer"):setup({
+  theme = "tokyonight",
+  code_theme = "tokyonight",
+
+  custom_args = {
+    "--cols",
+    "64",
+    "--custom-theme",
+    "h1=173,22,124",
+  },
+
+  -- Number of lines per scroll step. Can take "auto" to use the default value
+  scroll_step = auto,
+})
