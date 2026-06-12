@@ -92,7 +92,7 @@
               "value" : "/Applications/Vial.app"
             },
             {
-              "key" : "k",
+              "key" : "K",
               "label" : "Keychron",
               "type" : "url",
               "value" : "https://launcher.keychron.com/#/keymap"
@@ -127,6 +127,11 @@
               "key" : "v",
               "type" : "application",
               "value" : "/Applications/VIA.app"
+            },
+            {
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/KeyCastr.app"
             }
           ],
           "iconPath" : "keyboard.fill",
