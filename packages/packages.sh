@@ -2,7 +2,7 @@
 
 # functions.sh may already be loaded by install.sh — only re-source when run standalone
 if [ -z "${DOTFILES_FUNCTIONS_LOADED:-}" ]; then
-    . ../scripts/functions.sh
+  . ../scripts/functions.sh
 fi
 brew_packages="Brewfile"
 node_packages="node_packages.txt"
@@ -201,7 +201,7 @@ uninstall_rust_packages() {
   while read -r pkg; do
     [ -z "$pkg" ] && continue
     cargo uninstall "$pkg" || true
-  done < "$rust_packages"
+  done <"$rust_packages"
   success "Rust packages uninstalled."
 }
 
@@ -237,56 +237,56 @@ run_action() {
   local action="$1"
   local target="$2"
   case "$action:$target" in
-    install:brew)   install_brew_packages ;;
-    install:node)   install_node_packages ;;
-    install:bun)    install_bun_packages ;;
-    install:pnpm)   install_pnpm_packages ;;
-    install:ruby)   install_ruby_packages ;;
-    install:rust)   install_rust_packages ;;
-    install:all)
-      install_brew_packages
-      install_node_packages
-      install_ruby_packages
-      install_rust_packages
-      install_bun_packages
-      install_pnpm_packages
-      ;;
-    uninstall:brew) uninstall_brew_packages ;;
-    uninstall:node) uninstall_node_packages ;;
-    uninstall:bun)  uninstall_bun_packages ;;
-    uninstall:pnpm) uninstall_pnpm_packages ;;
-    uninstall:ruby) uninstall_ruby_packages ;;
-    uninstall:rust) uninstall_rust_packages ;;
-    uninstall:all)
-      uninstall_bun_packages
-      uninstall_pnpm_packages
-      uninstall_node_packages
-      uninstall_rust_packages
-      uninstall_ruby_packages
-      uninstall_brew_packages
-      ;;
-    *)
-      error "Unknown action/target: $action $target"
-      usage
-      exit 1
-      ;;
+  install:brew) install_brew_packages ;;
+  install:node) install_node_packages ;;
+  install:bun) install_bun_packages ;;
+  install:pnpm) install_pnpm_packages ;;
+  install:ruby) install_ruby_packages ;;
+  install:rust) install_rust_packages ;;
+  install:all)
+    install_brew_packages
+    install_node_packages
+    install_ruby_packages
+    install_rust_packages
+    install_bun_packages
+    install_pnpm_packages
+    ;;
+  uninstall:brew) uninstall_brew_packages ;;
+  uninstall:node) uninstall_node_packages ;;
+  uninstall:bun) uninstall_bun_packages ;;
+  uninstall:pnpm) uninstall_pnpm_packages ;;
+  uninstall:ruby) uninstall_ruby_packages ;;
+  uninstall:rust) uninstall_rust_packages ;;
+  uninstall:all)
+    uninstall_bun_packages
+    uninstall_pnpm_packages
+    uninstall_node_packages
+    uninstall_rust_packages
+    uninstall_ruby_packages
+    uninstall_brew_packages
+    ;;
+  *)
+    error "Unknown action/target: $action $target"
+    usage
+    exit 1
+    ;;
   esac
 }
 
 case "${1:-}" in
-  ""|all)                 run_action install all ;;
-  -h|--help|help)         usage ;;
-  install|uninstall)
-    action="$1"
-    target="${2:-all}"
-    run_action "$action" "$target"
-    ;;
-  brew|node|bun|pnpm|ruby|rust)
-    run_action install "$1"
-    ;;
-  *)
-    error "Unknown argument: $1"
-    usage
-    exit 1
-    ;;
+"" | all) run_action install all ;;
+-h | --help | help) usage ;;
+install | uninstall)
+  action="$1"
+  target="${2:-all}"
+  run_action "$action" "$target"
+  ;;
+brew | node | bun | pnpm | ruby | rust)
+  run_action install "$1"
+  ;;
+*)
+  error "Unknown argument: $1"
+  usage
+  exit 1
+  ;;
 esac

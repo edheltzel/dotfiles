@@ -43,7 +43,6 @@ if status is-interactive
     abbr --add muxs 'tmux new-session -s'
 
     # Agent Harnesses
-    abbr --add atl atlas
     abbr --add cc claude
     abbr --add co codex
     abbr --add opp omp
