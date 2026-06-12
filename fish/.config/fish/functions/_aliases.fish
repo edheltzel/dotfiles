@@ -12,7 +12,7 @@ alias fabric fabric-ai
 alias j just
 alias t tv
 alias npx='bunx'
-alias ssy = "just -f ~/Developer/atlas-config/justfile -d ~/Developer/atlas-config skills-save"
+alias atlas='cd ~/Developer/atlas-config/'
 
 # Confirm before overwriting
 alias cp "cp -Ri"
