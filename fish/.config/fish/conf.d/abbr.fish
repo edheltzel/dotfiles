@@ -20,7 +20,7 @@ if status is-interactive
     abbr --add sites 'cd ~/Sites'
     abbr --add wall '~/.wallpapers/'
     abbr --add work 'cd ~/Developer'
-
+    abbr --add atlas 'cd ~/Developer/atlas-config/'
     # Editors/Terminals
     abbr --add dc 'docker compose'
     abbr --add dk docker
@@ -63,6 +63,11 @@ if status is-interactive
     abbr --add hostfile 'sudo nvim /etc/hosts'
     abbr --add editssh 'nvim ~/.ssh'
 
+    # updates
+    abbr --add upp 'topgrade --yes'
+    abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
+    abbr --add aup 'claude update; codex update; pi update; omp update; herdr update'
+
     # Utilities
     abbr --add atm fastfetch
     abbr --add cat 'bat -p'
@@ -73,8 +78,6 @@ if status is-interactive
     abbr --add spp 'speedtest -u Gbps'
     abbr --add yy yazi
     abbr --add wr wrangler
-    abbr --add upp 'topgrade --yes'
-    abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress
     abbr --add lzip ouch ligst
