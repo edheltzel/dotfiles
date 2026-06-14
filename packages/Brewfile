@@ -229,6 +229,7 @@ brew 'pandoc'               # Universal file converter
 cask 'vlc'                  # Media player
 brew 'webp'                 # WebP image format
 cask 'shottr'               # Screenshot and recorder app
+cask 'bettershot'           # Screenshot and recorder app
 cask 'obs'                  # Screen recorder
 cask 'capcut'               # Video Editing
 
@@ -260,7 +261,7 @@ cask 'karabiner-elements'          # Keyboard customization tool - paid
 cask 'leader-key'                  # Keyboard App launcher
 
 # Menu Bar Hacks
-brew 'jordanbaird-ice' # Ice bar - Using Sketchybar currently
+brew 'thaw'                        # Ice bar - Using Sketchybar currently
 
 # Window Management & Tiling
 cask 'nikitabobko/tap/aerospace'    # Window Management
