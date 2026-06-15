@@ -304,11 +304,12 @@ brew 'agent-browser'
 brew 'whisper-cpp'
 brew 'sox'
 brew 'socat'
+cask 'maestro'
 
 # Terminal emulators
-cask 'ghostty'                        # Zig
-# cask 'kitty'                          # Python+C
-# cask 'wezterm@nightly'                # Rust
+cask 'ghostty'                        
+# cask 'kitty'                        
+# cask 'wezterm@nightly'              
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
