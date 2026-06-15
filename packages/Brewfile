@@ -239,17 +239,18 @@ cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 
 # Utility Applications
-cask 'alt-tab'                     # Replace for cmd+tab more Windows like alt-tab
+cask 'dockdoor'                    # Replace for cmd+tab
 brew 'm-cli'                       # All in one MacOS management CLI app: m help
 cask 'keycastr'                    # Display keystrokes
-cask 'onyx'                        # System maintenance
 cask 'transnomino'                 # A batch rename utility
 cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archive and extractor
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
-cask 'tailscale-app'
+brew 'thaw'                        # Ice bar - Using Sketchybar currently
 brew 'stats'                       # System stats in menubar
+cask 'tailscale-app'
+cask 'tigervnc'
 
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
@@ -260,15 +261,13 @@ cask 'bazecor'                     # Keyboard config for Dygma Defy keyboard
 cask 'karabiner-elements'          # Keyboard customization tool - paid
 cask 'leader-key'                  # Keyboard App launcher
 
-# Menu Bar Hacks
-brew 'thaw'                        # Ice bar - Using Sketchybar currently
-
 # Window Management & Tiling
-cask 'nikitabobko/tap/aerospace'    # Window Management
-brew 'borders'                      # A window borders manager
+# cask 'nikitabobko/tap/aerospace'    # Window Management
+# brew 'borders'                      # A window borders manager
 
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
+cask 'brave-browser'
 cask 'helium-browser'
 cask 'firefox'                   
 cask 'google-chrome'             # For tests
