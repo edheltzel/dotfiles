@@ -634,7 +634,7 @@
         {
           "iconPath" : "eject.fill",
           "key" : "e",
-          "label" : "Pick App to Quit",
+          "label" : "Eject a Drive",
           "type" : "url",
           "value" : "raycast-x://extensions/johndturn/single-disk-eject/index"
         },
