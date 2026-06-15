@@ -10,6 +10,7 @@ hunkdiff
 neovim
 opensrc
 portless
+roughdraft
 skills
 tree-sitter-cli
 typescript
