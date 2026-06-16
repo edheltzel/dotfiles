@@ -7,6 +7,7 @@ if status is-interactive
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
     abbr --add atl 'cd ~/Developer/atlas-config/'
+    abbr --add atlas 'cd ~/Developer/atlas-config/'
     abbr --add config '~/.config/'
     abbr --add dev 'cd ~/Developer'
     abbr --add dls '~/Downloads/'
