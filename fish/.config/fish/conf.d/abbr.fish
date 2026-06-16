@@ -63,6 +63,8 @@ if status is-interactive
     abbr --add vv 'nvim .'
     abbr --add obs obsidian
     abbr --add rd 'roughdraft open'
+    abbr --add cg codegraph
+    abbr --add cgi 'codegraph init'
 
     # updates
     abbr --add upp 'topgrade --yes'
