@@ -41,6 +41,12 @@
           "type" : "group"
         },
         {
+          "key" : "c",
+          "label" : "Claude Desktop",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
+        },
+        {
           "actions" : [
             {
               "key" : "a",
@@ -186,6 +192,11 @@
           "type" : "group"
         },
         {
+          "key" : "M",
+          "type" : "application",
+          "value" : "/Applications/Maestro.app"
+        },
+        {
           "key" : "N",
           "type" : "application",
           "value" : "/System/Applications/Notes.app"
@@ -198,31 +209,35 @@
           "value" : "raycast://extensions/raycast/raycast-notes/create-note"
         },
         {
+          "actions" : [
+            {
+              "iconPath" : "calendar.badge.checkmark",
+              "key" : "d",
+              "label" : "Go to Daily Note",
+              "type" : "url",
+              "value" : "obsidian://daily"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/Obsidian.app"
+            }
+          ],
+          "iconPath" : "/Applications/Obsidian Web Clipper.app",
+          "key" : "o",
+          "label" : "Obsidian ⌘",
+          "type" : "group"
+        },
+        {
           "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
         },
         {
-          "actions" : [
-            {
-              "iconPath" : "music.note.list",
-              "key" : "m",
-              "label" : "YouTube Music",
-              "type" : "url",
-              "value" : "https://music.youtube.com"
-            },
-            {
-              "iconPath" : "video.fill",
-              "key" : "y",
-              "label" : "YouTube",
-              "type" : "url",
-              "value" : "https://youtube.com"
-            }
-          ],
-          "iconPath" : "music.note.list",
+          "iconPath" : "/Applications/Superconductor.app",
           "key" : "s",
-          "label" : "Music 🎧",
-          "type" : "group"
+          "type" : "application",
+          "value" : "/Applications/Superconductor.app"
         },
         {
           "actions" : [
@@ -255,24 +270,9 @@
           "type" : "group"
         },
         {
-          "actions" : [
-            {
-              "iconPath" : "calendar.badge.checkmark",
-              "key" : "d",
-              "label" : "Go to Daily Note",
-              "type" : "url",
-              "value" : "obsidian://daily"
-            },
-            {
-              "key" : "o",
-              "type" : "application",
-              "value" : "/Applications/Obsidian.app"
-            }
-          ],
-          "iconPath" : "/Applications/Obsidian Web Clipper.app",
-          "key" : "o",
-          "label" : "Obsidian ⌘",
-          "type" : "group"
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Applications/Codex.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -420,12 +420,6 @@
     {
       "actions" : [
         {
-          "key" : "c",
-          "label" : "Claude Desktop",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
-        },
-        {
           "actions" : [
             {
               "iconPath" : "questionmark.key.filled",
@@ -453,22 +447,6 @@
           "key" : "g",
           "label" : "Gemini ❇️",
           "type" : "group"
-        },
-        {
-          "key" : "m",
-          "type" : "application",
-          "value" : "/Applications/Maestro.app"
-        },
-        {
-          "iconPath" : "/Applications/Superconductor.app",
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Superconductor.app"
-        },
-        {
-          "key" : "x",
-          "type" : "application",
-          "value" : "/Applications/Codex.app"
         }
       ],
       "iconPath" : "sparkles",
@@ -1095,6 +1073,20 @@
     {
       "actions" : [
         {
+          "iconPath" : "inset.filled.center.rectangle.portrait",
+          "key" : ",",
+          "label" : "Middle",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/3-maxi-large"
+        },
+        {
+          "iconPath" : "square.grid.3x3.middle.filled",
+          "key" : ".",
+          "label" : "Center",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/center-half"
+        },
+        {
           "iconPath" : "inset.filled.lefthalf.arrow.left.rectangle",
           "key" : "h",
           "label" : "Left Half",
@@ -1109,13 +1101,6 @@
           "value" : "raycast-x://extensions/raycast/window-management/right-half"
         },
         {
-          "iconPath" : "arrow.up.left.bottomright.rectangle.fill",
-          "key" : "n",
-          "label" : "Full",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/1-maxi-full"
-        },
-        {
           "iconPath" : "inset.filled.center.rectangle",
           "key" : "m",
           "label" : "Almost Full",
@@ -1123,18 +1108,11 @@
           "value" : "raycast-x://extensions/raycast/window-management/2-maxi-xl"
         },
         {
-          "iconPath" : "inset.filled.center.rectangle.portrait",
-          "key" : ",",
-          "label" : "Middle",
+          "iconPath" : "arrow.up.left.bottomright.rectangle.fill",
+          "key" : "n",
+          "label" : "Full",
           "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/3-maxi-large"
-        },
-        {
-          "iconPath" : "square.grid.3x3.middle.filled",
-          "key" : ".",
-          "label" : "Center",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/center-half"
+          "value" : "raycast-x://extensions/raycast/window-management/1-maxi-full"
         }
       ],
       "iconPath" : "square.grid.2x2.fill",
