@@ -62,6 +62,7 @@ if status is-interactive
     abbr --add obs obsidian
     abbr --add hostfile 'sudo nvim /etc/hosts'
     abbr --add editssh 'nvim ~/.ssh'
+    abbr --add rd 'roughdraft open'
 
     # updates
     abbr --add upp 'topgrade --yes'
