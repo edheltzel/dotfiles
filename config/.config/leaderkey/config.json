@@ -253,6 +253,26 @@
           "key" : "t",
           "label" : "Terminals",
           "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "iconPath" : "calendar.badge.checkmark",
+              "key" : "d",
+              "label" : "Go to Daily Note",
+              "type" : "url",
+              "value" : "obsidian://daily"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/Obsidian.app"
+            }
+          ],
+          "iconPath" : "/Applications/Obsidian Web Clipper.app",
+          "key" : "o",
+          "label" : "Obsidian ⌘",
+          "type" : "group"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -454,26 +474,6 @@
       "iconPath" : "sparkles",
       "key" : "l",
       "label" : "LLM AI 🤖",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "iconPath" : "calendar.badge.checkmark",
-          "key" : "d",
-          "label" : "Go to Daily Note",
-          "type" : "url",
-          "value" : "obsidian://daily"
-        },
-        {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/Obsidian.app"
-        }
-      ],
-      "iconPath" : "/Applications/Obsidian Web Clipper.app",
-      "key" : "o",
-      "label" : "Obsidian ⌘",
       "type" : "group"
     },
     {
