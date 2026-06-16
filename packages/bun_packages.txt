@@ -18,3 +18,4 @@ typescript-language-server
 vercel
 voicelayer-mcp
 wrangler
+yaml
