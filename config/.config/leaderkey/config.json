@@ -15,6 +15,34 @@
         {
           "actions" : [
             {
+              "key" : "c",
+              "type" : "application",
+              "value" : "/Applications/Google Chrome.app"
+            },
+            {
+              "key" : "h",
+              "type" : "application",
+              "value" : "/Applications/Helium.app"
+            },
+            {
+              "key" : "s",
+              "type" : "application",
+              "value" : "/Applications/Safari.app"
+            },
+            {
+              "key" : "z",
+              "type" : "application",
+              "value" : "/Applications/Zen.app"
+            }
+          ],
+          "iconPath" : "safari.fill",
+          "key" : "b",
+          "label" : "Browsers",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
               "key" : "a",
               "type" : "application",
               "value" : "/Applications/Affinity.app"
@@ -98,6 +126,11 @@
               "value" : "https://launcher.keychron.com/#/keymap"
             },
             {
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/KeyCastr.app"
+            },
+            {
               "actions" : [
                 {
                   "key" : "g",
@@ -127,11 +160,6 @@
               "key" : "v",
               "type" : "application",
               "value" : "/Applications/VIA.app"
-            },
-            {
-              "key" : "k",
-              "type" : "application",
-              "value" : "/Applications/KeyCastr.app"
             }
           ],
           "iconPath" : "keyboard.fill",
@@ -195,39 +223,41 @@
           "key" : "s",
           "label" : "Music 🎧",
           "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "g",
+              "type" : "application",
+              "value" : "/Applications/Ghostty.app"
+            },
+            {
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/kitty.app"
+            },
+            {
+              "iconPath" : "apple.terminal.fill",
+              "key" : "v",
+              "label" : "Neovim ✨",
+              "type" : "command",
+              "value" : "open -na Ghostty --args -e nvim"
+            },
+            {
+              "key" : "w",
+              "type" : "application",
+              "value" : "/Applications/WezTerm.app"
+            }
+          ],
+          "iconPath" : "apple.terminal.fill",
+          "key" : "t",
+          "label" : "Terminals",
+          "type" : "group"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
       "key" : "a",
       "label" : "Apps",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Google Chrome.app"
-        },
-        {
-          "key" : "h",
-          "type" : "application",
-          "value" : "/Applications/Helium.app"
-        },
-        {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Safari.app"
-        },
-        {
-          "key" : "z",
-          "type" : "application",
-          "value" : "/Applications/Zen.app"
-        }
-      ],
-      "iconPath" : "safari.fill",
-      "key" : "b",
-      "label" : "Browsers",
       "type" : "group"
     },
     {
@@ -673,6 +703,27 @@
           "value" : "raycast-x://extensions/rolandleth/kill-process/index"
         },
         {
+          "actions" : [
+            {
+              "iconPath" : "note.text.badge.plus",
+              "key" : "n",
+              "label" : "Create New Note",
+              "type" : "url",
+              "value" : "raycast-x://extensions/raycast/raycast-notes/create-note"
+            },
+            {
+              "iconPath" : "rectangle.and.text.magnifyingglass",
+              "key" : "s",
+              "label" : "Search Notes",
+              "type" : "url",
+              "value" : "raycast-x://extensions/raycast/raycast-notes/search-notes"
+            }
+          ],
+          "key" : "n",
+          "label" : "Raycast Notes",
+          "type" : "group"
+        },
+        {
           "iconPath" : "eyedropper.full",
           "key" : "p",
           "label" : "Color Picker",
@@ -719,25 +770,6 @@
           "label" : "Open Project in Zed",
           "type" : "url",
           "value" : "raycast-x://extensions/theherk/zoxide-git-projects/find"
-        },
-        {
-          "actions" : [
-            {
-              "iconPath" : "note.text.badge.plus",
-              "key" : "n",
-              "label" : "Create New Note",
-              "type" : "url",
-              "value" : "raycast-x://extensions/raycast/raycast-notes/create-note"
-            },
-            {
-              "iconPath" : "rectangle.and.text.magnifyingglass",
-              "key" : "s",
-              "type" : "url",
-              "value" : "raycast-x://extensions/raycast/raycast-notes/search-notes"
-            }
-          ],
-          "key" : "n",
-          "type" : "group"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
@@ -789,34 +821,11 @@
       "type" : "group"
     },
     {
-      "actions" : [
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/cmux.app"
-        },
-        {
-          "key" : "g",
-          "type" : "application",
-          "value" : "/Applications/Ghostty.app"
-        },
-        {
-          "iconPath" : "apple.terminal.fill",
-          "key" : "v",
-          "label" : "Neovim ✨",
-          "type" : "command",
-          "value" : "open -na Ghostty --args -e nvim"
-        },
-        {
-          "key" : "w",
-          "type" : "application",
-          "value" : "/Applications/WezTerm.app"
-        }
-      ],
-      "iconPath" : "apple.terminal.fill",
-      "key" : "t",
-      "label" : "Terminals",
-      "type" : "group"
+      "iconPath" : "document.on.clipboard.fill",
+      "key" : "v",
+      "label" : "Clipboard",
+      "type" : "url",
+      "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
     },
     {
       "actions" : [
@@ -1079,16 +1088,59 @@
         }
       ],
       "iconPath" : "/Applications/AeroSpace.app",
-      "key" : "w",
+      "key" : "W",
       "label" : "Aerospace",
       "type" : "group"
     },
     {
-      "iconPath" : "document.on.clipboard.fill",
-      "key" : "v",
-      "label" : "Clipboard",
-      "type" : "url",
-      "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
+      "actions" : [
+        {
+          "iconPath" : "inset.filled.lefthalf.arrow.left.rectangle",
+          "key" : "h",
+          "label" : "Left Half",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/left-half"
+        },
+        {
+          "iconPath" : "inset.filled.righthalf.arrow.right.rectangle",
+          "key" : "l",
+          "label" : "Right Half",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/right-half"
+        },
+        {
+          "iconPath" : "arrow.up.left.bottomright.rectangle.fill",
+          "key" : "n",
+          "label" : "Full",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/1-maxi-full"
+        },
+        {
+          "iconPath" : "inset.filled.center.rectangle",
+          "key" : "m",
+          "label" : "Almost Full",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/2-maxi-xl"
+        },
+        {
+          "iconPath" : "inset.filled.center.rectangle.portrait",
+          "key" : ",",
+          "label" : "Middle",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/3-maxi-large"
+        },
+        {
+          "iconPath" : "square.grid.3x3.middle.filled",
+          "key" : ".",
+          "label" : "Center",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/window-management/center-half"
+        }
+      ],
+      "iconPath" : "square.grid.2x2.fill",
+      "key" : "w",
+      "label" : "Window Manager ▣",
+      "type" : "group"
     }
   ],
   "type" : "group"
