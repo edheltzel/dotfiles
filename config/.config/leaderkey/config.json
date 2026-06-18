@@ -420,43 +420,6 @@
     {
       "actions" : [
         {
-          "actions" : [
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "a",
-              "label" : "🤖 Ai Studio",
-              "type" : "url",
-              "value" : "https://aistudio.google.com/apps"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "g",
-              "label" : "🤖 Gemini",
-              "type" : "url",
-              "value" : "https://gemini.google.com/app"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "n",
-              "label" : "🤖 NotebookLM",
-              "type" : "url",
-              "value" : "https://notebooklm.google.com/"
-            }
-          ],
-          "iconPath" : "sparkle",
-          "key" : "g",
-          "label" : "Gemini ❇️",
-          "type" : "group"
-        }
-      ],
-      "iconPath" : "sparkles",
-      "key" : "l",
-      "label" : "LLM AI 🤖",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/BambuStudio.app"

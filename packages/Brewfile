@@ -97,6 +97,7 @@ brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
 brew 'glow'                 # Render Markdown on the CLI
 brew 'vhs'                  # Write terminal GIFs as code
+brew 'tamnd/tap/kage'
 
 # CLI Monitoring and Performance Apps
 brew 'btop'         # better top
