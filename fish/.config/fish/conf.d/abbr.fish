@@ -29,14 +29,6 @@ if status is-interactive
 
     # multiplex/terminals
     abbr --add gty ghostty
-    abbr --add has --set-cursor 'herdr session attach %'
-    abbr --add hhs --set-cursor 'herdr --session %'
-    abbr --add hks --set-cursor 'herdr session stop %'
-    abbr --add hls 'herdr session list'
-    abbr --add hrd herdr
-    abbr --add hrr --set-cursor 'herdr --remote %'
-    abbr --add hss 'herdr server stop'
-    abbr --add hup 'herdr update'
     abbr --add mux tmux
     abbr --add muxa 'tmux attach'
     abbr --add muxaa 'tmux attach -t'
@@ -45,6 +37,16 @@ if status is-interactive
     abbr --add muxka 'tmux kill-server'
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxs 'tmux new-session -s'
+
+    # herdr 
+    abbr --add hsa --set-cursor 'herdr session attach %'
+    abbr --add hhs --set-cursor 'herdr --session %'
+    abbr --add hks --set-cursor 'herdr session stop %'
+    abbr --add hls 'herdr session list'
+    abbr --add hrd herdr
+    abbr --add hrr --set-cursor 'herdr --remote %'
+    abbr --add hss 'herdr server stop'
+    abbr --add hup 'herdr update'
 
     # Agent Harnesses
     abbr --add cc claude
