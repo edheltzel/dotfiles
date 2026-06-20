@@ -24,6 +24,8 @@ if status is-interactive
     abbr --add work 'cd ~/Developer'
 
     # servers/containers
+    abbr --add atlas 'cd ~/Developer/atlas-config/'
+    # Editors/Terminals
     abbr --add dc 'docker compose'
     abbr --add dk docker
 
@@ -49,6 +51,7 @@ if status is-interactive
     abbr --add hup 'herdr update'
 
     # AI Harness
+    # Agent Harnesses
     abbr --add cc claude
     abbr --add co codex
     abbr --add oc opencode
@@ -69,6 +72,11 @@ if status is-interactive
     abbr --add rd 'roughdraft open'
     abbr --add cg codegraph
     abbr --add cgi 'codegraph init'
+
+    # updates
+    abbr --add upp 'topgrade --yes'
+    abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
+    abbr --add aup 'claude update; codex update; pi update; omp update; herdr update'
 
     # updates
     abbr --add upp 'topgrade --yes'
