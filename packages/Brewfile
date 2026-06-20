@@ -168,6 +168,7 @@ brew 'tectonic'
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
 brew 'git-delta'          # Git diff viewer - Rust
+brew  'modem-dev/tap/hunk'
 brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-lfs'            # Git Large File Storage
 brew 'miniserve'          # Static file server

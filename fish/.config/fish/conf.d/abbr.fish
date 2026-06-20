@@ -48,9 +48,10 @@ if status is-interactive
     abbr --add hss 'herdr server stop'
     abbr --add hup 'herdr update'
 
-    # Agent Harnesses
+    # AI Harness
     abbr --add cc claude
     abbr --add co codex
+    abbr --add oc opencode
     abbr --add oo omp
     abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add cop --set-cursor 'codex -p "%"'
