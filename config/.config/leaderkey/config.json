@@ -166,6 +166,11 @@
               "key" : "v",
               "type" : "application",
               "value" : "/Applications/VIA.app"
+            },
+            {
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/KeyCastr.app"
             }
           ],
           "iconPath" : "keyboard.fill",
