@@ -1032,56 +1032,6 @@
       "key" : "W",
       "label" : "Aerospace",
       "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "iconPath" : "inset.filled.center.rectangle.portrait",
-          "key" : ",",
-          "label" : "Middle",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/3-maxi-large"
-        },
-        {
-          "iconPath" : "square.grid.3x3.middle.filled",
-          "key" : ".",
-          "label" : "Center",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/center-half"
-        },
-        {
-          "iconPath" : "inset.filled.lefthalf.arrow.left.rectangle",
-          "key" : "h",
-          "label" : "Left Half",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/left-half"
-        },
-        {
-          "iconPath" : "inset.filled.righthalf.arrow.right.rectangle",
-          "key" : "l",
-          "label" : "Right Half",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/right-half"
-        },
-        {
-          "iconPath" : "inset.filled.center.rectangle",
-          "key" : "m",
-          "label" : "Almost Full",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/2-maxi-xl"
-        },
-        {
-          "iconPath" : "arrow.up.left.bottomright.rectangle.fill",
-          "key" : "n",
-          "label" : "Full",
-          "type" : "url",
-          "value" : "raycast-x://extensions/raycast/window-management/1-maxi-full"
-        }
-      ],
-      "iconPath" : "square.grid.2x2.fill",
-      "key" : "w",
-      "label" : "Window Manager ▣",
-      "type" : "group"
     }
   ],
   "type" : "group"
