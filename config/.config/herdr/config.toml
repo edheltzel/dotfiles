@@ -1,7 +1,7 @@
 onboarding = false
 
 [update]
-channel = "stable"
+channel = "preview"
 
 [experimental]
 allow_nested             = true
@@ -77,6 +77,12 @@ key         = "prefix+/"
 type        = "pane"
 command     = "git diff | diffnav --watch"
 description = "launch DiffNav"
+
+[[keys.command]]
+key         = "prefix+h"
+type        = "pane"
+command     = "hunk diff"
+description = "launch Hunk Diff"
 
 [[keys.command]]
 key         = "prefix+v"
