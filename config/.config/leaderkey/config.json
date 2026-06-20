@@ -109,11 +109,6 @@
           "value" : "https://mail.google.com/mail/u/0/#inbox"
         },
         {
-          "key" : "i",
-          "type" : "application",
-          "value" : "/Applications/Invoice Ninja.app"
-        },
-        {
           "actions" : [
             {
               "key" : "b",
@@ -172,6 +167,11 @@
           "key" : "k",
           "label" : "Keeb",
           "type" : "group"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Applications/Invoice Ninja.app"
         },
         {
           "actions" : [
