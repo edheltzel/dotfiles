@@ -16,7 +16,7 @@ issuesSections:
 defaults:
   preview:
     open: true
-    width: 70
+    width: 100
   prsLimit: 20
   issuesLimit: 20
   view: prs
@@ -26,6 +26,8 @@ defaults:
         width: 7
       repo:
         width: 15
+      title:
+        grow: true
       author:
         width: 15
       assignees:
@@ -41,6 +43,8 @@ defaults:
         width: 7
       repo:
         width: 15
+      title:
+        grow: true
       creator:
         width: 10
       assignees:
@@ -49,7 +53,9 @@ defaults:
   refetchIntervalMinutes: 30
 keybindings:
   issues: []
-  prs: []
+  prs: 
+    - key: T
+      command: gh enhance -R {{.RepoName}} {{.PrNumber}}
 repoPaths: {}
 theme:
   ui:
