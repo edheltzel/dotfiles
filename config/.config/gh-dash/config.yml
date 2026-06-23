@@ -77,5 +77,6 @@ theme:
       secondary: "#323449"
       faint: "#212337"
 pager:
+  # diff: hunk diff
   diff: diffnav
 confirmQuit: false
