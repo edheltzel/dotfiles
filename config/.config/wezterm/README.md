@@ -60,41 +60,52 @@ M.process_icons = {
 
 ## Key Bindings
 
-Leader key: **Cmd+K** (1.5s timeout)
+Leader key: **Cmd+K** (1.5s timeout). `LDR` = the leader chord.
 
 ### Panes
 
-| Keys              | Action                                 |
-| ----------------- | -------------------------------------- |
-| `LDR -`           | Split down                             |
-| `LDR \`           | Split right                            |
-| `LDR h/j/k/l/u`   | Split left/down/clear/right/up         |
-| `LDR x`           | Close pane                             |
-| `LDR z`           | Toggle zoom                            |
-| `LDR r`           | Resize mode (`h/j/k/l`, `Esc` to exit) |
-| `Cmd+]` / `Cmd+[` | Next / previous pane                   |
-| `Cmd+Ctrl+=`      | Close pane                             |
+| Keys                  | Action                                        |
+| --------------------- | --------------------------------------------- |
+| `LDR -`               | Split down (vertical split)                   |
+| `LDR \`               | Split right (horizontal split)                |
+| `LDR h/j/l/u`         | Split left / down / right / up                |
+| `LDR x`               | Close pane                                    |
+| `LDR =`               | Maximize / toggle pane zoom                   |
+| `LDR r`               | Resize mode (`h/j/k/l`, `Esc`/`Enter` to exit) |
+| `LDR d`               | Detach domain (tmux -CC)                       |
+| `Cmd+]` / `Cmd+[`     | Next / previous pane                          |
+| `Cmd+Ctrl+=`          | Close pane                                    |
+| `Cmd+Ctrl+Alt+\` / `-`| Split right / down (Ghostty-style)            |
+| `Cmd+Ctrl+Alt+z`      | Toggle pane zoom                              |
 
 ### Tabs
 
-| Keys                | Action                               |
-| ------------------- | ------------------------------------ |
-| `LDR t`             | New tab                              |
-| `LDR 1-9`           | Jump to tab                          |
-| `LDR e`             | Rename tab                           |
-| `LDR T`             | Tab navigator                        |
-| `LDR m`             | Move tab mode (`h/l`, `Esc` to exit) |
-| `Cmd+Shift+]` / `[` | Next / previous tab                  |
+| Keys                  | Action                                  |
+| --------------------- | --------------------------------------- |
+| `LDR t`               | New tab                                 |
+| `Cmd+K 1-9` / `Cmd+1-9` | Jump to tab                           |
+| `LDR e`               | Rename tab                              |
+| `LDR T`               | Tab navigator                          |
+| `LDR m`               | Move-tab mode (`h/l`, `Esc`/`Enter`)   |
+| `Cmd+Ctrl+Alt+h` / `l`| Previous / next tab                    |
+| `Cmd+Shift+[` / `]`   | Previous / next tab (WezTerm default)  |
 
 ### Workspaces
 
-| Keys             | Action                   |
-| ---------------- | ------------------------ |
-| `LDR s`          | Switch workspace (fuzzy) |
-| `LDR S`          | Create workspace         |
-| `LDR E`          | Rename workspace         |
-| `Ctrl+Cmd+N`     | Next workspace           |
-| `Ctrl+Cmd+Alt+P` | Previous workspace       |
+| Keys             | Action                            |
+| ---------------- | --------------------------------- |
+| `LDR w`          | Switch workspace (fuzzy launcher) |
+| `LDR W`          | Create workspace (prompt)         |
+| `LDR E`          | Rename workspace                  |
+| `Cmd+Ctrl+Alt+j` | Next workspace                    |
+| `Cmd+Ctrl+Alt+k` | Previous workspace                |
+
+### Zen Mode
+
+| Keys     | Action                              |
+| -------- | ----------------------------------- |
+| `LDR z`  | Toggle zen mode (current window)    |
+| `LDR Z`  | Spawn dedicated zen window          |
 
 ### fzf.fish Integration
 
@@ -107,17 +118,27 @@ Leader key: **Cmd+K** (1.5s timeout)
 | `Cmd+Ctrl+P` | Search processes  |
 | `Cmd+Ctrl+V` | Search variables  |
 
+### AI Agent Toggles
+
+Sent as `Ctrl+Alt` chords (survive tmux). Bound to `Cmd+Ctrl+Alt`:
+
+| Keys             | Action             |
+| ---------------- | ------------------ |
+| `Cmd+Ctrl+Alt+C` | Toggle Claude Code |
+| `Cmd+Ctrl+Alt+O` | Toggle OpenCode    |
+| `Cmd+Ctrl+Alt+P` | Toggle Pi          |
+
 ### Other
 
 | Keys                  | Action                               |
 | --------------------- | ------------------------------------ |
 | `LDR p` / `LDR Space` | Command palette                      |
-| `LDR k`               | Clear screen                         |
+| `LDR k`               | Clear screen / scrollback            |
 | `LDR n`               | New window                           |
 | `LDR c`               | Copy mode                            |
 | `LDR B`               | Debug overlay                        |
-| `Cmd+Shift+W`         | Quit application (with confirmation) |
-| `Cmd+Ctrl+F`          | Toggle fullscreen                    |
+| `Cmd+Shift+W`         | Quit application                     |
+| `Cmd+Ctrl+Alt+,`      | Reload configuration                 |
 
 ## Status Bar
 

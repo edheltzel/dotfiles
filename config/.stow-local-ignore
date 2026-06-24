@@ -6,5 +6,6 @@
 # Comments and blank lines are allowed
 
 .DS_Store
+AGENTS.md
 .config/raycast/extensions
 .config/opencode/README.md

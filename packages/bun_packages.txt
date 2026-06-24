@@ -10,6 +10,7 @@ hunkdiff
 neovim
 opensrc
 portless
+roughdraft
 skills
 tree-sitter-cli
 typescript
@@ -17,3 +18,4 @@ typescript-language-server
 vercel
 voicelayer-mcp
 wrangler
+yaml

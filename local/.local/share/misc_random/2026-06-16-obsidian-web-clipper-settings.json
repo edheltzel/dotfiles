@@ -1,0 +1,288 @@
+{
+  "general_settings": {
+    "betaFeatures": false,
+    "legacyMode": false,
+    "openBehavior": "embedded",
+    "saveBehavior": "addToObsidian",
+    "showMoreActionsButton": false,
+    "silentOpen": false
+  },
+  "highlighter_settings": {
+    "alwaysShowHighlights": true,
+    "highlightBehavior": "highlight-inline",
+    "highlighterEnabled": true
+  },
+  "interpreter_settings": {
+    "defaultPromptContext": "",
+    "interpreterAutoRun": false,
+    "interpreterEnabled": false,
+    "interpreterModel": "",
+    "models": [],
+    "providers": []
+  },
+  "migrationVersion": 1,
+  "property_types": [
+    {
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "type": "date"
+    },
+    {
+      "name": "created",
+      "type": "date"
+    },
+    {
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "type": "multitext"
+    }
+  ],
+  "reader_settings": {
+    "appearance": "auto",
+    "autoScroll": true,
+    "blendImages": true,
+    "colorLinks": false,
+    "customCss": "",
+    "darkTheme": "same",
+    "defaultFont": "",
+    "followLinks": true,
+    "fontSize": 16,
+    "fonts": [],
+    "highlightActiveLine": true,
+    "lightTheme": "default",
+    "lineHeight": 1.6,
+    "maxWidth": 38,
+    "pinPlayer": true
+  },
+  "stats": {
+    "addToObsidian": 24,
+    "copyToClipboard": 1,
+    "saveFile": 0,
+    "share": 0
+  },
+  "template_1778171730689asvyowh0b": {
+    "id": "1778171730689asvyowh0b",
+    "name": "General",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "Clippings",
+    "noteContentFormat": "[[HQ]] / [[AI Research]] / [[Workflows]]\n\n---\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1779475071937gr7xjakl6",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1779475081948zod1qs1ml",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17794750855757t79oe35j",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1779475088944rclliu5kl",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1779475093308alc9d7dsz",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "17794750997259tk7cu4vv",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "17794751033069v45jhtjj",
+        "name": "tags",
+        "value": "Resource, AI",
+        "type": "multitext"
+      }
+    ],
+    "triggers": []
+  },
+  "template_1779115604169s2jaii3q4": {
+    "id": "1779115604169s2jaii3q4",
+    "name": "Recipes",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "✱FieldNotes/Recipes",
+    "noteContentFormat": "# {{title}}\n\n[[HQ]] / [[Recipes]]\n\n#food\n\n---\n\n{{content}}",
+    "properties": [
+      {
+        "id": "1779115999332e1je2deau",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1779116015091jxrdr9huc",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1779116070978o8ksn7fm6",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1779116044006cgcrep5y9",
+        "name": "tags",
+        "value": "recipe",
+        "type": "multitext"
+      },
+      {
+        "id": "17791161236857vtb1bhgz",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "context": ""
+  },
+  "template_1779474899787qxi61t2rw": {
+    "id": "1779474899787qxi61t2rw",
+    "name": "Plans",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "✱FieldNotes/Plans",
+    "noteContentFormat": "[[✱FieldNotes/MakerHub|MakerHub]] / [[Woodworking]] / [[Woodworking Plans|Plans]]\n\n---\n\n{{content}}",
+    "properties": [
+      {
+        "id": "1779475071937gr7xjakl6",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1779475081948zod1qs1ml",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17794750855757t79oe35j",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1779475088944rclliu5kl",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1779475093308alc9d7dsz",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "17794750997259tk7cu4vv",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "17794751033069v45jhtjj",
+        "name": "tags",
+        "value": "Woodworking, idea",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "context": ""
+  },
+  "template_177947541403599ai8ef4n": {
+    "id": "177947541403599ai8ef4n",
+    "name": "3D",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "✱FieldNotes/Plans",
+    "noteContentFormat": "[[HQ]] / [[MakerHub]] / [[HeltzelMade]] / [[3D Modeling & Printing]] / [[Product Ideas]] \n\n---\n\n{{content}}",
+    "properties": [
+      {
+        "id": "1779475071937gr7xjakl6",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1779475081948zod1qs1ml",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17794750855757t79oe35j",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1779475088944rclliu5kl",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1779475093308alc9d7dsz",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "17794750997259tk7cu4vv",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "17794751033069v45jhtjj",
+        "name": "tags",
+        "value": "3D, idea",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "context": ""
+  },
+  "template_list": [
+    "1778171730689asvyowh0b",
+    "177947541403599ai8ef4n",
+    "1779474899787qxi61t2rw",
+    "1779115604169s2jaii3q4"
+  ],
+  "vaults": []
+}

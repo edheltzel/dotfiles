@@ -15,6 +15,40 @@
         {
           "actions" : [
             {
+              "key" : "c",
+              "type" : "application",
+              "value" : "/Applications/Google Chrome.app"
+            },
+            {
+              "key" : "h",
+              "type" : "application",
+              "value" : "/Applications/Helium.app"
+            },
+            {
+              "key" : "s",
+              "type" : "application",
+              "value" : "/Applications/Safari.app"
+            },
+            {
+              "key" : "z",
+              "type" : "application",
+              "value" : "/Applications/Zen.app"
+            }
+          ],
+          "iconPath" : "safari.fill",
+          "key" : "b",
+          "label" : "Browsers",
+          "type" : "group"
+        },
+        {
+          "key" : "c",
+          "label" : "Claude Desktop",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
+        },
+        {
+          "actions" : [
+            {
               "key" : "a",
               "type" : "application",
               "value" : "/Applications/Affinity.app"
@@ -75,11 +109,6 @@
           "value" : "https://mail.google.com/mail/u/0/#inbox"
         },
         {
-          "key" : "i",
-          "type" : "application",
-          "value" : "/Applications/Invoice Ninja.app"
-        },
-        {
           "actions" : [
             {
               "key" : "b",
@@ -96,6 +125,11 @@
               "label" : "Keychron",
               "type" : "url",
               "value" : "https://launcher.keychron.com/#/keymap"
+            },
+            {
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/KeyCastr.app"
             },
             {
               "actions" : [
@@ -140,6 +174,11 @@
           "type" : "group"
         },
         {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Applications/Invoice Ninja.app"
+        },
+        {
           "actions" : [
             {
               "key" : "m",
@@ -158,6 +197,11 @@
           "type" : "group"
         },
         {
+          "key" : "M",
+          "type" : "application",
+          "value" : "/Applications/Maestro.app"
+        },
+        {
           "key" : "N",
           "type" : "application",
           "value" : "/System/Applications/Notes.app"
@@ -170,64 +214,75 @@
           "value" : "raycast://extensions/raycast/raycast-notes/create-note"
         },
         {
+          "actions" : [
+            {
+              "iconPath" : "calendar.badge.checkmark",
+              "key" : "d",
+              "label" : "Go to Daily Note",
+              "type" : "url",
+              "value" : "obsidian://daily"
+            },
+            {
+              "key" : "o",
+              "type" : "application",
+              "value" : "/Applications/Obsidian.app"
+            }
+          ],
+          "iconPath" : "/Applications/Obsidian Web Clipper.app",
+          "key" : "o",
+          "label" : "Obsidian ⌘",
+          "type" : "group"
+        },
+        {
           "key" : "r",
           "type" : "application",
           "value" : "/System/Applications/Reminders.app"
         },
         {
+          "iconPath" : "/Applications/Superconductor.app",
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Superconductor.app"
+        },
+        {
           "actions" : [
             {
-              "iconPath" : "music.note.list",
-              "key" : "m",
-              "label" : "YouTube Music",
-              "type" : "url",
-              "value" : "https://music.youtube.com"
+              "key" : "g",
+              "type" : "application",
+              "value" : "/Applications/Ghostty.app"
             },
             {
-              "iconPath" : "video.fill",
-              "key" : "y",
-              "label" : "YouTube",
-              "type" : "url",
-              "value" : "https://youtube.com"
+              "key" : "k",
+              "type" : "application",
+              "value" : "/Applications/kitty.app"
+            },
+            {
+              "iconPath" : "apple.terminal.fill",
+              "key" : "v",
+              "label" : "Neovim ✨",
+              "type" : "command",
+              "value" : "open -na Ghostty --args -e nvim"
+            },
+            {
+              "key" : "w",
+              "type" : "application",
+              "value" : "/Applications/WezTerm.app"
             }
           ],
-          "iconPath" : "music.note.list",
-          "key" : "s",
-          "label" : "Music 🎧",
+          "iconPath" : "apple.terminal.fill",
+          "key" : "t",
+          "label" : "Terminals",
           "type" : "group"
+        },
+        {
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Applications/Codex.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
       "key" : "a",
       "label" : "Apps",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/Google Chrome.app"
-        },
-        {
-          "key" : "h",
-          "type" : "application",
-          "value" : "/Applications/Helium.app"
-        },
-        {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Safari.app"
-        },
-        {
-          "key" : "z",
-          "type" : "application",
-          "value" : "/Applications/Zen.app"
-        }
-      ],
-      "iconPath" : "safari.fill",
-      "key" : "b",
-      "label" : "Browsers",
       "type" : "group"
     },
     {
@@ -365,85 +420,6 @@
       "iconPath" : "keyboard.fill",
       "key" : "k",
       "label" : "Keeb ⌨️",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "c",
-          "label" : "Claude Desktop",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
-        },
-        {
-          "actions" : [
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "a",
-              "label" : "🤖 Ai Studio",
-              "type" : "url",
-              "value" : "https://aistudio.google.com/apps"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "g",
-              "label" : "🤖 Gemini",
-              "type" : "url",
-              "value" : "https://gemini.google.com/app"
-            },
-            {
-              "iconPath" : "questionmark.key.filled",
-              "key" : "n",
-              "label" : "🤖 NotebookLM",
-              "type" : "url",
-              "value" : "https://notebooklm.google.com/"
-            }
-          ],
-          "iconPath" : "sparkle",
-          "key" : "g",
-          "label" : "Gemini ❇️",
-          "type" : "group"
-        },
-        {
-          "key" : "m",
-          "type" : "application",
-          "value" : "/Applications/Maestro.app"
-        },
-        {
-          "iconPath" : "/Applications/Superconductor.app",
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Superconductor.app"
-        },
-        {
-          "key" : "x",
-          "type" : "application",
-          "value" : "/Applications/Codex.app"
-        }
-      ],
-      "iconPath" : "sparkles",
-      "key" : "l",
-      "label" : "LLM AI 🤖",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "iconPath" : "calendar.badge.checkmark",
-          "key" : "d",
-          "label" : "Go to Daily Note",
-          "type" : "url",
-          "value" : "obsidian://daily"
-        },
-        {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/Obsidian.app"
-        }
-      ],
-      "iconPath" : "/Applications/Obsidian Web Clipper.app",
-      "key" : "o",
-      "label" : "Obsidian ⌘",
       "type" : "group"
     },
     {
@@ -673,6 +649,27 @@
           "value" : "raycast-x://extensions/rolandleth/kill-process/index"
         },
         {
+          "actions" : [
+            {
+              "iconPath" : "note.text.badge.plus",
+              "key" : "n",
+              "label" : "Create New Note",
+              "type" : "url",
+              "value" : "raycast-x://extensions/raycast/raycast-notes/create-note"
+            },
+            {
+              "iconPath" : "rectangle.and.text.magnifyingglass",
+              "key" : "s",
+              "label" : "Search Notes",
+              "type" : "url",
+              "value" : "raycast-x://extensions/raycast/raycast-notes/search-notes"
+            }
+          ],
+          "key" : "n",
+          "label" : "Raycast Notes",
+          "type" : "group"
+        },
+        {
           "iconPath" : "eyedropper.full",
           "key" : "p",
           "label" : "Color Picker",
@@ -719,25 +716,6 @@
           "label" : "Open Project in Zed",
           "type" : "url",
           "value" : "raycast-x://extensions/theherk/zoxide-git-projects/find"
-        },
-        {
-          "actions" : [
-            {
-              "iconPath" : "note.text.badge.plus",
-              "key" : "n",
-              "label" : "Create New Note",
-              "type" : "url",
-              "value" : "raycast-x://extensions/raycast/raycast-notes/create-note"
-            },
-            {
-              "iconPath" : "rectangle.and.text.magnifyingglass",
-              "key" : "s",
-              "type" : "url",
-              "value" : "raycast-x://extensions/raycast/raycast-notes/search-notes"
-            }
-          ],
-          "key" : "n",
-          "type" : "group"
         }
       ],
       "iconPath" : "/Applications/Raycast.app",
@@ -789,34 +767,11 @@
       "type" : "group"
     },
     {
-      "actions" : [
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/cmux.app"
-        },
-        {
-          "key" : "g",
-          "type" : "application",
-          "value" : "/Applications/Ghostty.app"
-        },
-        {
-          "iconPath" : "apple.terminal.fill",
-          "key" : "v",
-          "label" : "Neovim ✨",
-          "type" : "command",
-          "value" : "open -na Ghostty --args -e nvim"
-        },
-        {
-          "key" : "w",
-          "type" : "application",
-          "value" : "/Applications/WezTerm.app"
-        }
-      ],
-      "iconPath" : "apple.terminal.fill",
-      "key" : "t",
-      "label" : "Terminals",
-      "type" : "group"
+      "iconPath" : "document.on.clipboard.fill",
+      "key" : "v",
+      "label" : "Clipboard",
+      "type" : "url",
+      "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
     },
     {
       "actions" : [
@@ -1079,16 +1034,9 @@
         }
       ],
       "iconPath" : "/Applications/AeroSpace.app",
-      "key" : "w",
+      "key" : "W",
       "label" : "Aerospace",
       "type" : "group"
-    },
-    {
-      "iconPath" : "document.on.clipboard.fill",
-      "key" : "v",
-      "label" : "Clipboard",
-      "type" : "url",
-      "value" : "raycast-x://extensions/raycast/clipboard-history/clipboard-history"
     }
   ],
   "type" : "group"

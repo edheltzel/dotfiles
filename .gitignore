@@ -15,6 +15,8 @@ config/.config/jj/repos/
 ### Neovim ###
 NetrwTreeListing*
 neoed/.config/nvim/lazy-lock.json
+neoed/.config/nvim/.agents/*
+neoed/.config/nvim/.claude/*
 
 ### LazyVim ###
 tt.*
@@ -56,6 +58,7 @@ gha-creds-*.json
 /.claude/*
 /.pi/*
 /.codex/*
+/.omp/*
 /AGENTS.md
 /CLAUDE.md
 .mcp.json

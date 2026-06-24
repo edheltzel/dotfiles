@@ -97,6 +97,7 @@ brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
 brew 'glow'                 # Render Markdown on the CLI
 brew 'vhs'                  # Write terminal GIFs as code
+brew 'tamnd/tap/kage'
 
 # CLI Monitoring and Performance Apps
 brew 'btop'         # better top
@@ -167,6 +168,7 @@ brew 'tectonic'
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
 brew 'git-delta'          # Git diff viewer - Rust
+brew  'modem-dev/tap/hunk'
 brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-lfs'            # Git Large File Storage
 brew 'miniserve'          # Static file server
@@ -304,11 +306,12 @@ brew 'agent-browser'
 brew 'whisper-cpp'
 brew 'sox'
 brew 'socat'
+cask 'maestro'
 
 # Terminal emulators
-cask 'ghostty'                        # Zig
-# cask 'kitty'                          # Python+C
-# cask 'wezterm@nightly'                # Rust
+cask 'ghostty'                        
+# cask 'kitty'                        
+# cask 'wezterm@nightly'              
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #

@@ -33,7 +33,7 @@ skip_notify = true
 "Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
 "LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa &>/dev/null; and echo 'LazyVim Plugins Update Complete'"
 "Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa' &>/dev/null; and echo 'Treesitter Update Complete'"
-"Update Agent Harnesses" = "pi update; and omp update; and claude update; and herdr update"
+"Update Agent Harnesses" = "claude update; omp update; pi update; herdr update"
 
 # Custom Post-commands
 [post_commands]
@@ -48,17 +48,16 @@ autoremove = true
 
 [git]
 repos = [
-  "~/Developer/AI/FLOW/",
-  "~/Developer/AI/Fabric/",
-  "~/Developer/AI/PersonalAI",
-  "~/Developer/AI/compoundEngineering",
-  "~/Developer/AI/agentPiMono",
-  "~/Developer/AI/claude-cybersecurity/",
-  "~/Developer/AI/claude-obsidian/",
-  "~/Developer/AI/claude-seo/",
-  "~/Developer/AI/jeffallenClaudeSkills",
-  "~/Developer/AI/marcusSkills",
-  "~/Developer/AI/marketingSkills",
-  "~/Developer/AI/mattpocokSkills",
-  "~/Developer/TUI-Herdr/"
+  "/Users/ed/Developer/_AI/Fabric/",
+  "/Users/ed/Developer/_AI/PersonalAI",
+  "/Users/ed/Developer/_AI/compoundEngineeering",
+  "/Users/ed/Developer/_AI/PiAgent",
+  "/Users/ed/Developer/_AI/claude-cybersecurity/",
+  "/Users/ed/Developer/_AI/claude-obsidian/",
+  "/Users/ed/Developer/_AI/claude-seo/",
+  "/Users/ed/Developer/_AI/jeffallenClaudeSkills",
+  "/Users/ed/Developer/_AI/marcusSkills",
+  "/Users/ed/Developer/_AI/marketingSkills",
+  "/Users/ed/Developer/_AI/mattpocockSkills",
+  "/Users/ed/Developer/HerdrTUI/"
 ]
