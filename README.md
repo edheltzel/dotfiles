@@ -39,7 +39,8 @@ But get **inspired**, take what you want, and leave the rest to make it your own
 - [v1](https://github.com/edheltzel/dotfiles/tree/v1) uses oh-my-zsh (very old)
 - [v2](https://github.com/edheltzel/dotfiles/tree/v2) uses fish shell + custom scripts (old)
 - v3 uses fish shell + GNU Stow (recent)
-- v3.2 includes Zsh config (current)
+- v3.2 includes Zsh config
+- v3.3 Vite+ replaces Biome in Neovim, leaderkey → Raycast, hunk pager (current)
 
 </details>
 

@@ -7,7 +7,29 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## Unreleased
 
-- refactor(install): unify bootstrap.sh + install.sh into single subcommand-driven script [#53](https://github.com/edheltzel/dotfiles/pull/53) ([edheltzel](https://github.com/edheltzel))
+## [v3.3](https://github.com/edheltzel/dotfiles/tree/v3.3) - 2026-06-24
+
+[Full Changelog](https://github.com/edheltzel/dotfiles/compare/v3.2...v3.3)
+
+### Added
+
+- **Vite+ replaces Biome** for Neovim formatting & linting (neoed): `vp fmt` (Oxfmt) on save, live Oxlint LSP diagnostics, `vtsls` for TypeScript, and a `vp check --fix` pre-commit hook
+- `hunk` as the git diff pager, with herdr integration (replaces diffnav)
+- SSH signing-key auto-registration on GitHub during provisioning (`git/git.sh`) — keeps commits verified after a key rotation
+- DOX `AGENTS.md` documentation framework (local, untracked)
+- Raycast window management; `visual-recap` GitHub workflow
+- Global packages/abbreviations: codegraph, roughdraft, maestro, mosh/moshi, mdv (yazi markdown preview), bettershot
+
+### Changed
+
+- Migrated leaderkey to a Raycast extension
+- Herd swapped to the stable release; topgrade runs custom commands; `push.default` matching → simple
+- refactor(install): unified bootstrap.sh + install.sh into a single subcommand-driven script [#53](https://github.com/edheltzel/dotfiles/pull/53) ([edheltzel](https://github.com/edheltzel))
+- Stow ignores `AGENTS.md` so local agent docs are never symlinked into `$HOME`
+
+### Fixed
+
+- topgrade repos path
 
 ## [v3.2](https://github.com/edheltzel/dotfiles/tree/v3.2) - 2026-03-20
 
