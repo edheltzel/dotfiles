@@ -20,6 +20,7 @@ window-save-state        = always
 window-colorspace        = "display-p3"
 window-inherit-font-size = false
 window-padding-x         = 10
+window-padding-y         = 10
 window-title-font-family = "Lilex Nerd Font Mono"
 font-family              = "Lilex Nerd Font Mono"
 font-size                = 16
