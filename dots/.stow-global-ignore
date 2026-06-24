@@ -1,5 +1,6 @@
 # Stow global ignore - skip these files
 .DS_Store
+AGENTS.md
 .git
 .gitignore
 .stow-local-ignore
