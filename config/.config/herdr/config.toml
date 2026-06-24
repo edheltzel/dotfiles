@@ -10,7 +10,17 @@ resume_agents_on_restore = true
 pane_history             = true
 
 [theme]
-name = "tokyo-night"
+name = "vesper"
+
+auto_switch = false
+
+# Sidebar contrast — lift the highlight surfaces above Vesper's panel_bg (#1a1a1a)
+# so the active/selected space + agent rows actually read, like the tab bar's pills.
+# Stock Vesper sets surface_dim darker than the background, so the active row vanishes.
+[theme.custom]
+surface_dim = "#2f2f2f"  # active workspace / agent row background
+surface0    = "#3a3a3a"  # selection (navigate cursor) background
+surface1    = "#343434"  # drag / hover — kept above surface_dim to avoid inversion
 
 [ui]
 prompt_new_tab_name               = false

@@ -4,7 +4,8 @@ shell-integration-features = true
 alpha-blending             = linear-corrected
 
 # config-file             = "themes/catppuccin-latte"
-theme                   = TokyoNight Moon
+# theme                   = TokyoNight Moon
+theme                   = Vesper
 cursor-style            = block
 term                    = xterm-256color
 unfocused-split-fill    = "black"

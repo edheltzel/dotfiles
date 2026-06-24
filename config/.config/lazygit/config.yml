@@ -5,28 +5,29 @@
 gui:
   theme:
     activeBorderColor:
-      - "#89b4fa"
+      - "#ffcfa8"
       - bold
     inactiveBorderColor:
-      - "#a6adc8"
+      - "#505050"
     searchingActiveBorderColor:
-      - "#f9e2af"
+      - "#ffc799"
+      - bold
     optionsTextColor:
-      - "#89b4fa"
+      - blue
     selectedLineBgColor:
-      - "#313244"
+      - "#282828"
     inactiveViewSelectedLineBgColor:
-      - "#6c7086"
+      - bold
     cherryPickedCommitFgColor:
-      - "#89b4fa"
+      - "#ffcfa8"
     cherryPickedCommitBgColor:
-      - "#45475a"
+      - cyan
     markedBaseCommitFgColor:
-      - "#89b4fa"
+      - blue
     markedBaseCommitBgColor:
-      - "#f9e2af"
+      - "#ffc799"
     unstagedChangesColor:
-      - "#f38ba8"
+      - "#ff8080"
     defaultFgColor:
-      - "#cdd6f4"
+      - "#cccccc"
   overrideGpg: true
