@@ -63,19 +63,19 @@ theme:
       showSeparator: true
   colors:
     text:
-      primary: "#EBFAFA"
-      secondary: "#A48CF2"
-      inverted: "#171928"
-      faint: "#7081D0"
-      warning: "#F7F67F"
-      success: "#37F499"
-      error: "#F16C75"
+      primary: "#FFFFFF"
+      secondary: "#FFC799"
+      inverted: "#101010"
+      faint: "#A0A0A0"
+      warning: "#FFCFA8"
+      success: "#99FFE4"
+      error: "#FF8080"
     background:
-      selected: "#323449"
+      selected: "#232323"
     border:
-      primary: "#7081D0"
-      secondary: "#323449"
-      faint: "#212337"
+      primary: "#FFC799"
+      secondary: "#505050"
+      faint: "#282828"
 pager:
   # diff: hunk diff
   diff: diffnav
