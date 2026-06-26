@@ -181,6 +181,22 @@ get_claude_theme() {
 # Update Functions
 #------------------------------------------------------------------------------
 
+# Collapse a ghostty option to a single active line: rewrite the first line
+# matching $key (commented or not) to $repl, drop any other lines for that key,
+# and append $repl if the key was absent. Keeps the config idempotent across
+# repeated switches (no duplicate/orphaned theme or config-file lines).
+set_ghostty_line() {
+  local file="$1" key="$2" repl="$3"
+  awk -v key="$key" -v repl="$repl" '
+    $0 ~ "^[[:space:]]*#?[[:space:]]*" key "[[:space:]]*=" {
+      if (!done) { print repl; done = 1 }
+      next
+    }
+    { print }
+    END { if (!done) print repl }
+  ' "$file" >"$file.tmp" && mv "$file.tmp" "$file"
+}
+
 update_ghostty() {
   local theme="$1"
 
@@ -190,19 +206,22 @@ update_ghostty() {
     return
   fi
 
-  local ghostty_theme=$(get_ghostty_theme "$theme")
   local config_file="$CONFIG/ghostty/config"
+  local theme_file="$CONFIG/ghostty/themes/$theme"
 
-  if [[ "$theme" == "eldritch" ]]; then
-    # Use custom config file for Eldritch
-    sed -i '' 's/^theme = /#theme = /' "$config_file"
-    sed -i '' 's/^#config-file = /config-file = /' "$config_file"
-    UPDATED_APPS+=("Ghostty → eldritch (custom file)")
-    success "Ghostty → eldritch (custom file)"
+  if [[ -f "$theme_file" ]]; then
+    # Local theme file (themes/<name>) — keeps custom cursor/selection colors
+    # the bundled Ghostty themes don't define. Loaded via `config-file`; any
+    # active `theme =` line is commented so it doesn't take precedence.
+    sed -i '' -E 's|^([[:space:]]*)theme([[:space:]]+)=|\1#theme\2=|' "$config_file"
+    set_ghostty_line "$config_file" "config-file" "config-file = \"themes/$theme\""
+    UPDATED_APPS+=("Ghostty → $theme (local file)")
+    success "Ghostty → $theme (local file)"
   else
-    # Use built-in theme
-    sed -i '' 's/^config-file = /#config-file = /' "$config_file"
-    sed -i '' "s/^.*theme = .*/theme = $ghostty_theme/" "$config_file"
+    # Bundled Ghostty theme — comment any active `config-file =`, set `theme =`.
+    local ghostty_theme=$(get_ghostty_theme "$theme")
+    sed -i '' -E 's|^([[:space:]]*)config-file([[:space:]]+)=|\1#config-file\2=|' "$config_file"
+    set_ghostty_line "$config_file" "theme" "theme = $ghostty_theme"
     UPDATED_APPS+=("Ghostty → $ghostty_theme")
     success "Ghostty → $ghostty_theme"
   fi
