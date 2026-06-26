@@ -307,6 +307,7 @@ brew 'whisper-cpp'
 brew 'sox'
 brew 'socat'
 cask 'maestro'
+brew 'can1357/tap/omp'
 
 # Terminal emulators
 cask 'ghostty'                        
