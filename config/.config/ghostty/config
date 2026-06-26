@@ -3,9 +3,7 @@ confirm-close-surface      = false
 shell-integration-features = true
 alpha-blending             = linear-corrected
 
-# config-file             = "themes/catppuccin-latte"
-# theme                   = TokyoNight Moon
-theme                   = Vesper
+theme                   = vesper
 cursor-style            = block
 term                    = xterm-256color
 unfocused-split-fill    = "black"
@@ -44,7 +42,7 @@ quick-terminal-autohide           = false
 # global
 keybind = global:super+ctrl+shift+alt+g=toggle_quick_terminal
 keybind = alt+backspace=text:\x1b\x7f
-keybind = super+,>,=reload_config
+keybind = ctrl+shift+alt+,=reload_config
 keybind = super+ctrl+alt+equal=close_surface
 
 # Leader key (cmd+k) sequences
