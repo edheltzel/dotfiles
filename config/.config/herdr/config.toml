@@ -4,99 +4,100 @@ onboarding = false
 channel = "preview"
 
 [experimental]
-allow_nested             = true
-kitty_graphics           = true
+allow_nested = true
+kitty_graphics = true
 resume_agents_on_restore = true
-pane_history             = true
+pane_history = true
+
+[ui]
+prompt_new_tab_name = false
+show_agent_labels_on_pane_borders = true
+
+agent_panel_sort = "spaces"
+[ui.sound]
+enabled = true
+path = "sounds/notification.mp3"
+done_path = "sounds/done.mp3"
+request_path = "sounds/request.mp3"
+
+[ui.toast]
+enabled = true
+delivery = "terminal"
 
 [theme]
 name = "vesper"
 
 auto_switch = false
 
-# Sidebar contrast — lift the highlight surfaces above Vesper's panel_bg (#1a1a1a)
-# so the active/selected space + agent rows actually read, like the tab bar's pills.
-# Stock Vesper sets surface_dim darker than the background, so the active row vanishes.
 [theme.custom]
-surface_dim = "#2f2f2f"  # active workspace / agent row background
-surface0    = "#3a3a3a"  # selection (navigate cursor) background
-surface1    = "#343434"  # drag / hover — kept above surface_dim to avoid inversion
-
-[ui]
-prompt_new_tab_name               = false
-show_agent_labels_on_pane_borders = true
-toast.enabled                     = true
-toast.delivery                    = "terminal"
-sound.enabled                     = true
-sound.path                        = "sounds/notification.mp3"
-sound.done_path                   = "sounds/done.mp3"
-sound.request_path                = "sounds/request.mp3"
+surface_dim = "#2f2f2f" # active workspace / agent row background
+surface0 = "#3a3a3a"    # selection (navigate cursor) background
+surface1 = "#343434"    # drag / hover — kept above surface_dim to avoid inversion
 
 [worktrees]
 directory = "~/.agents/Worktrees"
 
 [keys]
-prefix             = "shift+control+,"
-detach             = "prefix+shift+d"
+prefix = "shift+control+,"
+detach = "prefix+shift+d"
 
 # disabled
-goto               = ""
-new_worktree       = ""
-edit_scrollback    = ""
-swap_pane_left     = ""
-swap_pane_down     = ""
-swap_pane_up       = ""
-swap_pane_right    = ""
+goto = ""
+new_worktree = ""
+edit_scrollback = ""
+swap_pane_left = ""
+swap_pane_down = ""
+swap_pane_up = ""
+swap_pane_right = ""
 
 # close
-close_workspace    = "prefix+shift+w"
+close_workspace = "prefix+shift+w"
 
 # rename 
-rename_workspace   = "prefix+shift+e"
-rename_tab         ="prefix+e"
+rename_workspace = "prefix+shift+e"
+rename_tab = "prefix+e"
 
 # create term
-new_workspace      = "prefix+n"
-new_tab            = "prefix+t"
-split_vertical     = "prefix+\\"
+new_workspace = "prefix+n"
+new_tab = "prefix+t"
+split_vertical = "prefix+\\"
 
 # cycle
-next_workspace     = "shift+control+i"
+next_workspace = "shift+control+i"
 previous_workspace = "shift+control+u"
-next_tab           = "shift+control+l"
-previous_tab       = "shift+control+h"
-cycle_pane_next    = "shift+control+]"
-cycle_pane_previous= "shift+control+["
-previous_agent     = "shift+control+k"
-next_agent         = "shift+control+j"
+next_tab = "shift+control+l"
+previous_tab = "shift+control+h"
+cycle_pane_next = "shift+control+]"
+cycle_pane_previous = "shift+control+["
+previous_agent = "shift+control+k"
+next_agent = "shift+control+j"
 
 [[keys.command]]
-key         = "prefix+g"
-type        = "pane"
-command     = "lazygit"
+key = "prefix+g"
+type = "pane"
+command = "lazygit"
 description = "launch LazyGit"
 
 [[keys.command]]
-key         = "prefix+d"
-type        = "pane"
-command     = "gh dash"
+key = "prefix+d"
+type = "pane"
+command = "gh dash"
 description = "launch Dash"
 
 [[keys.command]]
-key         = "prefix+/"
-type        = "pane"
-command     = "hunk diff"
+key = "prefix+/"
+type = "pane"
+command = "hunk diff"
 description = "launch Hunk Diff"
 
 [[keys.command]]
-key         = "prefix+v"
-type        = "pane"
-command     = "nvim"
+key = "prefix+v"
+type = "pane"
+command = "nvim"
 description = "launch Neovim"
 
 [[keys.command]]
-key         = "prefix+y"
-type        = "pane"
-command     = "yazi"
+key = "prefix+y"
+type = "pane"
+command = "yazi"
 description = "launch Yazi"
-
