@@ -4,6 +4,9 @@
 TEXT='gYw'
 TEXT_COL="\033[m"
 RESET='\033[0m'
+BASE_BG_CODES=(40m 41m 42m 43m 44m 45m 46m 47m)
+BASE_COLOR_NAMES=(black red green yellow blue magenta cyan white)
+SWATCH_WIDTH=9
 # Outputs the number of colors supported by your terminal emulator
 function check_color_support () {
   echo -e "\n${TEXT_COL}Your terminal supports $(tput colors) colors."
@@ -11,15 +14,26 @@ function check_color_support () {
 # Prints main 16 colors
 function color_map_16_bit () {
   echo -e "\n${TEXT_COL}16-Bit Pallete${RESET}\n"
-  base_colors='40m 41m 42m 43m 44m 45m 46m 47m'
-  for BG in $base_colors; do echo -en "$EINS \033[$BG       \033[0m"; done; echo
-  for BG in $base_colors; do printf " \033[1;30m\033[%b  %b  \033[0m" $BG $BG; done; echo
-  for BG in $base_colors; do echo -en "$EINS \033[$BG       \033[0m"; done; echo
+  for BG in "${BASE_BG_CODES[@]}"; do printf ' \033[%s%*s\033[0m' "$BG" "$SWATCH_WIDTH" ""; done; echo
+  for i in "${!BASE_BG_CODES[@]}"; do
+    BG=${BASE_BG_CODES[$i]}
+    COLOR_NAME=${BASE_COLOR_NAMES[$i]}
+    TEXT_COLOR='1;30m'
+    if [[ "$BG" == '40m' ]]; then
+      TEXT_COLOR='1;37m'
+    fi
+    PADDING=$((SWATCH_WIDTH - ${#COLOR_NAME}))
+    LEFT_PADDING=$((PADDING / 2))
+    RIGHT_PADDING=$((PADDING - LEFT_PADDING))
+    printf ' \033[%s\033[%s%*s%s%*s\033[0m' \
+      "$TEXT_COLOR" "$BG" "$LEFT_PADDING" "" "$COLOR_NAME" "$RIGHT_PADDING" ""
+  done; echo
+  for BG in "${BASE_BG_CODES[@]}"; do printf ' \033[%s%*s\033[0m' "$BG" "$SWATCH_WIDTH" ""; done; echo
 }
 # Prints all 256 supported colors
 function color_map_256_bit () {
   echo -e "\n${TEXT_COL}256-Bit Pallete${RESET}\n"
-  for i in {0..255}; do printf '\e[38;5;%dm%3d ' $i $i; (((i+3) % 18)) || printf '\e[0m\n'; done
+  for i in {0..255}; do printf '\e[38;5;%dm%3d ' "$i" "$i"; (((i+3) % 18)) || printf '\e[0m\n'; done
   echo
 }
 
@@ -28,8 +42,7 @@ function color_map_256_bit () {
 check_color_support
 color_map_16_bit
 # Print the column headers
-echo -e "\n                 40m     41m     42m     43m\
-     44m     45m     46m     47m";
+printf '\n                 %-7s %-7s %-7s %-7s %-7s %-7s %-7s %-7s\n' "${BASE_COLOR_NAMES[@]}"
 
 # Loop through all the foreground colors
 for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' \
