@@ -71,7 +71,9 @@ if status is-interactive
     abbr --add obs obsidian
     abbr --add rd 'roughdraft open'
     abbr --add cg codegraph
+    abbr --add cgs 'codegraph sync'
     abbr --add cgi 'codegraph init'
+    abbr --add cgii 'codegraph index'
 
     # updates
     abbr --add upp 'topgrade --yes'

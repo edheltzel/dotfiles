@@ -241,7 +241,7 @@ cask 'google-drive'         # Cloud storage
 cask 'ledger-live'          # Crypto hardware wallet manager
 
 # Utility Applications
-cask 'dockdoor'                    # Replace for cmd+tab
+cask 'bettercmdtab'                # Replace for cmd+tab
 brew 'm-cli'                       # All in one MacOS management CLI app: m help
 cask 'keycastr'                    # Display keystrokes
 cask 'transnomino'                 # A batch rename utility
@@ -307,6 +307,7 @@ brew 'whisper-cpp'
 brew 'sox'
 brew 'socat'
 cask 'maestro'
+brew 'can1357/tap/omp'
 
 # Terminal emulators
 cask 'ghostty'                        

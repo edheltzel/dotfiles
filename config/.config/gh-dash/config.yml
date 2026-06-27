@@ -1,6 +1,6 @@
 ---
 prSections:
-  - title: My Pull Requests
+  - title: My PRs
     filters: is:open author:@me
   - title: Needs My Review
     filters: is:open review-requested:@me
@@ -15,19 +15,21 @@ issuesSections:
     filters: is:open involves:@me -author:@me
 defaults:
   preview:
-    open: true
+    open: false
     width: 100
-  prsLimit: 20
-  issuesLimit: 20
+  prsLimit: 25
+  issuesLimit: 25
   view: prs
   layout:
     prs:
       updatedAt:
         width: 7
-      repo:
-        width: 15
-      title:
-        grow: true
+    repo:
+      width: 15
+    title:
+      grow: true
+      number:
+        width: 6
       author:
         width: 15
       assignees:
@@ -38,13 +40,16 @@ defaults:
         hidden: true
       lines:
         width: 16
+
     issues:
       updatedAt:
         width: 7
       repo:
-        width: 15
+        width: 20
       title:
         grow: true
+      number:
+        width: 6
       creator:
         width: 10
       assignees:
@@ -53,7 +58,7 @@ defaults:
   refetchIntervalMinutes: 30
 keybindings:
   issues: []
-  prs: 
+  prs:
     - key: T
       command: gh enhance -R {{.RepoName}} {{.PrNumber}}
 repoPaths: {}
@@ -63,19 +68,19 @@ theme:
       showSeparator: true
   colors:
     text:
-      primary: "#EBFAFA"
-      secondary: "#A48CF2"
-      inverted: "#171928"
-      faint: "#7081D0"
-      warning: "#F7F67F"
-      success: "#37F499"
-      error: "#F16C75"
+      primary: "#FFFFFF"
+      secondary: "#FFC799"
+      inverted: "#101010"
+      faint: "#A0A0A0"
+      warning: "#FFCFA8"
+      success: "#99FFE4"
+      error: "#FF8080"
     background:
-      selected: "#323449"
+      selected: "#232323"
     border:
-      primary: "#7081D0"
-      secondary: "#323449"
-      faint: "#212337"
+      primary: "#FFC799"
+      secondary: "#505050"
+      faint: "#282828"
 pager:
   # diff: hunk diff
   diff: diffnav

@@ -38,7 +38,15 @@ local function strip_unsupported_args(args)
 		local token = args[i]
 		local drop = token == "-m" or token == "--monitor" or token:match("^%-%-monitor=")
 			or token == "-H" or token == "--html" or token:match("^%-%-html=")
-		if token == "--monitor" then
+			or token == "-h" or token == "--help"
+			or token == "-V" or token == "--version"
+			or token == "-G" or token:match("^%-G.+")
+			or token == "--init-config" or token:match("^%-%-init%-config=")
+			or token == "-p" or token == "--pager" or token:match("^%-%-pager=")
+		local drop_next_position = token == "--monitor"
+			or token == "--init-config" or token == "-G"
+			or token == "--pager" or token == "-p"
+		if drop_next_position then
 			local next_token = args[i + 1]
 			if next_token and not next_token:match("^%-") then
 				i = i + 1

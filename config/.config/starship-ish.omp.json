@@ -190,7 +190,7 @@
         "yellow": "#f9e2af"
       }
     },
-    "template": "tokyonight"
+    "template": "vesper"
   },
   "transient_prompt": {
     "template": "❯ ",
