@@ -25,7 +25,7 @@ enabled = true
 delivery = "terminal"
 
 [theme]
-name = "dracula"
+name = "vesper"
 
 auto_switch = false
 
