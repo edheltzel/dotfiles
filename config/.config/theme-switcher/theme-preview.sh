@@ -210,8 +210,8 @@ show_support() {
       ;;
     tokyonight|tokyonight-moon)
       echo "  ✓ bat"
-      echo "  ✗ kitty (not available)"
-      echo "  ✗ btop (not available)"
+      echo "  ✓ kitty"
+      echo "  ✓ btop"
       ;;
     vesper)
       echo "  ✓ bat (custom)"
@@ -227,7 +227,7 @@ show_support() {
 
   # Claude Code support (only themes with custom theme JSON)
   case "$theme" in
-    eldritch|vesper|rose-pine|rose-pine-dawn|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha|dracula|gruvbox)
+    eldritch|tokyonight|vesper|rose-pine|rose-pine-dawn|rose-pine-moon|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha|dracula|gruvbox)
       echo "  ✓ claude"
       ;;
     *)

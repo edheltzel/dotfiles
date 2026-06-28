@@ -80,6 +80,7 @@ get_ghostty_theme() {
 get_kitty_theme() {
   case "$1" in
   eldritch) echo "eldritch-neoed.conf" ;;
+  tokyonight) echo "tokyonight.conf" ;;
   rose-pine) echo "rose-pine.conf" ;;
   rose-pine-dawn) echo "rose-pine-dawn.conf" ;;
   rose-pine-moon) echo "rose-pine-moon.conf" ;;
@@ -147,6 +148,7 @@ get_bat_theme() {
 get_btop_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  tokyonight) echo "tokyonight" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
@@ -180,16 +182,18 @@ get_omp_palette() {
 get_claude_theme() {
   case "$1" in
   eldritch) echo "custom:eldritch" ;;
+  tokyonight) echo "custom:tokyonight" ;;
   vesper) echo "custom:vesper" ;;
   rose-pine) echo "custom:rose-pine" ;;
   rose-pine-dawn) echo "custom:rose-pine-dawn" ;;
+  rose-pine-moon) echo "custom:rose-pine-moon" ;;
   catppuccin-latte) echo "custom:catppuccin-latte" ;;
   catppuccin-frappe) echo "custom:catppuccin-frappe" ;;
   catppuccin-macchiato) echo "custom:catppuccin-macchiato" ;;
   catppuccin-mocha) echo "custom:catppuccin-mocha" ;;
   dracula) echo "custom:dracula" ;;
   gruvbox) echo "custom:gruvbox" ;;
-  *) echo "" ;; # Skip — no custom theme JSON (rose-pine-moon, tokyonight)
+  *) echo "" ;; # Skip — no custom theme JSON for this theme
   esac
 }
 
