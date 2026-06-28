@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha")
+THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha" "dracula" "gruvbox")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -72,6 +72,8 @@ get_ghostty_theme() {
   catppuccin-frappe) echo "Catppuccin Frappe" ;;
   catppuccin-macchiato) echo "Catppuccin Macchiato" ;;
   catppuccin-mocha) echo "Catppuccin Mocha" ;;
+  dracula) echo "Dracula" ;;
+  gruvbox) echo "Gruvbox Dark" ;;
   esac
 }
 
@@ -86,6 +88,8 @@ get_kitty_theme() {
   catppuccin-frappe) echo "catppuccin-frappe.conf" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato.conf" ;;
   catppuccin-mocha) echo "catppuccin-mocha.conf" ;;
+  dracula) echo "dracula.conf" ;;
+  gruvbox) echo "gruvbox.conf" ;;
   esac
 }
 
@@ -101,6 +105,8 @@ get_wezterm_theme() {
   catppuccin-frappe) echo "Catppuccin Frappe" ;;
   catppuccin-macchiato) echo "Catppuccin Macchiato" ;;
   catppuccin-mocha) echo "Catppuccin Mocha" ;;
+  dracula) echo "Dracula (Official)" ;;
+  gruvbox) echo "Gruvbox Dark (Gogh)" ;;
   esac
 }
 
@@ -116,6 +122,8 @@ get_neovim_theme() {
   catppuccin-frappe) echo "catppuccin-frappe" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato" ;;
   catppuccin-mocha) echo "catppuccin-mocha" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
   esac
 }
 
@@ -131,6 +139,8 @@ get_bat_theme() {
   catppuccin-frappe) echo "Catppuccin Frappe" ;;     # bat builtin
   catppuccin-macchiato) echo "Catppuccin Macchiato" ;; # bat builtin
   catppuccin-mocha) echo "Catppuccin Mocha" ;;       # bat builtin
+  dracula) echo "Dracula" ;;                         # bat builtin
+  gruvbox) echo "gruvbox-dark" ;;                    # bat builtin
   esac
 }
 
@@ -145,6 +155,8 @@ get_btop_theme() {
   catppuccin-frappe) echo "catppuccin-frappe" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato" ;;
   catppuccin-mocha) echo "catppuccin-mocha" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
   esac
 }
 
@@ -160,6 +172,8 @@ get_omp_palette() {
   catppuccin-frappe) echo "catppuccin-frappe" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato" ;;
   catppuccin-mocha) echo "catppuccin-mocha" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
   esac
 }
 
@@ -173,6 +187,8 @@ get_claude_theme() {
   catppuccin-frappe) echo "custom:catppuccin-frappe" ;;
   catppuccin-macchiato) echo "custom:catppuccin-macchiato" ;;
   catppuccin-mocha) echo "custom:catppuccin-mocha" ;;
+  dracula) echo "custom:dracula" ;;
+  gruvbox) echo "custom:gruvbox" ;;
   *) echo "" ;; # Skip — no custom theme JSON (rose-pine-moon, tokyonight)
   esac
 }

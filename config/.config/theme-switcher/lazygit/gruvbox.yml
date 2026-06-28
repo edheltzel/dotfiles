@@ -1,33 +1,27 @@
----
-# cSpell: disable
-# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
-# this is the default config.
-gui:
   theme:
     activeBorderColor:
-      - "#37f499"
+      - "#fabd2f"
       - bold
     inactiveBorderColor:
-      - "#747BA2"
+      - "#928374"
     searchingActiveBorderColor:
-      - "#f265b5"
+      - "#fabd2f"
       - bold
     optionsTextColor:
-      - blue
+      - "#83a598"
     selectedLineBgColor:
-      - "#323449"
+      - "#504945"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#a48cf2"
+      - "#d3869b"
     cherryPickedCommitBgColor:
-      - cyan
+      - "#458588"
     markedBaseCommitFgColor:
-      - blue
+      - "#458588"
     markedBaseCommitBgColor:
-      - "#f1fc79"
+      - "#fabd2f"
     unstagedChangesColor:
-      - "#f16c75"
+      - "#fb4934"
     defaultFgColor:
-      - "#ebfafa"
-  overrideGpg: true
+      - "#ebdbb2"

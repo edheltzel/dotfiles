@@ -156,6 +156,30 @@ show_colors() {
       echo -e "  \033[38;2;249;226;175m███\033[0m yellow"
       echo -e "  \033[38;2;250;179;135m███\033[0m peach"
       ;;
+    dracula)
+      echo -e "\033[38;2;189;147;249m████\033[0m Dracula"
+      echo ""
+      echo -e "  \033[38;2;40;42;54m███\033[0m bg"
+      echo -e "  \033[38;2;248;248;242m███\033[0m fg"
+      echo -e "  \033[38;2;189;147;249m███\033[0m purple"
+      echo -e "  \033[38;2;80;250;123m███\033[0m green"
+      echo -e "  \033[38;2;139;233;253m███\033[0m cyan"
+      echo -e "  \033[38;2;255;85;85m███\033[0m red"
+      echo -e "  \033[38;2;241;250;140m███\033[0m yellow"
+      echo -e "  \033[38;2;255;121;198m███\033[0m pink"
+      ;;
+    gruvbox)
+      echo -e "\033[38;2;250;189;47m████\033[0m Gruvbox Dark"
+      echo ""
+      echo -e "  \033[38;2;40;40;40m███\033[0m bg"
+      echo -e "  \033[38;2;235;219;178m███\033[0m fg"
+      echo -e "  \033[38;2;211;134;155m███\033[0m purple"
+      echo -e "  \033[38;2;184;187;38m███\033[0m green"
+      echo -e "  \033[38;2;131;165;152m███\033[0m blue"
+      echo -e "  \033[38;2;251;73;52m███\033[0m red"
+      echo -e "  \033[38;2;250;189;47m███\033[0m yellow"
+      echo -e "  \033[38;2;254;128;25m███\033[0m orange"
+      ;;
     *)
       echo "Unknown theme: $theme"
       return 1
@@ -203,7 +227,7 @@ show_support() {
 
   # Claude Code support (only themes with custom theme JSON)
   case "$theme" in
-    eldritch|vesper|rose-pine|rose-pine-dawn|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha)
+    eldritch|vesper|rose-pine|rose-pine-dawn|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha|dracula|gruvbox)
       echo "  ✓ claude"
       ;;
     *)
@@ -230,6 +254,8 @@ if [ -z "$theme" ]; then
   echo "  - catppuccin-frappe"
   echo "  - catppuccin-macchiato"
   echo "  - catppuccin-mocha"
+  echo "  - dracula"
+  echo "  - gruvbox"
   echo ""
   exit 0
 fi

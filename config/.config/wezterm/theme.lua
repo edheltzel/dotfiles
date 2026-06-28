@@ -10,7 +10,7 @@ function M.basename(s)
 end
 
 -- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
-M.name = "vesper"
+M.name = "Eldritch"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
@@ -242,6 +242,42 @@ local themes = {
       inactive_bg = "#181825",
       inactive_fg = "#7f849c",
       agent_activity = "#fab387",
+    },
+  },
+  ["Dracula (Official)"] = {
+    colors = {
+      red = "#ff5555",
+      purple = "#bd93f9",
+      cyan = "#8be9fd",
+      yellow = "#f1fa8c",
+      pink = "#ff79c6",
+      white = "#f8f8f2",
+    },
+    tab_bar = {
+      bg = "#282a36",
+      active_bg = "#bd93f9",
+      active_fg = "#282a36",
+      inactive_bg = "#21222c",
+      inactive_fg = "#6272a4",
+      agent_activity = "#ffb86c",
+    },
+  },
+  ["Gruvbox Dark (Gogh)"] = {
+    colors = {
+      red = "#fb4934",
+      purple = "#d3869b",
+      cyan = "#8ec07c",
+      yellow = "#fabd2f",
+      pink = "#d3869b",
+      white = "#ebdbb2",
+    },
+    tab_bar = {
+      bg = "#282828",
+      active_bg = "#fabd2f",
+      active_fg = "#282828",
+      inactive_bg = "#3c3836",
+      inactive_fg = "#a89984",
+      agent_activity = "#fe8019",
     },
   },
 }
