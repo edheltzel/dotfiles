@@ -250,7 +250,7 @@ cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archive and extractor
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
-brew 'thaw'                        # Ice bar - Using Sketchybar currently
+cask 'hiddenbar'
 brew 'stats'                       # System stats in menubar
 cask 'tailscale-app'
 cask 'tigervnc'
