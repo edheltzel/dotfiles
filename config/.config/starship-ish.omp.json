@@ -321,13 +321,14 @@
           "options": {
             "folder_icon": "…",
             "hide_root_location": true,
+            "max_depth": 3,
             "style": "agnoster_short"
           },
           "cache": {
             "duration": "none",
             "strategy": "folder"
           },
-          "template": "<p:blue>{{ .Var.lightning }}</><b>{{ .Path }} </b>",
+          "template": "<p:blue>{{ .Var.lightning }} </><b>{{ .Path }} </b>",
           "foreground": "p:purple",
           "type": "path",
           "style": "plain"
