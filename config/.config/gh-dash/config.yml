@@ -109,7 +109,7 @@ theme:
       showSeparator: true
       compact: true
 pager:
-  diff: "diffnav"
+  diff: "hunk show"
 confirmQuit: false
 showAuthorIcons: true
 smartFilteringAtLaunch: true
