@@ -20,8 +20,8 @@ hash = "bc5da419b4337d0122ac531e705fa7b6"
 
 [[plugin.deps]]
 use = "WhoSowSee/mdv-previewer"
-rev = "8998516"
-hash = "32de153d49be71e90dcc83672d1e6d3f"
+rev = "d51be44"
+hash = "b7e284b079bfab8e2e8a821b419df85"
 
 [[plugin.deps]]
 use = "WhoSowSee/mdv-previewer"
