@@ -1,4 +1,4 @@
-theme = "vesper"               # any built-in theme id, auto, or custom
+theme = "tokyo-night"          # any built-in theme id, auto, or custom
 mode = "split"                 # auto, split, stack
 vcs = "git"                    # git, jj, sl
 watch = false
