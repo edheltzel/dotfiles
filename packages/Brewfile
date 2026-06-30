@@ -177,7 +177,9 @@ brew 'scc'                # Source code counter - Go
 brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
-brew 'atac'               # A simple API client (postman like) in your terminal - Rust
+brew 'atac'               # A simple API client (postman like) - Rust
+
+brew "backlog-md"
 
 # Network and Security Testing
 brew 'bettercap'          # Network, scanning and moniroting
