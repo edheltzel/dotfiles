@@ -82,10 +82,13 @@ keybindings:
       name: lazygit
       command: >
         cd {{.RepoPath}}; lazygit
-  prs:
     - key: T
       name: code enhance
       command: gh enhance -R {{.RepoName}} {{.PrNumber}}
+  prs:
+    - key: D
+      name: hunk diff
+      command: gh diff
 
 theme:
   colors:
@@ -109,7 +112,7 @@ theme:
       showSeparator: true
       compact: true
 pager:
-  diff: "hunk show"
+  diff: "diffnav"
 confirmQuit: false
 showAuthorIcons: true
 smartFilteringAtLaunch: true
