@@ -35,7 +35,7 @@ repo:
 defaults:
   preview:
     open: false
-    width: 70
+    width: 100
   prsLimit: 20
   prApproveComment: LGTM
   issuesLimit: 20
