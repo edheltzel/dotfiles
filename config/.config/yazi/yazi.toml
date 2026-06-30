@@ -13,12 +13,8 @@ run = "git"
 group = "git"
 
 [[plugin.prepend_previewers]]
-url = "*.{md,markdown,txt}"
-run = "mdv-previewer"
-
-[[plugin.prepend_preloaders]]
-url = "*.{md,markdown,txt}"
-run = "mdv-previewer"
+url = "*.{md,markdown}"
+run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'
 
 [mgr]
 ratio = [1, 1, 5]

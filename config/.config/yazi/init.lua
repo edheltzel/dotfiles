@@ -9,18 +9,3 @@ th.git.ignored = ui.Style():fg("#414868") -- muted gray
 th.git.updated = ui.Style():fg("#e0af68"):bold() -- yellow (conflict)
 
 require("git"):setup({ order = 1500 })
-
-require("mdv-previewer"):setup({
-  theme = "tokyonight",
-  code_theme = "tokyonight",
-
-  custom_args = {
-    "--cols",
-    "64",
-    "--custom-theme",
-    "h1=173,22,124",
-  },
-
-  -- Number of lines per scroll step. Can take "auto" to use the default value
-  scroll_step = auto,
-})
