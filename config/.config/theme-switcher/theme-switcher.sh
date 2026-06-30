@@ -197,6 +197,34 @@ get_claude_theme() {
   esac
 }
 
+# Yazi flavor name (flavors/<name>.yazi). Only themes with a bundled flavor map;
+# everything else returns "" and is skipped.
+get_yazi_theme() {
+  case "$1" in
+  eldritch) echo "eldritch" ;;
+  tokyonight) echo "tokyo-night" ;;
+  vesper) echo "vesper" ;;
+  *) echo "" ;; # No Yazi flavor for this theme
+  esac
+}
+
+# Herdr theme name. Maps to a herdr built-in when one matches exactly; otherwise
+# "terminal" — which follows the host terminal palette this switcher just themed,
+# so eldritch / catppuccin-frappe / rose-pine-moon etc. still render faithfully.
+get_herdr_theme() {
+  case "$1" in
+  tokyonight) echo "tokyo-night" ;;
+  rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
+  vesper) echo "vesper" ;;
+  catppuccin-latte) echo "catppuccin-latte" ;;
+  catppuccin-mocha) echo "catppuccin" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
+  *) echo "terminal" ;; # Follow the (already-themed) host terminal palette
+  esac
+}
+
 #------------------------------------------------------------------------------
 # Update Functions
 #------------------------------------------------------------------------------
@@ -465,6 +493,59 @@ update_claude() {
   success "claude → $claude_theme"
 }
 
+update_yazi() {
+  local theme="$1"
+
+  if ! is_installed yazi; then
+    MISSING_APPS+=("Yazi")
+    info "Yazi → not installed, skipped"
+    return
+  fi
+
+  local yazi_theme=$(get_yazi_theme "$theme")
+  local config_file="$CONFIG/yazi/theme.toml"
+  local flavor_dir="$CONFIG/yazi/flavors/${yazi_theme}.yazi"
+
+  if [[ -z "$yazi_theme" || ! -d "$flavor_dir" ]]; then
+    SKIPPED_APPS+=("Yazi (no flavor for $theme)")
+    warning "Yazi → skipped (no flavor for $theme)"
+    return
+  fi
+
+  # Swap the active dark flavor in [flavor]
+  sed -i '' -E "s|^(dark[[:space:]]*=[[:space:]]*).*|\1\"$yazi_theme\"|" "$config_file"
+  UPDATED_APPS+=("Yazi → $yazi_theme")
+  success "Yazi → $yazi_theme"
+}
+
+update_herdr() {
+  local theme="$1"
+
+  if ! is_installed herdr; then
+    MISSING_APPS+=("herdr")
+    info "herdr → not installed, skipped"
+    return
+  fi
+
+  local herdr_theme=$(get_herdr_theme "$theme")
+  local config_file="$CONFIG/herdr/config.toml"
+
+  # Replace the name = line within the [theme] section only (block-scoped, so the
+  # many other name-like keys in config.toml are never touched).
+  awk -v repl="name = \"$herdr_theme\"" '
+    /^\[theme\]/ { print; in_theme=1; next }
+    in_theme && /^\[/ { in_theme=0 }
+    in_theme && /^[[:space:]]*name[[:space:]]*=/ { print repl; next }
+    { print }
+  ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
+
+  # Apply live to the running server, if any (no restart needed)
+  herdr server reload-config &>/dev/null || true
+
+  UPDATED_APPS+=("herdr → $herdr_theme")
+  success "herdr → $herdr_theme"
+}
+
 reload_ghostty() {
   # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
@@ -560,6 +641,8 @@ apply_theme() {
   update_omp "$theme"
   update_lazygit "$theme"
   update_claude "$theme"
+  update_yazi "$theme"
+  update_herdr "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
@@ -575,7 +658,7 @@ apply_theme() {
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""
-    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop"
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, Yazi"
   fi
 }
 
