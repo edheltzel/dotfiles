@@ -71,14 +71,9 @@ if status is-interactive
     abbr --add obs obsidian
     abbr --add rd 'roughdraft open'
     abbr --add cg codegraph
-    abbr --add cgs 'codegraph sync'
+    abbr --add cgs 'codegraph init'
     abbr --add cgi 'codegraph init'
     abbr --add cgii 'codegraph index'
-
-    # updates
-    abbr --add upp 'topgrade --yes'
-    abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
-    abbr --add aup 'claude update; codex update; pi update; omp update; herdr update'
 
     # updates
     abbr --add upp 'topgrade --yes'
