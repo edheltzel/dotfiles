@@ -67,3 +67,6 @@ end
 
 # Hermes Agent — ensure ~/.local/bin is on PATH
 fish_add_path "$HOME/.local/bin"
+
+# Added by codebase-memory-mcp install
+fish_add_path /Users/ed/.local/bin
