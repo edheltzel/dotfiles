@@ -3,4 +3,4 @@
 # Vesper flavor — see flavors/vesper.yazi/
 # User overrides below this block always take precedence over the flavor.
 [flavor]
-dark = "vesper"
+dark = "eldritch"
