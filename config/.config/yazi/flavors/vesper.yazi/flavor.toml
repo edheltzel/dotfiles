@@ -1,0 +1,209 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+#
+# Vesper — a peppermint & orange dark flavor for Yazi.
+# Palette ported from Rauno Freiberg's Vesper theme (https://github.com/raunofreiberg/vesper).
+#
+#   bg        #101010    surface-1  #161616    surface-2  #232323
+#   surface-3 #282828    surface-4  #343434    fg         #FFFFFF
+#   orange    #FFC799    peach      #FFCFA8    mint       #99FFE4
+#   red       #FF8080    slate      #65737E    gray       #A0A0A0
+#   border    #505050
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#FFC799" }
+
+# Find
+find_keyword  = { fg = "#FF8080", bold = true, italic = true, underline = true }
+find_position = { fg = "#FFCFA8", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#99FFE4", bg = "#99FFE4" }
+marker_cut      = { fg = "#FF8080", bg = "#FF8080" }
+marker_marked   = { fg = "#FFC799", bg = "#FFC799" }
+marker_selected = { fg = "#FFCFA8", bg = "#FFCFA8" }
+
+# Count
+count_copied   = { fg = "#101010", bg = "#99FFE4" }
+count_cut      = { fg = "#101010", bg = "#FF8080" }
+count_selected = { fg = "#101010", bg = "#FFCFA8" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#505050" }
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#101010", bg = "#FFC799", bold = true }
+inactive = { fg = "#FFC799", bg = "#232323" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#101010", bg = "#FFC799", bold = true }
+normal_alt  = { fg = "#FFC799", bg = "#232323" }
+
+# Select mode
+select_main = { fg = "#101010", bg = "#99FFE4", bold = true }
+select_alt  = { fg = "#99FFE4", bg = "#232323" }
+
+# Unset mode
+unset_main = { fg = "#101010", bg = "#FFCFA8", bold = true }
+unset_alt  = { fg = "#FFCFA8", bg = "#232323" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+overall   = { fg = "#FFC799" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Progress
+progress_label  = { fg = "#101010", bold = true }
+progress_normal = { fg = "#FFC799", bg = "#232323" }
+progress_error  = { fg = "#FF8080", bg = "#232323" }
+
+# Permissions
+perm_sep   = { fg = "#65737E" }
+perm_type  = { fg = "#FFC799" }
+perm_read  = { fg = "#99FFE4" }
+perm_write = { fg = "#FF8080" }
+perm_exec  = { fg = "#FFCFA8" }
+
+# : }}}
+
+
+# : Pick {{{
+
+[pick]
+border   = { fg = "#FFC799" }
+active   = { fg = "#FFCFA8", bold = true }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#FFC799" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border = { fg = "#FFC799" }
+
+# : }}}
+
+
+# : Tasks {{{
+
+[tasks]
+border  = { fg = "#FFC799" }
+title   = {}
+hovered = { fg = "#FFCFA8", underline = true }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+mask            = { bg = "#232323" }
+cand            = { fg = "#99FFE4" }
+rest            = { fg = "#A0A0A0" }
+desc            = { fg = "#FFCFA8" }
+separator       = "  "
+separator_style = { fg = "#505050" }
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#99FFE4" }
+run     = { fg = "#FFCFA8" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#101010", bg = "#A0A0A0" }
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#FFC799" }
+title    = { fg = "#FFC799" }
+tbl_col  = { fg = "#99FFE4" }
+tbl_cell = { fg = "#FFCFA8", bg = "#232323" }
+
+# : }}}
+
+
+# : Notify {{{
+
+[notify]
+title_info  = { fg = "#99FFE4" }
+title_warn  = { fg = "#FFC799" }
+title_error = { fg = "#FF8080" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+
+rules = [
+	# Images
+	{ mime = "image/*", fg = "#FFCFA8" },
+
+	# Media
+	{ mime = "video/*", fg = "#FF8080" },
+	{ mime = "audio/*", fg = "#FF8080" },
+
+	# Archives
+	{ mime = "application/zip",             fg = "#FFC799" },
+	{ mime = "application/x-tar",           fg = "#FFC799" },
+	{ mime = "application/x-bzip*",         fg = "#FFC799" },
+	{ mime = "application/x-bzip2",         fg = "#FFC799" },
+	{ mime = "application/x-7z-compressed", fg = "#FFC799" },
+	{ mime = "application/x-rar",           fg = "#FFC799" },
+	{ mime = "application/x-xz",            fg = "#FFC799" },
+
+	# Documents
+	{ mime = "application/doc",      fg = "#99FFE4" },
+	{ mime = "application/epub+zip", fg = "#99FFE4" },
+	{ mime = "application/pdf",      fg = "#99FFE4" },
+	{ mime = "application/rtf",      fg = "#99FFE4" },
+	{ mime = "application/vnd.*",    fg = "#99FFE4" },
+
+	# Special files
+	{ mime = "*", is = "orphan", fg = "#101010", bg = "#FF8080" },
+	{ mime = "application/*exec*", fg = "#FF8080" },
+
+	# Fallback
+	{ url = "*", fg = "#E4E4E4" },
+	{ url = "*/", fg = "#FFC799" },
+]
+
+# : }}}
