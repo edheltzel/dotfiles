@@ -25,8 +25,8 @@ hash = "b7e284b079bfab8e2e8a821b419df85"
 
 [[plugin.deps]]
 use = "WhoSowSee/mdv-previewer"
-rev = "04aa2bd"
-hash = "64de0b69e2b4829bd7ad4c500a3f7a61"
+rev = "d51be44"
+hash = "b7e284b079bfab8e2e8a821b419df85"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
