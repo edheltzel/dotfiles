@@ -127,7 +127,12 @@ install_rust_packages() {
   fi
   info "Installing Rust packages..."
   rustup update
-  cargo install $(cat "$rust_packages")
+  # One line per package. First token is the crate name; any remaining tokens
+  # are passed through to `cargo install` (e.g. `--git <url>` for non-crates.io).
+  while read -r line; do
+    case "$line" in '' | \#*) continue ;; esac
+    cargo install $line
+  done <"$rust_packages"
   success "Finished installing Rust packages."
 }
 
@@ -198,8 +203,9 @@ uninstall_rust_packages() {
     return 1
   fi
   info "Uninstalling Rust packages..."
-  while read -r pkg; do
-    [ -z "$pkg" ] && continue
+  # First token is the crate name; ignore any trailing install args (e.g. --git url).
+  while read -r pkg _; do
+    case "$pkg" in '' | \#*) continue ;; esac
     cargo uninstall "$pkg" || true
   done <"$rust_packages"
   success "Rust packages uninstalled."

@@ -14,7 +14,7 @@ group = "git"
 
 [[plugin.prepend_previewers]]
 url = "*.{md,markdown}"
-run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'
+run = 'piper -- mdterm -T dark -w=$w "$1"'
 
 [[plugin.prepend_previewers]]
 url = "*/"

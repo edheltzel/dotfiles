@@ -95,7 +95,7 @@ brew 'jpegoptim'            # JPEG image compression
 brew 'mozjpeg'              # JPEG image compression
 brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
-brew 'glow'                 # Render Markdown on the CLI
+# brew 'glow'                 # Render Markdown on the CLI
 brew 'vhs'                  # Write terminal GIFs as code
 brew 'tamnd/tap/kage'
 
