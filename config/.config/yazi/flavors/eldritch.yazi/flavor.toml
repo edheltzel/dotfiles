@@ -958,3 +958,16 @@ conds = [
 # : }}}
 
 # : }}}
+
+
+# : Git status signs {{{
+
+[git]
+modified  = { fg = "#04d1f9", bold = true }
+added     = { fg = "#37f499", bold = true }
+untracked = { fg = "#f7c67f", bold = true }
+deleted   = { fg = "#f16c75", bold = true }
+updated   = { fg = "#f1fc79", bold = true }
+ignored   = { fg = "#565f89" }
+
+# : }}}

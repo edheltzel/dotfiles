@@ -29,13 +29,13 @@ url = "*.csv"
 run = 'piper -- bat -p --color=always "$1"'
 
 [mgr]
-ratio = [1, 1, 5]
+ratio = [1, 2, 5]
 sort_by = "alphabetical"
 sort_sensitive = false
 sort_reverse = false
 sort_dir_first = true
 sort_translit = false
-linemode = "none"
+linemode = "btime"
 show_hidden = true
 show_symlink = true
 scrolloff = 5
