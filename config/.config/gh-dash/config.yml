@@ -93,19 +93,19 @@ keybindings:
 theme:
   colors:
     text:
-      primary: "#FFFFFF"
-      secondary: "#FFC799"
-      inverted: "#101010"
-      faint: "#A0A0A0"
-      warning: "#FFCFA8"
-      success: "#99FFE4"
-      error: "#FF8080"
+      primary: "#ebfafa"
+      secondary: "#a48cf2"
+      inverted: "#212337"
+      faint: "#7081d0"
+      warning: "#e9f941"
+      success: "#37f499"
+      error: "#f9515d"
     background:
-      selected: "#232323"
+      selected: "#2a2c48"
     border:
-      primary: "#FFC799"
-      secondary: "#505050"
-      faint: "#282828"
+      primary: "#a48cf2"
+      secondary: "#7081d0"
+      faint: "#2a2c48"
   ui:
     sectionsShowCount: true
     table:

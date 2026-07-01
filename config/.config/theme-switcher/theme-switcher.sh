@@ -546,6 +546,51 @@ update_herdr() {
   success "herdr → $herdr_theme"
 }
 
+update_ghdash() {
+  local theme="$1"
+
+  # gh-dash is a `gh` extension (`gh dash`), not a bare binary on PATH — detect the
+  # installed extension binary (XDG data dir), falling back to a bare gh-dash on PATH.
+  local gh_dash_bin="${XDG_DATA_HOME:-$HOME/.local/share}/gh/extensions/gh-dash/gh-dash"
+  if [[ ! -x "$gh_dash_bin" ]] && ! command -v gh-dash &>/dev/null; then
+    MISSING_APPS+=("gh-dash")
+    info "gh-dash → not installed, skipped"
+    return
+  fi
+
+  local config_file="$CONFIG/gh-dash/config.yml"
+  local theme_file="$THEMES_DIR/gh-dash/${theme}.yml"
+
+  if [[ ! -f "$theme_file" ]]; then
+    SKIPPED_APPS+=("gh-dash (theme snippet $theme.yml not found)")
+    warning "gh-dash → skipped (theme snippet not found)"
+    return
+  fi
+
+  # gh-dash theming is inline key-value under theme.colors (no external theme-file
+  # reference), so swap the whole colors block from the snippet. Block-scoped to
+  # theme.colors: the awk stops at the next 2-space key (theme.ui), leaving ui — and
+  # every other config section — untouched. gh-dash rejects a partial palette, so the
+  # snippet always carries the complete key set.
+  awk -v theme_file="$theme_file" '
+    /^theme:/ { in_theme=1; print; next }
+    in_theme && /^  colors:/ {
+      in_colors=1
+      while ((getline line < theme_file) > 0) {
+        print line
+      }
+      close(theme_file)
+      next
+    }
+    in_colors && /^  [a-z]/ { in_colors=0; in_theme=0 }
+    in_colors { next }
+    { print }
+  ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
+
+  UPDATED_APPS+=("gh-dash → $theme")
+  success "gh-dash → $theme"
+}
+
 reload_ghostty() {
   # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
@@ -643,6 +688,7 @@ apply_theme() {
   update_claude "$theme"
   update_yazi "$theme"
   update_herdr "$theme"
+  update_ghdash "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
@@ -658,7 +704,7 @@ apply_theme() {
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""
-    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, Yazi"
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, Yazi, gh-dash"
   fi
 }
 

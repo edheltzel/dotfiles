@@ -1,0 +1,15 @@
+  colors:
+    text:
+      primary: "#FFFFFF"
+      secondary: "#FFC799"
+      inverted: "#101010"
+      faint: "#A0A0A0"
+      warning: "#FFCFA8"
+      success: "#99FFE4"
+      error: "#FF8080"
+    background:
+      selected: "#232323"
+    border:
+      primary: "#FFC799"
+      secondary: "#505050"
+      faint: "#282828"
