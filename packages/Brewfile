@@ -95,7 +95,7 @@ brew 'jpegoptim'            # JPEG image compression
 brew 'mozjpeg'              # JPEG image compression
 brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
-brew 'glow'                 # Render Markdown on the CLI
+# brew 'glow'                 # Render Markdown on the CLI
 brew 'vhs'                  # Write terminal GIFs as code
 brew 'tamnd/tap/kage'
 
@@ -177,7 +177,9 @@ brew 'scc'                # Source code counter - Go
 brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
-brew 'atac'               # A simple API client (postman like) in your terminal - Rust
+brew 'atac'               # A simple API client (postman like) - Rust
+
+brew "backlog-md"
 
 # Network and Security Testing
 brew 'bettercap'          # Network, scanning and moniroting
@@ -249,7 +251,7 @@ cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archive and extractor
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
-brew 'thaw'                        # Ice bar - Using Sketchybar currently
+cask 'hiddenbar'
 brew 'stats'                       # System stats in menubar
 cask 'tailscale-app'
 cask 'tigervnc'

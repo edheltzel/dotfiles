@@ -65,3 +65,6 @@ gha-creds-*.json
 
 ### Zellij ###
 config/.config/zellij/plugins/*.wasm
+
+### Local app state (runtime DBs, not config) ###
+banks/

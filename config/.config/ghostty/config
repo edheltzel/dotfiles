@@ -3,7 +3,7 @@ confirm-close-surface      = false
 shell-integration-features = true
 alpha-blending             = linear-corrected
 
-theme                   = vesper
+#theme = TokyoNight Night
 cursor-style            = block
 term                    = xterm-256color
 unfocused-split-fill    = "black"
@@ -21,7 +21,7 @@ window-padding-x         = 10
 window-padding-y         = 10
 window-title-font-family = "Lilex Nerd Font Mono"
 font-family              = "Lilex Nerd Font Mono"
-font-size                = 16
+font-size                = 17
 font-feature             = zero,calt
 
 # Tabs
@@ -94,3 +94,4 @@ keybind = super+ctrl+r=text:\x12
 keybind = super+ctrl+p=text:\x1b\x10
 # variables
 keybind = super+ctrl+v=text:\x16
+config-file = "themes/eldritch"

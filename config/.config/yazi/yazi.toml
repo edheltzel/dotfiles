@@ -13,21 +13,29 @@ run = "git"
 group = "git"
 
 [[plugin.prepend_previewers]]
-url = "*.{md,markdown,txt}"
-run = "mdv-previewer"
+url = "*.{md,markdown}"
+run = 'piper -- mdterm -T dark -w=$w "$1"'
 
-[[plugin.prepend_preloaders]]
-url = "*.{md,markdown,txt}"
-run = "mdv-previewer"
+[[plugin.prepend_previewers]]
+url = "*/"
+run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"'
+
+[[plugin.prepend_previewers]]
+mime = "application/sqlite3"
+run = 'piper -- sqlite3 "$1" ".schema --indent"'
+
+[[plugin.prepend_previewers]]
+url = "*.csv"
+run = 'piper -- bat -p --color=always "$1"'
 
 [mgr]
-ratio = [1, 1, 5]
+ratio = [1, 2, 5]
 sort_by = "alphabetical"
 sort_sensitive = false
 sort_reverse = false
 sort_dir_first = true
 sort_translit = false
-linemode = "none"
+linemode = "btime"
 show_hidden = true
 show_symlink = true
 scrolloff = 5

@@ -1,14 +1,6 @@
-# : Mode {{{
+# "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
 
-[mode]
-normal_main = { fg = "#21202e", bg = "#908caa", bold = true }
-normal_alt = { fg = "green", bg = "black" }
-
-# Select mode
-select_main = { bg = "red", bold = true }
-select_alt = { fg = "red", bg = "gray" }
-
-# Unset mode
-unset_main = { bg = "red", bold = true }
-unset_alt = { fg = "red", bg = "gray" }
-# : }}}
+# Vesper flavor — see flavors/vesper.yazi/
+# User overrides below this block always take precedence over the flavor.
+[flavor]
+dark = "eldritch"

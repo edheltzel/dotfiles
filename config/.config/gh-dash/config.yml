@@ -1,7 +1,6 @@
----
 prSections:
   - title: My PRs
-    filters: is:open author:@me
+    filters: is:open
   - title: Needs My Review
     filters: is:open review-requested:@me
   - title: Involved
@@ -13,25 +12,47 @@ issuesSections:
     filters: is:open assignee:@me
   - title: Involved
     filters: is:open involves:@me -author:@me
+notificationsSections:
+  - title: All
+    filters: ""
+  - title: Created
+    filters: reason:author
+  - title: Participating
+    filters: reason:participating
+  - title: Mentioned
+    filters: reason:mention
+  - title: Review Requested
+    filters: reason:review-requested
+  - title: Assigned
+    filters: reason:assign
+  - title: Subscribed
+    filters: reason:subscribed
+  - title: Team Mentioned
+    filters: reason:team-mention
+repo:
+  branchesRefetchIntervalSeconds: 30
+  prsRefetchIntervalSeconds: 60
 defaults:
   preview:
     open: false
     width: 100
   prsLimit: 25
+  prApproveComment: LGTM
   issuesLimit: 25
+  notificationsLimit: 20
   view: prs
   layout:
     prs:
       updatedAt:
-        width: 7
-    repo:
-      width: 15
-    title:
-      grow: true
-      number:
-        width: 6
+        width: 5
+      createdAt:
+        width: 5
+      repo:
+        width: 20
       author:
         width: 15
+      authorIcon:
+        hidden: false
       assignees:
         width: 20
         hidden: true
@@ -39,49 +60,59 @@ defaults:
         width: 15
         hidden: true
       lines:
-        width: 16
-
+        width: 15
     issues:
       updatedAt:
-        width: 7
+        width: 5
+      createdAt:
+        width: 5
       repo:
-        width: 20
-      title:
-        grow: true
-      number:
-        width: 6
+        width: 15
       creator:
         width: 10
+      creatorIcon:
+        hidden: false
       assignees:
         width: 20
         hidden: true
   refetchIntervalMinutes: 30
 keybindings:
-  issues: []
-  prs:
+  universal:
+    - key: G
+      name: lazygit
+      command: >
+        cd {{.RepoPath}}; lazygit
     - key: T
+      name: code enhance
       command: gh enhance -R {{.RepoName}} {{.PrNumber}}
-repoPaths: {}
+  prs:
+    - key: D
+      name: hunk diff
+      command: gh diff
+
 theme:
-  ui:
-    table:
-      showSeparator: true
   colors:
     text:
-      primary: "#FFFFFF"
-      secondary: "#FFC799"
-      inverted: "#101010"
-      faint: "#A0A0A0"
-      warning: "#FFCFA8"
-      success: "#99FFE4"
-      error: "#FF8080"
+      primary: "#ebfafa"
+      secondary: "#a48cf2"
+      inverted: "#212337"
+      faint: "#7081d0"
+      warning: "#e9f941"
+      success: "#37f499"
+      error: "#f9515d"
     background:
-      selected: "#232323"
+      selected: "#2a2c48"
     border:
-      primary: "#FFC799"
-      secondary: "#505050"
-      faint: "#282828"
+      primary: "#a48cf2"
+      secondary: "#7081d0"
+      faint: "#2a2c48"
+  ui:
+    sectionsShowCount: true
+    table:
+      showSeparator: true
+      compact: true
 pager:
-  # diff: hunk diff
-  diff: diffnav
+  diff: "diffnav"
 confirmQuit: false
+showAuthorIcons: true
+smartFilteringAtLaunch: true

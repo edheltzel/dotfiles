@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha")
+THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha" "dracula" "gruvbox")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -72,12 +72,15 @@ get_ghostty_theme() {
   catppuccin-frappe) echo "Catppuccin Frappe" ;;
   catppuccin-macchiato) echo "Catppuccin Macchiato" ;;
   catppuccin-mocha) echo "Catppuccin Mocha" ;;
+  dracula) echo "Dracula" ;;
+  gruvbox) echo "Gruvbox Dark" ;;
   esac
 }
 
 get_kitty_theme() {
   case "$1" in
   eldritch) echo "eldritch-neoed.conf" ;;
+  tokyonight) echo "tokyonight.conf" ;;
   rose-pine) echo "rose-pine.conf" ;;
   rose-pine-dawn) echo "rose-pine-dawn.conf" ;;
   rose-pine-moon) echo "rose-pine-moon.conf" ;;
@@ -86,6 +89,8 @@ get_kitty_theme() {
   catppuccin-frappe) echo "catppuccin-frappe.conf" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato.conf" ;;
   catppuccin-mocha) echo "catppuccin-mocha.conf" ;;
+  dracula) echo "dracula.conf" ;;
+  gruvbox) echo "gruvbox.conf" ;;
   esac
 }
 
@@ -101,6 +106,8 @@ get_wezterm_theme() {
   catppuccin-frappe) echo "Catppuccin Frappe" ;;
   catppuccin-macchiato) echo "Catppuccin Macchiato" ;;
   catppuccin-mocha) echo "Catppuccin Mocha" ;;
+  dracula) echo "Dracula (Official)" ;;
+  gruvbox) echo "Gruvbox Dark (Gogh)" ;;
   esac
 }
 
@@ -116,6 +123,8 @@ get_neovim_theme() {
   catppuccin-frappe) echo "catppuccin-frappe" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato" ;;
   catppuccin-mocha) echo "catppuccin-mocha" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
   esac
 }
 
@@ -131,12 +140,15 @@ get_bat_theme() {
   catppuccin-frappe) echo "Catppuccin Frappe" ;;     # bat builtin
   catppuccin-macchiato) echo "Catppuccin Macchiato" ;; # bat builtin
   catppuccin-mocha) echo "Catppuccin Mocha" ;;       # bat builtin
+  dracula) echo "Dracula" ;;                         # bat builtin
+  gruvbox) echo "gruvbox-dark" ;;                    # bat builtin
   esac
 }
 
 get_btop_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  tokyonight) echo "tokyonight" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
   rose-pine-moon) echo "rose-pine-moon" ;;
@@ -145,6 +157,8 @@ get_btop_theme() {
   catppuccin-frappe) echo "catppuccin-frappe" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato" ;;
   catppuccin-mocha) echo "catppuccin-mocha" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
   esac
 }
 
@@ -160,20 +174,54 @@ get_omp_palette() {
   catppuccin-frappe) echo "catppuccin-frappe" ;;
   catppuccin-macchiato) echo "catppuccin-macchiato" ;;
   catppuccin-mocha) echo "catppuccin-mocha" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
   esac
 }
 
 get_claude_theme() {
   case "$1" in
   eldritch) echo "custom:eldritch" ;;
+  tokyonight) echo "custom:tokyonight" ;;
   vesper) echo "custom:vesper" ;;
   rose-pine) echo "custom:rose-pine" ;;
   rose-pine-dawn) echo "custom:rose-pine-dawn" ;;
+  rose-pine-moon) echo "custom:rose-pine-moon" ;;
   catppuccin-latte) echo "custom:catppuccin-latte" ;;
   catppuccin-frappe) echo "custom:catppuccin-frappe" ;;
   catppuccin-macchiato) echo "custom:catppuccin-macchiato" ;;
   catppuccin-mocha) echo "custom:catppuccin-mocha" ;;
-  *) echo "" ;; # Skip — no custom theme JSON (rose-pine-moon, tokyonight)
+  dracula) echo "custom:dracula" ;;
+  gruvbox) echo "custom:gruvbox" ;;
+  *) echo "" ;; # Skip — no custom theme JSON for this theme
+  esac
+}
+
+# Yazi flavor name (flavors/<name>.yazi). Only themes with a bundled flavor map;
+# everything else returns "" and is skipped.
+get_yazi_theme() {
+  case "$1" in
+  eldritch) echo "eldritch" ;;
+  tokyonight) echo "tokyo-night" ;;
+  vesper) echo "vesper" ;;
+  *) echo "" ;; # No Yazi flavor for this theme
+  esac
+}
+
+# Herdr theme name. Maps to a herdr built-in when one matches exactly; otherwise
+# "terminal" — which follows the host terminal palette this switcher just themed,
+# so eldritch / catppuccin-frappe / rose-pine-moon etc. still render faithfully.
+get_herdr_theme() {
+  case "$1" in
+  tokyonight) echo "tokyo-night" ;;
+  rose-pine) echo "rose-pine" ;;
+  rose-pine-dawn) echo "rose-pine-dawn" ;;
+  vesper) echo "vesper" ;;
+  catppuccin-latte) echo "catppuccin-latte" ;;
+  catppuccin-mocha) echo "catppuccin" ;;
+  dracula) echo "dracula" ;;
+  gruvbox) echo "gruvbox" ;;
+  *) echo "terminal" ;; # Follow the (already-themed) host terminal palette
   esac
 }
 
@@ -445,6 +493,104 @@ update_claude() {
   success "claude → $claude_theme"
 }
 
+update_yazi() {
+  local theme="$1"
+
+  if ! is_installed yazi; then
+    MISSING_APPS+=("Yazi")
+    info "Yazi → not installed, skipped"
+    return
+  fi
+
+  local yazi_theme=$(get_yazi_theme "$theme")
+  local config_file="$CONFIG/yazi/theme.toml"
+  local flavor_dir="$CONFIG/yazi/flavors/${yazi_theme}.yazi"
+
+  if [[ -z "$yazi_theme" || ! -d "$flavor_dir" ]]; then
+    SKIPPED_APPS+=("Yazi (no flavor for $theme)")
+    warning "Yazi → skipped (no flavor for $theme)"
+    return
+  fi
+
+  # Swap the active dark flavor in [flavor]
+  sed -i '' -E "s|^(dark[[:space:]]*=[[:space:]]*).*|\1\"$yazi_theme\"|" "$config_file"
+  UPDATED_APPS+=("Yazi → $yazi_theme")
+  success "Yazi → $yazi_theme"
+}
+
+update_herdr() {
+  local theme="$1"
+
+  if ! is_installed herdr; then
+    MISSING_APPS+=("herdr")
+    info "herdr → not installed, skipped"
+    return
+  fi
+
+  local herdr_theme=$(get_herdr_theme "$theme")
+  local config_file="$CONFIG/herdr/config.toml"
+
+  # Replace the name = line within the [theme] section only (block-scoped, so the
+  # many other name-like keys in config.toml are never touched).
+  awk -v repl="name = \"$herdr_theme\"" '
+    /^\[theme\]/ { print; in_theme=1; next }
+    in_theme && /^\[/ { in_theme=0 }
+    in_theme && /^[[:space:]]*name[[:space:]]*=/ { print repl; next }
+    { print }
+  ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
+
+  # Apply live to the running server, if any (no restart needed)
+  herdr server reload-config &>/dev/null || true
+
+  UPDATED_APPS+=("herdr → $herdr_theme")
+  success "herdr → $herdr_theme"
+}
+
+update_ghdash() {
+  local theme="$1"
+
+  # gh-dash is a `gh` extension (`gh dash`), not a bare binary on PATH — detect the
+  # installed extension binary (XDG data dir), falling back to a bare gh-dash on PATH.
+  local gh_dash_bin="${XDG_DATA_HOME:-$HOME/.local/share}/gh/extensions/gh-dash/gh-dash"
+  if [[ ! -x "$gh_dash_bin" ]] && ! command -v gh-dash &>/dev/null; then
+    MISSING_APPS+=("gh-dash")
+    info "gh-dash → not installed, skipped"
+    return
+  fi
+
+  local config_file="$CONFIG/gh-dash/config.yml"
+  local theme_file="$THEMES_DIR/gh-dash/${theme}.yml"
+
+  if [[ ! -f "$theme_file" ]]; then
+    SKIPPED_APPS+=("gh-dash (theme snippet $theme.yml not found)")
+    warning "gh-dash → skipped (theme snippet not found)"
+    return
+  fi
+
+  # gh-dash theming is inline key-value under theme.colors (no external theme-file
+  # reference), so swap the whole colors block from the snippet. Block-scoped to
+  # theme.colors: the awk stops at the next 2-space key (theme.ui), leaving ui — and
+  # every other config section — untouched. gh-dash rejects a partial palette, so the
+  # snippet always carries the complete key set.
+  awk -v theme_file="$theme_file" '
+    /^theme:/ { in_theme=1; print; next }
+    in_theme && /^  colors:/ {
+      in_colors=1
+      while ((getline line < theme_file) > 0) {
+        print line
+      }
+      close(theme_file)
+      next
+    }
+    in_colors && /^  [a-z]/ { in_colors=0; in_theme=0 }
+    in_colors { next }
+    { print }
+  ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
+
+  UPDATED_APPS+=("gh-dash → $theme")
+  success "gh-dash → $theme"
+}
+
 reload_ghostty() {
   # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
@@ -540,6 +686,9 @@ apply_theme() {
   update_omp "$theme"
   update_lazygit "$theme"
   update_claude "$theme"
+  update_yazi "$theme"
+  update_herdr "$theme"
+  update_ghdash "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
@@ -555,7 +704,7 @@ apply_theme() {
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""
-    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop"
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, Yazi, gh-dash"
   fi
 }
 

@@ -19,14 +19,9 @@ rev = "39aaf6d"
 hash = "bc5da419b4337d0122ac531e705fa7b6"
 
 [[plugin.deps]]
-use = "WhoSowSee/mdv-previewer"
-rev = "8998516"
-hash = "32de153d49be71e90dcc83672d1e6d3f"
-
-[[plugin.deps]]
-use = "WhoSowSee/mdv-previewer"
-rev = "04aa2bd"
-hash = "64de0b69e2b4829bd7ad4c500a3f7a61"
+use = "yazi-rs/plugins:piper"
+rev = "39aaf6d"
+hash = "12126fca34f9f1802bb57b88292f57af"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"

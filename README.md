@@ -253,7 +253,7 @@ There are two options for managing packages with GNU Stow:
   - **Theme Switcher**: Unified theme switching across multiple applications
     - Run `theme` for interactive fzf picker with preview, or `theme <name>` to switch directly
     - Supported themes: `eldritch`, `rose-pine`, `rose-pine-moon`, `tokyo-night`, `tokyo-night-moon`
-    - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode
+    - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode, Yazi, herdr
   - **Terminal configs**: alacritty, kitty, ghostty, wezterm
   - **Keyboard**: karabiner (legacy, now using [LeaderKey](https://github.com/mikker/LeaderKey)), leaderkey config
   - **Editors**: zed (Vim mode + AI integration) — maintained for occasional use

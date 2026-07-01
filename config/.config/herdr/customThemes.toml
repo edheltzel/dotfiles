@@ -24,7 +24,7 @@
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# Catppuccin Latte — contrast-tuned (the live theme; mirror of config.toml)
+# Catppuccin Latte — contrast-tuned (archived reference)
 # Fixes stock latte's washed-out muted text by mapping it to darker subtext greys
 # and widening surface separation, while keeping canonical Latte accents.
 # -----------------------------------------------------------------------------
@@ -48,6 +48,34 @@
 # green       = "#40a02b"  # green
 # teal        = "#179299"  # teal
 # blue        = "#1e66f5"  # blue
+
+# -----------------------------------------------------------------------------
+# Eldritch — cosmic-horror dark (the live theme; mirror of config.toml)
+# Palette matched to Ed's terminal eldritch (Ghostty/Kitty). Glacial cyan accent,
+# toxic-green and mauve secondary accents over a deep blue-black.
+# Base name = "terminal" so anything the 16 tokens don't cover follows the
+# (eldritch) terminal palette.
+# -----------------------------------------------------------------------------
+# [theme]
+# name = "terminal"
+#
+# [theme.custom]
+# panel_bg    = "#171928"  # bg          — sidebar / panel background
+# surface_dim = "#212337"  # bg2         — active workspace background
+# surface0    = "#323449"  # bg_highlight— selection background
+# surface1    = "#3b3e5c"  # raised      — hover / active (above surface_dim)
+# overlay0    = "#7081d0"  # comment     — muted text
+# overlay1    = "#a48cf2"  # purple      — secondary accent
+# text        = "#ebfafa"  # fg          — primary text
+# subtext0    = "#949ae5"  # dim-fg      — dimmed labels
+# accent      = "#04d1f9"  # cyan        — highlights, borders, navigation
+# mauve       = "#a48cf2"  # purple      — git branches
+# red         = "#f16c75"  # red
+# peach       = "#f7c67f"  # orange
+# yellow      = "#f1fc79"  # yellow
+# green       = "#37f499"  # green
+# teal        = "#66e4fd"  # bright cyan
+# blue        = "#9071f4"  # indigo
 
 # -----------------------------------------------------------------------------
 # Atelier Cave (dark) — archived reference

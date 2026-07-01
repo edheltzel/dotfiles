@@ -1,0 +1,84 @@
+# Catppuccin Latte theme
+# https://github.com/catppuccin/wezterm
+[colors]
+ansi = [
+  '#5c5f77',
+  '#d20f39',
+  '#40a02b',
+  '#df8e1d',
+  '#1e66f5',
+  '#ea76cb',
+  '#179299',
+  '#acb0be',
+]
+background = '#eff1f5'
+brights = [
+  '#6c6f85',
+  '#d20f39',
+  '#40a02b',
+  '#df8e1d',
+  '#1e66f5',
+  '#ea76cb',
+  '#179299',
+  '#bcc0cc',
+]
+compose_cursor = '#dd7878'
+cursor_bg = '#dc8a78'
+cursor_border = '#dc8a78'
+cursor_fg = '#eff1f5'
+foreground = '#4c4f69'
+scrollbar_thumb = '#8839ef'
+selection_bg = '#acb0be'
+selection_fg = '#4c4f69'
+split = '#9ca0b0'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#eff1f5'
+
+[colors.tab_bar.active_tab]
+bg_color = '#8839ef'
+fg_color = '#dce0e8'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#e6e9ef'
+fg_color = '#8c8fa1'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#8839ef'
+fg_color = '#dce0e8'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#e6e9ef'
+fg_color = '#4c4f69'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#8839ef'
+fg_color = '#4c4f69'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+author = 'Catppuccin'
+name = 'Catppuccin Latte'
+origin_url = 'https://github.com/catppuccin/wezterm'

@@ -23,13 +23,13 @@ if status is-interactive
     abbr --add wall '~/.wallpapers/'
     abbr --add work 'cd ~/Developer'
 
-    # servers/containers
+    # Servers/Containers
     abbr --add atlas 'cd ~/Developer/atlas-config/'
     # Editors/Terminals
     abbr --add dc 'docker compose'
     abbr --add dk docker
 
-    # multiplex/terminals
+    # Multiplex/Terminals
     abbr --add gty ghostty
     abbr --add mux tmux
     abbr --add muxa 'tmux attach'
@@ -40,7 +40,7 @@ if status is-interactive
     abbr --add muxl 'tmux list-sessions'
     abbr --add muxs 'tmux new-session -s'
 
-    # herdr 
+    # Herdr 
     abbr --add hsa --set-cursor 'herdr session attach %'
     abbr --add hhs --set-cursor 'herdr --session %'
     abbr --add hks --set-cursor 'herdr session stop %'
@@ -61,7 +61,7 @@ if status is-interactive
     abbr --add ppi --set-cursor 'pi -p "%"'
     abbr --add ooi --set-cursor 'omp, -p "%"'
 
-    # text editors
+    # Text Editors
     abbr --add zz zed
     abbr --add zzn 'zed -n .'
     abbr --add vim nvim
@@ -75,12 +75,7 @@ if status is-interactive
     abbr --add cgi 'codegraph init'
     abbr --add cgii 'codegraph index'
 
-    # updates
-    abbr --add upp 'topgrade --yes'
-    abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
-    abbr --add aup 'claude update; codex update; pi update; omp update; herdr update'
-
-    # updates
+    # Updates
     abbr --add upp 'topgrade --yes'
     abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
     abbr --add aup 'claude update; codex update; pi update; omp update; herdr update'
@@ -113,6 +108,7 @@ if status is-interactive
     abbr --add du dua
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
+    abbr --add glow mdterm
 
     # Git
     abbr --add lg lazygit

@@ -2,7 +2,7 @@
 # Paths, exports, variables handled by conf.d/ (loaded before this file)
 
 # Prompt engine (change to swap: "starship", "oh-my-posh")
-set -g FISH_PROMPT starship
+set -g FISH_PROMPT oh-my-posh
 
 if status is-interactive
     # Initialize prompt (once — do NOT reinitialize on events)
@@ -67,3 +67,10 @@ end
 
 # Hermes Agent — ensure ~/.local/bin is on PATH
 fish_add_path "$HOME/.local/bin"
+
+# Added by codebase-memory-mcp install
+fish_add_path /Users/ed/.local/bin
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

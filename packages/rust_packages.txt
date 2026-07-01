@@ -3,3 +3,4 @@ ouch
 suckit
 bws
 mdv
+mdterm --git https://github.com/bahdotsh/mdterm
