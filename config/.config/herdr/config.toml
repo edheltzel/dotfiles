@@ -101,7 +101,7 @@ command = "gh dash"
 description = "launch Dash"
 
 [[keys.command]]
-key = "prefix+/"
+key = "prefix+H"
 type = "pane"
 command = "hunk diff"
 description = "launch Hunk Diff"
