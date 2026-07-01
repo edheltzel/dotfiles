@@ -244,7 +244,6 @@ cask 'ledger-live'          # Crypto hardware wallet manager
 
 # Utility Applications
 cask 'bettercmdtab'                # Replace for cmd+tab
-
 brew 'm-cli'                       # All in one MacOS management CLI app: m help
 cask 'keycastr'                    # Display keystrokes
 cask 'transnomino'                 # A batch rename utility

@@ -1,5 +1,5 @@
 prSections:
-  - title: My Pull Requests
+  - title: My PRs
     filters: is:open
   - title: Needs My Review
     filters: is:open review-requested:@me
@@ -36,9 +36,9 @@ defaults:
   preview:
     open: false
     width: 100
-  prsLimit: 20
+  prsLimit: 25
   prApproveComment: LGTM
-  issuesLimit: 20
+  issuesLimit: 25
   notificationsLimit: 20
   view: prs
   layout:
