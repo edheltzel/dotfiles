@@ -109,6 +109,7 @@ if status is-interactive
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
     abbr --add glow mdterm
+    abbr --add bl backlog
 
     # Git
     abbr --add lg lazygit
