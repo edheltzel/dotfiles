@@ -48,16 +48,16 @@ autoremove = true
 
 [git]
 repos = [
-  "/Users/ed/Developer/_AI/Fabric/",
-  "/Users/ed/Developer/_AI/PersonalAI",
-  "/Users/ed/Developer/_AI/compoundEngineeering",
-  "/Users/ed/Developer/_AI/PiAgent",
-  "/Users/ed/Developer/_AI/claude-cybersecurity/",
-  "/Users/ed/Developer/_AI/claude-obsidian/",
+  "/Users/ed/Developer/HerdrTUI/",
+  "/Users/ed/Developer/_AI/LifeOS/",
   "/Users/ed/Developer/_AI/claude-seo/",
-  "/Users/ed/Developer/_AI/jeffallenClaudeSkills",
-  "/Users/ed/Developer/_AI/marcusSkills",
-  "/Users/ed/Developer/_AI/marketingSkills",
-  "/Users/ed/Developer/_AI/mattpocockSkills",
-  "/Users/ed/Developer/HerdrTUI/"
+  "/Users/ed/Developer/_AI/angentBoop/",
+  "/Users/ed/Developer/_AI/agentOMP/",
+  "/Users/ed/Developer/_AI/agentPI/",
+  "/Users/ed/Developer/_AI/skillsBeagle/",
+  "/Users/ed/Developer/_AI/skillsCompoundEngineering/",
+  "/Users/ed/Developer/_AI/skillsDox/",
+  "/Users/ed/Developer/_AI/skillsBlueprint/",
+  "/Users/ed/Developer/_AI/skillsMattPocock/",
+
 ]
