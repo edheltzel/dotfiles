@@ -54,7 +54,7 @@ blue = "#9071f4"        # indigo
 directory = "~/.agents/Worktrees"
 
 [keys]
-prefix = "shift+control+,"
+prefix = "control+alt+,"
 detach = "prefix+shift+d"
 
 # disabled
@@ -79,15 +79,15 @@ new_tab = "prefix+t"
 split_vertical = "prefix+\\"
 
 # cycle
-next_workspace = "shift+control+i"
-previous_workspace = "shift+control+u"
-next_tab = "shift+control+l"
-previous_tab = "shift+control+h"
-cycle_pane_next = "shift+control+]"
-cycle_pane_previous = "shift+control+["
-previous_agent = "shift+control+k"
-next_agent = "shift+control+j"
-
+next_workspace = "control+alt+i"
+previous_workspace = "control+alt+u"
+next_tab = "control+alt+l"
+previous_tab = "control+alt+h"
+cycle_pane_next = "control+alt+]"
+cycle_pane_previous = "control+alt+["
+previous_agent = "control+alt+k"
+next_agent = "control+alt+j"
+# custom commands
 [[keys.command]]
 key = "prefix+g"
 type = "pane"
@@ -117,3 +117,14 @@ key = "prefix+y"
 type = "pane"
 command = "yazi"
 description = "launch Yazi"
+
+#plugins
+[[keys.command]]
+key = "prefix+j"
+type = "plugin_action"
+command = "agustinvalencia.herdr-jump.agents"
+
+[[keys.command]]
+key = "prefix+J"
+type = "plugin_action"
+command = "agustinvalencia.herdr-jump.spaces"
