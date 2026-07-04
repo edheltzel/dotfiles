@@ -130,6 +130,8 @@ if status is-interactive
 
     # Package Managers 
     abbr --add brews 'brew list'
+    abbr --add bic --set-cursor 'brew install --cask %'
+    abbr --add bi --set-cursor 'brew isntall %'
     abbr --add buns 'bun pm ls -g'
     abbr --add cargos 'cargo install --list'
     abbr --add casks 'brew list --cask'
