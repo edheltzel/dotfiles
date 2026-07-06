@@ -118,7 +118,14 @@ type = "pane"
 command = "yazi"
 description = "launch Yazi"
 
+[[keys.command]]
+key = "prefix+B"
+type = "pane"
+command = "gh board --owner edheltzel"
+description = "launch Project Board"
+
 #plugins
+# jump to agent or workspace
 [[keys.command]]
 key = "prefix+j"
 type = "plugin_action"
