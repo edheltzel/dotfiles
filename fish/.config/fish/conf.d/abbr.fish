@@ -108,16 +108,14 @@ if status is-interactive
     abbr --add du dua
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
-    abbr --add glow mdterm
-    abbr --add bl backlog
+    abbr --add mdt mdterm
 
     # Git
     abbr --add lg lazygit
-    abbr --add lj lazyjj
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
-    abbr --add ghm --set-cursor 'gh pr merge % --merge'
+    abbr --add ghmr --set-cursor 'gh pr merge % --merge'
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
 
     #JuJitsu (jj) - bookmarks = branch workspace = worktrees (sort-of)
