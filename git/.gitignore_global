@@ -258,3 +258,7 @@ dist
 
 
 **/.claude/settings.local.json
+
+### Git worktrees ###
+# Ignore worktree dirs anywhere in the tree, regardless of nesting
+*worktrees*
