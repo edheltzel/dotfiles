@@ -95,6 +95,12 @@ command = "lazygit"
 description = "launch LazyGit"
 
 [[keys.command]]
+key = "prefix+T"
+type = "pane"
+command = "lazyworktree"
+description = "launch LazyWorktree"
+
+[[keys.command]]
 key = "prefix+d"
 type = "pane"
 command = "gh dash"
