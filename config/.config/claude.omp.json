@@ -1,0 +1,124 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "final_space": false,
+  "palettes": {
+    "template": "{{ $t := .Env.OMP_THEME }}{{ if eq $t \"rose-pine-dawn\" }}rose-pine-dawn{{ else if eq $t \"vesper\" }}vesper{{ else if eq $t \"catppuccin-latte\" }}catppuccin-latte{{ else if or (eq $t \"catppuccin-frappe\") (eq $t \"catppuccin-macchiato\") (eq $t \"catppuccin-mocha\") }}catppuccin-mocha{{ else }}eldritch{{ end }}",
+    "list": {
+      "eldritch": {
+        "fg": "#ebfafa", "on_accent": "#212337",
+        "brand": "#a48cf2", "git": "#37f499", "session": "#04d1f9",
+        "model": "#a48cf2", "usage": "#f7c67f",
+        "good": "#37f499", "warn": "#f7c67f", "crit": "#f16c75"
+      },
+      "vesper": {
+        "fg": "#cccccc", "on_accent": "#101010",
+        "brand": "#ffcfa8", "git": "#82d9c2", "session": "#99ffe4",
+        "model": "#ffcfa8", "usage": "#ffc799",
+        "good": "#82d9c2", "warn": "#ffcfa8", "crit": "#ff8080"
+      },
+      "rose-pine-dawn": {
+        "fg": "#575279", "on_accent": "#faf4ed",
+        "brand": "#907aa9", "git": "#286983", "session": "#56949f",
+        "model": "#907aa9", "usage": "#ea9d34",
+        "good": "#286983", "warn": "#d7827e", "crit": "#b4637a"
+      },
+      "catppuccin-latte": {
+        "fg": "#4c4f69", "on_accent": "#eff1f5",
+        "brand": "#8839ef", "git": "#40a02b", "session": "#04a5e5",
+        "model": "#8839ef", "usage": "#fe640b",
+        "good": "#40a02b", "warn": "#df8e1d", "crit": "#d20f39"
+      },
+      "catppuccin-mocha": {
+        "fg": "#cdd6f4", "on_accent": "#1e1e2e",
+        "brand": "#cba6f7", "git": "#a6e3a1", "session": "#89dceb",
+        "model": "#cba6f7", "usage": "#fab387",
+        "good": "#a6e3a1", "warn": "#f9e2af", "crit": "#f38ba8"
+      }
+    }
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "path",
+          "style": "diamond",
+          "leading_diamond": "",
+          "foreground": "p:on_accent",
+          "background": "p:brand",
+          "options": {
+            "dir_length": 3,
+            "folder_separator_icon": "",
+            "style": "fish"
+          },
+          "template": "{{ if .Segments.Git.Dir }}  <i><b>{{ .Segments.Git.RepoName }}{{ if .Segments.Git.IsWorkTree }} {{ end }}</b></i>{{ $rel :=  .Segments.Git.RelativeDir }}{{ if $rel }}  {{ .Format $rel }}{{ end }}{{ else }}  {{ path .Path .Location }}{{ end }} "
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "leading_diamond": "<parentBackground,background></>",
+          "trailing_diamond": "",
+          "foreground": "p:on_accent",
+          "background": "p:git",
+          "options": {
+            "branch_icon": " ",
+            "fetch_status": true
+          },
+          "template": " {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ nospace .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} ",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:on_accent{{ end }}"
+          ],
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:warn{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:crit{{ end }}"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "claude",
+          "style": "diamond",
+          "leading_diamond": "",
+          "foreground": "p:on_accent",
+          "background": "p:model",
+          "template": " 󰯉 {{ .Model.DisplayName }}{{ if .Effort.Level }} ⚡{{ .Effort.Level }}{{ end }} "
+        },
+        {
+          "type": "claude",
+          "style": "diamond",
+          "leading_diamond": "<parentBackground,background></>",
+          "foreground": "p:on_accent",
+          "background": "p:good",
+          "template": " {{ .TokenUsagePercent.GaugeUsed }} {{ .TokenUsagePercent }}% ",
+          "background_templates": [
+            "{{ if ge .TokenUsagePercent 80 }}p:crit{{ else if ge .TokenUsagePercent 60 }}p:warn{{ else }}p:good{{ end }}"
+          ]
+        },
+        {
+          "type": "claude",
+          "style": "diamond",
+          "leading_diamond": "<parentBackground,background></>",
+          "foreground": "p:on_accent",
+          "background": "p:session",
+          "template": " 5H {{ .FiveHourUsage }}% · 7D {{ .SevenDayUsage }}% "
+        },
+        {
+          "type": "claude",
+          "style": "diamond",
+          "leading_diamond": "<parentBackground,background></>",
+          "trailing_diamond": "",
+          "foreground": "p:on_accent",
+          "background": "p:usage",
+          "template": " ✱ {{ .Version }}{{ if .FormattedCost }} · {{ .FormattedCost }}{{ end }}{{ if .Worktree.Name }} · ⎇ {{ .Worktree.Name }}{{ end }}{{ if .Agent.Name }} · ⚙ {{ .Agent.Name }}{{ end }}{{ if and .OutputStyle.Name (ne .OutputStyle.Name \"default\") }} · ◉ {{ .OutputStyle.Name }}{{ end }} "
+        }
+      ]
+    }
+  ]
+}
