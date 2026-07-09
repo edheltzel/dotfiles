@@ -1,5 +1,3 @@
-onboarding = false
-
 [update]
 channel = "preview"
 
@@ -9,7 +7,10 @@ kitty_graphics = true
 resume_agents_on_restore = true
 pane_history = true
 
+onboarding = false
+
 switch_ascii_input_source_in_prefix = true
+
 [ui]
 prompt_new_tab_name = false
 show_agent_labels_on_pane_borders = true
@@ -50,9 +51,6 @@ auto_switch = false
 # teal = "#66e4fd"        # bright cyan
 # blue = "#9071f4"        # indigo
 
-[worktrees]
-directory = "~/.agents/Worktrees"
-
 [keys]
 prefix = "control+alt+,"
 detach = "prefix+shift+d"
@@ -67,14 +65,14 @@ swap_pane_up = ""
 swap_pane_right = ""
 
 # close
-close_workspace = "prefix+shift+w"
+close_workspace = "prefix+W"
 
 # rename 
-rename_workspace = "prefix+shift+e"
+rename_workspace = "prefix+E"
 rename_tab = "prefix+e"
 
 # create term
-new_workspace = "prefix+n"
+new_workspace = "prefix+N"
 new_tab = "prefix+t"
 split_vertical = "prefix+\\"
 
@@ -95,7 +93,7 @@ command = "lazygit"
 description = "launch LazyGit"
 
 [[keys.command]]
-key = "prefix+T"
+key = "prefix+G"
 type = "pane"
 command = "lazyworktree"
 description = "launch LazyWorktree"
