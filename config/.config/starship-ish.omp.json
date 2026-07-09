@@ -305,7 +305,7 @@
         "yellow": "#eed49f"
       }
     },
-    "template": "eldritch"
+    "template": "tokyonight"
   },
   "transient_prompt": {
     "template": "❯ ",

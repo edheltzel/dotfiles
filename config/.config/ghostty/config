@@ -3,7 +3,7 @@ confirm-close-surface      = false
 shell-integration-features = true
 alpha-blending             = linear-corrected
 
-#theme = TokyoNight Night
+theme = TokyoNight Night
 cursor-style            = block
 term                    = xterm-256color
 unfocused-split-fill    = "black"
@@ -94,4 +94,4 @@ keybind = super+ctrl+r=text:\x12
 keybind = super+ctrl+p=text:\x1b\x10
 # variables
 keybind = super+ctrl+v=text:\x16
-config-file = "themes/eldritch"
+#config-file = "themes/eldritch"

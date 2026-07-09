@@ -27,28 +27,28 @@ enabled = true
 delivery = "terminal"
 
 [theme]
-name = "terminal"
+name = "tokyo-night"
 
 auto_switch = false
 
 # Eldritch theme
-[theme.custom]
-panel_bg = "#171928"    # bg           — sidebar / panel background
-surface_dim = "#212337" # bg2          — active workspace / agent row background
-surface0 = "#323449"    # bg_highlight — selection (navigate cursor) background
-surface1 = "#3b3e5c"    # raised       — drag / hover (kept above surface_dim)
-overlay0 = "#7081d0"    # comment      — muted text
-overlay1 = "#a48cf2"    # purple       — secondary accent
-text = "#ebfafa"        # fg           — primary text
-subtext0 = "#949ae5"    # dim-fg       — dimmed labels
-accent = "#04d1f9"      # cyan         — highlights, borders, navigation
-mauve = "#a48cf2"       # purple       — git branches
-red = "#f16c75"         # red
-peach = "#f7c67f"       # orange
-yellow = "#f1fc79"      # yellow
-green = "#37f499"       # green
-teal = "#66e4fd"        # bright cyan
-blue = "#9071f4"        # indigo
+# [theme.custom]
+# panel_bg = "#171928"    # bg           — sidebar / panel background
+# surface_dim = "#212337" # bg2          — active workspace / agent row background
+# surface0 = "#323449"    # bg_highlight — selection (navigate cursor) background
+# surface1 = "#3b3e5c"    # raised       — drag / hover (kept above surface_dim)
+# overlay0 = "#7081d0"    # comment      — muted text
+# overlay1 = "#a48cf2"    # purple       — secondary accent
+# text = "#ebfafa"        # fg           — primary text
+# subtext0 = "#949ae5"    # dim-fg       — dimmed labels
+# accent = "#04d1f9"      # cyan         — highlights, borders, navigation
+# mauve = "#a48cf2"       # purple       — git branches
+# red = "#f16c75"         # red
+# peach = "#f7c67f"       # orange
+# yellow = "#f1fc79"      # yellow
+# green = "#37f499"       # green
+# teal = "#66e4fd"        # bright cyan
+# blue = "#9071f4"        # indigo
 
 [worktrees]
 directory = "~/.agents/Worktrees"
