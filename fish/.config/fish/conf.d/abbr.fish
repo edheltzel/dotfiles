@@ -78,7 +78,7 @@ if status is-interactive
     # Updates
     abbr --add upp 'topgrade --yes'
     abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
-    abbr --add aup 'claude update; codex update; pi update; omp update; herdr update'
+    abbr --add aup 'claude update; pi update; omp update; herdr update'
 
     # Utilities
     abbr --add editssh 'nvim ~/.ssh'
