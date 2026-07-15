@@ -33,7 +33,7 @@ skip_notify = true
 "Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
 "LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa &>/dev/null; and echo 'LazyVim Plugins Update Complete'"
 "Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa' &>/dev/null; and echo 'Treesitter Update Complete'"
-"Update Agent Harnesses" = "claude update; omp update; pi update; herdr update"
+"Update Agent Harnesses" = "cd ~/.dotfiles/; and just omp-patched-update; claude update; pi update; herdr update"
 
 # Custom Post-commands
 [post_commands]
