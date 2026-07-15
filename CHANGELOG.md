@@ -7,6 +7,28 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## Unreleased
 
+### Added
+
+- Oh My Posh statusline for Claude Code (`config/.config/claude.omp.json`) — session/model/usage segments with a 5-theme palette
+- `gh-board` extension (v1.5.0) — project-board TUI, bound to `prefix+B` in herdr
+- `lazyworktree` CLI, wired into herdr
+- Abbreviations: `bl` (backlog), `mdt` (mdterm), `lw` (lazyworktree), and brew install/uninstall cursor abbrs (`bi`, `bu`, `bic`, `buc`, `bric`)
+- Codex installer `PATH` export in `.profile`
+- Global gitignore excludes `*worktrees*` at any nesting depth
+
+### Changed
+
+- Active theme switched to **TokyoNight** across bat, btop, ghostty, yazi, herdr, lazygit, gh-dash, and the OMP prompt (Zed on Eldritch)
+- Agent harness updater runs `just omp-patched-update` instead of `omp update` — the patched OMP source-link carries the fix for truncated streamed output, and `omp update` would clobber it
+- herdr: prefix rebound to `control+alt+,` (macOS shortcut clash), workspace keybindings reworked, worktrees dir dropped, active-row background added
+- topgrade: refreshed the custom repo list for the reorganized `Developer/` layout
+- Bumped gh-dash to v4.25.0, hunk to 0.17.0, the yazi `piper` preview plugin, and the neoed submodule pointer
+
+### Fixed
+
+- **fish: implicit cd** — typing a directory (`neoed/`) failed with `cd: -- neoed/: unknown option`. fish 4.8 prepends `--` to the path on implicit cd, and the `cd` wrapper's quoted `"$argv"` joined both tokens into a single `-- neoed/` argument that `cd` parsed as a flag. Forwarding `$argv` unquoted restores it [#59](https://github.com/edheltzel/dotfiles/pull/59) ([edheltzel](https://github.com/edheltzel))
+- helix: repointed the `gotmpl` grammar to a maintained fork after `dannylongeuay/tree-sitter-go-template` was deleted upstream, fixing `hx --grammar fetch`
+
 ## [v3.3](https://github.com/edheltzel/dotfiles/tree/v3.3) - 2026-06-24
 
 [Full Changelog](https://github.com/edheltzel/dotfiles/compare/v3.2...v3.3)
