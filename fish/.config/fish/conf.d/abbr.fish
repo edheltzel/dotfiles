@@ -24,7 +24,7 @@ if status is-interactive
     abbr --add work 'cd ~/Developer'
 
     # Servers/Containers
-    abbr --add atlas 'cd ~/Developer/atlas-config/'
+    abbr --add atlas 'cd ~/Developer/Atlas/Config/'
     # Editors/Terminals
     abbr --add dc 'docker compose'
     abbr --add dk docker
@@ -78,7 +78,7 @@ if status is-interactive
     # Updates
     abbr --add upp 'topgrade --yes'
     abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
-    abbr --add aup 'cd ~/.dotfiles/; and just omp-patched-update; claude update; pi update; herdr update'
+    abbr --add aup 'claude update; pi update; omp update; herdr update'
 
     # Utilities
     abbr --add editssh 'nvim ~/.ssh'
