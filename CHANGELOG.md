@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## Unreleased
 
+## [v3.4](https://github.com/edheltzel/dotfiles/tree/v3.4) - 2026-07-15
+
+[Full Changelog](https://github.com/edheltzel/dotfiles/compare/v3.3...v3.4)
+
 ### Added
 
 - Oh My Posh statusline for Claude Code (`config/.config/claude.omp.json`) — session/model/usage segments with a 5-theme palette
