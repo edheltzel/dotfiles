@@ -33,7 +33,7 @@ skip_notify = true
 "Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
 "LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa &>/dev/null; and echo 'LazyVim Plugins Update Complete'"
 "Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa' &>/dev/null; and echo 'Treesitter Update Complete'"
-"Update Agent Harnesses" = "claude update; omp update; pi update; herdr update"
+"Update Agent Harnesses" = "cd ~/.dotfiles/; and just omp-patched-update; claude update; pi update; herdr update"
 
 # Custom Post-commands
 [post_commands]
@@ -48,16 +48,18 @@ autoremove = true
 
 [git]
 repos = [
-  "/Users/ed/Developer/_AI/Fabric/",
-  "/Users/ed/Developer/_AI/PersonalAI",
-  "/Users/ed/Developer/_AI/compoundEngineeering",
-  "/Users/ed/Developer/_AI/PiAgent",
-  "/Users/ed/Developer/_AI/claude-cybersecurity/",
-  "/Users/ed/Developer/_AI/claude-obsidian/",
-  "/Users/ed/Developer/_AI/claude-seo/",
-  "/Users/ed/Developer/_AI/jeffallenClaudeSkills",
-  "/Users/ed/Developer/_AI/marcusSkills",
-  "/Users/ed/Developer/_AI/marketingSkills",
-  "/Users/ed/Developer/_AI/mattpocockSkills",
-  "/Users/ed/Developer/HerdrTUI/"
+  "/Users/ed/Developer/TUIApps/herdr/",
+  "/Users/ed/Developer/AI-Ext/LifeOS/",
+  "/Users/ed/Developer/AI-Agents/Boop/",
+  "/Users/ed/Developer/AI-Agents/omp/",
+  "/Users/ed/Developer/AI-Agents/pi/",
+  "/Users/ed/Developer/AI-AgentSkills/claude-cybersecurity/",
+  "/Users/ed/Developer/AI-AgentSkills/claude-seo/",
+  "/Users/ed/Developer/AI-AgentSkills/claude-obsidian/",
+  "/Users/ed/Developer/AI-AgentSkills/skillsMattPocock/",
+  "/Users/ed/Developer/AI-AgentSkills/skillsCompoundEngineering/",
+  "/Users/ed/Developer/AI-AgentSkills/skillsBeagle/",
+  "/Users/ed/Developer/AI-AgentSkills/dox-framework/",
+  "/Users/ed/Developer/AI-AgentSkills/skillsBlueprint/",
+
 ]

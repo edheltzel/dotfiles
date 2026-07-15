@@ -1,5 +1,4 @@
 onboarding = false
-
 [update]
 channel = "preview"
 
@@ -9,7 +8,10 @@ kitty_graphics = true
 resume_agents_on_restore = true
 pane_history = true
 
+onboarding = false
+
 switch_ascii_input_source_in_prefix = true
+
 [ui]
 prompt_new_tab_name = false
 show_agent_labels_on_pane_borders = true
@@ -27,34 +29,31 @@ enabled = true
 delivery = "terminal"
 
 [theme]
-name = "terminal"
+name = "tokyo-night"
 
 auto_switch = false
 
 # Eldritch theme
 [theme.custom]
-panel_bg = "#171928"    # bg           — sidebar / panel background
 surface_dim = "#212337" # bg2          — active workspace / agent row background
-surface0 = "#323449"    # bg_highlight — selection (navigate cursor) background
-surface1 = "#3b3e5c"    # raised       — drag / hover (kept above surface_dim)
-overlay0 = "#7081d0"    # comment      — muted text
-overlay1 = "#a48cf2"    # purple       — secondary accent
-text = "#ebfafa"        # fg           — primary text
-subtext0 = "#949ae5"    # dim-fg       — dimmed labels
-accent = "#04d1f9"      # cyan         — highlights, borders, navigation
-mauve = "#a48cf2"       # purple       — git branches
-red = "#f16c75"         # red
-peach = "#f7c67f"       # orange
-yellow = "#f1fc79"      # yellow
-green = "#37f499"       # green
-teal = "#66e4fd"        # bright cyan
-blue = "#9071f4"        # indigo
-
-[worktrees]
-directory = "~/.agents/Worktrees"
+# panel_bg = "#171928"    # bg           — sidebar / panel background
+# surface0 = "#323449" # bg_highlight — selection (navigate cursor) background
+# surface1 = "#3b3e5c" # raised       — drag / hover (kept above surface_dim)
+# overlay0 = "#7081d0"    # comment      — muted text
+# overlay1 = "#a48cf2"    # purple       — secondary accent
+# text = "#ebfafa"        # fg           — primary text
+# subtext0 = "#949ae5"    # dim-fg       — dimmed labels
+# accent = "#04d1f9"      # cyan         — highlights, borders, navigation
+# mauve = "#a48cf2"       # purple       — git branches
+# red = "#f16c75"         # red
+# peach = "#f7c67f"       # orange
+# yellow = "#f1fc79"      # yellow
+# green = "#37f499"       # green
+# teal = "#66e4fd"        # bright cyan
+# blue = "#9071f4"        # indigo
 
 [keys]
-prefix = "shift+control+,"
+prefix = "control+alt+,"
 detach = "prefix+shift+d"
 
 # disabled
@@ -67,32 +66,38 @@ swap_pane_up = ""
 swap_pane_right = ""
 
 # close
-close_workspace = "prefix+shift+w"
+close_workspace = "prefix+W"
 
 # rename 
-rename_workspace = "prefix+shift+e"
+rename_workspace = "prefix+E"
 rename_tab = "prefix+e"
 
 # create term
-new_workspace = "prefix+n"
+new_workspace = "prefix+N"
 new_tab = "prefix+t"
 split_vertical = "prefix+\\"
 
 # cycle
-next_workspace = "shift+control+i"
-previous_workspace = "shift+control+u"
-next_tab = "shift+control+l"
-previous_tab = "shift+control+h"
-cycle_pane_next = "shift+control+]"
-cycle_pane_previous = "shift+control+["
-previous_agent = "shift+control+k"
-next_agent = "shift+control+j"
-
+next_workspace = "control+alt+i"
+previous_workspace = "control+alt+u"
+next_tab = "control+alt+l"
+previous_tab = "control+alt+h"
+cycle_pane_next = "control+alt+]"
+cycle_pane_previous = "control+alt+["
+previous_agent = "control+alt+k"
+next_agent = "control+alt+j"
+# custom commands
 [[keys.command]]
 key = "prefix+g"
 type = "pane"
 command = "lazygit"
 description = "launch LazyGit"
+
+[[keys.command]]
+key = "prefix+G"
+type = "pane"
+command = "lazyworktree"
+description = "launch LazyWorktree"
 
 [[keys.command]]
 key = "prefix+d"
@@ -117,3 +122,21 @@ key = "prefix+y"
 type = "pane"
 command = "yazi"
 description = "launch Yazi"
+
+[[keys.command]]
+key = "prefix+B"
+type = "pane"
+command = "gh board --owner edheltzel"
+description = "launch Project Board"
+
+#plugins
+# jump to agent or workspace
+[[keys.command]]
+key = "prefix+j"
+type = "plugin_action"
+command = "agustinvalencia.herdr-jump.agents"
+
+[[keys.command]]
+key = "prefix+J"
+type = "plugin_action"
+command = "agustinvalencia.herdr-jump.spaces"

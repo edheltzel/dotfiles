@@ -78,7 +78,7 @@ if status is-interactive
     # Updates
     abbr --add upp 'topgrade --yes'
     abbr --add bup 'topgrade --yes --only brew_formula brew_cask'
-    abbr --add aup 'claude update; codex update; pi update; omp update; herdr update'
+    abbr --add aup 'cd ~/.dotfiles/; and just omp-patched-update; claude update; pi update; herdr update'
 
     # Utilities
     abbr --add editssh 'nvim ~/.ssh'
@@ -108,15 +108,15 @@ if status is-interactive
     abbr --add du dua
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
-    abbr --add glow mdterm
+    abbr --add mdt mdterm
 
     # Git
     abbr --add lg lazygit
-    abbr --add lj lazyjj
+    abbr --add lw lazyworktree
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
-    abbr --add ghm --set-cursor 'gh pr merge % --merge'
+    abbr --add ghmr --set-cursor 'gh pr merge % --merge'
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
 
     #JuJitsu (jj) - bookmarks = branch workspace = worktrees (sort-of)
@@ -129,6 +129,11 @@ if status is-interactive
 
     # Package Managers 
     abbr --add brews 'brew list'
+    abbr --add bi --set-cursor 'brew isntall %'
+    abbr --add bu --set-cursor 'brew unisntall %'
+    abbr --add bic --set-cursor 'brew install --cask %'
+    abbr --add buc --set-cursor 'brew uninstall --cask %'
+    abbr --add bric --set-cursor 'brew reinstall --cask %'
     abbr --add buns 'bun pm ls -g'
     abbr --add cargos 'cargo install --list'
     abbr --add casks 'brew list --cask'
