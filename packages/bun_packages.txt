@@ -6,7 +6,9 @@
 @vscode/vsce
 cspell
 designlang
+gnhf
 hunkdiff
+hyperframes
 neovim
 opensrc
 portless

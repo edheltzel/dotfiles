@@ -142,8 +142,5 @@ if status is-interactive
     abbr --add pn pnpm
     abbr --add pns 'pnpm list -g'
     abbr --add px 'pnpm dlx'
-    abbr --add vps 'vp list -g'
     abbr --add vpi 'vp install'
-    abbr --add vpg 'vp install -g '
-    abbr --add vup 'vp update -g '
 end
