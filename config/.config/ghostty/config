@@ -21,7 +21,7 @@ window-padding-x         = 10
 window-padding-y         = 10
 window-title-font-family = "Lilex Nerd Font Mono"
 font-family              = "Lilex Nerd Font Mono"
-font-size                = 17
+font-size                = 16
 font-feature             = zero,calt
 
 # Tabs
