@@ -113,6 +113,7 @@ if status is-interactive
     # Git
     abbr --add lg lazygit
     abbr --add th treehouse
+    abbr --add lw lazyworktree
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
