@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## Unreleased
 
+### Changed
+
+- Restored agent-harness updates to upstream `omp update` now that the streamed-output fix ships in OMP 16.5.2; removed the local patched-source routing and OMP source checkout from Topgrade.
+
 ## [v3.4](https://github.com/edheltzel/dotfiles/tree/v3.4) - 2026-07-15
 
 [Full Changelog](https://github.com/edheltzel/dotfiles/compare/v3.3...v3.4)
