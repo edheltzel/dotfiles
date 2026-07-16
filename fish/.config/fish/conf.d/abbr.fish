@@ -41,8 +41,9 @@ if status is-interactive
     abbr --add muxs 'tmux new-session -s'
 
     # Herdr 
+    abbr --add has --set-cursor 'herdr session attach %'
     abbr --add hsa --set-cursor 'herdr session attach %'
-    abbr --add hhs --set-cursor 'herdr --session %'
+    abbr --add hcs --set-cursor 'herdr --session %'
     abbr --add hks --set-cursor 'herdr session stop %'
     abbr --add hls 'herdr session list'
     abbr --add hrd herdr
