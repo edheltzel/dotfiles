@@ -25,7 +25,7 @@ done_path = "sounds/done.mp3"
 request_path = "sounds/request.mp3"
 
 [ui.toast]
-delivery = "herdr"
+delivery = "terminal"
 
 [theme]
 name = "terminal"
@@ -35,28 +35,28 @@ auto_switch = false
 # Eldritch theme
 [theme.custom]
 surface_dim = "#212337" # bg2          — active workspace / agent row background
-# panel_bg = "#171928"    # bg           — sidebar / panel background
-# surface0 = "#323449" # bg_highlight — selection (navigate cursor) background
-# surface1 = "#3b3e5c" # raised       — drag / hover (kept above surface_dim)
-# overlay0 = "#7081d0"    # comment      — muted text
-# overlay1 = "#a48cf2"    # purple       — secondary accent
-# text = "#ebfafa"        # fg           — primary text
-# subtext0 = "#949ae5"    # dim-fg       — dimmed labels
-# accent = "#04d1f9"      # cyan         — highlights, borders, navigation
-# mauve = "#a48cf2"       # purple       — git branches
-# red = "#f16c75"         # red
-# peach = "#f7c67f"       # orange
-# yellow = "#f1fc79"      # yellow
-# green = "#37f499"       # green
-# teal = "#66e4fd"        # bright cyan
-# blue = "#9071f4"        # indigo
+panel_bg = "#171928"    # bg           — sidebar / panel background
+surface0 = "#323449"    # bg_highlight — selection (navigate cursor) background
+surface1 = "#3b3e5c"    # raised       — drag / hover (kept above surface_dim)
+overlay0 = "#7081d0"    # comment      — muted text
+overlay1 = "#a48cf2"    # purple       — secondary accent
+text = "#ebfafa"        # fg           — primary text
+subtext0 = "#949ae5"    # dim-fg       — dimmed labels
+accent = "#04d1f9"      # cyan         — highlights, borders, navigation
+mauve = "#a48cf2"       # purple       — git branches
+red = "#f16c75"         # red
+peach = "#f7c67f"       # orange
+yellow = "#f1fc79"      # yellow
+green = "#37f499"       # green
+teal = "#66e4fd"        # bright cyan
+blue = "#9071f4"        # indigo
 
 [keys]
 prefix = "control+alt+,"
 detach = "prefix+shift+d"
+goto = "prefix+g"
 
 # disabled
-goto = ""
 new_worktree = ""
 edit_scrollback = ""
 swap_pane_left = ""
@@ -87,13 +87,13 @@ previous_agent = "control+alt+k"
 next_agent = "control+alt+j"
 # custom commands
 [[keys.command]]
-key = "prefix+g"
+key = "prefix+G"
 type = "pane"
 command = "lazygit"
 description = "launch LazyGit"
 
 [[keys.command]]
-key = "prefix+G"
+key = "prefix+T"
 type = "pane"
 command = "lazyworktree"
 description = "launch LazyWorktree"
