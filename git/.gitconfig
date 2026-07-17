@@ -162,3 +162,9 @@
   line-numbers-plus-style = 28
 [pager]
 	diff = diffnav
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

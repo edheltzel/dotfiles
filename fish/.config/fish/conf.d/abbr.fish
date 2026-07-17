@@ -6,41 +6,33 @@ if status is-interactive
 
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
-    abbr --add atl 'cd ~/Developer/atlas-config/'
-    abbr --add atlas 'cd ~/Developer/atlas-config/'
+    abbr --add atl 'cd ~/Developer/Atlas/Config/'
+    abbr --add atlas 'cd ~/Developer/Atlas/Config/'
     abbr --add config '~/.config/'
     abbr --add dev 'cd ~/Developer'
     abbr --add dls '~/Downloads/'
     abbr --add dots 'cd ~/.dotfiles'
     abbr --add fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
-    abbr --add goo 'cd ~/.go/'
     abbr --add local '~/.local/'
     abbr --add neo 'cd ~/.dotfiles/neoed/.config/nvim'
-    abbr --add neoed 'cd ~/.dotfiles/neoed/.config/nvim'
-    abbr --add pg 'cd ~/Developer/_playground/'
-    abbr --add sb 'cd ~/Developer/_sandboxes/'
+    abbr --add pg 'cd ~/Developer/Playground/'
+    abbr --add sb 'cd ~/Developer/Sandboxes/'
     abbr --add sites 'cd ~/Sites'
     abbr --add wall '~/.wallpapers/'
-    abbr --add work 'cd ~/Developer'
 
     # Servers/Containers
-    abbr --add atlas 'cd ~/Developer/Atlas/Config/'
-    # Editors/Terminals
     abbr --add dc 'docker compose'
     abbr --add dk docker
 
-    # Multiplex/Terminals
-    abbr --add gty ghostty
+    # Multiplexers
     abbr --add mux tmux
     abbr --add muxa 'tmux attach'
     abbr --add muxaa 'tmux attach -t'
     abbr --add muxd 'tmux detach'
-    abbr --add muxk 'tmux kill-session -t'
-    abbr --add muxka 'tmux kill-server'
-    abbr --add muxl 'tmux list-sessions'
+    abbr --add tkill 'tmux kill-session -t'
+    abbr --add tkilla 'tmux kill-server'
+    abbr --add muxls 'tmux list-sessions'
     abbr --add muxs 'tmux new-session -s'
-
-    # Herdr 
     abbr --add has --set-cursor 'herdr session attach %'
     abbr --add hsa --set-cursor 'herdr session attach %'
     abbr --add hcs --set-cursor 'herdr --session %'
@@ -51,7 +43,6 @@ if status is-interactive
     abbr --add hss 'herdr server stop'
     abbr --add hup 'herdr update'
 
-    # AI Harness
     # Agent Harnesses
     abbr --add cc claude
     abbr --add co codex
@@ -62,7 +53,8 @@ if status is-interactive
     abbr --add ppi --set-cursor 'pi -p "%"'
     abbr --add ooi --set-cursor 'omp, -p "%"'
 
-    # Text Editors
+    # Terminals/Text Editors
+    abbr --add gty ghostty
     abbr --add zz zed
     abbr --add zzn 'zed -n .'
     abbr --add vim nvim
@@ -112,9 +104,10 @@ if status is-interactive
     abbr --add mdt mdterm
 
     # Git
-    abbr --add lg lazygit
+    abbr --add nm no-mistakes
     abbr --add th treehouse
     abbr --add lw lazyworktree
+    abbr --add lg lazygit
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
