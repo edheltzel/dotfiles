@@ -1,0 +1,6 @@
+owner: github
+name: gh-stack
+host: github.com
+tag: v0.0.8
+ispinned: false
+path: /Users/ed/.local/share/gh/extensions/gh-stack/gh-stack
