@@ -6,10 +6,14 @@
 ███████╗██╗██████╔╝╚██████╔╝   ██║   ███████║
 ╚══════╝╚═╝╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
 ```
+
 # E.Dots
+
 > [!NOTE] EdHeltzel's Dotfiles
+
 ### My personal setup for 🐠 Fish shell on  MacOS - `v3`
-Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow](https://www.gnu.org/software/stow/). You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [WezTerm](https://wezterm.org) - my AI Development Environment _(ADE)_ of choice for Agent Harness/Orchestration/Workflow _(whatever buzz term you want to use)_. VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
+
+Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow](https://www.gnu.org/software/stow/). You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [WezTerm](https://wezterm.org) with [Herdr](https://herdr.dev/) + [Oh-My-Pi](https://omp.sh/) make up my ADE (AI/Agent Development Environment). VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
 
 > [!WARNING] Again, this is my personal setup and **changes often**, so don't blindly fork and run the `install.sh` script without reading it first. The script uses subcommands — see `./install.sh help` for usage.
 
@@ -47,11 +51,11 @@ Table of Contents:
   
 - [MacOS Mods](#macos-mods)
   
-  - [~~Aerospace Window Manager~~ Raycast + Alt-Tab](#window-manager)
+  - [~~Aerospace Window Manager~~ Raycast + Alt-Tab Pro](#window-manager)
     
-  - [~~Sketchybar~~ Ice Bar](#status-bar)
+  - [~~Sketchybar~~ Thaw Bar](#status-bar)
     
-  - [~~Karabiner Elements~~ using Leader Key app](#keyboard-hacks)
+  - [~~Karabiner Elements~~ using Raycast with a Leader Key extension](#keyboard-hacks)
     
 - [Troubleshooting](#troubleshooting)
   
@@ -568,7 +572,7 @@ topgrade --only cargo
 2. Pings the agent with `ssh-add -l`. If unreachable, spawns a fresh one with `ssh-agent -c` (csh syntax — fish can't parse the default Bourne output) and persists the new env back to `env.fish`.
 3. Loads `id_ed25519` if its fingerprint isn't already in the agent, prompting for the keychain-cached passphrase if needed.
 
-Result: every fish shell — herdr panes, tmux panes, fresh Ghostty windows — shares **one** ssh-agent instead of spawning its own. Survives Ghostty restarts because the agent is a detached background process and `env.fish` points new shells at it.
+Result: every fish shell — herdr panes, tmux panes, fresh Ghostty/WezTerm windows — shares **one** ssh-agent instead of spawning its own. Survives Ghostty/WezTerm restarts because the agent is a detached background process and `env.fish` points new shells at it.
 
 If something goes sideways (agent dies, stale sockets pile up, etc.):
 
