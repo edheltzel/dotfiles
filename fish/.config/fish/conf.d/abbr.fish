@@ -27,13 +27,13 @@ if status is-interactive
     # Multiplexers
     abbr --add tkill 'tmux kill-session -t'
     abbr --add tkilla 'tmux kill-server'
-    abbr --add has --set-cursor 'herdr session attach session_name%'
-    abbr --add hcs --set-cursor 'herdr --session session_name%'
-    abbr --add hks --set-cursor 'herdr session stop session_name%'
-    abbr --add hds --set-cursor 'herdr session delete session_name%'
+    abbr --add has --set-cursor 'herdr session attach sessionName%'
+    abbr --add hcs --set-cursor 'herdr --session sessionName%'
+    abbr --add hks --set-cursor 'herdr session stop sessionName%'
+    abbr --add hds --set-cursor 'herdr session delete sessionName%'
     abbr --add hls 'herdr session list'
     abbr --add hrd herdr
-    abbr --add hrr --set-cursor 'herdr --remote session_name%'
+    abbr --add hrr --set-cursor 'herdr --remote sessionName%'
     abbr --add hss 'herdr server stop'
     abbr --add hup 'herdr update'
 
