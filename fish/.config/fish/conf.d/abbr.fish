@@ -25,21 +25,15 @@ if status is-interactive
     abbr --add dk docker
 
     # Multiplexers
-    abbr --add mux tmux
-    abbr --add muxa 'tmux attach'
-    abbr --add muxaa 'tmux attach -t'
-    abbr --add muxd 'tmux detach'
     abbr --add tkill 'tmux kill-session -t'
     abbr --add tkilla 'tmux kill-server'
-    abbr --add muxls 'tmux list-sessions'
-    abbr --add muxs 'tmux new-session -s'
-    abbr --add has --set-cursor 'herdr session attach %'
-    abbr --add hsa --set-cursor 'herdr session attach %'
-    abbr --add hcs --set-cursor 'herdr --session %'
-    abbr --add hks --set-cursor 'herdr session stop %'
+    abbr --add has --set-cursor 'herdr session attach session_name%'
+    abbr --add hcs --set-cursor 'herdr --session session_name%'
+    abbr --add hks --set-cursor 'herdr session stop session_name%'
+    abbr --add hds --set-cursor 'herdr session delete session_name%'
     abbr --add hls 'herdr session list'
     abbr --add hrd herdr
-    abbr --add hrr --set-cursor 'herdr --remote %'
+    abbr --add hrr --set-cursor 'herdr --remote session_name%'
     abbr --add hss 'herdr server stop'
     abbr --add hup 'herdr update'
 
@@ -54,7 +48,6 @@ if status is-interactive
     abbr --add ooi --set-cursor 'omp, -p "%"'
 
     # Terminals/Text Editors
-    abbr --add gty ghostty
     abbr --add zz zed
     abbr --add zzn 'zed -n .'
     abbr --add vim nvim
@@ -62,11 +55,6 @@ if status is-interactive
     abbr --add v nvim
     abbr --add vv 'nvim .'
     abbr --add obs obsidian
-    abbr --add rd 'roughdraft open'
-    abbr --add cg codegraph
-    abbr --add cgs 'codegraph sync'
-    abbr --add cgi 'codegraph init'
-    abbr --add cgii 'codegraph index'
 
     # Updates
     abbr --add upp 'topgrade --yes'
@@ -102,9 +90,14 @@ if status is-interactive
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
     abbr --add mdt mdterm
+    abbr --add rd 'roughdraft open'
+    abbr --add cg codegraph
+    abbr --add cgs 'codegraph sync'
+    abbr --add cgi 'codegraph init'
+    abbr --add cgii 'codegraph index'
+    abbr --add nm no-mistakes
 
     # Git
-    abbr --add nm no-mistakes
     abbr --add th treehouse
     abbr --add lw lazyworktree
     abbr --add lg lazygit
