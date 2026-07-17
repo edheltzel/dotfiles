@@ -28,7 +28,7 @@ request_path = "sounds/request.mp3"
 delivery = "herdr"
 
 [theme]
-name = "tokyo-night"
+name = "terminal"
 
 auto_switch = false
 

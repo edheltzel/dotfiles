@@ -4,7 +4,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local leader = { key = "k", mods = "SUPER", timeout_milliseconds = 1502 }
+local leader = { key = ",", mods = "SUPER", timeout_milliseconds = 1502 }
 local keys = {
   -- Suppress WezTerm's default SUPER+k → ClearScrollback so the leader chord activates instead.
   { key = "k", mods = "SUPER", action = act.DisableDefaultAssignment },
@@ -215,13 +215,13 @@ local keys = {
   -- Quick-access split/resize (matching Ghostty's super+ctrl+alt bindings)
   {
     key = "\\",
-    mods = "SUPER|CTRL|ALT",
+    mods = "SUPER|CTRL",
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     desc = "split right",
   },
   {
     key = "-",
-    mods = "SUPER|CTRL|ALT",
+    mods = "SUPER|CTRL",
     action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
     desc = "split down",
   },
@@ -229,8 +229,8 @@ local keys = {
   -- { key = "j", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Down", 10 }), desc = "resize pane down" },
   -- { key = "k", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Up", 10 }), desc = "resize pane up" },
   -- { key = "l", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Right", 10 }), desc = "resize pane right" },
-  { key = "z", mods = "SUPER|CTRL|ALT", action = act.TogglePaneZoomState, desc = "toggle zoom" },
-  { key = ",", mods = "SUPER|CTRL|ALT", action = act.ReloadConfiguration, desc = "reload config" },
+  { key = "z", mods = "SUPER|CTRL", action = act.TogglePaneZoomState, desc = "toggle zoom" },
+  { key = ",", mods = "SHIFT|CTRL|ALT", action = act.ReloadConfiguration, desc = "reload config" },
 }
 
 -- Jump to a tab with index (⌘+k 1-9 OR ⌘+1-9)
