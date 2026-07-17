@@ -85,30 +85,39 @@ cycle_pane_next = "control+alt+]"
 cycle_pane_previous = "control+alt+["
 previous_agent = "control+alt+k"
 next_agent = "control+alt+j"
+
 # custom commands
 [[keys.command]]
 key = "prefix+G"
-type = "pane"
+type = "popup"
 command = "lazygit"
 description = "launch LazyGit"
+width = "90%"
+height = "90%"
 
 [[keys.command]]
 key = "prefix+T"
-type = "pane"
 command = "lazyworktree"
 description = "launch LazyWorktree"
+type = "popup"
+width = "90%"
+height = "90%"
 
 [[keys.command]]
 key = "prefix+d"
-type = "pane"
 command = "gh dash"
 description = "launch Dash"
+type = "popup"
+width = "90%"
+height = "90%"
 
 [[keys.command]]
-key = "prefix+H"
-type = "pane"
-command = "hunk diff"
-description = "launch Hunk Diff"
+key = "prefix+B"
+command = "gh board --owner edheltzel"
+description = "launch Project Board"
+type = "popup"
+width = "90%"
+height = "90%"
 
 [[keys.command]]
 key = "prefix+v"
@@ -121,21 +130,3 @@ key = "prefix+y"
 type = "pane"
 command = "yazi"
 description = "launch Yazi"
-
-[[keys.command]]
-key = "prefix+B"
-type = "pane"
-command = "gh board --owner edheltzel"
-description = "launch Project Board"
-
-#plugins
-# jump to agent or workspace
-[[keys.command]]
-key = "prefix+j"
-type = "plugin_action"
-command = "agustinvalencia.herdr-jump.agents"
-
-[[keys.command]]
-key = "prefix+J"
-type = "plugin_action"
-command = "agustinvalencia.herdr-jump.spaces"
