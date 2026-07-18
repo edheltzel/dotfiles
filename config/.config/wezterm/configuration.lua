@@ -58,7 +58,7 @@ local function setup(theme, keymaps)
   -- If you uncomment window_background_opacity below with a value < 1, restore blur to ~25.
   config.macos_window_background_blur = 0
   -- config.window_background_opacity = 1
-  config.default_workspace = wezterm.nerdfonts.md_delta .. " HQ"
+  config.default_workspace = "※ Bridge"
   config.native_macos_fullscreen_mode = false
 
   -- Panes

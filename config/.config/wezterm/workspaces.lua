@@ -4,7 +4,7 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 
-local HQ_WORKSPACE = wezterm.nerdfonts.md_delta .. " HQ"
+local BRIDGE_WORKSPACE = "※ Bridge"
 local DOTFILES_WORKSPACE = wezterm.nerdfonts.md_triforce .. " dotfiles"
 local DOTFILES_DIR = wezterm.home_dir .. "/.dotfiles"
 
@@ -18,7 +18,7 @@ local function setup()
     end
 
     -- Default Workspace: single tab, single pane
-    mux.spawn_window({ workspace = HQ_WORKSPACE })
+    mux.spawn_window({ workspace = BRIDGE_WORKSPACE })
 
     -- 3-pane split layout workspace
     --   ┌────────────┬────────────┐
@@ -45,7 +45,7 @@ local function setup()
     -- right_pane:send_text("nvim\n")
 
     -- Start in the default workspace
-    mux.set_active_workspace(HQ_WORKSPACE)
+    mux.set_active_workspace(BRIDGE_WORKSPACE)
   end)
 end
 

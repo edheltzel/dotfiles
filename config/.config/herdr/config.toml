@@ -51,18 +51,11 @@ green = "#37f499"       # green
 teal = "#66e4fd"        # bright cyan
 blue = "#9071f4"        # indigo
 
+######## KEYBINDINGS ########
 [keys]
 prefix = "control+alt+,"
-detach = "prefix+shift+d"
+detach = "prefix+D"
 goto = "prefix+g"
-
-# disabled
-new_worktree = ""
-edit_scrollback = ""
-swap_pane_left = ""
-swap_pane_down = ""
-swap_pane_up = ""
-swap_pane_right = ""
 
 # close
 close_workspace = "prefix+W"
@@ -71,62 +64,83 @@ close_workspace = "prefix+W"
 rename_workspace = "prefix+E"
 rename_tab = "prefix+e"
 
-# create term
+# new terms 
 new_workspace = "prefix+N"
 new_tab = "prefix+t"
 split_vertical = "prefix+\\"
 
-# cycle
+### CYCLE ###
 next_workspace = "control+alt+i"
 previous_workspace = "control+alt+u"
+
 next_tab = "control+alt+l"
 previous_tab = "control+alt+h"
+
 cycle_pane_next = "control+alt+]"
 cycle_pane_previous = "control+alt+["
+
 previous_agent = "control+alt+k"
 next_agent = "control+alt+j"
 
-# custom commands
+### DISABLED ###
+new_worktree = ""
+edit_scrollback = ""
+swap_pane_left = ""
+swap_pane_down = ""
+swap_pane_up = ""
+swap_pane_right = ""
+
+######## CUSTOM COMMANDS ########
 [[keys.command]]
 key = "prefix+G"
-type = "popup"
-command = "lazygit"
 description = "launch LazyGit"
+command = "lazygit"
+type = "popup"
 width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+T"
-command = "lazyworktree"
+key = "prefix+L"
 description = "launch LazyWorktree"
+command = "lazyworktree"
 type = "popup"
 width = "90%"
 height = "90%"
 
 [[keys.command]]
 key = "prefix+d"
-command = "gh dash"
 description = "launch Dash"
+command = "gh dash"
 type = "popup"
 width = "90%"
 height = "90%"
 
 [[keys.command]]
 key = "prefix+B"
-command = "gh board --owner edheltzel"
 description = "launch Project Board"
+command = "gh board --owner edheltzel"
 type = "popup"
 width = "90%"
 height = "90%"
 
 [[keys.command]]
 key = "prefix+v"
-type = "pane"
-command = "nvim"
 description = "launch Neovim"
+command = "nvim"
+type = "pane"
 
 [[keys.command]]
 key = "prefix+y"
-type = "pane"
-command = "yazi"
 description = "launch Yazi"
+command = "yazi"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+T"
+description = "launch scratch Terminal"
+command = "exec \"${SHELL:-sh}\""
+type = "popup"
+width = "90%"
+height = "90%"
