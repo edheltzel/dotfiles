@@ -186,8 +186,8 @@ local keys = {
     desc = "Tab Navigator",
   },
   -- Tabs/Panes keybindings
-  { key = "h", mods = "SUPER|CTRL|ALT", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
-  { key = "l", mods = "SUPER|CTRL|ALT", action = act.ActivateTabRelative(1), desc = "Next Tab" },
+  { key = "h", mods = "SHIFT|ALT", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
+  { key = "l", mods = "SHIFT|ALT", action = act.ActivateTabRelative(1), desc = "Next Tab" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
