@@ -27,6 +27,10 @@ request_path = "sounds/request.mp3"
 [ui.toast]
 delivery = "terminal"
 
+[ui.sidebar.agents]
+row_gap = 0
+rows = [["state_icon", "workspace", "tab"], ["agent", "$ask"]]
+
 [theme]
 name = "terminal"
 
