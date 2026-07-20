@@ -54,11 +54,11 @@ local function setup(theme, keymaps)
   config.window_decorations = "RESIZE"
   config.window_close_confirmation = "AlwaysPrompt"
   config.scrollback_lines = 5000
-  -- Blur skipped while opacity is at default (1.0, fully opaque) — blur would be invisible.
-  -- If you uncomment window_background_opacity below with a value < 1, restore blur to ~25.
-  config.macos_window_background_blur = 0
-  -- config.window_background_opacity = 1
-  config.default_workspace = "※ Bridge"
+  -- Keep the window nearly opaque while softly blurring the desktop behind it.
+  config.macos_window_background_blur = 25
+  config.window_background_opacity = 0.98
+  -- config.window_background_image = wezterm.home_dir .. "/.wallpapers/wallpapers/bg-blurred-darker.png"
+  config.default_workspace = "※ HQ"
   config.native_macos_fullscreen_mode = false
 
   -- Panes
