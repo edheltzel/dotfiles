@@ -10,8 +10,8 @@ local keys = {
   { key = "k", mods = "SUPER", action = act.DisableDefaultAssignment },
 
   -- Command palette aliases
-  { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k p" },
-  { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+k space" },
+  { key = "p", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+, p" },
+  { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette, desc = "command palette w/ cmd+, space" },
 
   -- natural editing
   { key = "RightArrow", mods = "OPT", action = act.SendKey({ mods = "ALT", key = "f" }) },
@@ -25,15 +25,15 @@ local keys = {
     key = "k",
     mods = "LEADER",
     action = act.ClearScrollback("ScrollbackAndViewport"),
-    desc = "clear the screen w/ cmd+k k",
+    desc = "clear the screen w/ cmd+, k",
   },
   -- New window/tab/pane
-  { key = "n", mods = "LEADER", action = act.SpawnWindow, desc = "new window w/ cmd+k n" },
+  { key = "n", mods = "LEADER", action = act.SpawnWindow, desc = "new window w/ cmd+, n" },
   {
     key = "t",
     mods = "LEADER",
     action = act.SpawnTab("CurrentPaneDomain"),
-    desc = "new tab w/ cmd+k t",
+    desc = "new tab w/ cmd+, t",
   },
   {
     key = "x",
@@ -45,40 +45,40 @@ local keys = {
     key = "-",
     mods = "LEADER",
     action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
-    desc = "split panes w/ cmd+k | (vertical)",
+    desc = "split panes w/ cmd+, | (vertical)",
   },
   {
     key = "\\",
     mods = "LEADER",
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-    desc = "split panes w/ cmd+k - (horizontal)",
+    desc = "split panes w/ cmd+, - (horizontal)",
   },
-  { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left" }), desc = "split left w/ cmd+k h" },
+  { key = "h", mods = "LEADER", action = act.SplitPane({ direction = "Left" }), desc = "split left w/ cmd+, h" },
   {
     key = "l",
     mods = "LEADER",
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-    desc = "split right w/ cmd+k l",
+    desc = "split right w/ cmd+, l",
   },
   {
     key = "j",
     mods = "LEADER",
     action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
-    desc = "split down w/ cmd+k j",
+    desc = "split down w/ cmd+, j",
   },
-  { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up" }), desc = "split up w/ cmd+k u" },
+  { key = "u", mods = "LEADER", action = act.SplitPane({ direction = "Up" }), desc = "split up w/ cmd+, u" },
 
   -- Zen Mode: toggle in current window
-  { key = "z", mods = "LEADER", action = act.EmitEvent("toggle-zen-mode"), desc = "zen mode w/ cmd+k z" },
+  { key = "z", mods = "LEADER", action = act.EmitEvent("toggle-zen-mode"), desc = "zen mode w/ cmd+, z" },
   -- Zen Mode: spawn dedicated zen window
-  { key = "Z", mods = "LEADER", action = act.EmitEvent("spawn-zen-window"), desc = "zen window w/ cmd+k Z" },
+  { key = "Z", mods = "LEADER", action = act.EmitEvent("spawn-zen-window"), desc = "zen window w/ cmd+, Z" },
   -- Zoom/Focus a pane
-  { key = "=", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+k =" },
+  { key = "=", mods = "LEADER", action = act.TogglePaneZoomState, desc = "maximize pane w/ cmd+, =" },
 
   --- ---------------------------------------------------------------------------
   -- these will jump you into a modes for wezterm
   --- ---------------------------------------------------------------------------
-  { key = "c", mods = "LEADER", action = act.ActivateCopyMode, desc = "copy mode w/ cmd+k c" },
+  { key = "c", mods = "LEADER", action = act.ActivateCopyMode, desc = "copy mode w/ cmd+, c" },
 
   { key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
   {
@@ -102,7 +102,7 @@ local keys = {
     key = "r",
     mods = "LEADER",
     action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }),
-    desc = "resize pane w/ cmd+k r -> use h,j,k,l to resize",
+    desc = "resize pane w/ cmd+, r -> use h,j,k,l to resize",
   },
   --- ---------------------------------------------------------------------------
   -- Workspace and Multiplexing
@@ -155,7 +155,7 @@ local keys = {
     key = "d",
     mods = "LEADER",
     action = act.DetachDomain("CurrentPaneDomain"),
-    desc = "detach tmux session w/ cmd+k d",
+    desc = "detach tmux session w/ cmd+, d",
   },
 
   -- Remap Cmd+Alt+Ctrl → Ctrl+Alt for tmux -CC compatibility (Super modifier doesn't survive tmux)
@@ -244,7 +244,7 @@ end
 
 -- Define key tables
 local key_tables = {
-  -- use cmd+k r to use resize mode
+  -- use cmd+, r to use resize mode
   resize_pane = {
     { key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
     { key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
@@ -253,7 +253,7 @@ local key_tables = {
     { key = "Escape", action = "PopKeyTable" },
     { key = "Enter", action = "PopKeyTable" },
   },
-  -- use cmd+k m to use move mode
+  -- use cmd+, m to use move mode
   move_tab = {
     { key = "h", action = act.MoveTabRelative(-1) },
     { key = "l", action = act.MoveTabRelative(1) },
