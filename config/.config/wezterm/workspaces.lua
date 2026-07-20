@@ -4,7 +4,7 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 
-local BRIDGE_WORKSPACE = "※ Bridge"
+local BRIDGE_WORKSPACE = "↹Bridge"
 local DOTFILES_WORKSPACE = wezterm.nerdfonts.md_triforce .. " dotfiles"
 local DOTFILES_DIR = wezterm.home_dir .. "/.dotfiles"
 
