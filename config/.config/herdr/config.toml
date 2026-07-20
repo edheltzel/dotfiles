@@ -27,9 +27,9 @@ request_path = "sounds/request.mp3"
 [ui.toast]
 delivery = "terminal"
 
-[ui.sidebar.agents]
-row_gap = 0
-rows = [["state_icon", "workspace", "tab"], ["agent", "$ask"]]
+# [ui.sidebar.agents]
+# row_gap = 0
+# rows = [["state_icon", "workspace", "tab"], ["agent", "$ask"]]
 
 [theme]
 name = "terminal"
@@ -58,12 +58,11 @@ blue = "#9071f4"        # indigo
 ######## KEYBINDINGS ########
 [keys]
 prefix = "control+alt+,"
-detach = "prefix+D"
+detach = "prefix+X"
 goto = "prefix+g"
 
 # close
 close_workspace = "prefix+W"
-
 # rename 
 rename_workspace = "prefix+E"
 rename_tab = "prefix+e"
@@ -87,6 +86,7 @@ previous_agent = "control+alt+k"
 next_agent = "control+alt+j"
 
 ### DISABLED ###
+close_tab = ""
 new_worktree = ""
 edit_scrollback = ""
 swap_pane_left = ""
@@ -115,6 +115,14 @@ height = "90%"
 key = "prefix+d"
 description = "launch Dash"
 command = "gh dash"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+D"
+description = "launch Hunk"
+command = "hunk diff"
 type = "popup"
 width = "90%"
 height = "90%"
