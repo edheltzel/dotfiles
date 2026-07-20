@@ -98,14 +98,7 @@ if status is-interactive
     abbr --add nm no-mistakes
 
     # Git
-<<<<<<< HEAD
-    abbr --add lg lazygit
     abbr --add th treehouse
-||||||| 414433e2
-    abbr --add lg lazygit
-=======
-    abbr --add th treehouse
->>>>>>> WIP
     abbr --add lw lazyworktree
     abbr --add lg lazygit
     abbr --add ghw 'gh repo view --web'
