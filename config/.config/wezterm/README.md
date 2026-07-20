@@ -1,6 +1,6 @@
 # WezTerm Configuration
 
-Modular WezTerm config using the (Eldritch)[https://github.com/eldritch-theme/eldritch] color scheme with pill-shaped tabs, process icons, project-based tab colors, and a git-aware status bar.
+Modular WezTerm config using the (Eldritch)[https://github.com/eldritch-theme/eldritch] color scheme with pill-shaped tabs, process icons, process-based tab colors, and a git-aware status bar.
 
 ## File Structure
 
@@ -10,7 +10,7 @@ Modular WezTerm config using the (Eldritch)[https://github.com/eldritch-theme/el
 | `theme.lua`         | Color palette, tab bar colors, process icons, shared `basename()` helper        |
 | `configuration.lua` | Config settings: shell, font, rendering, window, panes, tab bar                 |
 | `keymaps.lua`       | Leader key, key bindings, key tables                                            |
-| `tabs.lua`          | Pill-shaped tabs, project colors, unseen output                                 |
+| `tabs.lua`          | Pill-shaped tabs, process colors, unseen output                                 |
 | `statusbar.lua`     | Left/right status bar: workspace, CWD, git branch, command (dynamic icon), time |
 | `workspaces.lua`    | Startup workspace layouts via `gui-startup` event                               |
 
@@ -29,20 +29,35 @@ M.name = "rose-pine-dawn"  -- light
 
 All accent colors and tab bar colors update automatically.
 
-### Project Tab Colors
+### Process Tab Colors
 
-Tabs are colored by directory name. Edit the `project_colors` table in `tabs.lua`:
+Tabs are colored by the active pane's process. Edit the `process_colors` table in `tabs.lua`:
 
 ```lua
-local project_colors = {
-  [".dotfiles"] = colors.cyan,
-  neoed = colors.purple,
-  atlas = colors.red,
-  -- ["my-project"] = colors.pink,
+local process_colors = {
+  herdr = colors.cyan,
+  nvim = colors.purple,
+  claude = colors.orange,
+  pi = colors.yellow,
+  omp = colors.pink,
+  -- ["my-tool"] = colors.red,
 }
 ```
 
-Active project tabs use the color as background; inactive ones use it as text color.
+The color is pure identity: the **active** tab uses it as the pill **background**,
+and **inactive** tabs use the same color as the **foreground** text (a claude tab
+is an orange pill when active, orange text when inactive). Tabs with no known
+process fall back to the green active pill / muted gray text.
+
+The process is resolved (in the `update-status` handler, cached by pane id) from
+the foreground process's `argv[0]` first, then the pane title, then the
+`foreground_process_name` basename. `argv[0]` is primary because wrapped CLIs
+defeat the other signals — Claude's foreground path basename is a version dir
+(`2.1.215`) and its title is a spinner glyph, but its `argv[0]` is `claude`.
+
+Unseen output is shown by **swapping the tab icon** for a filled dot
+(`nf.cod_circle_filled`), not by changing the color — so a background tab keeps
+its identity color and just gains the dot when it has new output.
 
 ### Process Icons
 
@@ -142,6 +157,13 @@ Sent as `Ctrl+Alt` chords (survive tmux). Bound to `Cmd+Ctrl+Alt`:
 
 ## Status Bar
 
-**Left:** Workspace name (or active key table / leader indicator)
+**Left:** Active workspace name (or active key table / leader indicator)
 
-**Right:** CWD folder, git branch (cached per directory), running command, clock
+**Right:** CWD folder, git branch (cached per directory), running command,
+and tab/pane/workspace totals
+
+When `herdr` is the active foreground process, the status bar uses a cached
+`herdr api snapshot` instead of WezTerm's native topology. The left side shows
+the active Herdr workspace; the right side shows the active Herdr pane's current
+directory and git branch, plus the active tab and pane labels with totals. Native
+WezTerm state returns automatically when Herdr exits or its API is unavailable.

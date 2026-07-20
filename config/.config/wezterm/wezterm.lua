@@ -4,7 +4,7 @@
 --   theme.lua         → Theme colors, tab bar palette, process icons, basename helper
 --   configuration.lua → Config settings (shell, font, window, rendering)
 --   keymaps.lua       → Leader key, key bindings, key tables
---   tabs.lua          → format-tab-title (pill tabs, project colors)
+--   tabs.lua          → format-tab-title (pill tabs, process colors)
 --   statusbar.lua     → update-status (workspace, CWD, git branch, command, time)
 --   workspaces.lua    → gui-startup (named workspace layouts with pane splits)
 

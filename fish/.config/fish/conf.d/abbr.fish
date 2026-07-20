@@ -1,4 +1,4 @@
-# I treat these like aliases 
+# I treat these like aliases
 if status is-interactive
     # Window
     abbr --add cw center_window
@@ -6,51 +6,37 @@ if status is-interactive
 
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
-    abbr --add atl 'cd ~/Developer/atlas-config/'
-    abbr --add atlas 'cd ~/Developer/atlas-config/'
+    abbr --add atl 'cd ~/Developer/Atlas/Config/'
+    abbr --add atlas 'cd ~/Developer/Atlas/Config/'
     abbr --add config '~/.config/'
     abbr --add dev 'cd ~/Developer'
     abbr --add dls '~/Downloads/'
     abbr --add dots 'cd ~/.dotfiles'
     abbr --add fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
-    abbr --add goo 'cd ~/.go/'
     abbr --add local '~/.local/'
     abbr --add neo 'cd ~/.dotfiles/neoed/.config/nvim'
-    abbr --add neoed 'cd ~/.dotfiles/neoed/.config/nvim'
-    abbr --add pg 'cd ~/Developer/_playground/'
-    abbr --add sb 'cd ~/Developer/_sandboxes/'
+    abbr --add pg 'cd ~/Developer/Playground/'
+    abbr --add sb 'cd ~/Developer/Sandboxes/'
     abbr --add sites 'cd ~/Sites'
     abbr --add wall '~/.wallpapers/'
-    abbr --add work 'cd ~/Developer'
 
     # Servers/Containers
-    abbr --add atlas 'cd ~/Developer/Atlas/Config/'
-    # Editors/Terminals
     abbr --add dc 'docker compose'
     abbr --add dk docker
 
-    # Multiplex/Terminals
-    abbr --add gty ghostty
-    abbr --add mux tmux
-    abbr --add muxa 'tmux attach'
-    abbr --add muxaa 'tmux attach -t'
-    abbr --add muxd 'tmux detach'
-    abbr --add muxk 'tmux kill-session -t'
-    abbr --add muxka 'tmux kill-server'
-    abbr --add muxl 'tmux list-sessions'
-    abbr --add muxs 'tmux new-session -s'
-
-    # Herdr 
-    abbr --add hsa --set-cursor 'herdr session attach %'
-    abbr --add hhs --set-cursor 'herdr --session %'
-    abbr --add hks --set-cursor 'herdr session stop %'
+    # Multiplexers
+    abbr --add tkill 'tmux kill-session -t'
+    abbr --add tkilla 'tmux kill-server'
+    abbr --add has --set-cursor 'herdr session attach sessionName%'
+    abbr --add hcs --set-cursor 'herdr --session sessionName%'
+    abbr --add hks --set-cursor 'herdr session stop sessionName%'
+    abbr --add hds --set-cursor 'herdr session delete sessionName%'
     abbr --add hls 'herdr session list'
     abbr --add hrd herdr
-    abbr --add hrr --set-cursor 'herdr --remote %'
+    abbr --add hrr --set-cursor 'herdr --remote sessionName%'
     abbr --add hss 'herdr server stop'
     abbr --add hup 'herdr update'
 
-    # AI Harness
     # Agent Harnesses
     abbr --add cc claude
     abbr --add co codex
@@ -61,7 +47,7 @@ if status is-interactive
     abbr --add ppi --set-cursor 'pi -p "%"'
     abbr --add ooi --set-cursor 'omp, -p "%"'
 
-    # Text Editors
+    # Terminals/Text Editors
     abbr --add zz zed
     abbr --add zzn 'zed -n .'
     abbr --add vim nvim
@@ -69,11 +55,6 @@ if status is-interactive
     abbr --add v nvim
     abbr --add vv 'nvim .'
     abbr --add obs obsidian
-    abbr --add rd 'roughdraft open'
-    abbr --add cg codegraph
-    abbr --add cgs 'codegraph sync'
-    abbr --add cgi 'codegraph init'
-    abbr --add cgii 'codegraph index'
 
     # Updates
     abbr --add upp 'topgrade --yes'
@@ -109,11 +90,24 @@ if status is-interactive
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
     abbr --add mdt mdterm
+    abbr --add rd 'roughdraft open'
+    abbr --add cg codegraph
+    abbr --add cgs 'codegraph sync'
+    abbr --add cgi 'codegraph init'
+    abbr --add cgii 'codegraph index'
+    abbr --add nm no-mistakes
 
     # Git
+<<<<<<< HEAD
     abbr --add lg lazygit
     abbr --add th treehouse
+||||||| 414433e2
+    abbr --add lg lazygit
+=======
+    abbr --add th treehouse
+>>>>>>> WIP
     abbr --add lw lazyworktree
+    abbr --add lg lazygit
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
@@ -128,7 +122,7 @@ if status is-interactive
     abbr --add jjs --set-cursor 'jj squash %'
     abbr --add jju --set-cursor 'jj undo %'
 
-    # Package Managers 
+    # Package Managers
     abbr --add brews 'brew list'
     abbr --add bi --set-cursor 'brew isntall %'
     abbr --add bu --set-cursor 'brew unisntall %'

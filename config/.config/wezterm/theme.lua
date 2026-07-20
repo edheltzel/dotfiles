@@ -313,15 +313,18 @@ M.agent_processes = {
 M.process_icons = {
   nvim = wezterm.nerdfonts.custom_vim,
   vim = wezterm.nerdfonts.custom_vim,
-  glow = wezterm.nerdfonts.oct_markdown,
+  mdterm = wezterm.nerdfonts.oct_markdown,
   fish = wezterm.nerdfonts.md_fish,
   zsh = wezterm.nerdfonts.dev_terminal,
   bash = wezterm.nerdfonts.cod_terminal_bash,
   git = wezterm.nerdfonts.dev_git,
+  hunk = wezterm.nerdfonts.cod_git_pull_request_create,
   gh = wezterm.nerdfonts.oct_mark_github,
   lazygit = wezterm.nerdfonts.dev_git,
+  lazyworktree = wezterm.nerdfonts.md_family_tree,
   deno = wezterm.nerdfonts.dev_denojs,
   node = wezterm.nerdfonts.md_nodejs,
+  bun = wezterm.nerdfonts.dev_bun,
   python = wezterm.nerdfonts.dev_python,
   python3 = wezterm.nerdfonts.dev_python,
   ruby = wezterm.nerdfonts.dev_ruby,
@@ -332,10 +335,12 @@ M.process_icons = {
   ssh = wezterm.nerdfonts.md_ssh,
   make = wezterm.nerdfonts.seti_makefile,
   btop = wezterm.nerdfonts.md_chart_areaspline,
+  herdr = wezterm.nerdfonts.md_sheep,
   claude = wezterm.nerdfonts.fa_robot,
   opencode = wezterm.nerdfonts.md_robot,
-  gemini = wezterm.nerdfonts.md_robot,
+  codex = wezterm.nerdfonts.md_robot,
   pi = wezterm.nerdfonts.fa_robot,
+  omp = wezterm.nerdfonts.fa_robot,
 }
 
 -- Helper: extract file path from CWD URI (handles Url object or string)
