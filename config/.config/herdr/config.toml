@@ -112,17 +112,9 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+d"
+key = "prefix+D"
 description = "launch Dash"
 command = "gh dash"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+D"
-description = "launch Hunk"
-command = "hunk diff"
 type = "popup"
 width = "90%"
 height = "90%"
@@ -136,13 +128,13 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+v"
+key = "prefix+V"
 description = "launch Neovim"
 command = "nvim"
 type = "pane"
 
 [[keys.command]]
-key = "prefix+y"
+key = "prefix+Y"
 description = "launch Yazi"
 command = "yazi"
 type = "popup"
