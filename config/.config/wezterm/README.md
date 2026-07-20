@@ -142,6 +142,13 @@ Sent as `Ctrl+Alt` chords (survive tmux). Bound to `Cmd+Ctrl+Alt`:
 
 ## Status Bar
 
-**Left:** Workspace name (or active key table / leader indicator)
+**Left:** Active workspace name (or active key table / leader indicator)
 
-**Right:** CWD folder, git branch (cached per directory), running command, clock
+**Right:** CWD folder, git branch (cached per directory), running command,
+and tab/pane/workspace totals
+
+When `herdr` is the active foreground process, the status bar uses a cached
+`herdr api snapshot` instead of WezTerm's native topology. The left side shows
+the active Herdr workspace; the right side shows the active Herdr pane's current
+directory and git branch, plus the active tab and pane labels with totals. Native
+WezTerm state returns automatically when Herdr exits or its API is unavailable.
