@@ -2,13 +2,13 @@ onboarding = false
 [update]
 channel = "preview"
 
+[session]
+resume_agents_on_restore = true
+
 [experimental]
 allow_nested = true
 kitty_graphics = true
-resume_agents_on_restore = true
 pane_history = true
-
-onboarding = false
 
 switch_ascii_input_source_in_prefix = true
 
