@@ -2,14 +2,15 @@ format = "$all"
 right_format = "$cmd_duration"
 
 command_timeout = 500
+scan_timeout = 100
 
 [battery]
 disabled = true
 
 ## start character ##
 [character]
-success_symbol = '[](bold #9ECE6A)'
-error_symbol = '[](bold #F7768E)'
+success_symbol = '[](bold #37F499)'
+error_symbol = '[](bold #F16C75)'
 
 [shell]
 fish_indicator = ""
@@ -20,19 +21,19 @@ disabled = true
 
 ## start prompt ##
 [directory]
-format = "[⚡︎](#7DCFFF)[$path]($style)[$read_only]($read_only_style) "
+format = "[⚡︎](#04D1F9)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…󰿟"
 
 [git_branch]
-style = "#F141A8"
+style = "#F265B5"
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
 
 [git_metrics]
 disabled = false
-added_style = "#9ECE6A"
-deleted_style = "#F7768E"
+added_style = "#37F499"
+deleted_style = "#F16C75"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
@@ -42,19 +43,19 @@ conflicted = "[ ](fg:red bg:bright-black)"
 ahead = "[ ×${count} ](white)"
 behind = "[ ×${count} ](white)"
 diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
-untracked = "️[ ×${count} ](#F69F4D)"
+untracked = "️[ ×${count} ](#04D1F9)"
 stashed = " "
-modified = "[ ×${count} ](#E0AF68)"
+modified = "[ ×${count} ](#F1FC79)"
 staged = "[ ×${count} ](bright-green)"
 deleted = "[ ×${count} ](bright-red)"
-renamed = "[ ×${count} ](fg:214)"
+renamed = "[ ×${count} ](#F7C67F)"
 
 [cmd_duration]
 disabled = false
 min_time = 1
 format = "[󰔛 $duration]($style)"
 show_milliseconds = true
-style = "#CFC9C2"
+style = "#7081BE"
 ## end prompt ##
 
 ## start custom symbols ##
@@ -62,53 +63,54 @@ style = "#CFC9C2"
 symbol = "󰏗 "
 
 [aws]
-style = "#FFA400"
+style = "#F7C67F"
 format = "[$symbol($version )]($style)"
 symbol = "  "
 
 [deno]
 format = "[$symbol($version )]($style)"
-style = "bright-black"
+style = "#7081BE"
 symbol = "󱍢 "
 
 [nodejs]
 format = "[$symbol($version )]($style)"
+style = "#37F499"
 symbol = "󰎙 "
 detect_extensions = []
 
 [bun]
 format = "[$symbol($version )]($style)"
-style = "#CCBEA7"
+style = "#EBFAFA"
 symbol = " "
 detect_extensions = []
 
 [golang]
-style = "#7FD5EA"
+style = "#04D1F9"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [lua]
-style = "blue"
+style = "#04D1F9"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [php]
-style = "#4063DB"
+style = "#A48CF2"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [python]
-style = "#906cff"
+style = "#F1FC79"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [ruby]
-style = "#CF043D"
+style = "#F16C75"
 format = "[$symbol($version )]($style)"
 symbol = "󰴭 "
 
 [rust]
-style = "#99908A"
+style = "#F7C67F"
 format = "[$symbol($version )]($style)"
 symbol = " "
 ## end custom symbols ##
