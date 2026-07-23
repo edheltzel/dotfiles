@@ -7,14 +7,13 @@ if status is-interactive
     # Directories
     # abbr --add cls '$DROPBOX/Clients'
     abbr --add atl 'cd ~/Developer/Atlas/Config/'
-    abbr --add atlas 'cd ~/Developer/Atlas/Config/'
+    abbr --add atlas 'cd ~/Developer/Atlas/'
     abbr --add config '~/.config/'
     abbr --add dev 'cd ~/Developer'
     abbr --add dls '~/Downloads/'
     abbr --add dots 'cd ~/.dotfiles'
     abbr --add fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
     abbr --add local '~/.local/'
-    abbr --add neo 'cd ~/.dotfiles/neoed/.config/nvim'
     abbr --add pg 'cd ~/Developer/Playground/'
     abbr --add sb 'cd ~/Developer/Sandboxes/'
     abbr --add sites 'cd ~/Sites'
