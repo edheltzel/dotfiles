@@ -153,7 +153,7 @@ Flags (apply to bootstrap):
 Notes:
   - Re-running bootstrap will run `brew upgrade` on all installed packages.
   - `link` is always safe to re-run; it uses `stow --restow`.
-  - See .agents/atlas/plans/ for design rationale.
+  - See docs/plans/ for design rationale.
 
 Examples:
   ./install.sh bootstrap              # full provision, interactive
