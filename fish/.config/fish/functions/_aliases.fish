@@ -7,7 +7,6 @@ alias gcma commit-all
 alias gcm commit
 alias gs state
 
-alias atlas='bun /Users/ed/.claude/PAI/Tools/pai.ts'
 alias fabric fabric-ai
 alias j just
 alias t tv
