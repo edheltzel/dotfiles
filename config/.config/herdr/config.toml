@@ -63,6 +63,7 @@ goto = "prefix+g"
 
 # close
 close_workspace = "prefix+W"
+
 # rename
 rename_workspace = "prefix+E"
 rename_tab = "prefix+e"
@@ -72,7 +73,7 @@ new_workspace = "prefix+N"
 new_tab = "prefix+t"
 split_vertical = "prefix+\\"
 
-### CYCLE ###
+### CYCLE + JUMPS ###
 next_workspace = "control+alt+i"
 previous_workspace = "control+alt+u"
 
@@ -84,6 +85,7 @@ cycle_pane_previous = "control+alt+["
 
 previous_agent = "control+alt+k"
 next_agent = "control+alt+j"
+focus_agent = "prefix+control+1..9"
 
 ### DISABLED ###
 close_tab = ""
@@ -137,6 +139,14 @@ type = "pane"
 key = "prefix+Y"
 description = "launch Yazi"
 command = "yazi"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+y"
+description = "launch Superfile"
+command = "spf"
 type = "popup"
 width = "90%"
 height = "90%"
