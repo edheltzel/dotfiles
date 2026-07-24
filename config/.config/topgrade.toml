@@ -51,7 +51,8 @@ repos = [
   "/Users/ed/Developer/TUIApps/herdr/",
   "/Users/ed/Developer/AI/Extensions/LifeOS/",
   "/Users/ed/Developer/AI/Harness/Boop/",
-  "/Users/ed/Developer/AI/Harness/pi/",
+  "/Users/ed/Developer/AI/Harness/Neo/",
+  "/Users/ed/Developer/AI/Agents/Push/",
   "/Users/ed/Developer/AI/Skills/claude-cybersecurity/",
   "/Users/ed/Developer/AI/Skills/claude-seo/",
   "/Users/ed/Developer/AI/Skills/claude-obsidian/",
@@ -60,5 +61,4 @@ repos = [
   "/Users/ed/Developer/AI/Skills/skillsBeagle/",
   "/Users/ed/Developer/AI/Skills/dox-framework/",
   "/Users/ed/Developer/AI/Skills/skillsBlueprint/",
-
 ]
