@@ -20,6 +20,10 @@ local function setup(theme, keymaps)
   config.send_composed_key_when_left_alt_is_pressed = false
   config.send_composed_key_when_right_alt_is_pressed = false
 
+  -- Skip WezTerm's periodic background update check (quiet network, one fewer
+  -- startup task); WezTerm is managed via Homebrew.
+  config.check_for_updates = false
+
   -- Rendering
   config.front_end = "WebGpu"
   config.webgpu_power_preference = "HighPerformance"
