@@ -303,6 +303,7 @@ M.agent_processes = {
   aider = true,
   copilot = true,
   pi = true,
+  omp = true,
 }
 
 -- Note: Agent idle/working detection lives in tabs.lua's update-status handler,

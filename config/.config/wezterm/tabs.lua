@@ -50,7 +50,7 @@ local function setup(theme)
     end
     local argv_str = table.concat(info.argv, " ")
     for name, _ in pairs(theme.agent_processes) do
-      if argv_str:find(name) then
+      if argv_str:find(name, 1, true) then
         return true
       end
     end
@@ -74,17 +74,29 @@ local function setup(theme)
         local ok_info, info = pcall(p.get_foreground_process_info, p)
         if ok_info and info and info.argv and info.argv[1] then
           argv0 = basename(info.argv[1])
+          -- Bun/Node-wrapped CLIs (omp, pi) launch as `bun /path/to/omp`, so
+          -- argv[1] is the interpreter and the real command is the script arg.
+          if (argv0 == "bun" or argv0 == "node" or argv0 == "deno") and info.argv[2] then
+            argv0 = basename(info.argv[2])
+          end
         end
 
         -- Pane title carries identity for terminal apps (nvim, herdr).
         local title = p:get_title() or ""
         local title_cmd = title:match("^(%S+)")
 
-        -- Process accent color: argv[0] first, then title, then fg basename.
-        local fg_name = p:get_foreground_process_name()
-        local pc = (argv0 and process_colors[argv0])
-          or (title_cmd and process_colors[title_cmd])
-          or (fg_name and process_colors[basename(fg_name)])
+        -- Process accent color: argv[0] first, then title, then executable basename.
+        -- info.executable (from the get_foreground_process_info call above) is the
+        -- same value get_foreground_process_name() returns, so reuse it instead of
+        -- making a second libproc syscall per pane every tick. Fall back to the
+        -- syscall only when the info call failed and nothing earlier matched.
+        local pc = (argv0 and process_colors[argv0]) or (title_cmd and process_colors[title_cmd])
+        if not pc then
+          local exe = (ok_info and info and info.executable) or p:get_foreground_process_name()
+          if exe then
+            pc = process_colors[basename(exe)]
+          end
+        end
         if pc then
           new_proc_color[pane_id] = pc
         end
@@ -97,7 +109,7 @@ local function setup(theme)
         if not is_agent then
           local prog = (p:get_user_vars() or {}).WEZTERM_PROG or ""
           for name, _ in pairs(theme.agent_processes) do
-            if prog:find(name) then
+            if prog:find(name, 1, true) then
               is_agent = true
               break
             end
