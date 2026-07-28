@@ -230,7 +230,7 @@ local keys = {
   -- { key = "k", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Up", 10 }), desc = "resize pane up" },
   -- { key = "l", mods = "SUPER|CTRL|ALT", action = act.AdjustPaneSize({ "Right", 10 }), desc = "resize pane right" },
   { key = "z", mods = "SUPER|CTRL", action = act.TogglePaneZoomState, desc = "toggle zoom" },
-  { key = ",", mods = "SHIFT|CTRL|ALT", action = act.ReloadConfiguration, desc = "reload config" },
+  { key = ",", mods = "SUPER|CTRL", action = act.ReloadConfiguration, desc = "reload config" },
 }
 
 -- Jump to a tab with index (⌘+k 1-9 OR ⌘+1-9)
