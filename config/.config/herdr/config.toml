@@ -86,7 +86,7 @@ cycle_pane_previous = "control+alt+["
 
 previous_agent = "control+alt+k"
 next_agent = "control+alt+j"
-focus_agent = "control+cmd+1..9"
+focus_agent = "prefix+1..9"
 
 ### DISABLED ###
 close_tab = ""
