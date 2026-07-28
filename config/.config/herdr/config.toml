@@ -79,13 +79,14 @@ previous_workspace = "control+alt+u"
 
 next_tab = "control+alt+l"
 previous_tab = "control+alt+h"
+switch_tab = "control+alt+1..9"
 
 cycle_pane_next = "control+alt+]"
 cycle_pane_previous = "control+alt+["
 
 previous_agent = "control+alt+k"
 next_agent = "control+alt+j"
-focus_agent = "prefix+control+1..9"
+focus_agent = "control+cmd+1..9"
 
 ### DISABLED ###
 close_tab = ""
