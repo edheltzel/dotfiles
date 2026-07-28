@@ -13,7 +13,6 @@
 # 3. Desktop Apps                                             #
 # 4. MacOS Specific Stuff                                     #
 #                                                             # 
-# ADE (AI/Agent Development Environment)                      #
 ###############################################################
 
 # Options
@@ -303,18 +302,19 @@ cask 'claude'                         # Claude Desktop
 cask 'claude-code'                    # Claude Code
 cask 'codex'                          # Codex cli
 cask 'codex-app'                      # Codex Desktop 
+brew 'crit'                           # Visual feedback with agents
+brew 'whisper-cpp'                    # TTS utility
 brew 'fabric-ai'
-brew 'agent-browser'
-brew 'whisper-cpp'
 brew 'sox'
 brew 'socat'
-cask 'maestro'
 brew 'can1357/tap/omp'
+# cask 'maestro'
+# brew 'agent-browser'
 
 # Terminal emulators
+cask 'wezterm@nightly'              
 cask 'ghostty'                        
-# cask 'kitty'                        
-# cask 'wezterm@nightly'              
+cask 'kitty'                        
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
