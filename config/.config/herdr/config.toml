@@ -60,6 +60,7 @@ blue = "#9071f4"        # indigo
 prefix = "control+alt+,"
 detach = "prefix+X"
 goto = "prefix+g"
+toggle_sidebar = "prefix+s"
 
 # close
 close_workspace = "prefix+W"
@@ -123,7 +124,7 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+B"
+key = "prefix+K"
 description = "launch Project Board"
 command = "gh board --owner edheltzel"
 type = "popup"
@@ -159,3 +160,17 @@ command = "exec \"${SHELL:-sh}\""
 type = "popup"
 width = "90%"
 height = "90%"
+
+######## PLUGINS ########
+
+[[keys.command]]
+key = "prefix+b"
+type = "shell"
+command = '"${HERDR_BIN_PATH}" plugin pane open --plugin official.browser --entrypoint browser --placement split --direction right --focus'
+description = "open browser in right split"
+
+[[keys.command]]
+key = "prefix+B"
+type = "shell"
+command = '"${HERDR_BIN_PATH}" plugin pane open --plugin official.browser --entrypoint browser --placement overlay --focus'
+description = "open browser overlay"
