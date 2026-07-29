@@ -75,7 +75,7 @@ local function setup(theme, keymaps)
   config.use_fancy_tab_bar = false
   config.status_update_interval = 1000
   config.tab_bar_at_bottom = true
-  config.hide_tab_bar_if_only_one_tab = false
+  config.hide_tab_bar_if_only_one_tab = true
   config.colors = {
     tab_bar = {
       background = theme.tab_bar.bg,
