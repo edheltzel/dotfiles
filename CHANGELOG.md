@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ### Changed
 
+- Herdr agent rows and the WezTerm status bar now place the detected agent type before the terminal title while retaining workspace and tab context.
 - Restored agent-harness updates to upstream `omp update` now that the streamed-output fix ships in OMP 16.5.2; removed the local patched-source routing and OMP source checkout from Topgrade.
 
 ## [v3.4](https://github.com/edheltzel/dotfiles/tree/v3.4) - 2026-07-15
