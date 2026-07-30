@@ -247,6 +247,7 @@ local function setup(theme)
     local pane_metadata = type(active_pane.metadata) == "table" and active_pane.metadata or {}
     local workspace_label = clean_herdr_label(active_workspace.label, snapshot.focused_workspace_id)
     local tab_label = clean_herdr_label(active_tab.label, snapshot.focused_tab_id)
+    local agent_label = clean_herdr_label(active_pane.agent, "")
     local pane_label = clean_herdr_label(
       active_pane.label
         or pane_metadata.title
@@ -263,6 +264,7 @@ local function setup(theme)
     local workspace_count = #workspaces
     return {
       workspace = workspace_label,
+      agent = agent_label,
       tab = tab_label,
       pane = pane_label,
       cwd = pane_cwd,
@@ -273,6 +275,7 @@ local function setup(theme)
         snapshot.focused_workspace_id or "",
         snapshot.focused_tab_id or "",
         snapshot.focused_pane_id or "",
+        agent_label,
         workspace_label,
         tab_label,
         pane_label,
@@ -419,12 +422,16 @@ local function setup(theme)
     window:set_left_status(wz_format(left_items))
 
     -- Right status: mutate dynamic text slots
+    local pane_label = herdr_state and herdr_state.pane or ""
+    if herdr_state and herdr_state.agent ~= "" then
+      pane_label = herdr_state.agent .. " · " .. pane_label
+    end
     d_cwd.Text      = cwd
     d_branch.Text   = branch
     d_cmd_icon.Text = cmd_icon .. "  "
     d_cmd.Text      = cmd
     d_tabs.Text     = herdr_state and (herdr_state.tab .. " · " .. tostring(total_tabs)) or tostring(total_tabs)
-    d_panes.Text    = herdr_state and (herdr_state.pane .. " · " .. tostring(total_panes)) or tostring(total_panes)
+    d_panes.Text    = herdr_state and (pane_label .. " · " .. tostring(total_panes)) or tostring(total_panes)
     d_ws_count.Text = tostring(total_workspaces)
 
     -- Build right_items with direct indexed writes (no table.insert overhead)
