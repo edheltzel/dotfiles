@@ -37,7 +37,8 @@ local function setup(theme, keymaps)
     { family = "FiraCode Nerd Font Mono", weight = font_weight },
   })
 
-  config.font_size = 16.0
+  config.font_size = 15
+
   -- Theme
   config.color_scheme = theme.name
 
@@ -59,8 +60,8 @@ local function setup(theme, keymaps)
   config.window_close_confirmation = "AlwaysPrompt"
   config.scrollback_lines = 5000
   -- Keep the window nearly opaque while softly blurring the desktop behind it.
-  config.macos_window_background_blur = 25
-  config.window_background_opacity = 0.95
+  config.macos_window_background_blur = 50
+  config.window_background_opacity = 0.96
   -- config.window_background_image = wezterm.home_dir .. "/.wallpapers/wallpapers/bg-blurred-darker.png"
   config.default_workspace = "※ HQ"
   config.native_macos_fullscreen_mode = false
