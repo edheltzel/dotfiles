@@ -73,6 +73,8 @@ M.process_icons = {
 ```
 
 > Node.js-based CLIs (e.g. `opencode`, `gemini`) are detected via pane title since `foreground_process_name` returns `node`.
+>
+> Recognized AI agent tabs override their process icon with the shared `⊛` glyph. It stays fixed while the agent runs child commands, preventing icon flicker.
 
 ## Key Bindings
 
