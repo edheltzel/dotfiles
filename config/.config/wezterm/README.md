@@ -38,6 +38,7 @@ local process_colors = {
   herdr = colors.cyan,
   nvim = colors.purple,
   claude = colors.orange,
+  jcode = colors.cyan,
   pi = colors.yellow,
   omp = colors.pink,
   -- ["my-tool"] = colors.red,
@@ -45,8 +46,8 @@ local process_colors = {
 ```
 
 The color is pure identity: the **active** tab uses it as the pill **background**,
-and **inactive** tabs use the same color as the **foreground** text (a claude tab
-is an orange pill when active, orange text when inactive). Tabs with no known
+and **inactive** tabs use the same color as the **foreground** text (a Jcode tab
+is a cyan pill when active, cyan text when inactive). Tabs with no known
 process fall back to the green active pill / muted gray text.
 
 The process is resolved (in the `update-status` handler, cached by pane id) from

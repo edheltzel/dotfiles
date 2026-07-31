@@ -298,6 +298,7 @@ M.tab_bar = theme_data.tab_bar
 -- Matches against basename of foreground_process_name AND user_vars.WEZTERM_PROG
 M.agent_processes = {
   claude = true,
+  jcode = true,
   opencode = true,
   gemini = true,
   aider = true,
