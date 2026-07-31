@@ -1,5 +1,5 @@
 -- tabs.lua: Tab rendering — pill-shaped tabs, process colors, process icons,
--- agent detection (robot icon), and an unseen-output dot.
+-- agent detection (shared agent glyph), and an unseen-output dot.
 --
 -- Agent detection uses update-status (1s timer, full Pane API) to cache state,
 -- which format-tab-title reads for rendering. This is needed because agents like
@@ -11,7 +11,7 @@ local wezterm = require("wezterm")
 -- Hot-path locals: see statusbar.lua for rationale. Resolved once at load.
 local wz_truncate_right = wezterm.truncate_right
 local nf = wezterm.nerdfonts
-local NF_ROBOT = nf.fa_robot
+local AGENT_GLYPH = "⊛"
 local NF_TERMINAL = nf.cod_terminal
 local NF_UNSEEN = nf.cod_circle_filled
 local NF_PLE_L = nf.ple_left_half_circle_thick
@@ -155,14 +155,14 @@ local function setup(theme)
       fg = process_color or tab_bar.inactive_fg
     end
 
-    -- Icon: unseen-output dot wins; otherwise lock to robot for agent panes
+    -- Icon: unseen-output dot wins; otherwise lock to the shared glyph for agent panes
     -- (prevents flickering when an agent spawns subprocesses like git/node/rg).
     local proc = tab.active_pane.foreground_process_name or ""
     local icon
     if unseen then
       icon = NF_UNSEEN
     elseif agent_state[tab.active_pane.pane_id] then
-      icon = NF_ROBOT
+      icon = AGENT_GLYPH
     else
       icon = theme.get_process_icon(tab.active_pane.title, basename(proc), NF_TERMINAL)
     end
