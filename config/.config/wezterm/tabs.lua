@@ -38,7 +38,7 @@ local function setup(theme)
     nvim = colors.purple,
     herdr = colors.cyan,
     claude = colors.orange,
-    jcode = colors.cyan,
+    jcode = colors.purple,
     pi = colors.yellow,
     omp = colors.pink,
     -- Add processes: ["my-tool"] = colors.red,
