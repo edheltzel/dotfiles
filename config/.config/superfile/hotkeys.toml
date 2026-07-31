@@ -1,13 +1,10 @@
 ##############################################
 #                                            #
-#         Superfile vim-like Hotkeys         #
+#           Superfile Configuration          #
 #                                            #
 ##############################################
 
-#-- Maintainer: nonepork <https://github.com/nonepork>
-
-# This contains a hotkey config file for superfile, that's themed around vim
-# controls! More details can be found at
+# This contains the hotkey config file for superfile! More details can be found at
 # https://superfile.dev/configure/custom-hotkeys/.
 
 ###############################################################################
@@ -17,61 +14,61 @@
 # Note: These hotkeys should be unique.
 
 #-- Basic Actions
-confirm = ['enter', '']
-quit = ['ctrl+c', ''] # a.k.a. "theprimeagen troller"
+confirm = ['enter', 'right', 'l']
 cd_quit = ['Q', '']
+quit = ['q', 'esc']
 
 #-- Navigation
-list_up = ['k', '']
-list_down = ['j', '']
-page_up = ['pgup','']
-page_down = ['pgdown','']
+list_down = ['down', 'j']
+list_up = ['up', 'k']
+page_down = ['pgdown', '']
+page_up = ['pgup', '']
 
 #-- File Panel Controls
+close_file_panel = ['w', '']
 create_new_file_panel = ['n', '']
-close_file_panel = ['q', '']
-next_file_panel = ['tab', '']
-previous_file_panel = ['shift+tab', '']
+next_file_panel = ['tab', 'L']
+open_sort_options_menu = ['o', '']
+pinned_directory = ['P', '']
+previous_file_panel = ['shift+left', 'H']
 split_file_panel = ['N', '']
 toggle_file_preview_panel = ['f', '']
-open_sort_options_menu = ['o', '']
 toggle_reverse_sort = ['R', '']
 
 #-- Focus Manipulation
-focus_on_process_bar = ['ctrl+p', '']
-focus_on_sidebar = ['ctrl+s', '']
-focus_on_metadata = ['ctrl+d', '']
+focus_on_metadata = ['m', '']
+focus_on_process_bar = ['p', '']
+focus_on_sidebar = ['s', '']
 
 #-- File/Dir Creation/Renaming
-file_panel_item_create = ['a', '']
-file_panel_item_rename = ['r', '']
+file_panel_item_create = ['ctrl+n', '']
+file_panel_item_rename = ['ctrl+r', '']
 
 #-- Main File Operations
-copy_items = ['y', '']
-cut_items = ['x', '']
-paste_items = ['p', '']
-delete_items = ['d', '']
+copy_items = ['ctrl+c', '']
+cut_items = ['ctrl+x', '']
+delete_items = ['ctrl+d', 'delete', '']
+paste_items = ['ctrl+v', 'ctrl+w', '']
 permanently_delete_items = ['D', '']
 
 #-- Archive Manipulation
-extract_file = ['ctrl+e', '']
 compress_file = ['ctrl+a', '']
+extract_file = ['ctrl+e', '']
 
 #-- Editor Actions
-open_file_with_editor = ['e', '']
 open_current_directory_with_editor = ['E', '']
+open_file_with_editor = ['e', '']
 
 #-- Other Actions
-pinned_directory = ['P', '']
-toggle_dot_file = ['.', '']
-change_panel_mode = ['m', '']
+change_panel_mode = ['v', '']
+copy_path = ['ctrl+p', '']
+copy_present_working_directory = ['c', '']
+open_command_line = [':', '']
 open_help_menu = ['?', '']
 open_spf_prompt = ['>', '']
-open_command_line = [':', '']
 open_zoxide = ['z', '']
-copy_path = ['Y', '']
-copy_present_working_directory = ['c', '']
-toggle_footer = ['ctrl+f', '']
+toggle_dot_file = ['.', '']
+toggle_footer = ['F', '']
 
 ###############################################################################
 #                                Typing hotkeys                               #
@@ -80,7 +77,7 @@ toggle_footer = ['ctrl+f', '']
 # Note: These hotkeys can override all hotkeys.
 
 confirm_typing = ['enter', '']
-cancel_typing = ['esc', '']
+cancel_typing = ['ctrl+c', 'esc']
 
 ###############################################################################
 #                            Mode-Specific Hotkeys                            #
@@ -90,10 +87,10 @@ cancel_typing = ['esc', '']
 # hotkeys.
 
 #-- Normal Mode Actions
-parent_directory = ['-', '']
+parent_directory = ['h', 'left', 'backspace']
 search_bar = ['/', '']
 
 #-- Selection Mode Actions
-file_panel_select_mode_items_select_down = ['J', '']
-file_panel_select_mode_items_select_up = ['K', '']
+file_panel_select_mode_items_select_down = ['shift+down', 'J']
+file_panel_select_mode_items_select_up = ['shift+up', 'K']
 file_panel_select_all_items = ['A', '']
