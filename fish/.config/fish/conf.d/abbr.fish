@@ -39,11 +39,14 @@ if status is-interactive
     abbr --add cc claude
     abbr --add co codex
     abbr --add oc opencode
-    abbr --add oo omp
+    abbr --add gk grok
+    abbr --add jc jcode
     abbr --add ccp --set-cursor 'claude -p "%"'
     abbr --add cop --set-cursor 'codex -p "%"'
     abbr --add ppi --set-cursor 'pi -p "%"'
-    abbr --add ooi --set-cursor 'omp, -p "%"'
+    abbr --add opp --set-cursor 'omp -p "%"'
+    abbr --add gkk --set-cursor 'grok -p "%"'
+    abbr --add jcp --set-cursor 'jcode run "%"'
 
     # Terminals/Text Editors
     abbr --add zz zed
