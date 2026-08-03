@@ -71,19 +71,15 @@ detach = "prefix+X"
 goto = "prefix+g"
 toggle_sidebar = "prefix+s"
 
-# close
 close_workspace = "prefix+W"
 
-# rename
 rename_workspace = "prefix+E"
 rename_tab = "prefix+e"
 
-# new terms
 new_workspace = "prefix+N"
 new_tab = "prefix+t"
 split_vertical = "prefix+\\"
 
-# cycle/jumps
 next_workspace = "control+alt+i"
 previous_workspace = "control+alt+u"
 
@@ -94,9 +90,9 @@ switch_tab = "control+alt+1..9"
 cycle_pane_next = "control+alt+]"
 cycle_pane_previous = "control+alt+["
 
-previous_agent = "control+alt+k"
-next_agent = "control+alt+j"
 focus_agent = "prefix+1..9"
+next_agent = "control+alt+j"
+previous_agent = "control+alt+k"
 
 # disabled
 close_tab = ""
@@ -147,17 +143,25 @@ command = "nvim"
 type = "pane"
 
 [[keys.command]]
-key = "prefix+Y"
-description = "launch Yazi"
-command = "yazi"
+key = "prefix+T"
+description = "launch scratch Terminal"
+command = "exec \"${SHELL:-sh}\""
 type = "popup"
 width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+T"
-description = "launch scratch Terminal"
-command = "exec \"${SHELL:-sh}\""
+key = "prefix+y"
+description = "launch Superfile"
+command = "spf"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+Y"
+description = "launch Yazi"
+command = "yazi"
 type = "popup"
 width = "90%"
 height = "90%"
