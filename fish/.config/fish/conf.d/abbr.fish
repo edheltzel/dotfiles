@@ -1,5 +1,7 @@
 # I treat these like aliases
 if status is-interactive
+    abbr --add rl reload
+    abbr --add rel reload
     # Window
     abbr --add cw center_window
     abbr --add cl clear
