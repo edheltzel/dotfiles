@@ -16,7 +16,7 @@
   "hover_popover_enabled": true,
   "context_servers": {
     "mcp-server-context7": {
-      "enabled": false,
+      "enabled": true,
       "remote": false,
       "settings": {
         "context7_api_key": ""
@@ -183,13 +183,7 @@
     ]
   },
   "agent_servers": {
-    "codex-acp": {
-      "type": "registry"
-    },
     "pi-acp": {
-      "type": "registry"
-    },
-    "claude-acp": {
       "type": "registry"
     }
   },
