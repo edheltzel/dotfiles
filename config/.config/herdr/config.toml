@@ -167,15 +167,3 @@ width = "90%"
 height = "90%"
 
 ### plugins ###
-
-[[keys.command]]
-key = "prefix+B"
-type = "shell"
-command = '"${HERDR_BIN_PATH}" plugin pane open --plugin official.browser --entrypoint browser --placement overlay --focus'
-description = "open browser overlay"
-
-[[keys.command]]
-key = "prefix+b"
-type = "shell"
-command = '"${HERDR_BIN_PATH}" plugin pane open --plugin official.browser --entrypoint browser --placement split --direction right --focus'
-description = "open browser in right split"
