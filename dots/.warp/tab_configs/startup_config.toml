@@ -1,8 +1,0 @@
-name = "New tab: ed"
-
-[[panes]]
-id = "main"
-type = "terminal"
-directory = "/Users/ed"
-
-[params]
