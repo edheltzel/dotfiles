@@ -7,10 +7,33 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## Unreleased
 
+## [v3.5](https://github.com/edheltzel/dotfiles/tree/v3.5) - 2026-08-10
+
+[Full Changelog](https://github.com/edheltzel/dotfiles/compare/v3.4...v3.5)
+
+### Added
+
+- `superfile` file manager with tracked config, hotkeys, and an Eldritch theme mapped from the WezTerm palette
+- Fish `aup` updater for centralized AI harness upgrades (Pi extensions, OMP plugins, per-command reporting)
+- Starship prompt surfaces the nearest reachable git tag next to the branch
+- WezTerm agent-tab UX: star glyph for agent tabs, purple Jcode tab color, process-based tab coloring, hide single-tab bar
+- Brew packages: `crit`, Grok CLI; `gh-stack` extension; markdown preview default (replaces Typora)
+- Abbreviations for reload and harness-related workflows
+
 ### Changed
 
-- Herdr agent rows and the WezTerm status bar now place the detected agent type before the terminal title while retaining workspace and tab context.
-- Restored agent-harness updates to upstream `omp update` now that the streamed-output fix ships in OMP 16.5.2; removed the local patched-source routing and OMP source checkout from Topgrade.
+- Active theme switched to **Eldritch**; Starship is the primary prompt
+- Restored agent-harness updates to upstream `omp update` (OMP 16.5.2 ships the streamed-output fix); removed local patched-source routing and OMP source checkout from Topgrade
+- Herdr agent rows and the WezTerm status bar place detected agent type before the terminal title
+- Herdr config/keybindings reworked (agent sidebar layout, focus jumps); removed the flaky herdr browser plugin
+- WezTerm: fewer per-tick process syscalls in the tab status walk, font size/opacity tweaks, reload ergonomics
+- Default pager is `tuicr` (twee-ker); removed `hunk`
+- Package/config cleanup: dropped unused aerospace, alacritty, borders, broot, sketchybar, television, zellij, warp, glow, and related cruft
+- yazi plugin/package updates; Zed ACP registry updates; topgrade and Brewfile refreshed
+
+### Fixed
+
+- Misaligned onboarding key/value layout
 
 ## [v3.4](https://github.com/edheltzel/dotfiles/tree/v3.4) - 2026-07-15
 
