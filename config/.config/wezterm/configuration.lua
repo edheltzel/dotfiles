@@ -57,7 +57,7 @@ local function setup(theme, keymaps)
   config.initial_cols = 100
   config.initial_rows = 50
   config.window_decorations = "RESIZE"
-  config.window_close_confirmation = "AlwaysPrompt"
+  config.window_close_confirmation = "NeverPrompt"
   config.scrollback_lines = 5000
   -- Keep the window nearly opaque while softly blurring the desktop behind it.
   config.macos_window_background_blur = 50

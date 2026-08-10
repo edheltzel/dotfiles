@@ -95,7 +95,9 @@ end)
 -- Early-exit when no spawn is pending — this handler fires on every window
 -- every tick (~1/sec), so bail cheaply when there's nothing to do.
 wezterm.on("update-status", function(window, pane)
-  if not zen_state.pending_zen then return end
+  if not zen_state.pending_zen then
+    return
+  end
 
   local window_id = tostring(window:window_id())
   if window_id ~= zen_state.source_window_id then
@@ -123,7 +125,9 @@ wezterm.on("window-focus-changed", function(window)
     live[tostring(w:window_id())] = true
   end
   for id in pairs(zen_state.zen_windows) do
-    if not live[id] then zen_state.zen_windows[id] = nil end
+    if not live[id] then
+      zen_state.zen_windows[id] = nil
+    end
   end
 end)
 

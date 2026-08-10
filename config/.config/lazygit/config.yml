@@ -2,6 +2,8 @@
 # cSpell: disable
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 # this is the default config.
+git:
+  overrideGpg: true
 gui:
   theme:
     activeBorderColor:
@@ -30,4 +32,3 @@ gui:
       - "#f16c75"
     defaultFgColor:
       - "#ebfafa"
-  overrideGpg: true
