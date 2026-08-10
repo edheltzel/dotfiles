@@ -70,7 +70,6 @@ brew 'duti'                 # set default app for file types
 brew 'eza'                  # better ls - Rust
 brew 'fd'                   # better find - Rust
 brew 'fzf'                  # fuzzy finder - Go
-brew 'television'           # fuzzy finder - Rust
 brew 'grc'                  # colorize terminal output
 brew 'hexyl'                # hex viewer - Rust
 brew 'jq'                   # json parser
@@ -167,20 +166,18 @@ brew 'tectonic'
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
 brew 'git-delta'          # Git diff viewer - Rust
-brew  'modem-dev/tap/hunk'
+brew 'tuicr'              # Git code reviewer - Rust
 brew 'git-extras'         # Extra git commands for common tasks
 brew 'git-lfs'            # Git Large File Storage
 brew 'miniserve'          # Static file server
-brew 'mkcert'             # Local HTTPS development
 brew 'scc'                # Source code counter - Go
 brew 'tig'                # Text-mode interface for git
 brew 'watchexec'          # Watch a directory and execute a command when files change
 brew 'wget'               # wget with IRI support
 brew 'atac'               # A simple API client (postman like) - Rust
 
-brew "backlog-md"
-
-# Network and Security Testing
+# Network and Security Testing Utilities
+brew 'mkcert'             # Local HTTPS development
 brew 'bettercap'          # Network, scanning and moniroting
 brew 'nmap'               # Port scanning
 brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
@@ -188,9 +185,8 @@ brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
 brew 'hyperfine'          # Benchmark command-line programs
 cask 'wireshark'          # Network protocol analyzer
 brew 'termshark'
-cask 'lulu'               # LuLu - Open source firewall
-
-# Security Utilities
+brew 'socat'
+brew 'boring'            # ssh tunel
 brew 'clamav'            # Open source virus scanning suite
 brew 'gnupg'             # GNU Privacy Guard
 brew 'lynis'             # Scan system for common security issues
@@ -202,17 +198,17 @@ brew 'mosh'              # Mobile shell - roaming remote terminal over UDP
 brew 'moshi-hook', restart_service: true # Moshi app agent hooks (rjyo/moshi)
 cask 'gpg-suite'         # GPG encryption files
 brew 'age'               # Simple, modern and secure encryption tool - Go
-brew 'boring'
+# cask 'lulu'               # LuLu - Open source firewall
 
 #############################################################
 # 3. Desktop Applications                                   #
 #############################################################
 
 # Creativity
-cask 'adobe-creative-cloud' # Adobe Creative Cloud
+#cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity'             # Affinity.studio
 cask 'figma'                # Design tool
-cask 'nucleo'               # Icon manager
+#cask 'nucleo'               # Icon manager
 
 # 3D Modeling & CAD
 cask 'openscad'             # 3D CAD Modeller
@@ -297,7 +293,7 @@ cask 'zed'                            # Code editor - Rust
 cask 'ollama'
 brew 'ollama'
 
-cask 'superwhisper'                   # TTS app
+brew 'can1357/tap/omp'                # oh-my-pi 
 cask 'claude'                         # Claude Desktop
 cask 'claude-code'                    # Claude Code
 cask 'codex'                          # Codex cli
@@ -305,9 +301,7 @@ cask 'codex-app'                      # Codex Desktop
 brew 'crit'                           # Visual feedback with agents
 brew 'whisper-cpp'                    # TTS utility
 brew 'fabric-ai'
-brew 'sox'
-brew 'socat'
-brew 'can1357/tap/omp'
+cask 'superwhisper'                   # TTS app
 # cask 'maestro'
 # brew 'agent-browser'
 
