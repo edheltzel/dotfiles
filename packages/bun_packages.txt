@@ -7,7 +7,6 @@
 cspell
 designlang
 gnhf
-hunkdiff
 hyperframes
 neovim
 opensrc
