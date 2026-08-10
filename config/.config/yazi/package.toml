@@ -5,8 +5,8 @@ hash = "a028c3c06630a33b068f4d5bd714a795"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "b9598e6"
-hash = "ce259b12c503a33a18a861052fa582b7"
+rev = "0be29a9"
+hash = "fbb53c3c04f816d737f9f4b1d29f3310"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
@@ -15,12 +15,12 @@ hash = "f5afc904d5106ee368c8aa2ded43bd74"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "b9598e6"
+rev = "0be29a9"
 hash = "b97710d0734c380d0a1f58c13dab0da2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "b9598e6"
+rev = "0be29a9"
 hash = "f23ecc89ce0f9eeefdd4cea14e2a9ba7"
 
 [[flavor.deps]]

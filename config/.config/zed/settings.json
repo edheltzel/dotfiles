@@ -442,6 +442,19 @@
     "button": false
   },
   "agent": {
+    "profiles": {
+      "yolo": {
+        "default_model": {
+          "provider": "openrouter",
+          "model": "openai/gpt-5.6-sol-pro",
+          "enable_thinking": true
+        },
+        "name": "YOLO",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
     "default_model": {
       "provider": "google",
       "model": "gemini-3.1-pro"
