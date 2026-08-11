@@ -186,8 +186,8 @@ local keys = {
     desc = "Tab Navigator",
   },
   -- Tabs/Panes keybindings
-  { key = "h", mods = "SHIFT|ALT", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
-  { key = "l", mods = "SHIFT|ALT", action = act.ActivateTabRelative(1), desc = "Next Tab" },
+  { key = "h", mods = "CMD|CTRL", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
+  { key = "l", mods = "CMD|CTRL", action = act.ActivateTabRelative(1), desc = "Next Tab" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
@@ -206,7 +206,7 @@ local keys = {
 
   -- fzf.fish keybindings - Cmd+Ctrl sends Ctrl+Alt sequences to fish
   { key = "f", mods = "SUPER|CTRL", action = act.SendString("\x1b\x06"), desc = "fzf: Search Directory" },
-  { key = "l", mods = "SUPER|CTRL", action = act.SendString("\x1b\x0c"), desc = "fzf: Search Git Log" },
+  { key = "g", mods = "SUPER|CTRL", action = act.SendString("\x1b\x0c"), desc = "fzf: Search Git Log" },
   { key = "s", mods = "SUPER|CTRL", action = act.SendString("\x1b\x13"), desc = "fzf: Search Git Status" },
   { key = "r", mods = "SUPER|CTRL", action = act.SendString("\x12"), desc = "fzf: Search History" },
   { key = "p", mods = "SUPER|CTRL", action = act.SendString("\x1b\x10"), desc = "fzf: Search Processes" },
