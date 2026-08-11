@@ -38,17 +38,10 @@ if status is-interactive
     abbr --add hup 'herdr update'
 
     # Agent Harnesses
-    abbr --add cc claude
-    abbr --add co codex
-    abbr --add oc opencode
-    abbr --add gk grok
+    abbr --add cc 'claude --dangerously-skip-permissions --model claude-opus-4-8'
+    abbr --add cx 'codex --yolo'
+    abbr --add gk 'grok --always-approve'
     abbr --add jc jcode
-    abbr --add ccp --set-cursor 'claude -p "%"'
-    abbr --add cop --set-cursor 'codex -p "%"'
-    abbr --add ppi --set-cursor 'pi -p "%"'
-    abbr --add opp --set-cursor 'omp -p "%"'
-    abbr --add gkk --set-cursor 'grok -p "%"'
-    abbr --add jcp --set-cursor 'jcode run "%"'
 
     # Terminals/Text Editors
     abbr --add zz zed
