@@ -1,10 +1,18 @@
 function __aup_run --description 'Run one update command and report its result'
     set -l label $argv[1]
     set -l color $argv[2]
-    set -l version_command $argv[3]
-    set -l update_command $argv[4..-1]
+    set -l binary $argv[3]
+    set -l version_command $argv[4]
+    set -l update_args $argv[5..-1]
 
-    command $update_command
+    if not command -q $binary
+        set_color brblack
+        printf '%s skipped (not installed).\n' "$label"
+        set_color normal
+        return 0
+    end
+
+    command $binary $update_args
     set -l update_status $status
 
     if test $update_status -eq 0
@@ -32,16 +40,40 @@ function __aup_run --description 'Run one update command and report its result'
     return $update_status
 end
 
-function aup --description 'Update agent harnesses and installed extensions'
+function aup --description 'Update installed agent harnesses and extensions'
+    set -l manifest $__fish_config_dir/agent-harnesses.txt
+
+    if not test -r "$manifest"
+        set_color red
+        printf 'aup: harness manifest not found at %s\n' "$manifest"
+        set_color normal
+        return 1
+    end
+
     set -l failed 0
 
-    __aup_run Claude ff8c42 claude claude update; or set failed 1
-    __aup_run Jcode 5fff87 jcode jcode update; or set failed 1
-    __aup_run Pi ff69b4 pi pi update; or set failed 1
-    __aup_run 'Pi extensions' ff69b4 - pi update --extensions; or set failed 1
-    __aup_run OMP af87ff omp omp update; or set failed 1
-    __aup_run 'OMP plugins' af87ff - omp update --plugins; or set failed 1
-    __aup_run Herdr 5fd7ff herdr herdr update; or set failed 1
+    while read -l line
+        set line (string trim -- "$line")
+        test -z "$line"; and continue
+        string match -q '#*' -- "$line"; and continue
+
+        set -l fields
+        for field in (string split '|' -- "$line")
+            set -a fields (string trim -- "$field")
+        end
+
+        if test (count $fields) -lt 5
+            set_color red
+            printf 'aup: malformed manifest line: %s\n' "$line"
+            set_color normal
+            set failed 1
+            continue
+        end
+
+        set -l update_args (string split ' ' -- $fields[5])
+        __aup_run $fields[1] $fields[2] $fields[3] $fields[4] $update_args
+        or set failed 1
+    end <"$manifest"
 
     return $failed
 end
