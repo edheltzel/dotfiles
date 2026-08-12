@@ -13,11 +13,16 @@
 #   args    Arguments passed to `binary` to perform the update.
 #
 # Lines starting with # and blank lines are ignored.
+#
+#
+#
+# OMP           | af87ff | omp      | omp      | update
+# OMP plugins   | af87ff | omp      | -        | update --plugins
+# Opencode      | 61747f | opencode | opencode | upgrade
 
-Claude        | ff8c42 | claude | claude | update
-Jcode         | 5fff87 | jcode  | jcode  | update
-Pi            | ff69b4 | pi     | pi     | update
-Pi extensions | ff69b4 | pi     | -      | update --extensions
-OMP           | af87ff | omp    | omp    | update
-OMP plugins   | af87ff | omp    | -      | update --plugins
-Herdr         | 5fd7ff | herdr  | herdr  | update
+
+Claude        | ff8c42 | claude   | claude   | update
+Jcode         | 5fff87 | jcode    | jcode    | update
+Pi            | ff69b4 | pi       | pi       | update
+Pi extensions | ff69b4 | pi       | -        | update --extensions
+Herdr         | 5fd7ff | herdr    | herdr    | update
