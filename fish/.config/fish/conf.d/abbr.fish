@@ -72,7 +72,7 @@ if status is-interactive
     abbr --add unzip ouch decompress
     abbr --add lzip ouch ligst
     abbr --add phps 'php -S localhost:8888'
-    abbr --add md 'mkdir -p'
+    abbr --add mkdd 'mkdir -p'
     abbr --add cwd pwd
     abbr --add e '$EDITOR'
     abbr --add o open
@@ -84,7 +84,7 @@ if status is-interactive
     abbr --add du dua
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
-    abbr --add mdt mdterm
+    abbr --add md mdterm
     abbr --add rd 'roughdraft open'
     abbr --add cg codegraph
     abbr --add cgs 'codegraph sync'
