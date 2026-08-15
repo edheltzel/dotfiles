@@ -23,6 +23,5 @@
 
 Claude        | ff8c42 | claude   | claude   | update
 Jcode         | 5fff87 | jcode    | jcode    | update
-Pi            | ff69b4 | pi       | pi       | update
-Pi extensions | ff69b4 | pi       | -        | update --extensions
+Pi+Extensions | ff69b4 | pi       | -        | update --all
 Herdr         | 5fd7ff | herdr    | herdr    | update
