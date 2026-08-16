@@ -1,7 +1,7 @@
 # Fish config — prompt + interactive lazy-loaders
 # Paths, exports, variables handled by conf.d/ (loaded before this file)
 
-# Prompt engine (change to swap: "starship", "oh-my-posh")
+# Prompt engine
 set -g FISH_PROMPT starship
 
 if status is-interactive
@@ -9,8 +9,6 @@ if status is-interactive
     switch $FISH_PROMPT
         case starship
             starship init fish | source
-        case oh-my-posh
-            oh-my-posh init fish --config ~/.config/starship-ish.omp.json | source
     end
 
     # Lazy-load FNM/Node — only inits when node/npm/npx first called
