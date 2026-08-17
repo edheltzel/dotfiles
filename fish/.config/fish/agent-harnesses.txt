@@ -16,12 +16,13 @@
 #
 #
 #
-# OMP           | af87ff | omp      | omp      | update
-# OMP plugins   | af87ff | omp      | -        | update --plugins
 # Opencode      | 61747f | opencode | opencode | upgrade
 
 
 Claude        | ff8c42 | claude   | claude   | update
 Jcode         | 5fff87 | jcode    | jcode    | update
 Pi+Extensions | ff69b4 | pi       | -        | update --all
+OMP           | af87ff | omp      | omp      | update --force
+OMP plugins   | af87ff | omp      | omp        | plugins upgrade
+Prime-agent   | 61747f | prime-agent       | -        | update --force
 Herdr         | 5fd7ff | herdr    | herdr    | update
