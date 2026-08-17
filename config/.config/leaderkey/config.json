@@ -18,12 +18,6 @@
           "value" : "/Applications/Affinity.app"
         },
         {
-          "key" : "c",
-          "label" : "Claude Desktop",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
-        },
-        {
           "key" : "f",
           "type" : "application",
           "value" : "/Applications/Figma.app"
@@ -112,6 +106,12 @@
           "value" : "/Applications/WezTerm.app"
         },
         {
+          "key" : "c",
+          "label" : "Claude Desktop",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
+        },
+        {
           "iconPath" : "/Applications/ChatGPT.app",
           "key" : "x",
           "label" : "Codex",
@@ -124,6 +124,20 @@
           "label" : "Zed",
           "type" : "application",
           "value" : "/Applications/Zed.app"
+        },
+        {
+          "iconPath" : "/Applications/Cursor.app",
+          "key" : "r",
+          "label" : "Cursor",
+          "type" : "application",
+          "value" : "/Applications/Cursor.app"
+        },
+        {
+          "iconPath" : "/Applications/Grok Bot.app",
+          "key" : "g",
+          "label" : "Grok Bot",
+          "type" : "application",
+          "value" : "/Applications/Grok Bot.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
