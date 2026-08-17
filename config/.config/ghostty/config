@@ -18,7 +18,7 @@ window-save-state        = always
 window-colorspace        = "display-p3"
 window-inherit-font-size = false
 window-padding-x         = 10
-window-padding-y         = 10
+window-padding-y         = 2
 window-title-font-family = "Lilex Nerd Font Mono"
 font-family              = "Lilex Nerd Font Mono"
 font-size                = 16
@@ -28,8 +28,8 @@ font-feature             = zero,calt
 macos-non-native-fullscreen = true
 macos-option-as-alt         = true
 macos-titlebar-proxy-icon   = hidden
-macos-titlebar-style        = tabs
-macos-window-buttons        = visible
+macos-titlebar-style        = hidden
+macos-window-buttons        = hidden
 macos-icon                  = retro
 
 # Quick Terminal
