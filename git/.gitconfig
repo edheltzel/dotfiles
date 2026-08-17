@@ -1,6 +1,6 @@
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = zed 
+  editor       = nvim 
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
