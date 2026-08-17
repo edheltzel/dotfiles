@@ -188,6 +188,11 @@ local keys = {
   -- Tabs/Panes keybindings
   { key = "h", mods = "CMD|CTRL", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
   { key = "l", mods = "CMD|CTRL", action = act.ActivateTabRelative(1), desc = "Next Tab" },
+  -- Ctrl+Tab / Ctrl+Shift+Tab are WezTerm defaults; remap to include Command
+  { key = "Tab", mods = "CTRL", action = act.DisableDefaultAssignment },
+  { key = "Tab", mods = "CTRL|SHIFT", action = act.DisableDefaultAssignment },
+  { key = "Tab", mods = "CMD|CTRL", action = act.ActivateTabRelative(1), desc = "Next Tab" },
+  { key = "Tab", mods = "CMD|CTRL|SHIFT", action = act.ActivateTabRelative(-1), desc = "Previous Tab" },
 
   { key = "]", mods = "SUPER", action = act.ActivatePaneDirection("Next"), desc = "Next Pane" },
   { key = "[", mods = "SUPER", action = act.ActivatePaneDirection("Prev"), desc = "Previous Pane" },
