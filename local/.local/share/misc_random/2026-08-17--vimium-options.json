@@ -1,0 +1,31 @@
+{
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://typ.ing/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://app.spoolstock.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://www.canva.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.youtube.com/*"
+    }
+  ],
+  "newTabDestination": "browserNewTabPage",
+  "settingsVersion": "2.4.2",
+  "userDefinedLinkHintCss": "/* Catppuccin Latte Palette */\n\n:root {\n  --vimium-rosewater: #dc8a78;\n  --vimium-peach: #fe640b;\n  --vimium-green: #40a02b;\n  --vimium-blue: #1e66f5;\n  --vimium-lavender: #7287fd;\n  --vimium-text: #4c4f69;\n  --vimium-subtext0: #6c6f85\n  --vimium-subtext1: #5c5f77\n  --vimium-surface2: #acb0be;\n  --vimium-surface1: #bcc0cc;\n  --vimium-surface0: #ccd0da;\n  --vimium-base: #eff1f5;\n  --vimium-mantle: #e6e9ef;\n  --vimium-crust: #dce0e8;\n\n  --vimium-foreground-text-color: var(--vimium-text);\n  --vimium-background-text-color: var(--vimium-text);\n  --vimium-foreground-color: var(--vimium-mantle);\n}\n\n/* link hints */\n\n#vimium-hint-marker-container div.internal-vimium-hint-marker,\n#vimium-hint-marker-container div.vimiumHintMarker {\n    padding: 3px 4px;\n    background: var(--vimium-green);\n    border: 1;\n    border-color: var(--vimium-mantle);\n    box-shadow: none;\n}\n\n#vimium-hint-marker-container div span {\n    color: var(--vimium-mantle);\n    text-shadow: none;\n}\n\n#vimium-hint-marker-container div span.matchingCharacter {\n    color: var(--vimium-surface2);\n}\n\n/* vomnibar */\n\n#vomnibar {\n    background: var(--vimium-base);\n    border: 2px solid var(--vimium-lavender);\n    animation: show 200ms cubic-bezier(0, 0, 0.2, 1) forwards;\n    max-height: calc(100vh - 70px);\n    overflow: hidden;\n}\n\n@keyframes show {\n  0% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n  100% {\n    transform: translateY(0);\n    opacity: 1;\n  }\n}\n\n#vomnibar input {\n    color: var(--vimium-text);\n    background: var(--vimium-base);\n    border: none;\n    box-shadow: none;\n    height: unset;\n    padding: 16px 30px;\n}\n\n#vomnibar #vomnibar-search-area {\n    border: none;\n    padding: unset;\n    background: var(--vimium-base);\n}\n\n#vomnibar ul {\n    padding: 0;\n    margin: 0;\n    background: var(--vimium-base);\n    border-top: 1px solid var(--vimium-surface0);\n}\n\n#vomnibar li {\n    padding: 10px;\n    border-bottom: 1px solid var(--vimium-surface0);\n}\n\n#vomnibar li .top-half,\n#vomnibar li .bottom-half {\n    padding: 3px 0;\n}\n\n#vomnibar li .source {\n    color: var(--vimium-peach);\n}\n\n#vomnibar li em,\n#vomnibar li .title {\n    color: var(--vimium-blue);\n    font-weight: bold;\n}\n\n#vomnibar li .url {\n    color: var(--vimium-rosewater);\n}\n\n#vomnibar li .match {\n    color: var(--vimium-green);\n    font-weight: bold;\n}\n\n#vomnibar li .title .match {\n    color: var(--vimium-blue);\n}\n\n#vomnibar li.selected {\n    background-color: var(--vimium-surface0);\n}\n\n/* search/find hud */\n\ndiv#hud-container {\n    background: var(--vimium-base);\n    border: 1px solid var(--vimium-text);\n    box-shadow: none;\n}\n\ndiv#hud-container span#hud-find-input,\ndiv#hud-container div#hud {\n    color: var(--vimium-text);\n}\n\ndiv#hud-container .hud-find,\ndiv#hud-container #search-area {\n    background-color: var(--vimium-base);\n}\n\n::selection {\n    background-color: var(--vimium-peach) !important;\n    color: var(--vimium-mantle) !important;\n}\n\n/* vimium settings */\n\nbody.vimium-body header,\nbody.vimium-body label,\nbody.vimium-body {\n    color: var(--vimium-text);\n    background-color: var(--vimium-base);\n}\n\nbody.vimium-body button,\nbody.vimium-body footer,\nbody.vimium-body textarea,\nbody.vimium-body input {\n    scrollbar-color: var(--vimium-surface2) var(--vimium-surface0);\n    background-color: var(--vimium-mantle);\n}\n\nbody.vimium-body #wrapper .example {\n    color: var(--vimium-subtext1);\n}\n\nbody.vimium-body a {\n    color: var(--vimium-lavender);\n}\n\nbody.vimium-body input,\nbody.vimium-body button {\n    border-color: var(--vimium-crust);\n}\n\nbody.vimium-body button:focus {\n    border-color: var(--vimium-blue);\n}\n\n/* help dialog */\n\n#dialog {\n    color: var(--vimium-text);\n    background: var(--vimium-mantle);\n}\n\n#dialog .divider {\n    background: var(--vimium-text);\n}\n\n#dialog a,\n#dialog span.vim {\n    color: var(--vimium-blue);\n}\n\n#dialog div.help-description,\n#dialog h2,\n#dialog h1,\n#dialog a#close {\n    color: var(--vimium-text);\n}\n\n#dialog a#close:hover {\n    color: var(--vimium-surface0);\n}\n\n#dialog .key,\nbody.vimium-body .key {\n    color: var(--vimium-text);\n    background: var(--vimium-mantle);\n    border-color: var(--vimium-surface1);\n}"
+}
