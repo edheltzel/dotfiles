@@ -198,17 +198,14 @@ brew 'mosh'              # Mobile shell - roaming remote terminal over UDP
 brew 'moshi-hook', restart_service: true # Moshi app agent hooks (rjyo/moshi)
 cask 'gpg-suite'         # GPG encryption files
 brew 'age'               # Simple, modern and secure encryption tool - Go
-# cask 'lulu'               # LuLu - Open source firewall
 
 #############################################################
 # 3. Desktop Applications                                   #
 #############################################################
 
 # Creativity
-#cask 'adobe-creative-cloud' # Adobe Creative Cloud
 cask 'affinity'             # Affinity.studio
 cask 'figma'                # Design tool
-#cask 'nucleo'               # Icon manager
 
 # 3D Modeling & CAD
 cask 'openscad'             # 3D CAD Modeller
@@ -232,13 +229,11 @@ cask 'bettershot'           # Screenshot and recorder app
 cask 'obs'                  # Screen recorder
 cask 'capcut'               # Video Editing
 
-# Personal Applications
-cask 'bitwarden'            # Password manager
 cask 'google-drive'         # Cloud storage
-cask 'ledger-live'          # Crypto hardware wallet manager
 
 # Utility Applications
-cask 'bettercmdtab'                # Replace for cmd+tab
+cask 'alt-tab'                     # Replace for cmd+tab
+cask 'bitwarden'                   # Password manager
 brew 'm-cli'                       # All in one MacOS management CLI app: m help
 cask 'keycastr'                    # Display keystrokes
 cask 'transnomino'                 # A batch rename utility
@@ -246,7 +241,7 @@ cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archive and extractor
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
-cask 'hiddenbar'
+cask 'thaw'
 brew 'stats'                       # System stats in menubar
 cask 'tailscale-app'
 cask 'tigervnc'
@@ -260,15 +255,11 @@ cask 'bazecor'                     # Keyboard config for Dygma Defy keyboard
 cask 'karabiner-elements'          # Keyboard customization tool - paid
 cask 'leader-key'                  # Keyboard App launcher
 
-# Window Management & Tiling
-# cask 'nikitabobko/tap/aerospace'    # Window Management
-# brew 'borders'                      # A window borders manager
-
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser'
 cask 'helium-browser'
-cask 'firefox'                   
+cask 'firefox'
 cask 'google-chrome'             # For tests
 
 # Fonts
@@ -286,7 +277,7 @@ cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 cask 'cyberduck'                      # Mount remote storage locations
 cask 'obsidian'                       # PKM editor
 cask 'sequel-ace'                     # MySQL database management
-cask 'typora'                         # Markdown editor
+cask 'markdown-preview'                         # Markdown editor
 cask 'zed'                            # Code editor - Rust
 
 # AI tooling and ADEs (AI/Agent Development Environment)
@@ -300,15 +291,9 @@ cask 'codex'                          # Codex cli
 cask 'codex-app'                      # Codex Desktop 
 brew 'crit'                           # Visual feedback with agents
 brew 'whisper-cpp'                    # TTS utility
-brew 'fabric-ai'
-cask 'superwhisper'                   # TTS app
-# cask 'maestro'
-# brew 'agent-browser'
 
 # Terminal emulators
 cask 'wezterm@nightly'              
-cask 'ghostty'                        
-cask 'kitty'                        
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
