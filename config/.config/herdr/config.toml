@@ -110,14 +110,6 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+shift+l"
-description = "launch LazyWorktree"
-command = "lazyworktree"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
 key = "prefix+shift+d"
 description = "launch Dash"
 command = "gh dash"
@@ -145,14 +137,6 @@ height = "90%"
 key = "prefix+shift+f"
 description = "launch Superfile"
 command = "spf"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+y"
-description = "launch Yazi"
-command = "yazi"
 type = "popup"
 width = "90%"
 height = "90%"
