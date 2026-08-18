@@ -38,17 +38,10 @@ if status is-interactive
     abbr --add hup 'herdr update'
 
     # Agent Harnesses
-    abbr --add cc claude
-    abbr --add co codex
-    abbr --add oc opencode
-    abbr --add gk grok
+    abbr --add cc 'claude --dangerously-skip-permissions --model claude-opus-4-8'
+    abbr --add cx 'codex --yolo'
+    abbr --add gk 'grok --always-approve'
     abbr --add jc jcode
-    abbr --add ccp --set-cursor 'claude -p "%"'
-    abbr --add cop --set-cursor 'codex -p "%"'
-    abbr --add ppi --set-cursor 'pi -p "%"'
-    abbr --add opp --set-cursor 'omp -p "%"'
-    abbr --add gkk --set-cursor 'grok -p "%"'
-    abbr --add jcp --set-cursor 'jcode run "%"'
 
     # Terminals/Text Editors
     abbr --add zz zed
@@ -79,7 +72,7 @@ if status is-interactive
     abbr --add unzip ouch decompress
     abbr --add lzip ouch ligst
     abbr --add phps 'php -S localhost:8888'
-    abbr --add md 'mkdir -p'
+    abbr --add mkdd 'mkdir -p'
     abbr --add cwd pwd
     abbr --add e '$EDITOR'
     abbr --add o open
@@ -91,7 +84,7 @@ if status is-interactive
     abbr --add du dua
     abbr --add wget 'wget -c'
     abbr --add whois 'grc whois'
-    abbr --add mdt mdterm
+    abbr --add md mdterm
     abbr --add rd 'roughdraft open'
     abbr --add cg codegraph
     abbr --add cgs 'codegraph sync'

@@ -105,7 +105,8 @@ Leader key: **Cmd+K** (1.5s timeout). `LDR` = the leader chord.
 | `LDR e`               | Rename tab                              |
 | `LDR T`               | Tab navigator                          |
 | `LDR m`               | Move-tab mode (`h/l`, `Esc`/`Enter`)   |
-| `Cmd+Ctrl+Alt+h` / `l`| Previous / next tab                    |
+| `Cmd+Ctrl+h` / `l`    | Previous / next tab                    |
+| `Ctrl+Cmd+Tab` / `Ctrl+Cmd+Shift+Tab` | Next / previous tab |
 | `Cmd+Shift+[` / `]`   | Previous / next tab (WezTerm default)  |
 
 ### Workspaces

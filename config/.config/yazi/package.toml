@@ -5,23 +5,23 @@ hash = "a028c3c06630a33b068f4d5bd714a795"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "0be29a9"
-hash = "fbb53c3c04f816d737f9f4b1d29f3310"
+rev = "6f26ae0"
+hash = "ce345e7e8baed03a2561b314fa85e59a"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "406ce6c"
-hash = "f5afc904d5106ee368c8aa2ded43bd74"
+rev = "8e70ec7"
+hash = "543eb6688a3c8eebe9d8f7d1ae0603a3"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "0be29a9"
-hash = "b97710d0734c380d0a1f58c13dab0da2"
+rev = "6f26ae0"
+hash = "853240b2454c93a93fd03fc9fd7e06e8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "0be29a9"
-hash = "f23ecc89ce0f9eeefdd4cea14e2a9ba7"
+rev = "6f26ae0"
+hash = "45a533508a9840cc5a10cf6129f63e6a"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"

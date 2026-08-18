@@ -13,110 +13,14 @@
           "value" : "/System/Applications/Passwords.app"
         },
         {
-          "actions" : [
-            {
-              "key" : "c",
-              "type" : "application",
-              "value" : "/Applications/Google Chrome.app"
-            },
-            {
-              "key" : "h",
-              "type" : "application",
-              "value" : "/Applications/Helium.app"
-            },
-            {
-              "key" : "s",
-              "type" : "application",
-              "value" : "/Applications/Safari.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/Firefox.app"
-            },
-            {
-              "key" : "z",
-              "type" : "application",
-              "value" : "/Applications/Zen.app"
-            }
-          ],
-          "iconPath" : "safari.fill",
-          "key" : "b",
-          "label" : "Browsers",
-          "type" : "group"
-        },
-        {
-          "key" : "c",
-          "label" : "Claude Desktop",
+          "key" : "a",
           "type" : "application",
-          "value" : "/Applications/Claude.app"
+          "value" : "/Applications/Affinity.app"
         },
         {
-          "actions" : [
-            {
-              "key" : "a",
-              "type" : "application",
-              "value" : "/Applications/Affinity.app"
-            },
-            {
-              "key" : "f",
-              "type" : "application",
-              "value" : "/Applications/Figma.app"
-            },
-            {
-              "key" : "l",
-              "type" : "application",
-              "value" : "/Applications/Adobe Illustrator 2026/Adobe Illustrator.app"
-            },
-            {
-              "key" : "p",
-              "type" : "application",
-              "value" : "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
-            }
-          ],
-          "iconPath" : "theatermask.and.paintbrush.fill",
-          "key" : "d",
-          "label" : "Design Tools",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "E",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Excel.app"
-            },
-            {
-              "key" : "m",
-              "type" : "application",
-              "value" : "/Applications/Markdown Preview.app"
-            },
-            {
-              "key" : "P",
-              "type" : "application",
-              "value" : "/Applications/Microsoft PowerPoint.app"
-            },
-            {
-              "key" : "t",
-              "type" : "application",
-              "value" : "/Applications/Typora.app"
-            },
-            {
-              "key" : "W",
-              "type" : "application",
-              "value" : "/Applications/Microsoft Word.app"
-            }
-          ],
-          "iconPath" : "apple.terminal.on.rectangle",
-          "key" : "e",
-          "label" : "Editors",
-          "type" : "group"
-        },
-        {
-          "key" : "g",
-          "label" : "Gmail 📧",
-          "type" : "url",
-          "value" : "https://mail.google.com/mail/u/0/#inbox"
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Applications/Figma.app"
         },
         {
           "key" : "i",
@@ -124,114 +28,50 @@
           "value" : "/Applications/Invoice Ninja.app"
         },
         {
-          "actions" : [
-            {
-              "key" : "b",
-              "type" : "application",
-              "value" : "/Applications/Bazecor.app"
-            },
-            {
-              "key" : "c",
-              "label" : "Keychron",
-              "type" : "url",
-              "value" : "https://launcher.keychron.com/#/keymap"
-            },
-            {
-              "key" : "i",
-              "type" : "application",
-              "value" : "/Applications/Vial.app"
-            },
-            {
-              "actions" : [
-                {
-                  "key" : "g",
-                  "label" : "Typing Gym",
-                  "type" : "url",
-                  "value" : "https://www.typinggym.com"
-                },
-                {
-                  "key" : "m",
-                  "label" : "Monkey Type",
-                  "type" : "url",
-                  "value" : "https://monkeytype.com/"
-                },
-                {
-                  "key" : "t",
-                  "label" : "Typ.ing",
-                  "type" : "url",
-                  "value" : "https://typ.ing/"
-                }
-              ],
-              "iconPath" : "touchid",
-              "key" : "t",
-              "label" : "Touch Typing",
-              "type" : "group"
-            },
-            {
-              "key" : "v",
-              "type" : "application",
-              "value" : "/Applications/VIA.app"
-            }
-          ],
-          "iconPath" : "keyboard.fill",
           "key" : "k",
-          "label" : "Keeb",
-          "type" : "group"
+          "label" : "Markdown Preview",
+          "type" : "application",
+          "value" : "/Applications/Markdown Preview.app"
         },
         {
           "actions" : [
             {
-              "key" : "m",
+              "key" : "e",
               "type" : "application",
-              "value" : "/System/Applications/Messages.app"
+              "value" : "/Applications/Microsoft Excel.app"
+            },
+            {
+              "key" : "p",
+              "type" : "application",
+              "value" : "/Applications/Microsoft PowerPoint.app"
             },
             {
               "key" : "t",
               "type" : "application",
               "value" : "/Applications/Microsoft Teams.app"
+            },
+            {
+              "key" : "w",
+              "type" : "application",
+              "value" : "/Applications/Microsoft Word.app"
             }
           ],
-          "iconPath" : "ellipsis.message.fill",
-          "key" : "m",
-          "label" : "Messages 💬",
-          "type" : "group"
-        },
-        {
+          "iconPath" : "window.ceiling.closed",
           "key" : "M",
-          "type" : "application",
-          "value" : "/Applications/Maestro.app"
+          "label" : "Microsoft🪟",
+          "type" : "group"
         },
         {
-          "actions" : [
-            {
-              "iconPath" : "calendar.badge.checkmark",
-              "key" : "d",
-              "label" : "Go to Daily Note",
-              "type" : "url",
-              "value" : "obsidian://daily"
-            },
-            {
-              "key" : "N",
-              "type" : "application",
-              "value" : "/System/Applications/Notes.app"
-            },
-            {
-              "iconPath" : "document.badge.plus.fill",
-              "key" : "n",
-              "label" : "New Raycast Note",
-              "type" : "url",
-              "value" : "raycast://extensions/raycast/raycast-notes/create-note"
-            },
-            {
-              "key" : "o",
-              "type" : "application",
-              "value" : "/Applications/Obsidian.app"
-            }
-          ],
-          "iconPath" : "document.on.document.fill",
+          "key" : "m",
+          "label" : "Messages",
+          "type" : "application",
+          "value" : "/System/Applications/Messages.app"
+        },
+        {
           "key" : "n",
-          "label" : "Notes 📝",
-          "type" : "group"
+          "label" : "Obsidian",
+          "type" : "application",
+          "value" : "/Applications/Obsidian.app"
         },
         {
           "key" : "o",
@@ -240,50 +80,36 @@
           "value" : "/Applications/Orca.app"
         },
         {
-          "key" : "r",
-          "type" : "application",
-          "value" : "/System/Applications/Reminders.app"
-        },
-        {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Todoist.app"
-        },
-        {
           "iconPath" : "/Applications/super.engineering.app",
           "key" : "s",
+          "label" : "SuperEngineer🤖",
           "type" : "application",
           "value" : "/Applications/super.engineering.app"
         },
         {
-          "actions" : [
-            {
-              "key" : "g",
-              "type" : "application",
-              "value" : "/Applications/Ghostty.app"
-            },
-            {
-              "key" : "k",
-              "type" : "application",
-              "value" : "/Applications/kitty.app"
-            },
-            {
-              "iconPath" : "apple.terminal.fill",
-              "key" : "v",
-              "label" : "Neovim ✨",
-              "type" : "command",
-              "value" : "open -na Ghostty --args -e nvim"
-            },
-            {
-              "key" : "w",
-              "type" : "application",
-              "value" : "/Applications/WezTerm.app"
-            }
-          ],
+          "key" : "t",
+          "label" : "Todoist",
+          "type" : "application",
+          "value" : "/Applications/Todoist.app"
+        },
+        {
           "iconPath" : "apple.terminal.fill",
-          "key" : "T",
-          "label" : "Terminals",
-          "type" : "group"
+          "key" : "v",
+          "label" : "Neovim ✨",
+          "type" : "command",
+          "value" : "open -na Ghostty --args -e nvim"
+        },
+        {
+          "key" : "w",
+          "label" : "Wezterm",
+          "type" : "application",
+          "value" : "/Applications/WezTerm.app"
+        },
+        {
+          "key" : "c",
+          "label" : "Claude Desktop",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
         },
         {
           "iconPath" : "/Applications/ChatGPT.app",
@@ -291,6 +117,27 @@
           "label" : "Codex",
           "type" : "application",
           "value" : "/Applications/ChatGPT.app"
+        },
+        {
+          "iconPath" : "/Applications/Zed.app",
+          "key" : "z",
+          "label" : "Zed",
+          "type" : "application",
+          "value" : "/Applications/Zed.app"
+        },
+        {
+          "iconPath" : "/Applications/Cursor.app",
+          "key" : "r",
+          "label" : "Cursor",
+          "type" : "application",
+          "value" : "/Applications/Cursor.app"
+        },
+        {
+          "iconPath" : "/Applications/Grok Bot.app",
+          "key" : "g",
+          "label" : "Grok Bot",
+          "type" : "application",
+          "value" : "/Applications/Grok Bot.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -301,45 +148,38 @@
     {
       "actions" : [
         {
+          "key" : "A",
+          "type" : "folder",
+          "value" : "/Users/ed/Developer/AI"
+        },
+        {
+          "key" : "a",
+          "type" : "folder",
+          "value" : "/Users/ed/Developer/Atlas"
+        },
+        {
           "iconPath" : "person.2",
           "key" : "c",
           "type" : "folder",
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
         },
         {
-          "key" : "d",
+          "key" : "0",
           "type" : "folder",
           "value" : "/Users/ed/Desktop"
         },
         {
-          "key" : "f",
+          "key" : "k",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents"
+        },
+        {
+          "key" : "p",
           "type" : "folder",
           "value" : "/Users/ed/Pictures"
         },
         {
-          "actions" : [
-            {
-              "key" : "c",
-              "type" : "folder",
-              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
-            },
-            {
-              "key" : "d",
-              "type" : "folder",
-              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive"
-            },
-            {
-              "key" : "g",
-              "type" : "folder",
-              "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media"
-            }
-          ],
-          "key" : "g",
-          "label" : "Google Drive",
-          "type" : "group"
-        },
-        {
-          "key" : "h",
+          "key" : "d",
           "type" : "folder",
           "value" : "/Users/ed/Developer"
         },
@@ -349,19 +189,9 @@
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
-          "key" : "m",
-          "type" : "folder",
-          "value" : "/Users/ed/Movies"
-        },
-        {
           "key" : "o",
           "type" : "folder",
           "value" : "/Users/ed/Downloads"
-        },
-        {
-          "key" : "p",
-          "type" : "folder",
-          "value" : "/Users/ed/Documents"
         },
         {
           "key" : "s",
@@ -388,29 +218,7 @@
           "value" : "/Applications/Bazecor.app"
         },
         {
-          "key" : "c",
-          "label" : "Keychron",
-          "type" : "url",
-          "value" : "https://launcher.keychron.com/#/keymap"
-        },
-        {
-          "key" : "i",
-          "type" : "application",
-          "value" : "/Applications/Vial.app"
-        },
-        {
-          "key" : "k",
-          "type" : "application",
-          "value" : "/Applications/KeyCastr.app"
-        },
-        {
           "actions" : [
-            {
-              "key" : "g",
-              "label" : "Typing Gym",
-              "type" : "url",
-              "value" : "https://www.typinggym.com"
-            },
             {
               "key" : "m",
               "label" : "Monkey Type",

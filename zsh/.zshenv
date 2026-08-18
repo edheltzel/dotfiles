@@ -10,3 +10,6 @@ export PATH="$HOME/.bun/bin:$PATH"
 
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.vite-plus/env"
+
+# Added by jcode installer
+export PATH="/Users/ed/.local/bin:$PATH"

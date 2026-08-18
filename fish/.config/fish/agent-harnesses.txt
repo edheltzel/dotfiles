@@ -1,0 +1,28 @@
+# Agent harness manifest — one harness per line, read by functions/aup.fish
+# Add or remove harnesses here; no need to edit aup.fish.
+#
+# Columns (pipe-delimited), whitespace around each field is trimmed:
+#   label   | color  | binary | version | args
+#
+#   label   Display name in the update report.
+#   color   set_color argument (hex without #, or a named fish color).
+#   binary  Command checked with `command -q`; skipped if not installed.
+#           Also the executable the update runs.
+#   version Binary probed with `--version` to report the new version,
+#           or `-` to skip the version line (use for sub-updates).
+#   args    Arguments passed to `binary` to perform the update.
+#
+# Lines starting with # and blank lines are ignored.
+#
+#
+#
+# Opencode      | 61747f | opencode | opencode | upgrade
+
+
+Claude        | ff8c42 | claude      | claude | update
+Jcode         | 5fff87 | jcode       | jcode  | update
+Pi+Extensions | ff69b4 | pi          | -      | update --all
+OMP           | af87ff | omp         | omp    | update --force
+OMP plugins   | af87ff | omp         | omp    | plugins upgrade
+Prime-agent   | 61747f | prime-agent | -      | update --force
+Herdr         | 5fd7ff | herdr       | herdr  | update

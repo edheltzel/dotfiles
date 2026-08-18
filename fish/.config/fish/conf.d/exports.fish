@@ -18,6 +18,7 @@ set -gx EZA_CONFIG_DIR $HOME/.config/eza
 set -gx EZA_COLORS "gm=33;1"
 set -gx MANPAGER "nvim +Man!"
 set -gx TERMINAL wezterm
+set -gx JCODE_TERMINAL wezterm
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx LC_ALL en_US.UTF-8

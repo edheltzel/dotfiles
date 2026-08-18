@@ -1,11 +1,11 @@
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = zed 
+  editor       = nvim 
   mergeoptions = --no-ff --no-commit
   autocrlf     = input
   quotepath    = false
   safecrlf     = warn
-	pager = tuicr pager
+	pager = delta
 [include]
 	path = ~/.gitconfig.local
 [credential]
@@ -13,6 +13,7 @@
 [user]
   name  = Ed Heltzel
   email = 402910+edheltzel@users.noreply.github.com
+	signingkey = /Users/ed/.ssh/atlas_signing
 [github]
   user = edheltzel
 [color]
@@ -47,7 +48,7 @@
 [apply]
   whitespace = fix
 [interactive]
-  diffFilter = tuicr 
+  diffFilter = delta --color-only
 ## Git Aliases 
 [alias]
   aa  = add --all
@@ -167,3 +168,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[gpg "ssh"]
+	allowedSignersFile = /Users/ed/.ssh/allowed_signers

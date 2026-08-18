@@ -1,9 +1,6 @@
 onboarding = false
-[update]
-channel = "preview"
-
-[session]
-resume_agents_on_restore = true
+update.channel = "preview"
+session.resume_agents_on_restore = true
 
 [experimental]
 allow_nested = true
@@ -66,33 +63,33 @@ blue = "#9071f4"        # indigo
 
 ### keybindings ###
 [keys]
-prefix = "control+alt+,"
-detach = "prefix+X"
+prefix = "alt+,"
+detach = "prefix+shift+x"
 goto = "prefix+g"
-toggle_sidebar = "prefix+s"
 
-close_workspace = "prefix+W"
+close_workspace = "prefix+shift+w"
 
-rename_workspace = "prefix+E"
+rename_workspace = "prefix+shift+e"
 rename_tab = "prefix+e"
+rename_pane = "prefix+p"
 
-new_workspace = "prefix+N"
+new_workspace = "prefix+n"
 new_tab = "prefix+t"
 split_vertical = "prefix+\\"
 
-next_workspace = "control+alt+i"
-previous_workspace = "control+alt+u"
+next_workspace = "alt+i"
+previous_workspace = "alt+u"
 
-next_tab = "control+alt+l"
-previous_tab = "control+alt+h"
-switch_tab = "control+alt+1..9"
+next_tab = "alt+l"
+previous_tab = "alt+h"
 
-cycle_pane_next = "control+alt+]"
-cycle_pane_previous = "control+alt+["
+switch_tab = "alt+1..9"
+cycle_pane_next = "alt+]"
+cycle_pane_previous = "alt+["
 
 focus_agent = "prefix+1..9"
-next_agent = "control+alt+j"
-previous_agent = "control+alt+k"
+next_agent = "alt+j"
+previous_agent = "alt+k"
 
 # disabled
 close_tab = ""
@@ -103,9 +100,9 @@ swap_pane_down = ""
 swap_pane_up = ""
 swap_pane_right = ""
 
-# custom
+# custom 
 [[keys.command]]
-key = "prefix+G"
+key = "prefix+shift+g"
 description = "launch LazyGit"
 command = "lazygit"
 type = "popup"
@@ -113,15 +110,7 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+L"
-description = "launch LazyWorktree"
-command = "lazyworktree"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+D"
+key = "prefix+shift+d"
 description = "launch Dash"
 command = "gh dash"
 type = "popup"
@@ -129,7 +118,15 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+K"
+key = "prefix+shift+t"
+description = "launch Tuicr"
+command = "tuicr"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+k"
 description = "launch Project Board"
 command = "gh board --owner edheltzel"
 type = "popup"
@@ -137,21 +134,7 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+V"
-description = "launch Neovim"
-command = "nvim"
-type = "pane"
-
-[[keys.command]]
-key = "prefix+T"
-description = "launch scratch Terminal"
-command = "exec \"${SHELL:-sh}\""
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+y"
+key = "prefix+shift+f"
 description = "launch Superfile"
 command = "spf"
 type = "popup"
@@ -159,9 +142,15 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "prefix+Y"
-description = "launch Yazi"
-command = "yazi"
+key = "prefix+shift+v"
+description = "launch Neovim"
+command = "nvim"
+type = "pane"
+
+[[keys.command]]
+key = "prefix+shift+s"
+description = "launch scratch Terminal"
+command = "exec \"${SHELL:-sh}\""
 type = "popup"
 width = "90%"
 height = "90%"
