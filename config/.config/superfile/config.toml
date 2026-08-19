@@ -1,7 +1,6 @@
 ##############################################
 #                                            #
-#           Superfile Configuration          #
-#                                            #
+#           Superfile Configuration          ##                                            #
 ##############################################
 
 # This contains the root config file for superfile! More details can be found at
@@ -13,7 +12,7 @@
 
 #-- File Editor
 # Default: $EDITOR
-editor = ""
+editor = "nvim"
 
 #-- Directory Editor
 #
@@ -99,7 +98,7 @@ theme = "eldritch"
 
 #-- Code Previewer
 # Whether to use the builtin syntax highlighting with chroma or use bat. Values: "" for builtin chroma, "bat" for bat
-code_previewer = ""
+code_previewer = "bat"
 
 #-- Nerd Fonts Support
 # Whether to enable support for Nerd Fonts symbols.
