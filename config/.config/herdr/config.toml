@@ -1,5 +1,5 @@
 onboarding = false
-update.channel = "preview"
+update.channel = "stable"
 session.resume_agents_on_restore = true
 
 [experimental]
@@ -106,6 +106,14 @@ swap_pane_right = ""
 key = "prefix+shift+g"
 description = "launch LazyGit"
 command = "lazygit"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+b"
+description = "launch GitButler"
+command = "but tui"
 type = "popup"
 width = "90%"
 height = "90%"
