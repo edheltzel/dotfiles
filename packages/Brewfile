@@ -165,6 +165,7 @@ brew 'tectonic'
 
 # Development Utils
 brew 'gh'                 # Interact with GitHub PRs, issues, repos
+cask 'gitbutler'          # Git client with stacked branches (but CLI)
 brew 'git-delta'          # Git diff viewer - Rust
 brew 'tuicr'              # Git code reviewer - Rust
 brew 'git-extras'         # Extra git commands for common tasks

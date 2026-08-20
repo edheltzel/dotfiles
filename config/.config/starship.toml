@@ -1,4 +1,26 @@
-format = "$all"
+# $all still fills the rest of the default order. Prefix modules are listed so
+# ${custom.gitbutler} sits where $git_branch would, not at the late $custom slot.
+# ${custom.git_ahead_behind} stays next to $git_status (not at the late $custom slot).
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$nats\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+${custom.gitbutler}\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+${custom.git_ahead_behind}\
+$all
+"""
 right_format = "$cmd_duration"
 
 command_timeout = 500
@@ -25,7 +47,10 @@ format = "[⚡︎](#04D1F9)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…󰿟"
 
+# Replaced by ${custom.gitbutler} (starship-gitbutler). Leave disabled so $all
+# does not also print gitbutler/workspace.
 [git_branch]
+disabled = true
 style = "#F265B5"
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
@@ -48,11 +73,8 @@ format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
 style = "white"
-format = "([$all_status$ahead_behind]($style) )"
+format = "([$all_status]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
-ahead = "[ ×${count} ](white)"
-behind = "[ ×${count} ](white)"
-diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
 untracked = "️[ ×${count} ](#04D1F9)"
 stashed = " "
 modified = "[ ×${count} ](#F1FC79)"
@@ -67,6 +89,31 @@ format = "[󰔛 $duration]($style)"
 show_milliseconds = true
 style = "#7081BE"
 ## end prompt ##
+
+# https://github.com/1stvamp/starship-gitbutler
+# Shows applied GitButler stacks; falls back to the current git branch elsewhere.
+[custom.gitbutler]
+command = "~/.config/starship/gitbutler-branch.sh"
+when = true
+shell = ["bash", "--noprofile", "--norc"]
+format = "$output "
+disabled = false
+ignore_timeout = true
+
+# Workspace-vs-upstream counts are noise on gitbutler/workspace. Keep them on
+# ordinary git repos (same glyphs as the old git_status ahead/behind/diverged).
+[custom.git_ahead_behind]
+when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ ! -d "$(git rev-parse --git-path gitbutler 2>/dev/null)" ]'
+command = '''
+git rev-list --left-right --count HEAD...@{upstream} 2>/dev/null | awk -F '\t' '{
+  if ($1 > 0 && $2 > 0) printf " ×%s ×%s", $1, $2
+  else if ($1 > 0) printf " ×%s", $1
+  else if ($2 > 0) printf " ×%s", $2
+}'
+'''
+shell = ["bash", "--noprofile", "--norc"]
+format = "[$output](white) "
+disabled = false
 
 ## start custom symbols ##
 [package]
