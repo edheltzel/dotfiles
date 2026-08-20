@@ -90,14 +90,19 @@ detect_bg_mode() {
   printf '%s' "$mode"
 }
 
-# Fills the colour globals: grey text, and a blue ⧓ that is light on a dark
-# background and dark on a light one.
+# Eldritch pink for the ⧓ and stack names, matching [git_branch] in starship.toml.
+# Dark: #F265B5. Light: #E63F9B (eldritch-light ansi magenta).
 setup_colors() {
   RESET=$'\e[0m'
-  TEXT_COLOR=$'\e[38;5;246m'
   case "$(detect_bg_mode)" in
-    light) SYM_COLOR=$'\e[38;2;29;78;216m' ;;
-    *)     SYM_COLOR=$'\e[38;2;96;165;250m' ;;
+    light)
+      SYM_COLOR=$'\e[38;2;230;63;155m'
+      TEXT_COLOR=$'\e[38;2;230;63;155m'
+      ;;
+    *)
+      SYM_COLOR=$'\e[38;2;242;101;181m'
+      TEXT_COLOR=$'\e[38;2;242;101;181m'
+      ;;
   esac
 }
 
