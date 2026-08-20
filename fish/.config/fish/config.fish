@@ -76,3 +76,6 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 # >>> grok installer >>>
 fish_add_path $HOME/.grok/bin
 # <<< grok installer <<<
+
+# Added by GitButler installer
+but completions fish | source

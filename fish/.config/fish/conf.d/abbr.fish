@@ -96,6 +96,12 @@ if status is-interactive
     abbr --add th treehouse
     abbr --add lw lazyworktree
     abbr --add lg lazygit
+    # But - gitbutler
+    abbr --add btt 'but tui'
+    abbr --add bts 'but setup'
+    abbr --add btd 'but diff'
+
+    # GH 
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
     abbr --add ghpr 'gh pr create -a "@me" --fill'
