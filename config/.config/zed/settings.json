@@ -9,6 +9,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "markdown_preview_font_size": 15.0,
+  "agent_buffer_font_size": 14.0,
+  "agent_ui_font_size": 15.0,
   "cli_default_open_behavior": "existing_window",
   "buffer_line_height": "comfortable",
   "ui_font_weight": 400.0,
@@ -33,7 +36,7 @@
       "show_commit_summary": true
     }
   },
-  "ui_font_size": 16.0,
+  "ui_font_size": 15.0,
   "minimap": {
     "show": "never"
   },
@@ -129,9 +132,9 @@
   "buffer_font_features": {
     "calt": true
   },
-  "buffer_font_size": 16.0,
-  "buffer_font_family": "Lilex Nerd Font",
-  "ui_font_family": "Lilex Nerd Font",
+  "buffer_font_size": 15.0,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "ui_font_fallbacks": [
     "Lilex Nerd Font",
     "VictorMono Nerd Font",
@@ -418,8 +421,8 @@
     "button": false,
     "cursor_shape": "bar",
     "copy_on_select": true,
-    "font_family": "Lilex Nerd Font",
-    "font_size": 16.0,
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "font_size": 15.0,
     "font_weight": 400.0,
     "default_height": 500
   },
