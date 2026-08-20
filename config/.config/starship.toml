@@ -1,4 +1,20 @@
-format = "$all"
+# $all still fills the rest of the default order. Prefix modules are listed so
+# ${custom.gitbutler} sits where $git_branch would, not at the late $custom slot.
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$nats\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+${custom.gitbutler}\
+$all
+"""
 right_format = "$cmd_duration"
 
 command_timeout = 500
@@ -25,7 +41,10 @@ format = "[⚡︎](#04D1F9)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…󰿟"
 
+# Replaced by ${custom.gitbutler} (starship-gitbutler). Leave disabled so $all
+# does not also print gitbutler/workspace.
 [git_branch]
+disabled = true
 style = "#F265B5"
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
@@ -67,6 +86,16 @@ format = "[󰔛 $duration]($style)"
 show_milliseconds = true
 style = "#7081BE"
 ## end prompt ##
+
+# https://github.com/1stvamp/starship-gitbutler
+# Shows applied GitButler stacks; falls back to the current git branch elsewhere.
+[custom.gitbutler]
+command = "~/.config/starship/gitbutler-branch.sh"
+when = true
+shell = ["bash", "--noprofile", "--norc"]
+format = "$output "
+disabled = false
+ignore_timeout = true
 
 ## start custom symbols ##
 [package]
