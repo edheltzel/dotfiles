@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#
+# commit-msg: require a Conventional Commits subject line.
+#   <type>(optional-scope): <description>
+#   types: feat fix docs style refactor perf test build ci chore revert
+#
+# Merge/revert/fixup/squash commits are exempt. Installed into .git/hooks by `just hooks`.
+
+set -u
+
+subject="$(head -n1 "$1")"
+
+# Exempt machine-generated subjects.
+case "$subject" in
+  "Merge "*|"Revert "*|"fixup! "*|"squash! "*|"amend! "*) exit 0 ;;
+esac
+
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9._/-]+\))?!?: .+'
+
+if ! printf '%s' "$subject" | grep -qE "$pattern"; then
+  echo "x Commit subject is not Conventional Commits format:"
+  echo "    <type>(optional-scope): <description>"
+  echo "  types: feat fix docs style refactor perf test build ci chore revert"
+  echo "  got:  $subject"
+  exit 1
+fi
+
+exit 0

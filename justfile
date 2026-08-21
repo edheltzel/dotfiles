@@ -72,6 +72,21 @@ delete:
     done
     @printf "{{white}}Dotfiles zapped! ⚡️{{clr}}\n"
 
+# Install tracked .githooks into .git/hooks. Do not point core.hooksPath at
+# .githooks: GitButler writes managed wrappers into hooksPath, and committing
+# those wrappers is the delete/untracked conflict this recipe prevents.
+hooks:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    root="$(git rev-parse --show-toplevel)"
+    git config --unset-all core.hooksPath || true
+    mkdir -p "$root/.git/hooks"
+    for hook in pre-commit commit-msg; do
+      printf '#!/bin/sh\nexec "%s/.githooks/%s" "$@"\n' "$root" "$hook" > "$root/.git/hooks/$hook"
+      chmod +x "$root/.git/hooks/$hook"
+    done
+    printf "{{green}}git hooks installed{{clr}} -> .git/hooks (sources in .githooks)\n"
+
 # Aliases
 alias up := update
 alias add := stow
