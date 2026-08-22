@@ -1,43 +1,62 @@
-#!/bin/sh
-# GITBUTLER_MANAGED_HOOK_V1
-# This hook is managed by GitButler to prevent accidental commits on the workspace branch.
-# Your original pre-commit hook has been preserved as 'pre-commit-user'.
+#!/usr/bin/env bash
+#
+# pre-commit: block master commits, lint staged files, refuse GitButler hooks.
+#
+# Tracked here; installed into .git/hooks by `just hooks`. Do not set
+# core.hooksPath to this directory. GitButler would overwrite these files.
 
-HOOKS_DIR=$(dirname "$0")
+set -u
 
-# Run user's hook first if it exists - if it fails, stop here
-if [ -x "$HOOKS_DIR/pre-commit-user" ]; then
-    "$HOOKS_DIR/pre-commit-user" "$@" || exit $?
+if git diff --cached --name-only .githooks/ | grep -q . \
+  && git diff --cached .githooks/ | grep -q 'GITBUTLER_MANAGED_HOOK_V1'; then
+  echo "x GitButler-managed hooks must not be committed."
+  echo "  They belong in .git/hooks. Restore .githooks from git and re-run just hooks."
+  exit 1
 fi
 
-# Get the current branch name
-BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
-
-if [ "$BRANCH" = "gitbutler/workspace" ]; then
-    echo ""
-    echo "GITBUTLER_ERROR: Cannot commit directly to gitbutler/workspace branch."
-    echo ""
-    echo "GitButler manages commits on this branch. Please use GitButler to commit your changes:"
-    echo "  - Use the GitButler app to create commits"
-    echo "  - Or run 'but commit' from the command line"
-    echo ""
-    echo "If you want to exit GitButler mode and use normal git:"
-    echo "  - Run 'but teardown' to switch to a regular branch"
-    echo "  - Or directly checkout another branch: git checkout <branch>"
-    echo ""
-    echo "If you no longer have the GitButler CLI installed, you can simply remove this hook and checkout another branch:"
-    printf '  rm "%s/pre-commit"\n' "$HOOKS_DIR"
-    echo ""
-    exit 1
+PROTECTED="master"
+branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+if [ "$branch" = "$PROTECTED" ]; then
+  echo "x Direct commits to '$PROTECTED' are blocked."
+  echo "  Work on a feature branch and open a PR into '$PROTECTED'."
+  exit 1
 fi
 
-# Not on workspace branch - run user's original hook if it exists
-if [ -x "$HOOKS_DIR/pre-commit-user" ]; then
-    echo ""
-    echo "WARNING: GitButler's pre-commit hook is still installed but you're not on gitbutler/workspace."
-    echo "If you're no longer using GitButler, you can restore your original hook:"
-    printf '  mv "%s/pre-commit-user" "%s/pre-commit"\n' "$HOOKS_DIR" "$HOOKS_DIR"
-    echo ""
+# Collect staged (added/copied/modified) files, NUL-safe.
+staged_sh=()
+staged_lua=()
+while IFS= read -r -d '' f; do
+  case "$f" in
+    *.sh|*.bash) staged_sh+=("$f") ;;
+    *.lua)       staged_lua+=("$f") ;;
+  esac
+done < <(git diff --cached --name-only --diff-filter=ACM -z)
+
+status=0
+
+if [ "${#staged_sh[@]}" -gt 0 ]; then
+  if command -v shellcheck >/dev/null 2>&1; then
+    # --severity=error: gate on genuine bugs only, so pre-existing info/warning
+    # findings in the repo don't block commits. Tighten to =warning/=info after
+    # a repo-wide cleanup.
+    if ! shellcheck --severity=error "${staged_sh[@]}"; then
+      echo "x shellcheck found errors in staged shell scripts."
+      status=1
+    fi
+  else
+    echo "warn: shellcheck not installed, skipping shell lint (brew install shellcheck)"
+  fi
 fi
 
-exit 0
+if [ "${#staged_lua[@]}" -gt 0 ]; then
+  if command -v stylua >/dev/null 2>&1; then
+    if ! stylua --check "${staged_lua[@]}"; then
+      echo "x stylua --check failed. Run: stylua ${staged_lua[*]}"
+      status=1
+    fi
+  else
+    echo "warn: stylua not installed, skipping Lua lint (brew install stylua)"
+  fi
+fi
+
+exit "$status"
