@@ -1,0 +1,3 @@
+# Auto-request Ed on every PR. GitHub skips this when he is the author,
+# so agent PRs must be opened as Atlas-Key.
+* @edheltzel
