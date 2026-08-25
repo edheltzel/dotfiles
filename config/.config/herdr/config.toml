@@ -32,7 +32,17 @@ rows = [
   ],
 ]
 
+[ui.sidebar.spaces]
 row_gap = 0
+rows = [
+  [
+    "state_icon",
+    { token = "workspace", bold = false, fg = "#949ae5", dim = true },
+    # { token = "tab", fg = "#a48cf2", dim = true },
+  ],
+  ["branch", { token = "branch", fg = "#FF58B8", dim = true }, "git_status"],
+]
+
 [ui.sidebar.agents]
 row_gap = 0
 rows = [
@@ -60,7 +70,7 @@ name = "tokyo-night"
 
 auto_switch = false
 
-[theme.custom] # eldritch 
+[theme.custom] # eldritch
 surface_dim = "#212337" # bg2          — active workspace / agent row background
 panel_bg = "#171928"    # bg           — sidebar / panel background
 surface0 = "#323449"    # bg_highlight — selection (navigate cursor) background
@@ -117,7 +127,7 @@ swap_pane_down = ""
 swap_pane_up = ""
 swap_pane_right = ""
 
-# custom 
+# custom
 [[keys.command]]
 key = "prefix+shift+g"
 description = "launch LazyGit"
