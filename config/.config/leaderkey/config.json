@@ -74,19 +74,6 @@
           "value" : "/Applications/Obsidian.app"
         },
         {
-          "key" : "o",
-          "label" : "Orca 🫍",
-          "type" : "application",
-          "value" : "/Applications/Orca.app"
-        },
-        {
-          "iconPath" : "/Applications/super.engineering.app",
-          "key" : "s",
-          "label" : "SuperEngineer🤖",
-          "type" : "application",
-          "value" : "/Applications/super.engineering.app"
-        },
-        {
           "key" : "t",
           "label" : "Todoist",
           "type" : "application",
@@ -106,19 +93,6 @@
           "value" : "/Applications/WezTerm.app"
         },
         {
-          "key" : "c",
-          "label" : "Claude Desktop",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
-        },
-        {
-          "iconPath" : "/Applications/ChatGPT.app",
-          "key" : "x",
-          "label" : "Codex",
-          "type" : "application",
-          "value" : "/Applications/ChatGPT.app"
-        },
-        {
           "iconPath" : "/Applications/Zed.app",
           "key" : "z",
           "label" : "Zed",
@@ -133,11 +107,43 @@
           "value" : "/Applications/Cursor.app"
         },
         {
+          "key" : "c",
+          "label" : "Claude Desktop",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
+        },
+        {
+          "iconPath" : "/Applications/ChatGPT.app",
+          "key" : "x",
+          "label" : "Codex",
+          "type" : "application",
+          "value" : "/Applications/ChatGPT.app"
+        },
+        {
           "iconPath" : "/Applications/Grok Bot.app",
           "key" : "g",
           "label" : "Grok Bot",
           "type" : "application",
           "value" : "/Applications/Grok Bot.app"
+        },
+        {
+          "key" : "b",
+          "label" : "♭♭",
+          "type" : "application",
+          "value" : "/Applications/bb.app"
+        },
+        {
+          "key" : "o",
+          "label" : "Orca 🫍",
+          "type" : "application",
+          "value" : "/Applications/Orca.app"
+        },
+        {
+          "iconPath" : "/Applications/super.engineering.app",
+          "key" : "s",
+          "label" : "SuperEngineer🤖",
+          "type" : "application",
+          "value" : "/Applications/super.engineering.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -147,6 +153,11 @@
     },
     {
       "actions" : [
+        {
+          "key" : "0",
+          "type" : "folder",
+          "value" : "/Users/ed/Desktop"
+        },
         {
           "key" : "A",
           "type" : "folder",
@@ -164,21 +175,6 @@
           "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
         },
         {
-          "key" : "0",
-          "type" : "folder",
-          "value" : "/Users/ed/Desktop"
-        },
-        {
-          "key" : "k",
-          "type" : "folder",
-          "value" : "/Users/ed/Documents"
-        },
-        {
-          "key" : "p",
-          "type" : "folder",
-          "value" : "/Users/ed/Pictures"
-        },
-        {
           "key" : "d",
           "type" : "folder",
           "value" : "/Users/ed/Developer"
@@ -189,9 +185,19 @@
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
+          "key" : "k",
+          "type" : "folder",
+          "value" : "/Users/ed/Documents"
+        },
+        {
           "key" : "o",
           "type" : "folder",
           "value" : "/Users/ed/Downloads"
+        },
+        {
+          "key" : "p",
+          "type" : "folder",
+          "value" : "/Users/ed/Pictures"
         },
         {
           "key" : "s",

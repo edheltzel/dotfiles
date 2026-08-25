@@ -25,6 +25,17 @@ request_path = "sounds/request.mp3"
 [ui.toast]
 delivery = "terminal"
 
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  [
+    "state_icon",
+    { token = "workspace", bold = false, fg = "#949ae5", dim = true },
+    # { token = "tab", fg = "#a48cf2", dim = true },
+  ],
+  ["branch", { token = "branch", fg = "#FF58B8", dim = true }, "git_status"],
+]
+
 [ui.sidebar.agents]
 row_gap = 0
 rows = [
