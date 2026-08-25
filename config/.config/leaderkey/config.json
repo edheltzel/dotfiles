@@ -315,49 +315,6 @@
       "key" : "p",
       "label" : "Print in 3D 🖨️",
       "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "iconPath" : "camera.metering.spot",
-          "key" : "a",
-          "label" : "Capture Area+Pin",
-          "type" : "url",
-          "value" : "shottr://grab/area?them=save,pin"
-        },
-        {
-          "iconPath" : "5.arrow.trianglehead.clockwise",
-          "key" : "d",
-          "label" : "Delay by 5s",
-          "type" : "url",
-          "value" : "shottr://grab/delayed=5?then=save,edit"
-        },
-        {
-          "iconPath" : "camera.metering.matrix",
-          "key" : "f",
-          "label" : "Fullscreen ",
-          "type" : "url",
-          "value" : "shottr://grab/fullscreen"
-        },
-        {
-          "iconPath" : "camera.metering.multispot",
-          "key" : "s",
-          "label" : "Scrolling Capture",
-          "type" : "url",
-          "value" : "shottr://grab/scrolling"
-        },
-        {
-          "iconPath" : "camera.metering.center.weighted.average",
-          "key" : "w",
-          "label" : "Capture Window+Pin",
-          "type" : "url",
-          "value" : "shottr://grab/window?then=save,pin"
-        }
-      ],
-      "iconPath" : "/Applications/Shottr.app",
-      "key" : "s",
-      "label" : "Screenshots",
-      "type" : "group"
     }
   ],
   "type" : "group"

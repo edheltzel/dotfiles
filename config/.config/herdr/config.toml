@@ -16,6 +16,36 @@ show_agent_labels_on_pane_borders = true
 agent_panel_sort = "spaces"
 
 status_indicators = "symbols"
+
+tab_bar_right = [
+  { type = "zoom" },
+  { type = "hostname" },
+  { type = "text", text = "§tarShip" },
+]
+tab_bar_right_separator = " · "
+
+[ui.sidebar.spaces]
+rows = [
+  [
+    "state_icon",
+    { token = "workspace", fg = "#", bold = false, dim = true },
+  ],
+]
+
+row_gap = 0
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  [
+    "state_icon",
+    "state_text",
+    { token = "agent", fg = "#d154a1", dim = true },
+  ],
+  [
+    { token = "workspace", bold = true, dim = true },
+  ],
+]
+
 [ui.sound]
 enabled = true
 path = "sounds/notification.mp3"
@@ -24,31 +54,6 @@ request_path = "sounds/request.mp3"
 
 [ui.toast]
 delivery = "terminal"
-
-[ui.sidebar.spaces]
-row_gap = 0
-rows = [
-  [
-    "state_icon",
-    { token = "workspace", bold = false, fg = "#949ae5", dim = true },
-    # { token = "tab", fg = "#a48cf2", dim = true },
-  ],
-  ["branch", { token = "branch", fg = "#FF58B8", dim = true }, "git_status"],
-]
-
-[ui.sidebar.agents]
-row_gap = 0
-rows = [
-  [
-    "state_icon",
-    { token = "workspace", bold = false },
-    { token = "tab", fg = "#a48cf2", dim = true },
-  ],
-  [
-    "state_text",
-    "agent",
-  ],
-]
 
 [theme]
 name = "tokyo-night"
