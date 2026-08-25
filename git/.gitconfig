@@ -6,14 +6,11 @@
   quotepath    = false
   safecrlf     = warn
 	pager = delta
-[include]
-	path = ~/.gitconfig.local
 [credential]
   helper = osxkeychain
 [user]
   name  = Ed Heltzel
   email = 402910+edheltzel@users.noreply.github.com
-	signingkey = /Users/ed/.ssh/atlas_signing
 [github]
   user = edheltzel
 [color]
@@ -170,3 +167,5 @@
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [gpg "ssh"]
 	allowedSignersFile = /Users/ed/.ssh/allowed_signers
+[include]
+	path = ~/.gitconfig.local
