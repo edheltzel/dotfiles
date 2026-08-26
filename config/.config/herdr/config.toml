@@ -25,34 +25,17 @@ tab_bar_right = [
 tab_bar_right_separator = " · "
 
 [ui.sidebar.spaces]
-rows = [
-  [
-    "state_icon",
-    { token = "workspace", fg = "#", bold = false, dim = true },
-  ],
-]
-
-[ui.sidebar.spaces]
-row_gap = 0
-rows = [
-  [
-    "state_icon",
-    { token = "workspace", bold = false, fg = "#949ae5", dim = true },
-    # { token = "tab", fg = "#a48cf2", dim = true },
-  ],
-  ["branch", { token = "branch", fg = "#FF58B8", dim = true }, "git_status"],
-]
+rows = [["state_icon", { token = "workspace", bold = false, dim = true }]]
 
 [ui.sidebar.agents]
-row_gap = 0
 rows = [
   [
-    "state_icon",
-    "state_text",
-    { token = "agent", fg = "#d154a1", dim = true },
+    { token = "state_icon", dim = false },
+    { token = "state_text", dim = false },
+    { token = "agent", fg = "#d154a1" },
   ],
   [
-    { token = "workspace", bold = true, dim = true },
+    { token = "workspace", fg = "#7081d0", bold = false, dim = false },
   ],
 ]
 
