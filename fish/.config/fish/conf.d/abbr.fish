@@ -66,7 +66,6 @@ if status is-interactive
     abbr --add siz 'du -khsc'
     abbr --add sp 'speedtest -u Gbps'
     abbr --add spp 'speedtest -u Gbps'
-    abbr --add yy yazi
     abbr --add wr wrangler
     abbr --add zip 'ouch compress -q'
     abbr --add unzip ouch decompress

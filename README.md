@@ -328,7 +328,7 @@ There are two options for managing packages with GNU Stow:
       
     - Supported themes: `eldritch`, `rose-pine`, `rose-pine-moon`, `tokyo-night`, `tokyo-night-moon`
       
-    - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode, Yazi, herdr
+    - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode, Superfile, herdr
       
   - **Terminal configs**: alacritty, kitty, ghostty, wezterm
     

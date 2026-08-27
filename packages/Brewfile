@@ -81,7 +81,7 @@ brew 'poppler'              # PDF rendering library
 brew 'ripgrep'              # better grep - Rust
 brew 'rsync'                # Fast incremental file transfer
 brew 'sd'                   # better sed - Rust
-brew 'yazi'                 # File manager - Rust
+brew 'superfile'                 # File manager - Go
 brew 'zoxide'               # better cd/jump - Rust
 
 # CLI Image Processing and Compression
@@ -93,6 +93,7 @@ brew 'jpegoptim'            # JPEG image compression
 brew 'mozjpeg'              # JPEG image compression
 brew 'optipng'              # PNG image compression
 brew 'pango'                # Text layout and rendering
+brew 'exiftool'
 # brew 'glow'                 # Render Markdown on the CLI
 brew 'vhs'                  # Write terminal GIFs as code
 brew 'tamnd/tap/kage'
