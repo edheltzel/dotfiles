@@ -14,9 +14,9 @@ config/.config/jj/repos/
 
 ### Neovim ###
 NetrwTreeListing*
-neoed/.config/nvim/lazy-lock.json
-neoed/.config/nvim/.agents/*
-neoed/.config/nvim/.claude/*
+neovim/.config/nvim/lazy-lock.json
+neovim/.config/nvim/.agents/*
+neovim/.config/nvim/.claude/*
 
 ### LazyVim ###
 tt.*
