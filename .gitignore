@@ -59,8 +59,6 @@ gha-creds-*.json
 /.pi/*
 /.codex/*
 /.omp/*
-/AGENTS.md
-/CLAUDE.md
 .mcp.json
 
 ### Zellij ###
