@@ -17,11 +17,11 @@
 #
 
 
-Claude        | ff8c42 | claude      | claude | update
-Pi+Extensions | ff69b4 | pi          | -      | update --all
+Claude Code   | ff8c42 | claude      | claude | update
+Pi extensions | ff69b4 | pi          | -      | update --all
 OMP           | af87ff | omp         | omp    | update --force
 OMP plugins   | af87ff | omp         | omp    | plugins upgrade
-Jcode         | 5fff87 | jcode       | jcode  | update
+J code        | 5fff87 | jcode       | jcode  | update
 Prime-agent   | 61747f | prime-agent | -      | update --force
 Opencode      | 61747f | opencode | opencode | upgrade
 Herdr         | 5fd7ff | herdr       | herdr  | update
