@@ -2,7 +2,7 @@
 
 set shell := ["bash", "-cu"]
 
-stow_packages := "dots git fish zsh config neoed local"
+stow_packages := "dots git fish zsh config neovim local"
 
 yellow := '\033[33m'
 green := '\033[32m'

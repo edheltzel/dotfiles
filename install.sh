@@ -37,7 +37,7 @@ readonly DOTFILES_DIR="${DOTFILES_DIR:-$HOME/.dotfiles}"
 readonly PROJECTS_DIR="${PROJECTS_DIR:-$HOME/Developer}"
 
 # Keep in sync with justfile:stow_packages
-readonly STOW_PACKAGES=(dots git fish zsh config neoed local)
+readonly STOW_PACKAGES=(dots git fish zsh config neovim local)
 
 # Flag defaults
 SKIP_CONFIRM=0

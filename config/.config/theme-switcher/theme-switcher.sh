@@ -327,7 +327,7 @@ update_neovim() {
   fi
 
   local nvim_theme=$(get_neovim_theme "$theme")
-  local config_file="$DOTFILES/neoed/.config/nvim/lua/plugins/ui/colorscheme.lua"
+  local config_file="$DOTFILES/neovim/.config/nvim/lua/plugins/ui/colorscheme.lua"
 
   sed -i '' "s/colorscheme = \".*\"/colorscheme = \"$nvim_theme\"/" "$config_file"
   UPDATED_APPS+=("Neovim → $nvim_theme")

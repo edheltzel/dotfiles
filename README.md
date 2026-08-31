@@ -336,11 +336,11 @@ There are two options for managing packages with GNU Stow:
     
   - **Editors**: zed (Vim mode + AI integration) — maintained for occasional use
     
-- **neoed** (neoed/) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
+- **neovim** (neovim/) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
   
   - [**NEO.ED**](https://github.com/edheltzel/neoed) - LazyVim-based Neovim configuration — the primary editor
     
-  - See [neoed/.config/nvim/README.md](./neoed/.config/nvim/README.md) for full documentation
+  - See [neovim/.config/nvim/README.md](./neovim/.config/nvim/README.md) for full documentation
     
   - **Key Features:**
     
@@ -356,7 +356,7 @@ There are two options for managing packages with GNU Stow:
       
   - **Plugin Organization:** `lua/plugins/{ai,coding,editor,formatting,languages,linting,ui,utils}/`
     
-  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neoed/.config/nvim/`
+  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neovim/.config/nvim/`
     
 - **local** (local/)
   
@@ -592,7 +592,7 @@ rm ~/.ssh/agent/*
 
 This repo uses a git submodule for:
 
-- **neoed** - Neovim configuration ([NEO.ED](https://github.com/edheltzel/neoed))
+- **neovim** - Neovim configuration ([NEO.ED](https://github.com/edheltzel/neoed))
 
 If you encounter issues with the submodule:
 
@@ -606,12 +606,12 @@ git submodule update --init --recursive
 **Update Submodule to Latest:**
 
 ```shell
-cd ~/.dotfiles/neoed/.config/nvim
+cd ~/.dotfiles/neovim/.config/nvim
 git pull origin master
 # Commit the update
 cd ~/.dotfiles
-git add neoed
-git commit -m "Update neoed submodule"
+git add neovim
+git commit -m "Update neovim submodule"
 ```
 
 **Clone with Submodule:**
@@ -623,7 +623,7 @@ git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotf
 **If Submodule is Empty:**
 
 ```shell
-git submodule deinit -f neoed/.config/nvim
+git submodule deinit -f neovim/.config/nvim
 git submodule update --init --recursive
 ```
 
