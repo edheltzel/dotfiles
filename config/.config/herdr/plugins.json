@@ -1,0 +1,87 @@
+[
+  {
+    "plugin_id": "annotate",
+    "name": "Annotate",
+    "version": "0.3.0",
+    "min_herdr_version": "0.8.0",
+    "description": "Comment on terminal selections and copy annotations as agent context.",
+    "manifest_path": "/Users/ed/.config/herdr/plugins/github/annotate-9c299759567c/herdr-plugin.toml",
+    "plugin_root": "/Users/ed/.config/herdr/plugins/github/annotate-9c299759567c",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "actions": [
+      {
+        "id": "capture",
+        "title": "Annotate selection",
+        "description": "Open a comment dialog for the current terminal selection.",
+        "contexts": [
+          "pane"
+        ],
+        "command": [
+          "bun",
+          "src/capture.ts"
+        ]
+      },
+      {
+        "id": "copy-context",
+        "title": "Copy annotations as context",
+        "description": "Copy all saved annotations to the clipboard as Markdown.",
+        "contexts": [
+          "global"
+        ],
+        "command": [
+          "bun",
+          "src/export.ts"
+        ]
+      },
+      {
+        "id": "manage",
+        "title": "Manage annotations",
+        "description": "Browse, copy, archive, restore, and delete annotations.",
+        "contexts": [
+          "global"
+        ],
+        "command": [
+          "bun",
+          "src/open-manager.ts"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "editor",
+        "title": "Annotate",
+        "placement": "popup",
+        "width": 88,
+        "height": 24,
+        "command": [
+          "bun",
+          "src/editor.ts"
+        ]
+      },
+      {
+        "id": "manager",
+        "title": "Annotations",
+        "placement": "popup",
+        "width": 100,
+        "height": 30,
+        "command": [
+          "bun",
+          "src/manager.ts"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "plannotator",
+      "repo": "herdr-annotate",
+      "resolved_commit": "dc871270c273bdeb457b8c0f9f72f40d6ca30925",
+      "managed_path": "/Users/ed/.config/herdr/plugins/github/annotate-9c299759567c",
+      "installed_unix_ms": 1787867672051
+    }
+  }
+]
