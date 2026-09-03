@@ -79,3 +79,7 @@ fish_add_path $HOME/.grok/bin
 
 # Added by GitButler installer
 but completions fish | source
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/ed/.local/bin" $PATH
