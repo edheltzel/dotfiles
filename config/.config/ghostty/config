@@ -21,7 +21,7 @@ window-padding-x         = 10
 window-padding-y         = 2
 window-title-font-family = "JetBrainsMono Nerd Font"
 font-family              = "JetbrainsMono Nerd Font"
-font-size                = 16
+font-size                = 14
 font-feature             = zero,calt
 
 # Tabs

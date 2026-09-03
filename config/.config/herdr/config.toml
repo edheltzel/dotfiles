@@ -32,10 +32,11 @@ rows = [
   [
     { token = "state_icon", dim = false },
     { token = "state_text", dim = false },
-    { token = "agent", fg = "#d154a1" },
+    { token = "tab", fg = "#f7c67f", dim = false },
   ],
   [
     { token = "workspace", fg = "#7081d0", bold = false, dim = false },
+    { token = "agent", fg = "#d154a1" },
   ],
 ]
 

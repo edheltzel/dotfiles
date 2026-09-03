@@ -2,12 +2,13 @@
 if status is-interactive
     abbr --add rl reload
     abbr --add rel reload
+
     # Window
     abbr --add cw center_window
     abbr --add cl clear
+    abbr --add xx exit
 
     # Directories
-    # abbr --add cls '$DROPBOX/Clients'
     abbr --add atl 'cd ~/Developer/Atlas/'
     abbr --add config '~/.config/'
     abbr --add dev 'cd ~/Developer'
@@ -22,6 +23,7 @@ if status is-interactive
     # Servers/Containers
     abbr --add dc 'docker compose'
     abbr --add dk docker
+    abbr --add orbc orbctrl
 
     # Multiplexers
     abbr --add tkill 'tmux kill-session -t'
@@ -94,10 +96,14 @@ if status is-interactive
     abbr --add th treehouse
     abbr --add lw lazyworktree
     abbr --add lg lazygit
+
     # But - gitbutler
     abbr --add btt 'but tui'
+    abbr --add bgg 'but gui'
     abbr --add bts 'but setup'
     abbr --add btd 'but diff'
+    abbr --add bcm --set-cursor 'but c -m "%"'
+    abbr --add bpr 'but pr'
 
     # GH 
     abbr --add ghw 'gh repo view --web'
