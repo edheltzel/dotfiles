@@ -37,7 +37,7 @@ local function setup(theme, keymaps)
     { family = "FiraCode Nerd Font Mono", weight = font_weight },
   })
 
-  config.font_size = 15
+  config.font_size = 14
 
   -- Theme
   config.color_scheme = theme.name
