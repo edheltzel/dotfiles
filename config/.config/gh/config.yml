@@ -10,7 +10,7 @@ pager: delta
 aliases:
   co: pr checkout
   diff: pr diff
-  merge: pr merge
+  merge: pr merge --squash --delete-branch
   close: issue close
   add: issue create --title
   todo: issue create -a @me --title
