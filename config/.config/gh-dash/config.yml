@@ -89,6 +89,9 @@ keybindings:
     - key: D
       name: hunk diff
       command: gh diff
+    - key: m
+      name: squash merge
+      command: gh pr merge --squash --delete-branch --repo {{.RepoName}} {{.PrNumber}}
 
 theme:
   colors:
