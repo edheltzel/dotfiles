@@ -9,20 +9,20 @@
 
 # E.Dots
 
-> [!NOTE] EdHeltzel's Dotfiles
+> [!NOTE]
+> EdHeltzel's Dotfiles
 
-### My personal setup for 🐠 Fish shell on  MacOS - `v3`
+### My personal setup for 🐠 Fish shell on  macOS - `v3`
 
-Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS managed with [GNU Stow](https://www.gnu.org/software/stow/). You'll also find files for provisioning a new machine and setting up my environment, Including [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [WezTerm](https://wezterm.org) with [Herdr](https://herdr.dev/) + [Oh-My-Pi](https://omp.sh/) make up my ADE (AI/Agent Development Environment). VSCode and Zed configurations are maintained for legacy/compatibility reasons but are not part of the regular workflow.
+Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS, managed with [GNU Stow](https://www.gnu.org/software/stow/). You'll also find the scripts I use to provision a new machine. [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [WezTerm](https://wezterm.org), [Herdr](https://herdr.dev/), and [Oh-My-Pi](https://omp.sh/) make up my ADE (AI/Agent Development Environment). The Zed config is kept for occasional use and is not part of the regular workflow.
 
-> [!WARNING] Again, this is my personal setup and **changes often**, so don't blindly fork and run the `install.sh` script without reading it first. The script uses subcommands — see `./install.sh help` for usage.
+> [!WARNING]
+> This is my personal setup and **changes often**. Don't blindly fork and run `install.sh` without reading it first. The script uses subcommands - see `./install.sh help`.
 
 But get **inspired**, take what you want, and leave the rest to make it your own.
 
 - [NEO.ED - Neovim Config](https://github.com/edheltzel/neoed)
-  
 - [E.Defy - Dygma Defy keyboard](https://github.com/edheltzel/DygmaDefy)
-  
 
 | Screenshots | Screenshots |
 | --- | --- |
@@ -37,49 +37,42 @@ But get **inspired**, take what you want, and leave the rest to make it your own
 
 - [v1](https://github.com/edheltzel/dotfiles/tree/v1) uses oh-my-zsh (very old)
 - [v2](https://github.com/edheltzel/dotfiles/tree/v2) uses fish shell + custom scripts (old)
-- v3 uses fish shell + GNU Stow (recent)
-- v3.2 includes Zsh config
-- v3.3 Vite+ replaces Biome in Neovim, leaderkey → Raycast, hunk pager (current)
+- v3 uses fish shell + GNU Stow
+- [v3.2](https://github.com/edheltzel/dotfiles/tree/v3.2) adds the Zsh mirror config
+- [v3.3](https://github.com/edheltzel/dotfiles/tree/v3.3) Vite+ replaces Biome in Neovim, LeaderKey replaces Karabiner
+- [v3.4](https://github.com/edheltzel/dotfiles/tree/v3.4) Claude Code OMP statusline, gh-board, lazyworktree
+- [v3.5](https://github.com/edheltzel/dotfiles/tree/v3.5) superfile, `aup` harness updater, Starship as primary prompt, `tuicr` pager (current)
+
+Full history lives in [CHANGELOG.md](./CHANGELOG.md).
 
 </details>
 
-Table of Contents:
+## Table of Contents
 
-- [Prerequisites](#prereq)
-  
+- [Prerequisites](#prerequisites)
+- [For future Mr EdHeltzel](#-for-future-mr-edheltzel)
 - [The Nitty Gritty](#the-nitty-gritty)
-  
-- [MacOS Mods](#macos-mods)
-  
-  - [~~Aerospace Window Manager~~ Raycast + Alt-Tab Pro](#window-manager)
-    
-  - [~~Sketchybar~~ Thaw Bar](#status-bar)
-    
-  - [~~Karabiner Elements~~ using Raycast with a Leader Key extension](#keyboard-hacks)
-    
-- [Troubleshooting](#troubleshooting)
-  
-  - [Dotfiles](#troubleshoot-dotfiles)
-    
-  - [MacOS](#troubleshoot-macos)
-    
-- [TODOs](#todos)
-  
+- [Stow Packages](#stow-packages)
 - [Scripts](#scripts)
-  
-## Prerequisites [↑](#to-the-top)
+- [macOS Mods](#macos-mods)
+- [Troubleshooting](#troubleshooting)
+- [TODOs](#todos)
+- [Agent docs](#agent-docs)
+
+## Prerequisites
+
 <details>
   <summary><strong>Install with a single line...</strong></summary>
 
-I have not tested this on a fresh install, so this could break your setup. I'd suggest you read through the `install.sh` script and the `justfile` before running this command.
+I have not tested this on a fresh install, so this could break your setup. Read `install.sh` and the `justfile` before running it.
 
-In theory, this will clone the repository to `~/.dotfiles`, then bootstrap the machine. Again, in theory.
+In theory, this clones the repository to `~/.dotfiles`, then bootstraps the machine. Again, in theory.
 
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/master/install.sh)" -- bootstrap
 ```
 
-The remote-curl invocation detects it's running outside a cloned repo, clones itself to `~/.dotfiles`, then re-executes with the `bootstrap` subcommand. If you prefer, clone first and run locally:
+The remote-curl invocation detects that it is running outside a cloned repo, clones itself to `~/.dotfiles`, then re-executes with the `bootstrap` subcommand. If you prefer, clone first and run locally:
 
 ```shell
 git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles
@@ -89,7 +82,7 @@ cd ~/.dotfiles && ./install.sh bootstrap
 </details>
 
 <details>
-  <summary>Resources & Inspiration for the help</summary>
+  <summary>Resources & Inspiration</summary>
 
 Below are the resources I used to get to this point in my setup.
 
@@ -105,12 +98,12 @@ Below are the resources I used to get to this point in my setup.
 <details>
   <summary>My Equipment - Keyboards & Trackballs</summary>
 
-I collect, build, and use different ergonomic keyboards and trackballs. Generally I'm running some kind of erognomic split keyboard with the trackball in between.
+I collect, build, and use different ergonomic keyboards and trackballs. Generally I'm running some kind of ergonomic split keyboard with the trackball in between.
 
 - [Dygma Defy](https://dygma.com/products/dygma-defy) - daily driver ❤︎
 - [Keychron Q11](https://www.keychron.com/products/keychron-q11-qmk-custom-mechanical-keyboard)
 - [Lily58 Pro](https://github.com/kata0510/Lily58)
-- [Erogdox 76 Hot Dox v2](https://apos.audio/products/ergodox-76-hot-dox-v2-mechanical-keyboard)
+- [Ergodox 76 Hot Dox v2](https://apos.audio/products/ergodox-76-hot-dox-v2-mechanical-keyboard)
 - [Corne v4.1](https://github.com/foostan/crkbd)
 - [Cheapino](https://github.com/tompi/cheapino)
 - [Keychron Q10](https://www.keychron.com/products/keychron-q10-alice-layout-qmk-custom-mechanical-keyboard)
@@ -121,332 +114,191 @@ I collect, build, and use different ergonomic keyboards and trackballs. Generall
 - [Elecom Deft Pro](https://elecomusa.com/products/deft-pro-trackball-copy-1)
 - [Kensington Expert Mouse](https://www.kensington.com/p/products/electronic-control-solutions/trackball-products/expert-mouse-wireless-trackball-1/)
 - [Ploopy Thumb](https://ploopy.co/thumb-trackball/)
+
+Layout backups live in `local/.local/share/keyboards-mouse/`.
+
 </details>
 
 <details>
   <summary><em>Caveats for non-Apple Silicon (Intel)</em></summary>
-  If you are on any version of macOS that uses AFPS, you'll need to disable the SIP.
-  First check to see if SIP is enabled or not.
+
+If you are on any version of macOS that uses APFS, you'll need to disable SIP. First check whether SIP is enabled:
 
 ```shell
 csrutil status
 ```
 
-output should read:
+The output should read:
 
 ```shell
 System Integrity Protection status: enabled.
 ```
 
-If your SIP is enabled, then follow the next steps to disable it – Assuming that you know what you're doing, here is how to turn off System Integrity Protection on your Mac.
+If SIP is enabled, follow these steps to disable it. Assuming you know what you're doing:
 
 1. Turn off your Mac (Apple > Shut Down).
 2. Hold down Command-R and press the Power button. Keep holding Command-R until the Apple logo appears.
 3. Choose Utilities > Terminal.
-4. Wait for OS X to boot into the OS X Utilities window.
-5. Enter csrutil _disable_.
-6. Enter reboot.
-7. `csrutil status` -> should read `System Integrity Protection status: disabled.`
+4. Wait for macOS to boot into the Utilities window.
+5. Enter `csrutil disable`.
+6. Enter `reboot`.
+7. `csrutil status` should now read `System Integrity Protection status: disabled.`
 
 </details>
-## 👋 For future Mr EdHeltzel[↑](#to-the-top) Since we have a bad habit of forgetting things - see [Troubleshooting](#troubleshooting): 1. Installing Xcode Command Line Tools - `sudo softwardupdate -i -a && xcode-select --install` This will install `git` and `make` if not already installed. 2. Generate SSH keys and add to GitHub
-- [Generate a new ssh key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-  
-- `ssh-keygen -t ed25519 -C "you@host" -f ~/.ssh/id_ed25519` — auth key
-  
-- `ssh-keygen -t ed25519 -N "" -C "git signing" -f ~/.ssh/id_signing` — signing key, no passphrase
-  
-- Add `id_ed25519.pub` to GitHub as **Authentication**, `id_signing.pub` as **Signing**
-  
-- `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
-  
 
-3. Clone repo with submodules
-  
+## 👋 For future Mr EdHeltzel
 
-- `git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
-  
-- Or if already cloned: `cd ~/.dotfiles && git submodule update --init --recursive`
-  
+Since we have a bad habit of forgetting things - see [Troubleshooting](#troubleshooting):
 
-4. Use the `justfile` for the rest of the setup
-  
+1. Install Xcode Command Line Tools: `sudo softwareupdate -i -a && xcode-select --install`. This installs `git` and `make` if not already present.
+2. Generate SSH keys and add them to GitHub:
+   - [Generate a new ssh key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+   - `ssh-keygen -t ed25519 -C "you@host" -f ~/.ssh/id_ed25519` - auth key
+   - `ssh-keygen -t ed25519 -N "" -C "git signing" -f ~/.ssh/id_signing` - signing key, no passphrase
+   - Add `id_ed25519.pub` to GitHub as **Authentication**, `id_signing.pub` as **Signing**
+   - `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
+3. Clone the repo with submodules:
+   - `git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
+   - Or if already cloned: `cd ~/.dotfiles && git submodule update --init --recursive`
+4. Use the `justfile` for the rest of the setup:
+   - `cd ~/.dotfiles && just install` (calls `./install.sh bootstrap`)
+   - Or invoke the script directly: `./install.sh bootstrap`
+   - For stow-only (no software install): `./install.sh link` or `just link`
+   - The install script initializes git submodules for you
+5. After setup completes, run `upp` to execute topgrade and update everything:
+   - `upp` is an abbreviation for `topgrade --yes` - Update Packages _(this is what I say to myself)_
+   - `config/.config/topgrade.toml` includes `[post_commands]` for a Brew cleanup pass
+   - `aup` updates the AI agent harnesses listed in `fish/.config/fish/agent-harnesses.txt`
+6. Optional DX and nice to haves:
+   - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (see `macos/03-security.sh`)
+   - Node auto-switching is lazy-loaded; `fnm env --use-on-cd` runs on the first `node`/`npm` call
+7. Wallpapers live in `~/.wallpapers/`, which has its own [repo](https://github.com/edheltzel/wallpapers). [Raycast](https://www.raycast.com/) uses that directory to set wallpapers.
 
-- `cd ~/.dotfiles && just install` (calls `./install.sh bootstrap`)
-  
-- Or invoke the script directly: `cd ~/.dotfiles && ./install.sh bootstrap`
-  
-- For stow-only (no software install): `./install.sh link` or `just link`
-  
-- **Note:** The install script automatically initializes git submodules
-  
+## The Nitty Gritty
 
-5. After the setup is complete, run `upp` to execute topgrade and update everything.
-  
+Originally I used a series of custom scripts to create symlinks, and it worked, but I've since switched to [GNU Stow](https://www.gnu.org/software/stow/). Way easier to manage.
 
-- `upp` is an alias for `topgrade` which is Update Packages _(this is what I say to myself)_.
-  
-- The `topgrade.toml` includes `[post_commands]` for additional Brew and Node updates.
-  
-
-6. Optional steps for DX and nice to haves:
-  
-
-- Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (in macos/security.sh)
-  
-- Make sure to run `fnm env --use-on-cd | source` to enable auto-switching of Node versions. (in fish)
-  
-
-7. Wallpapers are stored in `~/.wallpapers/` which now lives in it's own [repo here](https://github.com/edheltzel/wallpapers)
-  
-
-- [Raycast](https://www.raycast.com/) uses this repo/directory to set wallpapers
-  
-## The Nitty Gritty [↑](#to-the-top)
-Originally, I used a series of custom scripts to create symlinks, and it worked, but I've since switched to using [GNU Stow](https://www.gnu.org/software/stow/). This is way easier to manage.
-
-So, with the addition of GNU Stow, I added a `justfile` – I treat this like NPM scripts. You need to be in the root of `~/.dotfiles` to execute any of the `just` recipes.
-
-The following are available:
+With Stow I added a `justfile` that I treat like NPM scripts. You need to be in the root of `~/.dotfiles` to run any `just` recipe. `just --list` is the source of truth; at the time of writing:
 
 ```shell
 default       Show available recipes (default)
-install       Bootstrap a new machine [alias: bootstrap]
-link          Symlink all dotfiles w/Stow [alias: run]
+install       Bootstrap a new machine (full provision) [alias: bootstrap]
+link          Symlink all dotfiles with Stow (idempotent) [alias: run]
 list          List available stow packages
-stow          Add individual packages w/Stow [alias: add]
-unstow        Remove individual packages w/Stow [alias: remove]
-update        Restow all packages w/Stow [alias: up]
+stow          Add individual package with Stow (e.g., just stow fish) [alias: add]
+unstow        Remove individual package with Stow (e.g., just unstow fish) [alias: remove]
+update        Restow all dotfiles packages [alias: up]
 delete        Remove all dotfile symlinks
+hooks         Install tracked .githooks into .git/hooks
 ```
 
 **Bootstrapping**
 
-- `just install` calls `./install.sh bootstrap` under the hood. The unified installer has two primary subcommands:
-  
-  - `./install.sh bootstrap` — provision a new machine (Xcode CLT, Homebrew, language package managers, Stow, duti, macOS prefs, git config, optional fish as default shell).
-    
-  - `./install.sh link` — symlink dotfiles only (idempotent). Use this when the machine is already set up.
-    
-- Supported flags for `bootstrap`: `-y`/`--yes` (skip prompts), `--no-packages` (skip Homebrew bundle), `--no-macos` (skip system preferences).
-  
-- Run `./install.sh help` for full usage.
-  
+`just install` calls `./install.sh bootstrap`. The unified installer has two primary subcommands:
+
+- `./install.sh bootstrap` - provision a new machine: Xcode CLT, Homebrew + Brewfile, language package managers (FNM, rbenv, rustup, Bun), Stow, duti, macOS prefs, git config, optional fish as default shell.
+- `./install.sh link` - symlink dotfiles only (idempotent). Use this when the machine is already set up.
+
+Flags for `bootstrap`: `-y`/`--yes` (skip prompts), `--no-packages` (skip Homebrew bundle and language package managers), `--no-macos` (skip system preferences). Run `./install.sh help` for full usage.
 
 **Stowing/Unstowing (add/remove)**
 
-There are two options for managing packages with GNU Stow:
+Two options for managing packages with GNU Stow:
 
-1. Just use Stow directly: `stow nvim` / `stow --restow nvim` or `stow -D nvim` _(unstow)_
-  
-2. Use the justfile: `just stow nvim` or `just unstow nvim`
-  
+1. Use Stow directly from the repo root: `stow fish`, `stow --restow fish`, or `stow -D fish` _(unstow)_
+2. Use the justfile: `just stow fish` or `just unstow fish`
+
+`just update` restows everything. It also clears stale `brew.fish`/`fish-ssh-agent.fish` symlinks and zsh completion dumps first.
+
+**Git hooks**
+
+`just hooks` installs wrappers in `.git/hooks` that call the tracked `.githooks/pre-commit` (blocks direct commits to `master`, runs `shellcheck` on staged shell) and `.githooks/commit-msg` (Conventional Commits). It deliberately does **not** set `core.hooksPath`, because GitButler writes its own wrappers there.
+
 ## Stow Packages
-- **dots** (dots/)
-  
-  - Misc dotfiles stored in `$HOME` (`.npmrc`, `.tmux.conf`, `.biome.json`, etc.)
-    
-- **git** (git/)
-  
-  - Git configuration with SSH signing, Delta pager, machine-specific local configs
-    
-- **fish** (fish/)
-  
-  - XDG Base Directory – Reference: [XDG Base Directory](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) for more information. To edit/set the XDG Base Directory variables, you can edit the `~/fish/.config/fish/conf.d/paths.fish` file. Hopefully, this will keep the `$HOME` directory clean and organized.
-    
-  - **Secrets Management**: API keys and sensitive environment variables are stored in `conf.d/secrets.fish` (gitignored). This file is created locally and never committed to version control.
-    
-    - Copy the template: `cp fish/.config/fish/conf.d/secrets.fish.example fish/.config/fish/conf.d/secrets.fish`
-      
-    - Or create manually and add your keys:
-      
-      ```fish
-      # secrets.fish - API keys and sensitive environment variables
-      set -gx ANTHROPIC_API_KEY "sk-ant-..."
-      set -gx OPENAI_API_KEY "sk-..."
-      ```
-      
-    - Used by: `claude-models` function (lists available Anthropic models)
-      
-  - **Lazy-Loading Architecture**: Fish config is optimized for fast shell startup using lazy-loading patterns. Heavy tools are only initialized on first use:
-    
-    - `conf.d/fnm.fish` - Node version manager (fnm) initialized on first `node`/`npm` call
-      
-    - `conf.d/zoxide.fish` - Directory jumper (`z`/`zi` commands) initialized on first use
-      
-    - Pattern: persistent wrapper functions call the real tool init once (guarded by `functions -q`), then delegate to the underlying command. Wrappers are NOT self-erasing — this lets them add post-jump behavior (e.g. `z` calls `__list_dir` after jumping). For zoxide, `--no-cmd` is used so zoxide's own `alias z=__zoxide_z` doesn't overwrite our wrapper.
-      
-  - **Shared directory listing (**`__list_dir`**)**: `functions/__list_dir.fish` centralizes the `eza` flags used after every directory change. Both `cd` and `z`/`zi` call it, so every navigation produces the same listing — icons, git status, grouped dirs-first, no noise columns.
-    
-  - See `config.fish` for the main lazy-loading orchestration
-    
-- **zsh** (zsh/)
-  
-  - Near-identical mirror of the Fish config (~~90-95% feature parity) for Zsh compatibility. XDG-compliant (`ZDOTDIR=~~/.config/zsh`), keeping` $HOME` clean.
-    
-  - **Plugin Manager**: [Antidote](https://getantidote.github.io/) — plugins defined in `.zsh_plugins.txt`:
-    
-    - `zsh-autosuggestions` - Fish-style inline history suggestions
-      
-    - `fast-syntax-highlighting` - Real-time command coloring
-      
-    - `zsh-abbr` - Fish-style abbreviation expansion
-      
-    - `zsh-history-substring-search` - Fish-style up/down history search
-      
-    - `zsh-autopair` - Auto-close brackets/quotes
-      
-    - `zsh-completions` - Additional completion definitions
-      
-  - **Modular Architecture**: `.zshrc.d/` numbered configs loaded in order (01-paths through 12-lazy-zoxide), matching Fish's `conf.d/` pattern
-    
-  - **Lazy-Loading**: FNM, rbenv, and Zoxide are lazy-loaded on first use (same pattern as Fish)
-    
-  - **Secrets Management**: `secrets.zsh` (gitignored) — copy from `secrets.zsh.example`
-    
-  - **Prompt**: Configurable via `ZSH_PROMPT` variable — Starship (default) or Oh My Posh
-    
-  - **Functions**: 30+ autoloaded functions in `functions/` — same set as Fish (theme, reload, flashEthernet, etc.)
-    
-  - **Completions**: Custom completions in `completions/` (voicemode, fab, obsidian-cli, alacritty)
-    
-- **config** (config/)
-  
-  - Configuration files for 25+ applications, instead of adding them to root of the repo.
-    
-  - **Prompt**: Configurable prompt system supporting Oh My Posh (default) or Starship
-    
-    - `starship-ish.omp.json` - Oh My Posh theme (styled like Starship)
-      
-    - `starship.toml` - Starship config (alternative)
-      
-    - Switch prompts by changing `FISH_PROMPT` in `fish/.config/fish/config.fish`
-      
-  - **Theme Switcher**: Unified theme switching across multiple applications
-    
-    - Run `theme` for interactive fzf picker with preview, or `theme <name>` to switch directly
-      
-    - Supported themes: `eldritch`, `rose-pine`, `rose-pine-moon`, `tokyo-night`, `tokyo-night-moon`
-      
-    - Apps updated: Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, eza, oh-my-posh, OpenCode, Superfile, herdr
-      
-  - **Terminal configs**: alacritty, kitty, ghostty, wezterm
-    
-  - **Keyboard**: karabiner (legacy, now using [LeaderKey](https://github.com/mikker/LeaderKey)), leaderkey config
-    
-  - **Editors**: zed (Vim mode + AI integration) — maintained for occasional use
-    
-- **neovim** (neovim/) - **Git Submodule** ([repo](https://github.com/edheltzel/neoed))
-  
-  - [**NEO.ED**](https://github.com/edheltzel/neoed) - LazyVim-based Neovim configuration — the primary editor
-    
-  - See [neovim/.config/nvim/README.md](./neovim/.config/nvim/README.md) for full documentation
-    
-  - **Key Features:**
-    
-    - AI Integration: Claude Code, OpenCode, Pi Agent
-      
-    - Multi-language support: Go, Python, TypeScript, PHP/Laravel, Rust, and more
-      
-    - Eldritch colorscheme with custom lualine statusline
-      
-    - Snacks.nvim for explorer, picker, dashboard, and terminal
-      
-    - Biome-first formatting with Prettier fallback
-      
-  - **Plugin Organization:** `lua/plugins/{ai,coding,editor,formatting,languages,linting,ui,utils}/`
-    
-  - Stow creates a symlink: `~/.config/nvim` → `~/.dotfiles/neovim/.config/nvim/`
-    
-- **local** (local/)
-  
-  - User-specific data: `~/.local/bin` scripts, cspell dictionaries, keyboard config backups ([Corne](https://github.com/foostan/crkbd), [Dygma Defy](https://dygma.com/products/dygma-defy), [Keychron Q11](https://www.keychron.com/products/keychron-q11-qmk-custom-mechanical-keyboard)), GitHub CLI extensions
-    
-## Scripts [↑](#to-the-top)
-Any of the scripts can be run individually at any time to update/reset as needed. ie: `cd ~/.dotfiles && ./duti/duti.sh`
 
-- macOS (macos/)
-  
-  - `macos.sh` - Executes a long list of commands pertaining to macOS Preferences – **DO NOT** blindly run this script - it is a WIP with each macOS update things change.
-    
-- packages (packages/)
-  
-  - `packages.sh` - Installs (and uninstalls) the Brewfile and each package manager's packages based on the `.txt` files.
-    
-  - Usage: `./packages.sh [action] [target]`
-    
-  - Targets: `brew`, `node`, `bun`, `pnpm`, `ruby`, `rust`, `all`
-    
-  - Source-of-truth files: `Brewfile`, `node_packages.txt`, `bun_packages.txt`, `pnpm_packages.txt`, `ruby_packages.txt`, `rust_packages.txt`
-    
-  
-  **Install examples (fish):**
-  
+The package list is `stow_packages` in the `justfile`: `dots git fish zsh config neovim local`.
+
+- **dots** (`dots/`) - misc dotfiles that live directly in `$HOME`: `.npmrc`, `.tmux.conf`, `.biome.json`, `.tigrc`, `.gitnow`, `.profile`, etc. Also owns `.stow-global-ignore`, the shared ignore list used by every package without its own.
+
+- **git** (`git/`) - `.gitconfig` (aliases, delta pager, SSH signing), `.gitignore_global`, and `git.sh`, which symlinks the machine-specific `~/.gitconfig.local` keyed on `ComputerName` and registers the signing key on GitHub. List aliases with `git config --get-regexp '^alias\.'`.
+
+- **fish** (`fish/`) - primary shell, XDG-compliant so `$HOME` stays clean (XDG vars are set in `conf.d/paths.fish`).
+  - **Prompt**: `FISH_PROMPT` in `config.fish` selects the prompt engine. Starship is the default; the config is `config/.config/starship.toml` and shows the GitButler stack via a vendored `starship-gitbutler` module.
+  - **Secrets**: API keys live in `conf.d/secrets.fish` (gitignored). Create it from the template: `cp fish/.config/fish/conf.d/secrets.fish.example fish/.config/fish/conf.d/secrets.fish`. Used by the `claude-models` function among others.
+  - **Lazy-loading**: heavy tools initialize on first use. `config.fish` defines wrapper functions for `node`/`npm`/`npx` (FNM) and `ruby`/`gem`/`bundle`/`rake`/`irb` (rbenv) that init the tool once, erase themselves, and delegate. `conf.d/zoxide.fish` wraps `z`/`zi` with a persistent wrapper (zoxide is initialized with `--no-cmd` so it does not overwrite the wrapper) that runs `__list_dir` after each jump. `npx` delegates to `bunx`.
+  - **Shared directory listing**: `functions/__list_dir.fish` holds the single set of `eza` flags used after every directory change. `cd`, `z`, and `zi` all call it.
+  - **Abbreviations, not aliases**: `conf.d/abbr.fish`. Run `abbr` to list them. Multi-step commands live in `functions/`.
+  - **Plugins**: managed by [Fisher](https://github.com/jorgebucaran/fisher), listed in `fish_plugins`.
+  - **SSH agent**: `conf.d/fish-ssh-agent.fish` shares one agent across every shell (see Troubleshooting).
+  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.txt`.
+
+- **zsh** (`zsh/`) - near-identical mirror of the Fish config for Zsh compatibility. XDG-compliant (`ZDOTDIR=~/.config/zsh`).
+  - **Plugin manager**: [Antidote](https://getantidote.github.io/), plugins in `.zsh_plugins.txt`: `zsh-autosuggestions`, `fast-syntax-highlighting`, `zsh-abbr`, `zsh-history-substring-search`, `zsh-autopair`, `zsh-completions`.
+  - **Modular**: `.zshrc.d/` numbered files load in order (`01-paths` through `12-lazy-zoxide`), mirroring Fish's `conf.d/`.
+  - **Lazy-loading**: FNM, rbenv, and zoxide load on first use.
+  - **Secrets**: `secrets.zsh` (gitignored), copy from `secrets.zsh.example`.
+  - **Prompt**: `ZSH_PROMPT` (set in `secrets.zsh`), Starship by default.
+  - **Functions**: 30+ autoloaded functions in `functions/`, the same set as Fish (`theme`, `reload`, `flashEthernet`, ...). Custom completions in `completions/`.
+
+- **config** (`config/`) - `~/.config` for 20+ applications, so they don't clutter the repo root. Currently: bat, borders, btop, fastfetch, gh, gh-changelog, gh-dash, ghostty, herdr, jj, karabiner, kitty, lazygit, leaderkey, markdownlint-cli2, raycast, starship, superfile, theme-switcher, topgrade, wezterm, zed.
+  - **Terminals**: WezTerm (primary, modular Lua, see [its README](./config/.config/wezterm/README.md)), Kitty, Ghostty.
+  - **Theme switcher**: run `theme` for an fzf picker with preview, `theme <name>` to switch directly, `theme --list` / `--current`. Twelve themes (Eldritch, Tokyo Night, Rosé Pine x3, Vesper, Catppuccin x4, Dracula, Gruvbox) applied across Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, oh-my-posh, Claude Code, Yazi, herdr, and gh-dash. Details in [theme-switcher/README.md](./config/.config/theme-switcher/README.md).
+  - **Keyboard**: `leaderkey` (current) and `karabiner` (legacy TypeScript config, see [its README](./config/.config/karabiner/README.md)).
+  - **Editors**: `zed` (Vim mode), kept for occasional use.
+
+- **neovim** (`neovim/`) - **git submodule** for [NEO.ED](https://github.com/edheltzel/neoed), my LazyVim-based config and primary editor. Stow symlinks `~/.config/nvim` to `neovim/.config/nvim/`. See [its README](./neovim/.config/nvim/README.md) for the full story; highlights: Vite+ formatting and linting (Oxfmt/Oxlint), Eldritch colorscheme, AI integration (Claude Code, OpenCode, Pi), multi-language support.
+
+- **local** (`local/`) - `~/.local`: `bin/` scripts (`chshell`, `update-wezterm-nightly`), cspell dictionaries, keyboard/mouse layout backups, and GitHub CLI extensions (`gh-board`, `gh-changelog`, `gh-dash`, `gh-enhance`, `gh-markdown-preview`, `gh-stack`). Repo screenshots in `__repoImages/` are excluded from stow.
+
+## Scripts
+
+These are run by `install.sh bootstrap` but can be run on their own. They source `../scripts/functions.sh` by relative path, so run each from its own directory: `cd ~/.dotfiles/duti && ./duti.sh`.
+
+- **macOS** (`macos/`) - `macos.sh` runs `01-preferences.sh`, `02-apps.sh`, and `03-security.sh`. **Do not** blindly run this; it is a WIP and every macOS update changes something.
+
+- **packages** (`packages/`) - `packages.sh` installs (and uninstalls) the Brewfile plus each package manager's manifest.
+  - Usage: `./packages.sh [action] [target]`, actions `install` (default) / `uninstall`, targets `brew`, `node`, `bun`, `pnpm`, `ruby`, `rust`, `all`.
+  - Manifests: `Brewfile`, `node_packages.txt`, `bun_packages.txt`, `ruby_packages.txt`, `rust_packages.txt`. Bun owns global JavaScript CLIs; there is currently no `pnpm_packages.txt`, so skip the `pnpm` target.
+
   ```fish
   ./packages.sh                  # install everything (default)
   ./packages.sh bun              # install just Bun globals
-  ./packages.sh install pnpm     # install pnpm globals
+  ./packages.sh uninstall bun    # remove every pkg in bun_packages.txt
+  ./packages.sh uninstall all    # remove everything (reverse order; brew last)
   ./packages.sh --help           # full reference
   ```
-  
-  **Uninstall examples (fish):**
-  
-  ```fish
-  ./packages.sh uninstall bun    # remove every pkg in bun_packages.txt
-  ./packages.sh uninstall pnpm   # remove every pkg in pnpm_packages.txt
-  ./packages.sh uninstall all    # remove everything (reverse order; brew last)
-  ```
-  
-  Or uninstall directly without the script (fish):
-  
-  ```fish
-  bun remove -g (cat packages/bun_packages.txt)
-  pnpm remove -g (cat packages/pnpm_packages.txt)
-  npm uninstall -g (cat packages/node_packages.txt)
-  ```
-  
-- repositories (repos/)
-  
-  - `repos.sh` - Clones the repositories in the `.txt` files at the corresponding locations
-    
-- private (private/)
-  
-  - `private.sh` - Left empty on purpose
-    
-- duti (duti/)
-  
-  - `duti.sh` - Sets the default applications for file types
-    
-    - run `./duti/duti.sh` to reset the default applications for file types
-      
-- Helper Scripts (scripts/)
-  
-  - `functions.sh` - Contains helper functions for for the scripts
-    
-## MacOS Mods [↑](#to-the-top)
-> [!NOTE] ~~For Karabiner Elements, I'm constantly changing my config to better fit my workflow and preferences.~~ I've move away from using the [Keychron Q11](https://www.keychron.com/products/keychron-q11-qmk-custom-mechanical-keyboard) to using a [Dygma Defy](https://dygma.com/products/dygma-defy)
 
-~~Aerospace Window~~ Native MacOS Stage Manager + Raycast + [Alt-Tab](https://alt-tab.app/) [↑](#to-the-top)
+- **duti** (`duti/`) - `duti.sh` sets default applications for file types. One file per app bundle id (`dev.zed.Zed`, `com.apple.Preview`, ...) listing the extensions it owns.
 
-Ice Bar [↑](#to-the-top)
+- **git** (`git/`) - `git.sh` symlinks the per-machine `~/.gitconfig.local` and registers the SSH signing key on GitHub (needs `gh` with the `admin:ssh_signing_key` scope).
 
-I only use [Ice.app](https://icemenubar.app/) to change the appearance of the native MacOS menu bar.
+- **scripts** (`scripts/`) - `functions.sh` provides the shared `info`/`success`/`warning`/`error` helpers. `nvim.sh` is a legacy LazyVim starter helper that `install.sh` no longer calls.
 
-Karabiner Elements [↑](#to-the-top)
+- **private** (`private/`) - empty placeholder; `private/ssh/` is gitignored.
 
-For most of my keyboard hacking, I'm using a combination of QMK (thru VIA app), with [Raycast](https://www.raycast.com/), but I leverage [Karabiner Elements](https://karabiner-elements.pqrs.org/) for more complex modifications, like chording the Hyper Key with other modifiers.
+## macOS Mods
 
-My Hyper Key: `right_cmd` + `right_shift` + `right_option` + `right_control` (notice that it is the right side modifiers only.) - This is still relevant with the Dygma Defy, I just use the Bazecore software to setup a Hyper key with the [LeaderKey](https://github.com/mikker/LeaderKey) app for chording keys and [Raycast](https://www.raycast.com/) for non-chorded keys: ie: non-chorded: `hyper + t` launches [Wezterm](https://wezterm.org/), my current default terminal - handled by [Raycast](https://www.raycast.com/) chorded: `hyper + r + d` launches my Dotfiles in my default editor - handled by [LeaderKey](https://github.com/mikker/LeaderKey)
+**Window management**: native Stage Manager + [Raycast](https://www.raycast.com/) + [AltTab](https://alt-tab.app/). [JankyBorders](https://github.com/FelixKratz/JankyBorders) config lives in `config/.config/borders/`.
 
-See the Readme for more details: [config/.config/karabiner/README.md](./config/.config/karabiner/README.md)
+**Menu bar**: [Ice](https://icemenubar.app/) only changes the appearance of the native menu bar.
 
-> [!INFO] I have migrated to using [LeaderKey](https://github.com/mikker/LeaderKey) and relying on my Dygma Defy with Bazcore
-## Troubleshooting [↑](#to-the-top)
-Dotfiles[↑](#to-the-top)
+**Keyboard**: most of my keyboard hacking happens in firmware (QMK via VIA, Bazecor on the Dygma Defy) plus [Raycast](https://www.raycast.com/) for non-chorded shortcuts and [LeaderKey](https://github.com/mikker/LeaderKey) for chorded ones.
+
+My Hyper key is `right_cmd + right_shift + right_option + right_control` (right-side modifiers only). On the Defy that is a Bazecor layer. Examples:
+
+- non-chorded: `hyper + t` launches WezTerm (Raycast)
+- chorded: `hyper + r + d` opens the dotfiles in my editor (LeaderKey)
+
+[Karabiner Elements](https://karabiner-elements.pqrs.org/) is still in the Brewfile for the odd complex modification, but LeaderKey replaced it for daily use. The legacy TypeScript config is documented in [config/.config/karabiner/README.md](./config/.config/karabiner/README.md).
+
+## Troubleshooting
+
+### Dotfiles
 
 <details>
   <summary>Fish: Fisher Plugin Manager</summary>
-  In the past, Fisher (fish plugin manager) would do something weird or introduce a breaking change - just reinstall Fisher.
+
+If Fisher does something weird or introduces a breaking change, reinstall it:
 
 ```bash
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
@@ -457,41 +309,17 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 <details>
   <summary>Node Development: FNM</summary>
 
-Node Version switching for Node development, takes advantage of [fnm](https://github.com/Schniz/fnm) for managing Node versions, which supports both `.nvmrc` and `.node-version` files.
+Node version switching uses [fnm](https://github.com/Schniz/fnm), which honors both `.nvmrc` and `.node-version` files.
 
-- If not already installed from the Brewfile, install `fnm`:
+If not already installed from the Brewfile:
 
 ```shell
 brew install fnm
-fnm env --use-on-cd | source
 ```
 
-For Fish Completions run:
+FNM is lazy-loaded: the first `node`/`npm`/`npx` call runs `fnm env --use-on-cd | source`. If completions are missing, `fnm completions --shell fish`. After changing fish config, `just update` (or `just stow fish`) and `reload`.
 
-```shell
-fnm completions --shell fish
-```
-
-Make sure you run:
-
-```shell
-just update #updates all stow packages
-OR
-just stow fish
-```
-
-Enable auto switch of Node versions with `.node-version` or `.nvmrc` files
-
-```shell
-# auto runs: fnm use
-fnm env --use-on-cd | source
-```
-
-Which each Node version change, enabling `corepack` is necessary to ensure that `pnpm` and `yarn` are available.
-
-```shell
-npm install --global $(cat node_packages.txt)
-```
+Global Node packages are in `packages/node_packages.txt`; JavaScript CLIs belong in `packages/bun_packages.txt` because Bun owns globals here.
 
 </details>
 
@@ -500,65 +328,41 @@ npm install --global $(cat node_packages.txt)
 
 **SSH Signing**
 
-I use SSH commit signing over GPG. GPG is there if I need it, but I prefer SSH. For a few resources to help get this setup:
+I use SSH commit signing over GPG. Resources that helped:
 
 - [Git Merge Workshop - Simplify Signing with SSH](https://github.com/git-merge-workshops/simplify-signing-with-ssh/tree/main)
 - [Gitlab SSH Commit Signing Doc](https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/)
 
-The `.gitconfig` includes `.gitconfig.local`
+`.gitconfig` includes `~/.gitconfig.local` last so machine values win:
 
-```shell
-  [meta]
-    isLocalConfig = true
-  [user]
-    signingkey = PATH_TO_YOUR_KEY
-  [gpg "ssh"]
-    allowedSignersFile = PATH_TO_YOUR_ALLOWED_SIGNERS_FILE
+```ini
+[meta]
+  isLocalConfig = true
+[user]
+  signingkey = PATH_TO_YOUR_KEY
+[gpg "ssh"]
+  allowedSignersFile = PATH_TO_YOUR_ALLOWED_SIGNERS_FILE
 ```
 
-If you choose to use this, make sure you look at that `./git/git.sh`; this script is where the provisioning of `.gitconfig.local` happens.
+`git/git.sh` provisions that file by symlinking `git/gitconfig-<machine>.local` based on `ComputerName`, and registers the public key on GitHub as a signing key if it is missing.
 
 > [!IMPORTANT]
-> Point `signingkey` at a **dedicated, passphrase-less key** (e.g. `~/.ssh/id_signing.pub`) — not your auth key. `ssh-keygen -Y sign` reads the private key directly and has no macOS keychain hooks, so a passphrased signing key means typing it on every commit. Keep your passphrased `id_ed25519` for auth, generate a separate `id_signing` for signing, and add both to GitHub in their respective slots. Don't forget to add the signing public key to `~/.ssh/allowed_signers` so `git log --show-signature` verifies locally.
-
-</details>
-
-<details>
-  <summary>GPG Commit Signing - <em>optional</em></summary>
-
-GPG signing is set to `TRUE` by default. If you rather not enable GPG then execute: `git config --global commit.gpgsign false` and remove the GPG packages from the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile).
-
-[renew expired gpg](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
-
-[Generate new key and assign to global git config](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374#:~:text=It%20means%20that%20is%20not,secret%20keys%20available%20in%20GPG.)
-
-Main take away:
-
-- `gpg --list-secret-keys --keyid-format=long`
-- Copy key
-- set key for your git user
-  - `git config --global user.signingkey <your key>`
-- If you need help setting this up GPG:
-  - follow the Github article for [Signing Commits](https://help.github.com/en/articles/signing-commits) to set up you GPG key(s).
-  - I found this [GIST helpful](https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2)
-  - To get VSCode setup follow this [article](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
-- **Please Note** if you used the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile), Cask installed the macOS [GPG Suite](https://gpgtools.org/) via `cask 'gpg-suite-no-mail'` -- _(alternatively)_ update the [Brewfile](https://github.com/edheltzel/dotfiles/blob/master/packages/Brewfile) with `cask 'gpg-suite' to include GPGMail.
+> Point `signingkey` at a **dedicated, passphrase-less key** (e.g. `~/.ssh/id_signing.pub`), not your auth key. `ssh-keygen -Y sign` reads the private key directly and has no macOS keychain hooks, so a passphrased signing key means typing it on every commit. Keep your passphrased `id_ed25519` for auth, generate a separate `id_signing` for signing, and add both to GitHub in their respective slots. Add the signing public key to `~/.ssh/allowed_signers` so `git log --show-signature` verifies locally.
 
 </details>
 
 <details>
   <summary>Rust and Cargo</summary>
-  From time to time, `cargo` will fail to update/upgrade using `topgrade`. This is generally due to something changing inside of the Rust system that doesn't allow `cargo install cargo-update` to work.
 
-**The solution:**
-Uninstall and reinstall `rust` and `rustup-init` along with `cargo` using `brew`.
+From time to time `cargo` fails to update through `topgrade`, usually because something changed in the Rust toolchain that breaks `cargo install cargo-update`.
+
+**The fix:** uninstall and reinstall `rust` and `rustup-init` with `brew`, then reinstall `cargo-update`.
 
 ```shell
 brew uninstall rustup-init;
 and brew reinstall rust;
-and cargo uninstall cargo;
-cargo install cargo-update --force;
-topgrade --only cargo
+and cargo install cargo-update --force;
+and topgrade --only cargo
 ```
 
 </details>
@@ -566,61 +370,50 @@ topgrade --only cargo
 <details>
   <summary>SSH Agent</summary>
 
-`fish/.config/fish/conf.d/fish-ssh-agent.fish` handles ssh-agent for me — a small custom script (not the upstream plugin). On every interactive shell it:
+`fish/.config/fish/conf.d/fish-ssh-agent.fish` handles ssh-agent. It is a small custom script, not the upstream plugin. On every interactive shell it:
 
 1. Sources `~/.ssh/agent/env.fish` to inherit any agent a previous shell already started.
-2. Pings the agent with `ssh-add -l`. If unreachable, spawns a fresh one with `ssh-agent -c` (csh syntax — fish can't parse the default Bourne output) and persists the new env back to `env.fish`.
+2. Pings the agent with `ssh-add -l`. If unreachable, spawns a fresh one with `ssh-agent -c` (csh syntax, since fish can't parse the Bourne output) and persists the env back to `env.fish`.
 3. Loads `id_ed25519` if its fingerprint isn't already in the agent, prompting for the keychain-cached passphrase if needed.
 
-Result: every fish shell — herdr panes, tmux panes, fresh Ghostty/WezTerm windows — shares **one** ssh-agent instead of spawning its own. Survives Ghostty/WezTerm restarts because the agent is a detached background process and `env.fish` points new shells at it.
+Result: every fish shell (herdr panes, tmux panes, fresh WezTerm/Ghostty windows) shares **one** ssh-agent. It survives terminal restarts because the agent is a detached process and `env.fish` points new shells at it.
 
-If something goes sideways (agent dies, stale sockets pile up, etc.):
+If something goes sideways (agent dies, stale sockets pile up):
 
 ```fish
 pkill ssh-agent
 rm ~/.ssh/agent/*
-# open a fresh shell — the script will spawn a clean agent
+# open a fresh shell - the script spawns a clean agent
 ```
 
 > [!NOTE]
-> Git commit **signing** doesn't use ssh-agent at all — see the SSH Signing section. If commits prompt for a passphrase every time, that's a signing-key problem, not an agent problem.
+> Commit **signing** doesn't use ssh-agent at all. If commits prompt for a passphrase every time, that's a signing-key problem, not an agent problem.
 
 </details>
 
 <details>
   <summary>Git Submodules</summary>
 
-This repo uses a git submodule for:
+This repo has one submodule, **neovim** ([NEO.ED](https://github.com/edheltzel/neoed)) at `neovim/.config/nvim`.
 
-- **neovim** - Neovim configuration ([NEO.ED](https://github.com/edheltzel/neoed))
-
-If you encounter issues with the submodule:
-
-**Initialize/Update Submodule:**
+**Initialize/update:**
 
 ```shell
 cd ~/.dotfiles
 git submodule update --init --recursive
 ```
 
-**Update Submodule to Latest:**
+**Bump to latest upstream:**
 
 ```shell
 cd ~/.dotfiles/neovim/.config/nvim
 git pull origin master
-# Commit the update
 cd ~/.dotfiles
 git add neovim
-git commit -m "Update neovim submodule"
+git commit -m "chore(neovim): bump neoed submodule"
 ```
 
-**Clone with Submodule:**
-
-```shell
-git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles
-```
-
-**If Submodule is Empty:**
+**If the submodule is empty:**
 
 ```shell
 git submodule deinit -f neovim/.config/nvim
@@ -629,38 +422,34 @@ git submodule update --init --recursive
 
 </details>
 
-MacOS[↑](#to-the-top)
+### macOS
 
-I include this [website](https://mac-key-repeat.zaymon.dev/) in `01-preferences.sh` - it's a great resource to see what the default key repeat rate will be.
+The default key repeat rates set in `macos/01-preferences.sh` came from [this site](https://mac-key-repeat.zaymon.dev/).
 
 <details>
   <summary>WindowServer RAM Leak</summary>
-  As of `2024-07` there is a known bug/issue with macOS where the WindowServer will consume CPU and/or Memory. It is annoying. From my experience, this is related to more than one external monitor. My current workaround is to kill the WindowServer on macOS, which logs you out. Once you log back in the WindowServer will be restarted and your RAM usage will be back in normal ranges. This is a workaround until Apple fixes the issue, which will probably never happen.
-  <strong>Usage:</strong>
-  <ul>
-    <li>Open your Terminal</li>
-    <li>run `killws`</li>
-    <li>Log back into your account</li>
-  </ul>
+
+As of 2024-07 there is a known macOS issue where WindowServer consumes CPU and/or memory, in my experience when more than one external monitor is attached. The workaround is to kill WindowServer, which logs you out. On log-in WindowServer restarts and RAM usage returns to normal.
+
+**Usage:** run `killws` in a terminal, then log back in.
+
 </details>
 
 <details>
   <summary>Media Control Keys</summary>
-  From time to time some of the "nice-to-have" features of MacOS break. An example of this is when the media keys stop working for one reason or another; Google Chrome/WhatsApp/ can and generally hijack the media keys.
 
-To resolve this just run the following command in the terminal:
+Every so often the media keys stop working because Chrome, WhatsApp, or similar hijacked them. Re-enable them with:
 
 ```shell
-luanchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
+launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
 ```
-
-This `luanchctl` will re-enable media key, which in turn will control Spotify 🙂
 
 </details>
 
 <details>
   <summary>Ethernet backhaul</summary>
-  Run the `flashEthernet` function to "flush" the Ethernet backhaul.
+
+Run the `flashEthernet` function to flush the Ethernet backhaul:
 
 ```shell
 flashEthernet; and echo 'Ethernet backhaul flushed'
@@ -668,75 +457,20 @@ speedtest
 ```
 
 </details>
-## TODOs [↑](#to-the-top) > see [github issues](https://github.com/edheltzel/dotfiles/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen) - [x] ~~Convert fish functions to zsh functions - [x]
-~~zsh completions seem to be broken~~ [~~issue #40~~](https://github.com/edheltzel/dotfiles/issues/40)
 
-- [x] 
-  
-  ~~Consider using~~ [~~Home Manager~~](https://nix-community.github.io/home-manager/) ~~for package management.~~
-  
-  - [x] 
-    
-    ~~Look into zsh-completions vs autocomplete~~
-    
-  
-- [x] 
-  
-  include zsh abbreviations
-  
-- [x] 
-  
-  Create a single-line install script to execute bootstrap.sh
-  
-- [x] 
-  
-  use makefile to execute bootstrap.sh and install.sh
-  
-- [x] 
-  
-  Unify `bootstrap.sh` + `install.sh` into a single subcommand-driven script
-  
-- [x] 
-  
-  update make unstow to include only the available stow package or all
-  
-- [x] 
-  
-  add customizations to LazyVim
-  
-  - [x] 
-    
-    move neovim config to its own repo
-    
-  
-- [x] 
-  
-  Add vscode settings and symlink to dotfiles
-  
-- [x] 
-  
-  Add XDG Base Directory support
-  
-- [x] 
-  
-  update README
-  
-  - [x] 
-    
-    include XDG info
-    
-  - [x] 
-    
-    include Stow info
-    
-  - [x] 
-    
-    include Make info
-    
-  - [x] 
-    
-    include New bootstrap process
-    
-  - [x] 
-    
-    include New install process (makefile)
+## TODOs
+
+Open work is tracked in [GitHub issues](https://github.com/edheltzel/dotfiles/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen).
+
+## Agent docs
+
+`AGENTS.md` (and the `CLAUDE.md` symlink) are the working contracts for AI coding agents in this repo. The root file covers repo-wide invariants and each stow package or script directory has its own. They are tracked here but excluded from stow, so they never land in `~`.
+
+---
+
+[ThanksGithub]: https://dotfiles.github.io/
+[ThanksGHUtils]: https://dotfiles.github.io/utilities/
+[ThanksGHInspiration]: https://dotfiles.github.io/inspiration/
+[ThanksKalis]: https://kalis.me/
+[ThanksLissy]: https://github.com/Lissy93/dotfiles
+[ThanksJake]: https://www.jakewiesler.com/

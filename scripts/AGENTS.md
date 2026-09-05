@@ -7,7 +7,7 @@ Helper functions and setup scripts sourced by the installation flow. Not a stow 
 ## Ownership
 
 - `functions.sh` — logging/helpers: `error`, `info`, `warning`, `success` (colorized)
-- `nvim.sh` — Neovim setup helper
+- `nvim.sh` — legacy LazyVim-starter clone helper. Not called by `install.sh`; Neovim comes from the `neovim/` submodule.
 
 ## Local Contracts
 

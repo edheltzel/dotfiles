@@ -7,7 +7,8 @@ Installs/uninstalls packages across every package manager. NOT a stow package â€
 ## Ownership
 
 - `packages.sh` â€” subcommand dispatcher
-- Manifests: `Brewfile` (Homebrew CLI/casks/fonts), `node_packages.txt`, `bun_packages.txt`, `pnpm_packages.txt`, `ruby_packages.txt`, `rust_packages.txt`
+- Manifests: `Brewfile` (Homebrew CLI/casks/fonts), `node_packages.txt`, `bun_packages.txt`, `ruby_packages.txt`, `rust_packages.txt`
+- `packages.sh` still has a `pnpm` target, but `pnpm_packages.txt` does not exist (Bun owns JS globals). The target fails until a manifest is added or the target is removed.
 
 ## Local Contracts
 
@@ -22,7 +23,7 @@ Installs/uninstalls packages across every package manager. NOT a stow package â€
 ## Work Guidance
 
 - Use `bun`/`bunx` for JS tooling, never `npm`/`npx`.
-- Sources `../scripts/functions.sh` for logging helpers.
+- Sources `../scripts/functions.sh` by relative path, so run it from `packages/` (`install.sh` already does). From the repo root, `./packages/packages.sh` fails to source helpers.
 - Cargo installs failing under a brew-managed toolchain: `brew uninstall rustup-init`, `brew reinstall rust`, `cargo install cargo-update --force`, then `topgrade --only cargo`.
 
 ## Verification

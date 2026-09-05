@@ -6,7 +6,12 @@ Zsh configuration kept as a secondary/fallback shell. Fish is the primary shell 
 
 ## Ownership
 
-`.zshenv` and `.config/zsh/`.
+- `.zshenv` (sets `ZDOTDIR=~/.config/zsh`) and `.config/zsh/`
+- `.zshrc` — Antidote bootstrap, prompt selection (`ZSH_PROMPT`, Starship default)
+- `.zshrc.d/` — numbered modules loaded in order (`01-paths` … `12-lazy-zoxide`), mirroring fish `conf.d/`
+- `.zsh_plugins.txt` — Antidote plugin list
+- `functions/`, `completions/` — ports of the fish equivalents
+- `secrets.zsh.example` — template for gitignored `secrets.zsh`
 
 ## Local Contracts
 
