@@ -11,7 +11,9 @@ Not discoverable from the tree, and expensive to get wrong.
 - **`neovim/` is a git submodule** ([edheltzel/neoed](https://github.com/edheltzel/neoed)), a separate repo outside this DOX tree. Run `git submodule update --init --recursive` after cloning. Neovim edits do not commit here.
 - **Never set `core.hooksPath` to `.githooks/`.** GitButler writes managed wrappers into `hooksPath`, and committing them causes a delete/untracked conflict. `just hooks` installs wrappers into `.git/hooks` and unsets `core.hooksPath` instead.
 - **Post-navigation directory listing lives in exactly one file:** `fish/.config/fish/functions/__list_dir.fish`. `cd`, `z`, and `zi` all delegate to it. Never duplicate eza flags in `cd.fish` or `zoxide.fish`.
-- **Commit signing is SSH, not GPG.** Machine-specific values live in untracked `~/.gitconfig.local`, symlinked by `git/git.sh` keyed on `ComputerName`. Never commit machine paths or keys.
+- **Commit signing is SSH, not GPG.** Machine-specific values live in `~/.gitconfig.local`, symlinked by `git/git.sh` from `git/gitconfig-<machine>.local` keyed on `ComputerName`. Never commit private keys or new machine paths.
+- **Starship is the prompt.** `FISH_PROMPT` in `fish/.config/fish/config.fish` and `ZSH_PROMPT` in zsh select it; `config/.config/starship.toml` is the config. There is no Oh My Posh shell prompt config in this repo.
+- **CHANGELOG.md is maintained with the `gh changelog` extension** (config: `config/.config/gh-changelog/.changelog.yml`). Cut release entries with the tool; do not hand-edit them.
 - **Bun owns global JavaScript CLIs.** Use `bun`/`bunx`, never `npm -g`/`npx`. Vite+ is project tooling only.
 - **`AGENTS.md` files are never stowed** - excluded per package via `.stow-local-ignore` or the shared `dots/.stow-global-ignore`. DOX docs stay repo-local and never land in `~`.
 - **Fish uses abbreviations, not aliases.** Multi-step implementations go in `functions/`, never inline in `conf.d/abbr.fish`.
@@ -159,7 +161,7 @@ Default section order:
 
 Stow packages (symlinked into `~`):
 
-- `config/` — application configs for 30+ tools (`~/.config`) — has child: `config/.config/wezterm/`
+- `config/` — application configs for 20+ tools (`~/.config`) — has child: `config/.config/wezterm/`
 - `fish/` — Fish shell config (primary shell, lazy-loading)
 - `git/` — git config, SSH signing, per-machine provisioning
 - `dots/` — miscellaneous `$HOME` dotfiles; owns the shared stow global ignore
@@ -172,7 +174,9 @@ Infrastructure (run by `install.sh`, not stowed):
 - `packages/` — multi-package-manager provisioning (`packages.sh` + manifests)
 - `scripts/` — shared shell helpers (`functions.sh`, `nvim.sh`) sourced by the install flow
 - `.githooks/` - tracked git hook sources (`pre-commit`, `commit-msg`); `just hooks` installs wrappers into `.git/hooks` and unsets `core.hooksPath` so GitButler cannot overwrite tracked files
+- `.github/` - `CODEOWNERS` (auto-requests `edheltzel` on PRs) and `workflows/pr-visual-recap.yml` (agent-generated visual recap comment on every PR)
 - `macos/` — macOS system preference scripts
 - `duti/` — default app / file associations
+- `private/` — gitignored placeholder (`private/ssh/`); only `.gitkeep` is tracked
 
 `AGENTS.md` files are excluded from stow (via each package's `.stow-local-ignore` or the shared `~/.stow-global-ignore`), so DOX docs stay repo-only and are never symlinked into `~`.
