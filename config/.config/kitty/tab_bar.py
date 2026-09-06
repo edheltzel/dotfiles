@@ -1,18 +1,12 @@
 """Custom kitty tab bar with right-aligned status area.
 
 Renders pill-shaped tabs via draw_tab_with_powerline() and appends a
-right-aligned status strip (CWD, git branch, active process) after the
-last tab.  Uses the Eldritch colour palette throughout.
-
-IMPORTANT: subprocess.run is NEVER called inside draw_tab().  Git branch
-data lives in a module-level cache that a 2-second kitty timer refreshes
-in the background.
+right-aligned active-process strip after the last tab.
 """
 
 import os
-import subprocess
 
-from kitty.fast_data_types import Screen, add_timer
+from kitty.fast_data_types import Screen
 from kitty.tab_bar import (
     DrawData,
     ExtraData,
@@ -27,8 +21,6 @@ from kitty.boss import get_boss
 # ---------------------------------------------------------------------------
 _CLR_BG = "#171928"  # background
 _CLR_TAB_BG = "#212337"  # inactive tab bg
-_CLR_PINK = "#F265B5"  # cwd segment
-_CLR_PURPLE = "#A48CF2"  # git segment
 _CLR_CYAN = "#04D1F9"  # process segment
 _CLR_MUTED = "#7081D0"  # separators / dim text
 
@@ -45,8 +37,6 @@ def _color(hex_color: str) -> int:
 # Pre-compute colour ints once at module load.
 CLR_BG = _color(_CLR_BG)
 CLR_TAB_BG = _color(_CLR_TAB_BG)
-CLR_PINK = _color(_CLR_PINK)
-CLR_PURPLE = _color(_CLR_PURPLE)
 CLR_CYAN = _color(_CLR_CYAN)
 CLR_MUTED = _color(_CLR_MUTED)
 
@@ -74,120 +64,58 @@ PROCESS_ICONS: dict[str, str] = {
 }
 DEFAULT_ICON = "\uf489"  # fa_terminal fallback
 
-# ---------------------------------------------------------------------------
-# Git branch cache + timer
-# ---------------------------------------------------------------------------
-_git_cache: dict[str, str] = {}
-_timer_id = None
-
-
-def _get_git_branch(cwd: str) -> str:
-    """Return cached git branch for *cwd*, populating on first miss."""
-    if not cwd:
-        return ""
-    if cwd not in _git_cache:
-        try:
-            result = subprocess.run(
-                ["git", "branch", "--show-current"],
-                cwd=cwd,
-                capture_output=True,
-                text=True,
-                timeout=0.1,
-            )
-            _git_cache[cwd] = (
-                result.stdout.strip() if result.returncode == 0 else ""
-            )
-        except Exception:
-            _git_cache[cwd] = ""
-    return _git_cache[cwd]
-
-
-def _refresh_git_cache(timer_id: int) -> None:
-    """Invalidate the git cache so the next draw picks up any new branch."""
-    _git_cache.clear()
-
-
-def _start_timer() -> None:
-    """Register the 2-second repeating timer exactly once."""
-    global _timer_id
-    if _timer_id is None:
-        _timer_id = add_timer(_refresh_git_cache, 2.0, True)
-
-
-# Kick off the timer at module load time.
-_start_timer()
 
 # ---------------------------------------------------------------------------
 # Active-window data helper
 # ---------------------------------------------------------------------------
 
 
-def _get_active_window_data() -> tuple[str, str]:
-    """Return (cwd, process_name) for the active window, non-blocking."""
+def _get_active_process() -> str:
+    """Return the active window's process basename, non-blocking."""
     boss = get_boss()
     if boss is None:
-        return "", ""
+        return ""
     tab = boss.active_tab
     if tab is None:
-        return "", ""
+        return ""
     w = tab.active_window
     if w is None:
-        return "", ""
-    cwd = w.cwd_of_child or ""
-    exe = w.get_exe_of_child() or ""
-    return cwd, os.path.basename(exe)
-
-
-# ---------------------------------------------------------------------------
-# Status area drawing (right-aligned, called only for the last tab)
-# ---------------------------------------------------------------------------
+        return ""
+    return os.path.basename(w.get_exe_of_child() or "")
 
 
 def _draw_status_area(screen: Screen) -> None:
-    """Draw the CWD / git-branch / process status strip right-aligned."""
-    cwd, proc_name = _get_active_window_data()
-    cwd_basename = os.path.basename(cwd) if cwd else ""
-    branch = _get_git_branch(cwd)
-    proc_icon = PROCESS_ICONS.get(proc_name, DEFAULT_ICON)
-
-    # Build individual segments (only include non-empty ones).
-    segments: list[tuple[int, str]] = []
-    if cwd_basename:
-        segments.append((CLR_PINK, f" \uf07c {cwd_basename} "))
-    if branch:
-        segments.append((CLR_PURPLE, f" \ue725 {branch} "))
-    if proc_name:
-        segments.append((CLR_CYAN, f" {proc_icon} {proc_name} "))
-
-    if not segments:
+    """Draw the active-process strip right-aligned."""
+    proc_name = _get_active_process()
+    if not proc_name:
         return
-
-    # Separator between segments.
-    sep = " "
-
-    # Calculate total visible width.
-    total_len = sum(len(s[1]) for s in segments) + len(sep) * (len(segments) - 1)
-
-    # Position cursor right-aligned.
-    target_x = screen.columns - total_len
+    text = f" {PROCESS_ICONS.get(proc_name, DEFAULT_ICON)} {proc_name} "
+    target_x = screen.columns - len(text)
     if target_x <= screen.cursor.x:
-        return  # not enough room
-
-    # Fill the gap between last tab and the status area with background.
+        return
     screen.cursor.bg = CLR_BG
     screen.cursor.fg = CLR_MUTED
-    gap = target_x - screen.cursor.x
-    screen.draw(" " * gap)
+    screen.draw(" " * (target_x - screen.cursor.x))
+    screen.cursor.fg = CLR_CYAN
+    screen.draw(text)
 
-    # Draw each segment.
-    for i, (color, text) in enumerate(segments):
-        screen.cursor.fg = color
-        screen.cursor.bg = CLR_BG
-        screen.draw(text)
-        if i < len(segments) - 1:
-            screen.cursor.fg = CLR_MUTED
-            screen.draw(sep)
 
+
+# ---------------------------------------------------------------------------
+# Tab title: set_tab_title name if set, else project directory basename
+# ---------------------------------------------------------------------------
+
+
+def draw_title(data: dict) -> str:
+    tab = get_boss().tab_for_id(data["tab_id"])
+    if tab and tab.name:
+        return tab.name
+    tab_data = data.get("tab")
+    active_exe = getattr(tab_data, "active_exe", "") or ""
+    if active_exe == "herdr" or active_exe.startswith("herdr"):
+        return "🐏 Herdr"
+    wd = getattr(tab_data, "active_wd", "") or ""
+    return os.path.basename(wd.rstrip(os.sep)) or wd
 
 # ---------------------------------------------------------------------------
 # Main entry point called by kitty for every tab
