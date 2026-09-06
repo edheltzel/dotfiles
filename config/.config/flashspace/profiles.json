@@ -1,0 +1,263 @@
+{
+  "profiles" : [
+    {
+      "id" : "58D7123F-0C82-4339-A654-2B7633FF809D",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.brave.Browser",
+              "iconPath" : "/Applications/Brave Browser.app/Contents/Resources/app.icns",
+              "name" : "Brave Browser"
+            },
+            {
+              "bundleIdentifier" : "net.imput.helium",
+              "iconPath" : "/Applications/Helium.app/Contents/Resources/app.icns",
+              "name" : "Helium"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari",
+              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
+              "name" : "Safari"
+            },
+            {
+              "bundleIdentifier" : "org.mozilla.firefox",
+              "iconPath" : "/Applications/Firefox.app/Contents/Resources/firefox.icns",
+              "name" : "Firefox"
+            }
+          ],
+          "display" : "PA278QV",
+          "id" : "F2FF6C29-DB21-4FE1-BD75-CA0AEA36586C",
+          "name" : "HQ",
+          "openAppsOnActivation" : false,
+          "shortcut" : "ctrl+opt+shift+0"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.mitchellh.ghostty",
+              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name" : "Ghostty"
+            },
+            {
+              "bundleIdentifier" : "dev.zed.Zed",
+              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name" : "Zed"
+            },
+            {
+              "bundleIdentifier" : "com.gitbutler.app",
+              "iconPath" : "/Applications/GitButler.app/Contents/Resources/icon.icns",
+              "name" : "GitButler"
+            },
+            {
+              "bundleIdentifier" : "com.github.wez.wezterm",
+              "iconPath" : "/Applications/WezTerm.app/Contents/Resources/terminal.icns",
+              "name" : "WezTerm"
+            },
+            {
+              "bundleIdentifier" : "net.kovidgoyal.kitty",
+              "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
+              "name" : "kitty"
+            }
+          ],
+          "display" : "PA278QV",
+          "id" : "2CA1D1D5-0B95-4A17-8191-1DC68C7F1AD6",
+          "name" : "Coding",
+          "openAppsOnActivation" : false,
+          "shortcut" : "ctrl+opt+shift+1",
+          "symbolIconName" : "chevron.left.forwardslash.chevron.right"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.stablyai.orca",
+              "iconPath" : "/Applications/Orca.app/Contents/Resources/icon.icns",
+              "name" : "Orca"
+            },
+            {
+              "bundleIdentifier" : "com.zarifpour.superconductor",
+              "iconPath" : "/Applications/super.engineering.app/Contents/Resources/super.icns",
+              "name" : "super.engineering"
+            },
+            {
+              "bundleIdentifier" : "dev.bb.desktop",
+              "iconPath" : "/Applications/bb.app/Contents/Resources/icon.icns",
+              "name" : "bb"
+            },
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
+            },
+            {
+              "bundleIdentifier" : "com.anthropic.claudefordesktop",
+              "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
+              "name" : "Claude"
+            },
+            {
+              "bundleIdentifier" : "com.openai.codex",
+              "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/electron.icns",
+              "name" : "ChatGPT"
+            },
+            {
+              "bundleIdentifier" : "com.maestro.app",
+              "iconPath" : "/Applications/Maestro.app/Contents/Resources/icon.icns",
+              "name" : "Maestro"
+            },
+            {
+              "bundleIdentifier" : "com.anysphere.sand",
+              "iconPath" : "/Applications/Grok Bot.app/Contents/Resources/icon.icns",
+              "name" : "Grok Bot"
+            },
+            {
+              "bundleIdentifier" : "com.zed-industries.delta",
+              "iconPath" : "/Applications/Delta.app/Contents/Resources/AppIcon.icns",
+              "name" : "Delta"
+            }
+          ],
+          "display" : "PA278QV",
+          "id" : "9BBF0FD6-62D0-4016-951F-321ED66BAE2B",
+          "name" : "AI",
+          "openAppsOnActivation" : false,
+          "shortcut" : "ctrl+opt+shift+2",
+          "symbolIconName" : "poweroutlet.type.f.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.canva.affinity",
+              "iconPath" : "/Applications/Affinity.app/Contents/Resources/AppIcon.icns",
+              "name" : "Affinity"
+            },
+            {
+              "bundleIdentifier" : "com.figma.Desktop",
+              "iconPath" : "/Applications/Figma.app/Contents/Resources/electron.icns",
+              "name" : "Figma"
+            },
+            {
+              "bundleIdentifier" : "com.shapr3d.shapr",
+              "iconPath" : "/Applications/Shapr3D.app/Contents/Resources/AppIcon.icns",
+              "name" : "Shapr3D"
+            },
+            {
+              "bundleIdentifier" : "org.openscad.OpenSCAD",
+              "iconPath" : "/Applications/OpenSCAD-2021.01.app/Contents/Resources/OpenSCAD.icns",
+              "name" : "OpenSCAD"
+            },
+            {
+              "bundleIdentifier" : "com.bambulab.bambu-studio",
+              "iconPath" : "/Applications/BambuStudio.app/Contents/Resources/Icon.icns",
+              "name" : "Bambu Studio"
+            },
+            {
+              "bundleIdentifier" : "com.anycubic.AnycubicPhotonWorkshop",
+              "iconPath" : "/Applications/AnycubicPhotonWorkshop.app/Contents/Resources/PhotonSlicer.icns",
+              "name" : "AnycubicPhotonWorkshop"
+            },
+            {
+              "bundleIdentifier" : "com.snapmaker.snapmaker-orca",
+              "iconPath" : "/Applications/Snapmaker Orca.app/Contents/Resources/Icon.icns",
+              "name" : "Snapmaker Orca"
+            },
+            {
+              "bundleIdentifier" : "com.thehueforge.hueforge",
+              "iconPath" : "/Applications/HueForge.app/Contents/Resources/AppIcon.icns",
+              "name" : "HueForge"
+            },
+            {
+              "bundleIdentifier" : "com.tldraw.desktop",
+              "iconPath" : "/Applications/tldraw offline.app/Contents/Resources/icon.icns",
+              "name" : "tldraw offline"
+            }
+          ],
+          "display" : "PA278QV",
+          "id" : "6EF5BD8F-93B9-4FEE-839A-A43DCDA452BB",
+          "name" : "Design",
+          "openAppsOnActivation" : false,
+          "shortcut" : "ctrl+opt+shift+3",
+          "symbolIconName" : "paintpalette.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "md.obsidian",
+              "iconPath" : "/Applications/Obsidian.app/Contents/Resources/icon.icns",
+              "name" : "Obsidian"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Notes",
+              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name" : "Notes"
+            },
+            {
+              "bundleIdentifier" : "doc.md-preview",
+              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
+              "name" : "Markdown Preview"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Preview",
+              "iconPath" : "/System/Applications/Preview.app/Contents/Resources/AppIcon.icns",
+              "name" : "Preview"
+            },
+            {
+              "bundleIdentifier" : "com.todoist.mac.Todoist",
+              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
+              "name" : "Todoist"
+            },
+            {
+              "bundleIdentifier" : "com.apple.reminders",
+              "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
+              "name" : "Reminders"
+            }
+          ],
+          "display" : "PA278QV",
+          "id" : "99CE3154-9162-471D-A9DC-5C894F35CF19",
+          "name" : "Notes",
+          "openAppsOnActivation" : false,
+          "symbolIconName" : "text.document.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.microsoft.teams2",
+              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+              "name" : "Microsoft Teams"
+            },
+            {
+              "bundleIdentifier" : "com.apple.MobileSMS",
+              "iconPath" : "/System/Applications/Messages.app/Contents/Resources/AppIcon.icns",
+              "name" : "Messages"
+            },
+            {
+              "bundleIdentifier" : "com.dygmalab.bazecor",
+              "iconPath" : "/Applications/Bazecor.app/Contents/Resources/electron.icns",
+              "name" : "Bazecor"
+            },
+            {
+              "bundleIdentifier" : "com.tigervnc.tigervnc",
+              "iconPath" : "/Applications/TigerVNC.app/Contents/Resources/tigervnc.icns",
+              "name" : "TigerVNC"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iCal",
+              "iconPath" : "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
+              "name" : "Calendar"
+            },
+            {
+              "bundleIdentifier" : "com.apple.AddressBook",
+              "iconPath" : "/System/Applications/Contacts.app/Contents/Resources/Contacts.icns",
+              "name" : "Contacts"
+            }
+          ],
+          "display" : "PA278QV",
+          "id" : "6686D9E1-DF4D-4645-805A-30A4051A71D5",
+          "name" : "Comms",
+          "openAppsOnActivation" : false,
+          "shortcut" : "ctrl+opt+shift+5",
+          "symbolIconName" : "ellipsis.message.fill"
+        }
+      ]
+    }
+  ]
+}
