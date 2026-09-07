@@ -49,16 +49,16 @@ autoremove = true
 [git]
 repos = [
   "/Users/ed/Developer/TUIApps/herdr/",
-  "/Users/ed/Developer/AI/Extensions/LifeOS/",
-  "/Users/ed/Developer/AI/Harness/Boop/",
+  "/Users/ed/Developer/AI/LifeOS/",
   "/Users/ed/Developer/AI/Harness/Neo/",
+  "/Users/ed/Developer/AI/Agents/Boop/",
   "/Users/ed/Developer/AI/Agents/Push/",
   "/Users/ed/Developer/AI/Skills/claude-cybersecurity/",
   "/Users/ed/Developer/AI/Skills/claude-seo/",
   "/Users/ed/Developer/AI/Skills/claude-obsidian/",
-  "/Users/ed/Developer/AI/Skills/skillsMattPocock/",
-  "/Users/ed/Developer/AI/Skills/skillsCompoundEngineering/",
-  "/Users/ed/Developer/AI/Skills/skillsBeagle/",
-  "/Users/ed/Developer/AI/Skills/dox-framework/",
-  "/Users/ed/Developer/AI/Skills/skillsBlueprint/",
+  "/Users/ed/Developer/AI/Skills/MattPocock/",
+  "/Users/ed/Developer/AI/Skills/CompoundEngineering/",
+  "/Users/ed/Developer/AI/Skills/Beagle/",
+  "/Users/ed/Developer/AI/Skills/DoxFramework/",
+  "/Users/ed/Developer/AI/Skills/Blueprint/",
 ]
