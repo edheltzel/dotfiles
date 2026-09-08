@@ -1,0 +1,8 @@
+onboarding = false
+
+[ui]
+status_indicators = "symbols"
+
+show_agent_labels_on_pane_borders = true
+[ui.toast]
+delivery = "terminal"

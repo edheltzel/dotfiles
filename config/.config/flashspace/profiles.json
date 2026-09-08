@@ -101,11 +101,6 @@
               "name" : "ChatGPT"
             },
             {
-              "bundleIdentifier" : "com.maestro.app",
-              "iconPath" : "/Applications/Maestro.app/Contents/Resources/icon.icns",
-              "name" : "Maestro"
-            },
-            {
               "bundleIdentifier" : "com.anysphere.sand",
               "iconPath" : "/Applications/Grok Bot.app/Contents/Resources/icon.icns",
               "name" : "Grok Bot"
@@ -114,6 +109,11 @@
               "bundleIdentifier" : "com.zed-industries.delta",
               "iconPath" : "/Applications/Delta.app/Contents/Resources/AppIcon.icns",
               "name" : "Delta"
+            },
+            {
+              "bundleIdentifier" : "com.madda.ghostex.host",
+              "iconPath" : "/Applications/ghostex.app/Contents/Resources/AppIcon.icns",
+              "name" : "Ghostex"
             }
           ],
           "display" : "PA278QV",
