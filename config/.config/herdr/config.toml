@@ -1,8 +1,147 @@
 onboarding = false
+session.resume_agents_on_restore = true
+
+[experimental]
+allow_nested = true
+kitty_graphics = true
+pane_history = true
 
 [ui]
 status_indicators = "symbols"
 
 show_agent_labels_on_pane_borders = true
+tab_bar_right = [
+  { type = "zoom" },
+  # { type = "hostname" },
+  { type = "text", text = "▲" },
+]
+tab_bar_right_separator = " · "
+[ui.sound]
+enabled = true
+path = "sounds/notification.mp3"
+done_path = "sounds/done.mp3"
+request_path = "sounds/request.mp3"
 [ui.toast]
 delivery = "terminal"
+
+[theme.custom] # eldritch
+surface_dim = "#212337" # bg2          — active workspace / agent row background
+panel_bg = "#171928"    # bg           — sidebar / panel background
+surface0 = "#323449"    # bg_highlight — selection (navigate cursor) background
+surface1 = "#3b3e5c"    # raised       — drag / hover (kept above surface_dim)
+overlay0 = "#7081d0"    # comment      — muted text
+overlay1 = "#a48cf2"    # purple       — secondary accent
+text = "#ebfafa"        # fg           — primary text
+subtext0 = "#949ae5"    # dim-fg       — dimmed labels
+accent = "#04d1f9"      # cyan         — highlights, borders, navigation
+mauve = "#a48cf2"       # purple       — git branches
+red = "#f16c75"         # red
+peach = "#f7c67f"       # orange
+yellow = "#f1fc79"      # yellow
+green = "#37f499"       # green
+teal = "#66e4fd"        # bright cyan
+blue = "#9071f4"        # indigo
+
+### keybindings ###
+[keys]
+prefix = "alt+,"
+detach = "prefix+shift+x"
+goto = "prefix+g"
+
+close_workspace = "prefix+shift+w"
+
+rename_workspace = "prefix+shift+e"
+rename_tab = "prefix+e"
+rename_pane = "prefix+p"
+
+new_workspace = "prefix+n"
+new_tab = "prefix+t"
+split_vertical = "prefix+\\"
+
+next_workspace = "alt+i"
+previous_workspace = "alt+u"
+
+next_tab = "alt+l"
+previous_tab = "alt+h"
+
+switch_tab = "alt+1..9"
+cycle_pane_next = "alt+]"
+cycle_pane_previous = "alt+["
+
+focus_agent = "prefix+1..9"
+next_agent = "alt+j"
+previous_agent = "alt+k"
+
+# disabled
+close_tab = ""
+new_worktree = ""
+edit_scrollback = ""
+swap_pane_left = ""
+swap_pane_down = ""
+swap_pane_up = ""
+swap_pane_right = ""
+
+# custom
+[[keys.command]]
+key = "prefix+shift+g"
+description = "launch LazyGit"
+command = "lazygit"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+b"
+description = "launch GitButler"
+command = "but tui"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+d"
+description = "launch Dash"
+command = "gh dash"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+t"
+description = "launch Tuicr"
+command = "tuicr"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+k"
+description = "launch Project Board"
+command = "gh board --owner edheltzel"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+f"
+description = "launch Superfile"
+command = "spf"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+v"
+description = "launch Neovim"
+command = "nvim"
+type = "pane"
+
+[[keys.command]]
+key = "prefix+shift+s"
+description = "launch scratch Terminal"
+command = "exec \"${SHELL:-sh}\""
+type = "popup"
+width = "90%"
+height = "90%"
+
+### plugins ###

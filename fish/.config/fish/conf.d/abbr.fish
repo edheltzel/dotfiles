@@ -104,6 +104,10 @@ if status is-interactive
     abbr --add btd 'but diff'
     abbr --add bcm --set-cursor 'but c -m "%"'
     abbr --add bpr 'but pr'
+    abbr --add bph 'but push'
+    abbr --add bpl 'but pull'
+    abbr --add bsq --set-cursor 'but squash "%"'
+    abbr --add bmv --set-cursor 'but move "%"'
 
     # GH 
     abbr --add ghw 'gh repo view --web'
