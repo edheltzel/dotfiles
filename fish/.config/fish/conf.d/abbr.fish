@@ -39,7 +39,7 @@ if status is-interactive
     abbr --add hup 'herdr update'
 
     # Agent Harnesses
-    abbr --add cc 'claude --dangerously-skip-permissions --model claude-opus-4-8'
+    abbr --add cc 'claude --dangerously-skip-permissions'
     abbr --add cx 'codex --yolo'
     abbr --add gk 'grok --always-approve'
     abbr --add jc jcode
