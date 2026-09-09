@@ -18,10 +18,10 @@
 #
 
 
-OMP           | af87ff | omp         | omp         | update --force
-OMP plugins   | af87ff | omp         | omp         | plugins upgrade
+Herdr         | 5fd7ff | herdr       | herdr       | update
 Pi+extensions | ff69b4 | pi          | -           | update --all
 Jcode         | 5fff87 | jcode       | jcode       | update
 Prime-agent   | 61747f | prime-agent | prime-agent | update --force
-Herdr         | 5fd7ff | herdr       | herdr       | update
 Claude Code   | ff8c42 | claude      | claude      | update
+OMP plugins   | af87ff | omp         | omp         | update --plugins
+OMP           | af87ff | omp         | omp         | update --force
