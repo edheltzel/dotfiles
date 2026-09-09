@@ -22,6 +22,9 @@ from kitty.boss import get_boss
 _CLR_BG = "#171928"  # background
 _CLR_TAB_BG = "#212337"  # inactive tab bg
 _CLR_CYAN = "#04D1F9"  # process segment
+_CLR_ORANGE = "#F7C67F"  # claude
+_CLR_BLUE = "#9071F4"  # pi
+_CLR_PINK = "#F265B5"  # omp
 _CLR_MUTED = "#7081D0"  # separators / dim text
 
 
@@ -38,6 +41,9 @@ def _color(hex_color: str) -> int:
 CLR_BG = _color(_CLR_BG)
 CLR_TAB_BG = _color(_CLR_TAB_BG)
 CLR_CYAN = _color(_CLR_CYAN)
+CLR_ORANGE = _color(_CLR_ORANGE)
+CLR_BLUE = _color(_CLR_BLUE)
+CLR_PINK = _color(_CLR_PINK)
 CLR_MUTED = _color(_CLR_MUTED)
 
 # ---------------------------------------------------------------------------
@@ -61,8 +67,22 @@ PROCESS_ICONS: dict[str, str] = {
     "make": "\U000f0218",  # md_cogs
     "lazygit": "\ue725",  # dev_git
     "yazi": "\U000f024b",  # md_folder
+    "claude": "\uec82",
+    "codex": "\uec81",
+    "pi": "\ue22c",
+    "omp": "\U000f03ff",
+    "jcode": "\U000f0af7",
+    "grok": "\U000f06a9",
+    "opencode": "\U000f06a9",
+    "prime-agent": "\U000f06a9",
+    "herdr": "\U000f06a9",
 }
 DEFAULT_ICON = "\uf489"  # fa_terminal fallback
+PROCESS_COLORS: dict[str, int] = {
+    "claude": CLR_ORANGE,
+    "pi": CLR_BLUE,
+    "omp": CLR_PINK,
+}
 
 
 # ---------------------------------------------------------------------------
@@ -96,7 +116,7 @@ def _draw_status_area(screen: Screen) -> None:
     screen.cursor.bg = CLR_BG
     screen.cursor.fg = CLR_MUTED
     screen.draw(" " * (target_x - screen.cursor.x))
-    screen.cursor.fg = CLR_CYAN
+    screen.cursor.fg = PROCESS_COLORS.get(proc_name, CLR_CYAN)
     screen.draw(text)
 
 

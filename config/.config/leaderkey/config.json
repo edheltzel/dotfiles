@@ -101,13 +101,13 @@
         },
         {
           "iconPath" : "/Applications/Cursor.app",
-          "key" : "r",
+          "key" : "c",
           "label" : "Cursor",
           "type" : "application",
           "value" : "/Applications/Cursor.app"
         },
         {
-          "key" : "c",
+          "key" : "C",
           "label" : "Claude Desktop",
           "type" : "application",
           "value" : "/Applications/Claude.app"

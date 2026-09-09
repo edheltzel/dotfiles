@@ -25,6 +25,11 @@
               "bundleIdentifier" : "org.mozilla.firefox",
               "iconPath" : "/Applications/Firefox.app/Contents/Resources/firefox.icns",
               "name" : "Firefox"
+            },
+            {
+              "bundleIdentifier" : "com.tigervnc.tigervnc",
+              "iconPath" : "/Applications/TigerVNC.app/Contents/Resources/tigervnc.icns",
+              "name" : "TigerVNC"
             }
           ],
           "display" : "PA278QV",
@@ -59,6 +64,11 @@
               "bundleIdentifier" : "net.kovidgoyal.kitty",
               "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
               "name" : "kitty"
+            },
+            {
+              "bundleIdentifier" : "dev.kdrag0n.MacVirt",
+              "iconPath" : "/Applications/OrbStack.app/Contents/Resources/AppIcon.icns",
+              "name" : "OrbStack"
             }
           ],
           "display" : "PA278QV",
@@ -101,11 +111,6 @@
               "name" : "ChatGPT"
             },
             {
-              "bundleIdentifier" : "com.maestro.app",
-              "iconPath" : "/Applications/Maestro.app/Contents/Resources/icon.icns",
-              "name" : "Maestro"
-            },
-            {
               "bundleIdentifier" : "com.anysphere.sand",
               "iconPath" : "/Applications/Grok Bot.app/Contents/Resources/icon.icns",
               "name" : "Grok Bot"
@@ -114,6 +119,16 @@
               "bundleIdentifier" : "com.zed-industries.delta",
               "iconPath" : "/Applications/Delta.app/Contents/Resources/AppIcon.icns",
               "name" : "Delta"
+            },
+            {
+              "bundleIdentifier" : "com.madda.ghostex.host",
+              "iconPath" : "/Applications/ghostex.app/Contents/Resources/AppIcon.icns",
+              "name" : "Ghostex"
+            },
+            {
+              "bundleIdentifier" : "app.omlx",
+              "iconPath" : "/Applications/oMLX.app/Contents/Resources/AppIcon.icns",
+              "name" : "oMLX"
             }
           ],
           "display" : "PA278QV",
@@ -233,11 +248,6 @@
               "bundleIdentifier" : "com.dygmalab.bazecor",
               "iconPath" : "/Applications/Bazecor.app/Contents/Resources/electron.icns",
               "name" : "Bazecor"
-            },
-            {
-              "bundleIdentifier" : "com.tigervnc.tigervnc",
-              "iconPath" : "/Applications/TigerVNC.app/Contents/Resources/tigervnc.icns",
-              "name" : "TigerVNC"
             },
             {
               "bundleIdentifier" : "com.apple.iCal",

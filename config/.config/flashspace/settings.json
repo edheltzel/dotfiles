@@ -25,6 +25,11 @@
       "bundleIdentifier" : "com.raycast.safari-extension",
       "iconPath" : "/Applications/Raycast Companion.app/Contents/Resources/AppIcon.icns",
       "name" : "Raycast Companion"
+    },
+    {
+      "bundleIdentifier" : "com.madda.ghostex.host",
+      "iconPath" : "/Applications/ghostex.app/Contents/Resources/AppIcon.icns",
+      "name" : "Ghostex"
     }
   ],
   "focusDown" : "ctrl+opt+shift+down",
