@@ -39,7 +39,7 @@ if status is-interactive
     abbr --add hup 'herdr update'
 
     # Agent Harnesses
-    abbr --add cc 'claude --dangerously-skip-permissions --model claude-opus-4-8'
+    abbr --add cc 'claude --dangerously-skip-permissions'
     abbr --add cx 'codex --yolo'
     abbr --add gk 'grok --always-approve'
     abbr --add jc jcode
@@ -104,6 +104,10 @@ if status is-interactive
     abbr --add btd 'but diff'
     abbr --add bcm --set-cursor 'but c -m "%"'
     abbr --add bpr 'but pr'
+    abbr --add bph 'but push'
+    abbr --add bpl 'but pull'
+    abbr --add bsq --set-cursor 'but squash "%"'
+    abbr --add bmv --set-cursor 'but move "%"'
 
     # GH 
     abbr --add ghw 'gh repo view --web'

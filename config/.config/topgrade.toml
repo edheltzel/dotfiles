@@ -18,6 +18,9 @@ disable = [
   "pyenv",
   "microsoft_office",
   "antigravity",
+  "claude_code",
+  "claude_code_plugins",
+  "pi",
 ]
 ignore_failures = ["bun_packages"]
 assume_yes = true
