@@ -121,11 +121,6 @@
               "name" : "Delta"
             },
             {
-              "bundleIdentifier" : "com.madda.ghostex.host",
-              "iconPath" : "/Applications/ghostex.app/Contents/Resources/AppIcon.icns",
-              "name" : "Ghostex"
-            },
-            {
               "bundleIdentifier" : "app.omlx",
               "iconPath" : "/Applications/oMLX.app/Contents/Resources/AppIcon.icns",
               "name" : "oMLX"
@@ -230,6 +225,7 @@
           "id" : "99CE3154-9162-471D-A9DC-5C894F35CF19",
           "name" : "Notes",
           "openAppsOnActivation" : false,
+          "shortcut" : "ctrl+opt+shift+4",
           "symbolIconName" : "text.document.fill"
         },
         {
