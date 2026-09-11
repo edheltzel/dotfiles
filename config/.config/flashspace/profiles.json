@@ -30,6 +30,11 @@
               "bundleIdentifier" : "com.tigervnc.tigervnc",
               "iconPath" : "/Applications/TigerVNC.app/Contents/Resources/tigervnc.icns",
               "name" : "TigerVNC"
+            },
+            {
+              "bundleIdentifier" : "com.todoist.mac.Todoist",
+              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
+              "name" : "Todoist"
             }
           ],
           "display" : "PA278QV",
@@ -69,6 +74,16 @@
               "bundleIdentifier" : "dev.kdrag0n.MacVirt",
               "iconPath" : "/Applications/OrbStack.app/Contents/Resources/AppIcon.icns",
               "name" : "OrbStack"
+            },
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
+            },
+            {
+              "bundleIdentifier" : "doc.md-preview",
+              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
+              "name" : "Markdown Preview"
             }
           ],
           "display" : "PA278QV",
@@ -94,11 +109,6 @@
               "bundleIdentifier" : "dev.bb.desktop",
               "iconPath" : "/Applications/bb.app/Contents/Resources/icon.icns",
               "name" : "bb"
-            },
-            {
-              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
-              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
-              "name" : "Cursor"
             },
             {
               "bundleIdentifier" : "com.anthropic.claudefordesktop",
@@ -179,6 +189,11 @@
               "bundleIdentifier" : "com.tldraw.desktop",
               "iconPath" : "/Applications/tldraw offline.app/Contents/Resources/icon.icns",
               "name" : "tldraw offline"
+            },
+            {
+              "bundleIdentifier" : "com.orcaslicer.OrcaSlicer",
+              "iconPath" : "/Applications/OrcaSlicer.app/Contents/Resources/Icon.icns",
+              "name" : "OrcaSlicer"
             }
           ],
           "display" : "PA278QV",
@@ -201,19 +216,9 @@
               "name" : "Notes"
             },
             {
-              "bundleIdentifier" : "doc.md-preview",
-              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
-              "name" : "Markdown Preview"
-            },
-            {
               "bundleIdentifier" : "com.apple.Preview",
               "iconPath" : "/System/Applications/Preview.app/Contents/Resources/AppIcon.icns",
               "name" : "Preview"
-            },
-            {
-              "bundleIdentifier" : "com.todoist.mac.Todoist",
-              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
-              "name" : "Todoist"
             },
             {
               "bundleIdentifier" : "com.apple.reminders",

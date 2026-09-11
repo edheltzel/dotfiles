@@ -209,6 +209,11 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 cask 'affinity'             # Affinity.studio
 cask 'figma'                # Design tool
 
+# Comms/Productivity
+cask 'slack'
+cask 'todoist-app'
+cask 'clickup'
+
 # 3D Modeling & CAD
 cask 'openscad'             # 3D CAD Modeller
 cask 'freecad'              # 3D CAD - open source
