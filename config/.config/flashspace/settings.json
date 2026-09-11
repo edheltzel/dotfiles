@@ -12,7 +12,7 @@
   ],
   "displayMode" : "static",
   "enableFocusManagement" : true,
-  "enableIntegrations" : true,
+  "enableIntegrations" : false,
   "enablePictureInPictureSupport" : true,
   "enableSpaceControl" : true,
   "enableSpaceControlAnimations" : true,

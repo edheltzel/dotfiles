@@ -32,9 +32,9 @@
               "name" : "TigerVNC"
             },
             {
-              "bundleIdentifier" : "com.todoist.mac.Todoist",
-              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
-              "name" : "Todoist"
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
             }
           ],
           "display" : "PA278QV",
@@ -274,6 +274,11 @@
               "bundleIdentifier" : "com.apple.AddressBook",
               "iconPath" : "/System/Applications/Contacts.app/Contents/Resources/Contacts.icns",
               "name" : "Contacts"
+            },
+            {
+              "bundleIdentifier" : "com.tinyspeck.slackmacgap",
+              "iconPath" : "/Applications/Slack.app/Contents/Resources/electron.icns",
+              "name" : "Slack"
             }
           ],
           "display" : "PA278QV",
