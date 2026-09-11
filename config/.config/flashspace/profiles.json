@@ -134,6 +134,11 @@
               "bundleIdentifier" : "app.omlx",
               "iconPath" : "/Applications/oMLX.app/Contents/Resources/AppIcon.icns",
               "name" : "oMLX"
+            },
+            {
+              "bundleIdentifier" : "sh.zeron.app",
+              "iconPath" : "/Applications/Zeron.app/Contents/Resources/zeron.icns",
+              "name" : "Zeron"
             }
           ],
           "display" : "PA278QV",
@@ -224,6 +229,16 @@
               "bundleIdentifier" : "com.apple.reminders",
               "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
               "name" : "Reminders"
+            },
+            {
+              "bundleIdentifier" : "com.todoist.mac.Todoist",
+              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
+              "name" : "Todoist"
+            },
+            {
+              "bundleIdentifier" : "com.clickup.desktop-app",
+              "iconPath" : "/Applications/ClickUp.app/Contents/Resources/icon.icns",
+              "name" : "ClickUp"
             }
           ],
           "display" : "PA278QV",
