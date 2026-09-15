@@ -18,9 +18,35 @@
           "value" : "/Applications/Affinity.app"
         },
         {
+          "key" : "b",
+          "label" : "♭♭",
+          "type" : "application",
+          "value" : "/Applications/bb.app"
+        },
+        {
+          "iconPath" : "/Applications/Cursor.app",
+          "key" : "c",
+          "label" : "Cursor",
+          "type" : "application",
+          "value" : "/Applications/Cursor.app"
+        },
+        {
+          "key" : "C",
+          "label" : "Claude Desktop",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
+        },
+        {
           "key" : "f",
           "type" : "application",
           "value" : "/Applications/Figma.app"
+        },
+        {
+          "iconPath" : "/Applications/Grok Bot.app",
+          "key" : "g",
+          "label" : "Grok Bot",
+          "type" : "application",
+          "value" : "/Applications/Grok Bot.app"
         },
         {
           "key" : "i",
@@ -74,6 +100,24 @@
           "value" : "/Applications/Obsidian.app"
         },
         {
+          "key" : "o",
+          "label" : "Orca 🫍",
+          "type" : "application",
+          "value" : "/Applications/Orca.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Slack.app"
+        },
+        {
+          "iconPath" : "/Applications/super.engineering.app",
+          "key" : "S",
+          "label" : "SuperEngineer🤖",
+          "type" : "application",
+          "value" : "/Applications/super.engineering.app"
+        },
+        {
           "key" : "t",
           "label" : "Todoist",
           "type" : "application",
@@ -93,26 +137,6 @@
           "value" : "/Applications/WezTerm.app"
         },
         {
-          "iconPath" : "/Applications/Zed.app",
-          "key" : "z",
-          "label" : "Zed",
-          "type" : "application",
-          "value" : "/Applications/Zed.app"
-        },
-        {
-          "iconPath" : "/Applications/Cursor.app",
-          "key" : "c",
-          "label" : "Cursor",
-          "type" : "application",
-          "value" : "/Applications/Cursor.app"
-        },
-        {
-          "key" : "C",
-          "label" : "Claude Desktop",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
-        },
-        {
           "iconPath" : "/Applications/ChatGPT.app",
           "key" : "x",
           "label" : "Codex",
@@ -120,30 +144,16 @@
           "value" : "/Applications/ChatGPT.app"
         },
         {
-          "iconPath" : "/Applications/Grok Bot.app",
-          "key" : "g",
-          "label" : "Grok Bot",
+          "iconPath" : "/Applications/Zed.app",
+          "key" : "z",
+          "label" : "Zed",
           "type" : "application",
-          "value" : "/Applications/Grok Bot.app"
+          "value" : "/Applications/Zed.app"
         },
         {
-          "key" : "b",
-          "label" : "♭♭",
+          "key" : "p",
           "type" : "application",
-          "value" : "/Applications/bb.app"
-        },
-        {
-          "key" : "o",
-          "label" : "Orca 🫍",
-          "type" : "application",
-          "value" : "/Applications/Orca.app"
-        },
-        {
-          "iconPath" : "/Applications/super.engineering.app",
-          "key" : "s",
-          "label" : "SuperEngineer🤖",
-          "type" : "application",
-          "value" : "/Applications/super.engineering.app"
+          "value" : "/System/Applications/Preview.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -185,7 +195,7 @@
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
-          "key" : "k",
+          "key" : "D",
           "type" : "folder",
           "value" : "/Users/ed/Documents"
         },
@@ -208,7 +218,7 @@
           "iconPath" : "view.3d",
           "key" : "y",
           "type" : "folder",
-          "value" : "/Users/ed/Documents/3D-CAD"
+          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive/≺ HeltzelMade ≻/3D-CAD"
         }
       ],
       "iconPath" : "/System/Library/CoreServices/Finder.app",

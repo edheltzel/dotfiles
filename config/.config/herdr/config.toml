@@ -12,10 +12,33 @@ status_indicators = "symbols"
 show_agent_labels_on_pane_borders = true
 tab_bar_right = [
   { type = "zoom" },
-  # { type = "hostname" },
-  { type = "text", text = "▲" },
+  { type = "hostname" },
+  { type = "text", text = "▲ HQ" },
 ]
 tab_bar_right_separator = " · "
+
+[ui.sidebar.spaces]
+row_gap = 1
+rows = [["state_icon", { token = "workspace", bold = false }]]
+
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  [
+    "state_icon",
+    { token = "tab", bold = true, dim = false, fg = "#a48cf2" },
+    "pane",
+  ],
+  [
+    "state_text",
+    "agent",
+  ],
+  [
+    { token = "workspace", dim = true, bold = false },
+    "machine",
+  ],
+]
+
 [ui.sound]
 enabled = true
 path = "sounds/notification.mp3"
@@ -23,7 +46,6 @@ done_path = "sounds/done.mp3"
 request_path = "sounds/request.mp3"
 [ui.toast]
 delivery = "terminal"
-
 
 [theme]
 name = "dracula"
@@ -150,3 +172,39 @@ width = "90%"
 height = "90%"
 
 ### plugins ###
+# Plannotator
+[[keys.command]] # Terminal annotations
+key = "prefix+a"
+type = "plugin_action"
+command = "annotate.capture"
+description = "annotate text"
+
+[[keys.command]]
+key = "prefix+shift+a"
+type = "plugin_action"
+command = "annotate.copy-context"
+description = "copy annotations as context"
+
+[[keys.command]]
+key = "prefix+ctrl+a"
+type = "plugin_action"
+command = "annotate.copy-archive"
+description = "copy annotations as context and archive them"
+
+[[keys.command]]
+key = "prefix+m"
+type = "plugin_action"
+command = "annotate.manage"
+description = "manage annotations"
+
+[[keys.command]] # Document review (plannotator-tui)
+key = "prefix+o"
+type = "plugin_action"
+command = "annotate.open"
+description = "review documents in this folder"
+
+[[keys.command]]
+key = "prefix+shift+o"
+type = "plugin_action"
+command = "annotate.last"
+description = "review the agent's last reply"
