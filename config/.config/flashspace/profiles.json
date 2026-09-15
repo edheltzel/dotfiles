@@ -41,7 +41,8 @@
           "id" : "F2FF6C29-DB21-4FE1-BD75-CA0AEA36586C",
           "name" : "HQ",
           "openAppsOnActivation" : false,
-          "shortcut" : "ctrl+opt+shift+0"
+          "shortcut" : "ctrl+opt+shift+0",
+          "symbolIconName" : "bolt.horizontal.fill"
         },
         {
           "apps" : [
@@ -76,11 +77,6 @@
               "name" : "OrbStack"
             },
             {
-              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
-              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
-              "name" : "Cursor"
-            },
-            {
               "bundleIdentifier" : "doc.md-preview",
               "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
               "name" : "Markdown Preview"
@@ -88,10 +84,10 @@
           ],
           "display" : "PA278QV",
           "id" : "2CA1D1D5-0B95-4A17-8191-1DC68C7F1AD6",
-          "name" : "Coding",
+          "name" : "Code",
           "openAppsOnActivation" : false,
           "shortcut" : "ctrl+opt+shift+1",
-          "symbolIconName" : "chevron.left.forwardslash.chevron.right"
+          "symbolIconName" : "apple.terminal.fill"
         },
         {
           "apps" : [
@@ -139,6 +135,11 @@
               "bundleIdentifier" : "sh.zeron.app",
               "iconPath" : "/Applications/Zeron.app/Contents/Resources/zeron.icns",
               "name" : "Zeron"
+            },
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
             }
           ],
           "display" : "PA278QV",

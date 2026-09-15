@@ -149,6 +149,11 @@
           "label" : "Zed",
           "type" : "application",
           "value" : "/Applications/Zed.app"
+        },
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/System/Applications/Preview.app"
         }
       ],
       "iconPath" : "/System/Applications/App Store.app",
@@ -190,7 +195,7 @@
           "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
-          "key" : "k",
+          "key" : "D",
           "type" : "folder",
           "value" : "/Users/ed/Documents"
         },
@@ -213,7 +218,7 @@
           "iconPath" : "view.3d",
           "key" : "y",
           "type" : "folder",
-          "value" : "/Users/ed/Documents/3D-CAD"
+          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive/≺ HeltzelMade ≻/3D-CAD"
         }
       ],
       "iconPath" : "/System/Library/CoreServices/Finder.app",
