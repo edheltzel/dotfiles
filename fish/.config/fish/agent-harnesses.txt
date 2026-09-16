@@ -15,13 +15,14 @@
 # Lines starting with # and blank lines are ignored.
 #
 #Opencode      | 61747f | opencode    | opencode | upgrade
-#Prime-agent   | 61747f | prime-agent | prime-agent | update --force
-#
+#Prime-agent   | 7081d0 | prime-agent | prime-agent | update --force
+#Hermes        | 454759 | prime-agent | prime-agent | update --force
 
 
-Herdr         | 5fd7ff | herdr       | herdr       | update
-Pi+extensions | ff69b4 | pi          | -           | update --all
+Herdr         | a48cf2 | herdr       | herdr       | update
+Pi+extensions | 04d1f9 | pi          | -           | update --all
 Jcode         | 5fff87 | jcode       | jcode       | update
-Claude Code   | ff8c42 | claude      | claude      | update
-OMP plugins   | af87ff | omp         | omp         | update --plugins
-OMP           | af87ff | omp         | omp         | update --force
+Claude Code   | f7c67f | claude      | claude      | update
+OMP plugins   | f265b5 | omp         | omp         | update --plugins
+OMP           | f265b5 | omp         | omp         | update --force
+
