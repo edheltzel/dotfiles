@@ -167,5 +167,9 @@
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [gpg "ssh"]
 	allowedSignersFile = /Users/ed/.ssh/allowed_signers
+[gitbutler]
+	aiOpenAIKeyOption = bringYourOwn
+	aiModelProvider = openrouter
+	aiOpenRouterModelName = ~deepseek/deepseek-v4-flash-latest
 [include]
 	path = ~/.gitconfig.local
