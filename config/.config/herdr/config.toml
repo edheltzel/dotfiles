@@ -34,7 +34,7 @@ rows = [
     "agent",
   ],
   [
-    { token = "workspace", dim = true, bold = false },
+    { token = "workspace", dim = true, bold = false, fg = "#646B80" },
     "machine",
   ],
 ]

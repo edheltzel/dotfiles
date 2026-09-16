@@ -12,6 +12,7 @@ Git configuration with SSH commit/tag signing and per-machine provisioning. Maps
 - `.gitignore_global`
 - Aliases live in `.gitconfig`; list them with `git config --get-regexp '^alias\.'` rather than trusting a copied list.
 - `core.editor` is `nvim` (`.gitconfig:3`).
+- `[gitbutler]` AI settings (provider, model name, no keys) are tracked in `.gitconfig`. GitButler writes them to `~/.gitconfig` directly, which replaces the stow symlink with a plain file and makes `just update` warn. If that happens, diff the two, merge new keys into the tracked file, delete `~/.gitconfig`, and `just stow git`.
 
 ## Local Contracts
 
