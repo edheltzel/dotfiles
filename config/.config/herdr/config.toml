@@ -54,7 +54,7 @@ request_path = "sounds/request.mp3"
 delivery = "herdr"
 
 [ui.toast.herdr]
-position = "bottom-right"
+position = "top-right"
 
 [theme]
 name = "dracula"
@@ -119,7 +119,7 @@ swap_pane_right = ""
 
 # custom
 [[keys.command]]
-key = "prefix+shift+g"
+key = "prefix+shift+l"
 description = "launch LazyGit"
 command = "lazygit"
 type = "popup"
@@ -128,11 +128,17 @@ height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+b"
-description = "launch GitButler"
+description = "launch GitButler TUI"
 command = "but tui"
 type = "popup"
 width = "90%"
 height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+g"
+description = "launch GitButler GUI"
+command = "but gui"
+type = "shell"
 
 [[keys.command]]
 key = "prefix+shift+d"
