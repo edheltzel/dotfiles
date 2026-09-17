@@ -75,8 +75,8 @@
     "metrics": false
   },
   "theme": {
-    "mode": "dark",
-    "light": "Eldritch Dusk",
+    "mode": "light",
+    "light": "Catppuccin Latte",
     "dark": "Eldritch"
   },
   "icon_theme": {

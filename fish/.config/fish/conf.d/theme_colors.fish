@@ -19,6 +19,9 @@ if test -r $current_theme_file
         case rose-pine-dawn
             # Rose Pine Dawn `muted` — canonical "subdued" swatch on the cream base.
             set --global fish_color_autosuggestion 9893a5
+        case eldritch-dusk
+            # Dusk overlay — muted on Pale Shore without disappearing.
+            set --global fish_color_autosuggestion c9cbcd
         case catppuccin-latte
             # Fish highlights package names/arguments as params; keep them bold on Latte
             # so typed command text has enough contrast on the light background.

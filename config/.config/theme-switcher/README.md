@@ -7,6 +7,7 @@ Unified theme switching system for all applications in dotfiles.
 ## Supported Themes
 
 - `eldritch` - Eldritch
+- `eldritch-dusk` - Eldritch Dusk (official light)
 - `tokyonight` - Tokyo Night
 - `rose-pine` - Rosé Pine
 - `rose-pine-dawn` - Rosé Pine Dawn (light theme)
@@ -30,17 +31,17 @@ Unified theme switching system for all applications in dotfiles.
 | bat          | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | btop         | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | lazygit      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| oh-my-posh   | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | Claude Code  | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| Yazi         | ✓        | ✓           | –         | –              | –              | ✓      | –           | –       | –       |
 | herdr‡       | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | gh-dash§     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
+| starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 
-† All four Catppuccin flavors (Latte, Frappé, Macchiato, Mocha) are supported identically. Terminals (Ghostty, WezTerm) and bat use built-in Catppuccin themes; Neovim uses the `catppuccin/nvim` plugin; Kitty and btop use the official port theme files; oh-my-posh and lazygit use generated palettes from the official Catppuccin color spec.
+† All four Catppuccin flavors (Latte, Frappé, Macchiato, Mocha) are supported identically. Terminals (Ghostty, WezTerm) and bat use built-in Catppuccin themes; Neovim uses the `catppuccin/nvim` plugin; Kitty and btop use the official port theme files; lazygit uses generated palettes from the official Catppuccin color spec.
 
-‡ Yazi switches the `dark` flavor in `yazi/theme.toml`; it only ships flavors for Eldritch, Tokyo Night, and Vesper, so other themes are skipped. herdr switches `name` under `[theme]` in `herdr/config.toml` and reloads the running server live — themes without a herdr built-in (Eldritch, Rose Pine Moon, Catppuccin Frappé/Macchiato) use herdr's `terminal` theme, which follows the host terminal palette this switcher just set.
+‡ herdr switches `name` under `[theme]` in `herdr/config.toml` and reloads the running server live — themes without a herdr built-in (Eldritch, Rose Pine Moon, Catppuccin Frappé/Macchiato) use herdr's `terminal` theme, which follows the host terminal palette this switcher just set.
 
 § gh-dash (`gh dash`) has no external theme-file support — colors are an inline `theme.colors` key-value block in `gh-dash/config.yml`. Like lazygit, the switcher keeps a per-theme snippet in `gh-dash/[theme].yml` and injects it, replacing only `theme.colors` and leaving `theme.ui` and every other config section untouched. gh-dash validates strictly, so each snippet carries the full color set. Palettes are derived from the matching Kitty theme for cross-app consistency.
+Starship follows `palette =` in `starship.toml` for every switcher theme, including `eldritch-dusk`. Neovim skips `eldritch-dusk` — `eldritch.nvim` has no light palette yet.
 
 ## Usage
 
@@ -116,6 +117,7 @@ After switching themes:
 - **WezTerm**: Automatically reloads on config change
 - **Neovim**: Restart or `:e` to reload
 - **bat/btop/lazygit**: Changes apply on next launch
+- **starship**: Next prompt
 - **Claude Code**: Restart to apply new theme
 - **gh-dash**: Reads config only at launch — quit and relaunch `gh dash` to apply
 
@@ -125,9 +127,9 @@ To add a new theme:
 
 1. Add theme name to `THEMES` array in `theme-switch.sh`
 2. Add mapping functions for each app (e.g., `get_ghostty_theme()`)
-3. Create lazygit theme snippet in `lazygit/[theme-name].yml`
-4. Create gh-dash color snippet in `gh-dash/[theme-name].yml` (full `theme.colors` block)
-5. Add palette to `starship-ish.omp.json` if using oh-my-posh
+3. Add `[palettes."<name>"]` with green/red/cyan/pink/purple/yellow/orange/comment/foreground in `starship.toml`
+4. Create lazygit theme snippet in `lazygit/[theme-name].yml`
+5. Create gh-dash color snippet in `gh-dash/[theme-name].yml` (full `theme.colors` block)
 6. Ensure theme files exist for apps that need them
 
 ## Troubleshooting

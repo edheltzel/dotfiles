@@ -10,7 +10,7 @@ function M.basename(s)
 end
 
 -- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
-M.name = "Eldritch"
+M.name = "Catppuccin Latte"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
@@ -80,6 +80,31 @@ local themes = {
       inactive_bg = "#DDDFEA",
       inactive_fg = "#5A45C4",
       agent_activity = "#E88A2C",
+    },
+  },
+  ["Eldritch Dusk"] = {
+    colors = {
+      red = "#FB5B66",
+      red2 = "#E14A55",
+      red3 = "#C43A45",
+      purple = "#8A69F7",
+      purple_alt = "#5B73DC",
+      cyan = "#0AD6FF",
+      yellow = "#FFF952",
+      pink = "#FB5BB6",
+      white = "#1E2029",
+      green = "#38FF9F",
+      orange = "#FFAF4D",
+      dark = "#E2E6E8",
+      black = "#F0F3F4",
+    },
+    tab_bar = {
+      bg = "#E2E6E8",
+      active_bg = "#38FF9F",
+      active_fg = "#1E2029",
+      inactive_bg = "#E2E6E8",
+      inactive_fg = "#5B73DC",
+      agent_activity = "#FFAF4D",
     },
   },
   ["rose-pine"] = {

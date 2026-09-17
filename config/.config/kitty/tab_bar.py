@@ -9,7 +9,7 @@ import subprocess
 import time
 from collections import deque
 
-from kitty.fast_data_types import Color, Screen
+from kitty.fast_data_types import Color, Screen, get_options
 from kitty.tab_bar import (
     DrawData,
     ExtraData,
@@ -20,35 +20,40 @@ from kitty.tab_bar import (
 )
 from kitty.boss import get_boss
 
-# ---------------------------------------------------------------------------
-# Eldritch palette
-# ---------------------------------------------------------------------------
-_CLR_BG = "#171928"  # background
-_CLR_TAB_BG = "#212337"  # inactive tab bg
-_CLR_CYAN = "#04D1F9"  # process segment
-_CLR_ORANGE = "#F7C67F"  # claude
-_CLR_BLUE = "#9071F4"  # pi
-_CLR_PINK = "#F265B5"  # omp
-_CLR_MUTED = "#7081D0"  # separators / dim text
+# Accent colors come from the loaded kitty theme (get_options), not a frozen
+# Eldritch hex table. Fallbacks are Cthulhu, used only if options aren't ready.
 
 
-def _color(hex_color: str) -> int:
-    """Convert a hex colour string like '#F265B5' to a kitty colour int."""
-    hex_color = hex_color.lstrip("#")
-    r = int(hex_color[0:2], 16)
-    g = int(hex_color[2:4], 16)
-    b = int(hex_color[4:6], 16)
-    return as_rgb((r << 16) | (g << 8) | b)
+def _hex_color(h: str) -> Color:
+    h = h.lstrip("#")
+    return Color(int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
 
 
-# Pre-compute colour ints once at module load.
-CLR_BG = _color(_CLR_BG)
-CLR_TAB_BG = _color(_CLR_TAB_BG)
-CLR_CYAN = _color(_CLR_CYAN)
-CLR_ORANGE = _color(_CLR_ORANGE)
-CLR_BLUE = _color(_CLR_BLUE)
-CLR_PINK = _color(_CLR_PINK)
-CLR_MUTED = _color(_CLR_MUTED)
+def _opt_color(attr: str, fallback: str) -> Color:
+    try:
+        c = getattr(get_options(), attr, None)
+        if isinstance(c, Color):
+            return c
+    except Exception:
+        pass
+    return _hex_color(fallback)
+
+
+def _rgb(c: Color) -> int:
+    return as_rgb((c.red << 16) | (c.green << 8) | c.blue)
+
+
+def _icon_color(exe: str) -> Color | None:
+    names = {
+        "claude": ("color3", "#F7C67F"),
+        "pi": ("color4", "#9071F4"),
+        "omp": ("color5", "#F265B5"),
+    }
+    spec = names.get(exe)
+    if spec is None:
+        return None
+    return _opt_color(*spec)
+
 
 # ---------------------------------------------------------------------------
 # Process icon mapping (Nerd Font glyphs)
@@ -84,28 +89,21 @@ PROCESS_ICONS: dict[str, str] = {
 DEFAULT_ICON = "\uf489"  # fa_terminal fallback
 ACTIVITY_ICON = "⚡︎"
 _INTERPRETERS = frozenset({"node", "nodejs", "python", "python3", "bun", "ruby"})
-_HARNESSES = frozenset({
-    "claude", "codex", "pi", "omp", "jcode", "grok", "opencode", "prime-agent", "herdr",
-})
+_HARNESSES = frozenset(
+    {
+        "claude",
+        "codex",
+        "pi",
+        "omp",
+        "jcode",
+        "grok",
+        "opencode",
+        "prime-agent",
+        "herdr",
+    }
+)
 _HARNESS_ALIASES = {"claude-code": "claude", "claude_code": "claude"}
-PROCESS_COLORS: dict[str, int] = {
-    "claude": CLR_ORANGE,
-    "pi": CLR_BLUE,
-    "omp": CLR_PINK,
-}
 _PS: tuple[float, dict[int, tuple[int, str]]] = (0.0, {})
-
-
-def _hex_color(h: str) -> Color:
-    h = h.lstrip("#")
-    return Color(int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
-
-
-ICON_COLORS = {
-    "claude": _hex_color("#F7C67F"),
-    "pi": _hex_color("#9071F4"),
-    "omp": _hex_color("#F265B5"),
-}
 
 
 def _sgr_fg(color: Color) -> str:
@@ -280,7 +278,7 @@ def _get_active_process() -> str:
     return _proc_name(tab.active_window)
 
 
-def _draw_status_area(screen: Screen) -> None:
+def _draw_status_area(screen: Screen, draw_data: DrawData) -> None:
     """Draw the active-process strip right-aligned."""
     proc_name = _get_active_process()
     if not proc_name:
@@ -289,12 +287,14 @@ def _draw_status_area(screen: Screen) -> None:
     target_x = screen.columns - len(text)
     if target_x <= screen.cursor.x:
         return
-    screen.cursor.bg = CLR_BG
-    screen.cursor.fg = CLR_MUTED
+    screen.cursor.bg = _rgb(draw_data.default_bg)
+    screen.cursor.fg = _rgb(_opt_color("color8", "#7081D0"))
     screen.draw(" " * (target_x - screen.cursor.x))
-    screen.cursor.fg = PROCESS_COLORS.get(proc_name, CLR_CYAN)
+    accent = _icon_color(proc_name)
+    screen.cursor.fg = _rgb(
+        accent if accent is not None else _opt_color("color4", "#04D1F9")
+    )
     screen.draw(text)
-
 
 
 # ---------------------------------------------------------------------------
@@ -321,11 +321,12 @@ def draw_title(data: dict) -> str:
         return "🐏 Herdr"
     else:
         title = wd
-    icon_color = ICON_COLORS.get(exe)
+    icon_color = _icon_color(exe)
     tab_sgr = getattr(getattr(data.get("fmt"), "fg", None), "tab", None)
     if icon and icon_color is not None and isinstance(tab_sgr, str):
         icon = f"{_sgr_fg(icon_color)}{icon}{tab_sgr}"
     return f"{icon} {title}" if icon else title
+
 
 # ---------------------------------------------------------------------------
 # Main entry point called by kitty for every tab
@@ -347,7 +348,7 @@ def draw_tab(
         draw_data, screen, tab, before, max_title_length, index, is_last, extra_data
     )
     if is_last and not extra_data.for_layout:
-        _draw_status_area(screen)
+        _draw_status_area(screen, draw_data)
     return end
 
 
@@ -358,7 +359,7 @@ if __name__ == "__main__":
     assert _harness_from_comms(["node", "claude", "fish"]) == "claude"
     assert _harness_from_comms(["node", "fish"]) == ""
     assert _harness_from_comms(["codegraph", "node"]) == ""
-    icon_seq = _sgr_fg(ICON_COLORS["omp"])
+    icon_seq = _sgr_fg(_hex_color("#F265B5"))
     restore_seq = _sgr_fg(_hex_color("#37F499"))
     assert icon_seq.startswith("\x1b[38")
     scr = Screen()
@@ -368,5 +369,5 @@ if __name__ == "__main__":
     title_fg = scr.cursor.fg
     assert icon_fg != 0 and title_fg != 0 and icon_fg != title_fg
     miss = Screen()
-    miss.apply_sgr(color_as_sgr(ICON_COLORS["omp"]))
+    miss.apply_sgr(color_as_sgr(_hex_color("#F265B5")))
     assert miss.cursor.fg == 0

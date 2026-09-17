@@ -19,10 +19,10 @@
 #Hermes        | 454759 | prime-agent | prime-agent | update --force
 
 
-Herdr         | a48cf2 | herdr       | herdr       | update
-Pi+extensions | 04d1f9 | pi          | -           | update --all
-Jcode         | 5fff87 | jcode       | jcode       | update
-Claude Code   | f7c67f | claude      | claude      | update
-OMP plugins   | f265b5 | omp         | omp         | update --plugins
-OMP           | f265b5 | omp         | omp         | update --force
+Herdr         | magenta | herdr       | herdr       | update
+Pi+extensions | cyan    | pi          | -           | update --all
+Jcode         | green   | jcode       | jcode       | update
+Claude Code   | yellow  | claude      | claude      | update
+OMP plugins   | magenta | omp         | omp         | update --plugins
+OMP           | magenta | omp         | omp         | update --force
 

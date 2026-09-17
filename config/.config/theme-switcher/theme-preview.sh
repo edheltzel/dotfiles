@@ -36,6 +36,18 @@ show_colors() {
       echo -e "  \033[38;2;241;252;121m███\033[0m yellow"
       echo -e "  \033[38;2;247;198;127m███\033[0m orange"
       ;;
+    eldritch-dusk)
+      echo -e "\033[38;2;138;105;247m████\033[0m Eldritch Dusk"
+      echo ""
+      echo -e "  \033[38;2;240;243;244m███\033[0m bg"
+      echo -e "  \033[38;2;30;32;41m███\033[0m fg"
+      echo -e "  \033[38;2;138;105;247m███\033[0m purple"
+      echo -e "  \033[38;2;56;255;159m███\033[0m green"
+      echo -e "  \033[38;2;10;214;255m███\033[0m cyan"
+      echo -e "  \033[38;2;251;91;102m███\033[0m red"
+      echo -e "  \033[38;2;255;249;82m███\033[0m yellow"
+      echo -e "  \033[38;2;255;175;77m███\033[0m orange"
+      ;;
     rose-pine)
       echo -e "\033[38;2;196;167;231m████\033[0m Rosé Pine"
       echo ""
@@ -227,7 +239,7 @@ show_support() {
 
   # Claude Code support (only themes with custom theme JSON)
   case "$theme" in
-    eldritch|tokyonight|vesper|rose-pine|rose-pine-dawn|rose-pine-moon|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha|dracula|gruvbox)
+    eldritch|eldritch-dusk|tokyonight|vesper|rose-pine|rose-pine-dawn|rose-pine-moon|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha|dracula|gruvbox)
       echo "  ✓ claude"
       ;;
     *)
@@ -244,6 +256,7 @@ if [ -z "$theme" ]; then
   echo "Available themes:"
   echo "  - aura"
   echo "  - eldritch"
+  echo "  - eldritch-dusk"
   echo "  - rose-pine"
   echo "  - rose-pine-dawn"
   echo "  - rose-pine-moon"

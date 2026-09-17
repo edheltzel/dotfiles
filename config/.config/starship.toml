@@ -26,13 +26,16 @@ right_format = "$cmd_duration"
 command_timeout = 500
 scan_timeout = 100
 
+# Set by theme-switcher. Names match theme-switcher/current.
+palette = "catppuccin-latte"
+
 [battery]
 disabled = true
 
 ## start character ##
 [character]
-success_symbol = '[](bold #37F499)'
-error_symbol = '[](bold #F16C75)'
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 
 [shell]
 fish_indicator = ""
@@ -41,9 +44,10 @@ style = "bold fg:white"
 disabled = true
 ## end character ##
 
-## start prompt ##
+## start prompt ## 
 [directory]
-format = "[⚡︎](#04D1F9)[$path]($style)[$read_only]($read_only_style) "
+style = "blue"
+format = "[⚡︎](blue)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…󰿟"
 
@@ -51,7 +55,7 @@ truncation_symbol = "…󰿟"
 # does not also print gitbutler/workspace.
 [git_branch]
 disabled = true
-style = "#F265B5"
+style = "pink"
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
 
@@ -63,31 +67,31 @@ tag_disabled = false
 tag_max_candidates = 10
 tag_symbol = "󰓼 "
 format = "([$tag]($style) )"
-style = "#A48CF2"
+style = "purple"
 
 [git_metrics]
 disabled = false
-added_style = "#37F499"
-deleted_style = "#F16C75"
+added_style = "green"
+deleted_style = "red"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
 style = "white"
 format = "([$all_status]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
-untracked = "️[ ×${count} ](#04D1F9)"
+untracked = "️[ ×${count} ](cyan)"
 stashed = " "
-modified = "[ ×${count} ](#F1FC79)"
+modified = "[ ×${count} ](yellow)"
 staged = "[ ×${count} ](bright-green)"
 deleted = "[ ×${count} ](bright-red)"
-renamed = "[ ×${count} ](#F7C67F)"
+renamed = "[ ×${count} ](orange)"
 
 [cmd_duration]
 disabled = false
 min_time = 1
 format = "[󰔛 $duration]($style)"
 show_milliseconds = true
-style = "#7081BE"
+style = "comment"
 ## end prompt ##
 
 # https://github.com/1stvamp/starship-gitbutler
@@ -96,7 +100,7 @@ style = "#7081BE"
 command = "~/.config/starship/gitbutler-branch.sh"
 when = true
 shell = ["bash", "--noprofile", "--norc"]
-format = "$output "
+format = "[$output](pink) "
 disabled = false
 ignore_timeout = true
 
@@ -120,54 +124,212 @@ disabled = false
 symbol = "󰏗 "
 
 [aws]
-style = "#F7C67F"
+style = "orange"
 format = "[$symbol($version )]($style)"
 symbol = "  "
 
 [deno]
 format = "[$symbol($version )]($style)"
-style = "#7081BE"
+style = "comment"
 symbol = "󱍢 "
 
 [nodejs]
 format = "[$symbol($version )]($style)"
-style = "#37F499"
+style = "green"
 symbol = "󰎙 "
 detect_extensions = []
 
 [bun]
 format = "[$symbol($version )]($style)"
-style = "#EBFAFA"
+style = "foreground"
 symbol = " "
 detect_extensions = []
 
 [golang]
-style = "#04D1F9"
+style = "cyan"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [lua]
-style = "#04D1F9"
+style = "cyan"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [php]
-style = "#A48CF2"
+style = "purple"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [python]
-style = "#F1FC79"
+style = "yellow"
 format = "[$symbol($version )]($style)"
 symbol = " "
 
 [ruby]
-style = "#F16C75"
+style = "red"
 format = "[$symbol($version )]($style)"
 symbol = "󰴭 "
 
 [rust]
-style = "#F7C67F"
+style = "orange"
 format = "[$symbol($version )]($style)"
 symbol = " "
 ## end custom symbols ##
+
+# Role keys match starship styles above. Eldritch uses the official Cthulhu
+# palette; other themes map kitty color2/1/6/5/4/11/3/8/foreground.
+[palettes.eldritch]
+green = "#37f499"
+red = "#f16c75"
+cyan = "#04d1f9"
+pink = "#f265b5"
+blue = "#04d1f9"
+purple = "#a48cf2"
+yellow = "#f1fc79"
+orange = "#f7c67f"
+comment = "#7081d0"
+foreground = "#ebfafa"
+
+[palettes."eldritch-dusk"]
+green = "#38ff9f"
+red = "#fb5b66"
+cyan = "#0ad6ff"
+blue = "#0ad6ff"
+pink = "#fb5bb6"
+purple = "#8a69f7"
+yellow = "#fff952"
+orange = "#ffaf4d"
+comment = "#5b73dc"
+foreground = "#1e2029"
+
+[palettes.tokyonight]
+green = "#9ece6a"
+red = "#f7768e"
+cyan = "#7dcfff"
+blue = "#7dcfff"
+pink = "#bb9af7"
+purple = "#7aa2f7"
+yellow = "#e0af68"
+orange = "#e0af68"
+comment = "#414868"
+foreground = "#c0caf5"
+
+[palettes."rose-pine"]
+green = "#31748f"
+red = "#eb6f92"
+cyan = "#ebbcba"
+blue = "#c4a7e7"
+pink = "#c4a7e7"
+purple = "#9ccfd8"
+yellow = "#f6c177"
+orange = "#f6c177"
+comment = "#6e6a86"
+foreground = "#e0def4"
+
+[palettes."rose-pine-dawn"]
+green = "#286983"
+red = "#b4637a"
+cyan = "#d7827e"
+blue = "#56949f"
+pink = "#907aa9"
+purple = "#56949f"
+yellow = "#ea9d34"
+orange = "#ea9d34"
+comment = "#9893a5"
+foreground = "#575279"
+
+[palettes."rose-pine-moon"]
+green = "#3e8fb0"
+red = "#eb6f92"
+cyan = "#ea9a97"
+blue = "#ea9a97"
+pink = "#c4a7e7"
+purple = "#9ccfd8"
+yellow = "#f6c177"
+orange = "#f6c177"
+comment = "#6e6a86"
+foreground = "#e0def4"
+
+[palettes.vesper]
+green = "#82d9c2"
+red = "#ff8080"
+cyan = "#99ffe4"
+blue = "#99ffe4"
+pink = "#ffcfa8"
+purple = "#99ffe4"
+yellow = "#ffc799"
+orange = "#ffc799"
+comment = "#65737e"
+foreground = "#cccccc"
+
+[palettes."catppuccin-latte"]
+green = "#40a02b"
+red = "#d20f39"
+cyan = "#179299"
+pink = "#ea76cb"
+blue = "#1e66f5"
+purple = "#8839ef"
+yellow = "#df8e1d"
+orange = "#fe640b"
+comment = "#6c6f85"
+foreground = "#4c4f69"
+
+[palettes."catppuccin-frappe"]
+green = "#a6d189"
+red = "#e78284"
+cyan = "#81c8be"
+pink = "#f4b8e4"
+purple = "#8caaee"
+blue = "#8caaee"
+yellow = "#e5c890"
+orange = "#e5c890"
+comment = "#626880"
+foreground = "#c6d0f5"
+
+[palettes."catppuccin-macchiato"]
+green = "#a6da95"
+red = "#ed8796"
+cyan = "#8bd5ca"
+pink = "#f5bde6"
+purple = "#8aadf4"
+blue = "#8aadf4"
+yellow = "#eed49f"
+orange = "#eed49f"
+comment = "#5b6078"
+foreground = "#cad3f5"
+
+[palettes."catppuccin-mocha"]
+green = "#a6e3a1"
+red = "#f38ba8"
+cyan = "#94e2d5"
+pink = "#f5c2e7"
+purple = "#89b4fa"
+blue = "#89b4fa"
+yellow = "#f9e2af"
+orange = "#f9e2af"
+comment = "#585b70"
+foreground = "#cdd6f4"
+
+[palettes.dracula]
+green = "#50fa7b"
+red = "#ff5555"
+cyan = "#8be9fd"
+pink = "#ff79c6"
+blue = "#bd93f9"
+purple = "#bd93f9"
+yellow = "#f1fa8c"
+orange = "#ffb86c"
+comment = "#6272a4"
+foreground = "#f8f8f2"
+
+[palettes.gruvbox]
+green = "#98971a"
+red = "#fb4934"
+cyan = "#689d6a"
+blue = "#458588"
+pink = "#b16286"
+purple = "#458588"
+yellow = "#fabd2f"
+orange = "#d79921"
+comment = "#928374"
+foreground = "#ebdbb2"
