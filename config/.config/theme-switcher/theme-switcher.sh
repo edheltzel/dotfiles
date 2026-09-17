@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("eldritch" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha" "dracula" "gruvbox")
+THEMES=("eldritch" "eldritch-dusk" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha" "dracula" "gruvbox")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -63,6 +63,7 @@ is_installed() {
 get_ghostty_theme() {
   case "$1" in
   eldritch) echo "config-file" ;;
+  eldritch-dusk) echo "config-file" ;;
   tokyonight) echo "TokyoNight Night" ;;
   rose-pine) echo "Rose Pine" ;;
   rose-pine-dawn) echo "Rose Pine Dawn" ;;
@@ -80,6 +81,7 @@ get_ghostty_theme() {
 get_kitty_theme() {
   case "$1" in
   eldritch) echo "eldritch-neoed.conf" ;;
+  eldritch-dusk) echo "eldritch-dusk.conf" ;;
   tokyonight) echo "tokyonight.conf" ;;
   rose-pine) echo "rose-pine.conf" ;;
   rose-pine-dawn) echo "rose-pine-dawn.conf" ;;
@@ -97,6 +99,7 @@ get_kitty_theme() {
 get_wezterm_theme() {
   case "$1" in
   eldritch) echo "Eldritch" ;;
+  eldritch-dusk) echo "Eldritch Dusk" ;;
   tokyonight) echo "Tokyo Night" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
@@ -114,6 +117,7 @@ get_wezterm_theme() {
 get_neovim_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  eldritch-dusk) echo "" ;; # eldritch.nvim has no dusk palette yet
   tokyonight) echo "tokyonight" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
@@ -131,6 +135,7 @@ get_neovim_theme() {
 get_bat_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  eldritch-dusk) echo "eldritch-dusk" ;;
   tokyonight) echo "tokyonight_night" ;; # bat builtin
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
@@ -148,6 +153,7 @@ get_bat_theme() {
 get_btop_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
+  eldritch-dusk) echo "eldritch-dusk" ;;
   tokyonight) echo "tokyonight" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
@@ -162,26 +168,10 @@ get_btop_theme() {
   esac
 }
 
-get_omp_palette() {
-  case "$1" in
-  eldritch) echo "eldritch" ;;
-  tokyonight) echo "tokyonight" ;;
-  rose-pine) echo "rose-pine" ;;
-  rose-pine-dawn) echo "rose-pine-dawn" ;;
-  rose-pine-moon) echo "rose-pine-moon" ;;
-  vesper) echo "vesper" ;;
-  catppuccin-latte) echo "catppuccin-latte" ;;
-  catppuccin-frappe) echo "catppuccin-frappe" ;;
-  catppuccin-macchiato) echo "catppuccin-macchiato" ;;
-  catppuccin-mocha) echo "catppuccin-mocha" ;;
-  dracula) echo "dracula" ;;
-  gruvbox) echo "gruvbox" ;;
-  esac
-}
-
 get_claude_theme() {
   case "$1" in
   eldritch) echo "custom:eldritch" ;;
+  eldritch-dusk) echo "custom:eldritch-dusk" ;;
   tokyonight) echo "custom:tokyonight" ;;
   vesper) echo "custom:vesper" ;;
   rose-pine) echo "custom:rose-pine" ;;
@@ -194,17 +184,6 @@ get_claude_theme() {
   dracula) echo "custom:dracula" ;;
   gruvbox) echo "custom:gruvbox" ;;
   *) echo "" ;; # Skip — no custom theme JSON for this theme
-  esac
-}
-
-# Yazi flavor name (flavors/<name>.yazi). Only themes with a bundled flavor map;
-# everything else returns "" and is skipped.
-get_yazi_theme() {
-  case "$1" in
-  eldritch) echo "eldritch" ;;
-  tokyonight) echo "tokyo-night" ;;
-  vesper) echo "vesper" ;;
-  *) echo "" ;; # No Yazi flavor for this theme
   esac
 }
 
@@ -327,6 +306,12 @@ update_neovim() {
   fi
 
   local nvim_theme=$(get_neovim_theme "$theme")
+  if [[ -z "$nvim_theme" ]]; then
+    SKIPPED_APPS+=("Neovim (no colorscheme for $theme)")
+    warning "Neovim → skipped (no colorscheme for $theme)"
+    return
+  fi
+
   local config_file="$DOTFILES/neovim/.config/nvim/lua/plugins/ui/colorscheme.lua"
 
   sed -i '' "s/colorscheme = \".*\"/colorscheme = \"$nvim_theme\"/" "$config_file"
@@ -381,39 +366,25 @@ update_btop() {
   success "btop → $btop_theme"
 }
 
-update_omp() {
+update_starship() {
   local theme="$1"
 
-  if ! is_installed oh-my-posh; then
-    MISSING_APPS+=("oh-my-posh")
-    info "oh-my-posh → not installed, skipped"
+  if ! is_installed starship; then
+    MISSING_APPS+=("starship")
+    info "starship → not installed, skipped"
     return
   fi
 
-  local omp_palette=$(get_omp_palette "$theme")
-  local config_file="$CONFIG/starship-ish.omp.json"
-
-  if [[ -z "$omp_palette" ]]; then
-    SKIPPED_APPS+=("oh-my-posh (palette $theme not available)")
-    warning "oh-my-posh → skipped (palette not available)"
+  local config_file="$CONFIG/starship.toml"
+  if ! grep -q '^palette = ' "$config_file"; then
+    SKIPPED_APPS+=("starship (no palette = line)")
+    warning "starship → skipped (no palette = line)"
     return
   fi
 
-  if ! is_installed jq; then
-    SKIPPED_APPS+=("oh-my-posh (jq not installed)")
-    warning "oh-my-posh → skipped (jq not installed)"
-    return
-  fi
-
-  # jq for robust JSON edit: swap the active palette under .palettes.template
-  jq --arg palette "$omp_palette" '.palettes.template = $palette' "$config_file" >"$config_file.tmp" &&
-    mv "$config_file.tmp" "$config_file"
-
-  # oh-my-posh caches the parsed config; clear it so the new palette applies on next prompt
-  oh-my-posh cache clear &>/dev/null || true
-
-  UPDATED_APPS+=("oh-my-posh → $omp_palette palette")
-  success "oh-my-posh → $omp_palette palette"
+  sed -i '' "s/^palette = .*/palette = \"$theme\"/" "$config_file"
+  UPDATED_APPS+=("starship → $theme palette")
+  success "starship → $theme palette"
 }
 
 update_lazygit() {
@@ -491,31 +462,6 @@ update_claude() {
   sed -i '' "s|\"theme\": \"[^\"]*\"|\"theme\": \"$claude_theme\"|" "$real_path"
   UPDATED_APPS+=("claude → $claude_theme")
   success "claude → $claude_theme"
-}
-
-update_yazi() {
-  local theme="$1"
-
-  if ! is_installed yazi; then
-    MISSING_APPS+=("Yazi")
-    info "Yazi → not installed, skipped"
-    return
-  fi
-
-  local yazi_theme=$(get_yazi_theme "$theme")
-  local config_file="$CONFIG/yazi/theme.toml"
-  local flavor_dir="$CONFIG/yazi/flavors/${yazi_theme}.yazi"
-
-  if [[ -z "$yazi_theme" || ! -d "$flavor_dir" ]]; then
-    SKIPPED_APPS+=("Yazi (no flavor for $theme)")
-    warning "Yazi → skipped (no flavor for $theme)"
-    return
-  fi
-
-  # Swap the active dark flavor in [flavor]
-  sed -i '' -E "s|^(dark[[:space:]]*=[[:space:]]*).*|\1\"$yazi_theme\"|" "$config_file"
-  UPDATED_APPS+=("Yazi → $yazi_theme")
-  success "Yazi → $yazi_theme"
 }
 
 update_herdr() {
@@ -683,10 +629,9 @@ apply_theme() {
   update_neovim "$theme"
   update_bat "$theme"
   update_btop "$theme"
-  update_omp "$theme"
+  update_starship "$theme"
   update_lazygit "$theme"
   update_claude "$theme"
-  update_yazi "$theme"
   update_herdr "$theme"
   update_ghdash "$theme"
 
@@ -704,7 +649,7 @@ apply_theme() {
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""
-    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, Yazi, gh-dash"
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, gh-dash"
   fi
 }
 
@@ -755,6 +700,7 @@ case "${1:-}" in
     --height=50% \
     --reverse \
     --border \
+    --color=16 \
     --header="Current: $current_theme" \
     --prompt="Select theme > " \
     --preview="$THEMES_DIR/theme-preview.sh {1}" \

@@ -242,7 +242,7 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
 
 - **config** (`config/`) - `~/.config` for 20+ applications, so they don't clutter the repo root. Currently: bat, borders, btop, fastfetch, gh, gh-changelog, gh-dash, ghostty, herdr, jj, karabiner, kitty, lazygit, leaderkey, markdownlint-cli2, raycast, starship, superfile, theme-switcher, topgrade, wezterm, zed.
   - **Terminals**: WezTerm (primary, modular Lua, see [its README](./config/.config/wezterm/README.md)), Kitty, Ghostty.
-  - **Theme switcher**: run `theme` for an fzf picker with preview, `theme <name>` to switch directly, `theme --list` / `--current`. Twelve themes (Eldritch, Tokyo Night, Rosé Pine x3, Vesper, Catppuccin x4, Dracula, Gruvbox) applied across Ghostty, Kitty, WezTerm, Neovim, bat, btop, lazygit, oh-my-posh, Claude Code, Yazi, herdr, and gh-dash. Details in [theme-switcher/README.md](./config/.config/theme-switcher/README.md).
+  - **Theme switcher**: run `theme` for an fzf picker with preview, `theme <name>` to switch directly, `theme --list` / `--current`. Thirteen themes (Eldritch, Eldritch Dusk, Tokyo Night, Rosé Pine x3, Vesper, Catppuccin x4, Dracula, Gruvbox) applied across Ghostty, Kitty, WezTerm, Neovim, bat, btop, starship, lazygit, Claude Code, herdr, and gh-dash. Neovim skips Eldritch Dusk. Details in [theme-switcher/README.md](./config/.config/theme-switcher/README.md).
   - **Keyboard**: `leaderkey` (current) and `karabiner` (legacy TypeScript config, see [its README](./config/.config/karabiner/README.md)).
   - **Editors**: `zed` (Vim mode), kept for occasional use.
 

@@ -5,8 +5,7 @@
 BUTLER_SYMBOL="⧓"
 GIT_SYMBOL="🌿"
 
-# Colour codes. Empty by default so sourced tests see plain text; main() fills
-# them in for the live prompt (see setup_colors).
+# Colour codes stay empty; starship.toml paints [$output](pink).
 SYM_COLOR=""
 TEXT_COLOR=""
 RESET=""
@@ -43,68 +42,6 @@ render_git() {
   printf '%s%s %s%s' "$TEXT_COLOR" "$GIT_SYMBOL" "$name" "$RESET"
 }
 
-# Queries the terminal background via OSC 11 and prints "dark" or "light" based
-# on its luminance. Prints nothing if the terminal doesn't answer. Reads/writes
-# the controlling terminal directly so it never touches the captured stdout.
-query_bg_mode() {
-  [ -e /dev/tty ] || return 0
-  local old resp hex r g b lum
-  old="$(stty -g < /dev/tty 2>/dev/null)" || return 0
-  stty raw -echo < /dev/tty 2>/dev/null
-  printf '\e]11;?\a' > /dev/tty 2>/dev/null
-  IFS= read -r -d '' -t 0.1 resp < /dev/tty 2>/dev/null
-  stty "$old" < /dev/tty 2>/dev/null
-  case "$resp" in
-    *rgb:*) ;;
-    *) return 0 ;;
-  esac
-  hex="${resp#*rgb:}"
-  r="${hex%%/*}"; hex="${hex#*/}"
-  g="${hex%%/*}"; hex="${hex#*/}"
-  b="${hex%%[!0-9a-fA-F]*}"
-  r=$((16#${r:-0})); g=$((16#${g:-0})); b=$((16#${b:-0}))
-  [ "$r" -gt 255 ] && r=$((r>>8))
-  [ "$g" -gt 255 ] && g=$((g>>8))
-  [ "$b" -gt 255 ] && b=$((b>>8))
-  lum=$(( (r*299 + g*587 + b*114) / 1000 ))
-  if [ "$lum" -lt 128 ]; then printf 'dark'; else printf 'light'; fi
-}
-
-# Resolves the terminal background mode, cached per-tty for the session. An
-# explicit GITBUTLER_PROMPT_MODE (light|dark) wins and skips the query.
-detect_bg_mode() {
-  case "${GITBUTLER_PROMPT_MODE:-}" in
-    light|dark) printf '%s' "$GITBUTLER_PROMPT_MODE"; return 0 ;;
-  esac
-  local root tty_id cache mode
-  root="${XDG_CACHE_HOME:-$HOME/.cache}/starship-gitbutler"
-  tty_id="$(ps -o tty= -p $$ 2>/dev/null | tr -d ' /')"
-  [ -z "$tty_id" ] && tty_id="unknown"
-  cache="$root/mode-$tty_id"
-  if { IFS= read -r mode < "$cache"; } 2>/dev/null && [ -n "$mode" ]; then
-    printf '%s' "$mode"; return 0
-  fi
-  mode="$(query_bg_mode)"
-  [ -z "$mode" ] && mode="dark"
-  { mkdir -p "$root" && printf '%s' "$mode" > "$cache"; } 2>/dev/null
-  printf '%s' "$mode"
-}
-
-# Eldritch pink for the ⧓ and stack names, matching [git_branch] in starship.toml.
-# Dark: #F265B5. Light: #E63F9B (eldritch-light ansi magenta).
-setup_colors() {
-  RESET=$'\e[0m'
-  case "$(detect_bg_mode)" in
-    light)
-      SYM_COLOR=$'\e[38;2;230;63;155m'
-      TEXT_COLOR=$'\e[38;2;230;63;155m'
-      ;;
-    *)
-      SYM_COLOR=$'\e[38;2;242;101;181m'
-      TEXT_COLOR=$'\e[38;2;242;101;181m'
-      ;;
-  esac
-}
 
 # Runs `but status --json`, bounded by a timeout so a hung `but` can't
 # stall the prompt. Override this function in tests to stub `but`.
@@ -125,7 +62,7 @@ cached_butler() {
 
   # GNU coreutils uses `stat -c %Y`; BSD/macOS uses `stat -f %m`.
   mtime="$(stat -c %Y "$refresh" 2>/dev/null || stat -f %m "$refresh" 2>/dev/null)"
-  cache_root="${XDG_CACHE_HOME:-$HOME/.cache}/starship-gitbutler"
+  cache_root="${XDG_CACHE_HOME:-$HOME/.cache}/starship-gitbutler-plain"
   key="$(printf '%s' "$gbdir" | cksum | cut -d' ' -f1)"
   cache_file="$cache_root/$key"
 
@@ -146,7 +83,6 @@ cached_butler() {
 
 main() {
   git rev-parse --is-inside-work-tree >/dev/null 2>&1 || return 0
-  setup_colors
   local gb
   gb="$(gitbutler_dir)"
   if [ -n "$gb" ]; then

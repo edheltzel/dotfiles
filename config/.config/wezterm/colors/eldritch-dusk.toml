@@ -1,0 +1,83 @@
+# Eldritch Dusk (official light)
+# https://github.com/eldritch-theme/eldritch
+[colors]
+ansi = [
+  '#c9cbcd',
+  '#fb5b66',
+  '#38ff9f',
+  '#fff952',
+  '#8a69f7',
+  '#fb5bb6',
+  '#0ad6ff',
+  '#1e2029',
+]
+background = '#f0f3f4'
+brights = [
+  '#5b73dc',
+  '#fb5b66',
+  '#38ff9f',
+  '#ffaf4d',
+  '#8a69f7',
+  '#fb5bb6',
+  '#0ad6ff',
+  '#1e2029',
+]
+compose_cursor = '#fff952'
+cursor_bg = '#38ff9f'
+cursor_border = '#0ad6ff'
+cursor_fg = '#f0f3f4'
+foreground = '#1e2029'
+scrollbar_thumb = '#38ff9f'
+selection_bg = 'rgba(88.6% 90.2% 91.0% 75%)'
+selection_fg = 'rgba(0% 0% 0% 0%)'
+split = '#e2e6e8'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#e2e6e8'
+
+[colors.tab_bar.active_tab]
+bg_color = '#38ff9f'
+fg_color = '#1e2029'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#e2e6e8'
+fg_color = '#5b73dc'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#d5d9db'
+fg_color = '#1e2029'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#e2e6e8'
+fg_color = '#1e2029'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#38ff9f'
+fg_color = '#1e2029'
+intensity = 'Normal'
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+author = 'jacobrreed'
+name = 'Eldritch Dusk'
+origin_url = 'https://github.com/eldritch-theme/eldritch'
