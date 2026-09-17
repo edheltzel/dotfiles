@@ -1,0 +1,54 @@
+theme = "catppuccin-latte"
+appearance = "system"
+theme_dark = "catppuccin-mocha"
+theme_light = "catppuccin-latte"
+
+diff_view = "side-by-side"
+ignore_whitespace = false
+commit_order = "descending"
+initial_commit_selection = "all"
+show_file_list = true
+compact_folders = false
+show_pr_checks = false
+show_pr_comments = true
+show_commits = true
+show_reviewed = true
+mouse = true
+leader = ","
+editor = "nvim"
+comment_vim = false
+q_quits = false
+comment_tab_width = 2
+wrap = false
+relative_line_numbers = false
+cursor_line = true
+search_highlight = true
+transparent_background = true
+scroll_offset = 5
+no_update_check = false
+review_watch_interval_ms = 1000
+single_file_view = false
+username = "user"
+diff_watch_interval_ms = 0
+
+backend = "libgit2"
+
+comment_types = [
+  { id = "note", label = "question", definition = "ask for clarification", color = "yellow" },
+  { id = "suggestion", definition = "possible improvements" },
+  { id = "issue", definition = "problems to fix" },
+  { id = "praise", definition = "positive feedback" },
+  { id = "nit", label = "nitpick", definition = "small optional tweaks", color = "#d19a66" },
+]
+
+[forge]
+comment_type_prefix = true
+
+[export]
+intro = "I reviewed your code and have the following comments. Please address them."
+scope_line = true
+pr_metadata = true
+comments_header = "## Local tuicr Comments"
+remote_comments_header = "## Existing GitHub Comments"
+legend = true
+session_header = true

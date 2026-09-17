@@ -26,16 +26,21 @@ row_gap = 0
 rows = [
   [
     "state_icon",
-    { token = "tab", bold = true, dim = false, fg = "#a48cf2" },
-    "pane",
+    "workspace",
+    "tab",
   ],
   [
-    "state_text",
+    { token = "machine", fg = "#fff", rules = [
+      { equals = "Local", fg = "#f55" },
+      { equals = "Fedora", ignore_case = true, fg = "#51a2da" },
+    ] },
     "agent",
   ],
   [
-    { token = "workspace", dim = true, bold = false, fg = "#646B80" },
-    "machine",
+    { token = "$load", fg = "#fff", rules = [
+      { gt = 80, fg = "#f55", bold = true },
+      { gt = 50, fg = "#fc0" },
+    ] },
   ],
 ]
 
@@ -44,8 +49,12 @@ enabled = true
 path = "sounds/notification.mp3"
 done_path = "sounds/done.mp3"
 request_path = "sounds/request.mp3"
+
 [ui.toast]
-delivery = "terminal"
+delivery = "herdr"
+
+[ui.toast.herdr]
+position = "bottom-right"
 
 [theme]
 name = "dracula"
