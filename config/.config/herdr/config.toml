@@ -62,6 +62,7 @@ auto_switch = false
 
 [theme.custom]
 panel_bg = "white"
+surface_dim = "#ccd0da" # — active workspace / agent row background
 
 # eldritch
 # surface_dim = "#212337" # — active workspace / agent row background

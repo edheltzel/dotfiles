@@ -3,7 +3,7 @@ confirm-close-surface      = false
 shell-integration-features = true
 alpha-blending             = linear-corrected
 
-#theme = Rose Pine Dawn
+#theme = Dracula
 cursor-style            = block
 term                    = xterm-256color
 unfocused-split-fill    = "black"
