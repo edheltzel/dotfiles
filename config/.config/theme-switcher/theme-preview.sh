@@ -203,49 +203,30 @@ show_colors() {
 
 show_support() {
   local theme="$1"
-  
+
   echo "Application Support:"
   echo ""
-  
-  # Full support
-  echo "  ✓ ghostty"
-  echo "  ✓ wezterm"
-  echo "  ✓ neovim"
-  echo "  ✓ lazygit"
 
-  # Conditional support
-  case "$theme" in
-    aura)
-      echo "  ✓ bat"
-      echo "  ⚡ kitty (eldritch fallback)"
-      echo "  ⚡ btop (eldritch fallback)"
-      ;;
-    tokyonight|tokyonight-moon)
-      echo "  ✓ bat"
-      echo "  ✓ kitty"
-      echo "  ✓ btop"
-      ;;
-    vesper)
-      echo "  ✓ bat (custom)"
-      echo "  ✓ kitty (custom)"
-      echo "  ✓ btop (custom)"
-      ;;
-    *)
-      echo "  ✓ bat"
-      echo "  ✓ kitty"
-      echo "  ✓ btop"
-      ;;
-  esac
-
-  # Claude Code support (only themes with custom theme JSON)
-  case "$theme" in
-    eldritch|eldritch-dusk|tokyonight|vesper|rose-pine|rose-pine-dawn|rose-pine-moon|catppuccin-latte|catppuccin-frappe|catppuccin-macchiato|catppuccin-mocha|dracula|gruvbox)
-      echo "  ✓ claude"
-      ;;
-    *)
-      echo "  ✗ claude (no theme JSON)"
-      ;;
-  esac
+  echo "  ✓   ghostty"
+  echo "  ✓   kitty"
+  echo "  ✓   wezterm"
+  if [[ "$theme" == "eldritch-dusk" ]]; then
+    echo "  ✗   neovim (no dusk palette)"
+  else
+    echo "  ✓   neovim"
+  fi
+  echo "  ✓     bat"
+  echo "  ✓     btop"
+  echo "  ✓   starship"
+  echo "  ✓   lazygit"
+  echo "  ✓   claude"
+  echo "  ✓ 󰳆  herdr"
+  echo "  ✓   gh-dash"
+  if [[ -f "$HOME/.dotfiles/config/.config/superfile/theme/${theme}.toml" ]]; then
+    echo "  ✓ 󰉋  superfile"
+  else
+    echo "  ✗ 󰉋  superfile"
+  fi
 }
 
 # Main
@@ -254,14 +235,12 @@ if [ -z "$theme" ]; then
   echo "No theme specified"
   echo ""
   echo "Available themes:"
-  echo "  - aura"
   echo "  - eldritch"
   echo "  - eldritch-dusk"
+  echo "  - tokyonight"
   echo "  - rose-pine"
   echo "  - rose-pine-dawn"
   echo "  - rose-pine-moon"
-  echo "  - tokyonight"
-  echo "  - tokyonight-moon"
   echo "  - vesper"
   echo "  - catppuccin-latte"
   echo "  - catppuccin-frappe"

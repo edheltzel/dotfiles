@@ -627,7 +627,7 @@ list_themes() {
   echo "Available themes:"
   for theme in "${THEMES[@]}"; do
     if [[ "$theme" == "$current_theme" ]]; then
-      echo "  ● $theme (current)"
+      echo "   $theme"
     else
       echo "  - $theme"
     fi
@@ -723,7 +723,7 @@ case "${1:-}" in
   theme_list=""
   for theme in "${THEMES[@]}"; do
     if [[ "$theme" == "$current_theme" ]]; then
-      theme_list+="$theme (current)\n"
+      theme_list+="$theme \n"
     else
       theme_list+="$theme\n"
     fi
@@ -734,7 +734,7 @@ case "${1:-}" in
     --reverse \
     --border \
     --color=16 \
-    --header="Current: $current_theme" \
+    --header=" $current_theme" \
     --prompt="Select theme > " \
     --preview="$THEMES_DIR/theme-preview.sh {1}" \
     --preview-window=right:60% \

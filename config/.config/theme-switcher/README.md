@@ -48,7 +48,7 @@ Starship follows `palette =` in `starship.toml` for every switcher theme, includ
 ## Usage
 
 ```bash
-# Interactive picker with preview (shows current theme with ● indicator)
+# Interactive picker with preview (shows current theme with )
 theme
 
 # Direct switch to a specific theme
@@ -57,14 +57,14 @@ theme rose-pine-moon
 # Show current theme
 theme --current
 
-# List available themes (shows current theme with ● indicator)
+# List available themes (shows current theme with )
 theme --list
 
 # Show help
 theme --help
 ```
 
-The interactive picker and `--list` command both show the currently active theme with a ● indicator.
+The interactive picker and `--list` command both show the currently active theme with .
 
 ## Files
 
