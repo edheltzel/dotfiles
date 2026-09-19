@@ -204,6 +204,15 @@ get_herdr_theme() {
   esac
 }
 
+get_superfile_theme() {
+  local name="$1"
+  if [[ -f "$CONFIG/superfile/theme/${name}.toml" ]]; then
+    echo "$name"
+  else
+    echo ""
+  fi
+}
+
 #------------------------------------------------------------------------------
 # Update Functions
 #------------------------------------------------------------------------------
@@ -537,6 +546,29 @@ update_ghdash() {
   success "gh-dash → $theme"
 }
 
+update_superfile() {
+  local theme="$1"
+
+  if ! is_installed spf && ! is_installed superfile; then
+    MISSING_APPS+=("superfile")
+    info "superfile → not installed, skipped"
+    return
+  fi
+
+  local spf_theme=$(get_superfile_theme "$theme")
+
+  if [[ -z "$spf_theme" ]]; then
+    SKIPPED_APPS+=("superfile (theme $theme not available)")
+    warning "superfile → skipped (theme not available)"
+    return
+  fi
+
+  sed -i '' "s/^theme = \".*\"/theme = \"$spf_theme\"/" "$CONFIG/superfile/config.toml"
+
+  UPDATED_APPS+=("superfile → $spf_theme")
+  success "superfile → $spf_theme"
+}
+
 reload_ghostty() {
   # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
@@ -634,6 +666,7 @@ apply_theme() {
   update_claude "$theme"
   update_herdr "$theme"
   update_ghdash "$theme"
+  update_superfile "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
@@ -649,7 +682,7 @@ apply_theme() {
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""
-    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, gh-dash"
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, gh-dash, Superfile"
   fi
 }
 
