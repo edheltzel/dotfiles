@@ -1,0 +1,25 @@
+[git]
+pull_predefined = false
+repos = [
+  "/Users/ed/Developer/TUIApps/herdr/",
+  "/Users/ed/Developer/AI/Skills/Beagle/",
+  "/Users/ed/Developer/AI/Skills/claude-cybersecurity/",
+  "/Users/ed/Developer/AI/Skills/claude-seo/",
+  "/Users/ed/Developer/AI/Skills/claude-obsidian/",
+  "/Users/ed/Developer/AI/Skills/MattPocock/",
+  "/Users/ed/Developer/AI/Skills/CompoundEngineering/",
+  "/Users/ed/Developer/AI/Skills/DoxFramework/",
+]
+# Custom Pre-commands
+# [pre_commands]
+
+# Custom commands
+[commands]
+"Update Agent Harnesses" = "fish --interactive --command aup"
+"LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa &>/dev/null; and echo 'LazyVim Plugins Update Complete'"
+"Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa' &>/dev/null; and echo 'Treesitter Update Complete'"
+"Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
+
+# Custom Post-commands
+[post_commands]
+"Brew - Cleanup" = "brew cleanup --prune=all &>/dev/null; and echo 'Brew Cleanup Complete'"
