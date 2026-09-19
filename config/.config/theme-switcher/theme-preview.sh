@@ -207,19 +207,46 @@ show_support() {
   echo "Application Support:"
   echo ""
 
-  echo "  ✓   ghostty"
-  echo "  ✓   kitty"
+  echo "  ✓   ghostty"
+  echo "  ✓ 󰄛  kitty"
   echo "  ✓   wezterm"
   if [[ "$theme" == "eldritch-dusk" ]]; then
     echo "  ✗   neovim (no dusk palette)"
   else
     echo "  ✓   neovim"
   fi
-  echo "  ✓     bat"
-  echo "  ✓     btop"
+  echo "  ✓ 󰭟  bat"
+  echo "  ✓ 󰄧  btop"
   echo "  ✓   starship"
   echo "  ✓   lazygit"
   echo "  ✓   claude"
+  if [[ -f "$HOME/.pi/agent/themes/${theme}.json" ]] || [[ -f "$HOME/.dotfiles/config/.config/theme-switcher/pi/${theme}.json" ]]; then
+    echo "  ✓   pi"
+  else
+    echo "  ✗   pi"
+  fi
+  case "$theme" in
+  eldritch)
+    if [[ -f "$HOME/.omp/agent/themes/eldritch-cthulhu.json" ]]; then
+      echo "  ✓ 󰏿  omp"
+    else
+      echo "  ✗ 󰏿  omp"
+    fi
+    ;;
+  eldritch-dusk)
+    if [[ -f "$HOME/.omp/agent/themes/eldritch-dusk.json" ]]; then
+      echo "  ✓ 󰏿  omp"
+    else
+      echo "  ✗ 󰏿  omp"
+    fi
+    ;;
+  tokyonight | rose-pine | rose-pine-moon | catppuccin-latte | catppuccin-frappe | catppuccin-macchiato | catppuccin-mocha | dracula | gruvbox)
+    echo "  ✓ 󰏿  omp"
+    ;;
+  *)
+    echo "  ✗ 󰏿  omp"
+    ;;
+  esac
   echo "  ✓ 󰳆  herdr"
   echo "  ✓   gh-dash"
   if [[ -f "$HOME/.dotfiles/config/.config/superfile/theme/${theme}.toml" ]]; then

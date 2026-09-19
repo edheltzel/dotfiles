@@ -11,11 +11,12 @@
 # 0xffa48cf2 = #a48cf2
 # 0xfff16c75 = #f16c75
 # 0xfff1fc79 = #f1fc79
+# 0xffbd93f9 = #bd93f9
 
 options=(
   style=round
   width=5.0
-  active_color=0xffa48cf2
+  active_color=0xffbd93f9
   inactive_color=0xff212337
 )
 

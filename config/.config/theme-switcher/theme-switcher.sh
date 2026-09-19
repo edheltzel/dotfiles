@@ -213,6 +213,38 @@ get_superfile_theme() {
   fi
 }
 
+get_pi_theme() {
+  local name="$1"
+  if [[ -f "$THEMES_DIR/pi/${name}.json" ]] || [[ -f "$HOME/.pi/agent/themes/${name}.json" ]]; then
+    echo "$name"
+  else
+    echo ""
+  fi
+}
+
+get_omp_theme() {
+  local mapped=""
+  case "$1" in
+  eldritch) mapped="eldritch-cthulhu" ;;
+  eldritch-dusk) mapped="eldritch-dusk" ;;
+  tokyonight) mapped="dark-tokyo-night" ;;
+  rose-pine | rose-pine-moon) mapped="dark-rose-pine" ;;
+  catppuccin-latte) mapped="light-catppuccin" ;;
+  catppuccin-frappe | catppuccin-macchiato | catppuccin-mocha) mapped="dark-catppuccin" ;;
+  dracula) mapped="dark-dracula" ;;
+  gruvbox) mapped="dark-gruvbox" ;;
+  esac
+  if [[ -z "$mapped" ]]; then
+    echo ""
+    return
+  fi
+  if [[ "$mapped" == eldritch-* && ! -f "$HOME/.omp/agent/themes/${mapped}.json" ]]; then
+    echo ""
+    return
+  fi
+  echo "$mapped"
+}
+
 #------------------------------------------------------------------------------
 # Update Functions
 #------------------------------------------------------------------------------
@@ -569,6 +601,92 @@ update_superfile() {
   success "superfile → $spf_theme"
 }
 
+update_pi() {
+  local theme="$1"
+
+  if ! is_installed pi; then
+    MISSING_APPS+=("pi")
+    info "pi → not installed, skipped"
+    return
+  fi
+
+  local pi_theme
+  pi_theme=$(get_pi_theme "$theme")
+  local config_file="$HOME/.pi/agent/settings.json"
+
+  if [[ -z "$pi_theme" ]]; then
+    SKIPPED_APPS+=("pi (theme $theme not available)")
+    warning "pi → skipped (theme not available)"
+    return
+  fi
+
+  if [[ ! -e "$config_file" ]]; then
+    SKIPPED_APPS+=("pi (settings.json not found)")
+    warning "pi → skipped (settings.json not found)"
+    return
+  fi
+
+  mkdir -p "$HOME/.pi/agent/themes"
+  if [[ -f "$THEMES_DIR/pi/${pi_theme}.json" ]]; then
+    cp "$THEMES_DIR/pi/${pi_theme}.json" "$HOME/.pi/agent/themes/${pi_theme}.json"
+  fi
+
+  local real_path
+  if [[ -L "$config_file" ]]; then
+    real_path=$(readlink "$config_file")
+    [[ "$real_path" != /* ]] && real_path="$(cd "$(dirname "$config_file")" && cd "$(dirname "$real_path")" && pwd)/$(basename "$real_path")"
+  else
+    real_path="$config_file"
+  fi
+
+  if ! command -v python3 &>/dev/null; then
+    SKIPPED_APPS+=("pi (python3 not found)")
+    warning "pi → skipped (python3 not found)"
+    return
+  fi
+
+  if ! python3 -c '
+import json, pathlib, sys
+path = pathlib.Path(sys.argv[1])
+theme = sys.argv[2]
+data = json.loads(path.read_text())
+if not isinstance(data, dict):
+    raise SystemExit("settings.json is not an object")
+data["theme"] = theme
+path.write_text(json.dumps(data, indent=2) + "\n")
+' "$real_path" "$pi_theme" 2>/dev/null; then
+    SKIPPED_APPS+=("pi (could not update settings.json)")
+    warning "pi → skipped (could not update settings.json)"
+    return
+  fi
+  UPDATED_APPS+=("pi → $pi_theme")
+  success "pi → $pi_theme"
+}
+
+update_omp() {
+  local theme="$1"
+
+  if ! is_installed omp; then
+    MISSING_APPS+=("omp")
+    info "omp → not installed, skipped"
+    return
+  fi
+
+  local omp_theme
+  omp_theme=$(get_omp_theme "$theme")
+  if [[ -z "$omp_theme" ]]; then
+    SKIPPED_APPS+=("omp (theme $theme not available)")
+    warning "omp → skipped (theme not available)"
+    return
+  fi
+
+  # Both slots: omp picks dark/light from terminal luminance, so one slot would no-op.
+  omp config set theme.dark "$omp_theme"
+  omp config set theme.light "$omp_theme"
+  UPDATED_APPS+=("omp → $omp_theme")
+  success "omp → $omp_theme"
+}
+
 reload_ghostty() {
   # Ghostty requires manual reload - show message if running
   if ps aux | grep -q "[g]hostty"; then
@@ -664,6 +782,8 @@ apply_theme() {
   update_starship "$theme"
   update_lazygit "$theme"
   update_claude "$theme"
+  update_pi "$theme"
+  update_omp "$theme"
   update_herdr "$theme"
   update_ghdash "$theme"
   update_superfile "$theme"
@@ -682,7 +802,7 @@ apply_theme() {
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""
-    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, gh-dash, Superfile"
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, gh-dash, Superfile, pi, omp"
   fi
 }
 
