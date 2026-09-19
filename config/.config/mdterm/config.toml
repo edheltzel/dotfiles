@@ -1,0 +1,3 @@
+theme = "light"          # "dark" or "light"
+line_numbers = false     # show line numbers in code blocks
+width = 0               # display width (0 = auto)
