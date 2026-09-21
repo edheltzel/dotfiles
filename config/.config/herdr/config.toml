@@ -13,9 +13,10 @@ show_agent_labels_on_pane_borders = true
 tab_bar_right = [
   { type = "zoom" },
   { type = "hostname" },
-  { type = "text", text = "▲ HQ" },
+  { type = "command", command = "~/.config/herdr/agent-usage/tab_id.py", interval_seconds = 2, timeout_seconds = 2 },
+  { type = "command", command = "~/.config/herdr/agent-usage/agent_usage.py", interval_seconds = 300, timeout_seconds = 5 },
 ]
-tab_bar_right_separator = " · "
+tab_bar_right_separator = " ⋮ "
 
 [ui.sidebar.spaces]
 row_gap = 1

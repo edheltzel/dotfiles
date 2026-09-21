@@ -143,6 +143,91 @@
     }
   },
   {
+    "plugin_id": "speardragon.herdr-status-ui-bar",
+    "name": "Agent Usage Bar",
+    "version": "0.7.0",
+    "min_herdr_version": "0.8.0",
+    "description": "AI agent plan-usage gauges (Claude Code / Codex / Grok, optional Droid / Antigravity) in the herdr tab bar",
+    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c/herdr-plugin.toml",
+    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c",
+    "enabled": true,
+    "platforms": [
+      "macos",
+      "linux"
+    ],
+    "actions": [
+      {
+        "id": "customize",
+        "title": "Agent Usage Bar: Customize tab bar layout",
+        "contexts": [
+          "global",
+          "workspace",
+          "pane"
+        ],
+        "command": [
+          "herdr",
+          "plugin",
+          "pane",
+          "open",
+          "--plugin",
+          "speardragon.herdr-status-ui-bar",
+          "--entrypoint",
+          "customize",
+          "--placement",
+          "popup",
+          "--focus"
+        ]
+      },
+      {
+        "id": "install",
+        "title": "Install agent usage tab-bar widget",
+        "command": [
+          "./install.sh"
+        ]
+      },
+      {
+        "id": "reset",
+        "title": "Agent Usage Bar: Turn off all plugin widgets",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "python3",
+          "reset.py"
+        ]
+      },
+      {
+        "id": "uninstall",
+        "title": "Uninstall agent usage tab-bar widget",
+        "command": [
+          "./uninstall.sh"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "customize",
+        "title": "Agent Usage Bar: Customize",
+        "placement": "popup",
+        "width": "80%",
+        "height": "50%",
+        "command": [
+          "python3",
+          "customize.py"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "speardragon",
+      "repo": "herdr-status-ui-bar",
+      "resolved_commit": "cbad29d4c5d8a79f6d674da51e029d1e69414589",
+      "managed_path": "/Users/ed/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c",
+      "installed_unix_ms": 1790015164217
+    }
+  },
+  {
     "plugin_id": "vjeantet.palette",
     "name": "Command Palette (built-ins + plugin actions)",
     "version": "0.2.2",
