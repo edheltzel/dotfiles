@@ -22,27 +22,7 @@ row_gap = 1
 rows = [["state_icon", { token = "workspace", bold = false }]]
 
 [ui.sidebar.agents]
-row_gap = 0
-rows = [
-  [
-    "state_icon",
-    "workspace",
-    "tab",
-  ],
-  [
-    { token = "machine", fg = "#fff", rules = [
-      { equals = "Local", fg = "#f55" },
-      { equals = "Fedora", ignore_case = true, fg = "#51a2da" },
-    ] },
-    "agent",
-  ],
-  [
-    { token = "$load", fg = "#fff", rules = [
-      { gt = 80, fg = "#f55", bold = true },
-      { gt = 50, fg = "#fc0" },
-    ] },
-  ],
-]
+rows = [["state_icon", "machine", "workspace", "tab"], ["$icon", "agent"]]
 
 [ui.sound]
 enabled = true

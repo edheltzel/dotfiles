@@ -85,18 +85,17 @@
     }
   },
   {
-    "plugin_id": "qintmb.herdr-icon-agent-ui",
-    "name": "Agent Icon UI",
-    "version": "2.1.0",
-    "min_herdr_version": "0.8.2",
-    "description": "Larger harness logos + workspace/tab agent tree + animated working spinner (braille), held done check, LED status marks for the Herdr sidebar — claude, codex, opencode, omp, cline, mastracode, kimi, kilo, maki, pi, hermes, cursor, copilot, deepseek, gemini, gpt, qwen. Terminal-font-metric-matched icon font; tree layout with task labels from native session names.",
-    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/qintmb.herdr-icon-agent-ui-3a8809b69f32/herdr-plugin.toml",
-    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/qintmb.herdr-icon-agent-ui-3a8809b69f32",
+    "plugin_id": "local.agent-icons",
+    "name": "Agent Icons",
+    "version": "0.3.0",
+    "min_herdr_version": "0.7.0",
+    "description": "Report a per-agent emoji/glyph as the $icon sidebar token.",
+    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/local.agent-icons-da004f570912/herdr-plugin.toml",
+    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/local.agent-icons-da004f570912",
     "enabled": true,
     "platforms": [
       "linux",
-      "macos",
-      "windows"
+      "macos"
     ],
     "startup": [
       {
@@ -104,173 +103,43 @@
           "sh",
           "run.sh"
         ]
-      },
-      {
-        "command": [
-          "python3",
-          "agent_state.py"
-        ]
       }
     ],
     "actions": [
       {
-        "id": "clear",
-        "title": "Clear sidebar display tokens",
-        "description": "Reset this plugin's generated display values before disabling it.",
+        "id": "install-font",
+        "title": "Agent icons: install logo font",
         "contexts": [
           "global"
         ],
+        "platforms": [
+          "macos",
+          "linux"
+        ],
         "command": [
           "sh",
-          "run.sh",
-          "--clear"
+          "install-font.sh"
         ]
       },
       {
         "id": "refresh",
-        "title": "Refresh agent sidebar",
-        "description": "Rebuild workspace/tab agent tree and task labels from the current session.",
+        "title": "Agent icons: refresh now",
         "contexts": [
           "global"
         ],
         "command": [
           "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "id": "state-start",
-        "title": "Agent state: start animator",
-        "description": "Start the lifecycle-state glyph animator.",
-        "contexts": [
-          "global"
-        ],
-        "command": [
-          "python3",
-          "agent_state.py"
-        ]
-      },
-      {
-        "id": "state-stop",
-        "title": "Agent state: stop animator",
-        "description": "Stop the lifecycle-state glyph animator and clear its tokens.",
-        "contexts": [
-          "global"
-        ],
-        "command": [
-          "python3",
-          "agent_state.py",
-          "--stop"
-        ]
-      }
-    ],
-    "events": [
-      {
-        "on": "pane.agent_detected",
-        "command": [
-          "python3",
-          "agent_state.py"
-        ]
-      },
-      {
-        "on": "pane.agent_detected",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "pane.agent_status_changed",
-        "command": [
-          "python3",
-          "agent_state.py"
-        ]
-      },
-      {
-        "on": "pane.closed",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "pane.exited",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "pane.focused",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "pane.moved",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "tab.closed",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "tab.created",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "tab.moved",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "tab.renamed",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "workspace.closed",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "workspace.created",
-        "command": [
-          "sh",
-          "run.sh"
-        ]
-      },
-      {
-        "on": "workspace.renamed",
-        "command": [
-          "sh",
-          "run.sh"
+          "report-once.sh"
         ]
       }
     ],
     "source": {
       "kind": "github",
-      "owner": "qintmb",
-      "repo": "herdr-icon-agent-ui",
-      "resolved_commit": "8fb40b8951b5f7331815949d6c2a5bb3a06ef4c6",
-      "managed_path": "/Users/ed/.config/herdr/plugins/github/qintmb.herdr-icon-agent-ui-3a8809b69f32",
-      "installed_unix_ms": 1789830225127
+      "owner": "adihex",
+      "repo": "herdr-agent-icons",
+      "resolved_commit": "13426dd7b505bebe991dbec98ce46b78a79830ba",
+      "managed_path": "/Users/ed/.config/herdr/plugins/github/local.agent-icons-da004f570912",
+      "installed_unix_ms": 1790011981105
     }
   },
   {
