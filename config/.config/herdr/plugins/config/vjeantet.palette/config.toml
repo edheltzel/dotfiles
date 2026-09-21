@@ -1,8 +1,8 @@
 [[command]]
-id = "lazygit"       # unique among your entries; lowercase, digits, . - _
-title = "Lazygit"    # shown as "User: Lazygit"
-argv = ["lazygit"]   # one array element per argument - never a shell string
-placement = "zoomed" # split (default) | tab | zoomed
+id = "lazygit"      # unique among your entries; lowercase, digits, . - _
+title = "Lazygit"   # shown as "User: Lazygit"
+argv = ["lazygit"]  # one array element per argument - never a shell string
+placement = "split" # split (default) | tab | zoomed
 
 [[command]]
 id = "but"
@@ -45,9 +45,3 @@ id = "edit"
 title = "Edit a file"
 argv = ["nvim"]
 input = { prompt = "File", required = true } # asked for, appended to argv as one element
-
-[[command]]
-id = "new_term"
-argv = ["newterm"]
-title = "Scratch Terminal"
-placement = "split"
