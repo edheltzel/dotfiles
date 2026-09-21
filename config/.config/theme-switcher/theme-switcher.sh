@@ -293,6 +293,14 @@ update_ghostty() {
     UPDATED_APPS+=("Ghostty → $ghostty_theme")
     success "Ghostty → $ghostty_theme"
   fi
+  # App Support loads after XDG and wins. Ghostex pins theme there.
+  local override
+  for override in \
+    "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty" \
+    "$HOME/Library/Application Support/com.mitchellh.ghostty/config"; do
+    [[ -f "$override" ]] || continue
+    sed -i '' -E 's|^([[:space:]]*)theme([[:space:]]+)=|\1#theme\2=|' "$override"
+  done
 }
 
 update_kitty() {
