@@ -122,59 +122,60 @@ swap_pane_up = ""
 swap_pane_right = ""
 
 # custom
-[[keys.command]]
-key = "prefix+shift+l"
-description = "launch LazyGit"
-command = "lazygit"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+b"
-description = "launch GitButler TUI"
-command = "but tui"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+g"
-description = "launch GitButler GUI"
-command = "but gui"
-type = "shell"
-
-[[keys.command]]
-key = "prefix+shift+d"
-description = "launch Dash"
-command = "gh dash"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+t"
-description = "launch Tuicr"
-command = "tuicr"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+k"
-description = "launch Project Board"
-command = "gh board --owner edheltzel"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+f"
-description = "launch Superfile"
-command = "spf"
-type = "popup"
-width = "90%"
-height = "90%"
+### using command palette for these to free up keybinding
+# [[keys.command]]
+# key = "prefix+shift+l"
+# description = "launch LazyGit"
+# command = "lazygit"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+b"
+# description = "launch GitButler TUI"
+# command = "but tui"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+g"
+# description = "launch GitButler GUI"
+# command = "but gui"
+# type = "shell"
+#
+# [[keys.command]]
+# key = "prefix+shift+d"
+# description = "launch Dash"
+# command = "gh dash"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+t"
+# description = "launch Tuicr"
+# command = "tuicr"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+k"
+# description = "launch Project Board"
+# command = "gh board --owner edheltzel"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+f"
+# description = "launch Superfile"
+# command = "spf"
+# type = "popup"
+# width = "90%"
+# height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+v"
@@ -191,6 +192,13 @@ width = "90%"
 height = "90%"
 
 ### plugins ###
+# Command Palette
+[[keys.command]]
+key = "super+p"                   # ⌘+P on macOS
+type = "plugin_action"
+command = "vjeantet.palette.open"
+description = "Command palette"
+
 # Plannotator
 [[keys.command]] # Terminal annotations
 key = "prefix+a"
