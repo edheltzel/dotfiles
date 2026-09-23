@@ -8,11 +8,13 @@ fi
 
 info "Setting default applications using duti..."
 
-find . -mindepth 1 -maxdepth 1 -not -name "duti.sh" -type f | while read -r fn; do
-    while read ext; do
-        substep_info "Setting default application for extension $ext to $fn..."
-        duti -s $fn $ext all
-    done <$fn
+find . -mindepth 1 -maxdepth 1 -type f ! -name 'duti.sh' ! -name '*.md' | while read -r fn; do
+    bundle_id="${fn#./}"
+    while read -r ext; do
+        [ -n "$ext" ] || continue
+        substep_info "Setting default application for extension $ext to $bundle_id..."
+        duti -s "$bundle_id" "$ext" all
+    done <"$fn"
 done
 
 success "Successfully set all default applications."
