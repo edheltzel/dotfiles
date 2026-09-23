@@ -38,6 +38,9 @@
     }
   ],
   "focusFrontmostWindow" : false,
+  "focusNextWorkspaceApp" : "ctrl+opt+shift+a",
+  "focusNextWorkspaceWindow" : "ctrl+opt+shift+]",
+  "focusPreviousWorkspaceWindow" : "ctrl+opt+shift+[",
   "keepUnassignedAppsOnSwitch" : false,
   "loopWorkspaces" : true,
   "loopWorkspacesOnAllDisplays" : false,

@@ -19,7 +19,6 @@ window-colorspace        = "display-p3"
 window-inherit-font-size = false
 window-padding-x         = 10
 window-padding-y         = 2
-window-title-font-family = "JetBrainsMono Nerd Font"
 font-family              = "JetbrainsMono Nerd Font"
 font-family              = "AgentIcons"
 font-size                = 14
@@ -31,8 +30,6 @@ macos-option-as-alt         = true
 macos-titlebar-proxy-icon   = hidden
 macos-titlebar-style        = hidden
 macos-window-buttons        = hidden
-
-# macos-icon                  = retro
 
 # Quick Terminal
 quick-terminal-position           = right
