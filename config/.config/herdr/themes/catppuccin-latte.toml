@@ -1,0 +1,4 @@
+# catppuccin latte overrides
+# [theme.custom]
+# panel_bg = "white"
+# surface_dim = "#ccd0da" # — active workspace / agent row background
