@@ -19,12 +19,13 @@ window-colorspace        = "display-p3"
 window-inherit-font-size = false
 window-padding-x         = 10
 window-padding-y         = 2
+background-opacity       = 0.98
 font-family              = "JetbrainsMono Nerd Font"
 font-family              = "AgentIcons"
 font-size                = 14
 font-feature             = zero,calt
 
-# Tabs
+# macOS
 macos-non-native-fullscreen = true
 macos-option-as-alt         = true
 macos-titlebar-proxy-icon   = hidden
