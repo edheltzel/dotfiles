@@ -138,6 +138,14 @@ swap_pane_right = ""
 # height = "90%"
 
 [[keys.command]]
+key = "prefix+shift+f"
+description = "launch Yazi"
+command = "yazi"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
 key = "prefix+shift+v"
 description = "launch Neovim"
 command = "nvim"

@@ -254,6 +254,13 @@ show_support() {
   else
     echo "  ✗ 󰉋  superfile"
   fi
+  yazi_flavor="$theme"
+  [[ "$theme" == "tokyonight" ]] && yazi_flavor="tokyo-night"
+  if [[ -d "$HOME/.dotfiles/config/.config/yazi/flavors/${yazi_flavor}.yazi" ]]; then
+    echo "  ✓ 󰝰  yazi"
+  else
+    echo "  ✗ 󰝰  yazi"
+  fi
 }
 
 # Main

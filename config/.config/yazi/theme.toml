@@ -1,0 +1,6 @@
+# "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+# Vesper flavor — see flavors/vesper.yazi/
+# User overrides below this block always take precedence over the flavor.
+[flavor]
+dark = "eldritch"

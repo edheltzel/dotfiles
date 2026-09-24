@@ -36,6 +36,7 @@ Unified theme switching system for all applications in dotfiles.
 | gh-dash§     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | Superfile¶   | ✓        |             |           |                |                |        | latte       | ✓       |         |
+| Yazi∥        | ✓        | ✓           |           |                |                | ✓      |             |         |         |
 
 † All four Catppuccin flavors (Latte, Frappé, Macchiato, Mocha) are supported identically. Terminals (Ghostty, WezTerm) and bat use built-in Catppuccin themes; Neovim uses the `catppuccin/nvim` plugin; Kitty and btop use the official port theme files; lazygit uses generated palettes from the official Catppuccin color spec.
 
@@ -44,6 +45,7 @@ Unified theme switching system for all applications in dotfiles.
 § gh-dash (`gh dash`) has no external theme-file support — colors are an inline `theme.colors` key-value block in `gh-dash/config.yml`. Like lazygit, the switcher keeps a per-theme snippet in `gh-dash/[theme].yml` and injects it, replacing only `theme.colors` and leaving `theme.ui` and every other config section untouched. gh-dash validates strictly, so each snippet carries the full color set. Palettes are derived from the matching Kitty theme for cross-app consistency.
 Starship follows `palette =` in `starship.toml` for every switcher theme, including `eldritch-dusk`. Neovim skips `eldritch-dusk` — `eldritch.nvim` has no light palette yet.
 ¶ Superfile uses local files in `superfile/theme/<name>.toml`; missing file → skipped. Catppuccin Latte only.
+∥ Yazi switches `dark` in `yazi/theme.toml` to a bundled flavor (`eldritch`, `tokyo-night`, `vesper`). Missing flavor → skipped.
 
 ## Usage
 
@@ -123,6 +125,7 @@ After switching themes:
 - **Claude Code**: Restart to apply new theme
 - **gh-dash**: Reads config only at launch — quit and relaunch `gh dash` to apply
 - **Superfile**: Applies on next `spf` launch
+- **Yazi**: Applies on next `yazi` launch
 
 ## Adding New Themes
 
