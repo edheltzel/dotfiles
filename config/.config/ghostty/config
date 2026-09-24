@@ -94,3 +94,4 @@ keybind = super+ctrl+r=text:\x12
 keybind = super+ctrl+p=text:\x1b\x10
 # variables
 keybind = super+ctrl+v=text:\x16
+#config-file = "themes/catppuccin-latte"

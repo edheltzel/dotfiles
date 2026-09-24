@@ -23,6 +23,12 @@ argv = ["spf"]
 placement = "split"
 
 [[command]]
+id = "yazi"
+title = "Yazi Files"
+argv = ["yazi"]
+placement = "split"
+
+[[command]]
 id = "gh_dash"
 title = "GH Dash"
 argv = ["gh", "dash"]

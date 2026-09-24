@@ -642,7 +642,16 @@ update_yazi() {
     return
   fi
 
-  sed -i '' -E "s|^(dark[[:space:]]*=[[:space:]]*).*|\1\"$yazi_theme\"|" "$config_file"
+  # Both slots: yazi picks dark/light from terminal luminance, so one slot would no-op.
+  awk -v theme="$yazi_theme" '
+    /^dark[[:space:]]*=/ { print "dark = \"" theme "\""; seen_dark = 1; next }
+    /^light[[:space:]]*=/ { print "light = \"" theme "\""; seen_light = 1; next }
+    { print }
+    END {
+      if (!seen_dark) print "dark = \"" theme "\""
+      if (!seen_light) print "light = \"" theme "\""
+    }
+  ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
   UPDATED_APPS+=("yazi → $yazi_theme")
   success "yazi → $yazi_theme"
 }
