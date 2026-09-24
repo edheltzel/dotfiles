@@ -23,6 +23,31 @@ use = "yazi-rs/plugins:piper"
 rev = "6f26ae0"
 hash = "45a533508a9840cc5a10cf6129f63e6a"
 
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:font-sample"
+rev = "9997d5b"
+hash = "92458a50ecdd278bf36f95dec6aa52b1"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:preview-sqlite"
+rev = "9997d5b"
+hash = "11ee002ea5080a73f2c2db5dceda50df"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:preview-git"
+rev = "9997d5b"
+hash = "ba369f2f02be9e932cf7882c113d6844"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:zoom"
+rev = "f703392"
+hash = "558bbb58e3dd36d488280a8f10e7b904"
+
+[[plugin.deps]]
+use = "Ape/open-with-cmd"
+rev = "56705e2"
+hash = "7c84fff414a652c86c44523dbb08026f"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "8e6296f"

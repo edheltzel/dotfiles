@@ -16,6 +16,7 @@ tab_bar_right = [
   { type = "hostname" },
   { type = "command", command = "~/.config/herdr/agent-usage/tab_id.py", interval_seconds = 2, timeout_seconds = 2 },
   { type = "command", command = "~/.config/herdr/agent-usage/agent_usage.py", interval_seconds = 300, timeout_seconds = 5 },
+  { type = "command", command = "curl -s --max-time 2 'wttr.in/Seoul?format=%c+%t' 2>/dev/null", interval_seconds = 600, timeout_seconds = 3 },
 ]
 tab_bar_right_separator = " ⋮ "
 
@@ -82,7 +83,7 @@ swap_pane_up = ""
 swap_pane_right = ""
 
 # custom
-### using command palette for these to free up keybinding
+### Using Command Palette Plugin to free up keybindings ###
 # [[keys.command]]
 # key = "prefix+shift+l"
 # description = "launch LazyGit"
