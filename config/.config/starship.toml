@@ -27,7 +27,7 @@ command_timeout = 500
 scan_timeout = 100
 
 # Set by theme-switcher. Names match theme-switcher/current.
-palette = "catppuccin-latte"
+palette = "dracula"
 
 [battery]
 disabled = true

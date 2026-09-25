@@ -11,7 +11,7 @@ Sets default applications for file types and URL schemes via `duti`. Not a stow 
 
 ## Local Contracts
 
-- Run `duti.sh` to apply associations.
+- Run `duti.sh` to apply associations. It exits nonzero, without the success line, if `duti` is missing or any set fails.
 - Add an association by creating a file named for the target app's bundle id.
 
 ## Work Guidance

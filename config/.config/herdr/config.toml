@@ -10,39 +10,22 @@ pane_history = true
 status_indicators = "symbols"
 
 show_agent_labels_on_pane_borders = true
+
 tab_bar_right = [
   { type = "zoom" },
   { type = "hostname" },
-  { type = "text", text = "▲ HQ" },
+  { type = "command", command = "~/.config/herdr/agent-usage/tab_id.py", interval_seconds = 2, timeout_seconds = 2 },
+  { type = "command", command = "~/.config/herdr/agent-usage/agent_usage.py", interval_seconds = 300, timeout_seconds = 5 },
+  { type = "command", command = "curl -s --max-time 2 'wttr.in/Seoul?format=%c+%t' 2>/dev/null", interval_seconds = 600, timeout_seconds = 3 }, { type = "command", command = "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c/target/release/herdr-projects --root /Users/ed/.herdr-projects needs-you --line", interval_seconds = 15, timeout_seconds = 5 },
 ]
-tab_bar_right_separator = " · "
+tab_bar_right_separator = " ⋮ "
 
 [ui.sidebar.spaces]
 row_gap = 1
-rows = [["state_icon", { token = "workspace", bold = false }]]
+rows = [["state_icon", { token = "workspace", bold = false }], [{ token = "$hp" }]]
 
 [ui.sidebar.agents]
-row_gap = 0
-rows = [
-  [
-    "state_icon",
-    "workspace",
-    "tab",
-  ],
-  [
-    { token = "machine", fg = "#fff", rules = [
-      { equals = "Local", fg = "#f55" },
-      { equals = "Fedora", ignore_case = true, fg = "#51a2da" },
-    ] },
-    "agent",
-  ],
-  [
-    { token = "$load", fg = "#fff", rules = [
-      { gt = 80, fg = "#f55", bold = true },
-      { gt = 50, fg = "#fc0" },
-    ] },
-  ],
-]
+rows = [["state_icon", "machine", "workspace", "tab"], ["$icon", "agent"], [{ token = "$hp_state", rules = [{ starts_with = "needs you", fg = "#f38ba8", bold = true }, { starts_with = "review", fg = "#f9e2af" }] }], [{ token = "$hp_activity", dim = true }]]
 
 [ui.sound]
 enabled = true
@@ -57,30 +40,8 @@ delivery = "herdr"
 position = "top-right"
 
 [theme]
-name = "catppuccin-latte"
+name = "dracula"
 auto_switch = false
-
-[theme.custom]
-panel_bg = "white"
-surface_dim = "#ccd0da" # — active workspace / agent row background
-
-# eldritch
-# surface_dim = "#212337" # — active workspace / agent row background
-# panel_bg = "#171928"    # — sidebar / panel background
-# surface0 = "#323449"    # — selection (navigate cursor) background
-# surface1 = "#3b3e5c"    # — drag / hover (kept above surface_dim)
-# overlay0 = "#7081d0"    # — muted text
-# overlay1 = "#a48cf2"    # — secondary accent
-# text = "#ebfafa"        # — primary text
-# subtext0 = "#949ae5"    # — dimmed labels
-# accent = "#04d1f9"      # — highlights, borders, navigation
-# mauve = "#646B80"       # — git branches
-# red = "#f16c75"
-# peach = "#f7c67f"
-# yellow = "#f1fc79"
-# green = "#37f499"
-# teal = "#66e4fd"
-# blue = "#9071f4"
 
 ### keybindings ###
 [keys]
@@ -122,56 +83,65 @@ swap_pane_up = ""
 swap_pane_right = ""
 
 # custom
-[[keys.command]]
-key = "prefix+shift+l"
-description = "launch LazyGit"
-command = "lazygit"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+b"
-description = "launch GitButler TUI"
-command = "but tui"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+g"
-description = "launch GitButler GUI"
-command = "but gui"
-type = "shell"
-
-[[keys.command]]
-key = "prefix+shift+d"
-description = "launch Dash"
-command = "gh dash"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+t"
-description = "launch Tuicr"
-command = "tuicr"
-type = "popup"
-width = "90%"
-height = "90%"
-
-[[keys.command]]
-key = "prefix+shift+k"
-description = "launch Project Board"
-command = "gh board --owner edheltzel"
-type = "popup"
-width = "90%"
-height = "90%"
+### Using Command Palette Plugin to free up keybindings ###
+# [[keys.command]]
+# key = "prefix+shift+l"
+# description = "launch LazyGit"
+# command = "lazygit"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+b"
+# description = "launch GitButler TUI"
+# command = "but tui"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+g"
+# description = "launch GitButler GUI"
+# command = "but gui"
+# type = "shell"
+#
+# [[keys.command]]
+# key = "prefix+shift+d"
+# description = "launch Dash"
+# command = "gh dash"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+t"
+# description = "launch Tuicr"
+# command = "tuicr"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+k"
+# description = "launch Project Board"
+# command = "gh board --owner edheltzel"
+# type = "popup"
+# width = "90%"
+# height = "90%"
+#
+# [[keys.command]]
+# key = "prefix+shift+f"
+# description = "launch Superfile"
+# command = "spf"
+# type = "popup"
+# width = "90%"
+# height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+f"
-description = "launch Superfile"
-command = "spf"
+description = "launch Yazi"
+command = "yazi"
 type = "popup"
 width = "90%"
 height = "90%"
@@ -191,6 +161,13 @@ width = "90%"
 height = "90%"
 
 ### plugins ###
+# Command Palette
+[[keys.command]]
+key = "super+p"                   # ⌘+P on macOS
+type = "plugin_action"
+command = "vjeantet.palette.open"
+description = "Command palette"
+
 # Plannotator
 [[keys.command]] # Terminal annotations
 key = "prefix+a"
@@ -227,3 +204,9 @@ key = "prefix+shift+o"
 type = "plugin_action"
 command = "annotate.last"
 description = "review the agent's last reply"
+
+[[keys.command]]
+key = "prefix+y"
+type = "plugin_action"
+command = "herdr-projects.open-popup"
+description = "Projects"

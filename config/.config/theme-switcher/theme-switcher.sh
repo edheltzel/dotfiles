@@ -213,6 +213,20 @@ get_superfile_theme() {
   fi
 }
 
+# Flavor dir is flavors/<name>.yazi. tokyonight's dir is tokyo-night.
+# Missing dir → skip. Do not invent flavors.
+get_yazi_theme() {
+  local name="$1"
+  case "$name" in
+  tokyonight) name="tokyo-night" ;;
+  esac
+  if [[ -d "$CONFIG/yazi/flavors/${name}.yazi" ]]; then
+    echo "$name"
+  else
+    echo ""
+  fi
+}
+
 get_pi_theme() {
   local name="$1"
   if [[ -f "$THEMES_DIR/pi/${name}.json" ]] || [[ -f "$HOME/.pi/agent/themes/${name}.json" ]]; then
@@ -293,6 +307,14 @@ update_ghostty() {
     UPDATED_APPS+=("Ghostty → $ghostty_theme")
     success "Ghostty → $ghostty_theme"
   fi
+  # App Support loads after XDG and wins. Ghostex pins theme there.
+  local override
+  for override in \
+    "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty" \
+    "$HOME/Library/Application Support/com.mitchellh.ghostty/config"; do
+    [[ -f "$override" ]] || continue
+    sed -i '' -E 's|^([[:space:]]*)theme([[:space:]]+)=|\1#theme\2=|' "$override"
+  done
 }
 
 update_kitty() {
@@ -601,6 +623,39 @@ update_superfile() {
   success "superfile → $spf_theme"
 }
 
+update_yazi() {
+  local theme="$1"
+
+  if ! is_installed yazi; then
+    MISSING_APPS+=("yazi")
+    info "yazi → not installed, skipped"
+    return
+  fi
+
+  local yazi_theme
+  yazi_theme=$(get_yazi_theme "$theme")
+  local config_file="$CONFIG/yazi/theme.toml"
+
+  if [[ -z "$yazi_theme" || ! -f "$config_file" ]]; then
+    SKIPPED_APPS+=("yazi (theme $theme not available)")
+    warning "yazi → skipped (theme not available)"
+    return
+  fi
+
+  # Both slots: yazi picks dark/light from terminal luminance, so one slot would no-op.
+  awk -v theme="$yazi_theme" '
+    /^dark[[:space:]]*=/ { print "dark = \"" theme "\""; seen_dark = 1; next }
+    /^light[[:space:]]*=/ { print "light = \"" theme "\""; seen_light = 1; next }
+    { print }
+    END {
+      if (!seen_dark) print "dark = \"" theme "\""
+      if (!seen_light) print "light = \"" theme "\""
+    }
+  ' "$config_file" >"$config_file.tmp" && mv "$config_file.tmp" "$config_file"
+  UPDATED_APPS+=("yazi → $yazi_theme")
+  success "yazi → $yazi_theme"
+}
+
 update_pi() {
   local theme="$1"
 
@@ -787,6 +842,7 @@ apply_theme() {
   update_herdr "$theme"
   update_ghdash "$theme"
   update_superfile "$theme"
+  update_yazi "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"
@@ -802,7 +858,7 @@ apply_theme() {
 
   if [[ ${#UPDATED_APPS[@]} -gt 0 ]]; then
     echo ""
-    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, gh-dash, Superfile, pi, omp"
+    info "Apps requiring restart: Neovim, WezTerm, Kitty, btop, gh-dash, Superfile, yazi, pi, omp"
   fi
 }
 

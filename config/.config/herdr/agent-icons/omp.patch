@@ -1,0 +1,11 @@
+--- a/icons.conf
++++ b/icons.conf
+@@ -29,6 +29,8 @@
+ ollama          @ollama
+ mistral         @mistral
+ openai          @openai
++# nf-md-pi, the alternate pi. Literal so Kitty and WezTerm draw it from the Nerd Font.
++omp             󰏿
+ 
+ # No official vector logo found — emoji fallback:
+ letta           🧠

@@ -1,0 +1,6 @@
+# "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+# Switcher owns both slots so a light theme still applies when the terminal reports dark.
+[flavor]
+dark = "dracula"
+light = "dracula"

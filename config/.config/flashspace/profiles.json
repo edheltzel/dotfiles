@@ -80,6 +80,11 @@
               "bundleIdentifier" : "doc.md-preview",
               "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
               "name" : "Markdown Preview"
+            },
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
             }
           ],
           "display" : "PA278QV",
@@ -135,11 +140,6 @@
               "bundleIdentifier" : "sh.zeron.app",
               "iconPath" : "/Applications/Zeron.app/Contents/Resources/zeron.icns",
               "name" : "Zeron"
-            },
-            {
-              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
-              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
-              "name" : "Cursor"
             }
           ],
           "display" : "PA278QV",
@@ -192,14 +192,14 @@
               "name" : "HueForge"
             },
             {
-              "bundleIdentifier" : "com.tldraw.desktop",
-              "iconPath" : "/Applications/tldraw offline.app/Contents/Resources/icon.icns",
-              "name" : "tldraw offline"
-            },
-            {
               "bundleIdentifier" : "com.orcaslicer.OrcaSlicer",
               "iconPath" : "/Applications/OrcaSlicer.app/Contents/Resources/Icon.icns",
               "name" : "OrcaSlicer"
+            },
+            {
+              "bundleIdentifier" : "org.freecad.FreeCAD",
+              "iconPath" : "/Applications/FreeCAD.app/Contents/Resources/freecad.icns",
+              "name" : "FreeCAD_1.1.3"
             }
           ],
           "display" : "PA278QV",
@@ -240,6 +240,11 @@
               "bundleIdentifier" : "com.clickup.desktop-app",
               "iconPath" : "/Applications/ClickUp.app/Contents/Resources/icon.icns",
               "name" : "ClickUp"
+            },
+            {
+              "bundleIdentifier" : "com.tldraw.desktop",
+              "iconPath" : "/Applications/tldraw offline.app/Contents/Resources/icon.icns",
+              "name" : "tldraw offline"
             }
           ],
           "display" : "PA278QV",

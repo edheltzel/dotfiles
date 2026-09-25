@@ -32,9 +32,10 @@ local function setup(theme, keymaps)
   local light_themes = { ["rose-pine-dawn"] = true, ["Eldritch Light"] = true }
   local font_weight = light_themes[theme.name] and "Medium" or "Regular"
   config.font = wezterm.font_with_fallback({
-    { family = "JetbrainsMono Nerd Font Mono", weight = font_weight },
+    { family = "JetbrainsMono Nerd Font Mono", weight = "Regular" },
     { family = "Lilex Nerd Font Mono", weight = font_weight },
     { family = "FiraCode Nerd Font Mono", weight = font_weight },
+    { family = "AgentIcons", weight = "Regular" },
   })
 
   config.font_size = 14

@@ -1,0 +1,53 @@
+[[command]]
+id = "lazygit"      # unique among your entries; lowercase, digits, . - _
+title = "Lazygit"   # shown as "User: Lazygit"
+argv = ["lazygit"]  # one array element per argument - never a shell string
+placement = "split" # split (default) | tab | zoomed
+
+[[command]]
+id = "but"
+title = "GitButler TUI"
+argv = ["but", "tui"]
+placement = "split"
+
+[[command]]
+id = "but"
+title = "GitButler GUI"
+argv = ["but", "gui"]
+placement = "split"
+
+[[command]]
+id = "superfile"
+title = "Superfile"
+argv = ["spf"]
+placement = "split"
+
+[[command]]
+id = "yazi"
+title = "Yazi Files"
+argv = ["yazi"]
+placement = "split"
+
+[[command]]
+id = "gh_dash"
+title = "GH Dash"
+argv = ["gh", "dash"]
+placement = "split"
+
+[[command]]
+id = "tuicr"
+title = "Tuicr Diff"
+argv = ["tuicr"]
+placement = "split"
+
+[[command]]
+id = "gh_projects"
+title = "GH Project Board"
+argv = ["gh", "board", "--owner", "edheltzel"]
+placement = "split"
+
+[[command]]
+id = "edit"
+title = "Edit a file"
+argv = ["nvim"]
+input = { prompt = "File", required = true } # asked for, appended to argv as one element
