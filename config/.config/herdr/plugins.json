@@ -85,6 +85,211 @@
     }
   },
   {
+    "plugin_id": "herdr-projects",
+    "name": "Projects",
+    "version": "0.2.13",
+    "min_herdr_version": "0.9.1",
+    "description": "A coordinator conversation, parallel worker threads, shared memory and an overview of what needs you.",
+    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c/herdr-plugin.toml",
+    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c",
+    "enabled": true,
+    "platforms": [
+      "macos",
+      "linux"
+    ],
+    "build": [
+      {
+        "command": [
+          "sh",
+          "scripts/install.sh"
+        ]
+      }
+    ],
+    "startup": [
+      {
+        "command": [
+          "target/release/herdr-projects",
+          "startup"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "adopt-workspace",
+        "title": "Projects: continue this workspace as a project",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "adopt-workspace"
+        ]
+      },
+      {
+        "id": "configure",
+        "title": "Projects: set up the sidebar, popup key, progress hooks and skill",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "configure"
+        ]
+      },
+      {
+        "id": "doctor",
+        "title": "Projects: check setup",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "doctor"
+        ]
+      },
+      {
+        "id": "focus",
+        "title": "Projects: focus sidebar on this project",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "focus"
+        ]
+      },
+      {
+        "id": "new",
+        "title": "Projects: new project",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "new"
+        ]
+      },
+      {
+        "id": "open",
+        "title": "Projects: open project",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "open"
+        ]
+      },
+      {
+        "id": "open-popup",
+        "title": "Projects",
+        "contexts": [
+          "global",
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "open-popup"
+        ]
+      },
+      {
+        "id": "pause",
+        "title": "Projects: pause project",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "pause"
+        ]
+      },
+      {
+        "id": "resume",
+        "title": "Projects: resume project",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "resume"
+        ]
+      },
+      {
+        "id": "unfocus",
+        "title": "Projects: clear sidebar focus",
+        "contexts": [
+          "workspace"
+        ],
+        "command": [
+          "target/release/herdr-projects",
+          "action",
+          "unfocus"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "adopt",
+        "title": "Continue as a project",
+        "placement": "popup",
+        "command": [
+          "target/release/herdr-projects",
+          "pane",
+          "adopt"
+        ]
+      },
+      {
+        "id": "new",
+        "title": "New project",
+        "placement": "popup",
+        "command": [
+          "target/release/herdr-projects",
+          "pane",
+          "new"
+        ]
+      },
+      {
+        "id": "pick",
+        "title": "Pick a project",
+        "placement": "popup",
+        "command": [
+          "target/release/herdr-projects",
+          "pane",
+          "pick"
+        ]
+      },
+      {
+        "id": "projects",
+        "title": "Projects",
+        "placement": "popup",
+        "width": "80%",
+        "height": "80%",
+        "command": [
+          "target/release/herdr-projects",
+          "pane",
+          "projects"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "eliasstravik",
+      "repo": "herdr-projects",
+      "resolved_commit": "5b7a0e61733cd9950fe451e30e7a76d155ea335c",
+      "managed_path": "/Users/ed/.config/herdr/plugins/github/herdr-projects-b1278ffb803c",
+      "installed_unix_ms": 1790281025798
+    }
+  },
+  {
     "plugin_id": "local.agent-icons",
     "name": "Agent Icons",
     "version": "0.3.0",

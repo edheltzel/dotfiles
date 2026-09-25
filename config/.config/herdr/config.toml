@@ -16,16 +16,16 @@ tab_bar_right = [
   { type = "hostname" },
   { type = "command", command = "~/.config/herdr/agent-usage/tab_id.py", interval_seconds = 2, timeout_seconds = 2 },
   { type = "command", command = "~/.config/herdr/agent-usage/agent_usage.py", interval_seconds = 300, timeout_seconds = 5 },
-  { type = "command", command = "curl -s --max-time 2 'wttr.in/Seoul?format=%c+%t' 2>/dev/null", interval_seconds = 600, timeout_seconds = 3 },
+  { type = "command", command = "curl -s --max-time 2 'wttr.in/Seoul?format=%c+%t' 2>/dev/null", interval_seconds = 600, timeout_seconds = 3 }, { type = "command", command = "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c/target/release/herdr-projects --root /Users/ed/.herdr-projects needs-you --line", interval_seconds = 15, timeout_seconds = 5 },
 ]
 tab_bar_right_separator = " ⋮ "
 
 [ui.sidebar.spaces]
 row_gap = 1
-rows = [["state_icon", { token = "workspace", bold = false }]]
+rows = [["state_icon", { token = "workspace", bold = false }], [{ token = "$hp" }]]
 
 [ui.sidebar.agents]
-rows = [["state_icon", "machine", "workspace", "tab"], ["$icon", "agent"]]
+rows = [["state_icon", "machine", "workspace", "tab"], ["$icon", "agent"], [{ token = "$hp_state", rules = [{ starts_with = "needs you", fg = "#f38ba8", bold = true }, { starts_with = "review", fg = "#f9e2af" }] }], [{ token = "$hp_activity", dim = true }]]
 
 [ui.sound]
 enabled = true
@@ -204,3 +204,9 @@ key = "prefix+shift+o"
 type = "plugin_action"
 command = "annotate.last"
 description = "review the agent's last reply"
+
+[[keys.command]]
+key = "prefix+y"
+type = "plugin_action"
+command = "herdr-projects.open-popup"
+description = "Projects"

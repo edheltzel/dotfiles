@@ -1,3 +1,15 @@
+[git]
+pull_predefined = false
+repos = [
+  "/Users/ed/Developer/TUIApps/herdr/",
+  "/Users/ed/Developer/AI/Skills/Beagle/",
+  "/Users/ed/Developer/AI/Skills/claude-cybersecurity/",
+  "/Users/ed/Developer/AI/Skills/claude-seo/",
+  "/Users/ed/Developer/AI/Skills/claude-obsidian/",
+  "/Users/ed/Developer/AI/Skills/MattPocock/",
+  "/Users/ed/Developer/AI/Skills/CompoundEngineering/",
+  "/Users/ed/Developer/AI/Skills/DoxFramework/",
+]
 # Custom Pre-commands
 # [pre_commands]
 
