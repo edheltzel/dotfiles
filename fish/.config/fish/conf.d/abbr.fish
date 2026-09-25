@@ -33,6 +33,7 @@ if status is-interactive
     abbr --add hcs --set-cursor 'herdr --session sessionName%'
     abbr --add hks --set-cursor 'herdr session stop sessionName%'
     abbr --add hds --set-cursor 'herdr session delete sessionName%'
+    abbr --add hssh --set-cursor 'herdr --remote %'
     abbr --add hls 'herdr session list'
     abbr --add hrd herdr
     abbr --add hrr --set-cursor 'herdr --remote sessionName%'
