@@ -5,13 +5,13 @@ argv = ["lazygit"]  # one array element per argument - never a shell string
 placement = "split" # split (default) | tab | zoomed
 
 [[command]]
-id = "but"
+id = "but_tui"
 title = "GitButler TUI"
 argv = ["but", "tui"]
 placement = "split"
 
 [[command]]
-id = "but"
+id = "but_gui"
 title = "GitButler GUI"
 argv = ["but", "gui"]
 placement = "split"

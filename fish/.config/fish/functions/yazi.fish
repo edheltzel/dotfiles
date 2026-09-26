@@ -1,4 +1,4 @@
-function yazi --wraps yazi --description "yazi with responsive 2/3-column layout"
+function yazi --wraps yazi --description "yazi; narrower current/preview split under 120 columns"
     if test $COLUMNS -ge 120
         command yazi $argv
         return

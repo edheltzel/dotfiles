@@ -16,16 +16,45 @@ tab_bar_right = [
   { type = "hostname" },
   { type = "command", command = "~/.config/herdr/agent-usage/tab_id.py", interval_seconds = 2, timeout_seconds = 2 },
   { type = "command", command = "~/.config/herdr/agent-usage/agent_usage.py", interval_seconds = 300, timeout_seconds = 5 },
-  { type = "command", command = "curl -s --max-time 2 'wttr.in/Seoul?format=%c+%t' 2>/dev/null", interval_seconds = 600, timeout_seconds = 3 }, { type = "command", command = "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c/target/release/herdr-projects --root /Users/ed/.herdr-projects needs-you --line", interval_seconds = 15, timeout_seconds = 5 },
+  { type = "command", command = "curl -s --max-time 2 'wttr.in/Seoul?format=%c+%t' 2>/dev/null", interval_seconds = 600, timeout_seconds = 3 },
+  { type = "command", command = "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c/target/release/herdr-projects --root /Users/ed/.herdr-projects needs-you --line", interval_seconds = 15, timeout_seconds = 5 },
 ]
 tab_bar_right_separator = " ⋮ "
 
 [ui.sidebar.spaces]
 row_gap = 1
-rows = [["state_icon", { token = "workspace", bold = false }], [{ token = "$hp" }]]
+rows = [
+  [
+    "state_icon",
+    { token = "workspace", bold = false },
+  ],
+  [
+    { token = "$hp" },
+  ],
+]
 
 [ui.sidebar.agents]
-rows = [["state_icon", "machine", "workspace", "tab"], ["$icon", "agent"], [{ token = "$hp_state", rules = [{ starts_with = "needs you", fg = "#f38ba8", bold = true }, { starts_with = "review", fg = "#f9e2af" }] }], [{ token = "$hp_activity", dim = true }]]
+rows = [
+  [
+    "state_icon",
+    "machine",
+    "workspace",
+    "tab",
+  ],
+  [
+    "$icon",
+    "agent",
+  ],
+  [
+    { token = "$hp_state", rules = [
+      { starts_with = "needs you", fg = "#f38ba8", bold = true },
+      { starts_with = "review", fg = "#f9e2af" },
+    ] },
+  ],
+  [
+    { token = "$hp_activity", dim = true },
+  ],
+]
 
 [ui.sound]
 enabled = true
@@ -83,60 +112,14 @@ swap_pane_up = ""
 swap_pane_right = ""
 
 # custom
-### Using Command Palette Plugin to free up keybindings ###
-# [[keys.command]]
-# key = "prefix+shift+l"
-# description = "launch LazyGit"
-# command = "lazygit"
-# type = "popup"
-# width = "90%"
-# height = "90%"
-#
-# [[keys.command]]
-# key = "prefix+shift+b"
-# description = "launch GitButler TUI"
-# command = "but tui"
-# type = "popup"
-# width = "90%"
-# height = "90%"
-#
-# [[keys.command]]
-# key = "prefix+shift+g"
-# description = "launch GitButler GUI"
-# command = "but gui"
-# type = "shell"
-#
-# [[keys.command]]
-# key = "prefix+shift+d"
-# description = "launch Dash"
-# command = "gh dash"
-# type = "popup"
-# width = "90%"
-# height = "90%"
-#
-# [[keys.command]]
-# key = "prefix+shift+t"
-# description = "launch Tuicr"
-# command = "tuicr"
-# type = "popup"
-# width = "90%"
-# height = "90%"
-#
-# [[keys.command]]
-# key = "prefix+shift+k"
-# description = "launch Project Board"
-# command = "gh board --owner edheltzel"
-# type = "popup"
-# width = "90%"
-# height = "90%"
-#
-# [[keys.command]]
-# key = "prefix+shift+f"
-# description = "launch Superfile"
-# command = "spf"
-# type = "popup"
-# width = "90%"
-# height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+d"
+description = "launch Dash"
+command = "gh dash"
+type = "popup"
+width = "90%"
+height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+f"

@@ -245,6 +245,11 @@
               "bundleIdentifier" : "com.tldraw.desktop",
               "iconPath" : "/Applications/tldraw offline.app/Contents/Resources/icon.icns",
               "name" : "tldraw offline"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.Excel",
+              "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/Excel_macOS.icns",
+              "name" : "Microsoft Excel"
             }
           ],
           "display" : "PA278QV",
