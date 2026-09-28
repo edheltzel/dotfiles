@@ -102,16 +102,6 @@
               "name" : "Orca"
             },
             {
-              "bundleIdentifier" : "com.zarifpour.superconductor",
-              "iconPath" : "/Applications/super.engineering.app/Contents/Resources/super.icns",
-              "name" : "super.engineering"
-            },
-            {
-              "bundleIdentifier" : "dev.bb.desktop",
-              "iconPath" : "/Applications/bb.app/Contents/Resources/icon.icns",
-              "name" : "bb"
-            },
-            {
               "bundleIdentifier" : "com.anthropic.claudefordesktop",
               "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
               "name" : "Claude"
@@ -127,19 +117,14 @@
               "name" : "Grok Bot"
             },
             {
-              "bundleIdentifier" : "com.zed-industries.delta",
-              "iconPath" : "/Applications/Delta.app/Contents/Resources/AppIcon.icns",
-              "name" : "Delta"
-            },
-            {
               "bundleIdentifier" : "app.omlx",
               "iconPath" : "/Applications/oMLX.app/Contents/Resources/AppIcon.icns",
               "name" : "oMLX"
             },
             {
-              "bundleIdentifier" : "sh.zeron.app",
-              "iconPath" : "/Applications/Zeron.app/Contents/Resources/zeron.icns",
-              "name" : "Zeron"
+              "bundleIdentifier" : "dev.empryo.desktop",
+              "iconPath" : "/Applications/Empryo.app/Contents/Resources/icon.icns",
+              "name" : "Empryo"
             }
           ],
           "display" : "PA278QV",

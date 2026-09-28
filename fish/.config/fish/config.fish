@@ -83,3 +83,6 @@ but completions fish | source
 
 # Added by Antigravity CLI installer
 set -gx PATH "/Users/ed/.local/bin" $PATH
+
+# Empryo
+set -gx PATH $HOME/.empryo/bin $PATH
