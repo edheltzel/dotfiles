@@ -10,12 +10,12 @@ hash = "c2f4f4aca257dcceafa9e3b828dbf1c9"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "e0f8f6f"
+rev = "33dde28"
 hash = "4f2a05edce73aef2bceb2ee2c134c8f2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "e0f8f6f"
+rev = "33dde28"
 hash = "d1e0499cae5f3aeb628c267616d4b682"
 
 [[plugin.deps]]

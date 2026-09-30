@@ -75,6 +75,21 @@
               "bundleIdentifier" : "doc.md-preview",
               "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
               "name" : "Markdown Preview"
+            },
+            {
+              "bundleIdentifier" : "dev.empryo.desktop",
+              "iconPath" : "/Applications/Empryo.app/Contents/Resources/icon.icns",
+              "name" : "Empryo"
+            },
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
+            },
+            {
+              "bundleIdentifier" : "dev.zed.Zed",
+              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name" : "Zed"
             }
           ],
           "display" : "PA278QV",
@@ -83,31 +98,6 @@
           "openAppsOnActivation" : false,
           "shortcut" : "ctrl+opt+shift+1",
           "symbolIconName" : "apple.terminal.fill"
-        },
-        {
-          "apps" : [
-            {
-              "bundleIdentifier" : "dev.zed.Zed",
-              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
-              "name" : "Zed"
-            },
-            {
-              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
-              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
-              "name" : "Cursor"
-            },
-            {
-              "bundleIdentifier" : "dev.empryo.desktop",
-              "iconPath" : "/Applications/Empryo.app/Contents/Resources/icon.icns",
-              "name" : "Empryo"
-            }
-          ],
-          "display" : "PA328QV",
-          "id" : "319925AB-73EE-4D31-BA25-B1EDA23DDDDB",
-          "name" : "Editors",
-          "openAppsOnActivation" : false,
-          "shortcut" : "ctrl+opt+shift+2",
-          "symbolIconName" : "arcade.stick.console.fill"
         },
         {
           "apps" : [
@@ -141,7 +131,7 @@
           "id" : "9BBF0FD6-62D0-4016-951F-321ED66BAE2B",
           "name" : "AI",
           "openAppsOnActivation" : false,
-          "shortcut" : "ctrl+opt+shift+3",
+          "shortcut" : "ctrl+opt+shift+2",
           "symbolIconName" : "poweroutlet.type.f.fill"
         },
         {
@@ -201,7 +191,7 @@
           "id" : "6EF5BD8F-93B9-4FEE-839A-A43DCDA452BB",
           "name" : "Design",
           "openAppsOnActivation" : false,
-          "shortcut" : "ctrl+opt+shift+4",
+          "shortcut" : "ctrl+opt+shift+3",
           "symbolIconName" : "paintpalette.fill"
         },
         {
@@ -251,7 +241,7 @@
           "id" : "99CE3154-9162-471D-A9DC-5C894F35CF19",
           "name" : "Notes",
           "openAppsOnActivation" : false,
-          "shortcut" : "ctrl+opt+shift+5",
+          "shortcut" : "ctrl+opt+shift+4",
           "symbolIconName" : "text.document.fill"
         },
         {
@@ -291,7 +281,7 @@
           "id" : "6686D9E1-DF4D-4645-805A-30A4051A71D5",
           "name" : "Comms",
           "openAppsOnActivation" : false,
-          "shortcut" : "ctrl+opt+shift+6",
+          "shortcut" : "ctrl+opt+shift+5",
           "symbolIconName" : "ellipsis.message.fill"
         }
       ]

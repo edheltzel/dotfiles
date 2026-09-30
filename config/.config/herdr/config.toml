@@ -69,7 +69,7 @@ delivery = "herdr"
 position = "top-right"
 
 [theme]
-name = "dracula"
+name = "catppuccin-latte"
 auto_switch = false
 
 ### keybindings ###
