@@ -72,11 +72,6 @@
               "name" : "OrbStack"
             },
             {
-              "bundleIdentifier" : "doc.md-preview",
-              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
-              "name" : "Markdown Preview"
-            },
-            {
               "bundleIdentifier" : "dev.empryo.desktop",
               "iconPath" : "/Applications/Empryo.app/Contents/Resources/icon.icns",
               "name" : "Empryo"
@@ -90,6 +85,11 @@
               "bundleIdentifier" : "dev.zed.Zed",
               "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
               "name" : "Zed"
+            },
+            {
+              "bundleIdentifier" : "so.stencil.tern",
+              "iconPath" : "/Applications/Tern.app/Contents/Resources/tern.icns",
+              "name" : "Tern"
             }
           ],
           "display" : "PA278QV",
@@ -217,24 +217,14 @@
               "name" : "Reminders"
             },
             {
-              "bundleIdentifier" : "com.todoist.mac.Todoist",
-              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
-              "name" : "Todoist"
-            },
-            {
-              "bundleIdentifier" : "com.clickup.desktop-app",
-              "iconPath" : "/Applications/ClickUp.app/Contents/Resources/icon.icns",
-              "name" : "ClickUp"
-            },
-            {
-              "bundleIdentifier" : "com.tldraw.desktop",
-              "iconPath" : "/Applications/tldraw offline.app/Contents/Resources/icon.icns",
-              "name" : "tldraw offline"
-            },
-            {
               "bundleIdentifier" : "com.microsoft.Excel",
               "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/Excel_macOS.icns",
               "name" : "Microsoft Excel"
+            },
+            {
+              "bundleIdentifier" : "doc.md-preview",
+              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
+              "name" : "Markdown Preview"
             }
           ],
           "display" : "PA278QV",
@@ -272,9 +262,9 @@
               "name" : "Contacts"
             },
             {
-              "bundleIdentifier" : "com.tinyspeck.slackmacgap",
-              "iconPath" : "/Applications/Slack.app/Contents/Resources/electron.icns",
-              "name" : "Slack"
+              "bundleIdentifier" : "com.invoiceninja.app",
+              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
+              "name" : "Invoice Ninja"
             }
           ],
           "display" : "PA278QV",
