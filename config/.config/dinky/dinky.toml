@@ -57,7 +57,10 @@ duration-ms = 150 # roughly how long a window takes to arrive
 placeholders = true # outline where a dragged tile came from and the tile it will swap with
 
 # dinky commands run on events. exec-and-forget gets $DINKY_WORKSPACE, $DINKY_PREV_WORKSPACE, $DINKY_DISPLAY.
-# [hooks]
+[hooks]
+workspace-changed = [
+  'exec-and-forget open -g "swiftbar://refreshplugin?name=workspace"',
+]
 # startup = ['exec-and-forget brew services restart sketchybar']
 # workspace-changed = ['exec-and-forget sketchybar --trigger workspace_change']
 # focus-changed = []
@@ -89,16 +92,16 @@ cmd-ctrl-6 = 'move-window-to-workspace 6'
 cmd-ctrl-7 = 'move-window-to-workspace 7'
 cmd-ctrl-8 = 'move-window-to-workspace 8'
 cmd-ctrl-9 = 'move-window-to-workspace 9'
+cmd-ctrl-h = 'move left'
+cmd-ctrl-j = 'move down'
+cmd-ctrl-k = 'move up'
+cmd-ctrl-l = 'move right'
+cmd-ctrl-d = 'move-window-to-display next'
 cmd-ctrl-tab = 'workspace-back-and-forth'
-cmd-ctrl-h = 'focus left'
-cmd-ctrl-j = 'focus down'
-cmd-ctrl-k = 'focus up'
-cmd-ctrl-l = 'focus right'
-ctrl-alt-shift-h = 'move left'
-ctrl-alt-shift-j = 'move down'
-ctrl-alt-shift-k = 'move up'
-ctrl-alt-shift-l = 'move right'
-ctrl-alt-shift-d = 'move-window-to-display next'
+ctrl-alt-shift-h = 'focus left'
+ctrl-alt-shift-j = 'focus down'
+ctrl-alt-shift-k = 'focus up'
+ctrl-alt-shift-l = 'focus right'
 ctrl-alt-shift-f = 'layout floating tiling'
 ctrl-alt-shift-minus = 'resize smart -50'
 ctrl-alt-shift-equal = 'resize smart +50'
@@ -134,8 +137,18 @@ run = 'move-window-to-workspace 2'
 
 #### Workspace 3 - AI
 [[rules]]
-app-name = 'claude|chatgpt|grok|omlx|^orca$'
+app-name = 'chatgpt|grok|omlx|^orca$'
+kind = 'normal'
+run = 'move-window-to-workspace 3'
+
+[[rules]]
+app-id = 'com.anthropic.claudefordesktop'
+kind = 'normal'
+run = 'move-window-to-workspace 3'
+
+[[rules]]
 app-id = 'com.anysphere.sand'
+kind = 'normal'
 run = 'move-window-to-workspace 3'
 
 #### Workspace 4 - design+cad
