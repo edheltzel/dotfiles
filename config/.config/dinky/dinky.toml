@@ -20,7 +20,7 @@ follow-app-activation = true # Cmd-Tab and Dock clicks switch Spaces the fast wa
 # expand = 'columns'           # columns | rows | accordion (overflow in last cell)
 
 [accordion]
-padding = 30         # points the neighbours peek out by
+padding = 80         # points the neighbours peek out by
 orientation = 'auto' # auto: run along the container's longer side | keep
 
 [gaps]
