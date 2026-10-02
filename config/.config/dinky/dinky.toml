@@ -74,25 +74,25 @@ run = 'layout floating'
 [mode.main]
 ctrl-alt-shift-u = 'workspace prev'
 ctrl-alt-shift-i = 'workspace next'
-ctrl-alt-shift-1 = 'workspace 1'
-ctrl-alt-shift-2 = 'workspace 2'
-ctrl-alt-shift-3 = 'workspace 3'
-ctrl-alt-shift-4 = 'workspace 4'
-ctrl-alt-shift-5 = 'workspace 5'
-ctrl-alt-shift-6 = 'workspace 6'
-ctrl-alt-shift-7 = 'workspace 7'
-ctrl-alt-shift-8 = 'workspace 8'
-ctrl-alt-shift-9 = 'workspace 9'
-cmd-ctrl-1 = 'move-window-to-workspace 1'
-cmd-ctrl-2 = 'move-window-to-workspace 2'
-cmd-ctrl-3 = 'move-window-to-workspace 3'
-cmd-ctrl-4 = 'move-window-to-workspace 4'
-cmd-ctrl-5 = 'move-window-to-workspace 5'
-cmd-ctrl-6 = 'move-window-to-workspace 6'
-cmd-ctrl-7 = 'move-window-to-workspace 7'
-cmd-ctrl-8 = 'move-window-to-workspace 8'
-cmd-ctrl-9 = 'move-window-to-workspace 9'
-cmd-ctrl-h = 'move left'
+ctrl-alt-shift-0 = 'workspace 1'    # hq
+ctrl-alt-shift-1 = 'workspace 2'    # code
+ctrl-alt-shift-2 = 'workspace 3'    # ai
+ctrl-alt-shift-3 = 'workspace 4'    # design
+ctrl-alt-shift-5 = 'workspace 5'    # comms
+ctrl-alt-shift-4 = 'workspace 6'    # overflow
+# ctrl-alt-shift-6 = 'workspace 7'            # disabled
+# ctrl-alt-shift-7 = 'workspace 8'            # disabled
+# ctrl-alt-shift-8 = 'workspace 9'            # disabled
+cmd-ctrl-0 = 'move-window-to-workspace 1' # hq
+cmd-ctrl-1 = 'move-window-to-workspace 2' # code
+cmd-ctrl-2 = 'move-window-to-workspace 3' # ai
+cmd-ctrl-3 = 'move-window-to-workspace 4' # design
+cmd-ctrl-5 = 'move-window-to-workspace 5' # comms
+cmd-ctrl-4 = 'move-window-to-workspace 6' # overflow
+# cmd-ctrl-6 = 'move-window-to-workspace 7'
+# cmd-ctrl-7 = 'move-window-to-workspace 8'
+# cmd-ctrl-8 = 'move-window-to-workspace 9'
+# cmd-ctrl-h = 'move left'
 cmd-ctrl-j = 'move down'
 cmd-ctrl-k = 'move up'
 cmd-ctrl-l = 'move right'
@@ -129,13 +129,13 @@ app-name = 'chrome|safari|firefox|brave|helium|gitbutler|^arc$|^zen'
 kind = 'normal'
 run = 'move-window-to-workspace 1'
 
-#### Workspace 2 - code+terminal
+#### Workspace 2 - code
 [[rules]]
-app-name = 'term|ghostty|kitty|wezterm|tern|empryo|zed|orbstack'
+app-name = 'term|ghostty|kitty|wezterm|tern|empryo|zed|orbstack|Whiteboard'
 kind = 'normal'
 run = 'move-window-to-workspace 2'
 
-#### Workspace 3 - AI
+#### Workspace 3 - ai
 [[rules]]
 app-name = 'chatgpt|grok|omlx|^orca$'
 kind = 'normal'
@@ -151,7 +151,7 @@ app-id = 'com.anysphere.sand'
 kind = 'normal'
 run = 'move-window-to-workspace 3'
 
-#### Workspace 4 - design+cad
+#### Workspace 4 - design
 [[rules]]
 app-name = '^(Shapr3D|OpenSCAD|FreeCAD|(Autodesk )?Fusion)'
 kind = 'normal'
@@ -162,14 +162,14 @@ app-name = 'slicer|snapmaker|bambu|anycubic|xtool|affinity|figma|hueforge|inksca
 kind = 'normal'
 run = 'move-window-to-workspace 4'
 
-#### Workspace 5 - misc+overflow
-[[rules]]
-app-name = 'obsidian|notes|^preview|reminders|excel|^vnc'
-kind = 'normal'
-run = 'move-window-to-workspace 5'
-
-#### Workspace 6 - Comms
+#### Workspace 5 - comms
 [[rules]]
 app-name = '^(messages|slack|discord|whatsapp|microsoft teams)'
 kind = 'normal'
 run = 'move-window-to-workspace 6'
+
+#### Workspace 6 - overflow
+[[rules]]
+app-name = 'obsidian|notes|^preview|reminders|excel|^vnc'
+kind = 'normal'
+run = 'move-window-to-workspace 5'
