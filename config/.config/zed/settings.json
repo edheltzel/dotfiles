@@ -75,7 +75,7 @@
     "metrics": false
   },
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Catppuccin Latte",
     "dark": "Dracula"
   },
