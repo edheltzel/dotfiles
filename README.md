@@ -230,7 +230,16 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
   - **Abbreviations, not aliases**: `conf.d/abbr.fish`. Run `abbr` to list them. Multi-step commands live in `functions/`.
   - **Plugins**: managed by [Fisher](https://github.com/jorgebucaran/fisher), listed in `fish_plugins`.
   - **SSH agent**: `conf.d/fish-ssh-agent.fish` shares one agent across every shell (see Troubleshooting).
-  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.toml`.
+  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.toml`. Add or remove a `[[harness]]` table there. Order is run order. `binary` is skipped when it is not installed. Omit `version`, or set it to `"-"`, to skip the version line.
+
+    ```toml
+    [[harness]]
+    label = "Cursor Agent"
+    color = "blue"
+    binary = "cursor-agent"
+    version = "cursor-agent"
+    args = "update"
+    ```
 
 - **zsh** (`zsh/`) - near-identical mirror of the Fish config for Zsh compatibility. XDG-compliant (`ZDOTDIR=~/.config/zsh`).
   - **Plugin manager**: [Antidote](https://getantidote.github.io/), plugins in `.zsh_plugins.txt`: `zsh-autosuggestions`, `fast-syntax-highlighting`, `zsh-abbr`, `zsh-history-substring-search`, `zsh-autopair`, `zsh-completions`.
