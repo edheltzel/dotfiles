@@ -1,0 +1,73 @@
+# Agent harness manifest. Read by functions/aup.fish.
+# Add or remove [[harness]] tables. Order is run order.
+# version is probed with --version; omit it or use "-" to skip.
+# args is a string ("update --all") or a list (["update", "--all"]).
+
+# [[harness]]
+# label = "Opencode"
+# color = "61747f"
+# binary = "opencode"
+# version = "opencode"
+# args = "upgrade"
+#
+# [[harness]]
+# label = "Prime-agent"
+# color = "7081d0"
+# binary = "prime-agent"
+# version = "prime-agent"
+# args = "update --force"
+#
+# [[harness]]
+# label = "Hermes"
+# color = "454759"
+# binary = "prime-agent"
+# version = "prime-agent"
+# args = "update --force"
+
+[[harness]]
+label = "Herdr"
+color = "magenta"
+binary = "herdr"
+version = "herdr"
+args = "update"
+
+[[harness]]
+label = "Pi+extensions"
+color = "cyan"
+binary = "pi"
+args = "update --all"
+
+[[harness]]
+label = "Jcode"
+color = "green"
+binary = "jcode"
+version = "jcode"
+args = "update"
+
+[[harness]]
+label = "Claude Code"
+color = "yellow"
+binary = "claude"
+version = "claude"
+args = "update"
+
+[[harness]]
+label = "OMP plugins"
+color = "magenta"
+binary = "omp"
+version = "omp"
+args = "update --plugins"
+
+[[harness]]
+label = "OMP"
+color = "magenta"
+binary = "omp"
+version = "omp"
+args = "update --force"
+
+[[harness]]
+label = "Cursor Agent"
+color = "blue"
+binary = "cursor-agent"
+version = "cursor-agent"
+args = "update"

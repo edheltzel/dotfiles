@@ -168,7 +168,7 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
 5. After setup completes, run `upp` to execute topgrade and update everything:
    - `upp` is an abbreviation for `topgrade --yes` - Update Packages _(this is what I say to myself)_
    - `config/.config/topgrade.toml` includes `[post_commands]` for a Brew cleanup pass
-   - `aup` updates the AI agent harnesses listed in `fish/.config/fish/agent-harnesses.txt`
+   - `aup` updates the AI agent harnesses listed in `fish/.config/fish/agent-harnesses.toml`
 6. Optional DX and nice to haves:
    - Disable Gatekeeper when installing apps: `sudo spctl --master-disable` (see `macos/03-security.sh`)
    - Node auto-switching is lazy-loaded; `fnm env --use-on-cd` runs on the first `node`/`npm` call
@@ -230,7 +230,7 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
   - **Abbreviations, not aliases**: `conf.d/abbr.fish`. Run `abbr` to list them. Multi-step commands live in `functions/`.
   - **Plugins**: managed by [Fisher](https://github.com/jorgebucaran/fisher), listed in `fish_plugins`.
   - **SSH agent**: `conf.d/fish-ssh-agent.fish` shares one agent across every shell (see Troubleshooting).
-  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.txt`.
+  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.toml`.
 
 - **zsh** (`zsh/`) - near-identical mirror of the Fish config for Zsh compatibility. XDG-compliant (`ZDOTDIR=~/.config/zsh`).
   - **Plugin manager**: [Antidote](https://getantidote.github.io/), plugins in `.zsh_plugins.txt`: `zsh-autosuggestions`, `fast-syntax-highlighting`, `zsh-abbr`, `zsh-history-substring-search`, `zsh-autopair`, `zsh-completions`.
