@@ -21,6 +21,8 @@ disable = [
   "claude_code",
   "claude_code_plugins",
   "pi",
+  "cursor_agent",
+  "cursor",
 ]
 ignore_failures = ["bun_packages"]
 assume_yes = true

@@ -6,3 +6,5 @@
 # >>> Codex installer >>>
 export PATH="/Users/ed/.local/bin:$PATH"
 # <<< Codex installer <<<
+
+. "$HOME/.local/share/../bin/env"
