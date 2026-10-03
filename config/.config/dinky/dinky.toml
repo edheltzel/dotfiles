@@ -120,12 +120,17 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # Always Floating
 [[rules]]
-app-name = '^(system settings|finder|raycast|cyberduck)$'
+app-name = '^(system settings|finder|raycast|cyberduck|vorssaint)$'
 run = 'layout floating'
+
+[[rules]]
+app-id = '^(com.vorssaint.utils)$'
+run = 'layout floating'
+
 
 #### Workspace 1 - browser
 [[rules]]
-app-name = 'chrome|safari|firefox|brave|helium|gitbutler|^arc$|^zen'
+app-name = 'chrome|safari|firefox|brave|vivaldi|helium|gitbutler|^arc$|^zen'
 kind = 'normal'
 run = 'move-window-to-workspace 1'
 
