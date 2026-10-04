@@ -3,7 +3,7 @@
 # A key you leave out keeps the value shown here.
 # Every key and command: https://dinky.rodeo/configuration/
 
-start-at-login = true
+start-at-login = false
 workspaces = 6               # across all displays, one native Space each
 default-layout = 'tiles'     # tiles (dwindle) | dwindle | accordion | fixed
 default-tiling = true        # false leaves workspaces untiled unless overridden
