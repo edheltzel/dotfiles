@@ -212,11 +212,6 @@
               "name" : "Preview"
             },
             {
-              "bundleIdentifier" : "com.apple.reminders",
-              "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
-              "name" : "Reminders"
-            },
-            {
               "bundleIdentifier" : "com.microsoft.Excel",
               "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/Excel_macOS.icns",
               "name" : "Microsoft Excel"
@@ -225,6 +220,16 @@
               "bundleIdentifier" : "doc.md-preview",
               "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
               "name" : "Markdown Preview"
+            },
+            {
+              "bundleIdentifier" : "com.invoiceninja.app",
+              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
+              "name" : "Invoice Ninja"
+            },
+            {
+              "bundleIdentifier" : "com.apple.reminders",
+              "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
+              "name" : "Reminders"
             }
           ],
           "display" : "PA278QV",
@@ -237,9 +242,9 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.microsoft.teams2",
-              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
-              "name" : "Microsoft Teams"
+              "bundleIdentifier" : "com.dygmalab.bazecor",
+              "iconPath" : "/Applications/Bazecor.app/Contents/Resources/electron.icns",
+              "name" : "Bazecor"
             },
             {
               "bundleIdentifier" : "com.apple.MobileSMS",
@@ -247,9 +252,9 @@
               "name" : "Messages"
             },
             {
-              "bundleIdentifier" : "com.dygmalab.bazecor",
-              "iconPath" : "/Applications/Bazecor.app/Contents/Resources/electron.icns",
-              "name" : "Bazecor"
+              "bundleIdentifier" : "com.microsoft.teams2",
+              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+              "name" : "Microsoft Teams"
             },
             {
               "bundleIdentifier" : "com.apple.iCal",
@@ -260,11 +265,6 @@
               "bundleIdentifier" : "com.apple.AddressBook",
               "iconPath" : "/System/Applications/Contacts.app/Contents/Resources/Contacts.icns",
               "name" : "Contacts"
-            },
-            {
-              "bundleIdentifier" : "com.invoiceninja.app",
-              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
-              "name" : "Invoice Ninja"
             }
           ],
           "display" : "PA278QV",

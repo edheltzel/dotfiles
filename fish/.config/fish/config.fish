@@ -86,3 +86,5 @@ set -gx PATH "/Users/ed/.local/bin" $PATH
 
 # Empryo
 set -gx PATH $HOME/.empryo/bin $PATH
+
+eval (/opt/homebrew/bin/brew shellenv fish)
