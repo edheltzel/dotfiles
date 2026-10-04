@@ -130,13 +130,13 @@ run = 'layout floating'
 
 #### Workspace 1 - browser
 [[rules]]
-app-name = 'chrome|safari|firefox|brave|vivaldi|helium|gitbutler|^arc$|^zen'
+app-name = 'chrome|safari|firefox|brave|vivaldi|helium|^arc$|^zen'
 kind = 'normal'
 run = 'move-window-to-workspace 1'
 
 #### Workspace 2 - code
 [[rules]]
-app-name = 'term|ghostty|kitty|wezterm|tern|empryo|zed|orbstack|Whiteboard'
+app-name = '^(term|ghostty|kitty|wezterm|tern|empryo|zed|orbstack|gitbutler|Whiteboard)$'
 kind = 'normal'
 run = 'move-window-to-workspace 2'
 
