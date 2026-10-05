@@ -46,7 +46,7 @@ function __aup_prime_agent_update --description 'Run prime-agent update with a t
         '    exec "$real_npm" --allow-remote=all --dangerously-allow-all-scripts "$@"' \
         '    ;;' \
         '  esac' \
-        'done' \
+        done \
         'exec "$real_npm" "$@"' >$wrapper
     chmod +x $wrapper
     python3 -c 'import json, os, sys
@@ -92,7 +92,9 @@ function __aup_run --description 'Run one update command and report its result'
     end
 
     set_color --bold $color
-    printf '%s update in progress\n' "$label"
+    printf ₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋₋\n
+    printf '%s Update in Progress\n' "$label"
+    printf ⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻\n
     set_color normal
     printf '\n'
 

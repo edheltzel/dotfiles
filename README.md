@@ -216,7 +216,7 @@ Two options for managing packages with GNU Stow:
 
 ## Stow Packages
 
-The package list is `stow_packages` in the `justfile`: `dots git fish zsh config neovim local`.
+The package list is `stow_packages` in the `justfile`: `dots git fish zsh config neovim local readinglist`.
 
 - **dots** (`dots/`) - misc dotfiles that live directly in `$HOME`: `.npmrc`, `.tmux.conf`, `.biome.json`, `.tigrc`, `.gitnow`, `.profile`, etc. Also owns `.stow-global-ignore`, the shared ignore list used by every package without its own.
 
@@ -258,6 +258,8 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
 - **neovim** (`neovim/`) - **git submodule** for [NEO.ED](https://github.com/edheltzel/neoed), my LazyVim-based config and primary editor. Stow symlinks `~/.config/nvim` to `neovim/.config/nvim/`. See [its README](./neovim/.config/nvim/README.md) for the full story; highlights: Vite+ formatting and linting (Oxfmt/Oxlint), Eldritch colorscheme, AI integration (Claude Code, OpenCode, Pi), multi-language support.
 
 - **local** (`local/`) - `~/.local`: `bin/` scripts (`chshell`, `update-wezterm-nightly`), cspell dictionaries, keyboard/mouse layout backups, and GitHub CLI extensions (`gh-board`, `gh-changelog`, `gh-dash`, `gh-enhance`, `gh-markdown-preview`, `gh-stack`). Repo screenshots in `__repoImages/` are excluded from stow.
+
+- **readinglist** (`readinglist/`) - saves new Safari Reading List items as source notes in the FieldNotes Obsidian vault. Stows `~/.local/bin/rl2notes`; `just readinglist` (also run by `bootstrap`) generates and loads the `com.ed.readinglist-notes` LaunchAgent. Homebrew Python needs Full Disk Access, re-granted after each Python upgrade. Details in `readinglist/AGENTS.md`.
 
 ## Scripts
 

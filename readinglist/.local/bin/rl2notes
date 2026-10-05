@@ -1,0 +1,115 @@
+#!/usr/bin/env python3
+"""Save new Safari Reading List items as FieldNotes source notes.
+
+Run by the com.ed.readinglist-notes LaunchAgent (see readinglist/AGENTS.md in
+the dotfiles). Reading Safari's Bookmarks.plist needs Full Disk Access for the
+Python interpreter that runs this script.
+
+Usage: rl2notes [--seed]
+  --seed   record every current Reading List item as seen without writing notes
+"""
+import datetime
+import json
+import os
+import plistlib
+import re
+import sys
+from urllib.parse import urlparse
+
+PLIST = os.path.expanduser("~/Library/Safari/Bookmarks.plist")
+OUT = os.path.expanduser(
+    os.environ.get(
+        "RL2NOTES_OUT",
+        "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱/HUB/Sources/Web",
+    )
+)
+STATE = os.path.expanduser(os.environ.get("RL2NOTES_STATE", "~/.local/state/rl2notes/seen.json"))
+
+
+def items():
+    with open(PLIST, "rb") as f:
+        d = plistlib.load(f)
+    for c in d.get("Children", []):
+        if c.get("Title") == "com.apple.ReadingList":
+            for i in c.get("Children", []):
+                url = i.get("URLString")
+                if url:
+                    yield i.get("WebBookmarkUUID") or url, url, i
+
+
+def q(s):
+    return '"' + (s or "").replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ").strip() + '"'
+
+
+def fname(title, url):
+    t = title or urlparse(url).netloc + urlparse(url).path
+    t = re.sub(r'[\\/:*?"<>|#^\[\]\n\r\t]', " ", t)
+    t = re.sub(r"\s+", " ", t).strip()[:120].rstrip(". ") or "Reading List item"
+    p = os.path.join(OUT, t + ".md")
+    n = 2
+    while os.path.exists(p):
+        p = os.path.join(OUT, f"{t} ({n}).md")
+        n += 1
+    return p, t
+
+
+def write(url, i):
+    rl = i.get("ReadingList", {})
+    title = (i.get("URIDictionary", {}).get("title") or "").strip()
+    added = rl.get("DateAdded") or datetime.datetime.now()
+    preview = (rl.get("PreviewText") or "").strip()
+    path, t = fname(title, url)
+    body = f"""---
+type: source
+status: inbox
+title: {q(title or t)}
+source: {q(url)}
+author:
+published:
+created: {added.strftime('%Y-%m-%d')}
+description: {q(preview[:200])}
+tags:
+  - "Resource"
+  - "ReadingList"
+---
+[[HQ]]
+
+---
+
+[Open link]({url})
+
+{preview}
+"""
+    with open(path, "w") as f:
+        f.write(body)
+    return path
+
+
+def main():
+    seed = "--seed" in sys.argv
+    # A missing vault folder means iCloud has not synced yet; bail before
+    # marking anything seen so those items are retried on the next run.
+    if not seed and not os.path.isdir(OUT):
+        sys.exit(f"rl2notes: output folder missing: {OUT}")
+    seen = set()
+    if os.path.exists(STATE):
+        with open(STATE) as f:
+            seen = set(json.load(f))
+    new = 0
+    for key, url, i in items():
+        if key in seen:
+            continue
+        if not seed:
+            print("saved", write(url, i))
+            new += 1
+        seen.add(key)
+    os.makedirs(os.path.dirname(STATE), exist_ok=True)
+    with open(STATE + ".tmp", "w") as f:
+        json.dump(sorted(seen), f)
+    os.replace(STATE + ".tmp", STATE)
+    stamp = datetime.datetime.now().isoformat(timespec="seconds")
+    print(f"{stamp} {'seeded' if seed else 'new'}: {len(seen) if seed else new}")
+
+
+if __name__ == "__main__":
+    main()

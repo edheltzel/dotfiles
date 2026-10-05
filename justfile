@@ -2,7 +2,7 @@
 
 set shell := ["bash", "-cu"]
 
-stow_packages := "dots git fish zsh config neovim local"
+stow_packages := "dots git fish zsh config neovim local readinglist"
 
 yellow := '\033[33m'
 green := '\033[32m'
@@ -71,6 +71,11 @@ delete:
         stow --delete $pkg; \
     done
     @printf "{{white}}Dotfiles zapped! ⚡️{{clr}}\n"
+
+# Install the Safari Reading List -> FieldNotes LaunchAgent (stow + launchctl, idempotent)
+readinglist:
+    @stow --restow readinglist
+    @./readinglist/readinglist.sh
 
 # Install tracked .githooks into .git/hooks. Do not point core.hooksPath at
 # .githooks: GitButler writes managed wrappers into hooksPath, and committing

@@ -32,7 +32,7 @@ Applies to every agent: plan mode, subagents, and manual planning alike.
 
 `install.sh <subcommand>` is the entry point. There is no `bootstrap.sh`; it was absorbed into `install.sh`.
 
-- `bootstrap` - full machine provision: Xcode CLT, Homebrew, `packages/packages.sh`, stow, `duti/duti.sh`, `macos/macos.sh`, `git/git.sh`. Flags apply here.
+- `bootstrap` - full machine provision: Xcode CLT, Homebrew, `packages/packages.sh`, stow, `duti/duti.sh`, `macos/macos.sh`, `git/git.sh`, `readinglist/readinglist.sh` (warn-only). Flags apply here.
 - `link` - re-symlink only, for an already-provisioned machine.
 - `help` - full usage, flags, and caveats.
 
@@ -167,6 +167,7 @@ Stow packages (symlinked into `~`):
 - `dots/` — miscellaneous `$HOME` dotfiles; owns the shared stow global ignore
 - `local/` — user-specific data (`~/.local`)
 - `zsh/` — secondary shell config
+- `readinglist/` — Safari Reading List -> FieldNotes notes: `rl2notes` script (`~/.local/bin`) plus a generated LaunchAgent installed by `readinglist.sh` (`just readinglist`)
 - `neovim/` — Neovim (NEO.ED) — **git submodule**, separate repo, not part of this DOX tree
 
 Infrastructure (run by `install.sh`, not stowed):
