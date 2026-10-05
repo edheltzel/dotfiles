@@ -26,27 +26,27 @@
 
 [[harness]]
 label = "Herdr"
-color = "magenta"
-binary = "herdr"
-version = "herdr"
-args = "update"
+color = "72540C"
+binary = "brew"
+version = "brew"
+args = "upgrade herdr"
 
 [[harness]]
-label = "Pi+extensions"
-color = "cyan"
+label = "Pi+Extensions"
+color = "0A71D0"
 binary = "pi"
 args = "update --all"
 
 [[harness]]
 label = "Jcode"
-color = "green"
+color = "6464B5"
 binary = "jcode"
 version = "jcode"
 args = "update"
 
 [[harness]]
 label = "Claude Code"
-color = "yellow"
+color = "D4540B"
 binary = "claude"
 version = "claude"
 args = "update"
@@ -60,21 +60,21 @@ args = "plugin marketplace update"
 
 [[harness]]
 label = "OMP plugins"
-color = "magenta"
+color = "F801F9"
 binary = "omp"
 version = "omp"
 args = "update --plugins"
 
 [[harness]]
 label = "OMP"
-color = "magenta"
+color = "F801F9"
 binary = "omp"
 version = "omp"
 args = "update --force"
 
 [[harness]]
 label = "Cursor Agent"
-color = "blue"
+color = "D47497"
 binary = "cursor-agent"
 version = "cursor-agent"
 args = "update"
