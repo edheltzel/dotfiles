@@ -37,7 +37,7 @@ mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}"
 run = "ouch"
 
 [mgr]
-ratio = [1, 2, 5]
+ratio = [0, 2, 5]
 sort_by = "alphabetical"
 sort_sensitive = false
 sort_reverse = false

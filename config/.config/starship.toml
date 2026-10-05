@@ -1,6 +1,7 @@
 # $all still fills the rest of the default order. Prefix modules are listed so
 # ${custom.gitbutler} sits where $git_branch would, not at the late $custom slot.
-# ${custom.git_ahead_behind} stays next to $git_status (not at the late $custom slot).
+# ${custom.git_plain} and ${custom.git_ahead_behind} render stock git info only
+# when GitButler is not managing the repo.
 format = """
 $username\
 $hostname\
@@ -14,10 +15,7 @@ $vcsh\
 $fossil_branch\
 $fossil_metrics\
 ${custom.gitbutler}\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
+${custom.git_plain}\
 ${custom.git_ahead_behind}\
 $all
 """
@@ -61,7 +59,9 @@ format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
 
 # Latest git tag/release reachable from HEAD (hidden when none)
 # tag_max_candidates > 0 finds the nearest ancestral tag, not only exact HEAD tags
+# Shown only via ${custom.git_plain} outside GitButler repos.
 [git_commit]
+disabled = true
 only_detached = false
 tag_disabled = false
 tag_max_candidates = 10
@@ -69,13 +69,17 @@ tag_symbol = "󰓼 "
 format = "([$tag]($style) )"
 style = "purple"
 
+[git_state]
+disabled = true
+
 [git_metrics]
-disabled = false
+disabled = true
 added_style = "green"
 deleted_style = "red"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
+disabled = true
 style = "white"
 format = "([$all_status]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
@@ -104,8 +108,18 @@ format = "[$output](pink) "
 disabled = false
 ignore_timeout = true
 
-# Workspace-vs-upstream counts are noise on gitbutler/workspace. Keep them on
-# ordinary git repos (same glyphs as the old git_status ahead/behind/diverged).
+
+# Stock git segments. Hidden while .git/gitbutler exists.
+[custom.git_plain]
+command = "~/.config/starship/git-plain.sh"
+when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ ! -d "$(git rev-parse --git-path gitbutler 2>/dev/null)" ]'
+shell = ["bash", "--noprofile", "--norc"]
+format = "$output"
+disabled = false
+ignore_timeout = true
+
+[profiles]
+gitplain = "$git_commit$git_state$git_metrics$git_status"
 [custom.git_ahead_behind]
 when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ ! -d "$(git rev-parse --git-path gitbutler 2>/dev/null)" ]'
 command = '''

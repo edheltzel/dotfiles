@@ -1,0 +1,180 @@
+#:schema https://dinky.rodeo/schemas/dinky.json
+# ~/.config/dinky/dinky.toml. Saved changes take effect at once.
+# A key you leave out keeps the value shown here.
+# Every key and command: https://dinky.rodeo/configuration/
+
+start-at-login = false
+workspaces = 6               # across all displays, one native Space each
+default-layout = 'tiles'     # tiles (dwindle) | dwindle | accordion | fixed
+default-tiling = true        # false leaves workspaces untiled unless overridden
+follow-app-activation = true # Cmd-Tab and Dock clicks switch Spaces the fast way
+
+# Example: only tile workspace 2 in a fixed 2x3 template.
+# Empty cells stay empty; a seventh window adds a column by default.
+# default-tiling = false
+# [workspace.2]
+# tiling = true
+# layout = 'fixed'
+# columns = 2
+# rows = 3
+# expand = 'columns'           # columns | rows | accordion (overflow in last cell)
+
+[accordion]
+padding = 80         # points the neighbours peek out by
+orientation = 'auto' # auto: run along the container's longer side | keep
+
+[gaps]
+inner = 8 # or { horizontal = 8, vertical = 8 }
+outer = 8 # or { top = 8, bottom = 8, left = 8, right = 8 }
+
+# Display patterns: main, secondary, or part of a name as `dinky list-displays` prints it.
+# A workspace lives on the first display its patterns match, else on the main display.
+# [workspace-to-display]
+# 5 = 'secondary'
+
+# Overrides for one display.
+# [display.main]
+# gaps.outer.top = 44
+
+[borders]
+enabled = true
+width = 3
+active-color = '#E50A69'     # '#rrggbb' or '#rrggbbaa'
+inactive-color = '#21233790'
+order = 'below'              # below | above (a click-through ring over the window)
+exclude-apps = []            # bundle IDs whose windows get no border
+
+[focus-follows-mouse]
+enabled = false
+delay-ms = 100         # how long the pointer rests on a window before it takes focus
+accordion-edges = true # resting on a peeking accordion edge focuses that window
+
+[animations]
+enabled = true    # windows glide to their tiles; off while Reduce Motion is on
+duration-ms = 150 # roughly how long a window takes to arrive
+
+[drag]
+placeholders = true # outline where a dragged tile came from and the tile it will swap with
+
+# dinky commands run on events. exec-and-forget gets $DINKY_WORKSPACE, $DINKY_PREV_WORKSPACE, $DINKY_DISPLAY.
+[hooks]
+workspace-changed = [
+  'exec-and-forget open -g "swiftbar://refreshplugin?name=workspace"',
+]
+# startup = ['exec-and-forget brew services restart sketchybar']
+# workspace-changed = ['exec-and-forget sketchybar --trigger workspace_change']
+# focus-changed = []
+# mode-changed = []
+
+# Every rule whose conditions all match a new window runs, in order.
+[[rules]]
+app-id = 'com.apple.systempreferences' # also: app-name, title (regexes), kind (normal|dialog|sheet|panel)
+run = 'layout floating'
+
+[mode.main]
+ctrl-alt-shift-u = 'workspace prev'
+ctrl-alt-shift-i = 'workspace next'
+ctrl-alt-shift-0 = 'workspace 1'    # hq
+ctrl-alt-shift-1 = 'workspace 2'    # code
+ctrl-alt-shift-2 = 'workspace 3'    # ai
+ctrl-alt-shift-3 = 'workspace 4'    # design
+ctrl-alt-shift-5 = 'workspace 5'    # comms
+ctrl-alt-shift-4 = 'workspace 6'    # overflow
+# ctrl-alt-shift-6 = 'workspace 7'            # disabled
+# ctrl-alt-shift-7 = 'workspace 8'            # disabled
+# ctrl-alt-shift-8 = 'workspace 9'            # disabled
+cmd-ctrl-0 = 'move-window-to-workspace 1' # hq
+cmd-ctrl-1 = 'move-window-to-workspace 2' # code
+cmd-ctrl-2 = 'move-window-to-workspace 3' # ai
+cmd-ctrl-3 = 'move-window-to-workspace 4' # design
+cmd-ctrl-5 = 'move-window-to-workspace 5' # comms
+cmd-ctrl-4 = 'move-window-to-workspace 6' # overflow
+# cmd-ctrl-6 = 'move-window-to-workspace 7'
+# cmd-ctrl-7 = 'move-window-to-workspace 8'
+# cmd-ctrl-8 = 'move-window-to-workspace 9'
+# cmd-ctrl-h = 'move left'
+cmd-ctrl-j = 'move down'
+cmd-ctrl-k = 'move up'
+cmd-ctrl-l = 'move right'
+cmd-ctrl-d = 'move-window-to-display next'
+cmd-ctrl-tab = 'workspace-back-and-forth'
+ctrl-alt-shift-h = 'focus left'
+ctrl-alt-shift-j = 'focus down'
+ctrl-alt-shift-k = 'focus up'
+ctrl-alt-shift-l = 'focus right'
+ctrl-alt-shift-f = 'layout floating tiling'
+ctrl-alt-shift-minus = 'resize smart -50'
+ctrl-alt-shift-equal = 'resize smart +50'
+ctrl-alt-shift-n = 'fullscreen'
+ctrl-alt-shift-m = 'layout accordion'
+ctrl-alt-shift-comma = 'layout tiles'
+ctrl-alt-shift-semicolon = 'mode service'
+
+[mode.service]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']
+
+# Always Floating
+[[rules]]
+app-name = '^(system settings|finder|raycast|cyberduck|vorssaint)$'
+run = 'layout floating'
+
+[[rules]]
+app-id = '^(com.vorssaint.utils)$'
+run = 'layout floating'
+
+
+#### Workspace 1 - browser
+[[rules]]
+app-name = 'chrome|safari|firefox|brave|vivaldi|helium|^arc$|^zen'
+kind = 'normal'
+run = 'move-window-to-workspace 1'
+
+#### Workspace 2 - code
+[[rules]]
+app-name = '^(term|ghostty|kitty|wezterm|tern|empryo|zed|orbstack|gitbutler|Whiteboard)$'
+kind = 'normal'
+run = 'move-window-to-workspace 2'
+
+#### Workspace 3 - ai
+[[rules]]
+app-name = 'chatgpt|grok|omlx|^orca$'
+kind = 'normal'
+run = 'move-window-to-workspace 3'
+
+[[rules]]
+app-id = 'com.anthropic.claudefordesktop'
+kind = 'normal'
+run = 'move-window-to-workspace 3'
+
+[[rules]]
+app-id = 'com.anysphere.sand'
+kind = 'normal'
+run = 'move-window-to-workspace 3'
+
+#### Workspace 4 - design
+[[rules]]
+app-name = '^(Shapr3D|OpenSCAD|FreeCAD|(Autodesk )?Fusion)'
+kind = 'normal'
+run = 'move-window-to-workspace 4'
+
+[[rules]]
+app-name = 'slicer|snapmaker|bambu|anycubic|xtool|affinity|figma|hueforge|inkscape|gimp'
+kind = 'normal'
+run = 'move-window-to-workspace 4'
+
+#### Workspace 5 - comms
+[[rules]]
+app-name = '^(messages|slack|discord|whatsapp|microsoft teams)'
+kind = 'normal'
+run = 'move-window-to-workspace 6'
+
+#### Workspace 6 - overflow
+[[rules]]
+app-name = 'obsidian|notes|^preview|reminders|excel|^vnc'
+kind = 'normal'
+run = 'move-window-to-workspace 5'

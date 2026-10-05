@@ -52,11 +52,6 @@
               "name" : "Ghostty"
             },
             {
-              "bundleIdentifier" : "dev.zed.Zed",
-              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
-              "name" : "Zed"
-            },
-            {
               "bundleIdentifier" : "com.gitbutler.app",
               "iconPath" : "/Applications/GitButler.app/Contents/Resources/icon.icns",
               "name" : "GitButler"
@@ -77,14 +72,24 @@
               "name" : "OrbStack"
             },
             {
-              "bundleIdentifier" : "doc.md-preview",
-              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
-              "name" : "Markdown Preview"
+              "bundleIdentifier" : "dev.empryo.desktop",
+              "iconPath" : "/Applications/Empryo.app/Contents/Resources/icon.icns",
+              "name" : "Empryo"
             },
             {
               "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
               "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
               "name" : "Cursor"
+            },
+            {
+              "bundleIdentifier" : "dev.zed.Zed",
+              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name" : "Zed"
+            },
+            {
+              "bundleIdentifier" : "so.stencil.tern",
+              "iconPath" : "/Applications/Tern.app/Contents/Resources/tern.icns",
+              "name" : "Tern"
             }
           ],
           "display" : "PA278QV",
@@ -102,16 +107,6 @@
               "name" : "Orca"
             },
             {
-              "bundleIdentifier" : "com.zarifpour.superconductor",
-              "iconPath" : "/Applications/super.engineering.app/Contents/Resources/super.icns",
-              "name" : "super.engineering"
-            },
-            {
-              "bundleIdentifier" : "dev.bb.desktop",
-              "iconPath" : "/Applications/bb.app/Contents/Resources/icon.icns",
-              "name" : "bb"
-            },
-            {
               "bundleIdentifier" : "com.anthropic.claudefordesktop",
               "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
               "name" : "Claude"
@@ -127,19 +122,9 @@
               "name" : "Grok Bot"
             },
             {
-              "bundleIdentifier" : "com.zed-industries.delta",
-              "iconPath" : "/Applications/Delta.app/Contents/Resources/AppIcon.icns",
-              "name" : "Delta"
-            },
-            {
               "bundleIdentifier" : "app.omlx",
               "iconPath" : "/Applications/oMLX.app/Contents/Resources/AppIcon.icns",
               "name" : "oMLX"
-            },
-            {
-              "bundleIdentifier" : "sh.zeron.app",
-              "iconPath" : "/Applications/Zeron.app/Contents/Resources/zeron.icns",
-              "name" : "Zeron"
             }
           ],
           "display" : "PA278QV",
@@ -227,24 +212,24 @@
               "name" : "Preview"
             },
             {
+              "bundleIdentifier" : "com.microsoft.Excel",
+              "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/Excel_macOS.icns",
+              "name" : "Microsoft Excel"
+            },
+            {
+              "bundleIdentifier" : "doc.md-preview",
+              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
+              "name" : "Markdown Preview"
+            },
+            {
+              "bundleIdentifier" : "com.invoiceninja.app",
+              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
+              "name" : "Invoice Ninja"
+            },
+            {
               "bundleIdentifier" : "com.apple.reminders",
               "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
               "name" : "Reminders"
-            },
-            {
-              "bundleIdentifier" : "com.todoist.mac.Todoist",
-              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
-              "name" : "Todoist"
-            },
-            {
-              "bundleIdentifier" : "com.clickup.desktop-app",
-              "iconPath" : "/Applications/ClickUp.app/Contents/Resources/icon.icns",
-              "name" : "ClickUp"
-            },
-            {
-              "bundleIdentifier" : "com.tldraw.desktop",
-              "iconPath" : "/Applications/tldraw offline.app/Contents/Resources/icon.icns",
-              "name" : "tldraw offline"
             }
           ],
           "display" : "PA278QV",
@@ -257,9 +242,9 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.microsoft.teams2",
-              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
-              "name" : "Microsoft Teams"
+              "bundleIdentifier" : "com.dygmalab.bazecor",
+              "iconPath" : "/Applications/Bazecor.app/Contents/Resources/electron.icns",
+              "name" : "Bazecor"
             },
             {
               "bundleIdentifier" : "com.apple.MobileSMS",
@@ -267,9 +252,9 @@
               "name" : "Messages"
             },
             {
-              "bundleIdentifier" : "com.dygmalab.bazecor",
-              "iconPath" : "/Applications/Bazecor.app/Contents/Resources/electron.icns",
-              "name" : "Bazecor"
+              "bundleIdentifier" : "com.microsoft.teams2",
+              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+              "name" : "Microsoft Teams"
             },
             {
               "bundleIdentifier" : "com.apple.iCal",
@@ -280,11 +265,6 @@
               "bundleIdentifier" : "com.apple.AddressBook",
               "iconPath" : "/System/Applications/Contacts.app/Contents/Resources/Contacts.icns",
               "name" : "Contacts"
-            },
-            {
-              "bundleIdentifier" : "com.tinyspeck.slackmacgap",
-              "iconPath" : "/Applications/Slack.app/Contents/Resources/electron.icns",
-              "name" : "Slack"
             }
           ],
           "display" : "PA278QV",

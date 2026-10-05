@@ -69,3 +69,4 @@ banks/
 
 ### Merge backups ###
 *.orig
+.empryo

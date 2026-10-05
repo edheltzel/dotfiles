@@ -4,6 +4,7 @@
 @earendil-works/pi-coding-agent
 @mermaid-js/mermaid-cli
 @vscode/vsce
+cf
 cspell
 designlang
 gnhf

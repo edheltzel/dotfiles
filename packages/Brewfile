@@ -248,9 +248,12 @@ cask 'transnomino'                 # A batch rename utility
 cask 'itsycal'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
 cask 'keka'                        # File archive and extractor
+cask 'macpacker'                  # Archive manager
+cask 'macusb'                     # Bootable USB installers
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
 cask 'thaw'
 brew 'stats'                       # System stats in menubar
+cask 'vorssaint'                  # Menu bar toolkit
 cask 'tailscale-app'
 cask 'tigervnc'
 

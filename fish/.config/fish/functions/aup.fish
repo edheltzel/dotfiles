@@ -131,7 +131,7 @@ function __aup_run --description 'Run one update command and report its result'
 end
 
 function aup --description 'Update installed agent harnesses and extensions'
-    set -l manifest $__fish_config_dir/agent-harnesses.txt
+    set -l manifest $__fish_config_dir/agent-harnesses.toml
 
     if not test -r "$manifest"
         set_color red
@@ -140,30 +140,79 @@ function aup --description 'Update installed agent harnesses and extensions'
         return 1
     end
 
+    if not command -q python3
+        set_color red
+        printf 'aup: python3 is required to read %s\n' "$manifest"
+        set_color normal
+        return 1
+    end
+
+    set -l lines (python3 -c '
+import sys, tomllib
+path = sys.argv[1]
+try:
+    with open(path, "rb") as f:
+        data = tomllib.load(f)
+except (OSError, tomllib.TOMLDecodeError) as e:
+    print("ERR\t" + str(e))
+    raise SystemExit(2)
+rows = data.get("harness", [])
+if not isinstance(rows, list):
+    print("ERR\tharness must be an array of tables")
+    raise SystemExit(2)
+for i, h in enumerate(rows, 1):
+    if not isinstance(h, dict):
+        print("BAD\t" + str(i) + "\tnot a table")
+        continue
+    missing = [k for k in ("label", "color", "binary") if not str(h.get(k) or "").strip()]
+    if missing:
+        print("BAD\t" + str(i) + "\tmissing " + ", ".join(missing))
+        continue
+    version = str(h.get("version") or "-").strip() or "-"
+    args = h.get("args", [])
+    if args is None:
+        args = []
+    if isinstance(args, str):
+        args = args.split()
+    elif isinstance(args, list):
+        args = [str(a) for a in args]
+    else:
+        print("BAD\t" + str(i) + "\targs must be a string or list")
+        continue
+    fields = [str(h["label"]).strip(), str(h["color"]).strip(), str(h["binary"]).strip(), version, *args]
+    if any(("\t" in f or "\n" in f) for f in fields):
+        print("BAD\t" + str(i) + "\tfield contains a tab or newline")
+        continue
+    print("OK\t" + "\t".join(fields))
+' $manifest)
+    set -l parse_status $status
+
+    if test $parse_status -ne 0
+        set_color red
+        printf 'aup: bad manifest %s\n' "$manifest"
+        for line in $lines
+            printf '%s\n' "$line"
+        end
+        set_color normal
+        return 1
+    end
+
     set -l failed 0
+    set -l tab (printf '\t')
 
-    while read -l line
-        set line (string trim -- "$line")
-        test -z "$line"; and continue
-        string match -q '#*' -- "$line"; and continue
-
-        set -l fields
-        for field in (string split '|' -- "$line")
-            set -a fields (string trim -- "$field")
+    for line in $lines
+        set -l fields (string split -- $tab $line)
+        switch $fields[1]
+            case BAD
+                set_color red
+                printf 'aup: harness %s: %s\n' $fields[2] $fields[3]
+                set_color normal
+                set failed 1
+            case OK
+                __aup_run $fields[2] $fields[3] $fields[4] $fields[5] $fields[6..-1]
+                or set failed 1
         end
-
-        if test (count $fields) -lt 5
-            set_color red
-            printf 'aup: malformed manifest line: %s\n' "$line"
-            set_color normal
-            set failed 1
-            continue
-        end
-
-        set -l update_args (string split ' ' -- $fields[5])
-        __aup_run $fields[1] $fields[2] $fields[3] $fields[4] $update_args
-        or set failed 1
-    end <"$manifest"
+    end
 
     printf '\n'
     return $failed

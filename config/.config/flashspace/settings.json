@@ -22,19 +22,24 @@
   "enableWorkspaceTransitions" : false,
   "floatingApps" : [
     {
-      "bundleIdentifier" : "com.raycast.safari-extension",
-      "iconPath" : "/Applications/Raycast Companion.app/Contents/Resources/AppIcon.icns",
-      "name" : "Raycast Companion"
-    },
-    {
-      "bundleIdentifier" : "com.madda.ghostex.host",
-      "iconPath" : "/Applications/ghostex.app/Contents/Resources/AppIcon.icns",
-      "name" : "Ghostex"
-    },
-    {
       "bundleIdentifier" : "dev.kdrag0n.MacVirt",
       "iconPath" : "/Applications/OrbStack.app/Contents/Resources/AppIcon.icns",
       "name" : "OrbStack"
+    },
+    {
+      "bundleIdentifier" : "com.raycast.macos",
+      "iconPath" : "/Applications/Raycast.app/Contents/Resources/production-appicon.icns",
+      "name" : "Raycast"
+    },
+    {
+      "bundleIdentifier" : "com.vorssaint.utils",
+      "iconPath" : "/Applications/Vorssaint.app/Contents/Resources/AppIcon.icns",
+      "name" : "Vorssaint"
+    },
+    {
+      "bundleIdentifier" : "net.kovidgoyal.kitty",
+      "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
+      "name" : "kitty"
     }
   ],
   "focusFrontmostWindow" : false,

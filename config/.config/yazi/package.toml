@@ -4,24 +4,19 @@ rev = "529444e"
 hash = "a028c3c06630a33b068f4d5bd714a795"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:git"
-rev = "6f26ae0"
-hash = "ce345e7e8baed03a2561b314fa85e59a"
-
-[[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "8e70ec7"
-hash = "543eb6688a3c8eebe9d8f7d1ae0603a3"
+rev = "596b666"
+hash = "c2f4f4aca257dcceafa9e3b828dbf1c9"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "6f26ae0"
-hash = "853240b2454c93a93fd03fc9fd7e06e8"
+rev = "6229767"
+hash = "4f2a05edce73aef2bceb2ee2c134c8f2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "6f26ae0"
-hash = "45a533508a9840cc5a10cf6129f63e6a"
+rev = "6229767"
+hash = "d1e0499cae5f3aeb628c267616d4b682"
 
 [[plugin.deps]]
 use = "AminurAlam/yazi-plugins:font-sample"
@@ -47,6 +42,11 @@ hash = "558bbb58e3dd36d488280a8f10e7b904"
 use = "Ape/open-with-cmd"
 rev = "56705e2"
 hash = "7c84fff414a652c86c44523dbb08026f"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "f703392"
+hash = "347cc6b190eb0c2fd60513cc7ae37412"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
