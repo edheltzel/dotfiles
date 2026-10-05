@@ -35,6 +35,11 @@
       "bundleIdentifier" : "com.vorssaint.utils",
       "iconPath" : "/Applications/Vorssaint.app/Contents/Resources/AppIcon.icns",
       "name" : "Vorssaint"
+    },
+    {
+      "bundleIdentifier" : "net.kovidgoyal.kitty",
+      "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
+      "name" : "kitty"
     }
   ],
   "focusFrontmostWindow" : false,
