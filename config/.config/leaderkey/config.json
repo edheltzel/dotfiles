@@ -18,10 +18,10 @@
           "value" : "/Applications/Affinity.app"
         },
         {
-          "key" : "b",
+          "key" : "G",
           "label" : "♭♭",
           "type" : "application",
-          "value" : "/Applications/bb.app"
+          "value" : "/Applications/GIMP.app"
         },
         {
           "iconPath" : "/Applications/Cursor.app",
@@ -31,7 +31,7 @@
           "value" : "/Applications/Cursor.app"
         },
         {
-          "key" : "C",
+          "key" : "v",
           "label" : "Claude Desktop",
           "type" : "application",
           "value" : "/Applications/Claude.app"
@@ -49,9 +49,14 @@
           "value" : "/Applications/Grok Bot.app"
         },
         {
-          "key" : "i",
+          "key" : "I",
           "type" : "application",
           "value" : "/Applications/Invoice Ninja.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Applications/Inkscape.app"
         },
         {
           "key" : "k",
@@ -95,46 +100,24 @@
         },
         {
           "key" : "n",
-          "label" : "Obsidian",
           "type" : "application",
           "value" : "/Applications/Obsidian.app"
         },
         {
-          "key" : "o",
-          "label" : "Orca 🫍",
+          "key" : "w",
           "type" : "application",
-          "value" : "/Applications/Orca.app"
+          "value" : "/Applications/Whiteboard.app"
         },
         {
-          "key" : "s",
+          "iconPath" : "/Applications/Empryo.app",
+          "key" : "e",
           "type" : "application",
-          "value" : "/Applications/Slack.app"
-        },
-        {
-          "iconPath" : "/Applications/super.engineering.app",
-          "key" : "S",
-          "label" : "SuperEngineer🤖",
-          "type" : "application",
-          "value" : "/Applications/super.engineering.app"
+          "value" : "/Applications/Empryo.app"
         },
         {
           "key" : "t",
-          "label" : "Todoist",
           "type" : "application",
-          "value" : "/Applications/Todoist.app"
-        },
-        {
-          "iconPath" : "apple.terminal.fill",
-          "key" : "v",
-          "label" : "Neovim ✨",
-          "type" : "command",
-          "value" : "open -na Ghostty --args -e nvim"
-        },
-        {
-          "key" : "w",
-          "label" : "Wezterm",
-          "type" : "application",
-          "value" : "/Applications/WezTerm.app"
+          "value" : "/Applications/Tern.app"
         },
         {
           "iconPath" : "/Applications/ChatGPT.app",
