@@ -23,6 +23,7 @@ disable = [
   "pi",
   "cursor_agent",
   "cursor",
+  "skills",
 ]
 ignore_failures = ["bun_packages"]
 assume_yes = true

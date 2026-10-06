@@ -66,8 +66,20 @@ version = "omp"
 args = "update --force"
 
 [[harness]]
+label = "Plannotator"
+color = "7C3AED"
+binary = "bash"
+args = ["-c", "curl -fsSL https://plannotator.ai/install.sh | bash"]
+
+[[harness]]
 label = "Cursor Agent"
 color = "D47497"
 binary = "cursor-agent"
 version = "cursor-agent"
 args = "update"
+
+[[harness]]
+label = "Skills"
+color = "6B7280"
+binary = "skills"
+args = "update -g"
