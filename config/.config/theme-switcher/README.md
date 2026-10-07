@@ -122,7 +122,7 @@ After switching themes:
 - **Neovim**: Restart or `:e` to reload
 - **bat/btop/lazygit**: Changes apply on next launch
 - **starship**: Next prompt
-- **Claude Code**: Restart to apply new theme
+- **Claude Code**: Running sessions update live (via `~/.claude/themes/theme-switcher.json`)
 - **gh-dash**: Reads config only at launch — quit and relaunch `gh dash` to apply
 - **Superfile**: Applies on next `spf` launch
 - **Yazi**: Applies on next `yazi` launch

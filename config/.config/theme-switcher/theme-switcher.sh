@@ -500,29 +500,38 @@ update_claude() {
 
   local claude_theme=$(get_claude_theme "$theme")
   local config_file="$HOME/.claude/settings.json"
+  local themes_dir="$HOME/.claude/themes"
 
-  if [[ -z "$claude_theme" ]]; then
+  if [[ -z "$claude_theme" || ! -f "$THEMES_DIR/claude/${claude_theme#custom:}.json" ]]; then
     SKIPPED_APPS+=("claude (no theme JSON for $theme)")
     warning "claude → skipped (no theme JSON for $theme)"
     return
   fi
 
-  if [[ ! -e "$config_file" ]]; then
-    SKIPPED_APPS+=("claude (settings.json not found)")
-    warning "claude → skipped (settings.json not found)"
+  if ! grep -q '"theme": "' "$config_file" 2>/dev/null; then
+    SKIPPED_APPS+=("claude (no \"theme\" key in settings.json)")
+    warning "claude → skipped (add \"theme\": \"custom:theme-switcher\" to settings.json)"
     return
   fi
 
-  # Resolve symlinks — BSD sed -i refuses to edit through them
-  local real_path
-  if [[ -L "$config_file" ]]; then
-    real_path=$(readlink "$config_file")
-    [[ "$real_path" != /* ]] && real_path="$(cd "$(dirname "$config_file")" && cd "$(dirname "$real_path")" && pwd)/$(basename "$real_path")"
-  else
-    real_path="$config_file"
+  # Running sessions never re-read `theme` from settings.json, but they do
+  # reload a changed file in ~/.claude/themes/. So settings point at one stable
+  # slug and each switch rewrites that file in place.
+  mkdir -p "$themes_dir"
+  cp "$THEMES_DIR/claude/${claude_theme#custom:}.json" "$themes_dir/theme-switcher.json"
+
+  if ! grep -q '"theme": "custom:theme-switcher"' "$config_file"; then
+    # Resolve symlinks — BSD sed -i refuses to edit through them
+    local real_path
+    if [[ -L "$config_file" ]]; then
+      real_path=$(readlink "$config_file")
+      [[ "$real_path" != /* ]] && real_path="$(cd "$(dirname "$config_file")" && cd "$(dirname "$real_path")" && pwd)/$(basename "$real_path")"
+    else
+      real_path="$config_file"
+    fi
+    sed -i '' 's|"theme": "[^"]*"|"theme": "custom:theme-switcher"|' "$real_path"
   fi
 
-  sed -i '' "s|\"theme\": \"[^\"]*\"|\"theme\": \"$claude_theme\"|" "$real_path"
   UPDATED_APPS+=("claude → $claude_theme")
   success "claude → $claude_theme"
 }
