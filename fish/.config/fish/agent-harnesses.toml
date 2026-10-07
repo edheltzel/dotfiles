@@ -26,48 +26,48 @@
 
 [[harness]]
 label = "Herdr"
-color = "72540C"
+color = "B392D7"
 binary = "brew"
 version = "brew"
 args = "upgrade herdr"
 
 [[harness]]
 label = "Pi+Extensions"
-color = "0A71D0"
+color = "0874D5"
 binary = "pi"
 args = "update --all"
 
 [[harness]]
 label = "Jcode"
-color = "6464B5"
+color = "C1A510"
 binary = "jcode"
 version = "jcode"
 args = "update"
 
 [[harness]]
 label = "Claude Code"
-color = "D4540B"
+color = "B3540B"
 binary = "claude"
 version = "claude"
 args = "update"
 
 [[harness]]
 label = "OMP plugins"
-color = "F801F9"
+color = "D454B7"
 binary = "omp"
 version = "omp"
 args = "update --plugins"
 
 [[harness]]
 label = "OMP"
-color = "F801F9"
+color = "D494B7"
 binary = "omp"
 version = "omp"
 args = "update --force"
 
 [[harness]]
 label = "Plannotator"
-color = "7C3AED"
+color = "7494D7"
 binary = "bash"
 args = ["-c", "curl -fsSL https://plannotator.ai/install.sh | bash"]
 
@@ -80,6 +80,6 @@ args = "update"
 
 [[harness]]
 label = "Skills"
-color = "6B7280"
+color = "8C8C8F"
 binary = "skills"
 args = "update -g"
