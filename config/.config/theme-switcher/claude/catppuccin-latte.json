@@ -1,0 +1,58 @@
+{
+  "name": "catppuccin-latte",
+  "base": "light",
+  "overrides": {
+    "text": "#4c4f69",
+    "inverseText": "#eff1f5",
+    "inactive": "#9ca0b0",
+    "inactiveShimmer": "#7c7f93",
+    "subtle": "#9ca0b0",
+    "background": "#8839ef",
+
+    "claude": "#8839ef",
+    "claudeShimmer": "#fe640b",
+    "claudeBlue_FOR_SYSTEM_SPINNER": "#1e66f5",
+    "claudeBlueShimmer_FOR_SYSTEM_SPINNER": "#209fb5",
+
+    "permission": "#1e66f5",
+    "permissionShimmer": "#209fb5",
+    "suggestion": "#1e66f5",
+    "remember": "#1e66f5",
+
+    "autoAccept": "#ea76cb",
+    "bashBorder": "#ea76cb",
+    "planMode": "#1e66f5",
+    "ide": "#8839ef",
+
+    "promptBorder": "#9ca0b0",
+    "promptBorderShimmer": "#8839ef",
+
+    "success": "#40a02b",
+    "error": "#d20f39",
+    "warning": "#fe640b",
+    "warningShimmer": "#df8e1d",
+    "merged": "#8839ef",
+
+    "diffAdded": "#40a02b",
+    "diffRemoved": "#d20f39",
+    "diffAddedDimmed": "#bad8b8",
+    "diffRemovedDimmed": "#e6adbc",
+    "diffAddedWord": "#40a02b",
+    "diffRemovedWord": "#d20f39",
+
+    "selectionBg": "#ccd0da",
+    "userMessageBackground": "#ccd0da",
+    "userMessageBackgroundHover": "#bcc0cc",
+    "messageActionsBackground": "#e6e9ef",
+    "bashMessageBackgroundColor": "#e6e9ef",
+
+    "red_FOR_SUBAGENTS_ONLY": "#d20f39",
+    "blue_FOR_SUBAGENTS_ONLY": "#1e66f5",
+    "green_FOR_SUBAGENTS_ONLY": "#40a02b",
+    "yellow_FOR_SUBAGENTS_ONLY": "#df8e1d",
+    "purple_FOR_SUBAGENTS_ONLY": "#8839ef",
+    "orange_FOR_SUBAGENTS_ONLY": "#fe640b",
+    "pink_FOR_SUBAGENTS_ONLY": "#ea76cb",
+    "cyan_FOR_SUBAGENTS_ONLY": "#04a5e5"
+  }
+}
