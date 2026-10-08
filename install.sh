@@ -198,7 +198,6 @@ cmd_bootstrap() {
   install_xcode
   install_homebrew
 
-  git submodule update --init --recursive
   mkdir -p "$PROJECTS_DIR"
 
   if [ "$SKIP_PACKAGES" -eq 0 ]; then

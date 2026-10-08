@@ -75,7 +75,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/maste
 The remote-curl invocation detects that it is running outside a cloned repo, clones itself to `~/.dotfiles`, then re-executes with the `bootstrap` subcommand. If you prefer, clone first and run locally:
 
 ```shell
-git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles
+git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles && ./install.sh bootstrap
 ```
 
@@ -157,14 +157,12 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
    - `ssh-keygen -t ed25519 -N "" -C "git signing" -f ~/.ssh/id_signing` - signing key, no passphrase
    - Add `id_ed25519.pub` to GitHub as **Authentication**, `id_signing.pub` as **Signing**
    - `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
-3. Clone the repo with submodules:
-   - `git clone --recurse-submodules https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
-   - Or if already cloned: `cd ~/.dotfiles && git submodule update --init --recursive`
+3. Clone the repo:
+   - `git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles`
 4. Use the `justfile` for the rest of the setup:
    - `cd ~/.dotfiles && just install` (calls `./install.sh bootstrap`)
    - Or invoke the script directly: `./install.sh bootstrap`
    - For stow-only (no software install): `./install.sh link` or `just link`
-   - The install script initializes git submodules for you
 5. After setup completes, run `upp` to execute topgrade and update everything:
    - `upp` is an abbreviation for `topgrade --yes` - Update Packages _(this is what I say to myself)_
    - `config/.config/topgrade.toml` includes `[post_commands]` for a Brew cleanup pass
