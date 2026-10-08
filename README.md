@@ -255,7 +255,7 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
   - **Keyboard**: `leaderkey` (current) and `karabiner` (legacy TypeScript config, see [its README](./config/.config/karabiner/README.md)).
   - **Editors**: `zed` (Vim mode), kept for occasional use.
 
-- **neovim** (`neovim/`) - **git submodule** for [NEO.ED](https://github.com/edheltzel/neoed), my LazyVim-based config and primary editor. Stow symlinks `~/.config/nvim` to `neovim/.config/nvim/`. See [its README](./neovim/.config/nvim/README.md) for the full story; highlights: Vite+ formatting and linting (Oxfmt/Oxlint), Eldritch colorscheme, AI integration (Claude Code, OpenCode, Pi), multi-language support.
+- **neovim** (`neovim/`) - [NEO.ED](https://github.com/edheltzel/neoed), my LazyVim-based config and primary editor. Stow symlinks `~/.config/nvim` to `neovim/.config/nvim/`. See [its README](./neovim/.config/nvim/README.md) for the full story; highlights: Vite+ formatting and linting (Oxfmt/Oxlint), Eldritch colorscheme, AI integration (Claude Code, OpenCode, Pi), multi-language support.
 
 - **local** (`local/`) - `~/.local`: `bin/` scripts (`chshell`, `update-wezterm-nightly`), cspell dictionaries, keyboard/mouse layout backups, and GitHub CLI extensions (`gh-board`, `gh-changelog`, `gh-dash`, `gh-enhance`, `gh-markdown-preview`, `gh-stack`). Repo screenshots in `__repoImages/` are excluded from stow.
 
@@ -399,37 +399,6 @@ rm ~/.ssh/agent/*
 
 > [!NOTE]
 > Commit **signing** doesn't use ssh-agent at all. If commits prompt for a passphrase every time, that's a signing-key problem, not an agent problem.
-
-</details>
-
-<details>
-  <summary>Git Submodules</summary>
-
-This repo has one submodule, **neovim** ([NEO.ED](https://github.com/edheltzel/neoed)) at `neovim/.config/nvim`.
-
-**Initialize/update:**
-
-```shell
-cd ~/.dotfiles
-git submodule update --init --recursive
-```
-
-**Bump to latest upstream:**
-
-```shell
-cd ~/.dotfiles/neovim/.config/nvim
-git pull origin master
-cd ~/.dotfiles
-git add neovim
-git commit -m "chore(neovim): bump neoed submodule"
-```
-
-**If the submodule is empty:**
-
-```shell
-git submodule deinit -f neovim/.config/nvim
-git submodule update --init --recursive
-```
 
 </details>
 

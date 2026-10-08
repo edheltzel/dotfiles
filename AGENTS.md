@@ -8,7 +8,7 @@ Guidance for AI coding agents. Per-package rules live in the child `AGENTS.md` l
 
 Not discoverable from the tree, and expensive to get wrong.
 
-- **`neovim/` is a git submodule** ([edheltzel/neoed](https://github.com/edheltzel/neoed)), a separate repo outside this DOX tree. Run `git submodule update --init --recursive` after cloning. Neovim edits do not commit here.
+- **`neovim/` holds the Neovim config (NEO.ED) as ordinary tracked files**, not a submodule. Neovim edits commit here; [edheltzel/neoed](https://github.com/edheltzel/neoed) is no longer linked.
 - **Never set `core.hooksPath` to `.githooks/`.** GitButler writes managed wrappers into `hooksPath`, and committing them causes a delete/untracked conflict. `just hooks` installs wrappers into `.git/hooks` and unsets `core.hooksPath` instead.
 - **Post-navigation directory listing lives in exactly one file:** `fish/.config/fish/functions/__list_dir.fish`. `cd`, `z`, and `zi` all delegate to it. Never duplicate eza flags in `cd.fish` or `zoxide.fish`.
 - **Commit signing is SSH, not GPG.** Machine-specific values live in `~/.gitconfig.local`, symlinked by `git/git.sh` from `git/gitconfig-<machine>.local` keyed on `ComputerName`. Never commit private keys or new machine paths.
@@ -50,7 +50,7 @@ Adding configuration: drop files into the owning stow package, `just stow <pkg>`
 No test suite. Lint manually; the hooks run these on staged files.
 
 - `shellcheck <script>` for shell.
-- Lua lives in the `neovim` submodule and is linted in its own repo: `stylua --check neovim/.config/nvim` (config: `neovim/.config/nvim/stylua.toml`, 2 spaces, 120 cols). The pre-commit hook never reaches these files - the submodule is a single gitlink here, so no `.lua` path is ever staged in this repo.
+- `stylua --check neovim/.config/nvim` for Lua (config: `neovim/.config/nvim/stylua.toml`, 2 spaces, 120 cols).
 - `just hooks` installs `.githooks/pre-commit` (blocks direct commits to `master`, refuses GitButler-managed hook files, runs `shellcheck --severity=error` + `stylua --check` on staged files, warns and skips when a linter is absent) and `.githooks/commit-msg` (Conventional Commits).
 
 Per-package verification lives in each child `AGENTS.md`.
@@ -168,7 +168,7 @@ Stow packages (symlinked into `~`):
 - `local/` — user-specific data (`~/.local`)
 - `zsh/` — secondary shell config
 - `readinglist/` — Safari Reading List -> FieldNotes notes: `rl2notes` script (`~/.local/bin`) plus a generated LaunchAgent installed by `readinglist.sh` (`just readinglist`)
-- `neovim/` — Neovim (NEO.ED) — **git submodule**, separate repo, not part of this DOX tree
+- `neovim/` — Neovim (NEO.ED), tracked files; not part of this DOX tree
 
 Infrastructure (run by `install.sh`, not stowed):
 
