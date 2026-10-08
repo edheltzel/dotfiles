@@ -52,6 +52,13 @@ version = "claude"
 args = "update"
 
 [[harness]]
+label = "OMP marketplace"
+color = "D454B7"
+binary = "omp"
+version = "omp"
+args = "plugin marketplace update"
+
+[[harness]]
 label = "OMP plugins"
 color = "D454B7"
 binary = "omp"
