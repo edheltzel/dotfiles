@@ -147,44 +147,34 @@
               "name" : "Figma"
             },
             {
-              "bundleIdentifier" : "com.shapr3d.shapr",
-              "iconPath" : "/Applications/Shapr3D.app/Contents/Resources/AppIcon.icns",
-              "name" : "Shapr3D"
+              "bundleIdentifier" : "ai.artcraft.app",
+              "iconPath" : "/Applications/ArtCraft.app/Contents/Resources/icon.icns",
+              "name" : "ArtCraft"
             },
             {
-              "bundleIdentifier" : "org.openscad.OpenSCAD",
-              "iconPath" : "/Applications/OpenSCAD-2021.01.app/Contents/Resources/OpenSCAD.icns",
-              "name" : "OpenSCAD"
+              "bundleIdentifier" : "dev.hyperframes.desktop",
+              "iconPath" : "/Applications/HyperFrames.app/Contents/Resources/electron.icns",
+              "name" : "HyperFrames"
             },
             {
-              "bundleIdentifier" : "com.bambulab.bambu-studio",
-              "iconPath" : "/Applications/BambuStudio.app/Contents/Resources/Icon.icns",
-              "name" : "Bambu Studio"
+              "bundleIdentifier" : "ai.storyteller.designcraft",
+              "iconPath" : "/Applications/DesignCraft.app/Contents/Resources/DesignCraft.icns",
+              "name" : "DesignCraft"
             },
             {
-              "bundleIdentifier" : "com.anycubic.AnycubicPhotonWorkshop",
-              "iconPath" : "/Applications/AnycubicPhotonWorkshop.app/Contents/Resources/PhotonSlicer.icns",
-              "name" : "AnycubicPhotonWorkshop"
+              "bundleIdentifier" : "ai.storyteller.printcraft",
+              "iconPath" : "/Applications/PrintCraft.app/Contents/Resources/PrintCraft.icns",
+              "name" : "PrintCraft"
             },
             {
-              "bundleIdentifier" : "com.snapmaker.snapmaker-orca",
-              "iconPath" : "/Applications/Snapmaker Orca.app/Contents/Resources/Icon.icns",
-              "name" : "Snapmaker Orca"
+              "bundleIdentifier" : "ai.storyteller.vectorcraft",
+              "iconPath" : "/Applications/VectorCraft.app/Contents/Resources/VectorCraft.icns",
+              "name" : "VectorCraft"
             },
             {
-              "bundleIdentifier" : "com.thehueforge.hueforge",
-              "iconPath" : "/Applications/HueForge.app/Contents/Resources/AppIcon.icns",
-              "name" : "HueForge"
-            },
-            {
-              "bundleIdentifier" : "com.orcaslicer.OrcaSlicer",
-              "iconPath" : "/Applications/OrcaSlicer.app/Contents/Resources/Icon.icns",
-              "name" : "OrcaSlicer"
-            },
-            {
-              "bundleIdentifier" : "org.freecad.FreeCAD",
-              "iconPath" : "/Applications/FreeCAD.app/Contents/Resources/freecad.icns",
-              "name" : "FreeCAD_1.1.3"
+              "bundleIdentifier" : "ai.storyteller.photocraft",
+              "iconPath" : "/Applications/PhotoCraft.app/Contents/Resources/PhotoCraft.icns",
+              "name" : "PhotoCraft"
             }
           ],
           "display" : "PA278QV",
@@ -273,6 +263,56 @@
           "openAppsOnActivation" : false,
           "shortcut" : "ctrl+opt+shift+5",
           "symbolIconName" : "ellipsis.message.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.shapr3d.shapr",
+              "iconPath" : "/Applications/Shapr3D.app/Contents/Resources/AppIcon.icns",
+              "name" : "Shapr3D"
+            },
+            {
+              "bundleIdentifier" : "org.openscad.OpenSCAD",
+              "iconPath" : "/Applications/OpenSCAD-2021.01.app/Contents/Resources/OpenSCAD.icns",
+              "name" : "OpenSCAD"
+            },
+            {
+              "bundleIdentifier" : "com.bambulab.bambu-studio",
+              "iconPath" : "/Applications/BambuStudio.app/Contents/Resources/Icon.icns",
+              "name" : "Bambu Studio"
+            },
+            {
+              "bundleIdentifier" : "com.anycubic.AnycubicPhotonWorkshop",
+              "iconPath" : "/Applications/AnycubicPhotonWorkshop.app/Contents/Resources/PhotonSlicer.icns",
+              "name" : "AnycubicPhotonWorkshop"
+            },
+            {
+              "bundleIdentifier" : "com.snapmaker.snapmaker-orca",
+              "iconPath" : "/Applications/Snapmaker Orca.app/Contents/Resources/Icon.icns",
+              "name" : "Snapmaker Orca"
+            },
+            {
+              "bundleIdentifier" : "com.thehueforge.hueforge",
+              "iconPath" : "/Applications/HueForge.app/Contents/Resources/AppIcon.icns",
+              "name" : "HueForge"
+            },
+            {
+              "bundleIdentifier" : "com.orcaslicer.OrcaSlicer",
+              "iconPath" : "/Applications/OrcaSlicer.app/Contents/Resources/Icon.icns",
+              "name" : "OrcaSlicer"
+            },
+            {
+              "bundleIdentifier" : "org.freecad.FreeCAD",
+              "iconPath" : "/Applications/FreeCAD.app/Contents/Resources/freecad.icns",
+              "name" : "FreeCAD_1.1.3"
+            }
+          ],
+          "display" : "PA328QV",
+          "id" : "8B61C7EF-0B35-416F-861D-674667BD7E0E",
+          "name" : "3D",
+          "openAppsOnActivation" : false,
+          "shortcut" : "ctrl+opt+shift+6",
+          "symbolIconName" : "move.3d"
         }
       ]
     }

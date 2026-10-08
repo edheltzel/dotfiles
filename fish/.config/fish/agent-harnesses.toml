@@ -53,7 +53,7 @@ args = "update"
 
 [[harness]]
 label = "OMP marketplace"
-color = "magenta"
+color = "D454B7"
 binary = "omp"
 version = "omp"
 args = "plugin marketplace update"
@@ -76,7 +76,7 @@ args = "update --force"
 label = "Plannotator"
 color = "7494D7"
 binary = "bash"
-args = ["-c", "curl -fsSL https://plannotator.ai/install.sh | bash"]
+args = ["-o", "pipefail", "-c", "curl -fsSL https://plannotator.ai/install.sh | bash"]
 
 [[harness]]
 label = "Cursor Agent"

@@ -1,0 +1,17 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+lazy-lock.json
+/.agents/
+/.claude/
+/.codex/
+/.pi/
+/.omp/
+/.atlas/
+/AGENTS.md
+/CLAUDE.md
