@@ -1,0 +1,58 @@
+{
+  "name": "rose-pine-moon",
+  "base": "dark",
+  "overrides": {
+    "text": "#e0def4",
+    "inverseText": "#232136",
+    "inactive": "#6e6a86",
+    "inactiveShimmer": "#908caa",
+    "subtle": "#6e6a86",
+    "background": "#ea9a97",
+
+    "claude": "#ea9a97",
+    "claudeShimmer": "#f6c177",
+    "claudeBlue_FOR_SYSTEM_SPINNER": "#9ccfd8",
+    "claudeBlueShimmer_FOR_SYSTEM_SPINNER": "#3e8fb0",
+
+    "permission": "#9ccfd8",
+    "permissionShimmer": "#3e8fb0",
+    "suggestion": "#9ccfd8",
+    "remember": "#9ccfd8",
+
+    "autoAccept": "#c4a7e7",
+    "bashBorder": "#c4a7e7",
+    "planMode": "#9ccfd8",
+    "ide": "#ea9a97",
+
+    "promptBorder": "#6e6a86",
+    "promptBorderShimmer": "#ea9a97",
+
+    "success": "#3e8fb0",
+    "error": "#eb6f92",
+    "warning": "#f6c177",
+    "warningShimmer": "#ea9a97",
+    "merged": "#c4a7e7",
+
+    "diffAdded": "#3e8fb0",
+    "diffRemoved": "#eb6f92",
+    "diffAddedDimmed": "#1f3a4a",
+    "diffRemovedDimmed": "#4a2230",
+    "diffAddedWord": "#3e8fb0",
+    "diffRemovedWord": "#eb6f92",
+
+    "selectionBg": "#393552",
+    "userMessageBackground": "#2a273f",
+    "userMessageBackgroundHover": "#393552",
+    "messageActionsBackground": "#2a273f",
+    "bashMessageBackgroundColor": "#2a273f",
+
+    "red_FOR_SUBAGENTS_ONLY": "#eb6f92",
+    "blue_FOR_SUBAGENTS_ONLY": "#3e8fb0",
+    "green_FOR_SUBAGENTS_ONLY": "#9ccfd8",
+    "yellow_FOR_SUBAGENTS_ONLY": "#f6c177",
+    "purple_FOR_SUBAGENTS_ONLY": "#c4a7e7",
+    "orange_FOR_SUBAGENTS_ONLY": "#ea9a97",
+    "pink_FOR_SUBAGENTS_ONLY": "#ea9a97",
+    "cyan_FOR_SUBAGENTS_ONLY": "#9ccfd8"
+  }
+}

@@ -1,0 +1,6 @@
+# Per-package stow ignore. Only .local/bin/rl2notes is stowed; the provisioner
+# and DOX docs stay repo-local.
+
+.DS_Store
+AGENTS.md
+readinglist.sh

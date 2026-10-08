@@ -11,24 +11,6 @@ if status is-interactive
             starship init fish | source
     end
 
-    # Lazy-load FNM/Node — only inits when node/npm/npx first called
-    function __lazy_fnm
-        functions -e __lazy_fnm node npm npx
-        fnm env --use-on-cd | source
-    end
-    function node
-        __lazy_fnm
-        command node $argv
-    end
-    function npm
-        __lazy_fnm
-        command npm $argv
-    end
-    function npx
-        __lazy_fnm
-        command bunx $argv
-    end
-
     # Lazy-load rbenv — only inits when ruby/gem/bundle first called
     function __lazy_rbenv
         functions -e __lazy_rbenv ruby gem bundle rake irb
@@ -88,3 +70,6 @@ set -gx PATH "/Users/ed/.local/bin" $PATH
 set -gx PATH $HOME/.empryo/bin $PATH
 
 eval (/opt/homebrew/bin/brew shellenv fish)
+
+# Vite+ shims must beat Homebrew's node (brew shellenv above prepends /opt/homebrew/bin)
+fish_add_path -gm $HOME/.vite-plus/bin

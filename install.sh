@@ -7,7 +7,8 @@
 #
 # Subcommands:
 #   bootstrap     Full machine provision (Xcode CLT, Homebrew, packages,
-#                 Stow, duti, macOS prefs, git config, fish as default)
+#                 Stow, duti, macOS prefs, git config, Reading List agent,
+#                 fish as default)
 #   link          Symlink dotfiles only (GNU Stow, idempotent)
 #   help          Show this help (default when no subcommand given)
 #
@@ -37,7 +38,7 @@ readonly DOTFILES_DIR="${DOTFILES_DIR:-$HOME/.dotfiles}"
 readonly PROJECTS_DIR="${PROJECTS_DIR:-$HOME/Developer}"
 
 # Keep in sync with justfile:stow_packages
-readonly STOW_PACKAGES=(dots git fish zsh config neovim local)
+readonly STOW_PACKAGES=(dots git fish zsh config neovim local readinglist)
 
 # Flag defaults
 SKIP_CONFIRM=0
@@ -136,6 +137,7 @@ Subcommands:
                   - macOS system preferences
                   - File type associations (duti)
                   - Machine-specific git config
+                  - Safari Reading List -> FieldNotes LaunchAgent
                   - Fish as default shell (optional)
 
   link          Stow-symlink dotfiles only — idempotent, safe to re-run.
@@ -196,7 +198,6 @@ cmd_bootstrap() {
   install_xcode
   install_homebrew
 
-  git submodule update --init --recursive
   mkdir -p "$PROJECTS_DIR"
 
   if [ "$SKIP_PACKAGES" -eq 0 ]; then
@@ -218,6 +219,11 @@ cmd_bootstrap() {
   fi
 
   (cd "$SCRIPT_DIR/git" && . ./git.sh)
+
+  # Executed, not sourced: set -e is ignored inside a `||` subshell, and this
+  # step is optional (it needs Full Disk Access), so failure only warns.
+  "$SCRIPT_DIR/readinglist/readinglist.sh" ||
+    warning "Reading List agent not loaded. Grant Full Disk Access, then run: just readinglist"
 
   # Fish as default shell — irreversible per-user preference, own prompt
   if command -v fish >/dev/null 2>&1; then

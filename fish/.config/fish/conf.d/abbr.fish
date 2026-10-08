@@ -6,7 +6,6 @@ if status is-interactive
     # Window
     abbr --add cw center_window
     abbr --add cl clear
-    abbr --add xx exit
 
     # Directories
     abbr --add atl 'cd ~/Developer/Atlas/'
