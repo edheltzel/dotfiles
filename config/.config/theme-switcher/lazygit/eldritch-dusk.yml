@@ -14,7 +14,7 @@
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#8a69f7"
+      - "#f0f3f4"
     cherryPickedCommitBgColor:
       - cyan
     markedBaseCommitFgColor:
@@ -22,6 +22,6 @@
     markedBaseCommitBgColor:
       - "#fff952"
     unstagedChangesColor:
-      - "#fb5b66"
+      - "#df0514"
     defaultFgColor:
       - "#1e2029"

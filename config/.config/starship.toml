@@ -25,7 +25,7 @@ command_timeout = 500
 scan_timeout = 100
 
 # Set by theme-switcher. Names match theme-switcher/current.
-palette = "eldritch"
+palette = "eldritch-dusk"
 
 [battery]
 disabled = true
@@ -204,15 +204,17 @@ orange = "#f7c67f"
 comment = "#7081d0"
 foreground = "#ebfafa"
 
+# Dusk neons fail on Pale Shore; text roles darkened to >= 4.5:1 per hue.
+# Per eldritch SPEC.md, Dusk yellow text roles use orange.
 [palettes."eldritch-dusk"]
-green = "#38ff9f"
-red = "#fb5b66"
-cyan = "#0ad6ff"
-blue = "#0ad6ff"
-pink = "#fb5bb6"
-purple = "#8a69f7"
-yellow = "#fff952"
-orange = "#ffaf4d"
+green = "#007f42"
+red = "#df0514"
+cyan = "#007992"
+blue = "#4b65d9"
+pink = "#d5057c"
+purple = "#754ef6"
+yellow = "#a75c00"
+orange = "#d37400"
 comment = "#5b73dc"
 foreground = "#1e2029"
 

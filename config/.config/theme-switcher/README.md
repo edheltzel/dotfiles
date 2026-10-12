@@ -7,7 +7,7 @@ Unified theme switching system for all applications in dotfiles.
 ## Supported Themes
 
 - `eldritch` - Eldritch
-- `eldritch-dusk` - Eldritch Dusk (official light)
+- `eldritch-dusk` - Eldritch Dusk (official light). ANSI slots follow upstream's Dusk alacritty port; accents used as text are darkened per hue (normal ≥4.5:1, bright ≥3:1 on `#f0f3f4`) because the official neons are decorative-only on light surfaces (SPEC.md). `color0` is ink, not background. bat and btop start from the upstream Dusk ports with only text foregrounds darkened (graphs, meters, borders keep the neons); re-diff against upstream before syncing.
 - `tokyonight` - Tokyo Night
 - `rose-pine` - Rosé Pine
 - `rose-pine-dawn` - Rosé Pine Dawn (light theme)
@@ -37,15 +37,17 @@ Unified theme switching system for all applications in dotfiles.
 | starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | Superfile¶   | ✓        |             |           |                |                |        | latte       | ✓       |         |
 | Yazi∥        | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
+| mdterm#      | dark     | dark        | dark      | light          | dark           | dark   | latte light | dark    | dark    |
 
 † All four Catppuccin flavors (Latte, Frappé, Macchiato, Mocha) are supported identically. Terminals (Ghostty, WezTerm) and bat use built-in Catppuccin themes; Neovim uses the `catppuccin/nvim` plugin; Kitty and btop use the official port theme files; lazygit uses generated palettes from the official Catppuccin color spec.
 
 ‡ herdr switches `name` under `[theme]` in `herdr/config.toml` and reloads the running server live — themes without a herdr built-in (Eldritch, Rose Pine Moon, Catppuccin Frappé/Macchiato) use herdr's `terminal` theme, which follows the host terminal palette this switcher just set.
 
 § gh-dash (`gh dash`) has no external theme-file support — colors are an inline `theme.colors` key-value block in `gh-dash/config.yml`. Like lazygit, the switcher keeps a per-theme snippet in `gh-dash/[theme].yml` and injects it, replacing only `theme.colors` and leaving `theme.ui` and every other config section untouched. gh-dash validates strictly, so each snippet carries the full color set. Palettes are derived from the matching Kitty theme for cross-app consistency.
-Starship follows `palette =` in `starship.toml` for every switcher theme, including `eldritch-dusk`. Neovim skips `eldritch-dusk` — `eldritch.nvim` has no light palette yet.
-¶ Superfile uses local files in `superfile/theme/<name>.toml`; missing file → skipped. Catppuccin Latte only.
+Starship follows `palette =` in `starship.toml` for every switcher theme, including `eldritch-dusk`. Neovim's `eldritch-dusk` is local (`nvim/colors/eldritch-dusk.lua`): it registers a Dusk palette with `eldritch.nvim`, which ships none.
+¶ Superfile uses local files in `superfile/theme/<name>.toml`; missing file → skipped. New theme files need `just stow config` to link into `~/.config/superfile/theme/`.
 ∥ Yazi sets both `dark` and `light` in `yazi/theme.toml` to the same flavor, so the pick wins regardless of terminal luminance. `tokyonight` maps to `tokyo-night`. Gruvbox is the upstream dark port, stored as `gruvbox`. Eldritch Dusk is a local recolor of the Eldritch flavor from the kitty/ghostty palette.
+\# mdterm only has `dark`/`light`. The switcher writes `theme` in `mdterm/config.toml`: `light` for Eldritch Dusk, Rosé Pine Dawn, and Catppuccin Latte; `dark` otherwise. The yazi markdown previewer reads that config (no `-T` flag).
 
 ## Usage
 

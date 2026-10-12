@@ -1,30 +1,32 @@
 # Eldritch Dusk (official light)
 # https://github.com/eldritch-theme/eldritch
+# Slots follow upstream eldritch-dusk (alacritty port / SPEC.md); accents
+# darkened for Pale Shore: ansi >= 4.5:1, brights >= 3:1. black = ink.
 [colors]
 ansi = [
-  '#c9cbcd',
-  '#fb5b66',
-  '#38ff9f',
-  '#fff952',
-  '#8a69f7',
-  '#fb5bb6',
-  '#0ad6ff',
   '#1e2029',
+  '#df0514',
+  '#007f42',
+  '#a75c00',
+  '#4b65d9',
+  '#754ef6',
+  '#007992',
+  '#353746',
 ]
 background = '#f0f3f4'
 brights = [
   '#5b73dc',
-  '#fb5b66',
-  '#38ff9f',
-  '#ffaf4d',
+  '#fb4c58',
+  '#00a153',
+  '#d37400',
+  '#5b73dc',
   '#8a69f7',
-  '#fb5bb6',
-  '#0ad6ff',
-  '#1e2029',
+  '#0099b7',
+  '#474852',
 ]
-compose_cursor = '#fff952'
-cursor_bg = '#38ff9f'
-cursor_border = '#0ad6ff'
+compose_cursor = '#8a69f7'
+cursor_bg = '#ffaf4d'
+cursor_border = '#ffaf4d'
 cursor_fg = '#f0f3f4'
 foreground = '#1e2029'
 scrollbar_thumb = '#38ff9f'

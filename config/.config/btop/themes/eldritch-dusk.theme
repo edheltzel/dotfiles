@@ -16,8 +16,8 @@ theme[selected_bg]="#0ad6ff"
 # Foreground color of selected item in processes box
 theme[selected_fg]="#1e2029"
 
-# Color of inactive/disabled text
-theme[inactive_fg]="#e2e6e8"
+# Color of inactive/disabled text (dusk overlay hue darkened to 3:1; upstream #e2e6e8 is invisible)
+theme[inactive_fg]="#888d91"
 
 # Color of text appearing on top of graphs, i.e uptime and current network graph scaling
 theme[graph_text]="#1e2029"
@@ -26,7 +26,8 @@ theme[graph_text]="#1e2029"
 theme[meter_bg]="#e2e6e8"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="#38ff9f"
+# Dusk text roles below are darkened to >= 4.5:1; graphs/meters/boxes keep upstream neons.
+theme[proc_misc]="#007f42"
 
 # Cpu box outline color
 theme[cpu_box]="#38ff9f"
@@ -84,6 +85,6 @@ theme[upload_mid]="#0ad6ff"
 theme[upload_end]="#fb5bb6"
 
 # Process box color gradient for threads, mem and cpu usage
-theme[process_start]="#8a69f7"
-theme[process_mid]="#38ff9f"
-theme[process_end]="#5b73dc"
+theme[process_start]="#754ef6"
+theme[process_mid]="#007f42"
+theme[process_end]="#4b65d9"

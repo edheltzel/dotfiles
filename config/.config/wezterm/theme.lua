@@ -10,7 +10,7 @@ function M.basename(s)
 end
 
 -- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
-M.name = "Eldritch"
+M.name = "Eldritch Dusk"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
@@ -83,28 +83,30 @@ local themes = {
     },
   },
   ["Eldritch Dusk"] = {
+    -- Accents darkened to >= 4.5:1 on Pale Shore (official Dusk neons are
+    -- decorative-only per eldritch SPEC.md); active pill text uses background.
     colors = {
-      red = "#FB5B66",
-      red2 = "#E14A55",
-      red3 = "#C43A45",
-      purple = "#8A69F7",
+      red = "#DF0514",
+      red2 = "#B8040F",
+      red3 = "#93030C",
+      purple = "#754EF6",
       purple_alt = "#5B73DC",
-      cyan = "#0AD6FF",
-      yellow = "#FFF952",
-      pink = "#FB5BB6",
+      cyan = "#007992",
+      yellow = "#767200",
+      pink = "#D5057C",
       white = "#1E2029",
-      green = "#38FF9F",
-      orange = "#FFAF4D",
+      green = "#007F42",
+      orange = "#A75C00",
       dark = "#E2E6E8",
       black = "#F0F3F4",
     },
     tab_bar = {
       bg = "#E2E6E8",
-      active_bg = "#38FF9F",
-      active_fg = "#1E2029",
+      active_bg = "#007F42",
+      active_fg = "#F0F3F4",
       inactive_bg = "#E2E6E8",
       inactive_fg = "#5B73DC",
-      agent_activity = "#FFAF4D",
+      agent_activity = "#A75C00",
     },
   },
   ["rose-pine"] = {

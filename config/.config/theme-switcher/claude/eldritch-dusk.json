@@ -9,29 +9,29 @@
     "subtle": "#5b73dc",
     "background": "#38ff9f",
 
-    "claude": "#8a69f7",
-    "claudeShimmer": "#ffaf4d",
-    "claudeBlue_FOR_SYSTEM_SPINNER": "#0ad6ff",
+    "claude": "#754ef6",
+    "claudeShimmer": "#d37400",
+    "claudeBlue_FOR_SYSTEM_SPINNER": "#007992",
     "claudeBlueShimmer_FOR_SYSTEM_SPINNER": "#5b73dc",
 
-    "permission": "#0ad6ff",
+    "permission": "#007992",
     "permissionShimmer": "#5b73dc",
-    "suggestion": "#0ad6ff",
-    "remember": "#0ad6ff",
+    "suggestion": "#007992",
+    "remember": "#007992",
 
-    "autoAccept": "#fb5bb6",
-    "bashBorder": "#fb5bb6",
-    "planMode": "#0ad6ff",
-    "ide": "#8a69f7",
+    "autoAccept": "#d5057c",
+    "bashBorder": "#d5057c",
+    "planMode": "#007992",
+    "ide": "#754ef6",
 
     "promptBorder": "#5b73dc",
     "promptBorderShimmer": "#8a69f7",
 
-    "success": "#38ff9f",
-    "error": "#fb5b66",
-    "warning": "#ffaf4d",
-    "warningShimmer": "#fff952",
-    "merged": "#8a69f7",
+    "success": "#007f42",
+    "error": "#df0514",
+    "warning": "#a75c00",
+    "warningShimmer": "#d37400",
+    "merged": "#754ef6",
 
     "diffAdded": "#38ff9f",
     "diffRemoved": "#fb5b66",
@@ -46,13 +46,13 @@
     "messageActionsBackground": "#e2e6e8",
     "bashMessageBackgroundColor": "#e2e6e8",
 
-    "red_FOR_SUBAGENTS_ONLY": "#fb5b66",
-    "blue_FOR_SUBAGENTS_ONLY": "#0ad6ff",
-    "green_FOR_SUBAGENTS_ONLY": "#38ff9f",
-    "yellow_FOR_SUBAGENTS_ONLY": "#fff952",
-    "purple_FOR_SUBAGENTS_ONLY": "#8a69f7",
-    "orange_FOR_SUBAGENTS_ONLY": "#ffaf4d",
-    "pink_FOR_SUBAGENTS_ONLY": "#fb5bb6",
-    "cyan_FOR_SUBAGENTS_ONLY": "#0ad6ff"
+    "red_FOR_SUBAGENTS_ONLY": "#df0514",
+    "blue_FOR_SUBAGENTS_ONLY": "#4b65d9",
+    "green_FOR_SUBAGENTS_ONLY": "#007f42",
+    "yellow_FOR_SUBAGENTS_ONLY": "#767200",
+    "purple_FOR_SUBAGENTS_ONLY": "#754ef6",
+    "orange_FOR_SUBAGENTS_ONLY": "#a75c00",
+    "pink_FOR_SUBAGENTS_ONLY": "#d5057c",
+    "cyan_FOR_SUBAGENTS_ONLY": "#007992"
   }
 }

@@ -1,32 +1,34 @@
 background = #f0f3f4
 foreground = #1e2029
 
-cursor-color = #38ff9f
+cursor-color = #ffaf4d
 
 selection-background = #e2e6e8
 selection-foreground = #1e2029
 
+# Slots follow upstream eldritch-dusk (alacritty port / SPEC.md); accents
+# darkened for Pale Shore: normal >= 4.5:1, bright >= 3:1. black = ink.
 # black
-palette = 0=#c9cbcd
+palette = 0=#1e2029
 palette = 8=#5b73dc
 # red
-palette = 9=#fb5b66
-palette = 1=#fb5b66
+palette = 1=#df0514
+palette = 9=#fb4c58
 # green
-palette = 2=#38ff9f
-palette = 10=#38ff9f
-# yellow
-palette = 11=#ffaf4d
-palette = 3=#fff952
+palette = 2=#007f42
+palette = 10=#00a153
+# yellow (Dusk: orange carries yellow text roles)
+palette = 3=#a75c00
+palette = 11=#d37400
 # blue
-palette = 12=#8a69f7
-palette = 4=#8a69f7
+palette = 4=#4b65d9
+palette = 12=#5b73dc
 # fuchsia
-palette = 13=#fb5bb6
-palette = 5=#fb5bb6
+palette = 5=#754ef6
+palette = 13=#8a69f7
 # aqua
-palette = 14=#0ad6ff
-palette = 6=#0ad6ff
+palette = 6=#007992
+palette = 14=#0099b7
 # white
-palette = 7=#1e2029
-palette = 15=#1e2029
+palette = 7=#353746
+palette = 15=#474852

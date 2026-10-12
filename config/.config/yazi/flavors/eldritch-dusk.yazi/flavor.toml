@@ -5,19 +5,26 @@
 #
 #   bg        #f0f3f4    surface    #e2e6e8    muted      #c9cbcd
 #   fg        #1e2029    comment    #5b73dc
+#
+# Official accents (backgrounds, markers, borders only):
 #   cyan      #0ad6ff    green      #38ff9f    purple     #8a69f7
 #   pink      #fb5bb6    yellow     #fff952    orange     #ffaf4d
 #   red       #fb5b66
+#
+# Text accents, darkened to >= 4.5:1 on bg (SPEC.md: Dusk yellow text -> orange):
+#   cyan      #007992    green      #007f42    purple     #754ef6
+#   pink      #d5057c    orange     #a75c00    red        #df0514
+#   orange-lt #d37400 (3:1, secondary orange)
 #
 
 # : Manager {{{
 
 [mgr]
-cwd = { fg = "#0ad6ff" }
+cwd = { fg = "#007992" }
 
 # Find
-find_keyword  = { fg = "#fb5b66", bold = true, italic = true, underline = true }
-find_position = { fg = "#ffaf4d", bg = "reset", bold = true, italic = true }
+find_keyword  = { fg = "#df0514", bold = true, italic = true, underline = true }
+find_position = { fg = "#a75c00", bg = "reset", bold = true, italic = true }
 
 # Marker
 marker_copied   = { fg = "#38ff9f", bg = "#38ff9f" }
@@ -41,7 +48,7 @@ border_style  = { fg = "#5b73dc" }
 
 [tabs]
 active   = { fg = "#1e2029", bg = "#0ad6ff", bold = true }
-inactive = { fg = "#0ad6ff", bg = "#e2e6e8" }
+inactive = { fg = "#007992", bg = "#e2e6e8" }
 
 # : }}}
 
@@ -51,15 +58,15 @@ inactive = { fg = "#0ad6ff", bg = "#e2e6e8" }
 [mode]
 
 normal_main = { fg = "#1e2029", bg = "#0ad6ff", bold = true }
-normal_alt  = { fg = "#0ad6ff", bg = "#e2e6e8" }
+normal_alt  = { fg = "#007992", bg = "#e2e6e8" }
 
 # Select mode
 select_main = { fg = "#1e2029", bg = "#38ff9f", bold = true }
-select_alt  = { fg = "#38ff9f", bg = "#e2e6e8" }
+select_alt  = { fg = "#007f42", bg = "#e2e6e8" }
 
 # Unset mode
 unset_main = { fg = "#1e2029", bg = "#8a69f7", bold = true }
-unset_alt  = { fg = "#8a69f7", bg = "#e2e6e8" }
+unset_alt  = { fg = "#754ef6", bg = "#e2e6e8" }
 
 # : }}}
 
@@ -67,21 +74,21 @@ unset_alt  = { fg = "#8a69f7", bg = "#e2e6e8" }
 # : Status bar {{{
 
 [status]
-overall   = { fg = "#0ad6ff" }
+overall   = { fg = "#007992" }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
 # Progress
 progress_label  = { fg = "#1e2029", bold = true }
-progress_normal = { fg = "#0ad6ff", bg = "#e2e6e8" }
-progress_error  = { fg = "#fb5b66", bg = "#e2e6e8" }
+progress_normal = { fg = "#007992", bg = "#e2e6e8" }
+progress_error  = { fg = "#df0514", bg = "#e2e6e8" }
 
 # Permissions
 perm_sep   = { fg = "#5b73dc" }
-perm_type  = { fg = "#0ad6ff" }
-perm_read  = { fg = "#38ff9f" }
-perm_write = { fg = "#fb5b66" }
-perm_exec  = { fg = "#ffaf4d" }
+perm_type  = { fg = "#007992" }
+perm_read  = { fg = "#007f42" }
+perm_write = { fg = "#df0514" }
+perm_exec  = { fg = "#a75c00" }
 
 # : }}}
 
@@ -90,7 +97,7 @@ perm_exec  = { fg = "#ffaf4d" }
 
 [pick]
 border   = { fg = "#0ad6ff" }
-active   = { fg = "#fb5bb6", bold = true }
+active   = { fg = "#d5057c", bold = true }
 inactive = {}
 
 # : }}}
@@ -120,7 +127,7 @@ border = { fg = "#0ad6ff" }
 [tasks]
 border  = { fg = "#0ad6ff" }
 title   = {}
-hovered = { fg = "#fb5bb6", underline = true }
+hovered = { fg = "#d5057c", underline = true }
 
 # : }}}
 
@@ -129,9 +136,9 @@ hovered = { fg = "#fb5bb6", underline = true }
 
 [which]
 mask            = { bg = "#e2e6e8" }
-cand            = { fg = "#38ff9f" }
+cand            = { fg = "#007f42" }
 rest            = { fg = "#5b73dc" }
-desc            = { fg = "#8a69f7" }
+desc            = { fg = "#754ef6" }
 separator       = "  "
 separator_style = { fg = "#5b73dc" }
 
@@ -141,8 +148,8 @@ separator_style = { fg = "#5b73dc" }
 # : Help {{{
 
 [help]
-chord   = { fg = "#38ff9f" }
-action  = { fg = "#8a69f7" }
+chord   = { fg = "#007f42" }
+action  = { fg = "#754ef6" }
 hovered = { reversed = true, bold = true }
 
 # : }}}
@@ -152,9 +159,9 @@ hovered = { reversed = true, bold = true }
 
 [spot]
 border   = { fg = "#0ad6ff" }
-title    = { fg = "#0ad6ff" }
-tbl_col  = { fg = "#38ff9f" }
-tbl_cell = { fg = "#fb5bb6", bg = "#e2e6e8" }
+title    = { fg = "#007992" }
+tbl_col  = { fg = "#007f42" }
+tbl_cell = { fg = "#d5057c", bg = "#e2e6e8" }
 
 # : }}}
 
@@ -162,9 +169,9 @@ tbl_cell = { fg = "#fb5bb6", bg = "#e2e6e8" }
 # : Notify {{{
 
 [notify]
-title_info  = { fg = "#38ff9f" }
-title_warn  = { fg = "#fff952" }
-title_error = { fg = "#fb5b66" }
+title_info  = { fg = "#007f42" }
+title_warn  = { fg = "#a75c00" }
+title_error = { fg = "#df0514" }
 
 # : }}}
 
@@ -175,33 +182,33 @@ title_error = { fg = "#fb5b66" }
 
 rules = [
 	# Images
-	{ mime = "image/*", fg = "#ffaf4d" },
+	{ mime = "image/*", fg = "#d37400" },
 
 	# Media
-	{ mime = "video/*", fg = "#fb5b66" },
-	{ mime = "audio/*", fg = "#fb5b66" },
+	{ mime = "video/*", fg = "#df0514" },
+	{ mime = "audio/*", fg = "#df0514" },
 
 	# Archives
-	{ mime = "application/zip",             fg = "#fff952" },
-	{ mime = "application/x-tar",           fg = "#fff952" },
-	{ mime = "application/x-bzip*",         fg = "#fff952" },
-	{ mime = "application/x-bzip2",         fg = "#fff952" },
-	{ mime = "application/x-7z-compressed", fg = "#fff952" },
-	{ mime = "application/x-rar",           fg = "#fff952" },
-	{ mime = "application/x-xz",            fg = "#fff952" },
+	{ mime = "application/zip",             fg = "#a75c00" },
+	{ mime = "application/x-tar",           fg = "#a75c00" },
+	{ mime = "application/x-bzip*",         fg = "#a75c00" },
+	{ mime = "application/x-bzip2",         fg = "#a75c00" },
+	{ mime = "application/x-7z-compressed", fg = "#a75c00" },
+	{ mime = "application/x-rar",           fg = "#a75c00" },
+	{ mime = "application/x-xz",            fg = "#a75c00" },
 
 	# Documents
-	{ mime = "application/doc",      fg = "#38ff9f" },
-	{ mime = "application/epub+zip", fg = "#38ff9f" },
-	{ mime = "application/pdf",      fg = "#38ff9f" },
-	{ mime = "application/rtf",      fg = "#38ff9f" },
-	{ mime = "application/vnd.*",    fg = "#38ff9f" },
+	{ mime = "application/doc",      fg = "#007f42" },
+	{ mime = "application/epub+zip", fg = "#007f42" },
+	{ mime = "application/pdf",      fg = "#007f42" },
+	{ mime = "application/rtf",      fg = "#007f42" },
+	{ mime = "application/vnd.*",    fg = "#007f42" },
 
 	# Special files
 	{ mime = "*", is = "orphan", fg = "#1e2029", bg = "#fb5b66" },
-	{ mime = "application/*exec*", fg = "#fb5b66" },
+	{ mime = "application/*exec*", fg = "#df0514" },
 
-	# Fallback — directories follow the terminal's blue (ANSI 4 → Eldritch #8a69f7), files use fg
+	# Fallback — directories follow the terminal's blue (ANSI 4 → Dusk #4b65d9), files use fg
 	{ url = "*", fg = "#1e2029" },
 	{ url = "*/", fg = "blue" },
 ]
@@ -962,11 +969,11 @@ conds = [
 # : Git status signs {{{
 
 [git]
-modified  = { fg = "#0ad6ff", bold = true }
-added     = { fg = "#38ff9f", bold = true }
-untracked = { fg = "#ffaf4d", bold = true }
-deleted   = { fg = "#fb5b66", bold = true }
-updated   = { fg = "#fff952", bold = true }
+modified  = { fg = "#007992", bold = true }
+added     = { fg = "#007f42", bold = true }
+untracked = { fg = "#a75c00", bold = true }
+deleted   = { fg = "#df0514", bold = true }
+updated   = { fg = "#767200", bold = true }
 ignored   = { fg = "#5b73dc" }
 
 # : }}}

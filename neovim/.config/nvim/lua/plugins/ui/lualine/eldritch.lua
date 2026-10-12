@@ -27,6 +27,21 @@ M.palettes = {
     --   }
     -- end,
   },
+  -- Dusk (light): text accents darkened to >= 4.5:1 on Pale Shore.
+  ["eldritch-dusk"] = {
+    colors = {
+      darker = "#E2E6E8",
+      bg = "#F0F3F4",
+      darkGray = "#D5D9DB",
+      fg = "#353746",
+      gray = "#888D91",
+      green = "#007F42",
+      blue = "#007992",
+      purple = "#754EF6",
+      red = "#DF0514",
+      magenta = "#D5057C",
+    },
+  },
 }
 
 function M.get_colors(variant)

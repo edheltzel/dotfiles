@@ -210,11 +210,7 @@ show_support() {
   echo "  ✓   ghostty"
   echo "  ✓ 󰄛  kitty"
   echo "  ✓   wezterm"
-  if [[ "$theme" == "eldritch-dusk" ]]; then
-    echo "  ✗   neovim (no dusk palette)"
-  else
-    echo "  ✓   neovim"
-  fi
+  echo "  ✓   neovim"
   echo "  ✓ 󰭟  bat"
   echo "  ✓ 󰄧  btop"
   echo "  ✓   starship"
@@ -261,6 +257,7 @@ show_support() {
   else
     echo "  ✗ 󰝰  yazi"
   fi
+  echo "  ✓ 󰍔  mdterm ($([[ "$theme" =~ ^(eldritch-dusk|rose-pine-dawn|catppuccin-latte)$ ]] && echo light || echo dark))"
 }
 
 # Main

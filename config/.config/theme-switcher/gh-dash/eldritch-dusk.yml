@@ -1,12 +1,12 @@
   colors:
     text:
       primary: "#1e2029"
-      secondary: "#8a69f7"
+      secondary: "#754ef6"
       inverted: "#f0f3f4"
       faint: "#5b73dc"
-      warning: "#fff952"
-      success: "#38ff9f"
-      error: "#fb5b66"
+      warning: "#a75c00"
+      success: "#007f42"
+      error: "#df0514"
     background:
       selected: "#e2e6e8"
     border:

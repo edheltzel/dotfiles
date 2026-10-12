@@ -117,7 +117,7 @@ get_wezterm_theme() {
 get_neovim_theme() {
   case "$1" in
   eldritch) echo "eldritch" ;;
-  eldritch-dusk) echo "" ;; # eldritch.nvim has no dusk palette yet
+  eldritch-dusk) echo "eldritch-dusk" ;; # local nvim/colors/eldritch-dusk.lua
   tokyonight) echo "tokyonight" ;;
   rose-pine) echo "rose-pine" ;;
   rose-pine-dawn) echo "rose-pine-dawn" ;;
@@ -225,6 +225,14 @@ get_yazi_theme() {
   else
     echo ""
   fi
+}
+
+# mdterm has no custom themes, only dark/light.
+get_mdterm_theme() {
+  case "$1" in
+  eldritch-dusk | rose-pine-dawn | catppuccin-latte) echo "light" ;;
+  *) echo "dark" ;;
+  esac
 }
 
 get_pi_theme() {
@@ -665,6 +673,22 @@ update_yazi() {
   success "yazi → $yazi_theme"
 }
 
+update_mdterm() {
+  local theme="$1"
+
+  if ! is_installed mdterm; then
+    MISSING_APPS+=("mdterm")
+    info "mdterm → not installed, skipped"
+    return
+  fi
+
+  local mdterm_theme
+  mdterm_theme=$(get_mdterm_theme "$theme")
+  sed -i '' -E "s/^theme = \"[a-z]+\"/theme = \"$mdterm_theme\"/" "$CONFIG/mdterm/config.toml"
+  UPDATED_APPS+=("mdterm → $mdterm_theme")
+  success "mdterm → $mdterm_theme"
+}
+
 update_pi() {
   local theme="$1"
 
@@ -852,6 +876,7 @@ apply_theme() {
   update_ghdash "$theme"
   update_superfile "$theme"
   update_yazi "$theme"
+  update_mdterm "$theme"
 
   # Save current theme
   echo "$theme" >"$THEMES_DIR/current"

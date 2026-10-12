@@ -4,7 +4,7 @@
 -- matching color palettes from separate palette files.
 --
 -- SUPPORTED COLORSCHEMES:
---   - eldritch
+--   - eldritch, eldritch-dusk
 --   - tokyonight
 --   - rose-pine, rose-pine-moon, rose-pine-dawn
 --   - catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
@@ -82,7 +82,7 @@ local function get_colors(colorscheme)
   if colorscheme:match("^rose%-pine") then
     local rose_pine = require("plugins.ui.lualine.rose-pine")
     return rose_pine.get_colors(colorscheme)
-  elseif colorscheme == "eldritch" then
+  elseif colorscheme == "eldritch" or colorscheme == "eldritch-dusk" then
     local eldritch = require("plugins.ui.lualine.eldritch")
     return eldritch.get_colors(colorscheme)
   elseif colorscheme == "tokyonight" or colorscheme:match("^tokyonight") then
