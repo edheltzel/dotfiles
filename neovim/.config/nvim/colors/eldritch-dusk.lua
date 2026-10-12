@@ -16,6 +16,7 @@ colors.dusk = {
   bg_highlight = "#e2e6e8",
   terminal_black = "#888d91",
   fg = "#1e2029",
+  fg_dark = "#353746",
   fg_gutter = "#888d91",
   fg_gutter_light = "#888d91",
   dark3 = "#5b73dc",

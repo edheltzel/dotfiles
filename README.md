@@ -9,12 +9,9 @@
 
 # E.Dots
 
-> [!NOTE]
-> EdHeltzel's Dotfiles
+### My personal setup for 🐠 Fish shell on macOS - `v3`
 
-### My personal setup for 🐠 Fish shell on  macOS - `v3`
-
-Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on  macOS, managed with [GNU Stow](https://www.gnu.org/software/stow/). You'll also find the scripts I use to provision a new machine. [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [WezTerm](https://wezterm.org), [Herdr](https://herdr.dev/), and [Oh-My-Pi](https://omp.sh/) make up my ADE (AI/Agent Development Environment). The Zed config is kept for occasional use and is not part of the regular workflow.
+Hey there 👋, I'm EdHeltzel and you've found my dotfiles setup for working with [fish shell](https://fishshell.com/) on macOS, managed with [GNU Stow](https://www.gnu.org/software/stow/). You'll also find the scripts I use to provision a new machine. [Neovim](https://neovim.io/) (via [NEO.ED](https://github.com/edheltzel/neoed)), [Term](https://wezterm.org), [Herdr](https://herdr.dev/), and [Oh-My-Pi](https://omp.sh/) make up my ADE (AI/Agent Development Environment). The Zed config is kept for occasional use and is not part of the regular workflow.
 
 > [!WARNING]
 > This is my personal setup and **changes often**. Don't blindly fork and run `install.sh` without reading it first. The script uses subcommands - see `./install.sh help`.
@@ -24,13 +21,13 @@ But get **inspired**, take what you want, and leave the rest to make it your own
 - [NEO.ED - Neovim Config](https://github.com/edheltzel/neoed)
 - [E.Defy - Dygma Defy keyboard](https://github.com/edheltzel/DygmaDefy)
 
-| Screenshots | Screenshots |
-| --- | --- |
-| ![1-aerospace+sketchbar](./local/.local/__repoImages/2026/1-aerospace+sketchbar.png) | ![2-bat](./local/.local/__repoImages/2026/2-bat.png) |
-| ![3-btop](./local/.local/__repoImages/2026/3-btop.png) | ![4-fastfetch-fish](./local/.local/__repoImages/2026/4-fastfetch-fish.png) |
-| ![5-lazygit](./local/.local/__repoImages/2026/5-lazygit.png) | ![6-nvim-neoed-picker](./local/.local/__repoImages/2026/6-nvim-neoed-picker.jpeg) |
-| ![7-nvim-neoed-dash](./local/.local/__repoImages/2026/7-nvim-neoed-dash.png) | ![8-theme-switcher](./local/.local/__repoImages/2026/8-theme-switcher.png) |
-| ![9-vscode](./local/.local/__repoImages/2026/9-vscode.png) | ![10-yazi](./local/.local/__repoImages/2026/10-yazi.png) |
+| Screenshots                                                                          | Screenshots                                                                       |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| ![1-aerospace+sketchbar](./local/.local/__repoImages/2026/1-aerospace+sketchbar.png) | ![2-bat](./local/.local/__repoImages/2026/2-bat.png)                              |
+| ![3-btop](./local/.local/__repoImages/2026/3-btop.png)                               | ![4-fastfetch-fish](./local/.local/__repoImages/2026/4-fastfetch-fish.png)        |
+| ![5-lazygit](./local/.local/__repoImages/2026/5-lazygit.png)                         | ![6-nvim-neoed-picker](./local/.local/__repoImages/2026/6-nvim-neoed-picker.jpeg) |
+| ![7-nvim-neoed-dash](./local/.local/__repoImages/2026/7-nvim-neoed-dash.png)         | ![8-theme-switcher](./local/.local/__repoImages/2026/8-theme-switcher.png)        |
+| ![9-vscode](./local/.local/__repoImages/2026/9-vscode.png)                           | ![10-yazi](./local/.local/__repoImages/2026/10-yazi.png)                          |
 
 <details>
   <summary>Different Versions</summary>

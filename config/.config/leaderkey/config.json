@@ -13,15 +13,36 @@
           "value" : "/System/Applications/Passwords.app"
         },
         {
-          "key" : "a",
+          "key" : "1",
           "type" : "application",
-          "value" : "/Applications/Affinity.app"
+          "value" : "/Applications/Bitwarden.app"
         },
         {
-          "key" : "G",
-          "label" : "♭♭",
-          "type" : "application",
-          "value" : "/Applications/GIMP.app"
+          "actions" : [
+            {
+              "key" : "i",
+              "type" : "application",
+              "value" : "/Applications/Inkscape.app"
+            },
+            {
+              "key" : "G",
+              "label" : "♭♭",
+              "type" : "application",
+              "value" : "/Applications/GIMP.app"
+            },
+            {
+              "key" : "f",
+              "type" : "application",
+              "value" : "/Applications/Figma.app"
+            },
+            {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/Applications/Affinity.app"
+            }
+          ],
+          "key" : "D",
+          "type" : "group"
         },
         {
           "iconPath" : "/Applications/Cursor.app",
@@ -31,32 +52,9 @@
           "value" : "/Applications/Cursor.app"
         },
         {
-          "key" : "v",
-          "label" : "Claude Desktop",
-          "type" : "application",
-          "value" : "/Applications/Claude.app"
-        },
-        {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Applications/Figma.app"
-        },
-        {
-          "iconPath" : "/Applications/Grok Bot.app",
-          "key" : "g",
-          "label" : "Grok Bot",
-          "type" : "application",
-          "value" : "/Applications/Grok Bot.app"
-        },
-        {
           "key" : "I",
           "type" : "application",
           "value" : "/Applications/Invoice Ninja.app"
-        },
-        {
-          "key" : "i",
-          "type" : "application",
-          "value" : "/Applications/Inkscape.app"
         },
         {
           "key" : "k",
