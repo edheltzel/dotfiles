@@ -106,6 +106,8 @@ die() {
 _run_stow() {
   local mode="$1"
   shift
+  # Pre-create runtime dirs so stow links files inside, not the whole dir
+  mkdir -p "$HOME/.no-mistakes"
   info "Linking dotfiles with GNU Stow..."
   for pkg in "$@"; do
     if [ ! -d "$SCRIPT_DIR/$pkg" ]; then

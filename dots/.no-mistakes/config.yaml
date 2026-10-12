@@ -1,0 +1,107 @@
+# no-mistakes global configuration
+
+# Agent to use for code generation. This may also be an ordered fallback list,
+# for example: agent: [codex, claude]
+# Options: auto, claude, codex, rovodev, opencode, pi, copilot, acp:<target>
+# "auto" detects the first available native agent on your system
+# Use acp:<target> to run an optional user-installed acpx target, for example acp:gemini
+agent: [codex, claude]
+
+# Per-identity GitHub routing. Recall's origin uses the github-atlas SSH alias so
+# its PRs are opened as Atlas-Key; every other github.com repo keeps edheltzel.
+forge_profiles:
+  github-atlas:
+    gh_config_dir: ~/.config/gh-atlas-key
+    expected_login: Atlas-Key
+  github.com:
+    gh_config_dir: ~/.config/gh
+    expected_login: edheltzel
+
+# Optional path to the user-installed acpx binary for acp:<target> agents
+# acpx_path: acpx
+
+# Optional ACP target command overrides for acp:<target> agents
+# acp_registry_overrides:
+#   local-gemini: node /opt/mock-acp-agent.mjs
+
+# Maximum time the CI monitor babysits an open PR with no base-branch movement
+# before giving up. The monitor watches CI and auto-rebases when the base branch
+# advances; each base advance re-arms this timer, so an actively-updated green PR
+# keeps its monitor. Set to "unlimited", "none", "off", "never", or any
+# non-positive duration to monitor until the PR is merged, closed, or the run is
+# aborted with: no-mistakes axi abort --run <id>
+ci_timeout: "168h"
+
+# AXI status marks a running/fixing step as quiet when no step log or native
+# agent lifecycle activity has appeared for this long. This is observability
+# only; it never cancels work.
+step_quiet_warning: "10m"
+
+# Maximum time a CLI client waits for an existing daemon socket to accept a
+# connection before failing instead of hanging.
+daemon_connect_timeout: "3s"
+
+# Reuse one durable agent session per run for the review loop: the reviewer
+# keeps a single session across the initial review and every full rereview,
+# and review fixes keep a separate fixer session. Roles never share a session.
+# Supported for claude and codex; other agents run cold. Set false to force
+# every agent invocation cold.
+session_reuse: true
+
+# Log level for daemon output
+# Options: debug, info, warn, error
+log_level: info
+
+# Override native agent binary paths (optional)
+# agent_path_override:
+#   claude: /usr/local/bin/claude
+#   codex: /opt/codex
+
+# Extra native agent CLI flags (optional, global only)
+# Codex service_tier controls speed/priority; model_reasoning_effort controls reasoning depth.
+# agent_args_override:
+#   codex:
+#     - -m
+#     - gpt-5.4
+#     - -c
+#     - service_tier="priority"
+#     - -c
+#     - model_reasoning_effort="low"
+#
+agent_args_override:
+  codex:
+    - -m
+    - gpt-6.1-sol
+    - -c
+    - model_reasoning_effort="xhigh"
+
+# Maximum follow-up auto-fix attempts per step (0 = disabled after the initial pass)
+# Document fixes are attempted during the initial document pass.
+auto_fix:
+  rebase: 3
+  lint: 3
+  test: 3
+  review: 0
+  document: 3
+  ci: 3
+
+# User-intent extraction. When you push a branch, no-mistakes can read recent
+# transcripts from your local agent (Claude Code, Codex, OpenCode, Rovo Dev, Pi,
+# Copilot CLI), pick the session that produced the change, summarize the user
+# intent, and feed it to review, test, document, lint, and PR agents so they
+# understand what you were trying to do - not just the diff.
+intent:
+  enabled: true
+  threshold: 0.2
+  slack_days: 3
+  # disabled_readers: [codex]
+
+  # Test-step evidence artifacts (screenshots, recordings, logs the test step
+  # gathers to demonstrate the change works). By default they are kept in a
+  # temporary directory and referenced by local path. Opt in to store_in_repo to
+  # commit them into the repo under a readable, branch-named directory so they are
+  # pushed and render directly on the PR.
+  # test:
+  #   evidence:
+  #     store_in_repo: true
+  #     dir: .no-mistakes/evidence

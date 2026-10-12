@@ -70,3 +70,7 @@ banks/
 ### Merge backups ###
 *.orig
 .empryo
+
+### no-mistakes (config only; runtime state stays in ~/.no-mistakes) ###
+dots/.no-mistakes/*
+!dots/.no-mistakes/config.yaml

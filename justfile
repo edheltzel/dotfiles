@@ -54,6 +54,7 @@ unstow pkg:
 
 # Restow all dotfiles packages
 update:
+    @mkdir -p ~/.no-mistakes
     @for pkg in {{stow_packages}}; do \
         if [ "$pkg" = "fish" ]; then \
             rm -f ~/.config/fish/conf.d/brew.fish ~/.config/fish/conf.d/fish-ssh-agent.fish; \
