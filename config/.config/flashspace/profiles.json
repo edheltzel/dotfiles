@@ -162,14 +162,24 @@
               "name" : "DesignCraft"
             },
             {
-              "bundleIdentifier" : "ai.storyteller.printcraft",
-              "iconPath" : "/Applications/PrintCraft.app/Contents/Resources/PrintCraft.icns",
-              "name" : "PrintCraft"
-            },
-            {
               "bundleIdentifier" : "ai.storyteller.vectorcraft",
               "iconPath" : "/Applications/VectorCraft.app/Contents/Resources/VectorCraft.icns",
               "name" : "VectorCraft"
+            },
+            {
+              "bundleIdentifier" : "ai.storyteller.figcraft",
+              "iconPath" : "/Applications/FigCraft.app/Contents/Resources/FigCraft.icns",
+              "name" : "FigCraft"
+            },
+            {
+              "bundleIdentifier" : "ai.storyteller.cadcraft",
+              "iconPath" : "/Applications/CADCraft.app/Contents/Resources/CADCraft.icns",
+              "name" : "CADCraft"
+            },
+            {
+              "bundleIdentifier" : "ai.storyteller.pdfcraft",
+              "iconPath" : "/Applications/PdfCraft.app/Contents/Resources/PdfCraft.icns",
+              "name" : "PdfCraft"
             },
             {
               "bundleIdentifier" : "ai.storyteller.photocraft",
