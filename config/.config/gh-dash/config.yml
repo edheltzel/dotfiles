@@ -96,19 +96,19 @@ keybindings:
 theme:
   colors:
     text:
-      primary: "#1e2029"
-      secondary: "#754ef6"
-      inverted: "#f0f3f4"
-      faint: "#5b73dc"
-      warning: "#a75c00"
-      success: "#007f42"
-      error: "#df0514"
+      primary: "#4c4f69"
+      secondary: "#8839ef"
+      inverted: "#eff1f5"
+      faint: "#8c8fa1"
+      warning: "#df8e1d"
+      success: "#40a02b"
+      error: "#d20f39"
     background:
-      selected: "#e2e6e8"
+      selected: "#ccd0da"
     border:
-      primary: "#8a69f7"
-      secondary: "#5b73dc"
-      faint: "#e2e6e8"
+      primary: "#8839ef"
+      secondary: "#8c8fa1"
+      faint: "#dce0e8"
   ui:
     sectionsShowCount: true
     table:

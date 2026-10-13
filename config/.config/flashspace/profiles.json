@@ -255,6 +255,11 @@
               "bundleIdentifier" : "com.apple.AddressBook",
               "iconPath" : "/System/Applications/Contacts.app/Contents/Resources/Contacts.icns",
               "name" : "Contacts"
+            },
+            {
+              "bundleIdentifier" : "com.clickup.desktop-app",
+              "iconPath" : "/Applications/ClickUp.app/Contents/Resources/icon.icns",
+              "name" : "ClickUp"
             }
           ],
           "display" : "PA278QV",

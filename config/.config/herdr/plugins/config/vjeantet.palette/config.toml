@@ -47,6 +47,12 @@ argv = ["gh", "board", "--owner", "edheltzel"]
 placement = "split"
 
 [[command]]
+id = "theme"
+title = "Theme Switcher"
+argv = ["fish", "-c", "theme"] # fish function wraps theme-switcher.sh; no $HOME expansion in argv
+placement = "split"
+
+[[command]]
 id = "edit"
 title = "Edit a file"
 argv = ["nvim"]
