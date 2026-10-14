@@ -1,0 +1,3 @@
+2026-10-14 Explore portable dotfiles install for Docker containers and remote SSH hosts +dotfiles issue:https://github.com/edheltzel/dotfiles/issues/62
+2026-10-14 Investigate reproducible package versions without a bespoke lockfile +dotfiles issue:https://github.com/edheltzel/dotfiles/issues/61
+2026-10-14 One-command drift control (doctor/sync) across brew, stow, and language manifests +dotfiles issue:https://github.com/edheltzel/dotfiles/issues/60
