@@ -1,0 +1,34 @@
+# Rose Pine for tuxedo, palette matches the theme-switcher kitty/gh-dash colors.
+name = Rose Pine
+
+bg = #191724
+panel = #1f1d2e
+border = #26233a
+
+fg = #e0def4
+dim = #6e6a86
+accent = #ebbcba
+
+cursor = #26233a
+selection = #26233a
+selected = #26233a
+
+statusbar = #1f1d2e
+status_fg = #908caa
+mode_fg = #191724
+mode_bg = #ebbcba
+
+pri_a = #eb6f92
+pri_b = #ebbcba
+pri_c = #31748f
+pri_d = #9ccfd8
+pri_other = #c4a7e7
+
+project = #9ccfd8
+context = #9ccfd8
+
+done = #6e6a86
+matched = #f6c177
+due = #f6c177
+overdue = #eb6f92
+today = #eb6f92

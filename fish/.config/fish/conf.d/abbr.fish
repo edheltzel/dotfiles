@@ -111,6 +111,9 @@ if status is-interactive
     abbr --add bsq --set-cursor 'but squash "%"'
     abbr --add bmv --set-cursor 'but move "%"'
 
+    # Tuxedo
+    abbr --add tux tuxedo
+
     # GH 
     abbr --add ghw 'gh repo view --web'
     abbr --add ghd 'gh dash'
