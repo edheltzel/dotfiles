@@ -75,8 +75,8 @@
     "metrics": false
   },
   "theme": {
-    "mode": "dark",
-    "light": "Dracula Light (Alucard",
+    "mode": "light",
+    "light": "Eldritch Dusk",
     "dark": "Eldritch Midnight"
   },
   "icon_theme": {

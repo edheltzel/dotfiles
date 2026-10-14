@@ -1,0 +1,34 @@
+# Eldritch Dusk for tuxedo, palette matches the theme-switcher kitty/gh-dash colors.
+name = Eldritch Dusk
+
+bg = #f0f3f4
+panel = #e2e6e8
+border = #5b73dc
+
+fg = #1e2029
+dim = #5b73dc
+accent = #754ef6
+
+cursor = #e2e6e8
+selection = #e2e6e8
+selected = #e2e6e8
+
+statusbar = #e2e6e8
+status_fg = #754ef6
+mode_fg = #f0f3f4
+mode_bg = #754ef6
+
+pri_a = #df0514
+pri_b = #d37400
+pri_c = #007f42
+pri_d = #4b65d9
+pri_other = #754ef6
+
+project = #4b65d9
+context = #007992
+
+done = #5b73dc
+matched = #a75c00
+due = #a75c00
+overdue = #df0514
+today = #df0514

@@ -640,6 +640,38 @@ update_superfile() {
   success "superfile → $spf_theme"
 }
 
+update_tuxedo() {
+  local theme="$1"
+
+  if ! is_installed tuxedo; then
+    MISSING_APPS+=("tuxedo")
+    info "tuxedo → not installed, skipped"
+    return
+  fi
+
+  local theme_file="$CONFIG/tuxedo/themes/${theme}.toml"
+  if [[ ! -f "$theme_file" ]]; then
+    SKIPPED_APPS+=("tuxedo (theme $theme not available)")
+    warning "tuxedo → skipped (theme not available)"
+    return
+  fi
+
+  # tuxedo selects by the theme file's `name`; config.toml is app-owned (untracked)
+  # and hot-reloads, so running instances pick this up live.
+  local name config_file="$HOME/.config/tuxedo/config.toml"
+  name=$(sed -n 's/^name = //p' "$theme_file")
+  mkdir -p "${config_file%/*}"
+  touch "$config_file"
+  if grep -q '^theme = ' "$config_file"; then
+    sed -i '' "s/^theme = .*/theme = $name/" "$config_file"
+  else
+    echo "theme = $name" >>"$config_file"
+  fi
+
+  UPDATED_APPS+=("tuxedo → $name")
+  success "tuxedo → $name"
+}
+
 update_yazi() {
   local theme="$1"
 
@@ -875,6 +907,7 @@ apply_theme() {
   update_herdr "$theme"
   update_ghdash "$theme"
   update_superfile "$theme"
+  update_tuxedo "$theme"
   update_yazi "$theme"
   update_mdterm "$theme"
 

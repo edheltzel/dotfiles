@@ -7,27 +7,28 @@ git:
 gui:
   theme:
     activeBorderColor:
-      - "#1e66f5"
+      - "#37f499"
       - bold
     inactiveBorderColor:
-      - "#6c6f85"
+      - "#747BA2"
     searchingActiveBorderColor:
-      - "#df8e1d"
+      - "#f265b5"
+      - bold
     optionsTextColor:
-      - "#1e66f5"
+      - blue
     selectedLineBgColor:
-      - "#ccd0da"
+      - "#323449"
     inactiveViewSelectedLineBgColor:
-      - "#9ca0b0"
+      - bold
     cherryPickedCommitFgColor:
-      - "#1e66f5"
+      - "#a48cf2"
     cherryPickedCommitBgColor:
-      - "#bcc0cc"
+      - cyan
     markedBaseCommitFgColor:
-      - "#1e66f5"
+      - blue
     markedBaseCommitBgColor:
-      - "#df8e1d"
+      - "#f1fc79"
     unstagedChangesColor:
-      - "#d20f39"
+      - "#f16c75"
     defaultFgColor:
-      - "#4c4f69"
+      - "#ebfafa"

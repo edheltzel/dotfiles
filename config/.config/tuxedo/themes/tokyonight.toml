@@ -1,0 +1,34 @@
+# Tokyo Night for tuxedo, palette matches the theme-switcher kitty/gh-dash colors.
+name = Tokyo Night
+
+bg = #1a1b26
+panel = #16161e
+border = #414868
+
+fg = #c0caf5
+dim = #565f89
+accent = #7aa2f7
+
+cursor = #283457
+selection = #283457
+selected = #283457
+
+statusbar = #16161e
+status_fg = #a9b1d6
+mode_fg = #1a1b26
+mode_bg = #7aa2f7
+
+pri_a = #f7768e
+pri_b = #ff9e64
+pri_c = #9ece6a
+pri_d = #7aa2f7
+pri_other = #bb9af7
+
+project = #7aa2f7
+context = #7dcfff
+
+done = #565f89
+matched = #e0af68
+due = #e0af68
+overdue = #f7768e
+today = #f7768e
