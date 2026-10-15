@@ -37,7 +37,7 @@ tap 'rjyo/moshi'                # Moshi mobile SSH client host tools
 #############################################################
 brew 'fish'                                 # My Default Shell
 brew 'starship'                             # Cross-shell prompt - Rust
-brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
+#brew 'jandedobbeleer/oh-my-posh/oh-my-posh' # Cross-shell prompt - Go
 
 # zsh plugins
 brew 'antidote'                            # Zsh plugin manager (lightweight, no Oh My Zsh)
@@ -47,8 +47,8 @@ brew 'olets/tap/zsh-abbr'                  # Abbreviations for zsh
 
 # CLI Essentials
 brew 'git'          # Version control
-brew 'jj'           # Version control
-brew 'lazyjj'       # TUI for jj (Jujutsu)
+#brew 'jj'           # Version control
+#brew 'lazyjj'       # TUI for jj (Jujutsu)
 brew 'neovim'       # Text editor
 brew 'stow'         # Dotfile manager for symlinks
 brew 'topgrade'     # Upgrade all the things - Rust
@@ -210,12 +210,8 @@ brew 'age'               # Simple, modern and secure encryption tool - Go
 
 # Creativity
 cask 'affinity'             # Affinity.studio
-cask 'figma'                # Design tool
-
-# Comms/Productivity
-cask 'slack'
-cask 'todoist-app'
-cask 'clickup'
+cask 'inkscape'
+cask 'gimp'
 
 # 3D Modeling & CAD
 cask 'openscad'             # 3D CAD Modeller
@@ -229,15 +225,10 @@ cask 'snapmaker-orca'
 cask 'kicad'                # Electronics Design Automation - PCB design
 
 # Media
-cask 'boom-3d'              # Audio enhancer - paid
-cask 'kap'                  # Screen recorder
 brew 'pandoc'               # Universal file converter
 cask 'vlc'                  # Media player
 brew 'webp'                 # WebP image format
-cask 'shottr'               # Screenshot and recorder app
-cask 'bettershot'           # Screenshot and recorder app
 cask 'obs'                  # Screen recorder
-cask 'capcut'               # Video Editing
 
 cask 'google-drive'         # Cloud storage
 
@@ -248,14 +239,14 @@ brew 'm-cli'                       # All in one MacOS management CLI app: m help
 cask 'keycastr'                    # Display keystrokes
 cask 'transnomino'                 # A batch rename utility
 cask 'itsycal'                     # Calendar in menubar
-cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative
-cask 'keka'                        # File archive and extractor
+cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative 
+# considering switching to tinycast or vorssaint
+cask 'vorssaint'
+cask 'shottr'               # Screenshot and recorder app
 cask 'macpacker'                  # Archive manager
 cask 'macusb'                     # Bootable USB installers
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
 cask 'thaw'
-brew 'stats'                       # System stats in menubar
-cask 'vorssaint'                  # Menu bar toolkit
 cask 'tailscale-app'
 cask 'tigervnc'
 
@@ -271,9 +262,8 @@ cask 'leader-key'                  # Keyboard App launcher
 # Browsers
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser'
-cask 'helium-browser'
 cask 'firefox'
-cask 'google-chrome'             # For tests
+cask 'google-chrome'
 
 # Fonts
 cask 'sf-symbols'
@@ -290,7 +280,7 @@ cask 'font-symbols-only-nerd-font'    # Nerd Font Symbols Only
 cask 'cyberduck'                      # Mount remote storage locations
 cask 'obsidian'                       # PKM editor
 cask 'sequel-ace'                     # MySQL database management
-cask 'markdown-preview'                         # Markdown editor
+cask 'markdown-preview'               # Markdown editor
 cask 'zed'                            # Code editor - Rust
 
 # AI tooling and ADEs (AI/Agent Development Environment)
@@ -306,7 +296,9 @@ brew 'crit'                           # Visual feedback with agents
 brew 'whisper-cpp'                    # TTS utility
 
 # Terminal emulators
-cask 'wezterm@nightly'              
+cask 'wezterm@nightly'
+cask 'kitty'
+cask 'ghostty'
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
