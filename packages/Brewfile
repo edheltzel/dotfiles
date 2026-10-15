@@ -238,7 +238,7 @@ cask 'bitwarden'                   # Password manager
 brew 'm-cli'                       # All in one MacOS management CLI app: m help
 cask 'keycastr'                    # Display keystrokes
 cask 'transnomino'                 # A batch rename utility
-cask 'itsycal'                     # Calendar in menubar
+cask 'calendr'                     # Calendar in menubar
 cask 'raycast', args: { require_sha: false } # Spotlight/Alfred alternative 
 # considering switching to tinycast or vorssaint
 cask 'vorssaint'
