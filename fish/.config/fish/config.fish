@@ -71,5 +71,8 @@ set -gx PATH $HOME/.empryo/bin $PATH
 
 eval (/opt/homebrew/bin/brew shellenv fish)
 
+# Go-installed tools (gap, local no-mistakes `make install`) must beat ~/.local/bin, which installers above prepend
+fish_add_path -gm $GOPATH/bin
+
 # Vite+ shims must beat Homebrew's node (brew shellenv above prepends /opt/homebrew/bin)
 fish_add_path -gm $HOME/.vite-plus/bin
