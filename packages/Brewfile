@@ -157,7 +157,6 @@ brew 'zig'                    # Zig language
 # DevOps SCMs and CI/CD Tools
 brew 'curlie'             # Command line HTTP client - Go
 brew 'httpie'             # Command line HTTP client
-brew 'orbstack'           # Docker image viewer
 brew 'docker'
 brew 'derailed/k9s/k9s'
 brew 'container'          # Container CLI by Apple
@@ -231,6 +230,10 @@ brew 'webp'                 # WebP image format
 cask 'obs'                  # Screen recorder
 
 cask 'google-drive'         # Cloud storage
+cask 'tailscale-app'
+cask 'tigervnc'
+brew 'orbstack'             # Docker image viewer
+cask 'fluidvoice'           # STT
 
 # Utility Applications
 cask 'alt-tab'                     # Replace for cmd+tab
@@ -247,8 +250,6 @@ cask 'macpacker'                  # Archive manager
 cask 'macusb'                     # Bootable USB installers
 cask 'homerow'                     # keyboard shortcuts for every button in macOS
 cask 'thaw'
-cask 'tailscale-app'
-cask 'tigervnc'
 
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
@@ -296,6 +297,7 @@ brew 'crit'                           # Visual feedback with agents
 brew 'whisper-cpp'                    # TTS utility
 
 # Terminal emulators
+#cask 'tern' 
 cask 'wezterm@nightly'
 cask 'kitty'
 cask 'ghostty'
