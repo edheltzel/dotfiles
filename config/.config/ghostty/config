@@ -29,7 +29,7 @@ font-feature             = zero,calt
 macos-non-native-fullscreen = true
 macos-option-as-alt         = true
 macos-titlebar-proxy-icon   = hidden
-macos-titlebar-style        = hidden
+macos-titlebar-style        = tabs
 macos-window-buttons        = hidden
 
 # Quick Terminal
