@@ -250,6 +250,11 @@ show_support() {
   else
     echo "  ✗ 󰉋  superfile"
   fi
+  if [[ -f "$HOME/.dotfiles/config/.config/tuxedo/themes/${theme}.toml" ]]; then
+    echo "  ✓   tuxedo"
+  else
+    echo "  ✗   tuxedo"
+  fi
   yazi_flavor="$theme"
   [[ "$theme" == "tokyonight" ]] && yazi_flavor="tokyo-night"
   if [[ -d "$HOME/.dotfiles/config/.config/yazi/flavors/${yazi_flavor}.yazi" ]]; then

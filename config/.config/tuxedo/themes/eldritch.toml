@@ -1,0 +1,34 @@
+# Eldritch for tuxedo, palette matches the theme-switcher kitty/gh-dash colors.
+name = Eldritch
+
+bg = #212337
+panel = #171928
+border = #3b4261
+
+fg = #ebfafa
+dim = #7081d0
+accent = #a48cf2
+
+cursor = #323449
+selection = #323449
+selected = #323449
+
+statusbar = #171928
+status_fg = #a48cf2
+mode_fg = #212337
+mode_bg = #a48cf2
+
+pri_a = #f9515d
+pri_b = #f7c67f
+pri_c = #37f499
+pri_d = #a48cf2
+pri_other = #f265b5
+
+project = #a48cf2
+context = #04d1f9
+
+done = #7081d0
+matched = #e9f941
+due = #e9f941
+overdue = #f9515d
+today = #f9515d

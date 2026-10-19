@@ -36,6 +36,7 @@ Unified theme switching system for all applications in dotfiles.
 | gh-dash§     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | Superfile¶   | ✓        |             |           |                |                |        | latte       | ✓       |         |
+| tuxedo**     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | Yazi∥        | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
 | mdterm#      | dark     | dark        | dark      | light          | dark           | dark   | latte light | dark    | dark    |
 
@@ -46,6 +47,7 @@ Unified theme switching system for all applications in dotfiles.
 § gh-dash (`gh dash`) has no external theme-file support — colors are an inline `theme.colors` key-value block in `gh-dash/config.yml`. Like lazygit, the switcher keeps a per-theme snippet in `gh-dash/[theme].yml` and injects it, replacing only `theme.colors` and leaving `theme.ui` and every other config section untouched. gh-dash validates strictly, so each snippet carries the full color set. Palettes are derived from the matching Kitty theme for cross-app consistency.
 Starship follows `palette =` in `starship.toml` for every switcher theme, including `eldritch-dusk`. Neovim's `eldritch-dusk` is local (`nvim/colors/eldritch-dusk.lua`): it registers a Dusk palette with `eldritch.nvim`, which ships none.
 ¶ Superfile uses local files in `superfile/theme/<name>.toml`; missing file → skipped. New theme files need `just stow config` to link into `~/.config/superfile/theme/`.
+\*\* tuxedo loads custom themes from `tuxedo/themes/<theme>.toml` (stowed into `~/.config/tuxedo/themes/`). The switcher writes the file's `name` to `theme =` in the app-owned `~/.config/tuxedo/config.toml`, which tuxedo hot-reloads. Catppuccin files are upstream `docs/themes/`; the rest use the matching gh-dash/kitty palette.
 ∥ Yazi sets both `dark` and `light` in `yazi/theme.toml` to the same flavor, so the pick wins regardless of terminal luminance. `tokyonight` maps to `tokyo-night`. Gruvbox is the upstream dark port, stored as `gruvbox`. Eldritch Dusk is a local recolor of the Eldritch flavor from the kitty/ghostty palette.
 \# mdterm only has `dark`/`light`. The switcher writes `theme` in `mdterm/config.toml`: `light` for Eldritch Dusk, Rosé Pine Dawn, and Catppuccin Latte; `dark` otherwise. The yazi markdown previewer reads that config (no `-T` flag).
 

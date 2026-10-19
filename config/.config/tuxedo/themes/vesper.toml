@@ -1,0 +1,34 @@
+# Vesper for tuxedo, palette matches the theme-switcher kitty/gh-dash colors.
+name = Vesper
+
+bg = #101010
+panel = #161616
+border = #282828
+
+fg = #ffffff
+dim = #a0a0a0
+accent = #ffc799
+
+cursor = #232323
+selection = #232323
+selected = #232323
+
+statusbar = #161616
+status_fg = #a0a0a0
+mode_fg = #101010
+mode_bg = #ffc799
+
+pri_a = #ff8080
+pri_b = #ffc799
+pri_c = #99ffe4
+pri_d = #99ffe4
+pri_other = #ffcfa8
+
+project = #99ffe4
+context = #99ffe4
+
+done = #a0a0a0
+matched = #ffc799
+due = #ffc799
+overdue = #ff8080
+today = #ff8080

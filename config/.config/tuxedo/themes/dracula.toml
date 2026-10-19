@@ -1,0 +1,34 @@
+# Dracula for tuxedo, palette matches the theme-switcher kitty/gh-dash colors.
+name = Dracula
+
+bg = #282a36
+panel = #21222c
+border = #44475a
+
+fg = #f8f8f2
+dim = #6272a4
+accent = #bd93f9
+
+cursor = #44475a
+selection = #44475a
+selected = #44475a
+
+statusbar = #21222c
+status_fg = #f8f8f2
+mode_fg = #282a36
+mode_bg = #bd93f9
+
+pri_a = #ff5555
+pri_b = #ffb86c
+pri_c = #50fa7b
+pri_d = #8be9fd
+pri_other = #ff79c6
+
+project = #8be9fd
+context = #8be9fd
+
+done = #6272a4
+matched = #f1fa8c
+due = #f1fa8c
+overdue = #ff5555
+today = #ff5555

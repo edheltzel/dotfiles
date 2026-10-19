@@ -3,7 +3,7 @@ confirm-close-surface      = false
 shell-integration-features = true
 alpha-blending             = linear-corrected
 
-#theme = Rose Pine Dawn
+#theme = Dracula
 cursor-style            = block
 term                    = xterm-256color
 unfocused-split-fill    = "black"
@@ -29,7 +29,7 @@ font-feature             = zero,calt
 macos-non-native-fullscreen = true
 macos-option-as-alt         = true
 macos-titlebar-proxy-icon   = hidden
-macos-titlebar-style        = hidden
+macos-titlebar-style        = tabs
 macos-window-buttons        = hidden
 
 # Quick Terminal
@@ -94,4 +94,4 @@ keybind = super+ctrl+r=text:\x12
 keybind = super+ctrl+p=text:\x1b\x10
 # variables
 keybind = super+ctrl+v=text:\x16
-config-file = "themes/catppuccin-latte"
+config-file = "themes/eldritch"

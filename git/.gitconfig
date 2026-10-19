@@ -136,6 +136,7 @@
 	gpgsign = true
 [tag]
 	gpgsign = true
+	sort = version:refname
 # Plugins
 [gui]
   fontui     = -family \"FiraCode Nerd Font Mono\" -size 13 -weight normal -slant roman -underline 0 -overstrike 0
