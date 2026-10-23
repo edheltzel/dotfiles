@@ -19,26 +19,27 @@ Unified theme switching system for all applications in dotfiles.
 - `catppuccin-mocha` - Catppuccin Mocha
 - `dracula` - Dracula
 - `gruvbox` - Gruvbox Dark
+- `proxysoul` - ProxySoul (deep purple with hot pink accents). Terminal palette is proxySoul's own kitty theme (`kitty/themes/proxysoul-main.conf`, the match for Empryo's `proxysoul-main`); every other app is derived from it. Neovim is local (`nvim/colors/proxysoul.lua`) on top of `eldritch.nvim`, like Eldritch Dusk. bat/yazi syntax and btop/yazi/superfile/pi are hue-for-hue recolors of the Eldritch ports. No omp theme; herdr follows the terminal.
 
 ## Supported Applications
 
-| Application  | Eldritch | Tokyo Night | Rose Pine | Rose Pine Dawn | Rose Pine Moon | Vesper | Catppuccin† | Dracula | Gruvbox |
-| ------------ | -------- | ----------- | --------- | -------------- | -------------- | ------ | ----------- | ------- | ------- |
-| Ghostty      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| Kitty        | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| WezTerm      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| Neovim       | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| bat          | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| btop         | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| lazygit      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| Claude Code  | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| herdr‡       | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| gh-dash§     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| Superfile¶   | ✓        |             |           |                |                |        | latte       | ✓       |         |
-| tuxedo**     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| Yazi∥        | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       |
-| mdterm#      | dark     | dark        | dark      | light          | dark           | dark   | latte light | dark    | dark    |
+| Application  | Eldritch | Tokyo Night | Rose Pine | Rose Pine Dawn | Rose Pine Moon | Vesper | Catppuccin† | Dracula | Gruvbox | ProxySoul |
+| ------------ | -------- | ----------- | --------- | -------------- | -------------- | ------ | ----------- | ------- | ------- | --------- |
+| Ghostty      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| Kitty        | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| WezTerm      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| Neovim       | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| bat          | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| btop         | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| lazygit      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| Claude Code  | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| herdr‡       | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| gh-dash§     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| Superfile¶   | ✓        |             |           |                |                |        | latte       | ✓       |         | ✓         |
+| tuxedo**     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| Yazi∥        | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| mdterm#      | dark     | dark        | dark      | light          | dark           | dark   | latte light | dark    | dark    | dark      |
 
 † All four Catppuccin flavors (Latte, Frappé, Macchiato, Mocha) are supported identically. Terminals (Ghostty, WezTerm) and bat use built-in Catppuccin themes; Neovim uses the `catppuccin/nvim` plugin; Kitty and btop use the official port theme files; lazygit uses generated palettes from the official Catppuccin color spec.
 
@@ -91,7 +92,8 @@ theme-switcher/
 │   ├── catppuccin-macchiato.yml
 │   ├── catppuccin-mocha.yml
 │   ├── dracula.yml
-│   └── gruvbox.yml
+│   ├── gruvbox.yml
+│   └── proxysoul.yml
 ├── gh-dash/                   # gh-dash inline-color snippets (theme.colors block)
 │   ├── eldritch.yml
 │   ├── tokyonight.yml
@@ -104,7 +106,8 @@ theme-switcher/
 │   ├── catppuccin-macchiato.yml
 │   ├── catppuccin-mocha.yml
 │   ├── dracula.yml
-│   └── gruvbox.yml
+│   ├── gruvbox.yml
+│   └── proxysoul.yml
 └── README.md                  # This file
 ```
 

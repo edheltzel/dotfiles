@@ -1,0 +1,34 @@
+# ProxySoul for tuxedo, palette matches the theme-switcher kitty/gh-dash colors.
+name = ProxySoul
+
+bg = #020204
+panel = #120e22
+border = #211e33
+
+fg = #e7e7ee
+dim = #8e8ca1
+accent = #9b6af5
+
+cursor = #241c3d
+selection = #241c3d
+selected = #241c3d
+
+statusbar = #120e22
+status_fg = #9b6af5
+mode_fg = #020204
+mode_bg = #7844f0
+
+pri_a = #ee0b2a
+pri_b = #de7c00
+pri_c = #0b8b00
+pri_d = #9b6af5
+pri_other = #ff0059
+
+project = #9b6af5
+context = #00a2ce
+
+done = #726e88
+matched = #e65f2a
+due = #de7c00
+overdue = #ff0059
+today = #ff0059

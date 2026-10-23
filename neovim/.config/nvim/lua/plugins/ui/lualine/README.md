@@ -49,7 +49,7 @@ options = {
 
 | Colorscheme | Variants |
 |------------|----------|
-| **eldritch** | `eldritch` |
+| **eldritch** | `eldritch`, `eldritch-dusk`, `proxysoul` |
 | **rose-pine** | `rose-pine`, `rose-pine-moon`, `rose-pine-dawn` |
 | **catppuccin** | `catppuccin-latte`, `catppuccin-frappe`, `catppuccin-macchiato`, `catppuccin-mocha` |
 | **vesper** | `vesper` |

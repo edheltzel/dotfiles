@@ -1,0 +1,85 @@
+# ProxySoul theme
+# https://github.com/proxysoul/dotfiles/blob/master/kitty/proxysoul-main.conf
+# Deep purple with hot pink accents
+[colors]
+ansi = [
+  '#1A1830',
+  '#EE0B2A',
+  '#0B8B00',
+  '#DE7C00',
+  '#00A2CE',
+  '#7844F0',
+  '#009A8B',
+  '#8E8CA1',
+]
+background = '#020204'
+brights = [
+  '#3D3B50',
+  '#FF0059',
+  '#0B8B00',
+  '#E65F2A',
+  '#3BB8D8',
+  '#9B6AF5',
+  '#009A8B',
+  '#E7E7EE',
+]
+compose_cursor = '#FF0059'
+cursor_bg = '#7844F0'
+cursor_border = '#7844F0'
+cursor_fg = '#020204'
+foreground = '#E7E7EE'
+scrollbar_thumb = '#7844F0'
+selection_bg = '#7844F0'
+selection_fg = '#020204'
+split = '#211E33'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#020204'
+
+[colors.tab_bar.active_tab]
+bg_color = '#7844F0'
+fg_color = '#020204'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#120E22'
+fg_color = '#8E8CA1'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#211E33'
+fg_color = '#9B6AF5'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#020204'
+fg_color = '#E7E7EE'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#7844F0'
+fg_color = '#020204'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+author = 'proxySoul'
+name = 'ProxySoul'
+origin_url = 'https://github.com/proxysoul/dotfiles/blob/master/kitty/proxysoul-main.conf'

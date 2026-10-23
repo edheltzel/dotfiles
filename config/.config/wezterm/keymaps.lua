@@ -108,7 +108,7 @@ local keys = {
   -- Workspace and Multiplexing
   --- ---------------------------------------------------------------------------
   {
-    key = "W",
+    key = "N",
     mods = "LEADER",
     action = act.PromptInputLine({
       description = wezterm.format({
@@ -130,7 +130,7 @@ local keys = {
     desc = "Create A Workspace",
   },
   {
-    key = "w",
+    key = "g",
     mods = "LEADER",
     action = act.ShowLauncherArgs({ title = "Workspaces", flags = "FUZZY|WORKSPACES" }),
     desc = "Switch Workspace",

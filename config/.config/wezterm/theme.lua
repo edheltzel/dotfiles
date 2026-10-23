@@ -10,7 +10,7 @@ function M.basename(s)
 end
 
 -- Theme selection: set by theme-switcher, must match a WezTerm color_scheme name
-M.name = "Eldritch"
+M.name = "ProxySoul"
 
 -- Theme data lookup table (colors + tab_bar per theme)
 local themes = {
@@ -287,6 +287,24 @@ local themes = {
       inactive_bg = "#21222c",
       inactive_fg = "#6272a4",
       agent_activity = "#ffb86c",
+    },
+  },
+  ["ProxySoul"] = {
+    colors = {
+      red = "#EE0B2A",
+      purple = "#9B6AF5",
+      cyan = "#3BB8D8",
+      yellow = "#DE7C00",
+      pink = "#FF0059",
+      white = "#E7E7EE",
+    },
+    tab_bar = {
+      bg = "#020204",
+      active_bg = "#7844F0",
+      active_fg = "#020204",
+      inactive_bg = "#120E22",
+      inactive_fg = "#8E8CA1",
+      agent_activity = "#FF0059",
     },
   },
   ["Gruvbox Dark (Gogh)"] = {

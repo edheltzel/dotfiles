@@ -1,0 +1,77 @@
+##############################################
+#                                            #
+#               ProxySoul Theme              #
+#                                            #
+##############################################
+
+# ProxySoul palette from proxySoul's kitty theme, matching the theme-switcher
+# kitty/ghostty/wezterm colors.
+
+# This contains the theme config file for superfile! For more details see:
+# https://superfile.dev/configure/custom-theme/
+
+###############################################################################
+#                           Code Syntax Highlighting                          #
+###############################################################################
+
+# Find one you like at: https://github.com/alecthomas/chroma/blob/master/styles.
+
+code_syntax_highlight = "dracula"
+
+###############################################################################
+#                                 Base Colors                                 #
+###############################################################################
+
+#-- Full Screen
+full_screen_fg = "#E7E7EE"
+full_screen_bg = "#020204"
+
+#-- Gradient
+# Note: This currently only supports two colors.
+gradient_color = ["#7844F0", "#FF0059"]
+
+#-- File Panel
+file_panel_fg = "#E7E7EE"
+file_panel_bg = "#020204"
+file_panel_border = "#8E8CA1"
+file_panel_border_active = "#7844F0"
+file_panel_top_directory_icon = "#9B6AF5"
+file_panel_top_path = "#00A2CE"
+file_panel_item_selected_fg = "#E65F2A"
+file_panel_item_selected_bg = "#120e22"
+
+#-- Footer
+footer_fg = "#E7E7EE"
+footer_bg = "#020204"
+footer_border = "#8E8CA1"
+footer_border_active = "#7844F0"
+
+#-- Sidebar
+sidebar_fg = "#E7E7EE"
+sidebar_bg = "#020204"
+sidebar_title = "#9B6AF5"
+sidebar_border = "#120e22"
+sidebar_border_active = "#7844F0"
+sidebar_item_selected_fg = "#E65F2A"
+sidebar_item_selected_bg = "#120e22"
+sidebar_divider = "#8E8CA1"
+
+#-- Modals
+modal_fg = "#E7E7EE"
+modal_bg = "#120e22"
+modal_border_active = "#7844F0"
+modal_cancel_fg = "#020204"
+modal_cancel_bg = "#EE0B2A"
+modal_confirm_fg = "#020204"
+modal_confirm_bg = "#0B8B00"
+
+#-- Help Menu
+help_menu_hotkey = "#E65F2A"
+help_menu_title = "#9B6AF5"
+
+#-- Special
+cursor = "#FF0059"
+correct = "#0B8B00"
+error = "#EE0B2A"
+hint = "#00A2CE"
+cancel = "#8E8CA1"

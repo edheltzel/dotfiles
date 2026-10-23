@@ -42,6 +42,22 @@ M.palettes = {
       magenta = "#D5057C",
     },
   },
+  -- ProxySoul: proxySoul kitty palette, served by the eldritch module since
+  -- colors/proxysoul.lua rides eldritch.nvim.
+  ["proxysoul"] = {
+    colors = {
+      darker = "#020204",
+      bg = "#120E22",
+      darkGray = "#241C3D",
+      fg = "#726E88",
+      gray = "#8E8CA1",
+      green = "#0B8B00",
+      blue = "#00A2CE",
+      purple = "#9B6AF5",
+      red = "#EE0B2A",
+      magenta = "#FF0059",
+    },
+  },
 }
 
 function M.get_colors(variant)

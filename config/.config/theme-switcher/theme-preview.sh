@@ -192,6 +192,19 @@ show_colors() {
       echo -e "  \033[38;2;250;189;47m███\033[0m yellow"
       echo -e "  \033[38;2;254;128;25m███\033[0m orange"
       ;;
+    proxysoul)
+      echo -e "\033[38;2;155;106;245m████\033[0m ProxySoul"
+      echo ""
+      echo -e "  \033[38;2;2;2;4m███\033[0m bg"
+      echo -e "  \033[38;2;231;231;238m███\033[0m fg"
+      echo -e "  \033[38;2;120;68;240m███\033[0m purple"
+      echo -e "  \033[38;2;155;106;245m███\033[0m violet"
+      echo -e "  \033[38;2;255;0;89m███\033[0m pink"
+      echo -e "  \033[38;2;238;11;42m███\033[0m red"
+      echo -e "  \033[38;2;0;162;206m███\033[0m blue"
+      echo -e "  \033[38;2;11;139;0m███\033[0m green"
+      echo -e "  \033[38;2;222;124;0m███\033[0m yellow"
+      ;;
     *)
       echo "Unknown theme: $theme"
       return 1

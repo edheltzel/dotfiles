@@ -8,7 +8,7 @@ THEMES_DIR="$HOME/.config/theme-switcher"
 DOTFILES="$HOME/.dotfiles"
 CONFIG="$DOTFILES/config/.config"
 # Available themes
-THEMES=("eldritch" "eldritch-dusk" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha" "dracula" "gruvbox")
+THEMES=("eldritch" "eldritch-dusk" "tokyonight" "rose-pine" "rose-pine-dawn" "rose-pine-moon" "vesper" "catppuccin-latte" "catppuccin-frappe" "catppuccin-macchiato" "catppuccin-mocha" "dracula" "gruvbox" "proxysoul")
 
 # Color codes for output
 GREEN='\033[0;32m'
@@ -93,6 +93,7 @@ get_kitty_theme() {
   catppuccin-mocha) echo "catppuccin-mocha.conf" ;;
   dracula) echo "dracula.conf" ;;
   gruvbox) echo "gruvbox.conf" ;;
+  proxysoul) echo "proxysoul-main.conf" ;;
   esac
 }
 
@@ -111,6 +112,7 @@ get_wezterm_theme() {
   catppuccin-mocha) echo "Catppuccin Mocha" ;;
   dracula) echo "Dracula (Official)" ;;
   gruvbox) echo "Gruvbox Dark (Gogh)" ;;
+  proxysoul) echo "ProxySoul" ;;
   esac
 }
 
@@ -129,6 +131,7 @@ get_neovim_theme() {
   catppuccin-mocha) echo "catppuccin-mocha" ;;
   dracula) echo "dracula" ;;
   gruvbox) echo "gruvbox" ;;
+  proxysoul) echo "proxysoul" ;; # local nvim/colors/proxysoul.lua
   esac
 }
 
@@ -147,6 +150,7 @@ get_bat_theme() {
   catppuccin-mocha) echo "Catppuccin Mocha" ;;       # bat builtin
   dracula) echo "Dracula" ;;                         # bat builtin
   gruvbox) echo "gruvbox-dark" ;;                    # bat builtin
+  proxysoul) echo "proxysoul" ;; # Custom tmTheme
   esac
 }
 
@@ -165,6 +169,7 @@ get_btop_theme() {
   catppuccin-mocha) echo "catppuccin-mocha" ;;
   dracula) echo "dracula" ;;
   gruvbox) echo "gruvbox" ;;
+  proxysoul) echo "proxysoul" ;; # Custom theme file
   esac
 }
 
@@ -183,6 +188,7 @@ get_claude_theme() {
   catppuccin-mocha) echo "custom:catppuccin-mocha" ;;
   dracula) echo "custom:dracula" ;;
   gruvbox) echo "custom:gruvbox" ;;
+  proxysoul) echo "custom:proxysoul" ;;
   *) echo "" ;; # Skip — no custom theme JSON for this theme
   esac
 }

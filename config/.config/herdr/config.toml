@@ -112,11 +112,26 @@ swap_pane_up = ""
 swap_pane_right = ""
 
 # custom
+[[keys.command]]
+key = "prefix+shift+b"
+description = "launch GitButler"
+command = "but tui"
+type = "popup"
+width = "90%"
+height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+d"
 description = "launch Dash"
 command = "gh dash"
+type = "popup"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+shift+t"
+description = "launch Tuxedo"
+command = "tuxedo"
 type = "popup"
 width = "90%"
 height = "90%"

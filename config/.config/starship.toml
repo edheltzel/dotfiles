@@ -25,7 +25,7 @@ command_timeout = 500
 scan_timeout = 100
 
 # Set by theme-switcher. Names match theme-switcher/current.
-palette = "eldritch"
+palette = "proxysoul"
 
 [battery]
 disabled = true
@@ -192,6 +192,18 @@ symbol = " "
 
 # Role keys match starship styles above. Eldritch uses the official Cthulhu
 # palette; other themes map kitty color2/1/6/5/4/11/3/8/foreground.
+[palettes.proxysoul]
+green = "#0b8b00"
+red = "#ee0b2a"
+cyan = "#009a8b"
+pink = "#ff0059"
+blue = "#00a2ce"
+purple = "#9b6af5"
+yellow = "#de7c00"
+orange = "#e65f2a"
+comment = "#8e8ca1"
+foreground = "#e7e7ee"
+
 [palettes.eldritch]
 green = "#37f499"
 red = "#f16c75"
