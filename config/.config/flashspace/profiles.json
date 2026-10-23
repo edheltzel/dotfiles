@@ -62,11 +62,6 @@
               "name" : "WezTerm"
             },
             {
-              "bundleIdentifier" : "net.kovidgoyal.kitty",
-              "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
-              "name" : "kitty"
-            },
-            {
               "bundleIdentifier" : "dev.kdrag0n.MacVirt",
               "iconPath" : "/Applications/OrbStack.app/Contents/Resources/AppIcon.icns",
               "name" : "OrbStack"
@@ -90,6 +85,11 @@
               "bundleIdentifier" : "so.stencil.tern",
               "iconPath" : "/Applications/Tern.app/Contents/Resources/tern.icns",
               "name" : "Tern"
+            },
+            {
+              "bundleIdentifier" : "net.kovidgoyal.kitty",
+              "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
+              "name" : "kitty"
             }
           ],
           "display" : "PA278QV",
@@ -250,11 +250,6 @@
               "bundleIdentifier" : "com.apple.MobileSMS",
               "iconPath" : "/System/Applications/Messages.app/Contents/Resources/AppIcon.icns",
               "name" : "Messages"
-            },
-            {
-              "bundleIdentifier" : "com.microsoft.teams2",
-              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
-              "name" : "Microsoft Teams"
             },
             {
               "bundleIdentifier" : "com.apple.iCal",

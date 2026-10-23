@@ -102,7 +102,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "proxysoul",
+      colorscheme = "dracula",
     },
   },
 }

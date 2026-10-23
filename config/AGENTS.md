@@ -22,6 +22,7 @@ Per-app config dirs under `.config/`: bat, borders, btop, fastfetch, gh, gh-chan
 ## Work Guidance
 
 - Match each application's own native config format and conventions.
+- Kitty: `cmd+,` is the leader; `gb`, `gd`, and `gt` launch GitButler, gh dash, and tuxedo in vertical splits in the current directory. `cmd+f` and leader `f` search scrollback. Shift+Enter sends kitty CSI u (`ESC [ 13 ; 2 u`) so Empryo can insert a newline. Use explicit `shift+t` for tab selection so it does not override leader `t` (new tab).
 - Features take precedence over marginal RAM/CPU optimization — do not remove or degrade existing functionality for small resource wins.
 - WezTerm shows native topology by default; while Herdr is foreground, its status bar uses cached `herdr api snapshot` workspace/tab/pane state and falls back cleanly on exit or API failure.
 
