@@ -160,6 +160,7 @@ Since we have a bad habit of forgetting things - see [Troubleshooting](#troubles
    - `cd ~/.dotfiles && just install` (calls `./install.sh bootstrap`)
    - Or invoke the script directly: `./install.sh bootstrap`
    - For stow-only (no software install): `./install.sh link` or `just link`
+   - Bootstrap installs Empryo after stow, and skips it when `~/.empryo/bin/empryo` already exists. The first launch reads the seeded `~/.empryo/config.json`.
 5. After setup completes, run `upp` to execute topgrade and update everything:
    - `upp` is an abbreviation for `topgrade --yes` - Update Packages _(this is what I say to myself)_
    - `config/.config/topgrade.toml` includes `[post_commands]` for a Brew cleanup pass
@@ -185,13 +186,14 @@ unstow        Remove individual package with Stow (e.g., just unstow fish) [alia
 update        Restow all dotfiles packages [alias: up]
 delete        Remove all dotfile symlinks
 hooks         Install tracked .githooks into .git/hooks
+capture-empryo  Copy the live ~/.empryo/config.json back into the repo
 ```
 
 **Bootstrapping**
 
 `just install` calls `./install.sh bootstrap`. The unified installer has two primary subcommands:
 
-- `./install.sh bootstrap` - provision a new machine: Xcode CLT, Homebrew + Brewfile, language package managers (FNM, rbenv, rustup, Bun), Stow, duti, macOS prefs, git config, optional fish as default shell.
+- `./install.sh bootstrap` - provision a new machine: Xcode CLT, Homebrew + Brewfile, language package managers (FNM, rbenv, rustup, Bun), Stow, duti, macOS prefs, git config, Empryo, optional fish as default shell.
 - `./install.sh link` - symlink dotfiles only (idempotent). Use this when the machine is already set up.
 
 Flags for `bootstrap`: `-y`/`--yes` (skip prompts), `--no-packages` (skip Homebrew bundle and language package managers), `--no-macos` (skip system preferences). Run `./install.sh help` for full usage.
@@ -213,7 +215,7 @@ Two options for managing packages with GNU Stow:
 
 The package list is `stow_packages` in the `justfile`: `dots git fish zsh config neovim local readinglist`.
 
-- **dots** (`dots/`) - misc dotfiles that live directly in `$HOME`: `.npmrc`, `.tmux.conf`, `.biome.json`, `.tigrc`, `.gitnow`, `.profile`, etc. Also owns `.stow-global-ignore`, the shared ignore list used by every package without its own.
+- **dots** (`dots/`) - misc dotfiles that live directly in `$HOME`: `.npmrc`, `.tmux.conf`, `.biome.json`, `.tigrc`, `.gitnow`, `.profile`, etc. Also owns `.stow-global-ignore`, the shared ignore list used by every package without its own. `.empryo/` holds the global Empryo config; `config.json` is copied rather than symlinked, and `just capture-empryo` copies the live file back into the repo.
 
 - **git** (`git/`) - `.gitconfig` (aliases, delta pager, SSH signing), `.gitignore_global`, and `git.sh`, which symlinks the machine-specific `~/.gitconfig.local` keyed on `ComputerName` and registers the signing key on GitHub. List aliases with `git config --get-regexp '^alias\.'`.
 

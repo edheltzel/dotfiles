@@ -106,8 +106,14 @@ die() {
 _run_stow() {
   local mode="$1"
   shift
-  # Pre-create runtime dirs so stow links files inside, not the whole dir
-  mkdir -p "$HOME/.no-mistakes"
+  # Pre-create runtime dirs so stow links files inside, not the whole dir.
+  # ~/.empryo itself stays a real directory: only the tracked files inside it are linked.
+  mkdir -p "$HOME/.no-mistakes" "$HOME/.empryo/.empryo" "$HOME/.empryo/orchestrations"
+  # config.json is seed-copy, not a symlink: Empryo replaces a symlinked config on write.
+  if [ ! -e "$HOME/.empryo/config.json" ]; then
+    cp "$SCRIPT_DIR/dots/.empryo/config.json" "$HOME/.empryo/config.json"
+    chmod 600 "$HOME/.empryo/config.json"
+  fi
   info "Linking dotfiles with GNU Stow..."
   for pkg in "$@"; do
     if [ ! -d "$SCRIPT_DIR/$pkg" ]; then
@@ -141,6 +147,7 @@ Subcommands:
                   - Machine-specific git config
                   - Safari Reading List -> FieldNotes LaunchAgent
                   - Fish as default shell (optional)
+                  - Empryo (skipped when already installed)
 
   link          Stow-symlink dotfiles only — idempotent, safe to re-run.
                 Does NOT install any software. Use this when you already
@@ -222,6 +229,8 @@ cmd_bootstrap() {
 
   (cd "$SCRIPT_DIR/git" && . ./git.sh)
 
+  install_empryo
+
   # Executed, not sourced: set -e is ignored inside a `||` subshell, and this
   # step is optional (it needs Full Disk Access), so failure only warns.
   "$SCRIPT_DIR/readinglist/readinglist.sh" ||
@@ -243,6 +252,17 @@ cmd_bootstrap() {
   fi
 
   success "Dotfile setup complete."
+}
+
+# Empryo's own installer. Runs after stow so the first launch reads the seeded
+# config.json instead of writing defaults. Idempotent: a present binary skips it.
+install_empryo() {
+  if [ -x "$HOME/.empryo/bin/empryo" ]; then
+    info "Empryo already installed — skipping"
+    return 0
+  fi
+  info "Installing Empryo..."
+  curl -fsSL https://empryo.com/install.sh | bash
 }
 
 # ────────────────────────────────────────────────────────────────

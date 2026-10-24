@@ -35,6 +35,10 @@ stow pkg="":
     @if [ -z "{{pkg}}" ]; then \
         just list; \
     elif echo "{{stow_packages}}" | grep -qw "{{pkg}}"; then \
+        if [ "{{pkg}}" = "dots" ]; then \
+            mkdir -p ~/.empryo/.empryo ~/.empryo/orchestrations; \
+            test -e ~/.empryo/config.json || { cp dots/.empryo/config.json ~/.empryo/config.json && chmod 600 ~/.empryo/config.json; }; \
+        fi; \
         stow {{pkg}}; \
         echo "{{pkg}} stowed successfully"; \
     else \
@@ -54,7 +58,8 @@ unstow pkg:
 
 # Restow all dotfiles packages
 update:
-    @mkdir -p ~/.no-mistakes
+    @mkdir -p ~/.no-mistakes ~/.empryo/.empryo ~/.empryo/orchestrations
+    @test -e ~/.empryo/config.json || { cp dots/.empryo/config.json ~/.empryo/config.json && chmod 600 ~/.empryo/config.json; }
     @for pkg in {{stow_packages}}; do \
         if [ "$pkg" = "fish" ]; then \
             rm -f ~/.config/fish/conf.d/brew.fish ~/.config/fish/conf.d/fish-ssh-agent.fish; \
@@ -92,6 +97,13 @@ hooks:
       chmod +x "$root/.git/hooks/$hook"
     done
     printf "{{green}}git hooks installed{{clr}} -> .git/hooks (sources in .githooks)\n"
+
+# Copy the live Empryo config back into the repo. config.json is seed-copy, not a
+# symlink: Empryo replaces a symlinked config.json with a regular file on write.
+capture-empryo:
+    @cp ~/.empryo/config.json dots/.empryo/config.json
+    @chmod 600 dots/.empryo/config.json
+    @printf "{{green}}Empryo config captured{{clr}} -> dots/.empryo/config.json\n"
 
 # Aliases
 alias up := update

@@ -1,0 +1,9 @@
+# A local ignore replaces stow's defaults, so the lines below are the whole list.
+
+.DS_Store
+AGENTS.md
+# ~/AGENTS.md is Pi's home config, not this package's doc. Never stow over it.
+^/AGENTS\.md$
+
+# Seed-copy, not a symlink: Empryo replaces a symlinked config.json on write.
+.empryo/config.json
