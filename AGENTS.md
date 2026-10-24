@@ -164,7 +164,7 @@ Stow packages (symlinked into `~`):
 - `config/` — application configs for 20+ tools (`~/.config`) — has child: `config/.config/wezterm/`
 - `fish/` — Fish shell config (primary shell, lazy-loading)
 - `git/` — git config, SSH signing, per-machine provisioning
-- `dots/` — miscellaneous `$HOME` dotfiles; owns the shared stow global ignore
+- `dots/` — miscellaneous `$HOME` dotfiles; owns the shared stow global ignore and the tracked global Empryo config (`dots/.empryo/`)
 - `local/` — user-specific data (`~/.local`)
 - `zsh/` — secondary shell config
 - `readinglist/` — Safari Reading List -> FieldNotes notes: `rl2notes` script (`~/.local/bin`) plus a generated LaunchAgent installed by `readinglist.sh` (`just readinglist`)

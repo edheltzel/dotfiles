@@ -1,0 +1,268 @@
+{
+  "nerdFont": true,
+  "$format": "explicit",
+  "appearance": {
+    "themeId": "eldritch",
+    "themeTokens": {
+      "brand": "#A48CF2",
+      "brandSecondary": "#37F499",
+      "brandDim": "#5E4FA0",
+      "brandAlt": "#04D1F9",
+      "error": "#F16C75",
+      "success": "#37F499",
+      "warning": "#F7F67F",
+      "info": "#04D1F9",
+      "amber": "#F7C67F",
+      "textPrimary": "#EBFAFA",
+      "textSecondary": "#C6D0F5",
+      "textMuted": "#7081D0",
+      "textDim": "#586089",
+      "textFaint": "#454E7D",
+      "textSubtle": "#3B4166",
+      "bgApp": "#171928",
+      "bgPopup": "#212337",
+      "bgPopupHighlight": "#323449",
+      "bgOverlay": "#0F1019",
+      "bgPrimary": "#171928",
+      "bgSecondary": "#1C1E30",
+      "bgElevated": "#212337",
+      "bgInput": "#1C1E30",
+      "bgBanner": "#212337",
+      "bgBannerError": "#3A1E2B",
+      "bgUser": "#212337",
+      "border": "#323449",
+      "borderFocused": "#A48CF2",
+      "borderActive": "#A48CF2",
+      "borderSlash": "#37F499",
+      "diffAddedBg": "#173A33",
+      "diffRemovedBg": "#3A1E2B",
+      "diffAddedSign": "#37F499",
+      "diffRemovedSign": "#F16C75",
+      "accentUser": "#04D1F9",
+      "accentAssistant": "#A48CF2",
+      "accentSystem": "#F265B5",
+      "bgBase": "#171928",
+      "bgPane": "#212337",
+      "bgPaneRaised": "#212337"
+    },
+    "shareWithTUI": true,
+    "bgOpacity": 75,
+    "blur": 10,
+    "windowBackdrop": "dither",
+    "chromeOpacity": 10,
+    "density": "cozy",
+    "chatUserStyle": "bubble",
+    "settingsPresentation": "popup",
+    "chatScale": 100,
+    "composerCollapse": "working"
+  },
+  "diffStyle": "default",
+  "semanticSummaries": "synthetic",
+  "instructionFiles": [
+    "empryo",
+    "codex"
+  ],
+  "mcpServers": [
+    {
+      "name": "recall-memory",
+      "command": "/Users/ed/.bun/bin/bun",
+      "args": [
+        "run",
+        "/Users/ed/.bun/bin/recall-mcp"
+      ],
+      "env": {
+        "RECALL_DB_PATH": "/Users/ed/.agents/Recall/recall.db"
+      }
+    },
+    {
+      "name": "codex-unified-computer-use-cua_repl",
+      "transport": "stdio",
+      "command": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node",
+      "args": [
+        "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/@oai/cua-repl/bin/cua-repl.mjs"
+      ],
+      "env": {
+        "NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS": "1000",
+        "NODE_REPL_NODE_MODULE_DIRS": "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules",
+        "NODE_REPL_NODE_PATH": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node",
+        "NODE_REPL_TRUSTED_CODE_PATHS": "/Users/ed/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules",
+        "CODEX_HOME": "/Users/ed/.codex",
+        "BROWSER_USE_AVAILABLE_BACKENDS": "chrome,iab,mcpapps",
+        "BROWSER_USE_TINYSKY_ENABLED": "1",
+        "NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER": "Control the in-app browser in conjunction with the Browser Plugin.",
+        "NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME": "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative.",
+        "NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE": "Control desktop apps on macOS through Computer Use.",
+        "BROWSER_USE_CODEX_APP_BUILD_FLAVOR": "prod",
+        "BROWSER_USE_CODEX_APP_VERSION": "26.1007.71326",
+        "NODE_REPL_TRUSTED_SERVICES": "{\"browser\":\"@oai/browser-desktop/service\",\"sky\":\"@oai/sky/service\"}",
+        "SKY_CUA_SERVICE_PATH": "/Users/ed/.codex/computer-use/Codex Computer Use.app",
+        "CODEX_CLI_PATH": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+        "CUA_REPL_NODE_REPL_PATH": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl",
+        "CUA_REPL_ENABLED_SURFACES": "browser,computer"
+      },
+      "timeout": 120000,
+      "resident": true
+    }
+  ],
+  "yolo": true,
+  "browser": {
+    "allowExternalNetwork": false,
+    "profiles": {}
+  },
+  "computerUseDrive": "assist",
+  "taskRouter": {
+    "spark": "subscriptions/grok-4.7",
+    "webSearch": "subscriptions/claude-haiku-5-5",
+    "explore": "subscriptions/grok-4.7",
+    "marionette": "subscriptions/grok-4.7",
+    "desloppify": "subscriptions/cursor/grok-4.7",
+    "verify": "subscriptions/gpt-6.1-sol",
+    "compact": "subscriptions/grok-4.7",
+    "semantic": "subscriptions/claude-sonnet-5-5",
+    "advisor": "subscriptions/gpt-6.1-sol",
+    "duck": "subscriptions/grok-4.7",
+    "namer": "subscriptions/gpt-6-luna",
+    "goalReview": "subscriptions/gpt-6.1-sol",
+    "efforts": {
+      "compact": "xhigh"
+    },
+    "maxConcurrentAgents": 16,
+    "routine": "subscriptions/grok-4.7"
+  },
+  "agentFeatures": {
+    "verifyEdits": true,
+    "desloppify": false,
+    "marionette": false
+  },
+  "modelFallback": {
+    "openrouter/x-ai/grok-4.7": [
+      "subscriptions/gpt-6.1-sol",
+      "subscriptions/claude-opus-5-5"
+    ],
+    "subscriptions/grok-4.7": [
+      "subscriptions/grok-4.7",
+      "subscriptions/gpt-6.1-sol"
+    ],
+    "subscriptions/claude-haiku-5-5": [
+      "subscriptions/gpt-6-luna"
+    ],
+    "subscriptions/claude-sonnet-5-5": [
+      "subscriptions/grok-4.7"
+    ]
+  },
+  "disabledTools": [
+    "worktree"
+  ],
+  "theme": {
+    "name": "eldritch",
+    "transparent": true,
+    "userMessageOpacity": 70,
+    "diffOpacity": 30,
+    "borderStrength": "default"
+  },
+  "onboardingComplete": true,
+  "defaultModel": "subscriptions/grok-4.7",
+  "vimHints": true,
+  "subscriptionsIntroSeenTui": true,
+  "marionetteIntroSeenTui": true,
+  "nvimConfig": "user",
+  "addons": {
+    "proxy": {
+      "installed": true,
+      "installedAt": "2026-10-04T17:45:28.537Z",
+      "version": "8.0.13"
+    }
+  },
+  "cells": {
+    "autoApprove": true,
+    "reach": "all"
+  },
+  "voice": {
+    "handsFree": true,
+    "live": false,
+    "keywords": [
+      "MyChron"
+    ]
+  },
+  "skills": {
+    "autoLoad": [
+      "do-todo",
+      "do-commit",
+      "but-axi"
+    ]
+  },
+  "projectsSetupSeenTui": true,
+  "projectsView": true,
+  "projectsLayout": "tree",
+  "projectsStyle": "floating",
+  "projectsRailUnfold": true,
+  "projectsArrange": "folders",
+  "projectsSubprojects": true,
+  "projectsTabBar": true,
+  "projectsSetupSeen": true,
+  "subagentStreamProviders": [
+    "subscriptions"
+  ],
+  "typesafe": {
+    "enabled": true,
+    "rerankMode": "apply",
+    "skillSuggestion": true,
+    "errorTriage": true,
+    "toolPick": true,
+    "rerank": true,
+    "via": "typesafe",
+    "pilot": true
+  },
+  "modelPicker": {
+    "hiddenModels": [],
+    "hiddenProviders": [],
+    "hideUnconfigured": true,
+    "groupModels": true
+  },
+  "projectsViewTui": true,
+  "editorIntegration": {
+    "diagnostics": true,
+    "symbols": true,
+    "hover": true,
+    "references": true,
+    "definition": true,
+    "codeActions": true,
+    "editorContext": true,
+    "rename": true,
+    "lspStatus": true,
+    "format": true,
+    "syncEditorOnEdit": false
+  },
+  "soulstack": {
+    "autoUpdate": true
+  },
+  "thinking": {
+    "mode": "auto"
+  },
+  "performance": {
+    "xaiReasoningEffort": "high",
+    "effort": "medium",
+    "llmgatewayReasoningEffort": "medium",
+    "openaiReasoningSummary": "auto",
+    "openaiReasoningEffort": "medium",
+    "serviceTier": "off"
+  },
+  "contextManagement": {
+    "compact": false
+  },
+  "cache": {
+    "keepAlive": true,
+    "ttl": "5m"
+  },
+  "codeExecution": true,
+  "computerUse": true,
+  "webSearch": true,
+  "nativeSearch": true,
+  "editorSplit": 40,
+  "projectsLayoutTui": "rows",
+  "projectsStyleTui": "floating",
+  "projectsRailUnfoldTui": true,
+  "projectsArrangeTui": "folders",
+  "projectsSubprojectsTui": true,
+  "projectsTabBarTui": true
+}

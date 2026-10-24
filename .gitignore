@@ -69,7 +69,20 @@ banks/
 
 ### Merge backups ###
 *.orig
-.empryo
+
+### Empryo ###
+# Repo-local .empryo/ (project agents, genome, sessions) stays ignored.
+# Anchored so it does not also hide dots/.empryo.
+/.empryo
+# Global config tracked under dots/.empryo; runtime state stays in ~/.empryo.
+dots/.empryo/*
+!dots/.empryo/config.json
+!dots/.empryo/EMPRYO.md
+!dots/.empryo/tui-layout.json
+!dots/.empryo/orchestrations/
+!dots/.empryo/.empryo/
+dots/.empryo/.empryo/*
+!dots/.empryo/.empryo/memory-config.json
 
 ### no-mistakes (config only; runtime state stays in ~/.no-mistakes) ###
 dots/.no-mistakes/*

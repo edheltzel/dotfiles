@@ -1,0 +1,101 @@
+{
+  "id": "brainstorm-to-ship",
+  "version": 1,
+  "entry": "requirements",
+  "nodes": [
+    {
+      "id": "requirements",
+      "kind": "agent",
+      "prompt": "Feature request: {{input}}\n\nPlans dir: the one the project AGENTS.md names, else docs/plans/.\n\nDo not change product code. Read the relevant code and the project AGENTS.md / CLAUDE.md chain. Write <plans dir>/YYYY-MM-DD-<topic>-requirements.md with: Goal, In scope, Out of scope, Success (observable checks), Open questions. If the user answered a gate with revision notes, apply them to the existing file. Reply with the file path and the open questions."
+    },
+    {
+      "id": "approve_requirements",
+      "kind": "gate",
+      "question": "Requirements written. Reply 'yes' to plan, or type what to change."
+    },
+    {
+      "id": "plan",
+      "kind": "agent",
+      "prompt": "Feature request: {{input}}\n\nPlans dir: the one the project AGENTS.md names, else docs/plans/.\n\nDo not change product code. Read the newest *-requirements.md in the plans dir. Write <plans dir>/YYYY-MM-DD-<topic>-plan.md with ordered Implementation Units, each with Files, Change, Done when, and a Verify command. If the user answered a gate with revision notes, revise the existing plan. Reply with the plan path."
+    },
+    {
+      "id": "approve_plan",
+      "kind": "gate",
+      "question": "Plan written. Reply 'yes' to build, or type what to change."
+    },
+    {
+      "id": "build",
+      "kind": "agent",
+      "prompt": "Plans dir: the one the project AGENTS.md names, else docs/plans/.\n\nImplement the newest *-plan.md in the plans dir, unit by unit, following the project AGENTS.md / CLAUDE.md chain. Run each unit Verify step. If a reviewer or the build reported failures, fix those first. Do not commit. Reply with what changed per unit."
+    },
+    {
+      "id": "check",
+      "kind": "shell",
+      "command": "if [ -f package.json ] && grep -q \"\\\"build\\\"\" package.json; then if command -v bun >/dev/null; then bun run build; else npm run build; fi; else echo \"no build script, skipped\"; fi"
+    },
+    {
+      "id": "review",
+      "kind": "judge",
+      "prompt": "Plans dir: the one the project AGENTS.md names, else docs/plans/.\n\nReview the uncommitted changes against the newest *-plan.md and *-requirements.md in the plans dir. Check every Success line and Done-when. Name each problem at file:line with the fix. PASS only if all are met."
+    },
+    {
+      "id": "done",
+      "kind": "end"
+    }
+  ],
+  "edges": [
+    {
+      "from": "requirements",
+      "to": "approve_requirements"
+    },
+    {
+      "from": "approve_requirements",
+      "to": "plan",
+      "when": "answer=yes"
+    },
+    {
+      "from": "approve_requirements",
+      "to": "requirements",
+      "max": 3
+    },
+    {
+      "from": "plan",
+      "to": "approve_plan"
+    },
+    {
+      "from": "approve_plan",
+      "to": "build",
+      "when": "answer=yes"
+    },
+    {
+      "from": "approve_plan",
+      "to": "plan",
+      "max": 3
+    },
+    {
+      "from": "build",
+      "to": "check"
+    },
+    {
+      "from": "check",
+      "to": "review",
+      "when": "ok"
+    },
+    {
+      "from": "check",
+      "to": "build",
+      "when": "fail",
+      "max": 3
+    },
+    {
+      "from": "review",
+      "to": "done",
+      "when": "PASS"
+    },
+    {
+      "from": "review",
+      "to": "build",
+      "max": 3
+    }
+  ]
+}

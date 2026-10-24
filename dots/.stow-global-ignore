@@ -1,6 +1,8 @@
 # Stow global ignore - skip these files
 .DS_Store
 AGENTS.md
+# ~/AGENTS.md is Pi's home config, not this package's doc. Never stow over it.
+^/AGENTS\.md$
 .git
 .gitignore
 .stow-local-ignore
