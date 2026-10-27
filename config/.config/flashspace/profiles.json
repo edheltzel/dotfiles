@@ -27,14 +27,14 @@
               "name" : "Firefox"
             },
             {
-              "bundleIdentifier" : "com.tigervnc.tigervnc",
-              "iconPath" : "/Applications/TigerVNC.app/Contents/Resources/tigervnc.icns",
-              "name" : "TigerVNC"
-            },
-            {
               "bundleIdentifier" : "com.google.Chrome",
               "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
               "name" : "Google Chrome"
+            },
+            {
+              "bundleIdentifier" : "dev.serafim.fast",
+              "iconPath" : "/Applications/yab.app/Contents/Resources/yab.icns",
+              "name" : "Yab"
             }
           ],
           "display" : "PA278QV",
@@ -62,11 +62,6 @@
               "name" : "WezTerm"
             },
             {
-              "bundleIdentifier" : "net.kovidgoyal.kitty",
-              "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
-              "name" : "kitty"
-            },
-            {
               "bundleIdentifier" : "dev.kdrag0n.MacVirt",
               "iconPath" : "/Applications/OrbStack.app/Contents/Resources/AppIcon.icns",
               "name" : "OrbStack"
@@ -90,6 +85,11 @@
               "bundleIdentifier" : "so.stencil.tern",
               "iconPath" : "/Applications/Tern.app/Contents/Resources/tern.icns",
               "name" : "Tern"
+            },
+            {
+              "bundleIdentifier" : "net.kovidgoyal.kitty",
+              "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
+              "name" : "kitty"
             }
           ],
           "display" : "PA278QV",
@@ -227,6 +227,21 @@
               "name" : "Invoice Ninja"
             },
             {
+              "bundleIdentifier" : "com.microsoft.Excel",
+              "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/Excel_macOS.icns",
+              "name" : "Microsoft Excel"
+            },
+            {
+              "bundleIdentifier" : "doc.md-preview",
+              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
+              "name" : "Markdown Preview"
+            },
+            {
+              "bundleIdentifier" : "com.invoiceninja.app",
+              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
+              "name" : "Invoice Ninja"
+            },
+            {
               "bundleIdentifier" : "com.apple.reminders",
               "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
               "name" : "Reminders"
@@ -252,11 +267,6 @@
               "name" : "Messages"
             },
             {
-              "bundleIdentifier" : "com.microsoft.teams2",
-              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
-              "name" : "Microsoft Teams"
-            },
-            {
               "bundleIdentifier" : "com.apple.iCal",
               "iconPath" : "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
               "name" : "Calendar"
@@ -270,6 +280,11 @@
               "bundleIdentifier" : "com.clickup.desktop-app",
               "iconPath" : "/Applications/ClickUp.app/Contents/Resources/icon.icns",
               "name" : "ClickUp"
+            },
+            {
+              "bundleIdentifier" : "com.tigervnc.tigervnc",
+              "iconPath" : "/Applications/TigerVNC.app/Contents/Resources/tigervnc.icns",
+              "name" : "TigerVNC"
             }
           ],
           "display" : "PA278QV",
