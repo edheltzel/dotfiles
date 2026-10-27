@@ -7,6 +7,7 @@ stow_packages := "dots git fish zsh config neovim local readinglist"
 yellow := '\033[33m'
 green := '\033[32m'
 white := '\033[37m'
+red := '\033[31m'
 clr := '\033[0m'
 
 # Show available recipes (default)
@@ -60,15 +61,20 @@ unstow pkg:
 update:
     @mkdir -p ~/.no-mistakes ~/.empryo/.empryo ~/.empryo/orchestrations
     @test -e ~/.empryo/config.json || { cp dots/.empryo/config.json ~/.empryo/config.json && chmod 600 ~/.empryo/config.json; }
-    @for pkg in {{stow_packages}}; do \
+    @failed=""; \
+    for pkg in {{stow_packages}}; do \
         if [ "$pkg" = "fish" ]; then \
             rm -f ~/.config/fish/conf.d/brew.fish ~/.config/fish/conf.d/fish-ssh-agent.fish; \
         fi; \
         if [ "$pkg" = "zsh" ]; then \
             rm -f ~/.config/zsh/.zcompdump*; \
         fi; \
-        stow --restow $pkg; \
-    done
+        stow --restow $pkg || failed="$failed $pkg"; \
+    done; \
+    if [ -n "$failed" ]; then \
+        printf "{{red}}Stow failed for:%s{{clr}} - other packages were restowed\n" "$failed"; \
+        exit 1; \
+    fi
     @printf "{{green}}Dotfiles updated successfully{{clr}} - run {{yellow}}reload{{clr}} to apply changes to your shell\n"
 
 # Remove all dotfile symlinks
