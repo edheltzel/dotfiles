@@ -31,6 +31,7 @@ tap 'FelixKratz/formulae'       # A tap for Janky Borders see brew borders
 tap 'marcus/tap'                # For sidecar and td
 tap 'gromgit/brewtils'
 tap 'rjyo/moshi'                # Moshi mobile SSH client host tools
+tap 'yetanotherbrowser/tap'      # Yab browser
 
 #############################################################
 # 1. Command Line                                           #
@@ -265,6 +266,7 @@ cask 'choosy'                    # Choose which browser to open links in - Defau
 cask 'brave-browser'
 cask 'firefox'
 cask 'google-chrome'
+cask 'yab'                       # Yab - Arc-like WebKit browser with AI (yetanotherbrowser/tap)
 
 # Fonts
 cask 'sf-symbols'
