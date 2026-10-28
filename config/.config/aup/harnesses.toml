@@ -1,0 +1,99 @@
+# Agent harness manifest. Read by tools/aup.
+# Add or remove [[harness]] tables. Order is run order.
+# version is probed with --version; omit it or use "-" to skip.
+# args is a string ("update --all") or a list (["update", "--all"]).
+
+# [[harness]]
+# label = "Opencode"
+# color = "61747f"
+# binary = "opencode"
+# version = "opencode"
+# args = "upgrade"
+#
+# [[harness]]
+# label = "Prime-agent"
+# color = "7081d0"
+# binary = "prime-agent"
+# version = "prime-agent"
+# args = "update --force"
+#
+# [[harness]]
+# label = "Hermes"
+# color = "454759"
+# binary = "prime-agent"
+# version = "prime-agent"
+# args = "update --force"
+
+[[harness]]
+label = "Herdr"
+color = "B392D7"
+binary = "brew"
+version = "brew"
+args = "upgrade herdr"
+
+[[harness]]
+label = "Pi+Extensions"
+color = "0874D5"
+binary = "pi"
+args = "update --all"
+
+[[harness]]
+label = "Jcode"
+color = "C1A510"
+binary = "jcode"
+version = "jcode"
+args = "update"
+
+[[harness]]
+label = "Claude Code"
+color = "B3540B"
+binary = "claude"
+version = "claude"
+args = "update"
+
+[[harness]]
+label = "OMP Marketplace"
+color = "D454B7"
+binary = "omp"
+version = "omp"
+args = "plugin marketplace update"
+
+[[harness]]
+label = "OMP Plugins"
+color = "D454B7"
+binary = "omp"
+version = "omp"
+args = "update --plugins"
+
+[[harness]]
+label = "OMP"
+color = "D494B7"
+binary = "omp"
+version = "omp"
+args = "update --force"
+
+[[harness]]
+label = "Plannotator"
+color = "7494D7"
+binary = "bash"
+args = ["-o", "pipefail", "-c", "curl -fsSL https://plannotator.ai/install.sh | bash"]
+
+[[harness]]
+label = "Cursor Agent"
+color = "D47497"
+binary = "cursor-agent"
+version = "cursor-agent"
+args = "update"
+
+[[harness]]
+label = "Empryo"
+color = "D4A474"
+binary = "empryo"
+version = "empryo"
+args = "update"
+
+[[harness]]
+label = "Skills"
+color = "8C8C8F"
+binary = "skills"
+args = "update -g -y"
