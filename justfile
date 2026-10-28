@@ -105,6 +105,11 @@ capture-empryo:
     @chmod 600 dots/.empryo/config.json
     @printf "{{green}}Empryo config captured{{clr}} -> dots/.empryo/config.json\n"
 
+# Build the aup updater (tools/aup) into ~/.local/bin/aup
+aup:
+    @cd tools/aup && go build -o ~/.local/bin/aup .
+    @printf "{{green}}aup built{{clr}} -> ~/.local/bin/aup\n"
+
 # Aliases
 alias up := update
 alias add := stow
