@@ -171,6 +171,27 @@ func TestKnownDirsAreOnPath(t *testing.T) {
 	}
 }
 
+func TestHomebrewDirsPrecedeLocalBin(t *testing.T) {
+	real := extraDirs
+	setup(t)
+	want := []string{"/opt/homebrew/bin", "/opt/homebrew/sbin", "/h/.local/bin"}
+	if got := real("/h"); len(got) < 3 || strings.Join(got[:3], ",") != strings.Join(want, ",") {
+		t.Fatalf("known dirs start %v, want %v", got, want)
+	}
+}
+
+func TestEarlierKnownDirWins(t *testing.T) {
+	setup(t)
+	first, second := t.TempDir(), t.TempDir()
+	extraDirs = func(string) []string { return []string{first, second} }
+	fake(t, first, "aup-both", "echo from-first")
+	fake(t, second, "aup-both", "echo from-second")
+	out, _ := aup(t, "--manifest", manifest(t, entry("Both", "aup-both", "x")))
+	if !strings.Contains(out, "from-first") || strings.Contains(out, "from-second") {
+		t.Fatalf("out=%q", out)
+	}
+}
+
 func TestBadRowFailsRunButOthersContinue(t *testing.T) {
 	e := setup(t)
 	fake(t, e.bin, "aup-good", "echo ran")

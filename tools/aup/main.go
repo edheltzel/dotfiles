@@ -29,12 +29,12 @@ var (
 
 	extraDirs = func(home string) []string {
 		return []string{
+			"/opt/homebrew/bin",
+			"/opt/homebrew/sbin",
 			filepath.Join(home, ".local/bin"),
 			filepath.Join(home, ".bun/bin"),
 			filepath.Join(home, ".empryo/bin"),
 			filepath.Join(home, "Library/pnpm"),
-			"/opt/homebrew/bin",
-			"/opt/homebrew/sbin",
 			"/usr/local/bin",
 		}
 	}
