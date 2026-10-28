@@ -222,15 +222,18 @@ func openLog(home string, stderr io.Writer) *os.File {
 }
 
 func setPath(home string) {
-	var dirs []string
-	seen := map[string]bool{}
-	for _, d := range append(extraDirs(home), filepath.SplitList(os.Getenv("PATH"))...) {
-		if d != "" && !seen[d] {
-			seen[d] = true
-			dirs = append(dirs, d)
+	inherited := filepath.SplitList(os.Getenv("PATH"))
+	have := map[string]bool{}
+	for _, d := range inherited {
+		have[d] = true
+	}
+	for _, d := range extraDirs(home) {
+		if !have[d] {
+			have[d] = true
+			inherited = append(inherited, d)
 		}
 	}
-	os.Setenv("PATH", strings.Join(dirs, string(os.PathListSeparator)))
+	os.Setenv("PATH", strings.Join(inherited, string(os.PathListSeparator)))
 }
 
 func realPaths(bin string) []string {

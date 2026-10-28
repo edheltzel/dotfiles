@@ -197,24 +197,36 @@ func TestKnownDirsAreOnPath(t *testing.T) {
 	}
 }
 
-func TestHomebrewDirsPrecedeLocalBin(t *testing.T) {
+func TestKnownDirsAppendOrder(t *testing.T) {
 	real := extraDirs
 	setup(t)
-	want := []string{"/opt/homebrew/bin", "/opt/homebrew/sbin", "/h/.local/bin"}
-	if got := real("/h"); len(got) < 3 || strings.Join(got[:3], ",") != strings.Join(want, ",") {
-		t.Fatalf("known dirs start %v, want %v", got, want)
+	want := "/opt/homebrew/bin,/opt/homebrew/sbin,/h/.local/bin,/h/.bun/bin,/h/.empryo/bin,/h/Library/pnpm,/usr/local/bin"
+	if got := strings.Join(real("/h"), ","); got != want {
+		t.Fatalf("known dirs %s, want %s", got, want)
 	}
 }
 
-func TestEarlierKnownDirWins(t *testing.T) {
-	setup(t)
+func TestInheritedPathWinsOverKnownDirs(t *testing.T) {
+	e := setup(t)
 	first, second := t.TempDir(), t.TempDir()
 	extraDirs = func(string) []string { return []string{first, second} }
+	fake(t, e.bin, "aup-inherited", "echo from-path")
+	fake(t, first, "aup-inherited", "echo from-known")
 	fake(t, first, "aup-both", "echo from-first")
 	fake(t, second, "aup-both", "echo from-second")
-	out, _ := aup(t, "--manifest", manifest(t, entry("Both", "aup-both", "x")))
-	if !strings.Contains(out, "from-first") || strings.Contains(out, "from-second") {
+	out, _ := aup(t, "--manifest", manifest(t, entry("Inh", "aup-inherited", "x")+entry("Both", "aup-both", "x")))
+	if !strings.Contains(out, "from-path") || strings.Contains(out, "from-known") || !strings.Contains(out, "from-first") || strings.Contains(out, "from-second") {
 		t.Fatalf("out=%q", out)
+	}
+}
+
+func TestInheritedPathOrderIsKept(t *testing.T) {
+	setup(t)
+	t.Setenv("PATH", "/a:/b")
+	extraDirs = func(string) []string { return []string{"/b", "/c"} }
+	aup(t, "--dry-run", "--manifest", manifest(t, ""))
+	if got := os.Getenv("PATH"); got != "/a:/b:/c" {
+		t.Fatalf("PATH=%s, want /a:/b:/c", got)
 	}
 }
 
