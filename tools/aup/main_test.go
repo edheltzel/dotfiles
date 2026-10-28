@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/creack/pty"
 )
 
 type env struct {
@@ -143,6 +145,30 @@ func TestLogFileTeesOutput(t *testing.T) {
 		if !strings.Contains(string(log), want) || !strings.Contains(out, want) {
 			t.Fatalf("%q missing\nlog=%q\nout=%q", want, log, out)
 		}
+	}
+}
+
+func TestChildKeepsTerminalWhenStdoutIsTTY(t *testing.T) {
+	real := isTTY
+	e := setup(t)
+	isTTY = real
+	fake(t, e.bin, "aup-tty", "echo child-output; test -t 1 && test -t 2")
+	ptmx, tty, err := pty.Open()
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer ptmx.Close()
+	defer tty.Close()
+	go io.Copy(io.Discard, ptmx)
+	if code := run([]string{"--manifest", manifest(t, entry("Tty", "aup-tty", "x"))}, tty, tty); code != 0 {
+		t.Fatalf("child did not get the terminal, exit %d", code)
+	}
+	log, err := os.ReadFile(filepath.Join(e.home, ".local/state/aup/last.log"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if strings.Contains(string(log), "child-output") || !strings.Contains(string(log), "Tty exit 0") {
+		t.Fatalf("log=%q", log)
 	}
 }
 

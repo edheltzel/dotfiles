@@ -46,8 +46,11 @@ type harness struct {
 }
 
 type app struct {
-	out, errOut io.Writer
-	color       bool
+	out, errOut   io.Writer
+	childOut      io.Writer
+	childErr      io.Writer
+	log           io.Writer
+	direct, color bool
 }
 
 func main() {
@@ -69,13 +72,18 @@ func run(args []string, stdout, stderr io.Writer) int {
 		return 2
 	}
 
-	a := &app{out: stdout, errOut: stderr, color: os.Getenv("NO_COLOR") == "" && isTTY(stdout)}
+	a := &app{out: stdout, errOut: stderr, log: io.Discard, direct: isTTY(stdout), color: os.Getenv("NO_COLOR") == "" && isTTY(stdout)}
 	if !*dry {
 		if logf := openLog(home, stderr); logf != nil {
 			defer logf.Close()
 			a.out = io.MultiWriter(stdout, logf)
 			a.errOut = io.MultiWriter(stderr, logf)
+			a.log = logf
 		}
+	}
+	a.childOut, a.childErr = a.out, a.errOut
+	if a.direct {
+		a.childOut, a.childErr = stdout, stderr
 	}
 	setPath(home)
 
@@ -145,8 +153,8 @@ func (a *app) update(h harness, path string) int {
 
 	cmd := exec.Command(path, h.args...)
 	cmd.Stdin = os.Stdin
-	cmd.Stdout = a.out
-	cmd.Stderr = a.errOut
+	cmd.Stdout = a.childOut
+	cmd.Stderr = a.childErr
 	code := 0
 	if err := cmd.Run(); err != nil {
 		var ee *exec.ExitError
@@ -158,6 +166,9 @@ func (a *app) update(h harness, path string) int {
 		}
 	}
 
+	if a.direct {
+		fmt.Fprintf(a.log, "%s exit %d\n", h.label, code)
+	}
 	fmt.Fprintln(a.out)
 	if code != 0 {
 		fmt.Fprint(a.out, a.paint("31", fmt.Sprintf("%s update failed (exit %d).\n", h.label, code)))
