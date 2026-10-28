@@ -172,6 +172,37 @@ func TestChildKeepsTerminalWhenStdoutIsTTY(t *testing.T) {
 	}
 }
 
+func TestLogKeptWhenRunCannotStart(t *testing.T) {
+	e := setup(t)
+	logPath := filepath.Join(e.home, ".local/state/aup/last.log")
+	if err := os.MkdirAll(filepath.Dir(logPath), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(logPath, []byte("previous run"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	m := manifest(t, entry("Alpha", "aup-a", "x"))
+	aup(t, "--only", "nope", "--manifest", m)
+	aup(t, "--manifest", filepath.Join(e.home, "missing.toml"))
+	if got, _ := os.ReadFile(logPath); string(got) != "previous run" {
+		t.Fatalf("log overwritten: %q", got)
+	}
+}
+
+func TestLogHasNoColourCodes(t *testing.T) {
+	e := setup(t)
+	isTTY = func(io.Writer) bool { return true }
+	fake(t, e.bin, "aup-good", "true")
+	out, _ := aup(t, "--manifest", manifest(t, entry("Good", "aup-good", "x")))
+	log, err := os.ReadFile(filepath.Join(e.home, ".local/state/aup/last.log"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(out, "\x1b[") || strings.Contains(string(log), "\x1b") || !strings.Contains(string(log), "Good updated.") {
+		t.Fatalf("out=%q log=%q", out, log)
+	}
+}
+
 func TestNoColorGivesPlainText(t *testing.T) {
 	e := setup(t)
 	isTTY = func(io.Writer) bool { return true }

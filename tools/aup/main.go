@@ -9,6 +9,7 @@ import (
 	"os/exec"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strconv"
 	"strings"
 
@@ -17,6 +18,7 @@ import (
 
 var (
 	versionRe = regexp.MustCompile(`\d+\.\d+\.\d+(?:[-+][^ ]+)?`)
+	ansiRe    = regexp.MustCompile(`\x1b\[[0-9;]*m`)
 
 	isTTY = func(w io.Writer) bool {
 		f, ok := w.(*os.File)
@@ -53,6 +55,15 @@ type app struct {
 	direct, color bool
 }
 
+type ansiStripper struct{ w io.Writer }
+
+func (s ansiStripper) Write(p []byte) (int, error) {
+	if _, err := s.w.Write(ansiRe.ReplaceAll(p, nil)); err != nil {
+		return 0, err
+	}
+	return len(p), nil
+}
+
 func main() {
 	os.Exit(run(os.Args[1:], os.Stdout, os.Stderr))
 }
@@ -73,11 +84,24 @@ func run(args []string, stdout, stderr io.Writer) int {
 	}
 
 	a := &app{out: stdout, errOut: stderr, log: io.Discard, direct: isTTY(stdout), color: os.Getenv("NO_COLOR") == "" && isTTY(stdout)}
+	setPath(home)
+
+	harnesses, bad, err := load(*manifest)
+	if err != nil {
+		fmt.Fprintf(stderr, "aup: bad manifest %s: %v\n", *manifest, err)
+		return 1
+	}
+	if *only != "" && !slices.ContainsFunc(harnesses, func(h harness) bool { return strings.EqualFold(h.label, *only) }) {
+		fmt.Fprintf(stderr, "aup: no entry named %q\n", *only)
+		return 1
+	}
+
 	if !*dry {
 		if logf := openLog(home, stderr); logf != nil {
 			defer logf.Close()
-			a.out = io.MultiWriter(stdout, logf)
-			a.errOut = io.MultiWriter(stderr, logf)
+			plain := ansiStripper{logf}
+			a.out = io.MultiWriter(stdout, plain)
+			a.errOut = io.MultiWriter(stderr, plain)
 			a.log = logf
 		}
 	}
@@ -85,25 +109,18 @@ func run(args []string, stdout, stderr io.Writer) int {
 	if a.direct {
 		a.childOut, a.childErr = stdout, stderr
 	}
-	setPath(home)
 
-	harnesses, bad, err := load(*manifest)
-	if err != nil {
-		fmt.Fprintf(a.errOut, "aup: bad manifest %s: %v\n", *manifest, err)
-		return 1
-	}
 	failed := len(bad)
 	for _, msg := range bad {
 		fmt.Fprint(a.errOut, a.paint("31", "aup: harness "+msg+"\n"))
 	}
 
-	var done, skipped, matched int
+	var done, skipped int
 	warned := map[string]bool{}
 	for _, h := range harnesses {
 		if *only != "" && !strings.EqualFold(h.label, *only) {
 			continue
 		}
-		matched++
 		fmt.Fprintln(a.out)
 		path, err := exec.LookPath(h.binary)
 		if err != nil {
@@ -129,10 +146,6 @@ func run(args []string, stdout, stderr io.Writer) int {
 		}
 	}
 
-	if *only != "" && matched == 0 {
-		fmt.Fprintf(a.errOut, "aup: no entry named %q\n", *only)
-		return 1
-	}
 	verb := "updated"
 	if *dry {
 		verb = "would run"
