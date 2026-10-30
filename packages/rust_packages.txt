@@ -2,4 +2,5 @@ ccase
 suckit
 bws
 mdv
-mdterm --git https://github.com/bahdotsh/mdterm
+mdterm --git https://github.com/bahdotsh/mdterm
+grit-lib
