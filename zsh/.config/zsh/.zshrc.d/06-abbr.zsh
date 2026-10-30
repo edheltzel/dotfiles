@@ -53,6 +53,18 @@ abbr -S symlink='ln -s' 2>/dev/null
 
 # Git
 abbr -S lg='lazygit' 2>/dev/null
+
+# grit — Git-compatible CLI (https://grit-scm.com)
+abbr -S gr='grit' 2>/dev/null
+abbr -S grs='grit status' 2>/dev/null
+abbr -S grl='grit log' 2>/dev/null
+abbr -S grd='grit diff' 2>/dev/null
+abbr -S grc='grit commit -m' 2>/dev/null
+abbr -S gra='grit add' 2>/dev/null
+abbr -S grp='grit push' 2>/dev/null
+abbr -S grf='grit fetch' 2>/dev/null
+abbr -S grpl='grit pull' 2>/dev/null
+abbr -S grsw='grit switch' 2>/dev/null
 abbr -S ghw='gh repo view --web' 2>/dev/null
 abbr -S ghpr='gh pr create -a "@me" --fill' 2>/dev/null
 abbr -S ghm='gh pr merge --merge' 2>/dev/null

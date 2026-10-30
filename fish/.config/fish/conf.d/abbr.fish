@@ -122,6 +122,18 @@ if status is-interactive
     abbr --add ghmr --set-cursor 'gh pr merge % --merge'
     abbr --add ghr --set-cursor 'gh release create v% --generate-notes --latest'
 
+    # grit — Git-compatible CLI (https://grit-scm.com)
+    abbr --add gr grit
+    abbr --add grs 'grit status'
+    abbr --add grl 'grit log'
+    abbr --add grd 'grit diff'
+    abbr --add grc --set-cursor 'grit commit -m "%"'
+    abbr --add gra 'grit add'
+    abbr --add grp 'grit push'
+    abbr --add grf 'grit fetch'
+    abbr --add grpl 'grit pull'
+    abbr --add grsw --set-cursor 'grit switch %'
+
     #JuJitsu (jj) - bookmarks = branch workspace = worktrees (sort-of)
     abbr --add jjc --set-cursor 'jj commit -m "%"'
     abbr --add jje --set-cursor 'jj edit %' #like git checkout
