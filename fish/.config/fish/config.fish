@@ -55,9 +55,6 @@ fish_add_path /Users/ed/.local/bin
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
-# >>> grok installer >>>
-fish_add_path $HOME/.grok/bin
-# <<< grok installer <<<
 
 # Added by GitButler installer
 but completions fish | source
@@ -76,3 +73,7 @@ fish_add_path -gm $GOPATH/bin
 
 # Vite+ shims must beat Homebrew's node (brew shellenv above prepends /opt/homebrew/bin)
 fish_add_path -gm $HOME/.vite-plus/bin
+
+# >>> grok installer >>>
+fish_add_path $HOME/.grok/bin
+# <<< grok installer <<<

@@ -7,7 +7,7 @@ Primary shell (v3). XDG-compliant, performance-optimized with lazy-loading for f
 ## Ownership
 
 - `config.fish` — prompt selection (`FISH_PROMPT`, Starship) plus the lazy-load wrappers for rbenv (`ruby`/`gem`/`bundle`/`rake`/`irb`). Node/npm come from Vite+ shims (`conf.d/vite-plus.fish`, installer-managed); do not re-add `node`/`npm` wrapper functions, they shadow the shims. Third-party installers append PATH lines to the bottom; keep them there.
-- `conf.d/` — auto-loaded modules: `abbr.fish`, `paths.fish` (XDG vars), `exports.fish`, `brew.fish`, `fish-ssh-agent.fish`, `keys.fish`, `mole.fish`, `theme_colors.fish`, `wezterm.fish`, `zellij.fish`, `zoxide.fish`, `secrets.fish` (gitignored) + `secrets.fish.example`
+- `conf.d/` — auto-loaded modules: `abbr.fish`, `paths.fish` (XDG vars), `exports.fish`, `brew.fish`, `fish-ssh-agent.fish`, `grit.fish` (`GRIT_PAGER`), `keys.fish`, `mole.fish`, `theme_colors.fish`, `wezterm.fish`, `zellij.fish`, `zoxide.fish`, `secrets.fish` (gitignored) + `secrets.fish.example`
 - `functions/` — custom functions; `completions/`; `utils/`
 - `fish_plugins` — Fisher plugin list
 - `agent-harnesses.toml` — data manifest of harnesses updated by `functions/aup.fish`
@@ -15,7 +15,8 @@ Primary shell (v3). XDG-compliant, performance-optimized with lazy-loading for f
 
 ## Local Contracts
 
-- Use **abbreviations** (`abbr.fish`), not aliases, for composability.
+- Use **abbreviations** (`abbr.fish`), not aliases, for composability. grit abbreviations (`gr`, `grs`, `grl`, `grd`, `grc`, `gra`, `grp`, `grf`, `grpl`, `grsw`) live there; the binary is the script install in `~/.local/bin`, updated by the topgrade `grit` command.
+- `completions/grit.fish` is generated output of `grit completions fish` for the installed binary. After `grit update`, regenerate it (and `zsh/.config/zsh/completions/_grit`) instead of hand-editing.
 - Keep multi-step command implementations in named files under `functions/`; `abbr.fish` should contain abbreviations only.
 - `functions/aup.fish` updates agent harnesses listed in `agent-harnesses.toml` (`[[harness]]` tables: `label`, `color`, `binary`, optional `version`, `args` as a string or list). Add or remove harnesses there, not in the fish file. The manifest lives at the fish config root (`fish/.config/fish/agent-harnesses.toml`), read at runtime via `$__fish_config_dir`, so it travels with the stow package. Order is run order. Harnesses whose binary is not installed are skipped (dim note, not an error); successful updates report the installed version in the harness color. Omit `version` or set it to `"-"` to skip that line.
 - Lazy-load heavy tools. Two patterns are in use: rbenv wrappers in `config.fish` erase themselves after the first init; the `z`/`zi` wrappers in `conf.d/zoxide.fish` persist (guarded by `functions -q`, zoxide started with `--no-cmd`) so they can run `__list_dir` after every jump. `npx` delegates to `bunx` (alias in `functions/_aliases.fish`).
