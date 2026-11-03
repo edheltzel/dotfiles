@@ -578,6 +578,34 @@ update_herdr() {
   success "herdr → $herdr_theme"
 }
 
+# herdr-app reads themes/<name>.json; a theme without one is skipped. The
+# settings.json theme is the default, but a theme-picker choice saved on the
+# shown layout overrides it, so a running window also gets app.theme.
+update_herdr_app() {
+  local theme="$1"
+
+  if ! is_installed herdr-app; then
+    MISSING_APPS+=("herdr-app")
+    info "herdr-app → not installed, skipped"
+    return
+  fi
+
+  if [[ ! -f "$CONFIG/herdr-app/themes/$theme.json" ]]; then
+    SKIPPED_APPS+=("herdr-app (no themes/$theme.json)")
+    info "herdr-app → no $theme theme, skipped"
+    return
+  fi
+
+  sed -i '' "s|\"theme\": \"[^\"]*\"|\"theme\": \"$theme\"|" "$CONFIG/herdr-app/settings.json"
+
+  if herdr-app status &>/dev/null; then
+    herdr-app do app.theme --name "$theme" &>/dev/null || true
+  fi
+
+  UPDATED_APPS+=("herdr-app → $theme")
+  success "herdr-app → $theme"
+}
+
 update_ghdash() {
   local theme="$1"
 
@@ -911,6 +939,7 @@ apply_theme() {
   update_pi "$theme"
   update_omp "$theme"
   update_herdr "$theme"
+  update_herdr_app "$theme"
   update_ghdash "$theme"
   update_superfile "$theme"
   update_tuxedo "$theme"
