@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "layout_fingerprint": "ca1bef9c3f5f59c47003a01e19af7d8efcb645ad3269875eb203614acc94020f",
+  "workspaces": [
+    {
+      "tabs": [
+        {
+          "panes": {
+            "1": {
+              "ansi": "\r\n\u001b[0m\u001b[38;2;0;162;206m⚡︎~\u001b[0m  \r\n\r\n\u001b[0m\u001b[38;2;0;162;206m⚡︎~\u001b[0m  \r\n\u001b[0m\u001b[1m\u001b[38;2;11;139;0m\u001b[0m \r\n\r\n\u001b[0m\u001b[38;2;0;162;206m⚡︎~\u001b[0m  \r\n\u001b[0m\u001b[1m\u001b[38;2;11;139;0m\u001b[0m ",
+              "lines": 8
+            }
+          }
+        },
+        {
+          "panes": {
+            "2": {
+              "ansi": "\r\n\u001b[0m\u001b[38;2;0;162;206m⚡︎~\u001b[0m  \r\n\u001b[0m\u001b[1m\u001b[38;2;11;139;0m\u001b[0m ",
+              "lines": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "tabs": [
+        {
+          "panes": {
+            "3": {
+              "ansi": "\r\n\u001b[0m\u001b[38;2;0;162;206m⚡︎~\u001b[0m  \r\n\u001b[0m\u001b[1m\u001b[38;2;11;139;0m\u001b[0m \u001b[0m\u001b[1mherdr\u001b[0m \u001b[0m\u001b[38;5;6mserver\u001b[0m \u001b[0m\u001b[38;5;6mstop\u001b[0m",
+              "lines": 3
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
