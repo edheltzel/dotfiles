@@ -303,6 +303,7 @@ brew 'whisper-cpp'                    # TTS utility
 cask 'wezterm@nightly'
 cask 'kitty'
 cask 'ghostty'
+cask 'herdr-app'
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #

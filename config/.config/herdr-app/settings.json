@@ -1,0 +1,13 @@
+{
+  "zoom": 1.0,
+  "sounds": {
+    "enabled": true,
+    "done": "sounds/done.mp3",
+    "blocked": "sounds/request.mp3"
+  },
+  "font": "Lilex Nerd Font Mono",
+  "font_size": 14.0,
+  "minimum_contrast": 1.0,
+  "appearance": "dark",
+  "theme": "proxysoul"
+}
