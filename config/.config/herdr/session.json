@@ -45,7 +45,7 @@
           "root_pane": 2
         }
       ],
-      "active_tab": 1
+      "active_tab": 0
     },
     {
       "id": "w2",
@@ -78,8 +78,8 @@
       "active_tab": 0
     }
   ],
-  "active": 1,
-  "selected": 1,
+  "active": 0,
+  "selected": 0,
   "sidebar_width": null,
   "sidebar_section_split": null,
   "collapsed_space_keys": []

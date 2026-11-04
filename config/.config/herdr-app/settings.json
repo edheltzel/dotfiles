@@ -1,13 +1,15 @@
 {
-  "zoom": 1.0,
+  "zoom": 1,
   "sounds": {
     "enabled": true,
     "done": "sounds/done.mp3",
     "blocked": "sounds/request.mp3"
   },
-  "font": "Lilex Nerd Font Mono",
-  "font_size": 14.0,
-  "minimum_contrast": 1.0,
+  "font": "Obel Mono",
+  "font_size": 14,
+  "font_ligatures": true,
+  "minimum_contrast": 1,
   "appearance": "dark",
-  "theme": "proxysoul"
+  "theme": "eldritch",
+  "telemetry": false
 }
