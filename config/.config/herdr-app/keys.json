@@ -1,5 +1,6 @@
 {
   "global": {
+    "cmd-f": "terminal.search",
     "cmd-q": "app.quit",
     "cmd-h": "app.hide",
     "cmd-alt-h": "app.hide_others",

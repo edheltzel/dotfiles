@@ -7,6 +7,7 @@ kitty_graphics = true
 pane_history = true
 
 [ui]
+sidebar_collapsed_mode = "compact"
 status_indicators = "symbols"
 
 show_agent_labels_on_pane_borders = true

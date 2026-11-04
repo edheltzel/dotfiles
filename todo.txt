@@ -2,3 +2,4 @@
 2026-10-14 Investigate reproducible package versions without a bespoke lockfile +dotfiles issue:https://github.com/edheltzel/dotfiles/issues/61
 2026-10-14 One-command drift control (doctor/sync) across brew, stow, and language manifests +dotfiles issue:https://github.com/edheltzel/dotfiles/issues/60
 2026-10-19 Migrate Empryo global config into dots/.empryo +.dotfiles note:/Users/ed/.dotfiles/.agents/atlas/plans/migrate-empryo-global-config.md
+2026-11-04 After bigmac login, pull dotfiles and just stow config so herdr-app matches MacDaddy +dotfiles @waiting id:herdr-app-bigmac
