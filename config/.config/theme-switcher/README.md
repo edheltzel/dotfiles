@@ -34,6 +34,7 @@ Unified theme switching system for all applications in dotfiles.
 | lazygit      | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | Claude Code  | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | herdr‡       | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| herdr-app‡‡  | ✓        |             |           |                |                |        |             | ✓       |         | ✓         |
 | gh-dash§     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | Superfile¶   | ✓        |             |           |                |                |        | latte       | ✓       |         | ✓         |
@@ -45,7 +46,7 @@ Unified theme switching system for all applications in dotfiles.
 
 ‡ herdr switches `name` under `[theme]` in `herdr/config.toml` and reloads the running server live — themes without a herdr built-in (Eldritch, Rose Pine Moon, Catppuccin Frappé/Macchiato) use herdr's `terminal` theme, which follows the host terminal palette this switcher just set.
 
-herdr-app uses `herdr-app/themes/<name>.json` (Dracula, Eldritch and ProxySoul today); a theme without a file is skipped. The switcher writes `theme` in `herdr-app/settings.json` and, when the window is running, applies it live with `herdr-app do app.theme`, because a theme-picker choice saved on the layout overrides settings.json. New theme files need a symlink into `~/.config/herdr-app/themes/`.
+‡‡ herdr-app uses `herdr-app/themes/<name>.json` when that file exists and skips every other theme. It writes `theme` and the matching light/dark `appearance` in `settings.json` and applies `app.theme` to a running window. Eldritch Dusk is its light theme.
 
 § gh-dash (`gh dash`) has no external theme-file support — colors are an inline `theme.colors` key-value block in `gh-dash/config.yml`. Like lazygit, the switcher keeps a per-theme snippet in `gh-dash/[theme].yml` and injects it, replacing only `theme.colors` and leaving `theme.ui` and every other config section untouched. gh-dash validates strictly, so each snippet carries the full color set. Palettes are derived from the matching Kitty theme for cross-app consistency.
 Starship follows `palette =` in `starship.toml` for every switcher theme, including `eldritch-dusk`. Neovim's `eldritch-dusk` is local (`nvim/colors/eldritch-dusk.lua`): it registers a Dusk palette with `eldritch.nvim`, which ships none.

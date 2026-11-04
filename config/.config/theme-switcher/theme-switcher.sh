@@ -578,13 +578,13 @@ update_herdr() {
   success "herdr → $herdr_theme"
 }
 
-# herdr-app reads themes/<name>.json; a theme without one is skipped. The
-# settings.json theme is the default, but a theme-picker choice saved on the
-# shown layout overrides it, so a running window also gets app.theme.
+# herdr-app reads themes/<name>.json. A theme without one is skipped. The
+# settings.json theme is the default, but a saved theme-picker choice overrides
+# it, so a running window also gets app.theme.
 update_herdr_app() {
   local theme="$1"
 
-  if ! is_installed herdr-app; then
+  if ! is_installed herdr-app "/Applications/Herdr.app"; then
     MISSING_APPS+=("herdr-app")
     info "herdr-app → not installed, skipped"
     return
@@ -596,7 +596,14 @@ update_herdr_app() {
     return
   fi
 
-  sed -i '' "s|\"theme\": \"[^\"]*\"|\"theme\": \"$theme\"|" "$CONFIG/herdr-app/settings.json"
+  local settings="$CONFIG/herdr-app/settings.json"
+  local tmp appearance
+  command -v jq &>/dev/null || error "herdr-app requires jq"
+  appearance=$(get_mdterm_theme "$theme")
+  tmp=$(mktemp "$settings.XXXXXX")
+  jq --arg theme "$theme" --arg appearance "$appearance" '.theme = $theme | .appearance = $appearance' "$settings" >"$tmp"
+  mv "$tmp" "$settings"
+  touch -h "${XDG_CONFIG_HOME:-$HOME/.config}/herdr-app/settings.json"
 
   if herdr-app status &>/dev/null; then
     herdr-app do app.theme --name "$theme" &>/dev/null || true

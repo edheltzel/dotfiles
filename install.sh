@@ -101,6 +101,12 @@ die() {
   exit "${2:-1}"
 }
 
+# Herdr owns ~/.config/herdr-app and rewrites most of it. Link only the tracked
+# files inside the real directory; folding the directory would hide Herdr's files.
+_link_herdr_app() {
+  bash "$SCRIPT_DIR/scripts/link-herdr-app.sh"
+}
+
 # Stow a list of packages. With mode=strict, stow conflicts abort (set -e);
 # with mode=lenient, conflicts are reported and the loop continues.
 _run_stow() {
@@ -119,6 +125,10 @@ _run_stow() {
     if [ ! -d "$SCRIPT_DIR/$pkg" ]; then
       substep_error "Stow package '$pkg' not found — skipping"
       continue
+    fi
+    if [ "$pkg" = "config" ]; then
+      substep_info "Linking herdr-app"
+      _link_herdr_app
     fi
     substep_info "Stowing $pkg"
     if [ "$mode" = "lenient" ]; then

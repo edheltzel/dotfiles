@@ -36,7 +36,7 @@ Applies to every agent: plan mode, subagents, and manual planning alike.
 - `link` - re-symlink only, for an already-provisioned machine.
 - `help` - full usage, flags, and caveats.
 
-Adding configuration: drop files into the owning stow package, `just stow <pkg>`, verify the app, then `just update` to restow everything.
+Adding configuration: drop files into the owning stow package, `just stow <pkg>`, verify the app, then `just update` to restow everything. Herdr desktop is excluded from Stow: install/bootstrap, `just stow config`, and `just update` call `scripts/link-herdr-app.sh`; `just herdr-app` links only its personal config while preserving runtime state.
 
 ## Conventions
 

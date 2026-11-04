@@ -207,6 +207,10 @@ Two options for managing packages with GNU Stow:
 
 `just update` restows everything. It also clears stale `brew.fish`/`fish-ssh-agent.fish` symlinks and zsh completion dumps first.
 
+Herdr desktop settings, shortcuts, sounds, launchers, and ProxySoul/Eldritch/Eldritch Dusk themes are linked by `scripts/link-herdr-app.sh`, not Stow, so app-owned state stays local. Bootstrap, `./install.sh link`, `just stow config`, and `just update` run it automatically; `just herdr-app` refreshes only Herdr. Existing personal files are backed up under `~/.local/state/dotfiles/herdr-app/` before replacement. On another machine, pull the changes and run `just herdr-app`; choose Eldritch or Dusk in Settings, or use `theme eldritch` / `theme eldritch-dusk`.
+
+Herdr desktop keeps the old `Alt+,` leader as a two-stroke sequence: press Option+comma, release both keys, then press the next key. For example, `Shift+B` opens GitButler, `Shift+D` opens gh dash, `Shift+T` opens Tuxedo, `Shift+F` opens Yazi, `Shift+V` opens Neovim, and `Shift+S` opens a scratch shell. Do not hold Option during the second stroke. `Cmd+/` lists the bindings loaded by the running app.
+
 **Git hooks**
 
 `just hooks` installs wrappers in `.git/hooks` that call the tracked `.githooks/pre-commit` (blocks direct commits to `master`, runs `shellcheck` on staged shell) and `.githooks/commit-msg` (Conventional Commits). It deliberately does **not** set `core.hooksPath`, because GitButler writes its own wrappers there.
