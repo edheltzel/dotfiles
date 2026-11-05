@@ -70,7 +70,7 @@ delivery = "herdr"
 position = "top-right"
 
 [theme]
-name = "dracula"
+name = "terminal"
 auto_switch = false
 
 ### keybindings ###
