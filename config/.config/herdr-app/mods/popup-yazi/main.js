@@ -38,5 +38,8 @@ async function open() {
   const r = await hc(args);
   if (r.code !== 0) throw new Error(r.stderr.trim() || `hc run exited ${r.code}`);
   const { address } = JSON.parse(r.stdout);
+  // Close this launcher popup first: closing it after the dialog opens hands the keyboard back to the pane underneath.
+  const launcher = props()?.overlay;
+  if (launcher) closeOverlay(launcher);
   openOverlay({ kind: "dialog", modal: true, width: 0.9, height: 0.9, layout: { type: "block", content: { terminal: address } } });
 }
