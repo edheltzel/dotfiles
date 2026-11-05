@@ -86,6 +86,13 @@ version = "cursor-agent"
 args = "update"
 
 [[harness]]
+label = "Empryo"
+color = "D4A474"
+binary = "empryo"
+version = "empryo"
+args = "update"
+
+[[harness]]
 label = "Skills"
 color = "8C8C8F"
 binary = "skills"

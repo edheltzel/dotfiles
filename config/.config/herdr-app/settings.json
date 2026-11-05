@@ -5,11 +5,12 @@
     "done": "sounds/done.mp3",
     "blocked": "sounds/request.mp3"
   },
-  "font": "Obel Mono",
+  "font": "Lilex Nerd Font Mono",
   "font_size": 14,
   "font_ligatures": true,
   "minimum_contrast": 1,
   "appearance": "dark",
   "theme": "eldritch",
-  "telemetry": false
+  "telemetry": false,
+  "ui_font": "Obel Mono Masked"
 }

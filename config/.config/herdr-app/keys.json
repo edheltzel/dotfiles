@@ -54,6 +54,7 @@
     "ctrl-8": "space.select:8",
     "ctrl-9": "space.select:9",
     "alt-, shift-x": "window.close",
+    "alt-, x": "pane.close",
     "alt-, g": "mod.open:picker",
     "alt-, shift-w": "space.close",
     "alt-, shift-e": "space.rename",

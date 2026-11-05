@@ -40,6 +40,7 @@ stow pkg="":
             mkdir -p ~/.empryo/.empryo ~/.empryo/orchestrations; \
             test -e ~/.empryo/config.json || { cp dots/.empryo/config.json ~/.empryo/config.json && chmod 600 ~/.empryo/config.json; }; \
         fi; \
+        if [ "{{pkg}}" = "config" ]; then bash scripts/link-herdr-app.sh || exit 1; fi; \
         stow {{pkg}}; \
         echo "{{pkg}} stowed successfully"; \
     else \
@@ -57,8 +58,13 @@ unstow pkg:
         exit 1; \
     fi
 
+# Link Herdr settings, themes and launchers without folding its runtime directory
+herdr-app:
+    @bash scripts/link-herdr-app.sh
+
 # Restow all dotfiles packages
 update:
+    @bash scripts/link-herdr-app.sh
     @mkdir -p ~/.no-mistakes ~/.empryo/.empryo ~/.empryo/orchestrations
     @test -e ~/.empryo/config.json || { cp dots/.empryo/config.json ~/.empryo/config.json && chmod 600 ~/.empryo/config.json; }
     @failed=""; \

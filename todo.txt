@@ -2,4 +2,13 @@
 2026-10-14 Investigate reproducible package versions without a bespoke lockfile +dotfiles issue:https://github.com/edheltzel/dotfiles/issues/61
 2026-10-14 One-command drift control (doctor/sync) across brew, stow, and language manifests +dotfiles issue:https://github.com/edheltzel/dotfiles/issues/60
 2026-10-19 Migrate Empryo global config into dots/.empryo +.dotfiles note:/Users/ed/.dotfiles/.agents/atlas/plans/migrate-empryo-global-config.md
+x 2026-10-23 2026-10-23 Add kitty tuxedo split shortcut, scrollback search, and fix leader tab collision +.dotfiles
+x 2026-10-23 2026-10-23 Fix kitty Shift+Enter newline for Empryo +.dotfiles
+x 2026-11-04 2026-11-04 Re-enter GitButler on workspace-recovered (but setup fails: index locked, reverts worktree to 0dfba829). Commits safe at 03b3cba1, uncommitted work in stash@{0}. Quit the GitButler app first. +.dotfiles
+x 2026-11-04 2026-11-04 Restore Herdr desktop config links, custom launchers, sounds and proxysoul theme +.dotfiles
+x 2026-11-04 2026-11-04 Restore Herdr connection to Macdaddy - verified connected with herdr-core machine ls +.dotfiles
+x 2026-11-04 2026-11-04 Make Herdr desktop configuration portable across machines with a shared safe linker and theme-switcher support +.dotfiles report:scripts/test-herdr-app.py
 2026-11-04 After bigmac login, pull dotfiles and just stow config so herdr-app matches MacDaddy +dotfiles @waiting id:herdr-app-bigmac
+x 2026-11-04 2026-11-04 Resolve six worktree conflicts and two rebased rescue-branch conflicts while preserving Herdr portability and incoming settings +.dotfiles report:scripts/test-herdr-app.py
+x 2026-11-04 2026-11-04 Verify Herdr desktop prefix shortcuts - user confirmed Option+comma, release, then Shift+S opens the shell popup; document two-stroke usage +.dotfiles report:README.md
+2026-11-05 Publish fix/untrack-orphan-gitlinks (orphan submodule gitlinks untracked, herdr/gh clones ignored) +dotfiles @git

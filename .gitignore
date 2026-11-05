@@ -87,3 +87,7 @@ dots/.empryo/.empryo/*
 ### no-mistakes (config only; runtime state stays in ~/.no-mistakes) ###
 dots/.no-mistakes/*
 !dots/.no-mistakes/config.yaml
+
+### tool-managed git clones (installed by herdr / gh, not vendored) ###
+config/.config/herdr/plugins/github/
+local/.local/share/gh/extensions/gh-markdown-preview/

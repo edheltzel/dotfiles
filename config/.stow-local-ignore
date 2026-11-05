@@ -9,3 +9,4 @@
 AGENTS.md
 .config/raycast/extensions
 .config/opencode/README.md
+^/\.config/herdr-app(/|$)
