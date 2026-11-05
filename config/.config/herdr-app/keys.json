@@ -13,6 +13,7 @@
     "cmd-, ,": "app.settings",
     "cmd-d": "pane.split:right",
     "cmd-shift-d": "pane.split:down",
+    "cmd-w": "pane.close",
     "cmd-, x": "pane.close",
     "cmd-shift-enter": "pane.zoom",
     "cmd-shift-h": "pane.go:left",
@@ -58,10 +59,10 @@
     "cmd-, \\": "pane.split:right",
     "cmd-, shift-b": "mod.open:popup-but",
     "cmd-, shift-d": "mod.open:popup-dash",
-    "cmd-, shift-t": "mod.open:popup-tuxedo",
     "cmd-, shift-f": "mod.open:popup-yazi",
-    "cmd-, shift-v": "mod.open:split-nvim",
-    "cmd-, shift-s": "mod.open:popup-shell"
+    "cmd-, shift-s": "mod.open:popup-shell",
+    "cmd-, shift-t": "mod.open:popup-tuxedo",
+    "cmd-, shift-v": "mod.open:split-nvim"
   },
   "terminal": {
     "cmd-c": "terminal.copy",
@@ -73,5 +74,13 @@
     "cmd-left": "send:\u0001",
     "cmd-right": "send:\u0005",
     "cmd-backspace": "send:\u0015"
+  },
+  "layout:do-plans": {
+    "cmd-p": "mod.open:do-palette",
+    "cmd-shift-p": "mod.open:do-palette"
+  },
+  "layout:do-plans-todo": {
+    "cmd-p": "mod.open:do-palette",
+    "cmd-shift-p": "mod.open:do-palette"
   }
 }
