@@ -10,3 +10,9 @@ AGENTS.md
 .config/raycast/extensions
 .config/opencode/README.md
 ^/\.config/herdr-app(/|$)
+# herdr rewrites these on every run; a stale copy here blocks `stow --restow`.
+^/\.config/herdr/(session\.json|session-history\.json|release-notes\.json|\.plugins\.lock|herdr\.sock\.agent)$
+^/\.config/herdr/session-snapshots(/|$)
+^/\.config/herdr/plugins/config(/|$)
+# tuxedo owns config.toml and hot-reloads it; only themes/ is stowed.
+^/\.config/tuxedo/config\.toml$

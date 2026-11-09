@@ -1,0 +1,3 @@
+# App-owned and hot-reloaded. themes/ stays tracked; theme-switcher.sh
+# rewrites only the `theme =` line in the live ~/.config/tuxedo/config.toml.
+config.toml

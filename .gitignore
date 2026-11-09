@@ -77,7 +77,7 @@ banks/
 # Global config tracked under dots/.empryo; runtime state stays in ~/.empryo.
 dots/.empryo/*
 !dots/.empryo/config.json
-!dots/.empryo/EMPRYO.md
+# EMPRYO.md is published by `gap sync` into ~/.empryo, not owned here.
 !dots/.empryo/tui-layout.json
 !dots/.empryo/orchestrations/
 !dots/.empryo/.empryo/
@@ -90,4 +90,13 @@ dots/.no-mistakes/*
 
 ### tool-managed git clones (installed by herdr / gh, not vendored) ###
 config/.config/herdr/plugins/github/
+
+### herdr runtime state (rewritten every run; live copies stay in ~/.config/herdr) ###
+config/.config/herdr/.plugins.lock
+config/.config/herdr/herdr.sock.agent
+config/.config/herdr/release-notes.json
+config/.config/herdr/session-history.json
+config/.config/herdr/session.json
+config/.config/herdr/session-snapshots/
+config/.config/herdr/plugins/config/
 local/.local/share/gh/extensions/gh-markdown-preview/
