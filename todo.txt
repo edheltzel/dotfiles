@@ -12,4 +12,4 @@ x 2026-11-04 2026-11-04 Make Herdr desktop configuration portable across machine
 x 2026-11-04 2026-11-04 Resolve six worktree conflicts and two rebased rescue-branch conflicts while preserving Herdr portability and incoming settings +.dotfiles report:scripts/test-herdr-app.py
 x 2026-11-04 2026-11-04 Verify Herdr desktop prefix shortcuts - user confirmed Option+comma, release, then Shift+S opens the shell popup; document two-stroke usage +.dotfiles report:README.md
 2026-11-05 Publish fix/untrack-orphan-gitlinks (orphan submodule gitlinks untracked, herdr/gh clones ignored) +dotfiles @git
-2026-11-09 Commit untracked herdr runtime state and EMPRYO.md so just update keeps passing +dotfiles
+x 2026-11-09 2026-11-09 Commit untracked herdr runtime state and EMPRYO.md so just update keeps passing +dotfiles pr:https://github.com/edheltzel/dotfiles/tree/fix/stow-restow-runtime-state
