@@ -12,16 +12,6 @@
               "name" : "Brave Browser"
             },
             {
-              "bundleIdentifier" : "net.imput.helium",
-              "iconPath" : "/Applications/Helium.app/Contents/Resources/app.icns",
-              "name" : "Helium"
-            },
-            {
-              "bundleIdentifier" : "com.apple.Safari",
-              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
-              "name" : "Safari"
-            },
-            {
               "bundleIdentifier" : "org.mozilla.firefox",
               "iconPath" : "/Applications/Firefox.app/Contents/Resources/firefox.icns",
               "name" : "Firefox"
@@ -35,6 +25,11 @@
               "bundleIdentifier" : "dev.serafim.fast",
               "iconPath" : "/Applications/yab.app/Contents/Resources/yab.icns",
               "name" : "Yab"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari",
+              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIconUpdated.icns",
+              "name" : "Safari"
             }
           ],
           "display" : "PA278QV",
@@ -90,6 +85,11 @@
               "bundleIdentifier" : "net.kovidgoyal.kitty",
               "iconPath" : "/Applications/kitty.app/Contents/Resources/kitty.icns",
               "name" : "kitty"
+            },
+            {
+              "bundleIdentifier" : "dev.herdr.app",
+              "iconPath" : "/Applications/Herdr.app/Contents/Resources/Herdr.icns",
+              "name" : "Herdr"
             }
           ],
           "display" : "PA278QV",
@@ -142,11 +142,6 @@
               "name" : "Affinity"
             },
             {
-              "bundleIdentifier" : "com.figma.Desktop",
-              "iconPath" : "/Applications/Figma.app/Contents/Resources/electron.icns",
-              "name" : "Figma"
-            },
-            {
               "bundleIdentifier" : "ai.artcraft.app",
               "iconPath" : "/Applications/ArtCraft.app/Contents/Resources/icon.icns",
               "name" : "ArtCraft"
@@ -170,11 +165,6 @@
               "bundleIdentifier" : "ai.storyteller.figcraft",
               "iconPath" : "/Applications/FigCraft.app/Contents/Resources/FigCraft.icns",
               "name" : "FigCraft"
-            },
-            {
-              "bundleIdentifier" : "ai.storyteller.cadcraft",
-              "iconPath" : "/Applications/CADCraft.app/Contents/Resources/CADCraft.icns",
-              "name" : "CADCraft"
             },
             {
               "bundleIdentifier" : "ai.storyteller.pdfcraft",
@@ -212,39 +202,44 @@
               "name" : "Preview"
             },
             {
-              "bundleIdentifier" : "com.microsoft.Excel",
-              "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/Excel_macOS.icns",
-              "name" : "Microsoft Excel"
-            },
-            {
-              "bundleIdentifier" : "doc.md-preview",
-              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
-              "name" : "Markdown Preview"
-            },
-            {
-              "bundleIdentifier" : "com.invoiceninja.app",
-              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
-              "name" : "Invoice Ninja"
-            },
-            {
-              "bundleIdentifier" : "com.microsoft.Excel",
-              "iconPath" : "/Applications/Microsoft Excel.app/Contents/Resources/Excel_macOS.icns",
-              "name" : "Microsoft Excel"
-            },
-            {
-              "bundleIdentifier" : "doc.md-preview",
-              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
-              "name" : "Markdown Preview"
-            },
-            {
-              "bundleIdentifier" : "com.invoiceninja.app",
-              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
-              "name" : "Invoice Ninja"
-            },
-            {
               "bundleIdentifier" : "com.apple.reminders",
               "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
               "name" : "Reminders"
+            },
+            {
+              "bundleIdentifier" : "doc.md-preview",
+              "iconPath" : "/Applications/Markdown Preview.app/Contents/Resources/AppIcon.icns",
+              "name" : "Markdown Preview"
+            },
+            {
+              "bundleIdentifier" : "ai.storyteller.wordcraft",
+              "iconPath" : "/Applications/WordCraft.app/Contents/Resources/WordCraft.icns",
+              "name" : "WordCraft"
+            },
+            {
+              "bundleIdentifier" : "ai.storyteller.gridcraft",
+              "iconPath" : "/Applications/GridCraft.app/Contents/Resources/GridCraft.icns",
+              "name" : "GridCraft"
+            },
+            {
+              "bundleIdentifier" : "ai.storyteller.deckcraft",
+              "iconPath" : "/Applications/DeckCraft.app/Contents/Resources/DeckCraft.icns",
+              "name" : "DeckCraft"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Numbers",
+              "iconPath" : "/Applications/Numbers Creator Studio.app/Contents/Resources/AppIcon.icns",
+              "name" : "Numbers"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iWork.Keynote",
+              "iconPath" : "/Applications/Keynote.app/Contents/Resources/AppIcon.icns",
+              "name" : "Keynote"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iWork.Pages",
+              "iconPath" : "/Applications/Pages.app/Contents/Resources/AppIcon.icns",
+              "name" : "Pages"
             }
           ],
           "display" : "PA278QV",
@@ -285,6 +280,11 @@
               "bundleIdentifier" : "com.tigervnc.tigervnc",
               "iconPath" : "/Applications/TigerVNC.app/Contents/Resources/tigervnc.icns",
               "name" : "TigerVNC"
+            },
+            {
+              "bundleIdentifier" : "com.invoiceninja.app",
+              "iconPath" : "/Applications/Invoice Ninja.app/Contents/Resources/AppIcon.icns",
+              "name" : "Invoice Ninja"
             }
           ],
           "display" : "PA278QV",
@@ -335,6 +335,16 @@
               "bundleIdentifier" : "org.freecad.FreeCAD",
               "iconPath" : "/Applications/FreeCAD.app/Contents/Resources/freecad.icns",
               "name" : "FreeCAD_1.1.3"
+            },
+            {
+              "bundleIdentifier" : "io.tangencylabs.solidcraft",
+              "iconPath" : "/Applications/SolidCraft.app/Contents/Resources/SolidCraft.icns",
+              "name" : "SolidCraft"
+            },
+            {
+              "bundleIdentifier" : "ai.storyteller.cadcraft",
+              "iconPath" : "/Applications/CADCraft.app/Contents/Resources/CADCraft.icns",
+              "name" : "CADCraft"
             }
           ],
           "display" : "PA328QV",
