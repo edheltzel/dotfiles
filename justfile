@@ -95,9 +95,7 @@ readinglist:
     @stow --restow readinglist
     @./readinglist/readinglist.sh
 
-# Install tracked .githooks into .git/hooks. Do not point core.hooksPath at
-# .githooks: GitButler writes managed wrappers into hooksPath, and committing
-# those wrappers is the delete/untracked conflict this recipe prevents.
+# Install tracked .githooks into .git/hooks as wrappers that exec the sources.
 hooks:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -111,7 +109,6 @@ hooks:
     printf "{{green}}git hooks installed{{clr}} -> .git/hooks (sources in .githooks)\n"
 
 # Copy the live Empryo config back into the repo. config.json is seed-copy, not a
-# symlink: Empryo replaces a symlinked config.json with a regular file on write.
 capture-empryo:
     @cp ~/.empryo/config.json dots/.empryo/config.json
     @chmod 600 dots/.empryo/config.json

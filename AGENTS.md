@@ -8,8 +8,8 @@ Guidance for AI coding agents. Per-package rules live in the child `AGENTS.md` l
 
 Not discoverable from the tree, and expensive to get wrong.
 
+- **This repo uses plain git, not GitButler** (left GitButler mode 2026-11-11 by Ed's choice). Use `git` for branches, commits, and pushes. Never run `but` or `but setup` here: any `but` command recreates `.git/gitbutler`, which flips the Starship prompt back to the GitButler segment. The GitButler shell, prompt, and editor integrations stay because other repos still use it.
 - **`neovim/` holds the Neovim config (NEO.ED) as ordinary tracked files**, not a submodule. Neovim edits commit here; [edheltzel/neoed](https://github.com/edheltzel/neoed) is no longer linked.
-- **Never set `core.hooksPath` to `.githooks/`.** GitButler writes managed wrappers into `hooksPath`, and committing them causes a delete/untracked conflict. `just hooks` installs wrappers into `.git/hooks` and unsets `core.hooksPath` instead.
 - **Post-navigation directory listing lives in exactly one file:** `fish/.config/fish/functions/__list_dir.fish`. `cd`, `z`, and `zi` all delegate to it. Never duplicate eza flags in `cd.fish` or `zoxide.fish`.
 - **Commit signing is SSH, not GPG.** Machine-specific values live in `~/.gitconfig.local`, symlinked by `git/git.sh` from `git/gitconfig-<machine>.local` keyed on `ComputerName`. Never commit private keys or new machine paths.
 - **Starship is the prompt.** `FISH_PROMPT` in `fish/.config/fish/config.fish` and `ZSH_PROMPT` in zsh select it; `config/.config/starship.toml` is the config. There is no Oh My Posh shell prompt config in this repo.
@@ -51,7 +51,7 @@ No test suite. Lint manually; the hooks run these on staged files.
 
 - `shellcheck <script>` for shell.
 - `stylua --check neovim/.config/nvim` for Lua (config: `neovim/.config/nvim/stylua.toml`, 2 spaces, 120 cols).
-- `just hooks` installs `.githooks/pre-commit` (blocks direct commits to `master`, refuses GitButler-managed hook files, runs `shellcheck --severity=error` + `stylua --check` on staged files, warns and skips when a linter is absent) and `.githooks/commit-msg` (Conventional Commits).
+- `just hooks` installs `.githooks/pre-commit` (blocks direct commits to `master`, runs `shellcheck --severity=error` + `stylua --check` on staged files, warns and skips when a linter is absent) and `.githooks/commit-msg` (Conventional Commits).
 
 Per-package verification lives in each child `AGENTS.md`.
 
@@ -174,7 +174,7 @@ Infrastructure (run by `install.sh`, not stowed):
 
 - `packages/` — multi-package-manager provisioning (`packages.sh` + manifests)
 - `scripts/` — shared shell helpers (`functions.sh`, `nvim.sh`) sourced by the install flow
-- `.githooks/` - tracked git hook sources (`pre-commit`, `commit-msg`); `just hooks` installs wrappers into `.git/hooks` and unsets `core.hooksPath` so GitButler cannot overwrite tracked files
+- `.githooks/` - tracked git hook sources (`pre-commit`, `commit-msg`); `just hooks` installs wrappers into `.git/hooks`
 - `.github/` - `CODEOWNERS` (auto-requests `edheltzel` on PRs) and `workflows/pr-visual-recap.yml` (agent-generated visual recap comment on every PR)
 - `macos/` — macOS system preference scripts
 - `duti/` — default app / file associations

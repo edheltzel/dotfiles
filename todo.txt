@@ -13,3 +13,5 @@ x 2026-11-04 2026-11-04 Resolve six worktree conflicts and two rebased rescue-br
 x 2026-11-04 2026-11-04 Verify Herdr desktop prefix shortcuts - user confirmed Option+comma, release, then Shift+S opens the shell popup; document two-stroke usage +.dotfiles report:README.md
 2026-11-05 Publish fix/untrack-orphan-gitlinks (orphan submodule gitlinks untracked, herdr/gh clones ignored) +dotfiles @git
 x 2026-11-09 2026-11-09 Commit untracked herdr runtime state and EMPRYO.md so just update keeps passing +dotfiles pr:https://github.com/edheltzel/dotfiles/tree/fix/stow-restow-runtime-state
+x 2026-11-11 2026-11-11 Take ~/.dotfiles out of GitButler mode: but teardown, trash .git/gitbutler, unregister from GitButler app, plain-git rule in AGENTS.md +.dotfiles
+x 2026-11-11 2026-11-11 Finish GitButler removal: after a command runs in any Tern pane, trash .git/gitbutler and drop gitbutler.project + log.excludedecoration config again +.dotfiles

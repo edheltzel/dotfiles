@@ -1,18 +1,10 @@
 #!/usr/bin/env bash
 #
-# pre-commit: block master commits, lint staged files, refuse GitButler hooks.
+# pre-commit: block master commits, lint staged files.
 #
-# Tracked here; installed into .git/hooks by `just hooks`. Do not set
-# core.hooksPath to this directory. GitButler would overwrite these files.
+# Tracked here; installed into .git/hooks by `just hooks`.
 
 set -u
-
-if git diff --cached --name-only .githooks/ | grep -q . \
-  && git diff --cached .githooks/ | grep -q 'GITBUTLER_MANAGED_HOOK_V1'; then
-  echo "x GitButler-managed hooks must not be committed."
-  echo "  They belong in .git/hooks. Restore .githooks from git and re-run just hooks."
-  exit 1
-fi
 
 PROTECTED="master"
 branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
