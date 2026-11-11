@@ -1,0 +1,1 @@
+var e=`empryo:terminal-run`,t=[];function n(n){t.includes(n)||(t.push(n),window.dispatchEvent(new CustomEvent(`empryo:open-terminal`)),window.dispatchEvent(new CustomEvent(e)))}function r(){return t.length>0}function i(){return t.splice(0)}export{i,r as n,n as r,e as t};

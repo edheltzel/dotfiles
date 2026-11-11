@@ -213,7 +213,7 @@ Herdr desktop keeps the old `Alt+,` leader as a two-stroke sequence: press Optio
 
 **Git hooks**
 
-`just hooks` installs wrappers in `.git/hooks` that call the tracked `.githooks/pre-commit` (blocks direct commits to `master`, runs `shellcheck` on staged shell) and `.githooks/commit-msg` (Conventional Commits). It deliberately does **not** set `core.hooksPath`, because GitButler writes its own wrappers there.
+`just hooks` installs wrappers in `.git/hooks` that call the tracked `.githooks/pre-commit` (blocks direct commits to `master`, runs `shellcheck` on staged shell) and `.githooks/commit-msg` (Conventional Commits).
 
 ## Stow Packages
 
