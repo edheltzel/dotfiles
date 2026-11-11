@@ -113,8 +113,8 @@ _run_stow() {
   local mode="$1"
   shift
   # Pre-create runtime dirs so stow links files inside, not the whole dir.
-  # ~/.empryo itself stays a real directory: only the tracked files inside it are linked.
-  mkdir -p "$HOME/.no-mistakes" "$HOME/.empryo/.empryo" "$HOME/.empryo/orchestrations"
+  # ~/.empryo and ~/.config/rex stay real directories: only their tracked files are linked.
+  mkdir -p "$HOME/.no-mistakes" "$HOME/.empryo/.empryo" "$HOME/.empryo/orchestrations" "$HOME/.config/rex"
   # config.json is seed-copy, not a symlink: Empryo replaces a symlinked config on write.
   if [ ! -e "$HOME/.empryo/config.json" ]; then
     cp "$SCRIPT_DIR/dots/.empryo/config.json" "$HOME/.empryo/config.json"

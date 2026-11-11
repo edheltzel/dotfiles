@@ -188,6 +188,14 @@
   "agent_servers": {
     "pi-acp": {
       "type": "registry"
+    },
+    "Empryo": {
+      "type": "custom",
+      "command": "/Applications/Empryo.app/Contents/MacOS/Empryo",
+      "args": [
+        "--acp"
+      ],
+      "env": {}
     }
   },
   "collaboration_panel": {
