@@ -1,55 +1,113 @@
--- tmux (~/.tmux.conf), prefix ctrl+b
-rex.bind("ctrl+b>alt+k", "pane.send_key", { key = "ctrl+b" })
-rex.bind("ctrl+b>k", "pane.send_key", { key = "ctrl+l" })
-rex.bind("ctrl+b>\\", "pane.split", { direction = "right" })
-rex.bind("ctrl+b>-", "pane.split", { direction = "down" })
-rex.bind("ctrl+b>h", "pane.split", { direction = "left" })
-rex.bind("ctrl+b>j", "pane.split", { direction = "down" })
-rex.bind("ctrl+b>l", "pane.split", { direction = "right" })
-rex.bind("ctrl+b>u", "pane.split", { direction = "up" })
-rex.bind("ctrl+b>x", "pane.close")
-rex.bind("ctrl+b>z", "pane.zoom")
-rex.bind("ctrl+b>=", "pane.zoom")
+-- Workflow tools, matching the herdr popups (herdr-app keys.json, herdr config.toml)
+local function focused_cwd()
+  local ok, proc = pcall(rex.block.call, "com.superlogical.terminal", "process")
+  if ok and type(proc) == "table" and proc.foreground then
+    return proc.foreground.cwd
+  end
+end
+
+local function terminal(label, command)
+  local options = { cwd = focused_cwd() }
+  if command then
+    options.command = command
+    options.interactive = true
+  end
+  return { block = { flavor = "com.superlogical.terminal.shell", label = label, options = options } }
+end
+
+local function popup(name, title, label, command)
+  rex.action({
+    name = name,
+    title = title,
+    category = "Workflow",
+    run = function()
+      rex.session.new_layer({ bounds = { 0.05, 0.05, 0.9, 0.9 }, focus = true, layout = terminal(label, command) })
+    end,
+  })
+end
+
+popup("popup_but", "GitButler Popup", "but", { "but", "tui" })
+popup("popup_dash", "gh dash Popup", "dash", { "gh", "dash" })
+popup("popup_yazi", "Yazi Popup", "yazi", { "yazi" })
+popup("popup_tuxedo", "Tuxedo Popup", "tuxedo", { "tuxedo" })
+popup("popup_shell", "Scratch Shell Popup", "scratch", nil)
+
+rex.action({
+  name = "split_nvim",
+  title = "Neovim Split",
+  category = "Workflow",
+  run = function(ctx)
+    rex.session.new_split({
+      anchor_id = ctx.block_id,
+      direction = "horizontal",
+      side = "after",
+      focus = true,
+      layout = terminal("nvim", { "nvim" }),
+    })
+  end,
+})
+
+for _, leader in ipairs({ "cmd+,", "alt+," }) do
+  rex.bind(leader .. ">shift+b", "popup_but")
+  rex.bind(leader .. ">shift+d", "popup_dash")
+  rex.bind(leader .. ">shift+f", "popup_yazi")
+  rex.bind(leader .. ">shift+t", "popup_tuxedo")
+  rex.bind(leader .. ">shift+s", "popup_shell")
+  rex.bind(leader .. ">shift+v", "split_nvim")
+end
+
+-- tmux-style prefix, ctrl+space (Empryo owns ctrl+b and alt+h)
+rex.bind("ctrl+space>ctrl+space", "pane.send_key", { key = "ctrl+space" })
+rex.bind("ctrl+space>k", "pane.send_key", { key = "ctrl+l" })
+rex.bind("ctrl+space>\\", "pane.split", { direction = "right" })
+rex.bind("ctrl+space>-", "pane.split", { direction = "down" })
+rex.bind("ctrl+space>h", "pane.split", { direction = "left" })
+rex.bind("ctrl+space>j", "pane.split", { direction = "down" })
+rex.bind("ctrl+space>l", "pane.split", { direction = "right" })
+rex.bind("ctrl+space>u", "pane.split", { direction = "up" })
+rex.bind("ctrl+space>x", "pane.close")
+rex.bind("ctrl+space>z", "pane.zoom")
+rex.bind("ctrl+space>=", "pane.zoom")
 
 rex.mode("repeat", { exclusive = true })
-rex.bind("ctrl+b>ctrl+r", "client.mode.enter", { name = "repeat" })
+rex.bind("ctrl+space>ctrl+r", "client.mode.enter", { name = "repeat" })
 rex.bind("repeat/enter", "client.mode.exit")
 rex.bind("repeat/escape", "client.mode.exit")
 
-rex.bind("ctrl+b>left", "pane.focus", { direction = "left" })
+rex.bind("ctrl+space>left", "pane.focus", { direction = "left" })
 rex.bind("repeat/left", "pane.focus", { direction = "left" })
-rex.bind("ctrl+b>down", "pane.focus", { direction = "down" })
+rex.bind("ctrl+space>down", "pane.focus", { direction = "down" })
 rex.bind("repeat/down", "pane.focus", { direction = "down" })
-rex.bind("ctrl+b>up", "pane.focus", { direction = "up" })
+rex.bind("ctrl+space>up", "pane.focus", { direction = "up" })
 rex.bind("repeat/up", "pane.focus", { direction = "up" })
-rex.bind("ctrl+b>right", "pane.focus", { direction = "right" })
+rex.bind("ctrl+space>right", "pane.focus", { direction = "right" })
 rex.bind("repeat/right", "pane.focus", { direction = "right" })
-rex.bind("ctrl+b>shift+.", "pane.move", { direction = "down" })
-rex.bind("ctrl+b>shift+,", "pane.move", { direction = "up" })
-rex.bind("ctrl+b>n", "client.tab.new")
-rex.bind("ctrl+b>t", "client.tab.new")
-rex.bind("ctrl+b>shift+t", "session.switch")
-rex.bind("ctrl+b>ctrl+h", "client.tab.previous")
+rex.bind("ctrl+space>shift+.", "pane.move", { direction = "down" })
+rex.bind("ctrl+space>shift+,", "pane.move", { direction = "up" })
+rex.bind("ctrl+space>n", "client.tab.new")
+rex.bind("ctrl+space>t", "client.tab.new")
+rex.bind("ctrl+space>shift+t", "session.switch")
+rex.bind("ctrl+space>ctrl+h", "client.tab.previous")
 rex.bind("repeat/ctrl+h", "client.tab.previous")
-rex.bind("ctrl+b>ctrl+l", "client.tab.next")
+rex.bind("ctrl+space>ctrl+l", "client.tab.next")
 rex.bind("repeat/ctrl+l", "client.tab.next")
-rex.bind("ctrl+b>1", "client.tab.goto", { index = 1 })
-rex.bind("ctrl+b>2", "client.tab.goto", { index = 2 })
-rex.bind("ctrl+b>3", "client.tab.goto", { index = 3 })
-rex.bind("ctrl+b>4", "client.tab.goto", { index = 4 })
-rex.bind("ctrl+b>5", "client.tab.goto", { index = 5 })
-rex.bind("ctrl+b>6", "client.tab.goto", { index = 6 })
-rex.bind("ctrl+b>7", "client.tab.goto", { index = 7 })
-rex.bind("ctrl+b>8", "client.tab.goto", { index = 8 })
-rex.bind("ctrl+b>9", "client.tab.goto", { index = 9 })
-rex.bind("ctrl+b>s", "session.switch")
-rex.bind("ctrl+b>w", "session.switch")
-rex.bind("ctrl+b>e", "client.tab.rename")
-rex.bind("ctrl+b>shift+e", "session.rename")
+rex.bind("ctrl+space>1", "client.tab.goto", { index = 1 })
+rex.bind("ctrl+space>2", "client.tab.goto", { index = 2 })
+rex.bind("ctrl+space>3", "client.tab.goto", { index = 3 })
+rex.bind("ctrl+space>4", "client.tab.goto", { index = 4 })
+rex.bind("ctrl+space>5", "client.tab.goto", { index = 5 })
+rex.bind("ctrl+space>6", "client.tab.goto", { index = 6 })
+rex.bind("ctrl+space>7", "client.tab.goto", { index = 7 })
+rex.bind("ctrl+space>8", "client.tab.goto", { index = 8 })
+rex.bind("ctrl+space>9", "client.tab.goto", { index = 9 })
+rex.bind("ctrl+space>s", "session.switch")
+rex.bind("ctrl+space>w", "session.switch")
+rex.bind("ctrl+space>e", "client.tab.rename")
+rex.bind("ctrl+space>shift+e", "session.rename")
 
 rex.mode("resize_pane", { exclusive = true })
 rex.bind("resize_pane/escape", "client.mode.exit")
-rex.bind("ctrl+b>r", "client.mode.enter", { name = "resize_pane" })
+rex.bind("ctrl+space>r", "client.mode.enter", { name = "resize_pane" })
 rex.bind("resize_pane/h", "pane.resize", { amount = 2, direction = "left" })
 rex.bind("resize_pane/j", "pane.resize", { amount = 2, direction = "down" })
 rex.bind("resize_pane/k", "pane.resize", { amount = 2, direction = "up" })
@@ -62,7 +120,7 @@ rex.bind("resize_pane/enter", "client.mode.exit")
 
 rex.mode("move_tab", { exclusive = true })
 rex.bind("move_tab/escape", "client.mode.exit")
-rex.bind("ctrl+b>m", "client.mode.enter", { name = "move_tab" })
+rex.bind("ctrl+space>m", "client.mode.enter", { name = "move_tab" })
 rex.bind("move_tab/enter", "client.mode.exit")
 
 -- Herdr (~/.config/herdr/config.toml), prefix alt+,
@@ -77,8 +135,8 @@ rex.bind("alt+,>t", "client.tab.new")
 rex.bind("alt+,>\\", "pane.split", { direction = "right" })
 rex.bind("alt+i", "session.next")
 rex.bind("alt+u", "session.previous")
-rex.bind("alt+l", "client.tab.next")
-rex.bind("alt+h", "client.tab.previous")
+rex.bind("alt+shift+l", "client.tab.next")
+rex.bind("alt+shift+h", "client.tab.previous")
 rex.bind("alt+1", "client.tab.goto", { index = 1 })
 rex.bind("alt+2", "client.tab.goto", { index = 2 })
 rex.bind("alt+3", "client.tab.goto", { index = 3 })
@@ -142,7 +200,7 @@ rex.bind("ctrl+cmd+-", "pane.split", { direction = "down" })
 rex.bind("ctrl+cmd+z", "pane.zoom")
 rex.bind("ctrl+cmd+=", "pane.close")
 rex.bind("cmd+,>f", "client.find.open")
-rex.bind("cmd+,>shift+t", "session.switch")
+rex.bind("cmd+,>g", "session.switch")
 rex.bind("cmd+,>9", "client.tab.goto", { index = 9 })
 rex.bind("cmd+,>,", "client.tab.move", { direction = "backward" })
 rex.bind("cmd+,>.", "client.tab.move", { direction = "forward" })
