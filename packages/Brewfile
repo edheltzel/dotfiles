@@ -299,11 +299,12 @@ brew 'crit'                           # Visual feedback with agents
 brew 'whisper-cpp'                    # TTS utility
 
 # Terminal emulators
-#cask 'tern' 
-cask 'wezterm@nightly'
-cask 'kitty'
-cask 'ghostty'
+# cask 'tern'
+# cask 'rex'
+# cask 'wezterm@nightly'
+# cask 'ghostty'
 cask 'herdr-app'
+cask 'kitty'
 
 #############################################################
 # 4. MacOS Specific Stuff                                   #
