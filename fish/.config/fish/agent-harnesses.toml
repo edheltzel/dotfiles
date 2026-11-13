@@ -4,13 +4,6 @@
 # args is a string ("update --all") or a list (["update", "--all"]).
 
 # [[harness]]
-# label = "Opencode"
-# color = "61747f"
-# binary = "opencode"
-# version = "opencode"
-# args = "upgrade"
-#
-# [[harness]]
 # label = "Prime-agent"
 # color = "7081d0"
 # binary = "prime-agent"
@@ -84,6 +77,102 @@ color = "D47497"
 binary = "cursor-agent"
 version = "cursor-agent"
 args = "update"
+
+[[harness]]
+label = "Codex"
+color = "10A37F"
+binary = "brew"
+version = "codex"
+args = "upgrade --cask codex"
+
+[[harness]]
+label = "Gemini CLI"
+color = "4285F4"
+binary = "bun"
+version = "gemini"
+args = "add -g @google/gemini-cli@latest"
+
+[[harness]]
+label = "Antigravity"
+color = "34A853"
+binary = "agy"
+version = "agy"
+args = "update"
+
+[[harness]]
+label = "Grok"
+color = "C8C8C8"
+binary = "grok"
+version = "grok"
+args = "update"
+
+[[harness]]
+label = "Copilot CLI"
+color = "8957E5"
+binary = "copilot"
+args = "update"
+
+[[harness]]
+label = "OpenCode"
+color = "61747F"
+binary = "opencode"
+version = "opencode"
+args = "upgrade"
+
+[[harness]]
+label = "Cline"
+color = "5A9BD5"
+binary = "cline"
+version = "cline"
+args = "update"
+
+[[harness]]
+label = "Goose"
+color = "E0E0E0"
+binary = "goose"
+version = "goose"
+args = "update"
+
+[[harness]]
+label = "Aider"
+color = "14B014"
+binary = "aider"
+version = "aider"
+args = "--upgrade"
+
+[[harness]]
+label = "Kilo Code"
+color = "F8F675"
+binary = "kilo"
+version = "kilo"
+args = "upgrade"
+
+[[harness]]
+label = "Amp"
+color = "F34E3F"
+binary = "amp"
+args = "update"
+
+[[harness]]
+label = "Factory Droid"
+color = "EE6018"
+binary = "droid"
+version = "droid"
+args = "update"
+
+[[harness]]
+label = "Qoder"
+color = "2ADB5C"
+binary = "qoder"
+version = "qoder"
+args = "update"
+
+[[harness]]
+label = "Auggie"
+color = "B4B4FF"
+binary = "auggie"
+version = "auggie"
+args = "upgrade"
 
 [[harness]]
 label = "Empryo"
