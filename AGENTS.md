@@ -173,6 +173,7 @@ Stow packages (symlinked into `~`):
 Infrastructure (run by `install.sh`, not stowed):
 
 - `packages/` — multi-package-manager provisioning (`packages.sh` + manifests)
+- `tools/aup/` - Go source of the `aup` updater CLI (plain + Bubble Tea TUI), built by `just aup`; staged here before moving to its own repo
 - `scripts/` — shared shell helpers (`functions.sh`, `nvim.sh`) sourced by the install flow
 - `.githooks/` - tracked git hook sources (`pre-commit`, `commit-msg`); `just hooks` installs wrappers into `.git/hooks`
 - `.github/` - `CODEOWNERS` (auto-requests `edheltzel` on PRs) and `workflows/pr-visual-recap.yml` (agent-generated visual recap comment on every PR)

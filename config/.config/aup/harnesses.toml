@@ -1,5 +1,7 @@
 # Agent harness manifest. Read by tools/aup.
 # Add or remove [[harness]] tables. Order is run order.
+# installed names the command that proves the harness is installed; it defaults to binary.
+# Every entry is checked before anything runs; missing ones are skipped.
 # version is probed with --version; omit it or use "-" to skip.
 # args is a string ("update --all") or a list (["update", "--all"]).
 
@@ -28,7 +30,8 @@
 label = "Herdr"
 color = "B392D7"
 binary = "brew"
-version = "brew"
+installed = "herdr"
+version = "herdr"
 args = "upgrade herdr"
 
 [[harness]]
@@ -76,6 +79,7 @@ args = "update --force"
 label = "Plannotator"
 color = "7494D7"
 binary = "bash"
+installed = "plannotator"
 args = ["-o", "pipefail", "-c", "curl -fsSL https://plannotator.ai/install.sh | bash"]
 
 [[harness]]

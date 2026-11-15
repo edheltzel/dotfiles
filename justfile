@@ -116,7 +116,7 @@ capture-empryo:
 
 # Build the aup updater (tools/aup) into ~/.local/bin/aup
 aup:
-    @cd tools/aup && go build -o ~/.local/bin/aup .
+    @cd tools/aup && go build -ldflags "-X main.version=$(git describe --tags --always --dirty)" -o ~/.local/bin/aup ./cmd/aup
     @printf "{{green}}aup built{{clr}} -> ~/.local/bin/aup\n"
 
 # Aliases

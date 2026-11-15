@@ -231,13 +231,14 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
   - **Abbreviations, not aliases**: `conf.d/abbr.fish`. Run `abbr` to list them. Multi-step commands live in `functions/`.
   - **Plugins**: managed by [Fisher](https://github.com/jorgebucaran/fisher), listed in `fish_plugins`.
   - **SSH agent**: `conf.d/fish-ssh-agent.fish` shares one agent across every shell (see Troubleshooting).
-  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.toml`. Add or remove a `[[harness]]` table there. Order is run order. `binary` is skipped when it is not installed. Omit `version`, or set it to `"-"`, to skip the version line.
+  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.toml`. Add or remove a `[[harness]]` table there. Order is run order. Every entry is checked before anything runs; it is skipped unless `binary` and `installed` (defaults to `binary`; set it to the harness command when `binary` is `brew`, `bun`, or an installer) are on PATH. The run ends with an update report of versions before and after, failures, and skips. Omit `version`, or set it to `"-"`, to skip the version line.
 
     ```toml
     [[harness]]
     label = "Cursor Agent"
     color = "blue"
     binary = "cursor-agent"
+    installed = "cursor-agent"
     version = "cursor-agent"
     args = "update"
     ```
