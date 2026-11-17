@@ -20,3 +20,7 @@ x 2026-11-13 2026-11-13 Port aup runner and config into packages with all 19 tes
 x 2026-11-13 2026-11-13 aup plain mode parity: TTY inherit, ANSI-free log, NO_COLOR +dotfiles id:aup-plain dep:aup-runner note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md report:tools/aup
 x 2026-11-13 2026-11-13 aup Bubble Tea v2 TUI with teatest goldens +dotfiles id:aup-tui dep:aup-runner note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md report:tools/aup
 2026-11-13 Migrate dotfiles to released aup: retire aup.fish, agent-harnesses.toml, tools/aup, just aup +dotfiles id:aup-migrate dep:aup-release note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md
+x 2026-11-17 2026-11-17 Add Empryo harness integration to Rex +.dotfiles report:config/AGENTS.md
+x 2026-11-17 2026-11-17 Fix Rex CLI Empryo launcher tab activation +.dotfiles report:config/AGENTS.md
+x 2026-11-17 2026-11-17 Label Rex Empryo launcher tabs and panes with DNA icon +.dotfiles report:config/AGENTS.md
+x 2026-11-17 Remove duplicate Rex cmd-comma chords; retain comma settings and Shift-Z zoom; verified live keymap and unchanged Alt bindings +.dotfiles

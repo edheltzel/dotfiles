@@ -46,3 +46,21 @@ rex.action({
     })
   end,
 })
+
+rex.action({
+  name = "empryo",
+  title = "Open Empryo",
+  category = "Workflow",
+  run = function(ctx)
+    local configHome = os.getenv("XDG_CONFIG_HOME") or (os.getenv("HOME") .. "/.config")
+    local window, err = rex.session.new_window({
+      window_label = "🧬 Empryo",
+      layout = terminal("🧬 Empryo", { "python3", configHome .. "/rex/empryo.py" }),
+    })
+    if err ~= nil then
+      error(err, 0)
+    end
+    rex.client.queue("session.select", { session_id = ctx.session_id, window_id = window.window_id })
+    return window
+  end,
+})

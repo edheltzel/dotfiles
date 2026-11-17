@@ -1,9 +1,8 @@
--- Workflow popups on both leaders: cmd+, (herdr-app) and alt+, (herdr TUI)
-for _, leader in ipairs({ "cmd+,", "alt+," }) do
-  rex.bind(leader .. ">shift+b", "popup_but")
-  rex.bind(leader .. ">shift+d", "popup_dash")
-  rex.bind(leader .. ">shift+f", "popup_yazi")
-  rex.bind(leader .. ">shift+t", "popup_tuxedo")
-  rex.bind(leader .. ">shift+s", "popup_shell")
-  rex.bind(leader .. ">shift+v", "split_nvim")
-end
+-- Workflow popups use the alt+, leader.
+rex.bind("alt+,>shift+a", "empryo")
+rex.bind("alt+,>shift+b", "popup_but")
+rex.bind("alt+,>shift+d", "popup_dash")
+rex.bind("alt+,>shift+f", "popup_yazi")
+rex.bind("alt+,>shift+t", "popup_tuxedo")
+rex.bind("alt+,>shift+s", "popup_shell")
+rex.bind("alt+,>shift+v", "split_nvim")
