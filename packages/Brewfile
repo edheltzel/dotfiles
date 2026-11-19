@@ -85,6 +85,8 @@ brew 'sd'                   # better sed - Rust
 brew 'superfile'                 # File manager - Go
 brew 'yazi'                 # File manager - Rust
 brew 'zoxide'               # better cd/jump - Rust
+brew 'localsend-cli'
+cask 'localsend'
 
 # CLI Image Processing and Compression
 brew 'ffmpegthumbnailer'    # Create thumbnails from videos

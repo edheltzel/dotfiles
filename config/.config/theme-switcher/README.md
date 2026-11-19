@@ -35,6 +35,8 @@ Unified theme switching system for all applications in dotfiles.
 | Claude Code  | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | herdr‡       | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | herdr-app‡‡  | ✓        |             |           |                |                |        |             | ✓       |         | ✓         |
+| Rex††        | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
+| Empryo‡‡‡    | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | gh-dash§     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | starship     | ✓        | ✓           | ✓         | ✓              | ✓              | ✓      | ✓           | ✓       | ✓       | ✓         |
 | Superfile¶   | ✓        |             |           |                |                |        | latte       | ✓       |         | ✓         |
@@ -47,6 +49,10 @@ Unified theme switching system for all applications in dotfiles.
 ‡ herdr switches `name` under `[theme]` in `herdr/config.toml` and reloads the running server live — themes without a herdr built-in (Eldritch, Rose Pine Moon, Catppuccin Frappé/Macchiato) use herdr's `terminal` theme, which follows the host terminal palette this switcher just set.
 
 ‡‡ herdr-app uses `herdr-app/themes/<name>.json` when that file exists and skips every other theme. It writes `theme` and the matching light/dark `appearance` in `settings.json` and applies `app.theme` to a running window. Eldritch Dusk is its light theme.
+
+†† Rex imports `rex/<theme>` (a Ghostty theme file; the non-custom ones are generated from the matching kitty theme) with `rex do client.theme.import`. Rex puts it in the light or dark slot that matches the file and reuses the theme on re-import; the switcher then sets the matching appearance mode. Rex.app must be open with Remote Control on, otherwise Rex is skipped.
+
+‡‡‡ Empryo writes the same id to `theme.name` (TUI, hot-reloads) and `appearance.themeId` (desktop) in `~/.empryo/config.json`, and drops the cached `appearance.themeTokens` so the desktop rebuilds them. Built-in ids are used except `tokyonight` → `tokyo-night`, `gruvbox` → `gruvbox-dark-medium`, `proxysoul` → `proxysoul-main`; Eldritch and Eldritch Dusk are custom themes copied from `empryo/<name>.json` into `~/.empryo/themes/`. A running desktop window may need a restart to pick up the change.
 
 § gh-dash (`gh dash`) has no external theme-file support — colors are an inline `theme.colors` key-value block in `gh-dash/config.yml`. Like lazygit, the switcher keeps a per-theme snippet in `gh-dash/[theme].yml` and injects it, replacing only `theme.colors` and leaving `theme.ui` and every other config section untouched. gh-dash validates strictly, so each snippet carries the full color set. Palettes are derived from the matching Kitty theme for cross-app consistency.
 Starship follows `palette =` in `starship.toml` for every switcher theme, including `eldritch-dusk`. Neovim's `eldritch-dusk` is local (`nvim/colors/eldritch-dusk.lua`): it registers a Dusk palette with `eldritch.nvim`, which ships none.

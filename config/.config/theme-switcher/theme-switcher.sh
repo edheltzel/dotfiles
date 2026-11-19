@@ -210,6 +210,17 @@ get_herdr_theme() {
   esac
 }
 
+# Empryo theme id, shared by the TUI (theme.name) and desktop (appearance.themeId).
+# Eldritch and Eldritch Dusk are custom themes shipped from empryo/<name>.json.
+get_empryo_theme() {
+  case "$1" in
+  tokyonight) echo "tokyo-night" ;;
+  gruvbox) echo "gruvbox-dark-medium" ;;
+  proxysoul) echo "proxysoul-main" ;;
+  *) echo "$1" ;;
+  esac
+}
+
 get_superfile_theme() {
   local name="$1"
   if [[ -f "$CONFIG/superfile/theme/${name}.toml" ]]; then
@@ -613,6 +624,69 @@ update_herdr_app() {
   success "herdr-app → $theme"
 }
 
+# Rex imports a Ghostty theme file and selects it in the light or dark slot that
+# matches the file; re-importing a name reuses the existing custom theme. The
+# appearance switch makes that slot visible. Needs Rex.app open with Remote Control.
+update_rex() {
+  local theme="$1"
+
+  if ! is_installed rex; then
+    MISSING_APPS+=("rex")
+    info "rex → not installed, skipped"
+    return
+  fi
+
+  local theme_file="$THEMES_DIR/rex/$theme"
+  if [[ ! -f "$theme_file" ]]; then
+    SKIPPED_APPS+=("rex (no rex/$theme)")
+    info "rex → no $theme theme, skipped"
+    return
+  fi
+
+  if ! rex "do" client.theme.import path="$theme_file" &>/dev/null; then
+    SKIPPED_APPS+=("rex (app not running or Remote Control off)")
+    warning "rex → skipped (app not running or Remote Control off)"
+    return
+  fi
+  rex "do" client.appearance.switch_mode mode="$(get_mdterm_theme "$theme")" &>/dev/null || true
+
+  UPDATED_APPS+=("rex → $theme")
+  success "rex → $theme"
+}
+
+# Empryo hot-reloads config.json. Dropping the cached appearance.themeTokens makes
+# the desktop app rebuild them from the new themeId.
+update_empryo() {
+  local theme="$1"
+  local config_file="$HOME/.empryo/config.json"
+
+  if [[ ! -f "$config_file" ]]; then
+    MISSING_APPS+=("empryo")
+    info "empryo → not installed, skipped"
+    return
+  fi
+  command -v jq &>/dev/null || error "empryo requires jq"
+
+  local empryo_theme tmp
+  empryo_theme=$(get_empryo_theme "$theme")
+  if [[ -f "$THEMES_DIR/empryo/$empryo_theme.json" ]]; then
+    mkdir -p "$HOME/.empryo/themes"
+    cp "$THEMES_DIR/empryo/$empryo_theme.json" "$HOME/.empryo/themes/$empryo_theme.json"
+  fi
+
+  tmp=$(mktemp "$config_file.XXXXXX")
+  if ! jq --arg t "$empryo_theme" '.theme.name = $t | .appearance.themeId = $t | del(.appearance.themeTokens)' "$config_file" >"$tmp"; then
+    rm -f "$tmp"
+    SKIPPED_APPS+=("empryo (could not update config.json)")
+    warning "empryo → skipped (could not update config.json)"
+    return
+  fi
+  mv "$tmp" "$config_file"
+
+  UPDATED_APPS+=("empryo → $empryo_theme")
+  success "empryo → $empryo_theme"
+}
+
 update_ghdash() {
   local theme="$1"
 
@@ -947,6 +1021,8 @@ apply_theme() {
   update_omp "$theme"
   update_herdr "$theme"
   update_herdr_app "$theme"
+  update_rex "$theme"
+  update_empryo "$theme"
   update_ghdash "$theme"
   update_superfile "$theme"
   update_tuxedo "$theme"

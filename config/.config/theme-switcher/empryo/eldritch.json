@@ -1,0 +1,50 @@
+{
+  "_extends": "dark",
+  "_label": "Eldritch",
+  "_description": "Eldritch from ~/.dotfiles: deep navy, neon green, cyan and violet",
+  "_variant": "dark",
+
+  "brand": "#A48CF2",
+  "brand-secondary": "#37F499",
+  "brand-dim": "#5E4FA0",
+  "brand-alt": "#04D1F9",
+
+  "text-primary": "#EBFAFA",
+  "text-secondary": "#C6D0F5",
+  "text-muted": "#7081D0",
+  "text-dim": "#586089",
+  "text-faint": "#454E7D",
+  "text-subtle": "#3B4166",
+
+  "bg-app": "#171928",
+  "bg-primary": "#171928",
+  "bg-secondary": "#1C1E30",
+  "bg-elevated": "#212337",
+  "bg-popup": "#212337",
+  "bg-popup-highlight": "#323449",
+  "bg-overlay": "#0F1019",
+  "bg-input": "#1C1E30",
+  "bg-banner": "#212337",
+  "bg-banner-error": "#3A1E2B",
+  "bg-user": "#212337",
+
+  "border": "#323449",
+  "border-focused": "#A48CF2",
+  "border-active": "#A48CF2",
+  "border-slash": "#37F499",
+
+  "success": "#37F499",
+  "error": "#F16C75",
+  "warning": "#F7F67F",
+  "info": "#04D1F9",
+  "amber": "#F7C67F",
+
+  "diff-added-bg": "#173A33",
+  "diff-removed-bg": "#3A1E2B",
+  "diff-added-sign": "#37F499",
+  "diff-removed-sign": "#F16C75",
+
+  "accent-user": "#04D1F9",
+  "accent-assistant": "#A48CF2",
+  "accent-system": "#F265B5"
+}
