@@ -58,7 +58,7 @@
     "cmd-, shift-e": "space.rename",
     "cmd-, e": "tab.rename",
     "cmd-, \\": "pane.split:right",
-    "cmd-, shift-b": "mod.open:popup-but",
+    "cmd-, shift-g": "mod.open:popup-lazygit",
     "cmd-, shift-d": "mod.open:popup-dash",
     "cmd-, shift-f": "mod.open:popup-yazi",
     "cmd-, shift-s": "mod.open:popup-shell",

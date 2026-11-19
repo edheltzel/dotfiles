@@ -26,7 +26,7 @@ local function popup(name, title, label, command)
   })
 end
 
-popup("popup_but", "GitButler Popup", "but", { "but", "tui" })
+popup("popup_lazygit", "Lazygit Popup", "lazygit", { "lazygit" })
 popup("popup_dash", "gh dash Popup", "dash", { "gh", "dash" })
 popup("popup_yazi", "Yazi Popup", "yazi", { "yazi" })
 popup("popup_tuxedo", "Tuxedo Popup", "tuxedo", { "tuxedo" })
