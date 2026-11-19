@@ -1,0 +1,20 @@
+ aup  agent harness updater                                                               4/4  00:42
+╭─────────────┬─────────────────┬───────────────╮
+│ Step        │ Result          │ Version       │
+├─────────────┼─────────────────┼───────────────┤
+│ Opencode    │ updated         │ 1.4.0 → 1.5.0 │
+│ Claude Code │ failed (exit 3) │               │
+│ Codex       │ updated         │ 0.9.0         │
+│ Amp         │ cancelled       │               │
+│ Grok        │ not installed   │               │
+╰─────────────┴─────────────────┴───────────────╯
+ 2 updated, 2 failed, 1 skipped.
+ log: ~/.local/state/aup/last.log
+
+
+
+
+
+
+ ▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌ 100%
+ enter close

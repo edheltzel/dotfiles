@@ -15,3 +15,12 @@ x 2026-11-04 2026-11-04 Verify Herdr desktop prefix shortcuts - user confirmed O
 x 2026-11-09 2026-11-09 Commit untracked herdr runtime state and EMPRYO.md so just update keeps passing +dotfiles pr:https://github.com/edheltzel/dotfiles/tree/fix/stow-restow-runtime-state
 x 2026-11-11 2026-11-11 Take ~/.dotfiles out of GitButler mode: but teardown, trash .git/gitbutler, unregister from GitButler app, plain-git rule in AGENTS.md +.dotfiles
 x 2026-11-11 2026-11-11 Finish GitButler removal: after a command runs in any Tern pane, trash .git/gitbutler and drop gitbutler.project + log.excludedecoration config again +.dotfiles
+x 2026-11-13 2026-11-13 Create edheltzel/aup repo on master with subtree history of tools/aup +dotfiles id:aup-repo note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md pr:https://github.com/edheltzel/aup/pull/1
+x 2026-11-13 2026-11-13 Port aup runner and config into packages with all 19 tests passing +dotfiles id:aup-runner dep:aup-repo note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md report:tools/aup
+x 2026-11-13 2026-11-13 aup plain mode parity: TTY inherit, ANSI-free log, NO_COLOR +dotfiles id:aup-plain dep:aup-runner note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md report:tools/aup
+x 2026-11-13 2026-11-13 aup Bubble Tea v2 TUI with teatest goldens +dotfiles id:aup-tui dep:aup-runner note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md report:tools/aup
+2026-11-13 Migrate dotfiles to released aup: retire aup.fish, agent-harnesses.toml, tools/aup, just aup +dotfiles id:aup-migrate dep:aup-release note:/Users/ed/.dotfiles/.agents/atlas/plans/aup-standalone-tui-cli.md
+x 2026-11-17 2026-11-17 Add Empryo harness integration to Rex +.dotfiles report:config/AGENTS.md
+x 2026-11-17 2026-11-17 Fix Rex CLI Empryo launcher tab activation +.dotfiles report:config/AGENTS.md
+x 2026-11-17 2026-11-17 Label Rex Empryo launcher tabs and panes with DNA icon +.dotfiles report:config/AGENTS.md
+x 2026-11-17 Remove duplicate Rex cmd-comma chords; retain comma settings and Shift-Z zoom; verified live keymap and unchanged Alt bindings +.dotfiles

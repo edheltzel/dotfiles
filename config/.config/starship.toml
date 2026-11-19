@@ -1,31 +1,11 @@
-# $all still fills the rest of the default order. Prefix modules are listed so
-# ${custom.gitbutler} sits where $git_branch would, not at the late $custom slot.
-# ${custom.git_plain} and ${custom.git_ahead_behind} render stock git info only
-# when GitButler is not managing the repo.
-format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
-$nats\
-$directory\
-$vcsh\
-$fossil_branch\
-$fossil_metrics\
-${custom.gitbutler}\
-${custom.git_plain}\
-${custom.git_ahead_behind}\
-$all
-"""
-right_format = "$cmd_duration"
+format = "$all"
+right_format = "$cmd_duration${custom.worktrees}"
 
 command_timeout = 500
 scan_timeout = 100
 
 # Set by theme-switcher. Names match theme-switcher/current.
-palette = "eldritch"
+palette = "proxysoul"
 
 [battery]
 disabled = true
@@ -49,19 +29,14 @@ format = "[⚡︎](blue)[$path]($style)[$read_only]($read_only_style) "
 read_only = " "
 truncation_symbol = "…󰿟"
 
-# Replaced by ${custom.gitbutler} (starship-gitbutler). Leave disabled so $all
-# does not also print gitbutler/workspace.
 [git_branch]
-disabled = true
 style = "pink"
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style)[ ≡]($style) "
 
 # Latest git tag/release reachable from HEAD (hidden when none)
 # tag_max_candidates > 0 finds the nearest ancestral tag, not only exact HEAD tags
-# Shown only via ${custom.git_plain} outside GitButler repos.
 [git_commit]
-disabled = true
 only_detached = false
 tag_disabled = false
 tag_max_candidates = 10
@@ -69,20 +44,19 @@ tag_symbol = "󰓼 "
 format = "([$tag]($style) )"
 style = "purple"
 
-[git_state]
-disabled = true
-
 [git_metrics]
-disabled = true
+disabled = false
 added_style = "green"
 deleted_style = "red"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_status]
-disabled = true
 style = "white"
-format = "([$all_status]($style) )"
+format = "([$all_status$ahead_behind]($style) )"
 conflicted = "[ ](fg:red bg:bright-black)"
+ahead = "[ ×${count} ](white)"
+behind = "[ ×${count} ](white)"
+diverged = "[ ×${ahead_count} ×${behind_count} ](bg:bright-black)"
 untracked = "️[ ×${count} ](cyan)"
 stashed = " "
 modified = "[ ×${count} ](yellow)"
@@ -98,40 +72,14 @@ show_milliseconds = true
 style = "comment"
 ## end prompt ##
 
-# https://github.com/1stvamp/starship-gitbutler
-# Shows applied GitButler stacks; falls back to the current git branch elsewhere.
-[custom.gitbutler]
-command = "~/.config/starship/gitbutler-branch.sh"
-when = true
+# Total worktrees for the repo, far right. Hidden when only the main one exists.
+[custom.worktrees]
+command = "git worktree list --porcelain | grep -c '^worktree '"
+when = '[ "$(git worktree list --porcelain 2>/dev/null | grep -c "^worktree ")" -gt 1 ]'
 shell = ["bash", "--noprofile", "--norc"]
-format = "[$output](pink) "
-disabled = false
-ignore_timeout = true
-
-
-# Stock git segments. Hidden while .git/gitbutler exists.
-[custom.git_plain]
-command = "~/.config/starship/git-plain.sh"
-when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ ! -d "$(git rev-parse --git-path gitbutler 2>/dev/null)" ]'
-shell = ["bash", "--noprofile", "--norc"]
-format = "$output"
-disabled = false
-ignore_timeout = true
-
-[profiles]
-gitplain = "$git_commit$git_state$git_metrics$git_status"
-[custom.git_ahead_behind]
-when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ ! -d "$(git rev-parse --git-path gitbutler 2>/dev/null)" ]'
-command = '''
-git rev-list --left-right --count HEAD...@{upstream} 2>/dev/null | awk -F '\t' '{
-  if ($1 > 0 && $2 > 0) printf " ×%s ×%s", $1, $2
-  else if ($1 > 0) printf " ×%s", $1
-  else if ($2 > 0) printf " ×%s", $2
-}'
-'''
-shell = ["bash", "--noprofile", "--norc"]
-format = "[$output](white) "
-disabled = false
+symbol = "\U000F0645 "
+style = "purple"
+format = " [$symbol$output]($style)"
 
 ## start custom symbols ##
 [package]

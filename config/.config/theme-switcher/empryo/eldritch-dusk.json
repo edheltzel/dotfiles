@@ -1,0 +1,50 @@
+{
+  "_extends": "light",
+  "_label": "Eldritch Dusk",
+  "_description": "Eldritch Dusk (light) from ~/.dotfiles: pale shore with deep green, teal and violet",
+  "_variant": "light",
+
+  "brand": "#007F42",
+  "brand-secondary": "#754EF6",
+  "brand-dim": "#5FA987",
+  "brand-alt": "#007992",
+
+  "text-primary": "#353746",
+  "text-secondary": "#4A4D5E",
+  "text-muted": "#6E7378",
+  "text-dim": "#888D91",
+  "text-faint": "#A4A8AB",
+  "text-subtle": "#BCC0C2",
+
+  "bg-app": "#F0F3F4",
+  "bg-primary": "#F0F3F4",
+  "bg-secondary": "#E9EDEE",
+  "bg-elevated": "#E2E6E8",
+  "bg-popup": "#F7F9F9",
+  "bg-popup-highlight": "#D5D9DB",
+  "bg-overlay": "#C9CED1",
+  "bg-input": "#F7F9F9",
+  "bg-banner": "#E2E6E8",
+  "bg-banner-error": "#F6DADC",
+  "bg-user": "#E2E6E8",
+
+  "border": "#D5D9DB",
+  "border-focused": "#007F42",
+  "border-active": "#007F42",
+  "border-slash": "#754EF6",
+
+  "success": "#007F42",
+  "error": "#DF0514",
+  "warning": "#9A7A00",
+  "info": "#007992",
+  "amber": "#A86400",
+
+  "diff-added-bg": "#D3EEDF",
+  "diff-removed-bg": "#F6DADC",
+  "diff-added-sign": "#007F42",
+  "diff-removed-sign": "#DF0514",
+
+  "accent-user": "#007992",
+  "accent-assistant": "#754EF6",
+  "accent-system": "#D5057C"
+}

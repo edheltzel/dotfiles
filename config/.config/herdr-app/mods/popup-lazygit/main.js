@@ -1,5 +1,5 @@
 // From the old herdr config's [[keys.command]] type = "popup" (see keys.json).
-// A key opens this mod (mod.open:popup-but). It starts CMD in a hidden core
+// A key opens this mod (mod.open:popup-lazygit). It starts CMD in a hidden core
 // terminal in the focused pane's folder and machine, through the login shell
 // so PATH matches, shows that terminal in a 90% dialog that closes when the
 // program exits, then closes itself. Mods can't import from each other, so
@@ -7,7 +7,7 @@
 import { View, div } from "gpui-kit";
 import { props, focused, spaces, hc, openOverlay, closeOverlay, notify } from "herdr";
 
-const CMD = "but tui"; // null: the machine's own login shell
+const CMD = "lazygit"; // null: the machine's own login shell
 
 export default class Popup extends View {
   init(_props, cx) {

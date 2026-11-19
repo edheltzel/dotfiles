@@ -1,0 +1,38 @@
+# aup config. Copy to ~/.config/aup/config.toml (or point --config / $AUP_CONFIG at it).
+# Each [[step]] runs in order. A step runs only when both binary and installed are on PATH.
+#
+# label        required  name shown in the output
+# color        required  hex colour for the label, like "B392D7"
+# binary       required  command to run
+# args         optional  string ("update --all") or list (["update", "--all"])
+# installed    optional  command that proves the tool is installed; defaults to binary
+# version      optional  command probed with --version before and after; "-" or omitted skips it
+# interactive  optional  true gives the step the real terminal (prompts, sudo); TUI mode only
+# env          optional  extra environment, like { NPM_CONFIG_UPDATE_NOTIFIER = "false" }
+# timeout      optional  stop the step after a duration, like "10m"
+#
+# Legacy [[harness]] tables are still read.
+
+[[step]]
+label = "Claude Code"
+color = "D97757"
+binary = "claude"
+version = "claude"
+args = "update"
+
+[[step]]
+label = "Codex"
+color = "10A37F"
+binary = "brew"
+installed = "codex"
+version = "codex"
+args = ["upgrade", "--cask", "codex"]
+timeout = "10m"
+
+[[step]]
+label = "Gemini CLI"
+color = "4796E3"
+binary = "bun"
+installed = "gemini"
+version = "gemini"
+args = "add --global @google/gemini-cli@latest"

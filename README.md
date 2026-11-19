@@ -224,20 +224,21 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
 - **git** (`git/`) - `.gitconfig` (aliases, delta pager, SSH signing), `.gitignore_global`, and `git.sh`, which symlinks the machine-specific `~/.gitconfig.local` keyed on `ComputerName` and registers the signing key on GitHub. List aliases with `git config --get-regexp '^alias\.'`.
 
 - **fish** (`fish/`) - primary shell, XDG-compliant so `$HOME` stays clean (XDG vars are set in `conf.d/paths.fish`).
-  - **Prompt**: `FISH_PROMPT` in `config.fish` selects the prompt engine. Starship is the default; the config is `config/.config/starship.toml` and shows the GitButler stack via a vendored `starship-gitbutler` module.
+  - **Prompt**: `FISH_PROMPT` in `config.fish` selects the prompt engine. Starship is the default; the config is `config/.config/starship.toml`.
   - **Secrets**: API keys live in `conf.d/secrets.fish` (gitignored). Create it from the template: `cp fish/.config/fish/conf.d/secrets.fish.example fish/.config/fish/conf.d/secrets.fish`. Used by the `claude-models` function among others.
   - **Lazy-loading**: heavy tools initialize on first use. `config.fish` defines wrapper functions for `node`/`npm`/`npx` (FNM) and `ruby`/`gem`/`bundle`/`rake`/`irb` (rbenv) that init the tool once, erase themselves, and delegate. `conf.d/zoxide.fish` wraps `z`/`zi` with a persistent wrapper (zoxide is initialized with `--no-cmd` so it does not overwrite the wrapper) that runs `__list_dir` after each jump. `npx` delegates to `bunx`.
   - **Shared directory listing**: `functions/__list_dir.fish` holds the single set of `eza` flags used after every directory change. `cd`, `z`, and `zi` all call it.
   - **Abbreviations, not aliases**: `conf.d/abbr.fish`. Run `abbr` to list them. Multi-step commands live in `functions/`.
   - **Plugins**: managed by [Fisher](https://github.com/jorgebucaran/fisher), listed in `fish_plugins`.
   - **SSH agent**: `conf.d/fish-ssh-agent.fish` shares one agent across every shell (see Troubleshooting).
-  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.toml`. Add or remove a `[[harness]]` table there. Order is run order. `binary` is skipped when it is not installed. Omit `version`, or set it to `"-"`, to skip the version line.
+  - **Agent harnesses**: `functions/aup.fish` updates the AI CLIs listed in `agent-harnesses.toml`. Add or remove a `[[harness]]` table there. Order is run order. Every entry is checked before anything runs; it is skipped unless `binary` and `installed` (defaults to `binary`; set it to the harness command when `binary` is `brew`, `bun`, or an installer) are on PATH. The run ends with an update report of versions before and after, failures, and skips. Omit `version`, or set it to `"-"`, to skip the version line.
 
     ```toml
     [[harness]]
     label = "Cursor Agent"
     color = "blue"
     binary = "cursor-agent"
+    installed = "cursor-agent"
     version = "cursor-agent"
     args = "update"
     ```

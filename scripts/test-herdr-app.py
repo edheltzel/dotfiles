@@ -24,7 +24,7 @@ class HerdrLinksTest(unittest.TestCase):
       target.mkdir(parents=True)
       (target / "keys.json").write_text('{"existing": true}\n')
       (target / "state.json").write_text("app-owned")
-      (source / "mods/popup-but/gpui-kit.d.ts").write_text("generated")
+      (source / "mods/popup-lazygit/gpui-kit.d.ts").write_text("generated")
       env = {**os.environ, "HOME": str(home), "XDG_CONFIG_HOME": str(home / ".config"), "XDG_STATE_HOME": str(home / ".local/state")}
       for iteration in range(2):
         subprocess.run(["bash", str(repo / "scripts/link-herdr-app.sh")], env=env, check=True)
@@ -36,8 +36,8 @@ class HerdrLinksTest(unittest.TestCase):
           self.assertTrue(path.is_file(), str(path))
           self.assertEqual(path.resolve(), (source / path.relative_to(target)).resolve())
         self.assertFalse(target.is_symlink())
-        self.assertFalse((target / "mods/popup-but").is_symlink())
-        self.assertFalse((target / "mods/popup-but/gpui-kit.d.ts").exists())
+        self.assertFalse((target / "mods/popup-lazygit").is_symlink())
+        self.assertFalse((target / "mods/popup-lazygit/gpui-kit.d.ts").exists())
         self.assertEqual((target / "state.json").read_text(), "app-owned")
       backups = list((home / ".local/state/dotfiles/herdr-app").rglob("keys.json"))
       self.assertEqual(len(backups), 1)
