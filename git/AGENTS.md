@@ -12,14 +12,13 @@ Git configuration with SSH commit/tag signing and per-machine provisioning. Maps
 - `.gitignore_global`
 - Aliases live in `.gitconfig`; list them with `git config --get-regexp '^alias\.'` rather than trusting a copied list.
 - `core.editor` is `nvim` (`.gitconfig:3`).
-- `[gitbutler]` AI settings (provider, model name, no keys) are tracked in `.gitconfig`. GitButler writes them to `~/.gitconfig` directly, which replaces the stow symlink with a plain file and makes `just update` warn. If that happens, diff the two, merge new keys into the tracked file, delete `~/.gitconfig`, and `just stow git`.
 
 ## Local Contracts
 
 - Signing uses **SSH keys, not GPG**.
 - Machine-specific settings (`user.signingkey`, allowed-signers path) live in `~/.gitconfig.local`, symlinked by `git.sh` keyed on `ComputerName`. Never commit machine paths or keys to tracked files. Tracked `.gitconfig` includes that file last so local values win.
 - Manual commits use Ed's identity from tracked `.gitconfig` plus the machine signing key in `.gitconfig.local`.
-- Agent / GitButler commits in this repo use the Atlas-Key account and `/Users/ed/.ssh/atlas_signing`. Set those as repo-local git config only for the commit, then unset so manual git stays on Ed's key:
+- Agent commits in this repo use the Atlas-Key account and `/Users/ed/.ssh/atlas_signing`. Set those as repo-local git config only for the commit, then unset so manual git stays on Ed's key:
   - `git config --local user.name Atlas`
   - `git config --local user.email 296298943+Atlas-Key@users.noreply.github.com`
   - `git config --local user.signingkey /Users/ed/.ssh/atlas_signing`

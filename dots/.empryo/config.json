@@ -187,8 +187,7 @@
   "skills": {
     "autoLoad": [
       "do-todo",
-      "do-commit",
-      "but-axi"
+      "do-commit"
     ]
   },
   "projectsSetupSeenTui": true,

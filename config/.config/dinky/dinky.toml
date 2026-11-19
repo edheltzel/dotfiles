@@ -136,7 +136,7 @@ run = 'move-window-to-workspace 1'
 
 #### Workspace 2 - code
 [[rules]]
-app-name = '^(term|ghostty|kitty|wezterm|tern|empryo|zed|orbstack|gitbutler|Whiteboard)$'
+app-name = '^(term|ghostty|kitty|wezterm|tern|empryo|zed|orbstack|Whiteboard)$'
 kind = 'normal'
 run = 'move-window-to-workspace 2'
 
