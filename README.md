@@ -224,7 +224,7 @@ The package list is `stow_packages` in the `justfile`: `dots git fish zsh config
 - **git** (`git/`) - `.gitconfig` (aliases, delta pager, SSH signing), `.gitignore_global`, and `git.sh`, which symlinks the machine-specific `~/.gitconfig.local` keyed on `ComputerName` and registers the signing key on GitHub. List aliases with `git config --get-regexp '^alias\.'`.
 
 - **fish** (`fish/`) - primary shell, XDG-compliant so `$HOME` stays clean (XDG vars are set in `conf.d/paths.fish`).
-  - **Prompt**: `FISH_PROMPT` in `config.fish` selects the prompt engine. Starship is the default; the config is `config/.config/starship.toml` and shows the GitButler stack via a vendored `starship-gitbutler` module.
+  - **Prompt**: `FISH_PROMPT` in `config.fish` selects the prompt engine. Starship is the default; the config is `config/.config/starship.toml`.
   - **Secrets**: API keys live in `conf.d/secrets.fish` (gitignored). Create it from the template: `cp fish/.config/fish/conf.d/secrets.fish.example fish/.config/fish/conf.d/secrets.fish`. Used by the `claude-models` function among others.
   - **Lazy-loading**: heavy tools initialize on first use. `config.fish` defines wrapper functions for `node`/`npm`/`npx` (FNM) and `ruby`/`gem`/`bundle`/`rake`/`irb` (rbenv) that init the tool once, erase themselves, and delegate. `conf.d/zoxide.fish` wraps `z`/`zi` with a persistent wrapper (zoxide is initialized with `--no-cmd` so it does not overwrite the wrapper) that runs `__list_dir` after each jump. `npx` delegates to `bunx`.
   - **Shared directory listing**: `functions/__list_dir.fish` holds the single set of `eza` flags used after every directory change. `cd`, `z`, and `zi` all call it.
