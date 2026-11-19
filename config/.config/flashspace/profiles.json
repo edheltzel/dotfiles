@@ -47,11 +47,6 @@
               "name" : "Ghostty"
             },
             {
-              "bundleIdentifier" : "com.gitbutler.app",
-              "iconPath" : "/Applications/GitButler.app/Contents/Resources/icon.icns",
-              "name" : "GitButler"
-            },
-            {
               "bundleIdentifier" : "com.github.wez.wezterm",
               "iconPath" : "/Applications/WezTerm.app/Contents/Resources/terminal.icns",
               "name" : "WezTerm"

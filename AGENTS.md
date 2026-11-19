@@ -8,7 +8,7 @@ Guidance for AI coding agents. Per-package rules live in the child `AGENTS.md` l
 
 Not discoverable from the tree, and expensive to get wrong.
 
-- **This repo uses plain git, not GitButler** (left GitButler mode 2026-11-11 by Ed's choice). Use `git` for branches, commits, and pushes. Never run `but` or `but setup` here: any `but` command recreates `.git/gitbutler`, which flips the Starship prompt back to the GitButler segment. The GitButler shell, prompt, and editor integrations stay because other repos still use it.
+- **This repo uses plain git.** GitButler (app, `but` CLI, skills, `but-axi`) was uninstalled on 2026-11-19 by Ed's choice. Use `git` for branches, commits, and pushes, and do not reintroduce GitButler config.
 - **`neovim/` holds the Neovim config (NEO.ED) as ordinary tracked files**, not a submodule. Neovim edits commit here; [edheltzel/neoed](https://github.com/edheltzel/neoed) is no longer linked.
 - **Post-navigation directory listing lives in exactly one file:** `fish/.config/fish/functions/__list_dir.fish`. `cd`, `z`, and `zi` all delegate to it. Never duplicate eza flags in `cd.fish` or `zoxide.fish`.
 - **Commit signing is SSH, not GPG.** Machine-specific values live in `~/.gitconfig.local`, symlinked by `git/git.sh` from `git/gitconfig-<machine>.local` keyed on `ComputerName`. Never commit private keys or new machine paths.

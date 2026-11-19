@@ -100,18 +100,6 @@ if status is-interactive
     abbr --add lw lazyworktree
     abbr --add lg lazygit
 
-    # But - gitbutler
-    abbr --add btt 'but tui'
-    abbr --add bgg 'but gui'
-    abbr --add bts 'but setup'
-    abbr --add btd 'but diff'
-    abbr --add bcm --set-cursor 'but c -m "%"'
-    abbr --add bpr 'but pr'
-    abbr --add bph 'but push'
-    abbr --add bpl 'but pull'
-    abbr --add bsq --set-cursor 'but squash "%"'
-    abbr --add bmv --set-cursor 'but move "%"'
-
     # Tuxedo
     abbr --add tux tuxedo
 
