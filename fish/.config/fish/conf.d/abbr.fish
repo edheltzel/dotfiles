@@ -44,7 +44,10 @@ if status is-interactive
     abbr --add cx 'codex --yolo'
     abbr --add gk 'grok --always-approve'
     abbr --add jc jcode
-    abbr --add emo 'rex do empryo'
+    abbr --add emo empryo
+    abbr --add emm 'rex do empryo'
+    abbr --add ro roborev
+    abbr --add rot 'roborev tui'
 
     # Terminals/Text Editors
     abbr --add zz zed
