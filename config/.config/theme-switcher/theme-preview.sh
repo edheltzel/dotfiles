@@ -214,68 +214,80 @@ show_colors() {
   echo ""
 }
 
+APPS=()
+
+# app OK ICON NAME - OK is 1 for supported, 0 for not
+app() {
+  local mark="✗"
+  [[ "$1" == 1 ]] && mark="✓"
+  APPS+=("$mark $2  $3")
+}
+
+has() {
+  [[ -e "$1" ]] && echo 1 || echo 0
+}
+
+# Column-major two columns; one column when the preview pane is too narrow.
+# The column width is fixed so the right column never moves between themes;
+# measuring the entries made it jump whenever a theme-dependent label grew.
+COL_WIDTH=20
+
+print_apps() {
+  local n=${#APPS[@]} width=$COL_WIDTH entry i
+  if ((${FZF_PREVIEW_COLUMNS:-80} < 2 * (width + 4))); then
+    for entry in "${APPS[@]}"; do
+      echo "  $entry"
+    done
+    return
+  fi
+  local rows=$(((n + 1) / 2)) left pad
+  for ((i = 0; i < rows; i++)); do
+    left="${APPS[i]:0:width}"
+    pad=$((width + 4 - ${#left}))
+    if ((i + rows < n)); then
+      printf '  %s%*s%s\n' "$left" "$pad" "" "${APPS[i + rows]}"
+    else
+      echo "  $left"
+    fi
+  done
+}
+
 show_support() {
   local theme="$1"
+  local cfg="$HOME/.dotfiles/config/.config"
+  local omp=0 pi=0 yazi_flavor="$theme" mode=dark
+
+  case "$theme" in
+  eldritch) omp=$(has "$HOME/.omp/agent/themes/eldritch-cthulhu.json") ;;
+  eldritch-dusk) omp=$(has "$HOME/.omp/agent/themes/eldritch-dusk.json") ;;
+  tokyonight | rose-pine | rose-pine-moon | catppuccin-latte | catppuccin-frappe | catppuccin-macchiato | catppuccin-mocha | dracula | gruvbox) omp=1 ;;
+  esac
+  [[ -f "$HOME/.pi/agent/themes/${theme}.json" || -f "$cfg/theme-switcher/pi/${theme}.json" ]] && pi=1
+  [[ "$theme" == "tokyonight" ]] && yazi_flavor="tokyo-night"
+  [[ "$theme" =~ ^(eldritch-dusk|rose-pine-dawn|catppuccin-latte)$ ]] && mode=light
+
+  app 1 "" ghostty
+  app 1 "󰄛" kitty
+  app 1 "" wezterm
+  app 1 "" neovim
+  app 1 "󰭟" bat
+  app 1 "󰄧" btop
+  app 1 "" starship
+  app 1 "" lazygit
+  app 1 "" claude
+  app 1 "󰚩" empryo
+  app "$pi" "" pi
+  app "$omp" "󰏿" omp
+  app 1 "󰳆" herdr
+  app 1 "" gh-dash
+  app "$(has "$cfg/superfile/theme/${theme}.toml")" "󰉋" superfile
+  app "$(has "$cfg/tuxedo/themes/${theme}.toml")" "" tuxedo
+  app "$(has "$cfg/yazi/flavors/${yazi_flavor}.yazi")" "󰝰" yazi
+  app 1 "󰍔" "mdterm ($mode)"
 
   echo "Application Support:"
   echo ""
-
-  echo "  ✓   ghostty"
-  echo "  ✓ 󰄛  kitty"
-  echo "  ✓   wezterm"
-  echo "  ✓   neovim"
-  echo "  ✓ 󰭟  bat"
-  echo "  ✓ 󰄧  btop"
-  echo "  ✓   starship"
-  echo "  ✓   lazygit"
-  echo "  ✓   claude"
-  if [[ -f "$HOME/.pi/agent/themes/${theme}.json" ]] || [[ -f "$HOME/.dotfiles/config/.config/theme-switcher/pi/${theme}.json" ]]; then
-    echo "  ✓   pi"
-  else
-    echo "  ✗   pi"
-  fi
-  case "$theme" in
-  eldritch)
-    if [[ -f "$HOME/.omp/agent/themes/eldritch-cthulhu.json" ]]; then
-      echo "  ✓ 󰏿  omp"
-    else
-      echo "  ✗ 󰏿  omp"
-    fi
-    ;;
-  eldritch-dusk)
-    if [[ -f "$HOME/.omp/agent/themes/eldritch-dusk.json" ]]; then
-      echo "  ✓ 󰏿  omp"
-    else
-      echo "  ✗ 󰏿  omp"
-    fi
-    ;;
-  tokyonight | rose-pine | rose-pine-moon | catppuccin-latte | catppuccin-frappe | catppuccin-macchiato | catppuccin-mocha | dracula | gruvbox)
-    echo "  ✓ 󰏿  omp"
-    ;;
-  *)
-    echo "  ✗ 󰏿  omp"
-    ;;
-  esac
-  echo "  ✓ 󰳆  herdr"
-  echo "  ✓   gh-dash"
-  if [[ -f "$HOME/.dotfiles/config/.config/superfile/theme/${theme}.toml" ]]; then
-    echo "  ✓ 󰉋  superfile"
-  else
-    echo "  ✗ 󰉋  superfile"
-  fi
-  if [[ -f "$HOME/.dotfiles/config/.config/tuxedo/themes/${theme}.toml" ]]; then
-    echo "  ✓   tuxedo"
-  else
-    echo "  ✗   tuxedo"
-  fi
-  yazi_flavor="$theme"
-  [[ "$theme" == "tokyonight" ]] && yazi_flavor="tokyo-night"
-  if [[ -d "$HOME/.dotfiles/config/.config/yazi/flavors/${yazi_flavor}.yazi" ]]; then
-    echo "  ✓ 󰝰  yazi"
-  else
-    echo "  ✗ 󰝰  yazi"
-  fi
-  echo "  ✓ 󰍔  mdterm ($([[ "$theme" =~ ^(eldritch-dusk|rose-pine-dawn|catppuccin-latte)$ ]] && echo light || echo dark))"
+  print_apps
 }
 
 # Main
