@@ -1,7 +1,7 @@
 {
   "projectsCols": null,
   "panelCols": null,
-  "widePanelCols": 104,
+  "widePanelCols": 130,
   "splitShares": {},
   "sessionFolds": {
     "mvjnx211-eqouli": {
@@ -22,6 +22,16 @@
       "groups": {}
     },
     "7f0ff5bb-98d1-44d4-9c4a-bd0551001131": {
+      "tabs": {},
+      "projects": {},
+      "groups": {}
+    },
+    "c047d7a5-d465-400d-a45f-4fd2d07a4133": {
+      "tabs": {},
+      "projects": {},
+      "groups": {}
+    },
+    "f5bbfce6-b978-4efc-8cb5-d01a83a896e3": {
       "tabs": {},
       "projects": {},
       "groups": {

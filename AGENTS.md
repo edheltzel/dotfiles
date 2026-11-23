@@ -8,7 +8,7 @@ Guidance for AI coding agents. Per-package rules live in the child `AGENTS.md` l
 
 Not discoverable from the tree, and expensive to get wrong.
 
-- **This repo uses plain git.** GitButler (app, `but` CLI, skills, `but-axi`) was uninstalled on 2026-11-19 by Ed's choice. Use `git` for branches, commits, and pushes, and do not reintroduce GitButler config.
+- **This repo uses plain git.** GitButler (app, `but` CLI, skills, `but-axi`) was uninstalled on 2026-11-19 by Ed's choice. Use `git`, LazyGit, or `grit` for branches, commits, and pushes, and do not reintroduce GitButler config.
 - **`neovim/` holds the Neovim config (NEO.ED) as ordinary tracked files**, not a submodule. Neovim edits commit here; [edheltzel/neoed](https://github.com/edheltzel/neoed) is no longer linked.
 - **Post-navigation directory listing lives in exactly one file:** `fish/.config/fish/functions/__list_dir.fish`. `cd`, `z`, and `zi` all delegate to it. Never duplicate eza flags in `cd.fish` or `zoxide.fish`.
 - **Commit signing is SSH, not GPG.** Machine-specific values live in `~/.gitconfig.local`, symlinked by `git/git.sh` from `git/gitconfig-<machine>.local` keyed on `ComputerName`. Never commit private keys or new machine paths.
@@ -47,11 +47,11 @@ Adding configuration: drop files into the owning stow package, `just stow <pkg>`
 
 ## Verification
 
-No test suite. Lint manually; the hooks run these on staged files.
+No test suite. Lint manually before committing; no hook runs these.
 
 - `shellcheck <script>` for shell.
 - `stylua --check neovim/.config/nvim` for Lua (config: `neovim/.config/nvim/stylua.toml`, 2 spaces, 120 cols).
-- `just hooks` installs `.githooks/pre-commit` (blocks direct commits to `master`, runs `shellcheck --severity=error` + `stylua --check` on staged files, warns and skips when a linter is absent) and `.githooks/commit-msg` (Conventional Commits).
+- `just hooks` installs `.githooks/commit-msg` (Conventional Commits) only. There is no pre-commit hook by Ed's choice: direct commits to `master` are allowed, from `git`, LazyGit, or `grit`. Do not reintroduce a master block or pre-commit lint gate.
 
 Per-package verification lives in each child `AGENTS.md`.
 
@@ -175,7 +175,7 @@ Infrastructure (run by `install.sh`, not stowed):
 - `packages/` — multi-package-manager provisioning (`packages.sh` + manifests)
 - `tools/aup/` - Go source of the `aup` updater CLI (plain + Bubble Tea TUI), built by `just aup`; staged here before moving to its own repo
 - `scripts/` — shared shell helpers (`functions.sh`, `nvim.sh`) sourced by the install flow
-- `.githooks/` - tracked git hook sources (`pre-commit`, `commit-msg`); `just hooks` installs wrappers into `.git/hooks`
+- `.githooks/` - tracked git hook source (`commit-msg`); `just hooks` installs its wrapper into `.git/hooks`
 - `.github/` - `CODEOWNERS` (auto-requests `edheltzel` on PRs) and `workflows/pr-visual-recap.yml` (agent-generated visual recap comment on every PR)
 - `macos/` — macOS system preference scripts
 - `duti/` — default app / file associations

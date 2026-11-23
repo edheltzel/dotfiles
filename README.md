@@ -213,7 +213,7 @@ Herdr desktop keeps the old `Alt+,` leader as a two-stroke sequence: press Optio
 
 **Git hooks**
 
-`just hooks` installs wrappers in `.git/hooks` that call the tracked `.githooks/pre-commit` (blocks direct commits to `master`, runs `shellcheck` on staged shell) and `.githooks/commit-msg` (Conventional Commits).
+`just hooks` installs a wrapper in `.git/hooks` that calls the tracked `.githooks/commit-msg` (Conventional Commits). There is no pre-commit hook: commit straight to `master` from git, LazyGit, or grit.
 
 ## Stow Packages
 
