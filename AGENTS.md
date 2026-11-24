@@ -51,7 +51,7 @@ No test suite. Lint manually before committing; no hook runs these.
 
 - `shellcheck <script>` for shell.
 - `stylua --check neovim/.config/nvim` for Lua (config: `neovim/.config/nvim/stylua.toml`, 2 spaces, 120 cols).
-- `just hooks` installs `.githooks/commit-msg` (Conventional Commits) only. There is no pre-commit hook by Ed's choice: direct commits to `master` are allowed, from `git`, LazyGit, or `grit`. Do not reintroduce a master block or pre-commit lint gate.
+- No git hooks, by Ed's choice: direct commits to `master` with any message are allowed, from `git`, LazyGit, or `grit`. Do not reintroduce a master block, lint gate, or commit-message hook.
 
 Per-package verification lives in each child `AGENTS.md`.
 
@@ -175,7 +175,6 @@ Infrastructure (run by `install.sh`, not stowed):
 - `packages/` — multi-package-manager provisioning (`packages.sh` + manifests)
 - `tools/aup/` - Go source of the `aup` updater CLI (plain + Bubble Tea TUI), built by `just aup`; staged here before moving to its own repo
 - `scripts/` — shared shell helpers (`functions.sh`, `nvim.sh`) sourced by the install flow
-- `.githooks/` - tracked git hook source (`commit-msg`); `just hooks` installs its wrapper into `.git/hooks`
 - `.github/` - `CODEOWNERS` (auto-requests `edheltzel` on PRs) and `workflows/pr-visual-recap.yml` (agent-generated visual recap comment on every PR)
 - `macos/` — macOS system preference scripts
 - `duti/` — default app / file associations

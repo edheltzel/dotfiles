@@ -324,6 +324,7 @@ cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 cask 'edheltzel/tap/aup'
 
 # Mac App Store Installs
+mas 'V-SCOPE', id: 6795805793
 mas 'Shapr3d', id: 1091675654
 mas 'Invoice Ninja V5', id: 1503970375
 mas 'Just Focus', id: 1142151959

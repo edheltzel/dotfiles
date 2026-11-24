@@ -185,7 +185,6 @@ stow          Add individual package with Stow (e.g., just stow fish) [alias: ad
 unstow        Remove individual package with Stow (e.g., just unstow fish) [alias: remove]
 update        Restow all dotfiles packages [alias: up]
 delete        Remove all dotfile symlinks
-hooks         Install tracked .githooks into .git/hooks
 capture-empryo  Copy the live ~/.empryo/config.json back into the repo
 ```
 
@@ -213,7 +212,7 @@ Herdr desktop keeps the old `Alt+,` leader as a two-stroke sequence: press Optio
 
 **Git hooks**
 
-`just hooks` installs a wrapper in `.git/hooks` that calls the tracked `.githooks/commit-msg` (Conventional Commits). There is no pre-commit hook: commit straight to `master` from git, LazyGit, or grit.
+No git hooks are installed: commit straight to `master` from git, LazyGit, or grit with any message.
 
 ## Stow Packages
 

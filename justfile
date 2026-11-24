@@ -95,20 +95,6 @@ readinglist:
     @stow --restow readinglist
     @./readinglist/readinglist.sh
 
-# Install tracked .githooks into .git/hooks as wrappers that exec the sources.
-hooks:
-    #!/usr/bin/env bash
-    set -euo pipefail
-    root="$(git rev-parse --show-toplevel)"
-    git config --unset-all core.hooksPath || true
-    mkdir -p "$root/.git/hooks"
-    rm -f "$root/.git/hooks/pre-commit"
-    for hook in commit-msg; do
-      printf '#!/bin/sh\nexec "%s/.githooks/%s" "$@"\n' "$root" "$hook" > "$root/.git/hooks/$hook"
-      chmod +x "$root/.git/hooks/$hook"
-    done
-    printf "{{green}}git hooks installed{{clr}} -> .git/hooks (sources in .githooks)\n"
-
 # Copy the live Empryo config back into the repo. config.json is seed-copy, not a
 capture-empryo:
     @cp ~/.empryo/config.json dots/.empryo/config.json
