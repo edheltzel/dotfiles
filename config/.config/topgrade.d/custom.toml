@@ -11,7 +11,8 @@ repos = [
   "/Users/ed/Developer/AI/Skills/DoxFramework/",
 ]
 # Custom Pre-commands
-# [pre_commands]
+[pre_commands]
+"Brew - Pin omp" = "brew list --formula omp &>/dev/null; and brew pin omp"
 
 # Custom commands
 [commands]

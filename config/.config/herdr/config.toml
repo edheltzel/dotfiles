@@ -70,7 +70,7 @@ delivery = "herdr"
 position = "top-right"
 
 [theme]
-name = "gruvbox"
+name = "terminal"
 auto_switch = false
 
 ### keybindings ###
