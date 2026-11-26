@@ -37,6 +37,13 @@
       "groups": {
         "": true
       }
+    },
+    "1d7f8ad3-80c1-4752-a534-149f0d0a6ad0": {
+      "tabs": {},
+      "projects": {},
+      "groups": {
+        "adapters/": true
+      }
     }
   }
 }

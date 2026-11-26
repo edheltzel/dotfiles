@@ -24,6 +24,12 @@
       "settings": {
         "context7_api_key": ""
       }
+    },
+    "solidcraft": {
+      "args": [
+        "mcp"
+      ],
+      "command": "/Applications/SolidCraft.app/Contents/MacOS/solidcraft-cli"
     }
   },
   "git": {
@@ -75,9 +81,9 @@
     "metrics": false
   },
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Eldritch",
-    "dark": "Eldritch Midnight"
+    "dark": "Eldritch"
   },
   "icon_theme": {
     "mode": "dark",
